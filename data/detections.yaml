@@ -1,1 +1,511 @@
-detections: []
+detections:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0001  Spearphishing — Email-to-Process Correlation
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0001
+    title: "Email-Delivered Archive or Office File Followed by Process Spawn"
+    actor_context: "MuddyWater (IRAN MOIS) — primary initial access vector across all source tiers"
+    techniques:
+      - T1566.001
+      - T1566.002
+    proc_ref: proc_mw_0001
+    logic_type: correlated
+    description: >
+      Correlate email gateway delivery of a ZIP/Excel/PDF attachment or a link to
+      Egnyte/OneDrive with process creation events on the recipient endpoint within
+      a 5-minute window. Parent process is an email client (Outlook, Thunderbird) or
+      browser. Focus on child processes that are PowerShell, cmd.exe, wscript.exe,
+      mshta.exe, or a known RMM binary.
+    pseudologic: |
+      event_type IN [email_delivery] AND
+        (attachment.extension IN ["zip","xlsx","xlsm","pdf","docm"] OR
+         link.domain IN ["egnyte.com","onedrive.live.com","1drv.ms"])
+      CORRELATE WITHIN 300 seconds WITH
+      event_type IN [process_create] WHERE
+        parent_image IN ["OUTLOOK.EXE","outlook.exe","chrome.exe","firefox.exe","msedge.exe"] AND
+        image IN ["powershell.exe","cmd.exe","wscript.exe","mshta.exe",
+                  "AteraAgent.exe","ScreenConnect.exe","SimpleHelp.exe","rport.exe"]
+    log_sources:
+      - "Email gateway / SEG (attachment metadata, URL extraction, sender domain)"
+      - "EDR / Sysmon Event ID 1 (process creation with parent image and command line)"
+      - "Windows Security Event ID 4688 (process creation with command line auditing enabled)"
+    false_positives:
+      - "Legitimate macro-enabled Office files sent by internal users"
+      - "IT-approved RMM tools deployed via email links during onboarding"
+      - "Automated workflows that spawn processes from email-triggered scripts"
+    validation_status: draft
+    coverage_score: 2
+    limitations:
+      - "Requires email gateway telemetry correlated with endpoint telemetry — gap if gateway logs are siloed."
+      - "Compromised-account delivery bypasses sender reputation checks."
+      - "Link-based delivery to file-sharing services requires URL unwrapping at the gateway."
+    notes: "3-source corroboration (CISA AA22-055A, INCD 2023, INCD 2024). Highest priority for lab validation."
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0002  Exploitation — Web Service Spawning Shell
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0002
+    title: "Internet-Facing Service Process Spawning Interpreter or Shell"
+    actor_context: "MuddyWater — alternative initial access when phishing is not the entry point"
+    techniques:
+      - T1190
+    proc_ref: proc_mw_0002
+    logic_type: behavioral
+    description: >
+      Detect a web-facing or network-facing service executable spawning a command
+      interpreter or scripting engine. Covers Exchange (CVE-2020-0688), IIS (w3wp.exe),
+      Java-based services (java.exe) for Log4j (CVE-2021-44228), and Netlogon exploitation
+      leading to SYSTEM-level shell creation.
+    pseudologic: |
+      event_type = process_create AND
+      parent_image IN ["w3wp.exe","java.exe","lsass.exe","services.exe",
+                       "vmtoolsd.exe","vpnagent.exe"] AND
+      image IN ["cmd.exe","powershell.exe","wscript.exe","cscript.exe","bash.exe"] AND
+      (parent_user IN ["NETWORK SERVICE","IIS_IUSRS","SYSTEM"] OR
+       integrity_level = "System")
+    log_sources:
+      - "EDR / Sysmon Event ID 1 (process creation with parent-child chain)"
+      - "IDS/IPS alerts for CVE-2020-1472, CVE-2020-0688, CVE-2021-44228 signatures"
+      - "Windows Security Event ID 4688 with command line auditing"
+      - "WAF/reverse proxy logs for JNDI lookup patterns in HTTP headers"
+    false_positives:
+      - "Legitimate administrative scripts executed under IIS application pools"
+      - "Java-based monitoring agents that legitimately spawn processes"
+      - "Patching automation that runs under service accounts"
+    validation_status: draft
+    coverage_score: 2
+    limitations:
+      - "CVE-2020-1472 and CVE-2020-0688 are older; relevant primarily for unpatched or legacy systems."
+      - "Log4j is confirmed for Israeli campaign only — do not generalize without additional corroboration."
+      - "Specific VPN vulnerability from INCD 2024 is unnamed; VPN process name is environment-dependent."
+    notes: "Corroborated by CISA, INCD 2023, INCD 2024. Lower-confidence than phishing vector but broadens coverage."
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0003  Execution — PowerShell Encoded Command and Obfuscation
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0003
+    title: "PowerShell Encoded Command Execution or Obfuscated Script Content"
+    actor_context: "MuddyWater — cross-cutting execution technique used by PowGoop, POWERSTATS, and 2024 lure campaigns"
+    techniques:
+      - T1059.001
+      - T1027
+    proc_ref: proc_mw_0003
+    logic_type: behavioral
+    description: >
+      Detect PowerShell executing Base64-encoded commands (-EncodedCommand), or Script Block
+      Logging capturing decoded content that includes Invoke-Expression / IEX, outbound
+      web requests (Invoke-WebRequest, WebClient.DownloadString), or hard-coded API key strings.
+      Secondary: PowerShell spawned by email client or browser.
+    pseudologic: |
+      # Rule A — Encoded command flag
+      event_type = process_create AND
+      image ENDSWITH "powershell.exe" AND
+      command_line IMATCHES "-enc(odedcommand)?"
+
+      # Rule B — Script Block content (Event ID 4104)
+      event_type = script_block_log AND
+      script_block_text MATCHES "(IEX|Invoke-Expression|InvokeScript)" AND
+      script_block_text MATCHES "(WebClient|Invoke-WebRequest|DownloadString|Net\.Http)"
+
+      # Rule C — Suspicious parent
+      event_type = process_create AND
+      image ENDSWITH "powershell.exe" AND
+      parent_image IN ["OUTLOOK.EXE","winword.exe","excel.exe",
+                       "chrome.exe","firefox.exe","msedge.exe","WScript.exe"]
+    log_sources:
+      - "PowerShell Script Block Logging (Windows Event ID 4104) — REQUIRED"
+      - "PowerShell Module Logging (Windows Event ID 4103)"
+      - "EDR / Sysmon Event ID 1 (process creation with full command line)"
+      - "Windows Security Event ID 4688 with command line auditing"
+    false_positives:
+      - "Legitimate administrative scripts using -EncodedCommand for special characters"
+      - "Software deployment tools (SCCM, Ansible) running Base64-encoded payloads"
+      - "Security tools and EDR agents using PowerShell internally"
+    validation_status: draft
+    coverage_score: 3
+    limitations:
+      - "High false-positive rate in enterprise environments without baselining."
+      - "Script Block Logging must be explicitly enabled — not default on all Windows versions."
+      - "Actors may use PowerShell v2 (downgrade attack) to bypass Script Block Logging."
+    notes: >
+      Script Block Logging is the decisive capability gate. Without Event ID 4104,
+      detection degrades to command-line heuristics only. Enable before deploying.
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0004  Execution — DLL Side-Loading via Legitimate Executable
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0004
+    title: "Unsigned DLL Loaded by Signed Legitimate Executable from Writable Path"
+    actor_context: "MuddyWater — PowGoop uses Goopdate.dll loaded by GoogleUpdate.exe; confirmed in 2024 toolset"
+    techniques:
+      - T1574.002
+    proc_ref: proc_mw_0004
+    logic_type: behavioral
+    description: >
+      Detect a signed, trusted executable loading a DLL from the same directory or a
+      user-writable path where the DLL is unsigned or has a mismatched signer. Specific
+      high-confidence case: GoogleUpdate.exe loading Goopdate.dll from a non-Google path.
+    pseudologic: |
+      # Rule A — Specific IoC: GoogleUpdate loading Goopdate from non-standard path
+      event_type = image_load AND
+      image ENDSWITH "GoogleUpdate.exe" AND
+      loaded_image ENDSWITH "Goopdate.dll" AND
+      NOT loaded_image_path STARTSWITH "C:\Program Files (x86)\Google\"
+
+      # Rule B — Generic: signed process loading unsigned DLL from user-writable path
+      event_type = image_load AND
+      process_signed = true AND
+      loaded_image_signed = false AND
+      loaded_image_path MATCHES "(\\Users\\|\\AppData\\|\\Temp\\|\\ProgramData\\)"
+    log_sources:
+      - "Sysmon Event ID 7 (ImageLoad) with signed/unsigned status — REQUIRED"
+      - "EDR with DLL load telemetry and code signing verification"
+      - "File creation events for DLLs written to application directories (Sysmon Event ID 11)"
+    false_positives:
+      - "Third-party software legitimately shipping unsigned DLLs alongside signed executables"
+      - "Developer workstations with locally compiled DLLs"
+      - "Some enterprise software updates that stage DLLs in temp paths before installation"
+    validation_status: draft
+    coverage_score: 2
+    limitations:
+      - "Requires Sysmon Event ID 7 with image load tracking — not enabled by default."
+      - "Generic rule (Rule B) will produce high false positives in environments with many third-party applications."
+      - "Actors can sign their DLLs with purchased or stolen certificates — signing check bypassed."
+    notes: "Rule A (GoogleUpdate + Goopdate) is the high-confidence IoC. Rule B is the behavioral safety net."
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0005  Persistence — Registry Run Key Written by Non-Installer Process
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0005
+    title: "Registry Run Key Written by Non-Installer Process to User-Writable Path"
+    actor_context: "MuddyWater — Small Sieve (OutlookMicrosift), Canopy, AA22-055A (SystemTextEncoding) all use Run keys"
+    techniques:
+      - T1547.001
+    proc_ref: proc_mw_0005
+    logic_type: behavioral
+    description: >
+      Detect writes to HKCU or HKLM Run/RunOnce keys where the value data points to
+      a user-writable directory or uses a misleading name mimicking Microsoft software.
+      High-confidence specific case: value names OutlookMicrosift or SystemTextEncoding.
+    pseudologic: |
+      # Rule A — Specific IoC: known MuddyWater Run key value names
+      event_type = registry_set AND
+      registry_key MATCHES "\\CurrentVersion\\Run" AND
+      registry_value_name IN ["OutlookMicrosift","SystemTextEncoding"]
+
+      # Rule B — Behavioral: Run key pointing to writable/unusual path
+      event_type = registry_set AND
+      registry_key MATCHES "(HKCU|HKLM)\\.*\\CurrentVersion\\Run" AND
+      registry_value_data MATCHES "(\\AppData\\|\\Temp\\|\\ProgramData\\|\\Users\\)" AND
+      process_image NOT IN ["msiexec.exe","setup.exe","install.exe","update.exe"] AND
+      process_integrity_level NOT IN ["High","System"]
+
+      # Rule C — Script files in startup folder
+      event_type = file_create AND
+      file_path MATCHES "\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\" AND
+      file_extension IN ["wsf","vbs","js","ps1","bat","cmd"]
+    log_sources:
+      - "Sysmon Event ID 13 (RegistryEvent - value set)"
+      - "Windows Security Event ID 4657 (registry value modified, requires SACL)"
+      - "File creation events for startup folder (Sysmon Event ID 11)"
+    false_positives:
+      - "Legitimate software installers writing Run keys (common — requires installer process exclusion)"
+      - "IT management tools (SCCM, Group Policy) writing to Run keys for software deployment"
+    validation_status: draft
+    coverage_score: 2
+    limitations:
+      - "Generic Run key detection has high false-positive rate without careful process exclusion."
+      - "Value name IoCs (Rule A) are high-confidence but will not catch renamed variants."
+    notes: "Rule A is an immediate hunt trigger when observed. Rule B requires tuning before production deployment."
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0006  Persistence — Scheduled Task with Anomalous Repetition Interval
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0006
+    title: "Scheduled Task Created with Anomalous Short Repetition Interval from Non-Admin Context"
+    actor_context: "MuddyWater — BugSleep creates a scheduled task triggered every 43 minutes for C2 beaconing"
+    techniques:
+      - T1053.005
+    proc_ref: proc_mw_0006
+    logic_type: behavioral
+    description: >
+      Detect scheduled task creation where the trigger repetition interval is short (under
+      60 minutes) and the task action points to an executable or script in a user-writable
+      directory. Specific hunt: 43-minute interval is a BugSleep artifact.
+    pseudologic: |
+      # Rule A — Specific: 43-minute interval (BugSleep artifact)
+      event_type = scheduled_task_created AND
+      task_trigger_repetition_interval = "PT43M"
+
+      # Rule B — Behavioral: short interval + suspicious action path
+      event_type = scheduled_task_created AND
+      task_trigger_repetition_interval_minutes < 60 AND
+      task_action_path MATCHES "(\\AppData\\|\\Temp\\|\\ProgramData\\|\\Users\\)" AND
+      creating_process NOT IN ["svchost.exe","taskeng.exe","msiexec.exe"]
+
+      # Rule C — Sysmon command line approach
+      event_type = process_create AND
+      image ENDSWITH "schtasks.exe" AND
+      command_line MATCHES "/create" AND
+      command_line MATCHES "(AppData|Temp|ProgramData)"
+    log_sources:
+      - "Windows Security Event ID 4698 (scheduled task created)"
+      - "Task Scheduler operational log (Microsoft-Windows-TaskScheduler/Operational)"
+      - "Sysmon Event ID 1: schtasks.exe process creation with command line"
+    false_positives:
+      - "Backup and monitoring software creating frequent scheduled tasks"
+      - "Browser update mechanisms using short-interval tasks"
+    validation_status: draft
+    coverage_score: 2
+    limitations:
+      - "43-minute interval is BugSleep-specific and customizable — future variants may use different intervals."
+      - "Task Scheduler event log is often not forwarded to SIEM by default — requires log collection configuration."
+    notes: "PT43M is a precise hunt artifact. Rule A should be an immediate alert when observed. INCD 2024 only — corroborate before wide deployment."
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0007  Remote Access — RMM Tool Execution in Suspicious Delivery Context
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0007
+    title: "Known RMM Binary Executed from User-Writable Path with Suspicious Parent Process"
+    actor_context: >
+      MuddyWater — highest-priority procedure; ScreenConnect, SyncroRAT, rport.exe, AteraAgent,
+      SimpleHelp, Level, PDQConnect all documented across five government sources
+    techniques:
+      - T1219
+    proc_ref: proc_mw_0007
+    logic_type: correlated
+    description: >
+      Detect RMM tool execution where the binary is running from a user-writable path
+      (indicating it was delivered, not installed) AND/OR the parent process is a browser,
+      email client, or archive utility (indicating delivery via phishing or file-sharing link).
+      Correlate with network connections to RMM vendor infrastructure.
+    pseudologic: |
+      # Rule A — Known RMM binary from non-standard installation path
+      event_type = process_create AND
+      (image ENDSWITH "AteraAgent.exe" OR
+       image ENDSWITH "ScreenConnect.exe" OR
+       image ENDSWITH "SimpleHelp.exe" OR
+       image ENDSWITH "rport.exe" OR
+       image ENDSWITH "SyncroRAT.exe" OR
+       image ENDSWITH "Level.exe" OR
+       image ENDSWITH "PDQConnect.exe") AND
+      image_path MATCHES "(\\AppData\\|\\Temp\\|\\Downloads\\|\\Users\\[^\\]+\\Desktop\\)"
+
+      # Rule B — RMM binary spawned by email client or browser
+      event_type = process_create AND
+      (image ENDSWITH "AteraAgent.exe" OR image ENDSWITH "ScreenConnect.exe" OR
+       image ENDSWITH "SimpleHelp.exe" OR image ENDSWITH "rport.exe") AND
+      parent_image IN ["OUTLOOK.EXE","outlook.exe","chrome.exe","firefox.exe",
+                       "msedge.exe","7zFM.exe","WinRAR.exe","explorer.exe"]
+
+      # Rule C — Outbound connection to RMM infrastructure from unexpected endpoint
+      event_type = network_connection AND
+      destination_domain MATCHES "(atera\.com|screenconnect\.com|simplehelp\.net|syncromsp\.com)" AND
+      source_process NOT IN [known_rmm_processes_baseline]
+    log_sources:
+      - "EDR / Sysmon Event ID 1 (process creation with parent image and file path)"
+      - "Network flow logs / proxy logs (outbound connections to RMM vendor domains)"
+      - "File creation events for RMM installer binaries (Sysmon Event ID 11)"
+    false_positives:
+      - "Legitimate IT-administered RMM deployments — BASELINE REQUIRED before alerting"
+      - "Help desk technicians installing RMM manually from downloads"
+      - "Software distribution systems that stage installers in temp paths"
+    validation_status: draft
+    coverage_score: 2
+    limitations:
+      - "RMM tools are legitimate software — detection depends entirely on delivery context and path, not binary name alone."
+      - "Authorized RMM deployments must be baselined per endpoint before alerts are useful."
+      - "Actors can rename RMM binaries — binary name detection (Rule A/B) will miss renamed variants."
+    notes: >
+      Most consistently documented technique across all five government sources.
+      Baseline authorized RMM deployments first — this is the single highest-ROI detection
+      if the baseline is clean.
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0008a  C2 — Non-Browser Process Connecting to Telegram API
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0008a
+    title: "Non-Browser Process Making Outbound Connection to Telegram Bot API"
+    actor_context: "MuddyWater — Small Sieve uses Telegram Bot API (api.telegram.org) for C2 over HTTPS"
+    techniques:
+      - T1071.001
+      - T1102
+    proc_ref: proc_mw_0008
+    logic_type: behavioral
+    description: >
+      Detect outbound HTTPS connections to api.telegram.org from processes that are not
+      a known Telegram desktop client or approved browser. In enterprise environments
+      where Telegram is not a standard application, any process connecting to the Telegram
+      API is anomalous.
+    pseudologic: |
+      event_type = network_connection AND
+      destination_domain = "api.telegram.org" AND
+      destination_port = 443 AND
+      source_process NOT IN ["Telegram.exe","telegram.exe","chrome.exe","firefox.exe",
+                              "msedge.exe","iexplore.exe"]
+    log_sources:
+      - "DNS query logs (api.telegram.org resolution from endpoint)"
+      - "Network flow logs / proxy logs (HTTPS to api.telegram.org)"
+      - "EDR network connection events with process name"
+    false_positives:
+      - "Telegram desktop application on endpoints where it is installed and approved"
+      - "Bot developers testing scripts from dev workstations"
+    validation_status: draft
+    coverage_score: 3
+    limitations:
+      - "In organizations where Telegram is approved, detection requires strict process allowlisting."
+      - "Actor could switch from Telegram to another messaging platform — detection is API-specific."
+    notes: "Highest-confidence C2 detection anchor across all C2 channels documented for MuddyWater."
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0008b  C2 — DNS Tunneling Patterns
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0008b
+    title: "Anomalous DNS Query Volume or Subdomain Entropy Indicating DNS Tunneling"
+    actor_context: "MuddyWater — Mori uses DNS tunneling for C2 communication"
+    techniques:
+      - T1572
+    proc_ref: proc_mw_0008
+    logic_type: behavioral
+    description: >
+      Detect DNS tunneling patterns: high query rate to a single domain, long subdomain
+      labels, high Shannon entropy in subdomain strings, or DNS queries containing
+      Base64-like character distributions from non-browser processes.
+    pseudologic: |
+      # Rule A — High query rate to single parent domain
+      event_type = dns_query
+      GROUP BY source_ip, query_domain_parent
+      HAVING COUNT(*) > 100 WITHIN 60 seconds
+
+      # Rule B — Long subdomain labels (>40 chars indicates encoded data)
+      event_type = dns_query AND
+      LENGTH(subdomain_label) > 40
+
+      # Rule C — High entropy subdomains
+      event_type = dns_query AND
+      SHANNON_ENTROPY(subdomain_label) > 3.5 AND
+      subdomain_label NOT IN [known_cdn_domains_baseline]
+    log_sources:
+      - "DNS resolver logs (query volume, full QNAME)"
+      - "Network flow logs for DNS traffic (UDP/TCP port 53)"
+    false_positives:
+      - "CDN domains with long hash-based subdomains (require allowlist)"
+      - "DNSSEC validation traffic"
+      - "Legitimate applications using DNS for service discovery"
+    validation_status: draft
+    coverage_score: 2
+    limitations:
+      - "Requires DNS query logging with full QNAME — not available in all environments."
+      - "Entropy and volume thresholds require per-environment baseline calibration."
+      - "Mori is documented in one source tier only (CISA AA22-055A); treat with moderate confidence."
+    notes: "Secondary C2 channel. Lab validation should test entropy thresholds against benign CDN traffic."
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0009  Discovery — WMI Query to SecurityCenter2 Namespace
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0009
+    title: "PowerShell WMI Query to SecurityCenter2 AntiVirusProduct Namespace"
+    actor_context: "MuddyWater — documented post-access discovery survey (CISA AA22-055A) querying AV product names via WMI"
+    techniques:
+      - T1047
+      - T1082
+      - T1016
+      - T1033
+      - T1518.001
+    proc_ref: proc_mw_0009
+    logic_type: behavioral
+    description: >
+      Detect PowerShell executing a WMI query against the root\SecurityCenter2\AntiVirusProduct
+      class. Outside of AV management software and endpoint security tools, this query is
+      rarely performed by legitimate software and is a high-confidence indicator of
+      attacker reconnaissance.
+    pseudologic: |
+      # Rule A — Script Block Logging captures SecurityCenter2 query
+      event_type = script_block_log AND
+      script_block_text MATCHES "SecurityCenter2" AND
+      script_block_text MATCHES "AntiVirusProduct"
+
+      # Rule B — Process command line contains SecurityCenter2
+      event_type = process_create AND
+      image ENDSWITH "powershell.exe" AND
+      command_line MATCHES "SecurityCenter2"
+
+      # Rule C — Full survey pattern match (high-confidence combined indicator)
+      event_type = script_block_log AND
+      script_block_text MATCHES "SecurityCenter2" AND
+      script_block_text MATCHES "Win32_NetworkAdapterConfiguration" AND
+      script_block_text MATCHES "Win32_OperatingSystem"
+    log_sources:
+      - "PowerShell Script Block Logging (Event ID 4104) — REQUIRED for Rule A and C"
+      - "EDR / Sysmon Event ID 1 (command line for Rule B)"
+      - "WMI activity logging (Microsoft-Windows-WMI-Activity/Operational)"
+    false_positives:
+      - "AV management software and endpoint security platforms that query SecurityCenter2"
+      - "IT inventory tools (Lansweeper, SCCM hardware inventory)"
+    validation_status: draft
+    coverage_score: 3
+    limitations:
+      - "Requires Script Block Logging — same capability gate as det_mw_0003."
+      - "Script content detection (Rule C) matches the specific documented survey; variants may omit some WMI classes."
+    notes: >
+      SecurityCenter2 + AntiVirusProduct query is one of the most specific behavioral
+      indicators in the dataset. Rule C is near-exact-match for the documented CISA script —
+      treat as high-confidence when observed.
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # det_mw_0010  Credential Access — LSASS Memory Access and Credential Tool Execution
+  # ─────────────────────────────────────────────────────────────────────────────
+  - id: det_mw_0010
+    title: "Process Accessing LSASS Memory or Credential Dumping Tool Execution"
+    actor_context: "MuddyWater — Mimikatz, procdump64.exe against LSASS; LaZagne for LSA secrets and cached credentials (CISA AA22-055A)"
+    techniques:
+      - T1003.001
+      - T1003.004
+      - T1003.005
+    proc_ref: proc_mw_0010
+    logic_type: behavioral
+    description: >
+      Detect (1) any non-system process opening a handle to lsass.exe with read/VM-read
+      permissions (Sysmon Event ID 10), (2) execution of known credential dumping tools
+      by binary name or command-line argument, and (3) creation of .dmp files in
+      user-writable directories. All three rules are independent — any one is sufficient
+      for alerting.
+    pseudologic: |
+      # Rule A — LSASS process access (highest confidence, tool-agnostic)
+      event_type = process_access AND
+      target_image ENDSWITH "lsass.exe" AND
+      granted_access MATCHES "(0x1010|0x1410|0x1438|0x143a|0x1418)" AND
+      source_image NOT IN ["MsMpEng.exe","csrss.exe","wininit.exe","svchost.exe",
+                           "SecurityHealthService.exe","CylanceSvc.exe","SentinelAgent.exe"]
+
+      # Rule B — Known credential tool execution
+      event_type = process_create AND
+      (image IMATCHES "mimikatz\.exe" OR
+       image ENDSWITH "procdump64.exe" OR
+       image IMATCHES "lazagne\.exe") OR
+      command_line IMATCHES "(sekurlsa|lsadump|privilege::debug)"
+
+      # Rule C — Dump file creation in writable path
+      event_type = file_create AND
+      file_extension = "dmp" AND
+      file_path MATCHES "(\\AppData\\|\\Temp\\|\\Users\\|\\ProgramData\\)"
+    log_sources:
+      - "Sysmon Event ID 10 (ProcessAccess targeting lsass.exe) — REQUIRED for Rule A"
+      - "EDR / Sysmon Event ID 1 (process creation for Rule B)"
+      - "Sysmon Event ID 11 (file creation for Rule C)"
+      - "Windows Security Event ID 4656 / 4663 (handle requests to lsass.exe)"
+    false_positives:
+      - "AV and EDR agents that legitimately access LSASS for monitoring (exclude by process hash)"
+      - "Windows Error Reporting creating .dmp files in temp paths after application crashes"
+      - "Legitimate procdump usage by developers for application crash diagnostics"
+    validation_status: draft
+    coverage_score: 3
+    limitations:
+      - "Credential Guard and PPL (Protected Process Light) prevent LSASS reads on modern systems — confirm protection status before relying on LSASS-dump detections."
+      - "Actors may rename Mimikatz or use custom loaders — binary name detection (Rule B) will miss."
+      - "Sysmon Event ID 10 requires explicit ProcessAccess configuration in sysmon.xml."
+    notes: >
+      Rule A (LSASS process access via Sysmon Event ID 10) is the most tool-agnostic and
+      reliable path — fires regardless of whether the actor uses Mimikatz, procdump,
+      or a custom credential dumper, as long as Sysmon ProcessAccess events are configured.

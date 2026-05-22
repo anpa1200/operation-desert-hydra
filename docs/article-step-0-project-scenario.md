@@ -1065,6 +1065,65 @@ Navigate to `Dashboards → Operation Desert Hydra — MuddyWater` to verify.
 
 ---
 
+## Phase 4: Detection Atlas
+
+Build behavioral detection logic for all 10 MuddyWater procedures.
+Output: `data/detections.yaml` — 11 detection entries (one procedure produces two C2 detections).
+
+### 20. Draft Detection Atlas
+
+For each procedure in `data/procedures.yaml`, produce a detection entry in `data/detections.yaml` containing:
+- `id` — det_mw_XXXX
+- `title` — one-line detection description
+- `actor_context` — which MuddyWater activity this covers
+- `techniques` — ATT&CK technique IDs
+- `proc_ref` — back-reference to procedure ID
+- `logic_type` — `behavioral`, `correlated`, or `ioc_match`
+- `description` — what the detection logic does
+- `pseudologic` — platform-agnostic detection pseudocode (multi-rule where needed)
+- `log_sources` — required telemetry with event IDs
+- `false_positives` — known noise sources
+- `validation_status` — `draft`, `lab_pending`, or `lab_validated`
+- `coverage_score` — 0–5 per project scale
+- `limitations` — honest gaps
+- `notes` — analyst commentary and confidence rationale
+
+Run the AI draft, then perform an analyst review pass before marking `validation_status: reviewed`.
+
+**Detections produced:**
+
+| ID | Title | Technique(s) | Logic | Score |
+|----|-------|-------------|-------|-------|
+| det_mw_0001 | Email-Delivered Archive Followed by Process Spawn | T1566.001, T1566.002 | correlated | 2 |
+| det_mw_0002 | Internet-Facing Service Spawning Interpreter | T1190 | behavioral | 2 |
+| det_mw_0003 | PowerShell Encoded Command / Obfuscated Script | T1059.001, T1027 | behavioral | 3 |
+| det_mw_0004 | Unsigned DLL Loaded by Signed Executable | T1574.002 | behavioral | 2 |
+| det_mw_0005 | Registry Run Key Written by Non-Installer Process | T1547.001 | behavioral | 2 |
+| det_mw_0006 | Scheduled Task — Short Repetition Interval | T1053.005 | behavioral | 2 |
+| det_mw_0007 | RMM Binary from User-Writable Path / Suspicious Parent | T1219 | correlated | 2 |
+| det_mw_0008a | Non-Browser Process to Telegram Bot API | T1071.001, T1102 | behavioral | 3 |
+| det_mw_0008b | DNS Tunneling — Volume/Entropy Patterns | T1572 | behavioral | 2 |
+| det_mw_0009 | PowerShell WMI Query to SecurityCenter2 | T1047, T1082, T1016, T1033, T1518.001 | behavioral | 3 |
+| det_mw_0010 | LSASS Memory Access / Credential Tool Execution | T1003.001, T1003.004, T1003.005 | behavioral | 3 |
+
+**Coverage score rationale:**
+- Score 3 detections (0003, 0008a, 0009, 0010): specific behavioral anchors with low ambient noise
+- Score 2 detections: behavioral but require tuning/baselining before production deployment
+- All scores are `draft` — no lab validation yet; Phase 5 raises scores to 4–5
+
+**Capability gates identified:**
+- PowerShell Script Block Logging (Event ID 4104) — required for det_mw_0003 and det_mw_0009
+- Sysmon Event ID 7 (ImageLoad) — required for det_mw_0004
+- Sysmon Event ID 10 (ProcessAccess) — required for det_mw_0010
+- Sysmon Event ID 13 (RegistryEvent) — required for det_mw_0005
+- Windows Security Event ID 4698 + Task Scheduler log — required for det_mw_0006
+- Email gateway telemetry correlated with endpoint — required for det_mw_0001
+
+> **Done.** AI draft of 11 detections written to `data/detections.yaml` covering all 10 procedures.
+> Analyst review pass is the next gate before Phase 5 (lab validation).
+
+---
+
 ## Step 0 Definition Of Done
 
 Step 0 is complete when the project has a clear purpose and declared output:
