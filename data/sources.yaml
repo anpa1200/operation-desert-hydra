@@ -1,1 +1,864 @@
-sources: []
+sources:
+  - id: src_usgov_aa22_055a_pdf_mirror
+    source_number: 7
+    title: "AA22-055A: Iranian Government-Sponsored Actors Conduct Cyber Operations Against Global Government and Commercial Networks"
+    publisher: "CISA / FBI / CNMF / NCSC-UK / NSA"
+    url: "https://media.defense.gov/2022/Feb/24/2002944274/-1/-1/0/CSA_AA22-055A_Iranian_Government-Sponsored_Actors_Conduct_Cyber_Operations.PDF"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/07-u-s-cyber-command-defense-media-aa22-055a-pdf-mirror/source.pdf"
+      text: "docs/source-gathering/raw-sources/07-u-s-cyber-command-defense-media-aa22-055a-pdf-mirror/source.txt"
+      metadata: "docs/source-gathering/raw-sources/07-u-s-cyber-command-defense-media-aa22-055a-pdf-mirror/metadata.json"
+    source_type: "government_advisory"
+    source_reliability: "A"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+      - "Seedworm"
+      - "Static Kitten"
+      - "TEMP.Zagros"
+      - "Iran MOIS"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: false
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "Seedworm"
+      - "Static Kitten"
+      - "TEMP.Zagros"
+      - "PowGoop"
+      - "POWERSTATS"
+      - "Mori"
+      - "Small Sieve"
+      - "Canopy"
+      - "Iran MOIS"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1190"
+      - "T1574"
+      - "T1059.001"
+      - "T1219"
+    limitations:
+      - "Government advisory is authoritative for actor context and reported behavior, but procedure extraction still requires claim-level review."
+      - "Some details are historical and should not be assumed current without newer corroboration."
+    promotion_decision: "promote"
+
+  - id: src_incd_muddywater_darkbit_2023
+    source_number: 17
+    title: "Iranian Government-Sponsored Threat Actor MuddyWater Conducts Cyber Attack Against Israel"
+    publisher: "Israel National Cyber Directorate"
+    url: "https://www.gov.il/BlobFolder/news/_muddywater/en/government%20threat%20actor.pdf"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/17-israel-national-cyber-directorate-muddywater-darkbit-pdf/source.pdf"
+      text: "docs/source-gathering/raw-sources/17-israel-national-cyber-directorate-muddywater-darkbit-pdf/source.txt"
+      metadata: "docs/source-gathering/raw-sources/17-israel-national-cyber-directorate-muddywater-darkbit-pdf/metadata.json"
+    source_type: "government_report"
+    source_reliability: "A"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+      - "Iran MOIS"
+      - "DarkBit"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "DarkBit"
+      - "8thcurse.exe"
+      - "PowerShower"
+      - "PowerStallion"
+      - "SyncroRAT"
+      - "Technion"
+    candidate_attck_techniques:
+      - "T1486"
+      - "T1490"
+      - "T1059.003"
+      - "T1140"
+      - "T1566"
+    limitations:
+      - "Israel-specific incident source; do not generalize every procedure to all MuddyWater activity."
+      - "Destructive/disinformation intent must be represented as assessed unless directly evidenced per claim."
+    promotion_decision: "promote"
+
+  - id: src_incd_muddywater_2024_evolution
+    source_number: 18
+    title: "Technological Advancement and Evolution of MuddyWater in 2024"
+    publisher: "Israel National Cyber Directorate"
+    url: "https://www.gov.il/BlobFolder/reports/maddy_water_2024/en/ALERT_CERT_IL_W_1858.pdf"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/18-israel-national-cyber-directorate-technological-advancement-and-evolution-of-muddywater-in/source.pdf"
+      text: "docs/source-gathering/raw-sources/18-israel-national-cyber-directorate-technological-advancement-and-evolution-of-muddywater-in/source.txt"
+      metadata: "docs/source-gathering/raw-sources/18-israel-national-cyber-directorate-technological-advancement-and-evolution-of-muddywater-in/metadata.json"
+    source_type: "government_report"
+    source_reliability: "A"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+      - "Iran MOIS"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "AnchorRAT"
+      - "CannonRat"
+      - "Neshta"
+      - "AteraAgent"
+      - "SimpleHelp"
+      - "Egnyte"
+      - "OneDrive"
+      - "Zendesk"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1219"
+      - "T1059"
+      - "T1053"
+      - "T1564"
+    limitations:
+      - "Names and procedures require extraction at claim level before graph import."
+      - "Treat ATT&CK mappings as candidates until validated against source text."
+    promotion_decision: "promote"
+
+  - id: src_cisa_aa22_055a_page
+    source_number: 5
+    title: "AA22-055A: Iranian Government-Sponsored Actors Conduct Cyber Operations Against Global Government and Commercial Networks"
+    publisher: "CISA / FBI / CNMF / NCSC-UK / NSA"
+    url: "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/05-cisa-fbi-cnmf-ncsc-uk-nsa-aa22-055a-advisory-page/source.html"
+      text: "docs/source-gathering/raw-sources/05-cisa-fbi-cnmf-ncsc-uk-nsa-aa22-055a-advisory-page/fallback-reader.txt"
+      metadata: "docs/source-gathering/raw-sources/05-cisa-fbi-cnmf-ncsc-uk-nsa-aa22-055a-advisory-page/metadata.json"
+    source_type: "government_advisory"
+    source_reliability: "A"
+    information_credibility: 2
+    acquisition_quality: "usable_fallback"
+    evidence_support:
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+      - "Iran MOIS"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: false
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "PowGoop"
+      - "POWERSTATS"
+      - "Mori"
+      - "Small Sieve"
+      - "Canopy"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1190"
+      - "T1574"
+      - "T1059.001"
+    limitations:
+      - "Direct local HTML fetch was blocked; readable fallback was saved."
+      - "Use source 07 as the preferred local PDF copy for citation-heavy review."
+    promotion_decision: "promote"
+
+  - id: src_ncsc_uk_muddywater_joint_advisory
+    source_number: 8
+    title: "Joint advisory observes MuddyWater actors conducting cyber espionage"
+    publisher: "UK National Cyber Security Centre"
+    url: "https://www.ncsc.gov.uk/news/joint-advisory-observes-muddywater-actors-conducting-cyber-espionage"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/08-ncsc-uk-joint-advisory-on-muddywater-actor/source.html"
+      text: "docs/source-gathering/raw-sources/08-ncsc-uk-joint-advisory-on-muddywater-actor/source.txt"
+      metadata: "docs/source-gathering/raw-sources/08-ncsc-uk-joint-advisory-on-muddywater-actor/metadata.json"
+    source_type: "government_advisory"
+    source_reliability: "A"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+      - "Iran MOIS"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: false
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "Seedworm"
+      - "Static Kitten"
+      - "TEMP.Zagros"
+      - "Iran MOIS"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1190"
+      - "T1574"
+    limitations:
+      - "High-level government advisory page; use with AA22-055A PDF for technical extraction."
+    promotion_decision: "promote"
+
+  - id: src_incd_recent_phishing_1947
+    source_number: 19
+    title: "Overview of Recent Phishing"
+    publisher: "Israel National Cyber Directorate"
+    url: "https://www.gov.il/BlobFolder/reports/alert_1947/he/ALERT-CERT-IL-W-1947.pdf"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/19-israel-national-cyber-directorate-overview-of-recent-phishing-pdf/source.pdf"
+      text: "docs/source-gathering/raw-sources/19-israel-national-cyber-directorate-overview-of-recent-phishing-pdf/source.txt"
+      metadata: "docs/source-gathering/raw-sources/19-israel-national-cyber-directorate-overview-of-recent-phishing-pdf/metadata.json"
+    source_type: "government_alert"
+    source_reliability: "A"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+    actor_claims:
+      - "Israel-focused phishing activity"
+    usable_for:
+      actor_profile: false
+      procedures: true
+      malware: false
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "Phishing"
+      - "Israeli organizations"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1204"
+    limitations:
+      - "Use for Israel phishing procedure context; do not treat as MuddyWater attribution unless source text explicitly says so."
+    promotion_decision: "promote"
+
+  - id: src_mitre_attack_muddywater_g0069
+    source_number: 1
+    title: "MuddyWater"
+    publisher: "MITRE ATT&CK"
+    url: "https://attack.mitre.org/groups/G0069/"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/01-mitre-att-ck-muddywater-g0069/source.html"
+      text: "docs/source-gathering/raw-sources/01-mitre-att-ck-muddywater-g0069/source.txt"
+      metadata: "docs/source-gathering/raw-sources/01-mitre-att-ck-muddywater-g0069/metadata.json"
+    source_type: "framework_profile"
+    source_reliability: "A"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+      - "Earth Vetala"
+      - "MERCURY"
+      - "Mango Sandstorm"
+      - "Static Kitten"
+      - "Seedworm"
+      - "TEMP.Zagros"
+      - "TA450"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: false
+      detections: false
+      validation_lab: false
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "POWERSTATS"
+      - "PowGoop"
+      - "MuddyViper"
+      - "TA450"
+      - "Mango Sandstorm"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1219"
+      - "T1059.001"
+      - "T1090"
+      - "T1204"
+    limitations:
+      - "MITRE is curated and cited, but it is not the original primary evidence for every procedure."
+      - "Alias overlap must be handled carefully and supported by source references."
+    promotion_decision: "promote"
+
+  - id: src_mitre_attack_powerstats_s0223
+    source_number: 2
+    title: "POWERSTATS"
+    publisher: "MITRE ATT&CK"
+    url: "https://attack.mitre.org/software/S0223/"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/02-mitre-att-ck-powerstats-s0223/source.html"
+      text: "docs/source-gathering/raw-sources/02-mitre-att-ck-powerstats-s0223/source.txt"
+      metadata: "docs/source-gathering/raw-sources/02-mitre-att-ck-powerstats-s0223/metadata.json"
+    source_type: "framework_software_profile"
+    source_reliability: "A"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Reported"
+    actor_claims:
+      - "POWERSTATS"
+      - "MuddyWater"
+    usable_for:
+      actor_profile: false
+      procedures: true
+      malware: true
+      infrastructure: false
+      detections: false
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "POWERSTATS"
+      - "PowerShell"
+      - "MuddyWater"
+    candidate_attck_techniques:
+      - "T1059.001"
+    limitations:
+      - "Software profile supports mapping, but procedure details should be corroborated with original reporting."
+    promotion_decision: "promote"
+
+  - id: src_mitre_attack_powgoop_s1046
+    source_number: 3
+    title: "PowGoop"
+    publisher: "MITRE ATT&CK"
+    url: "https://attack.mitre.org/software/S1046/"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/03-mitre-att-ck-powgoop-s1046/source.html"
+      text: "docs/source-gathering/raw-sources/03-mitre-att-ck-powgoop-s1046/source.txt"
+      metadata: "docs/source-gathering/raw-sources/03-mitre-att-ck-powgoop-s1046/metadata.json"
+    source_type: "framework_software_profile"
+    source_reliability: "A"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Reported"
+    actor_claims:
+      - "PowGoop"
+      - "MuddyWater"
+    usable_for:
+      actor_profile: false
+      procedures: true
+      malware: true
+      infrastructure: false
+      detections: false
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "PowGoop"
+      - "MuddyWater"
+    candidate_attck_techniques:
+      - "T1574"
+      - "T1574.002"
+    limitations:
+      - "Use as a software object and candidate technique reference; do not use alone for campaign claims."
+    promotion_decision: "promote"
+
+  - id: src_microsoft_mercury_dev1084_2023
+    source_number: 22
+    title: "MERCURY and DEV-1084: Destructive attack on hybrid environment"
+    publisher: "Microsoft Threat Intelligence"
+    url: "https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/22-microsoft-mercury-and-dev-1084-destructive-attack-on-hybrid-environment/source.html"
+      text: "docs/source-gathering/raw-sources/22-microsoft-mercury-and-dev-1084-destructive-attack-on-hybrid-environment/source.txt"
+      metadata: "docs/source-gathering/raw-sources/22-microsoft-mercury-and-dev-1084-destructive-attack-on-hybrid-environment/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MERCURY"
+      - "DEV-1084"
+      - "MuddyWater context"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: false
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MERCURY"
+      - "DEV-1084"
+      - "Storm-1084"
+      - "AADInternals"
+      - "Azure AD Connect"
+      - "vatacloud.com"
+    candidate_attck_techniques:
+      - "T1003"
+      - "T1003.006"
+      - "T1485"
+      - "T1090"
+      - "T1219"
+    limitations:
+      - "Microsoft taxonomy and actor naming must be mapped carefully to MuddyWater aliases."
+      - "Platform-specific telemetry should not be generalized without log-source mapping."
+    promotion_decision: "promote"
+
+  - id: src_proofpoint_ta450_pdf_links_2024
+    source_number: 24
+    title: "TA450 Uses Embedded Links in PDF Attachments in Latest Campaign"
+    publisher: "Proofpoint Threat Research"
+    url: "https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta450-uses-embedded-links-pdf-attachments-latest-campaign"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/24-proofpoint-ta450-uses-embedded-links-in-pdf-attachments-in-latest-campaign/source.html"
+      text: "docs/source-gathering/raw-sources/24-proofpoint-ta450-uses-embedded-links-in-pdf-attachments-in-latest-campaign/source.txt"
+      metadata: "docs/source-gathering/raw-sources/24-proofpoint-ta450-uses-embedded-links-in-pdf-attachments-in-latest-campaign/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "TA450"
+      - "MuddyWater"
+      - "Mango Sandstorm"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: false
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "TA450"
+      - "AteraAgent"
+      - "PDF attachments"
+      - ".IL sender accounts"
+      - "Israeli organizations"
+    candidate_attck_techniques:
+      - "T1566.001"
+      - "T1204.001"
+      - "T1219"
+    limitations:
+      - "Short campaign writeup; raw indicators may be limited."
+      - "Use for procedure candidates, not standalone attribution beyond Proofpoint's claim."
+    promotion_decision: "promote"
+
+  - id: src_eset_muddywater_snakes_riverbank
+    source_number: 29
+    title: "MuddyWater: Snakes by the riverbank"
+    publisher: "ESET Research"
+    url: "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/29-eset-welivesecurity-muddywater-snakes-by-the-riverbank/source.html"
+      text: "docs/source-gathering/raw-sources/29-eset-welivesecurity-muddywater-snakes-by-the-riverbank/source.txt"
+      metadata: "docs/source-gathering/raw-sources/29-eset-welivesecurity-muddywater-snakes-by-the-riverbank/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+      - "Mango Sandstorm"
+      - "TA450"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "Fooder"
+      - "MuddyViper"
+      - "CE-Notes"
+      - "LP-Notes"
+      - "go-socks5"
+      - "Israeli targets"
+      - "Egyptian targets"
+    candidate_attck_techniques:
+      - "T1204.002"
+      - "T1059.001"
+      - "T1059.003"
+      - "T1113"
+      - "T1555"
+    limitations:
+      - "High-value technical source, but all novel malware names and overlaps still require claim-level extraction."
+      - "Do not merge actors based on victim overlap or tooling overlap alone."
+    promotion_decision: "promote"
+
+  - id: src_checkpoint_bugsleep_2024
+    source_number: 28
+    title: "MuddyWater Threat Group Deploys New BugSleep Backdoor"
+    publisher: "Check Point Research"
+    url: "https://blog.checkpoint.com/research/muddywater-threat-group-deploys-new-bugsleep-backdoor/"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/28-check-point-muddywater-threat-group-deploys-new-bugsleep-backdoor/source.html"
+      text: "docs/source-gathering/raw-sources/28-check-point-muddywater-threat-group-deploys-new-bugsleep-backdoor/source.txt"
+      metadata: "docs/source-gathering/raw-sources/28-check-point-muddywater-threat-group-deploys-new-bugsleep-backdoor/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "BugSleep"
+      - "Phishing"
+      - "Israeli targets"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1059"
+      - "T1105"
+      - "T1219"
+    limitations:
+      - "Use as vendor technical research; map technique candidates only after extracting exact procedures."
+    promotion_decision: "promote"
+
+  - id: src_proofpoint_clickfix_2025
+    source_number: 33
+    title: "Around the World in 90 Days: State-Sponsored Actors Try ClickFix"
+    publisher: "Proofpoint Threat Research"
+    url: "https://www.proofpoint.com/us/blog/threat-insight/around-world-90-days-state-sponsored-actors-try-clickfix"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/33-proofpoint-around-the-world-in-90-days-state-sponsored-actors-try-clickfix/source.html"
+      text: "docs/source-gathering/raw-sources/33-proofpoint-around-the-world-in-90-days-state-sponsored-actors-try-clickfix/source.txt"
+      metadata: "docs/source-gathering/raw-sources/33-proofpoint-around-the-world-in-90-days-state-sponsored-actors-try-clickfix/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "TA450"
+      - "MuddyWater"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: false
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "TA450"
+      - "ClickFix"
+      - "Microsoft security update lure"
+      - "Level RMM"
+      - "Atera"
+      - "PDQConnect"
+    candidate_attck_techniques:
+      - "T1566.001"
+      - "T1059.001"
+      - "T1204.001"
+      - "T1219"
+    limitations:
+      - "Detection ideas require safe emulation; do not reproduce malicious social-engineering instructions."
+    promotion_decision: "promote"
+
+  - id: src_proofpoint_crossed_wires_2025
+    source_number: 34
+    title: "Crossed Wires: a case study of Iranian espionage and attribution"
+    publisher: "Proofpoint Threat Research"
+    url: "https://www.proofpoint.com/us/blog/threat-insight/crossed-wires-case-study-iranian-espionage-and-attribution"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/34-proofpoint-crossed-wires-a-case-study-of-iranian-espionage-and-attribution/source.html"
+      text: "docs/source-gathering/raw-sources/34-proofpoint-crossed-wires-a-case-study-of-iranian-espionage-and-attribution/source.txt"
+      metadata: "docs/source-gathering/raw-sources/34-proofpoint-crossed-wires-a-case-study-of-iranian-espionage-and-attribution/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Reported"
+      - "Assessed"
+      - "Inferred"
+    actor_claims:
+      - "TA450"
+      - "MuddyWater"
+      - "Other Iran-aligned clusters"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: false
+      opencti_modeling: true
+    key_entities:
+      - "TA450"
+      - "TA453"
+      - "TA455"
+      - "BugSleep"
+      - "PDQConnect"
+      - "CyberAv3ngers"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1059"
+      - "T1219"
+      - "T1113"
+    limitations:
+      - "Complex multi-actor attribution source; do not merge actors unless the source explicitly supports overlap."
+      - "Useful for caution language and alias separation."
+    promotion_decision: "promote_with_caution"
+
+  - id: src_sentinelone_wading_muddy_waters
+    source_number: 11
+    title: "Wading Through Muddy Waters: Recent Activity of an Iranian State-Sponsored Threat Actor"
+    publisher: "SentinelOne Labs"
+    url: "https://www.sentinelone.com/labs/wading-through-muddy-waters-recent-activity-of-an-iranian-state-sponsored-threat-actor/"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/11-sentinelone-wading-through-muddy-waters/source.html"
+      text: "docs/source-gathering/raw-sources/11-sentinelone-wading-through-muddy-waters/source.txt"
+      metadata: "docs/source-gathering/raw-sources/11-sentinelone-wading-through-muddy-waters/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "Iranian state-sponsored threat actor"
+      - "MuddyWater context"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "Iranian state-sponsored activity"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1059"
+      - "T1105"
+    limitations:
+      - "Older vendor research; use with newer reporting for current procedures."
+    promotion_decision: "promote"
+
+  - id: src_unit42_muddying_the_water
+    source_number: 12
+    title: "Muddying the Water: Targeted Attacks in the Middle East"
+    publisher: "Palo Alto Unit 42"
+    url: "https://unit42.paloaltonetworks.com/unit42-muddying-the-water-targeted-attacks-in-the-middle-east/"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/12-palo-alto-unit-42-muddying-the-water-targeted-attacks-in-the-middle-east/source.html"
+      text: "docs/source-gathering/raw-sources/12-palo-alto-unit-42-muddying-the-water-targeted-attacks-in-the-middle-east/source.txt"
+      metadata: "docs/source-gathering/raw-sources/12-palo-alto-unit-42-muddying-the-water-targeted-attacks-in-the-middle-east/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "Middle East targets"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1059"
+      - "T1105"
+      - "T1027"
+    limitations:
+      - "Historical campaign source; avoid treating old infrastructure as current."
+    promotion_decision: "promote"
+
+  - id: src_rapid7_chaos_ransomware_2026
+    source_number: 37
+    title: "Muddying the Tracks: The State-Sponsored Shadow Behind Chaos Ransomware"
+    publisher: "Rapid7"
+    url: "https://www.rapid7.com/blog/post/tr-muddying-tracks-state-sponsored-shadow-behind-chaos-ransomware/"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/37-rapid7-muddying-the-tracks-the-state-sponsored-shadow-behind-chaos-ransomware/source.html"
+      text: "docs/source-gathering/raw-sources/37-rapid7-muddying-the-tracks-the-state-sponsored-shadow-behind-chaos-ransomware/source.txt"
+      metadata: "docs/source-gathering/raw-sources/37-rapid7-muddying-the-tracks-the-state-sponsored-shadow-behind-chaos-ransomware/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+      - "False-flag ransomware activity"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "Chaos ransomware"
+      - "Microsoft Teams"
+      - "False flag"
+    candidate_attck_techniques:
+      - "T1566"
+      - "T1219"
+      - "T1105"
+      - "T1036"
+    limitations:
+      - "Recent source; requires careful claim-level review and corroboration before strong conclusions."
+    promotion_decision: "promote"
+
+  - id: src_deepinstinct_darkbeatc2
+    source_number: 26
+    title: "DarkBeatC2: The Latest MuddyWater Attack Framework"
+    publisher: "Deep Instinct"
+    url: "https://www.deepinstinct.com/blog/darkbeatc2-the-latest-muddywater-attack-framework"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/26-deep-instinct-darkbeatc2-the-latest-muddywater-attack-framework/source.html"
+      text: "docs/source-gathering/raw-sources/26-deep-instinct-darkbeatc2-the-latest-muddywater-attack-framework/source.txt"
+      metadata: "docs/source-gathering/raw-sources/26-deep-instinct-darkbeatc2-the-latest-muddywater-attack-framework/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "DarkBeatC2"
+      - "Atera Agent"
+    candidate_attck_techniques:
+      - "T1219"
+      - "T1059"
+      - "T1105"
+    limitations:
+      - "Tool names and actor claims should be corroborated against other recent sources before graph confidence is upgraded."
+    promotion_decision: "promote"
+
+  - id: src_groupib_operation_olalampo
+    source_number: 35
+    title: "Operation Olalampo: Inside MuddyWater's Latest Campaign"
+    publisher: "Group-IB"
+    url: "https://www.group-ib.com/blog/muddywater-operation-olalampo/"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/35-group-ib-operation-olalampo-inside-muddywater-s-latest-campaign/source.html"
+      text: "docs/source-gathering/raw-sources/35-group-ib-operation-olalampo-inside-muddywater-s-latest-campaign/source.txt"
+      metadata: "docs/source-gathering/raw-sources/35-group-ib-operation-olalampo-inside-muddywater-s-latest-campaign/metadata.json"
+    source_type: "vendor_research"
+    source_reliability: "B"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "Operation Olalampo"
+      - "GhostFetch"
+      - "CHAR"
+      - "HTTP_VIP"
+    candidate_attck_techniques:
+      - "T1059"
+      - "T1105"
+      - "T1567"
+    limitations:
+      - "Recent campaign source; all new malware/tool names require corroboration before high-confidence graph modeling."
+    promotion_decision: "promote"
