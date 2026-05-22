@@ -453,7 +453,79 @@ First promotion batch:
 
 This creates the first reviewed source register and prepares the project for claim extraction.
 
-### 8. Extract Procedure Candidates
+### 8. Extract Source-Bound Claims
+
+Before creating procedures, extract claim-level records from the promoted sources.
+
+Save reviewed claims to:
+
+```text
+data/claims.yaml
+```
+
+Claims are the bridge between a source and a procedure. Do not create procedures directly from articles or AI summaries.
+
+Each claim should include:
+
+- stable claim ID
+- source ID from `data/sources.yaml`
+- exact or tightly paraphrased claim
+- evidence label
+- confidence
+- inherited source reliability
+- inherited information credibility
+- actor references
+- object references
+- candidate ATT&CK technique references, if the source supports them
+- what the claim supports: actor profile, procedure, detection, OpenCTI modeling
+- notes and caveats
+
+Example:
+
+```yaml
+claims:
+  - id: clm_mw_0005
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "MuddyWater actors have used spearphishing, publicly known vulnerability exploitation, and open-source tools to gain access to sensitive government and commercial networks."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "spearphishing"
+      - "publicly known vulnerabilities"
+      - "open-source tools"
+    technique_refs:
+      - "T1566"
+      - "T1190"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Government agencies state they observed this behavior. Technique refs are candidate mappings."
+```
+
+Rules:
+
+- One claim should express one idea.
+- Keep strategic actor claims separate from procedure claims.
+- Keep malware/tool attribution separate from malware/tool behavior.
+- Treat ATT&CK technique IDs as candidate mappings until procedure review.
+- Do not infer detection coverage from a claim.
+- Do not upgrade confidence because multiple AI summaries repeat the same statement.
+
+First claim-extraction batch:
+
+```text
+07, 17, 18, 05, 08
+```
+
+This creates the government-backed claim foundation before vendor procedure extraction.
+
+### 9. Extract Procedure Candidates
 
 After the source register is reviewed, extract procedure candidates into:
 

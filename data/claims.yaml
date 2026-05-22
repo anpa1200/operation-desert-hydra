@@ -1,0 +1,573 @@
+claims:
+  - id: clm_mw_0001
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "MuddyWater is also known as Earth Vetala, MERCURY, Static Kitten, Seedworm, and TEMP.Zagros."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Earth Vetala"
+      - "MERCURY"
+      - "Static Kitten"
+      - "Seedworm"
+      - "TEMP.Zagros"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Alias claim from joint government advisory. Do not treat aliases as exact equivalence outside this source context without corroboration."
+
+  - id: clm_mw_0002
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "MuddyWater is a subordinate element within Iran's Ministry of Intelligence and Security."
+    evidence_label: "Assessed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Iran MOIS"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Attribution/organizational relationship claim from joint government advisory."
+
+  - id: clm_mw_0003
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "MuddyWater has conducted cyber espionage and other malicious cyber operations against government and private-sector organizations across telecommunications, defense, local government, and oil and natural gas sectors."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "telecommunications"
+      - "defense"
+      - "local government"
+      - "oil and natural gas"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Sector-targeting claim. Use for victimology and sector modeling, not for detection logic."
+
+  - id: clm_mw_0004
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "MuddyWater actors exploit publicly reported vulnerabilities and use open-source tools and strategies to gain access to victim systems."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "publicly reported vulnerabilities"
+      - "open-source tools"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Procedure-level general claim. Specific vulnerability/procedure extraction should be split into narrower records later."
+
+  - id: clm_mw_0005
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "MuddyWater actors have used spearphishing, publicly known vulnerability exploitation, and open-source tools to gain access to sensitive government and commercial networks."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "spearphishing"
+      - "publicly known vulnerabilities"
+      - "open-source tools"
+    technique_refs:
+      - "T1566"
+      - "T1190"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Government agencies state they observed this behavior. Technique refs are candidate mappings."
+
+  - id: clm_mw_0006
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "MuddyWater spearphishing campaigns have used ZIP files containing either malicious macro-enabled Excel files or PDFs that drop malicious files."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "ZIP files"
+      - "Excel macro"
+      - "PDF"
+    technique_refs:
+      - "T1566.001"
+      - "T1204.002"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Candidate procedure for phishing-delivery detection. Requires safe emulation only."
+
+  - id: clm_mw_0007
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "MuddyWater actors use side-loading DLLs to trick legitimate programs into running malware."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "DLL side-loading"
+    technique_refs:
+      - "T1574.002"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Candidate procedure for file/process telemetry mapping."
+
+  - id: clm_mw_0008
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "MuddyWater actors obfuscate PowerShell scripts to hide command-and-control functions."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "PowerShell"
+      - "command and control"
+      - "script obfuscation"
+    technique_refs:
+      - "T1059.001"
+      - "T1027"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Good candidate for PowerShell 4103/4104 and process-command-line telemetry."
+
+  - id: clm_mw_0009
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "MuddyWater has used PowGoop, Small Sieve, Canopy/Starwhale, Mori, and POWERSTATS as part of malicious activity."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "PowGoop"
+      - "Small Sieve"
+      - "Canopy"
+      - "Starwhale"
+      - "Mori"
+      - "POWERSTATS"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "The advisory says agencies observed MuddyWater recently using these malware/tools. Individual malware behavior should be split into separate claims."
+
+  - id: clm_mw_0010
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "PowGoop consists of a DLL loader and a PowerShell-based downloader."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "PowGoop"
+      - "DLL loader"
+      - "PowerShell-based downloader"
+    technique_refs:
+      - "T1574.002"
+      - "T1059.001"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "Based on government analysis of samples. Strong candidate for procedure and detection mapping."
+
+  - id: clm_mw_0011
+    source_id: src_usgov_aa22_055a_pdf_mirror
+    claim: "POWERSTATS is a backdoor that runs PowerShell scripts."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "POWERSTATS"
+      - "PowerShell"
+    technique_refs:
+      - "T1059.001"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "Useful for PowerShell behavior extraction."
+
+  - id: clm_mw_0012
+    source_id: src_incd_muddywater_darkbit_2023
+    claim: "MuddyWater is an Iranian government-sponsored threat actor and part of Iran's Ministry of Intelligence and Security."
+    evidence_label: "Assessed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Iran MOIS"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Israel National Cyber Directorate attribution statement; corroborates joint government advisory."
+
+  - id: clm_mw_0013
+    source_id: src_incd_muddywater_darkbit_2023
+    claim: "Since Q4 2022, MuddyWater has been active against Israeli entities."
+    evidence_label: "Assessed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Israeli entities"
+      - "Q4 2022"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Victimology and campaign-scope claim from INCD."
+
+  - id: clm_mw_0014
+    source_id: src_incd_muddywater_darkbit_2023
+    claim: "MuddyWater is also known as Static Kitten, Mercury, Temp.Zagros, and Seedworm."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Static Kitten"
+      - "Mercury"
+      - "Temp.Zagros"
+      - "Seedworm"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Alias claim from INCD. Normalize spelling/case during OpenCTI modeling."
+
+  - id: clm_mw_0015
+    source_id: src_incd_muddywater_darkbit_2023
+    claim: "MuddyWater uses social engineering in phishing campaigns, exploits one-day vulnerabilities, and uses tools such as PowerShower, PowerStallion, and MuddyWater proxy."
+    evidence_label: "Reported"
+    confidence: "Medium"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "social engineering"
+      - "phishing"
+      - "one-day vulnerabilities"
+      - "PowerShower"
+      - "PowerStallion"
+      - "MuddyWater proxy"
+    technique_refs:
+      - "T1566"
+      - "T1190"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "Bundled source statement; split into narrower claims before procedure conversion."
+
+  - id: clm_mw_0016
+    source_id: src_incd_muddywater_darkbit_2023
+    claim: "MuddyWater concealed its identity behind the name DarkBit."
+    evidence_label: "Assessed"
+    confidence: "Medium"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "DarkBit"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "False-flag/persona assessment. Treat carefully; do not model DarkBit as an alias without context."
+
+  - id: clm_mw_0017
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "MuddyWater is an Iranian threat group operating under Iran's Ministry of Intelligence and Security since 2017."
+    evidence_label: "Assessed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Iran MOIS"
+      - "2017"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "INCD 2024 actor-profile statement; date differs from AA22-055A wording and should be preserved by source."
+
+  - id: clm_mw_0018
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "MuddyWater employs social engineering tactics including spear-phishing and spoofing."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "social engineering"
+      - "spear-phishing"
+      - "spoofing"
+    technique_refs:
+      - "T1566"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Useful for initial-access procedure extraction."
+
+  - id: clm_mw_0019
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "In 2024, MuddyWater initiated large-scale spear-phishing campaigns that delivered files containing remote management tools."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "spear-phishing"
+      - "remote management tools"
+      - "RMM"
+    technique_refs:
+      - "T1566"
+      - "T1219"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Strong candidate for phishing-to-RMM procedure and detection mapping."
+
+  - id: clm_mw_0020
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "MuddyWater used remote management tools to remotely exfiltrate information from victims."
+    evidence_label: "Reported"
+    confidence: "Medium"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "RMM"
+      - "remote exfiltration"
+    technique_refs:
+      - "T1219"
+      - "T1041"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Candidate exfiltration procedure. Needs exact source passage extraction before detection logic."
+
+  - id: clm_mw_0021
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "AnchorRAT persists as a service named OneDriveStandaloneUpdaterService."
+    evidence_label: "Reported"
+    confidence: "Medium"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "AnchorRAT"
+      - "OneDriveStandaloneUpdaterService"
+      - "Windows service"
+    technique_refs:
+      - "T1543.003"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "High-value procedure candidate for Windows service telemetry; verify exact wording in source before rule authoring."
+
+  - id: clm_mw_0022
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "Neshta remains prevalent and can inject malicious code into infected files."
+    evidence_label: "Reported"
+    confidence: "Medium"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Neshta"
+      - "file infection"
+      - "code injection"
+    technique_refs:
+      - "T1055"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "Claim needs careful actor-specific linkage; Neshta is not unique to MuddyWater."
+
+  - id: clm_mw_0023
+    source_id: src_cisa_aa22_055a_page
+    claim: "MuddyWater actors are positioned to provide stolen data and accesses to the Iranian government and to share these with other malicious cyber actors."
+    evidence_label: "Assessed"
+    confidence: "Medium"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "stolen data"
+      - "access sharing"
+      - "Iranian government"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Strategic/organizational assessment. Do not convert directly into a procedure."
+
+  - id: clm_mw_0024
+    source_id: src_cisa_aa22_055a_page
+    claim: "Cybersecurity agencies in the United Kingdom and United States attribute Small Sieve to MuddyWater with high confidence."
+    evidence_label: "Assessed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Small Sieve"
+    supports:
+      actor_profile: false
+      procedure: false
+      malware: true
+      detection: false
+      opencti_modeling: true
+    notes: "Attribution of malware to actor; not a behavior by itself."
+
+  - id: clm_mw_0025
+    source_id: src_cisa_aa22_055a_page
+    claim: "MuddyWater has used ScreenConnect, a legitimate remote access application, to manage systems remotely and move laterally."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "ScreenConnect"
+      - "remote access software"
+      - "lateral movement"
+    technique_refs:
+      - "T1219"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "High-value RMM procedure candidate."
+
+  - id: clm_mw_0026
+    source_id: src_ncsc_uk_muddywater_joint_advisory
+    claim: "The NCSC published a joint advisory with partners about the Iranian actor MuddyWater conducting cyber espionage."
+    evidence_label: "Reported"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "cyber espionage"
+      - "Iranian actor"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Source corroborates the joint advisory context; use detailed AA22-055A source for procedure extraction."
+
+  - id: clm_mw_0027
+    source_id: src_ncsc_uk_muddywater_joint_advisory
+    claim: "Indicators of compromise on MuddyWater malware were made available with the joint advisory."
+    evidence_label: "Reported"
+    confidence: "Medium"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "indicators of compromise"
+      - "MuddyWater malware"
+    supports:
+      actor_profile: false
+      procedure: false
+      detection: true
+      opencti_modeling: true
+    notes: "Pointer to IOC material; IOC extraction should happen separately and remain tied to source."
