@@ -1120,7 +1120,43 @@ Run the AI draft, then perform an analyst review pass before marking `validation
 - Email gateway telemetry correlated with endpoint — required for det_mw_0001
 
 > **Done.** AI draft of 11 detections written to `data/detections.yaml` covering all 10 procedures.
-> Analyst review pass is the next gate before Phase 5 (lab validation).
+> Analyst review pass applied — material fixes: Rule A regex (det_mw_0003), operator precedence (det_mw_0010 Rule B), T1033 coverage (det_mw_0009 Rule C), Google path allowlist (det_mw_0004 Rule A), LSASS access masks (det_mw_0010 Rule A).
+> `creation_logic` field added to all 11 detections documenting design rationale.
+
+### Detection Design Notes
+
+#### det_mw_0001 — Spearphishing Correlation
+**Why correlated logic:** Delivery alone is not detectable — the email is indistinguishable from legitimate mail. The value comes from correlating delivery with a process spawn within 5 minutes on the recipient endpoint. The parent process constraint (Outlook/browser) limits scope to the documented delivery chain. Three attachment types and two file-sharing domains are included because all are confirmed across sources.
+
+#### det_mw_0002 — Exploitation: Web Service Spawning Shell
+**Why behavioral / parent-based:** Targets the post-exploitation moment (web service spawning shell) rather than the exploit payload. Parent process list maps directly to documented CVEs (w3wp.exe → Exchange/IIS, java.exe → Log4j, lsass.exe → Netlogon). SYSTEM integrity filter reduces false positives. Detection is intentionally broader than MuddyWater-specific and will cover any web-shell post-exploitation.
+
+#### det_mw_0003 — PowerShell Encoded Command
+**Why three rules:** PowGoop, POWERSTATS, and the 2024 lure use PowerShell in three different ways. Rule A (command-line -EncodedCommand) covers PowGoop setup and loaders. Rule B (Script Block / IEX + web request) covers POWERSTATS execution — requires Script Block Logging. Rule C (suspicious parent) is the delivery-context fallback deployable without Script Block Logging. Rule A regex matches all unambiguous prefix forms (-e, -ec, -enc…) combined with a 50+ char Base64 blob to avoid matching -Encoding.
+
+#### det_mw_0004 — DLL Side-Loading
+**Why two rules:** Rule A is a precise IoC from the procedure (GoogleUpdate.exe + Goopdate.dll outside Google installation paths) — fires with high precision, no tuning needed. Rule B is the generic behavioral net for future variants using different binary names. Sysmon Event ID 7 is the hard dependency; without image load events, DLL side-loading is invisible.
+
+#### det_mw_0005 — Registry Run Key Persistence
+**Why three rules:** Rule A uses specific value names documented across sources ("OutlookMicrosift" misspelling, "SystemTextEncoding") — immediate hunt trigger, no tuning needed. Rule B is the behavioral safety net for unknown/renamed values using path heuristics. Rule C is added specifically for Canopy's startup folder WSF persistence, which does not appear as a Run key write at all.
+
+#### det_mw_0006 — Scheduled Task: 43-Minute Interval
+**Why PT43M as Rule A:** The 43-minute interval is the most precise single artifact in the dataset — documented as BugSleep's specific beacon interval and huntable retroactively in Task Scheduler logs. Rule B generalises to short interval + writable path for variants. Rule C is the telemetry fallback for environments that do not forward Task Scheduler event logs but do collect schtasks.exe process creation.
+
+#### det_mw_0007 — RMM Tool Abuse
+**Why correlated / three rules:** The binary is legitimate — only context is anomalous. Rule A uses path (RMM installed to writable path = delivered, not managed). Rule B uses parent (RMM spawned by Outlook/browser = phishing delivery). Rule C uses network destination (outbound to RMM infrastructure from non-baselined endpoint). Rules A+C together form the highest-confidence signal. Baseline prerequisite is non-negotiable — Rule C without a baseline generates constant noise.
+
+#### det_mw_0008a — Telegram Bot API C2
+**Why single rule:** api.telegram.org is a fixed hostname with no CDN rotation. The discriminating condition is the process, not the domain: any non-browser, non-Telegram-client process making this connection is anomalous in enterprise. Precision is high enough that no graduated fallbacks are needed. Will miss if actor switches platform.
+
+#### det_mw_0008b — DNS Tunneling
+**Why three independent rules:** Each heuristic has a different failure mode. Volume (Rule A) catches high-throughput tools but misses slow ones. Label length (Rule B) catches encoded payloads regardless of rate but misses short segments. Entropy (Rule C) catches random subdomains but produces CDN noise without a baseline. Multiple triggers from the same source are high-confidence; any single trigger warrants investigation.
+
+#### det_mw_0009 — WMI SecurityCenter2 Discovery
+**Why SecurityCenter2 as the anchor:** Most WMI classes in the survey (OS name, IP, hostname) are queried by dozens of legitimate tools. AntiVirusProduct via SecurityCenter2 has a much smaller legitimate caller population — primarily AV management consoles — making it the highest-specificity class. Rules are layered by telemetry quality: Script Block Logging (Rule A, highest fidelity) → command line (Rule B, fallback) → multi-class combined pattern (Rule C, high-confidence survey match). T1033 coverage added via Win32_ComputerSystem in Rule C.
+
+#### det_mw_0010 — LSASS Memory Access / Credential Dumping
+**Why Rule A is the priority:** Process access to LSASS is the universal pre-condition for any LSASS dump regardless of tool. Rule A fires on Mimikatz, procdump, custom C++ loaders, and any future variant. Access masks extended beyond standard Mimikatz set to include PROCESS_ALL_ACCESS (0x1fffff). Rule B is the name-based backstop — catches unsophisticated actors but misses renamed tools. Rule C (dump file creation) is the fallback when process-level events are unavailable. `command_line` clause in Rule B was re-bracketed inside the `event_type` guard after an operator precedence bug was found in analyst review.
 
 ---
 

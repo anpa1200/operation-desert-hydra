@@ -40,6 +40,15 @@ detections:
       - "Requires email gateway telemetry correlated with endpoint telemetry — gap if gateway logs are siloed."
       - "Compromised-account delivery bypasses sender reputation checks."
       - "Link-based delivery to file-sharing services requires URL unwrapping at the gateway."
+    creation_logic: >
+      Delivery alone is not a detection signal — MuddyWater's phishing emails are indistinguishable
+      from legitimate mail at the gateway layer. The detection value comes from correlating delivery
+      with a process spawn on the recipient endpoint within a tight 5-minute window. The parent
+      process list (Outlook, browser) is the key constraint: it limits scope to email-triggered or
+      link-triggered execution, which is the documented delivery chain. Three separate attachment
+      types (ZIP, Office macro, PDF) and two file-sharing domains (Egnyte, OneDrive) are included
+      because all three delivery methods are confirmed across sources. The correlated logic type
+      reflects that neither event alone is sufficient.
     notes: "3-source corroboration (CISA AA22-055A, INCD 2023, INCD 2024). Highest priority for lab validation."
 
   # ─────────────────────────────────────────────────────────────────────────────
@@ -79,6 +88,15 @@ detections:
       - "CVE-2020-1472 and CVE-2020-0688 are older; relevant primarily for unpatched or legacy systems."
       - "Log4j is confirmed for Israeli campaign only — do not generalize without additional corroboration."
       - "Specific VPN vulnerability from INCD 2024 is unnamed; VPN process name is environment-dependent."
+    creation_logic: >
+      The detection targets the post-exploitation moment — the web service spawning a shell —
+      rather than the exploit payload itself. This is deliberately tool-agnostic: it fires on
+      CVE-2020-0688, CVE-2020-1472, Log4j, and any unnamed VPN vulnerability without needing
+      individual exploit signatures. The parent process list maps directly to the documented CVEs
+      (w3wp.exe → Exchange/IIS, java.exe → Log4j, lsass.exe → Netlogon). The SYSTEM integrity
+      level filter reduces false positives from legitimate scripted administration. The detection
+      is broader than the specific MuddyWater procedures and will fire on any web-shell-style
+      post-exploitation, which is intentional given the limited procedure-level specificity.
     notes: "Corroborated by CISA, INCD 2023, INCD 2024. Lower-confidence than phishing vector but broadens coverage."
 
   # ─────────────────────────────────────────────────────────────────────────────
@@ -128,6 +146,17 @@ detections:
       - "High false-positive rate in enterprise environments without baselining."
       - "Script Block Logging must be explicitly enabled — not default on all Windows versions."
       - "Actors may use PowerShell v2 (downgrade attack) to bypass Script Block Logging."
+    creation_logic: >
+      Three independent rules address three distinct MuddyWater PowerShell usage patterns.
+      Rule A targets PowGoop's C2 setup and POWERSTATS loader delivery — both use Base64-encoded
+      commands. The regex was written to match all unambiguous prefix forms of -EncodedCommand
+      (-e, -ec, -en, -enc…) combined with a 50+ character Base64 blob to avoid matching the
+      -Encoding parameter. Rule B targets POWERSTATS script execution behaviour (IEX + web
+      request) — this requires Script Block Logging which is the capability gate that determines
+      whether this detection exists at all. Rule C is the delivery-context fallback: PowerShell
+      spawned by email/Office/browser has no legitimate explanation in a standard enterprise
+      environment. Coverage score is 3 because Rules A and C are deployable without Script Block
+      Logging; enabling logging upgrades to high-confidence behavioral.
     notes: >
       Script Block Logging is the decisive capability gate. Without Event ID 4104,
       detection degrades to command-line heuristics only. Enable before deploying.
@@ -174,6 +203,16 @@ detections:
       - "Requires Sysmon Event ID 7 with image load tracking — not enabled by default."
       - "Generic rule (Rule B) will produce high false positives in environments with many third-party applications."
       - "Actors can sign their DLLs with purchased or stolen certificates — signing check bypassed."
+    creation_logic: >
+      Two rules serve different confidence levels. Rule A is derived directly from the PowGoop
+      technical description: the specific binary name (GoogleUpdate.exe), specific DLL name
+      (Goopdate.dll), and the fact that any path outside the Google installation directories is
+      anomalous. This fires with high precision because the combination of process name, DLL name,
+      and non-standard path is effectively unique. Rule B is the generic behavioral net for future
+      DLL side-loading variants where MuddyWater may use different binary names — it is broader
+      and will produce noise in developer or enterprise environments but provides coverage against
+      toolset evolution. Sysmon Event ID 7 is the hard dependency; without it, DLL loads are
+      invisible to SIEM-based detection.
     notes: "Rule A (GoogleUpdate + Goopdate) is the high-confidence IoC. Rule B is the behavioral safety net."
 
   # ─────────────────────────────────────────────────────────────────────────────
@@ -219,6 +258,16 @@ detections:
     limitations:
       - "Generic Run key detection has high false-positive rate without careful process exclusion."
       - "Value name IoCs (Rule A) are high-confidence but will not catch renamed variants."
+    creation_logic: >
+      Three rules address three sub-techniques across different malware families. Rule A is
+      sourced directly from the procedure: Small Sieve's value name "OutlookMicrosift" is a
+      deliberate typo to mimic Microsoft software — a named IoC with high signal value across
+      any deployment. "SystemTextEncoding" from AA22-055A is the second named IoC. Rule A fires
+      immediately on exact match regardless of path or parent; no tuning needed. Rule B is the
+      behavioral safety net for unknown or renamed values — the path heuristic (AppData/Temp)
+      combined with a non-installer parent covers the common pattern of malware writing its own
+      persistence without using an installer. Rule C is added specifically to cover Canopy's
+      startup folder WSF persistence, which doesn't show up as a Run key write.
     notes: "Rule A is an immediate hunt trigger when observed. Rule B requires tuning before production deployment."
 
   # ─────────────────────────────────────────────────────────────────────────────
@@ -263,6 +312,15 @@ detections:
     limitations:
       - "43-minute interval is BugSleep-specific and customizable — future variants may use different intervals."
       - "Task Scheduler event log is often not forwarded to SIEM by default — requires log collection configuration."
+    creation_logic: >
+      The 43-minute interval is the single most precise artifact in the entire procedure dataset.
+      It is documented as BugSleep's specific C2 beacon interval in the INCD 2024 report, and
+      while customizable, represents a real operational artifact that defenders can hunt for in
+      Task Scheduler logs retroactively. Rule A is designed to be a high-fidelity immediate alert
+      requiring no tuning. Rule B generalises the pattern: short interval + writable path + non-
+      system creating process covers BugSleep variants and other C2 persistence tools. Rule C is
+      the telemetry fallback: many environments do not forward Task Scheduler event logs to SIEM,
+      but schtasks.exe process creation (Sysmon EID 1) is more commonly collected.
     notes: "PT43M is a precise hunt artifact. Rule A should be an immediate alert when observed. INCD 2024 only — corroborate before wide deployment."
 
   # ─────────────────────────────────────────────────────────────────────────────
@@ -319,6 +377,17 @@ detections:
       - "RMM tools are legitimate software — detection depends entirely on delivery context and path, not binary name alone."
       - "Authorized RMM deployments must be baselined per endpoint before alerts are useful."
       - "Actors can rename RMM binaries — binary name detection (Rule A/B) will miss renamed variants."
+    creation_logic: >
+      RMM tool detection is inherently a context problem: the binary is legitimate, the network
+      traffic is legitimate, only the delivery chain and execution path are anomalous. Three rules
+      address this from different angles. Rule A uses path as the primary signal: a legitimately
+      IT-deployed RMM tool installs to Program Files or a managed path, not AppData/Temp/Downloads.
+      Rule B uses parent process as the signal: no legitimate RMM deployment is spawned by Outlook
+      or a browser. Rule C uses network destination: RMM infrastructure connections from endpoints
+      with no authorized RMM deployment are anomalous. The correlated logic type reflects that Rules
+      A+C together (path from writable dir + outbound to RMM domain) form the highest-confidence
+      signal. The baseline prerequisite is non-negotiable — Rule C without a baseline generates
+      constant noise in environments with authorized deployments.
     notes: >
       Most consistently documented technique across all five government sources.
       Baseline authorized RMM deployments first — this is the single highest-ROI detection
@@ -358,6 +427,15 @@ detections:
     limitations:
       - "In organizations where Telegram is approved, detection requires strict process allowlisting."
       - "Actor could switch from Telegram to another messaging platform — detection is API-specific."
+    creation_logic: >
+      The detection is single-rule because the signal is specific enough to not need graduated
+      fallbacks. api.telegram.org is a fixed, known hostname — it does not rotate or use CDN
+      distribution in a way that complicates detection. The discriminating condition is not the
+      domain but the process: any non-browser, non-Telegram-client process making this connection
+      is anomalous in an enterprise environment. This approach is deliberately narrow: it will
+      miss if MuddyWater switches from Telegram to another messaging platform, but it will fire
+      with high precision on the documented Small Sieve C2 channel. Coverage score is 3 because
+      the domain is specific and the process exclusion list is short and manageable.
     notes: "Highest-confidence C2 detection anchor across all C2 channels documented for MuddyWater."
 
   # ─────────────────────────────────────────────────────────────────────────────
@@ -401,6 +479,16 @@ detections:
       - "Requires DNS query logging with full QNAME — not available in all environments."
       - "Entropy and volume thresholds require per-environment baseline calibration."
       - "Mori is documented in one source tier only (CISA AA22-055A); treat with moderate confidence."
+    creation_logic: >
+      DNS tunneling detection cannot rely on a single heuristic because each heuristic has a
+      different failure mode. Volume (Rule A) catches high-throughput tunneling tools that make
+      many queries per minute but misses slow/low-rate tools. Label length (Rule B) catches
+      encoded payloads regardless of rate or entropy but misses short encoded segments. Entropy
+      (Rule C) catches random-looking subdomains at any length and rate but produces noise on
+      CDN hash labels without a comprehensive baseline. The three rules are additive — any single
+      trigger warrants investigation, two or more triggers from the same source are high-confidence.
+      Mori's DNS tunneling is documented in one source only (CISA AA22-055A); the detection covers
+      the general technique pattern rather than being specific to Mori's implementation.
     notes: "Secondary C2 channel. Lab validation should test entropy thresholds against benign CDN traffic."
 
   # ─────────────────────────────────────────────────────────────────────────────
@@ -452,6 +540,18 @@ detections:
     limitations:
       - "Requires Script Block Logging — same capability gate as det_mw_0003."
       - "Script content detection (Rule C) matches the specific documented survey; variants may omit some WMI classes."
+    creation_logic: >
+      The detection anchors on SecurityCenter2\AntiVirusProduct because it is the highest-
+      specificity WMI class in the documented survey script. Most of the other classes (OS name,
+      IP addresses, hostname) are queried by dozens of legitimate monitoring tools. AntiVirusProduct
+      enumeration via SecurityCenter2 has a much smaller legitimate caller population — primarily
+      AV management consoles and endpoint security platforms — making it the most reliable signal
+      from the full survey. Rules are layered by telemetry quality: Rule A requires Script Block
+      Logging (highest fidelity, decoded content), Rule B falls back to command-line logging
+      (medium fidelity, only if SecurityCenter2 appears in the command line), Rule C is a
+      multi-class pattern that validates the complete documented survey chain, covering all five
+      ATT&CK techniques in a single event. T1033 coverage was added to Rule C via Win32_ComputerSystem
+      because the CISA-documented script collects username through that class.
     notes: >
       SecurityCenter2 + AntiVirusProduct query is one of the most specific behavioral
       indicators in the dataset. Rule C is near-exact-match for the documented CISA script —
@@ -512,6 +612,19 @@ detections:
       - "Credential Guard and PPL (Protected Process Light) prevent LSASS reads on modern systems — confirm protection status before relying on LSASS-dump detections."
       - "Actors may rename Mimikatz or use custom loaders — binary name detection (Rule B) will miss."
       - "Sysmon Event ID 10 requires explicit ProcessAccess configuration in sysmon.xml."
+    creation_logic: >
+      Three independent rules cover the full credential dumping lifecycle. Rule A is the design
+      priority: a process accessing LSASS memory is the universal pre-condition for any LSASS
+      memory dump, regardless of tool. By detecting the access event (Sysmon EID 10) rather than
+      the tool name, Rule A fires on Mimikatz, procdump, custom C++ loaders, and any future
+      variant. Access masks were sourced from the standard Mimikatz research (0x1010, 0x1410,
+      0x1438) and extended with 0x1fffff (PROCESS_ALL_ACCESS, used by custom dumpers) and
+      0x1f0fff (another all-access variant). The exclusion list covers known legitimate callers.
+      Rule B is the name-based backstop — lower fidelity because it misses renamed tools, but
+      catches unsophisticated actors using stock Mimikatz. The command_line guard for sekurlsa/
+      lsadump was re-bracketed to stay within the event_type guard after an operator precedence
+      bug was identified in review. Rule C catches the dump artifact on disk — a final fallback
+      when process-level events are unavailable.
     notes: >
       Rule A (LSASS process access via Sysmon Event ID 10) is the most tool-agnostic and
       reliable path — fires regardless of whether the actor uses Mimikatz, procdump,
