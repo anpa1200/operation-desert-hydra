@@ -223,6 +223,44 @@ Public-source CTI has limitations and source bias.
 
 Candidate mappings require validation before operational use.
 
+## Source Gathering With AI
+
+The first research action is source discovery, not detection writing.
+
+Use an AI deep-research workflow only to collect candidate sources and summarize what each source may contribute. The AI output is not evidence by itself. Every source, claim, actor alias, ATT&CK mapping, and detection opportunity still requires analyst review before it enters the dataset or OpenCTI graph.
+
+### 1. Run Deep Research
+
+Run a deep-research task with this prompt:
+
+```text
+You are a senior CTI researcher and source-validation analyst. For Operation Desert Hydra, gather the best public sources on MuddyWater / Seedworm / Mango Sandstorm / TA450 and related Iranian activity against Israeli organizations. Goal: create a source register for an OpenCTI-based CTI-to-detection knowledge graph: Source → Actor → Campaign → Procedure → ATT&CK Technique → Observable → Log Source → Detection → Validation → Coverage. Search MITRE ATT&CK, CISA/FBI/NSA, Israel National Cyber Directorate, Microsoft, Google/Mandiant, ESET, Check Point, ClearSky, Unit 42, Proofpoint, SentinelOne, Recorded Future, Symantec, Talos, Trend Micro, Kaspersky, Cloudflare/Hunt.io/DomainTools, GitHub, and academic sources. Include secondary comparison actors only as comparison: APT34, APT35/Charming Kitten/Mint Sandstorm, CyberAv3ngers, Agrius. Do not merge actors unless a source explicitly supports overlap.
+
+For every source, return this YAML structure: id, title, publisher, url, direct_download_url, download_type, publication_date, access_date, actor_claims, source_type, reliability, relevance flags for actor_profile/procedures/malware/infrastructure/detections/validation_lab/opencti_modeling, key_entities, key_attck_techniques, source_summary, use_for_project, limitations. Provide direct PDF/STIX/JSON/CSV/GitHub raw links where available; if unavailable write direct_download_url: none_found. Do not invent URLs or dates.
+
+Use evidence labels: Observed = directly shown in telemetry/sample/log/screenshot/source artifact; Reported = stated by source; Assessed = source judgment; Inferred = analyst conclusion from multiple cited facts; Gap = unknown or not proven. Do not upgrade source claims, do not treat ATT&CK mapping as attribution evidence, do not treat shared tooling as actor identity proof, and do not claim detection coverage without validation.
+
+Search exact terms including: MuddyWater Iran MOIS, MuddyWater Seedworm, MuddyWater Mango Sandstorm, MuddyWater TA450, MuddyWater POWERSTATS, PowGoop, MuddyViper, MuddyWater Israel, Israeli organizations, PowerShell, RMM, phishing, spearphishing, Exchange CVE-2020-0688, CVE-2017-0199, MITRE ATT&CK, CISA FBI NSA advisory, Mango Sandstorm Microsoft, TA450 Proofpoint, Seedworm Symantec, ESET, ClearSky, Unit 42, Check Point, Mandiant, SentinelOne, Recorded Future, Talos, Trend Micro, Kaspersky; also APT34 Israel, APT35 Israel, Mint Sandstorm Israel, CyberAv3ngers Israel, Agrius Israel, Iranian threat actors Israeli organizations.
+
+Output only these sections: 1) Executive Source Assessment, 2) High-Priority Source Register with 10-20 best sources in YAML, 3) Extended Source Register, 4) Direct Downloads Table, 5) Actor Alias / Overlap Notes, 6) Procedure Extraction Candidates grouped by tactic with source_ids, evidence_label, ATT&CK candidate, required telemetry, detection opportunity, validation_possible, 7) OpenCTI Modeling Candidates, 8) Detection Engineering Opportunities marked candidate only, 9) Gaps And Manual Review Items. The final output must be usable to seed data/sources.yaml, data/procedures.yaml, docs methodology, OpenCTI import plan, and detection atlas.
+```
+
+### 2. Save The Result
+
+Save the raw deep-research result to:
+
+```text
+docs/source-gathering/deep-research-raw.md
+```
+
+Then create an analyst-reviewed source register from it:
+
+```text
+data/sources.yaml
+```
+
+The raw AI output stays in `docs/source-gathering/` as working material. Only reviewed sources should be promoted into `data/sources.yaml`.
+
 ## Step 0 Definition Of Done
 
 Step 0 is complete when the project has a clear purpose and declared output:
