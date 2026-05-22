@@ -1496,6 +1496,123 @@ Executed `ansible-playbook playbooks/validate.yml` against lab VM (`ws01`, Windo
 
 ---
 
+## Phase 6: Coverage Matrix
+
+Coverage scores follow the project definition scale:
+
+```
+0 — no coverage
+1 — IOC only (hash, IP, domain)
+2 — weak analytic (single-condition heuristic, high noise)
+3 — behavioral analytic (multi-condition, untested in lab)
+4 — correlated analytic (multi-source or multi-event, validated)
+5 — lab-validated correlated analytic
+```
+
+### 32. ATT&CK Technique Coverage
+
+Techniques marked **GAP** have no detection in the current atlas. Techniques marked **PARTIAL** have detection logic but validation was incomplete (see Phase 5 results). Sub-techniques that appear under more than one tactic (T1547.001, T1053.005, T1574.002) are shown under their primary tactic; the shared tactic is noted in the constraint column.
+
+| Tactic | Technique | Detection | Score | Status | Constraint / Note |
+|--------|-----------|-----------|:-----:|--------|-------------------|
+| **Initial Access** | T1566.001 Spearphishing Attachment | det_mw_0001 | 5 | lab_validated | Requires email gateway telemetry correlated with EDR. Lab validated endpoint side only. |
+| | T1566.002 Spearphishing Link | det_mw_0001 | 5 | lab_validated | Same gateway-to-endpoint correlation. File-sharing link delivery included. |
+| | T1190 Exploit Public-Facing Application | det_mw_0002 | 5 | lab_validated | Process ancestry chain fully validated. CVE specifics (Exchange, Log4j, VPN) are informational; detection is CVE-agnostic. |
+| **Execution** | T1059.001 PowerShell | det_mw_0003 | 5 | lab_validated | Rule B requires **Script Block Logging (EID 4104)**. Without it, detection degrades to command-line heuristics only (Rules A, C). |
+| | T1047 Windows Management Instrumentation | det_mw_0009 | 5 | lab_validated | Rules A and C require **EID 4104**. Rule B (command-line) available without it. |
+| **Persistence** | T1547.001 Registry Run Keys / Startup Folder | det_mw_0005 | 5 | lab_validated | Also covers Privilege Escalation. Requires Sysmon EID 13 (Registry) and EID 11 (FileCreate). |
+| | T1053.005 Scheduled Task | det_mw_0006 | 4 | lab_validated | Also covers Privilege Escalation. Score 4 (not 5): EID 4698 Task Scheduler log not forwarded in lab — Rule C (Sysmon EID 1 fallback) was the validated path. |
+| | T1574.002 DLL Side-Loading | det_mw_0004 | 3 | partially_validated | Also covers Privilege Escalation and Defense Evasion. Requires **Sysmon EID 7 (ImageLoad)**. Lab simulation insufficient (MZ stub not a loadable DLL). Logic and Sysmon config verified correct. |
+| **Defense Evasion** | T1027 Obfuscated Files or Information | det_mw_0003 | 5 | lab_validated | Base64 -EncodedCommand detection validated. Covers PowGoop and POWERSTATS delivery chains. |
+| | T1574.002 DLL Side-Loading | det_mw_0004 | 3 | partially_validated | See Persistence row. Same detection and constraint apply. |
+| **Credential Access** | T1003.001 LSASS Memory | det_mw_0010 | 5 | lab_validated | Rule A requires **Sysmon EID 10 (ProcessAccess)**. Without it, detection degrades to binary name (Rule B) — misses renamed tools and custom dumpers. |
+| | T1003.004 LSA Secrets | det_mw_0010 | 5 | lab_validated | Covered by Rule B (LaZagne by name). EID 10 Rule A is tool-agnostic; Credential Guard / PPL may suppress on hardened endpoints. |
+| | T1003.005 Cached Domain Credentials | det_mw_0010 | 5 | lab_validated | Covered by Rule B (LaZagne). Same EID 10 dependency and Credential Guard caveat. |
+| **Discovery** | T1082 System Information Discovery | det_mw_0009 | 5 | lab_validated | Covered by Rule C multi-class WMI pattern alongside SecurityCenter2. |
+| | T1016 Network Configuration Discovery | det_mw_0009 | 5 | lab_validated | Covered by Rule C (Win32_NetworkAdapterConfiguration). |
+| | T1033 System Owner/User Discovery | det_mw_0009 | 5 | lab_validated | Covered by Rule C (Win32_ComputerSystem / Win32_UserAccount). |
+| | T1518.001 Security Software Discovery | det_mw_0009 | 5 | lab_validated | Covered by Rules A, B, C (SecurityCenter2 AntiVirusProduct). Highest-confidence signal in this tactic. |
+| **Lateral Movement** | — | **GAP** | 0 | — | No procedures in current source set with sufficient specificity to engineer a detection. Candidates: T1021.001 (RDP), T1021.002 (SMB), T1550.002 (Pass the Hash). |
+| **Collection** | — | **GAP** | 0 | — | WMI discovery (det_mw_0009) partially covers pre-collection recon. No file-staging or keylogging procedures documented. |
+| **Command and Control** | T1219 Remote Access Software | det_mw_0007 | 5 | lab_validated | Highest-ROI detection in the atlas. Rules A and B validated. Rule C (network) requires authorized RMM baseline — not testable in isolated lab. |
+| | T1071.001 Application Layer Protocol (Telegram) | det_mw_0008a | 3 | partially_validated | Lab validation **FAIL** — Sysmon EID 3 did not fire under VirtualBox NAT. Rule logic and Sysmon config correct. Requires host-only NIC or direct network access to re-test. |
+| | T1102 Web Service (Telegram Bot API) | det_mw_0008a | 3 | partially_validated | Same detection and constraint as T1071.001 — both techniques are covered by the same single-rule detection. |
+| | T1572 Protocol Tunneling (DNS) | det_mw_0008b | 5 | lab_validated | Requires **DNS resolver logging with full QNAME**. Volume (Rule A) and label-length (Rule B) validated. Entropy rule (Rule C) requires per-environment CDN baseline. |
+| **Exfiltration** | — | **GAP** | 0 | — | MuddyWater exfils over established C2 channel (T1041). C2 channels are covered by det_mw_0007 and det_mw_0008a/b but no exfil-specific volume or data-type detections are in scope. |
+| **Impact** | — | **GAP** | 0 | — | Not documented in current source set. MuddyWater is a persistent espionage actor; destructive capability not established for this track. |
+
+---
+
+### Coverage Summary
+
+| Metric | Value |
+|--------|-------|
+| Techniques with score ≥ 4 | 17 of 22 (77 %) |
+| Techniques fully lab-validated (score 5) | 15 of 22 (68 %) |
+| Techniques partially validated (score 3) | 4 of 22 (18 %) |
+| Techniques with no coverage (score 0) | 7 — all in Lateral Movement, Collection, Exfiltration, Impact |
+| Detections in atlas | 11 (det_mw_0001 — det_mw_0010 + 0008a/0008b split) |
+| ATT&CK tactics touched | 8 of 14 (Initial Access, Execution, Persistence, Defense Evasion, Credential Access, Discovery, Command and Control, plus partial Privilege Escalation via shared sub-techniques) |
+| ATT&CK tactics with zero coverage | 6 (Reconnaissance, Resource Development, Lateral Movement, Collection, Exfiltration, Impact) |
+
+---
+
+### Capability Gates
+
+Six telemetry dependencies determine the effective coverage floor. Each gate, if missing, silently reduces the score of one or more detections without changing the detection atlas.
+
+**Gate 1 — Email gateway telemetry (SEG/SIEM integration)**
+- Enables: det_mw_0001 full correlated logic (score 5)
+- Without it: delivery correlation is unavailable; endpoint-side process ancestry still detects post-delivery execution, but the correlation that makes the detection high-confidence is lost
+
+**Gate 2 — PowerShell Script Block Logging (Windows Event ID 4104)**
+- Enables: det_mw_0003 Rule B; det_mw_0009 Rules A and C
+- Without it: det_mw_0003 degrades to command-line heuristics only; det_mw_0009 falls back to `wmic.exe` command-line (Rule B) — missing all PowerShell-executed WMI queries
+- Activation: `Set-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging -Name EnableScriptBlockLogging -Value 1`
+
+**Gate 3 — Sysmon Event ID 7 (ImageLoad)**
+- Enables: det_mw_0004 Rule A (GoogleUpdate.exe + Goopdate.dll)
+- Without it: DLL side-loading is undetectable at the telemetry layer; score drops from 3 to 0
+- Activation: `<ImageLoad onmatch="include">` with signing status capture in `sysmon.xml`
+
+**Gate 4 — Sysmon Event ID 10 (ProcessAccess)**
+- Enables: det_mw_0010 Rule A (LSASS memory access, tool-agnostic)
+- Without it: LSASS credential dumping detection falls back to binary name only (Rule B) — misses renamed Mimikatz, custom C++ dumpers, and any non-named tool
+- This is the most consequential single gate in the atlas: Rule A fires regardless of tool; Rule B does not
+
+**Gate 5 — DNS resolver logging with full QNAME**
+- Enables: det_mw_0008b (DNS tunneling, all three rules)
+- Without it: Mori's DNS tunneling C2 channel is completely invisible to detection
+- Note: BIND/Unbound query logging, Windows DNS debug logging, or network-level DNS capture all qualify
+
+**Gate 6 — Network flow / proxy logs with process attribution**
+- Enables: det_mw_0007 Rule C (RMM outbound connections); det_mw_0008a (Telegram Bot API C2)
+- Without it: det_mw_0007 is process-creation-only (Rules A and B remain); det_mw_0008a loses its only viable detection path
+
+---
+
+### Gap Analysis
+
+**Lateral Movement — no coverage.**
+The current source set documents initial access and post-compromise execution in detail but does not provide procedure-level specificity for how MuddyWater moves between hosts once inside a network. The most likely candidates based on actor profile are RDP (T1021.001) — consistent with the use of RMM tools — and SMB lateral movement (T1021.002). Pass-the-Hash (T1550.002) is plausible given the LSASS credential dumping procedures in det_mw_0010. Closing this gap requires an additional source review pass focused specifically on post-compromise network movement evidence.
+
+**Collection — no dedicated detection.**
+det_mw_0009 partially covers the reconnaissance phase immediately preceding collection (AV enumeration, OS info, network configuration). The CISA AA22-055A survey script is the most detailed procedure in this tactic area, and it is fully covered by det_mw_0009 Rule C. However, what MuddyWater does with collected data — file staging, archive creation, or exfiltration preparation — is not documented with enough procedure-level detail in the current sources to support a targeted detection.
+
+**Exfiltration — covered indirectly, not directly.**
+MuddyWater's documented exfiltration mechanism is to use the established C2 channel (RMM tool or Telegram bot) rather than a dedicated exfiltration path. det_mw_0007 (RMM) and det_mw_0008a (Telegram) therefore cover the exfiltration channel without explicitly targeting data transfer. Dedicated exfiltration-volume detections (T1041 - Exfil Over C2 Channel, T1048 - Exfil Over Alternative Protocol) would require per-host data-volume baselining that is outside the current engineering scope and source evidence base.
+
+**Impact — intentional gap.**
+MuddyWater is assessed as a persistent espionage actor. Destructive capability is not documented in any of the five source tiers at a procedure level that would support detection engineering. This gap is intentional and should be reassessed if future reporting attributes destructive activity to this actor.
+
+**det_mw_0004 — simulation gap, not rule gap.**
+The Sysmon EID 7 configuration and detection rule are correct. The partially_validated status reflects a simulation fidelity problem (4-byte MZ stub cannot be loaded as a DLL by Windows loader). Re-test with a real GoogleUpdate.exe binary (requires Google Chrome installed on lab VM) to promote to lab_validated, score 5.
+
+**det_mw_0008a — lab infrastructure gap, not rule gap.**
+The Sysmon EID 3 rule and Winlogbeat configuration are correct. The FAIL status reflects VirtualBox NAT preventing direct Sysmon network event capture for outbound Telegram connections. Re-test with a host-only NIC or bridged adapter providing internet access to promote to lab_validated.
+
+---
+
 ## Step 0 Definition Of Done
 
 Step 0 is complete when the project has a clear purpose and declared output:
