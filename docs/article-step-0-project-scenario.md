@@ -677,6 +677,244 @@ All procedures are marked:
 
 Each procedure includes: evidence chain, required telemetry list, behavioral detection idea, and a lab-safe validation plan using benign simulation only (no live malware, no real victim infrastructure, no public C2).
 
+---
+
+## Phase 3: OpenCTI Graph Build
+
+This phase imports the reviewed source register and procedure dataset into OpenCTI as a structured STIX 2.1 knowledge graph. The goal is to convert `data/sources.yaml` and `data/procedures.yaml` into queryable graph objects that model the MuddyWater threat actor, its toolset, and its ATT&CK technique coverage.
+
+The import is executed by `tools/opencti_import.py` against the OpenCTI deployment in `opencti-intelligent-shield/`.
+
+Proof requirements for this phase: screenshots of each object type in the OpenCTI UI confirming that the graph was built correctly from the reviewed data.
+
+### 10. Start the OpenCTI Stack
+
+Start the full OpenCTI stack and verify that all services are healthy.
+
+```bash
+cd ~/git-projects/opencti-intelligent-shield
+./scripts/start-all.sh
+```
+
+The script starts the core stack (Redis, Elasticsearch, MinIO, RabbitMQ, OpenCTI platform, 3 workers), waits until the platform responds on port 8080, then starts the connectors (MITRE ATT&CK, CVE, AlienVault OTX, Abuse.ch, URLhaus, ThreatFox, ImportDocument) and the AI enrichment connector.
+
+**Proof to capture:**
+
+- Terminal output showing all containers started without error
+- `docker compose ps` output showing all services `Up (healthy)` or `Up`
+- Browser screenshot of the OpenCTI login page at `http://localhost:8080`
+- Browser screenshot of the OpenCTI dashboard after login
+
+### 11. Verify MITRE ATT&CK Connector Sync
+
+The MITRE ATT&CK connector must complete its initial sync before ATT&CK pattern links can be created. The sync loads all ATT&CK Enterprise techniques, tactics, groups, and software objects into the graph.
+
+Navigate in OpenCTI:
+
+```text
+Settings → Connectors and workers → MITRE ATT&CK
+```
+
+Wait until the connector state shows the last sync completed. Then verify that ATT&CK patterns are present:
+
+```text
+Data → Arsenal → Attack Patterns
+```
+
+Expect 700+ entries in the list. If the list is empty or very small, the sync is still in progress — wait and refresh.
+
+**Proof to capture:**
+
+- Screenshot of the MITRE ATT&CK connector status page showing sync completed
+- Screenshot of `Data → Arsenal → Attack Patterns` showing populated technique list with total count visible
+
+### 12. Run the Desert Hydra Import Script
+
+Once the MITRE ATT&CK sync has completed, run the import script from the operation-desert-hydra repository.
+
+```bash
+cd ~/git-projects/operation-desert-hydra
+
+export OPENCTI_URL=http://localhost:8080
+export OPENCTI_TOKEN=<admin token from opencti-intelligent-shield/.env>
+
+python3 tools/opencti_import.py
+```
+
+The script creates the following objects (idempotent — safe to re-run):
+
+- `Identity`: Iran MOIS (organization)
+- `Intrusion Set`: MuddyWater with aliases (Seedworm, Mango Sandstorm, TA450, Static Kitten, TEMP.Zagros, Mercury, DEV-1084)
+- `Malware` (9): POWERSTATS, PowGoop, Small Sieve, Canopy, Mori, BugSleep, AnchorRAT, SyncroRAT, DarkBit
+- `Tool` (4): AteraAgent, SimpleHelp, Mimikatz, LaZagne
+- `Reports` (20): one per promoted source in `data/sources.yaml`
+- Relationships: `attributed-to` (MuddyWater → Iran MOIS), `uses` (MuddyWater → each Malware/Tool), `uses` (MuddyWater → ATT&CK patterns)
+
+Expected terminal output ends with:
+
+```text
+[desert-hydra] Import complete
+  Malware objects  : 9
+  Tool objects     : 4
+  Reports          : 20
+  ATT&CK linked    : 21
+  ATT&CK missing   : 0
+```
+
+If `ATT&CK missing` is > 0, the MITRE sync has not completed. Wait and re-run.
+
+**Proof to capture:**
+
+- Terminal screenshot showing full script output with final summary line
+
+### 13. Verify MuddyWater Intrusion Set
+
+Navigate in OpenCTI:
+
+```text
+Threats → Intrusion Sets → MuddyWater
+```
+
+Confirm:
+
+- Name: `MuddyWater`
+- Aliases: all 7 known aliases visible (Seedworm, Mango Sandstorm, TA450, Static Kitten, TEMP.Zagros, Mercury, DEV-1084)
+- Description: visible and correct
+- Confidence: 85%
+- TLP marking: TLP:WHITE
+- Created by: Iran MOIS
+
+**Proof to capture:**
+
+- Screenshot of the MuddyWater intrusion set overview tab showing name, aliases, and confidence
+
+### 14. Verify the Relationship Graph
+
+Navigate in OpenCTI:
+
+```text
+Threats → Intrusion Sets → MuddyWater → Knowledge (tab)
+```
+
+Confirm the following relationships are visible in the graph view:
+
+- `MuddyWater` → `attributed-to` → `Iran MOIS`
+- `MuddyWater` → `uses` → each of the 9 malware objects
+- `MuddyWater` → `uses` → each of the 4 tool objects
+
+Switch to the list view to count total relationships.
+
+**Proof to capture:**
+
+- Screenshot of the relationship graph view showing MuddyWater connected to its malware and tools
+- Screenshot of the relationship list view showing attributed-to and uses relationships with counts
+
+### 15. Verify ATT&CK Technique Coverage
+
+Navigate in OpenCTI:
+
+```text
+Threats → Intrusion Sets → MuddyWater → TTPs (tab)
+```
+
+Confirm that ATT&CK technique links are visible. Expected techniques from `data/procedures.yaml`:
+
+| Tactic | Technique |
+|---|---|
+| Initial Access | T1566.001, T1566.002, T1190 |
+| Execution | T1059.001, T1204.001, T1047 |
+| Persistence | T1547.001, T1053.005, T1546.015 |
+| Defense Evasion | T1027, T1574.002 |
+| Lateral Movement | T1534 |
+| Collection | T1082, T1016, T1033, T1518.001 |
+| Command and Control | T1071.001, T1572, T1102, T1219 |
+| Credential Access | T1003.001, T1003.004, T1003.005 |
+
+Also navigate to the ATT&CK matrix heatmap:
+
+```text
+Threats → Intrusion Sets → MuddyWater → TTPs → View as matrix
+```
+
+**Proof to capture:**
+
+- Screenshot of the TTPs tab showing the technique list with total count
+- Screenshot of the ATT&CK matrix heatmap with MuddyWater techniques highlighted
+
+### 16. Verify Malware and Tool Objects
+
+Navigate to each object type and confirm Desert Hydra objects are present.
+
+**Malware:**
+
+```text
+Arsenal → Malware
+```
+
+Filter or search for each: POWERSTATS, PowGoop, Small Sieve, Canopy, Mori, BugSleep, AnchorRAT, SyncroRAT, DarkBit.
+
+Open one malware object (e.g. BugSleep) and confirm:
+
+- Description is present
+- Linked to MuddyWater via `used-by` relationship
+- TLP:WHITE marking present
+
+**Tools:**
+
+```text
+Arsenal → Tools
+```
+
+Confirm AteraAgent, SimpleHelp, Mimikatz, LaZagne are present.
+
+**Proof to capture:**
+
+- Screenshot of the Malware list filtered to show Desert Hydra objects
+- Screenshot of BugSleep or AnchorRAT detail page showing description and relationship to MuddyWater
+- Screenshot of the Tool list showing AteraAgent and SimpleHelp
+
+### 17. Verify Reports
+
+Navigate in OpenCTI:
+
+```text
+Analyses → Reports
+```
+
+Confirm 20 reports are present. Sort by name or date. Each report should:
+
+- Have a title matching the source
+- Reference MuddyWater in its object refs
+- Show the publisher in the description
+- Have TLP:WHITE marking
+
+Open one government source report (e.g. `AA22-055A: Iranian Government-Sponsored Actors...`) and confirm the description shows publisher, reliability rating, actor claims, and key entities.
+
+**Proof to capture:**
+
+- Screenshot of the Reports list showing at least 15 Desert Hydra reports visible
+- Screenshot of one government report detail page showing full description content
+
+### 18. Re-run Import After Full MITRE Sync
+
+If Step 12 completed with `ATT&CK missing: 1` (T1574.002 not yet synced), re-run the import script once the MITRE connector shows the sync completed.
+
+```bash
+cd ~/git-projects/operation-desert-hydra
+OPENCTI_URL=http://localhost:8080 \
+OPENCTI_TOKEN=<admin token> \
+python3 tools/opencti_import.py
+```
+
+All objects will show `[exists]` and only the missing pattern link will be added.
+
+**Proof to capture:**
+
+- Terminal output showing all objects `[exists]` and T1574.002 now linked
+- Updated ATT&CK matrix screenshot showing T1574.002 (DLL Side-Loading) highlighted
+
+---
+
 ## Step 0 Definition Of Done
 
 Step 0 is complete when the project has a clear purpose and declared output:
