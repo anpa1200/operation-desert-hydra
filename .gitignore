@@ -1,0 +1,29 @@
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node / Docusaurus, if added later
+node_modules/
+build/
+.docusaurus/
+
+# Local/private research data
+data/raw/
+data/private/
+*.pcap
+*.evtx
+*.sqlite
+*.db
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
