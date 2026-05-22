@@ -98,10 +98,10 @@ detections:
       web requests (Invoke-WebRequest, WebClient.DownloadString), or hard-coded API key strings.
       Secondary: PowerShell spawned by email client or browser.
     pseudologic: |
-      # Rule A — Encoded command flag
+      # Rule A — Encoded command flag (all unambiguous prefix forms: -e, -ec, -en, -enc, ...)
       event_type = process_create AND
       image ENDSWITH "powershell.exe" AND
-      command_line IMATCHES "-enc(odedcommand)?"
+      command_line IMATCHES "\s-e[a-zA-Z]*\s+[A-Za-z0-9+/=]{50,}"
 
       # Rule B — Script Block content (Event ID 4104)
       event_type = script_block_log AND
@@ -148,10 +148,12 @@ detections:
       high-confidence case: GoogleUpdate.exe loading Goopdate.dll from a non-Google path.
     pseudologic: |
       # Rule A — Specific IoC: GoogleUpdate loading Goopdate from non-standard path
+      # Allowlist covers both x64 and x86 Google installation paths
       event_type = image_load AND
       image ENDSWITH "GoogleUpdate.exe" AND
       loaded_image ENDSWITH "Goopdate.dll" AND
-      NOT loaded_image_path STARTSWITH "C:\Program Files (x86)\Google\"
+      NOT (loaded_image_path STARTSWITH "C:\Program Files (x86)\Google\" OR
+           loaded_image_path STARTSWITH "C:\Program Files\Google\")
 
       # Rule B — Generic: signed process loading unsigned DLL from user-writable path
       event_type = image_load AND
@@ -432,10 +434,12 @@ detections:
       command_line MATCHES "SecurityCenter2"
 
       # Rule C — Full survey pattern match (high-confidence combined indicator)
+      # Covers T1518.001 (AV enum), T1016 (network config), T1082 (OS info), T1033 (username via Win32_ComputerSystem)
       event_type = script_block_log AND
       script_block_text MATCHES "SecurityCenter2" AND
       script_block_text MATCHES "Win32_NetworkAdapterConfiguration" AND
-      script_block_text MATCHES "Win32_OperatingSystem"
+      script_block_text MATCHES "Win32_OperatingSystem" AND
+      script_block_text MATCHES "(Win32_ComputerSystem|Win32_UserAccount|UserName)"
     log_sources:
       - "PowerShell Script Block Logging (Event ID 4104) — REQUIRED for Rule A and C"
       - "EDR / Sysmon Event ID 1 (command line for Rule B)"
@@ -473,18 +477,21 @@ detections:
       for alerting.
     pseudologic: |
       # Rule A — LSASS process access (highest confidence, tool-agnostic)
+      # Access masks cover standard Mimikatz set + PROCESS_ALL_ACCESS (0x1fffff) for custom dumpers
+      # Broader alternative: granted_access & 0x10 != 0 (any VM_READ permission)
       event_type = process_access AND
       target_image ENDSWITH "lsass.exe" AND
-      granted_access MATCHES "(0x1010|0x1410|0x1438|0x143a|0x1418)" AND
+      granted_access MATCHES "(0x1010|0x1410|0x1438|0x143a|0x1418|0x1fffff|0x1f0fff)" AND
       source_image NOT IN ["MsMpEng.exe","csrss.exe","wininit.exe","svchost.exe",
                            "SecurityHealthService.exe","CylanceSvc.exe","SentinelAgent.exe"]
 
       # Rule B — Known credential tool execution
+      # Bracketing ensures command_line clause stays inside event_type guard
       event_type = process_create AND
       (image IMATCHES "mimikatz\.exe" OR
        image ENDSWITH "procdump64.exe" OR
-       image IMATCHES "lazagne\.exe") OR
-      command_line IMATCHES "(sekurlsa|lsadump|privilege::debug)"
+       image IMATCHES "lazagne\.exe" OR
+       command_line IMATCHES "(sekurlsa|lsadump|privilege::debug)")
 
       # Rule C — Dump file creation in writable path
       event_type = file_create AND
