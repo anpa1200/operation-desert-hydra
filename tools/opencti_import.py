@@ -99,7 +99,15 @@ def link(from_id, to_id, rel_type, confidence=80):
         pass
 
 
-def find_attack_pattern(mitre_id):
+ATTCK_NAMES = {
+    "T1574.002": "DLL Side-Loading",
+    "T1574.001": "DLL Search Order Hijacking",
+    "T1546.015": "Component Object Model Hijacking",
+    "T1218.010": "Regsvr32",
+}
+
+def find_or_create_attack_pattern(mitre_id):
+    """Look up an ATT&CK pattern by x_mitre_id. Create it if not synced yet."""
     result = api.attack_pattern.read(
         filters={
             "mode": "and",
@@ -107,7 +115,18 @@ def find_attack_pattern(mitre_id):
             "filterGroups": [],
         }
     )
-    return result["id"] if result else None
+    if result:
+        return result["id"], False
+    # Not in MITRE sync yet — create a stub so the relationship can be recorded
+    name = ATTCK_NAMES.get(mitre_id, mitre_id)
+    obj = api.attack_pattern.create(
+        name=name,
+        x_mitre_id=mitre_id,
+        description=f"MITRE ATT&CK technique {mitre_id}. Created as stub — will be updated by MITRE connector sync.",
+        objectMarking=[TLP_WHITE],
+        confidence=75,
+    )
+    return obj["id"], True
 
 # ── Step 1: Iran MOIS Identity ────────────────────────────────────────────────
 
@@ -407,27 +426,25 @@ for src in SOURCES:
 print("\n[Step 7] MuddyWater → uses → ATT&CK patterns (from procedures)")
 
 linked   = set()
-missing  = []
+stubs    = []
 
 for proc in PROCEDURES:
     for candidate in proc.get("attck_candidates", []):
         tid = candidate["technique"]
         if tid in linked:
             continue
-        pattern_id = find_attack_pattern(tid)
-        if pattern_id:
-            link(MW_ID, pattern_id, "uses", 75)
-            linked.add(tid)
-            print(f"  → uses → {tid}")
+        pattern_id, created_as_stub = find_or_create_attack_pattern(tid)
+        link(MW_ID, pattern_id, "uses", 75)
+        linked.add(tid)
+        if created_as_stub:
+            stubs.append(tid)
+            print(f"  → uses → {tid}  [stub created — not in MITRE sync]")
         else:
-            missing.append(tid)
+            print(f"  → uses → {tid}")
 
-if missing:
-    unique_missing = sorted(set(missing))
-    print(f"\n  [warn] {len(unique_missing)} ATT&CK patterns not yet synced:")
-    for tid in unique_missing:
-        print(f"    {tid}")
-    print("  Re-run this script after the MITRE connector finishes syncing.")
+if stubs:
+    print(f"\n  [note] {len(stubs)} stub pattern(s) created: {', '.join(stubs)}")
+    print("  These will be enriched automatically when the MITRE connector syncs them.")
 
 # ── Summary ───────────────────────────────────────────────────────────────────
 
@@ -437,5 +454,5 @@ print(f"  Malware objects  : {len(MALWARE_IDS)}")
 print(f"  Tool objects     : {len(TOOL_IDS)}")
 print(f"  Reports          : {len(REPORT_IDS)}")
 print(f"  ATT&CK linked    : {len(linked)}")
-print(f"  ATT&CK missing   : {len(set(missing))} (re-run after MITRE sync)")
+print(f"  ATT&CK stubs     : {len(stubs)} (will be enriched by MITRE sync)")
 print("─" * 60)
