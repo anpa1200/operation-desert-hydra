@@ -734,6 +734,21 @@ Expect 700+ entries in the list. If the list is empty or very small, the sync is
 - Screenshot of the MITRE ATT&CK connector status page showing sync completed
 - Screenshot of `Data → Arsenal → Attack Patterns` showing populated technique list with total count visible
 
+**Done.** MITRE ATT&CK connector registered and active on 2026-05-22. Two sync runs visible:
+
+- `MITRE run @ 2026-05-22 08:31:41` — IN PROGRESS, 30573/32812 operations completed, 100 errors (non-fatal, duplicate/conflict writes during initial load)
+- `MITRE run @ 2026-05-22 08:36:55` — IN PROGRESS, 32812 total operations, 0 errors
+
+Connector state: `ACTIVE`. Scope covers: marking-definition, identity, attack-pattern, course-of-action, intrusion-set, campaign, malware, tool, vulnerability, x-mitre-matrix, x-mitre-tactic, x-mitre-collection.
+
+846 ATT&CK patterns loaded. T1574.002 (DLL Side-Loading) absent from synced dataset — created as a named stub by the import script and will be enriched on next full sync.
+
+Actual navigation path: `Data → Ingestion → Connectors → MITRE ATT&CK` (not Settings).
+
+Proof: `docs/proofs/phase-3/step-11-mitre-connector-status.png`
+
+![Step 11 — MITRE ATT&CK connector status](proofs/phase-3/step-11-mitre-connector-status.png)
+
 ### 12. Run the Desert Hydra Import Script
 
 Once the MITRE ATT&CK sync has completed, run the import script from the operation-desert-hydra repository.
