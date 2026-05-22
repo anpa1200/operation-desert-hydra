@@ -835,6 +835,21 @@ Confirm:
 
 - Screenshot of the MuddyWater intrusion set overview tab showing name, aliases, and confidence
 
+**Done.** MuddyWater intrusion set confirmed in OpenCTI on 2026-05-22.
+
+Visible in screenshot:
+- Aliases shown as chips next to the title: Earth Vetala, MERCURY, Static Kitten, Seedworm, TEMP.Zagros (additional aliases hidden behind `...` chip)
+- Description present: MOIS attribution, targeting scope, and activity summary from import
+- Author: The MITRE Corporation (from MITRE ATT&CK connector — MuddyWater G0069 was already in the graph)
+- Latest relationships visible: T1574.002 DLL Side-Loading, DarkSpy, Roadie, T1003.005, T1219, T1190, T1552.001
+- Latest reports linked: Overview of Recent Phishing, Technological Advancement 2024, MuddyWater, INCD DarkBit, DarkBeatC2, TA450 PDF campaign, Operation Olalampo, BugSleep Backdoor
+- Platform creation: May 22, 2026 at 11:36:13 AM
+- Created by: ADMIN
+
+Proof: `docs/proofs/phase-3/step-13-muddywater-intrusion-set.png`
+
+![Step 13 — MuddyWater Intrusion Set overview](proofs/phase-3/step-13-muddywater-intrusion-set.png)
+
 ### 14. Verify the Relationship Graph
 
 Navigate in OpenCTI:
