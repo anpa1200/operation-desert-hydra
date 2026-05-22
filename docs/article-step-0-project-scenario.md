@@ -1827,6 +1827,109 @@ The four techniques scoring 3 all have a known resolution path: two require a sp
 
 ---
 
+## Phase 8: Executive Summary
+
+### 34. Operation Desert Hydra — Executive Summary
+
+**Audience:** SOC managers, detection engineers, and defenders responsible for protecting organizations from Iranian state-linked intrusion activity.
+
+---
+
+#### What This Project Found
+
+MuddyWater (Iranian MOIS) runs a consistent, repeatable playbook against Israeli organizations. Across five years of government and vendor reporting, the same pattern recurs: a spearphishing email or a link to a legitimate file-sharing service delivers an archive or Office file; the recipient opens it; a scripting engine (wscript.exe, PowerShell) executes; and within minutes, a legitimate remote management tool — ScreenConnect, SimpleHelp, AteraAgent, or similar — is running from a user-writable path, providing the actor persistent access under the guise of IT support software.
+
+That playbook is detectable. All of it.
+
+This project produced 11 detection records covering the full chain from initial access to credential dumping, validated against a live Windows 10 endpoint with Sysmon, and tied directly to the specific MuddyWater tools and campaigns documented in public reporting.
+
+---
+
+#### What Can Be Detected Right Now
+
+With a standard Sysmon deployment and PowerShell Script Block Logging enabled, the following behaviors produce high-confidence, low-noise alerts:
+
+| Priority | Behavior | Detection | Why it matters |
+|----------|----------|-----------|---------------|
+| 1 | RMM binary running from `\AppData\`, `\Temp\`, or `\Downloads\` | det_mw_0007 | Every documented MuddyWater intrusion uses an RMM tool delivered this way. No legitimate IT deployment installs to these paths. |
+| 2 | `wscript.exe` or email client spawning `powershell.exe -EncodedCommand` | det_mw_0001, det_mw_0003 | Directly mirrors PowGoop and POWERSTATS delivery. Parent-child chain is the signal — not the payload. |
+| 3 | Scheduled task created with a 43-minute repetition interval | det_mw_0006 | BugSleep's exact beacon interval. A single match is high-confidence — this interval has no legitimate software explanation in a standard enterprise environment. |
+| 4 | PowerShell script block containing `SecurityCenter2` + `AntiVirusProduct` | det_mw_0009 | Near-exact match to the documented CISA AA22-055A post-access survey script. Fires on the recon phase before the actor has achieved full objectives. |
+| 5 | Any process opening an LSASS handle with `GrantedAccess 0x1410` or `0x1438` | det_mw_0010 | Tool-agnostic. Fires on Mimikatz, procdump, custom dumpers, and anything else that touches LSASS memory — not just named binaries. |
+| 6 | Registry Run key write with value name `OutlookMicrosift` or `SystemTextEncoding` | det_mw_0005 | Named IoC with no false-positive population. A single match warrants immediate investigation. |
+
+---
+
+#### What Still Needs Telemetry
+
+Three gaps between the detection atlas and a working production deployment are not detection logic problems — they are telemetry configuration problems:
+
+**1. PowerShell Script Block Logging must be explicitly enabled.**
+Without it, det_mw_0003 Rule B and all three det_mw_0009 rules are unavailable. These cover PowGoop loader behavior and the full MuddyWater post-access survey. One Group Policy change enables it across a fleet. This is the single highest-ROI configuration action in this list.
+
+```
+Computer Configuration → Administrative Templates → Windows Components
+→ Windows PowerShell → Turn on PowerShell Script Block Logging → Enabled
+```
+
+**2. Sysmon ProcessAccess (Event ID 10) must be configured for LSASS.**
+Without it, det_mw_0010 Rule A is unavailable and LSASS credential dumping detection falls back to binary names only. Renamed Mimikatz, custom C++ dumpers, and any tool that doesn't match the binary name list will be missed. Add `<ProcessAccess onmatch="include">` targeting `lsass.exe` to `sysmon.xml`.
+
+**3. DNS resolver query logging with full QNAME must be enabled.**
+Without it, det_mw_0008b (Mori DNS tunneling) has no telemetry to work with. DNS tunneling is completely invisible without query logs. Windows DNS debug logging or network-level DNS capture both qualify.
+
+**4. Sysmon ImageLoad (Event ID 7) must be enabled.**
+Without it, det_mw_0004 (PowGoop DLL side-loading via `GoogleUpdate.exe + Goopdate.dll`) has no telemetry path. Add `<ImageLoad onmatch="include">` to `sysmon.xml`.
+
+---
+
+#### What Defenders Should Prioritize
+
+Three actions deliver the highest immediate impact, in order:
+
+**Action 1 — Baseline your RMM tool deployments.**
+det_mw_0007 is the highest-ROI detection in this atlas and the most consistently documented MuddyWater technique across all five source tiers. But it requires a baseline: you must know which endpoints have authorized RMM tools, which paths they install to, and which parent processes launch them. Without that baseline, the detection produces noise. With it, any out-of-baseline RMM execution is an immediate high-confidence alert. Build the baseline first, then activate the alert.
+
+**Action 2 — Enable PowerShell Script Block Logging fleet-wide.**
+This single configuration change unlocks det_mw_0003 Rule B and det_mw_0009 Rules A and C — covering PowGoop loader execution and the full MuddyWater post-access survey in one GPO push. It costs nothing to enable and produces high-value forensic artifacts independent of any specific detection rule.
+
+**Action 3 — Verify your Sysmon configuration covers ProcessAccess against lsass.exe.**
+This enables the only tool-agnostic LSASS credential dump detection in the atlas. The binary-name fallback (Rule B) misses renamed tools; EID 10 does not. In environments where Credential Guard is not deployed, this is the primary line of defense against credential dumping.
+
+---
+
+#### What Is Not Covered
+
+This atlas does not cover lateral movement, collection, or exfiltration. These gaps are honest:
+
+- **Lateral movement** is not documented at procedure level in the current source set with sufficient specificity to engineer a targeted detection.
+- **Collection and exfiltration** occur over MuddyWater's established C2 channels (covered by det_mw_0007 and det_mw_0008a/b), not via dedicated exfil techniques documented in public reporting.
+
+If your environment produces alerts from the detections in this atlas, lateral movement from the compromised host should be assumed and hunted for using standard Windows security event telemetry (logon type 3, lateral Kerberos, remote service creation).
+
+---
+
+#### Coverage At a Glance
+
+```
+Initial Access     ████████████  covered (T1566.001, T1566.002, T1190)
+Execution          ████████████  covered (T1059.001, T1047)
+Persistence        ████████░░░░  mostly covered (T1547.001 ✓, T1053.005 ✓, T1574.002 partial)
+Defense Evasion    ████████░░░░  mostly covered (T1027 ✓, T1574.002 partial)
+Credential Access  ████████████  covered (T1003.001, T1003.004, T1003.005)
+Discovery          ████████████  covered (T1082, T1016, T1033, T1518.001)
+Lateral Movement   ░░░░░░░░░░░░  GAP — no procedures in source set
+Collection         ░░░░░░░░░░░░  GAP — no procedures in source set
+C2                 ████████░░░░  mostly covered (T1219 ✓, T1572 ✓, T1071.001/T1102 partial)
+Exfiltration       ░░░░░░░░░░░░  GAP — covered indirectly via C2 channels
+```
+
+**13 PASS / 1 PARTIAL / 1 FAIL** across 16 lab validation rule checks.
+**15 of 22 techniques** fully lab-validated (coverage score 5).
+All detection records, pseudologic, simulation playbook, Kibana proofs, and this document are version-controlled at `github.com/anpa1200/operation-desert-hydra`.
+
+---
+
 ## Step 0 Definition Of Done
 
 Step 0 is complete when the project has a clear purpose and declared output:
