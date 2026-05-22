@@ -261,6 +261,76 @@ data/sources.yaml
 
 The raw AI output stays in `docs/source-gathering/` as working material. Only reviewed sources should be promoted into `data/sources.yaml`.
 
+### 3. Save Parallel Research Results
+
+Keep each model's output as a separate raw artifact. Do not merge the files automatically.
+
+```text
+docs/source-gathering/Gemini-research.md
+docs/source-gathering/openAI-research.md
+```
+
+Short description:
+
+- `Gemini-research.md` stores the first candidate source register from Gemini, including government advisories, vendor reports, actor claims, direct-download links, and relevance flags.
+- `openAI-research.md` stores the second candidate source assessment from OpenAI, including executive assessment, high-priority sources, extended sources, direct-download table, extraction candidates, OpenCTI modeling candidates, detection opportunities, and manual review gaps.
+
+These files are research inputs. They are not validated project data.
+
+### 4. Compare And Deduplicate Sources
+
+Compare the Gemini and OpenAI outputs before promotion.
+
+The review should identify:
+
+- duplicate sources with different IDs
+- broken or placeholder URLs
+- future or uncertain publication dates
+- secondary summaries that duplicate primary reports
+- sources with missing direct-download links
+- conflicting actor aliases or vendor names
+- unsupported malware, tool, or campaign names
+- detection ideas that are not backed by source evidence
+
+The result should be a clean candidate list for analyst review, not a larger pile of links.
+
+### 5. Promote Reviewed Sources
+
+Promote only reviewed sources into:
+
+```text
+data/sources.yaml
+```
+
+Each promoted source must have:
+
+- stable source ID
+- title, publisher, URL, and access date
+- direct download URL where available
+- source type and reliability
+- actor claims exactly as stated by the source
+- relevance flags
+- key entities and candidate ATT&CK techniques
+- limitations
+
+Do not promote sources that still contain placeholders, unverified dates, invented URLs, or unsupported claims.
+
+### 6. Extract Procedure Candidates
+
+After the source register is reviewed, extract procedure candidates into:
+
+```text
+data/procedures.yaml
+```
+
+Each procedure should preserve the evidence chain:
+
+```text
+source -> claim -> evidence label -> procedure -> candidate ATT&CK mapping -> required telemetry -> detection idea -> validation case
+```
+
+This is where the project starts becoming CTI-to-detection work rather than source collection.
+
 ## Step 0 Definition Of Done
 
 Step 0 is complete when the project has a clear purpose and declared output:
