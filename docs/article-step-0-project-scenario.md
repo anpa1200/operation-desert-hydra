@@ -376,15 +376,82 @@ data/sources.yaml
 Each promoted source must have:
 
 - stable source ID
-- title, publisher, URL, and access date
-- direct download URL where available
-- source type and reliability
+- original source-list number
+- title, publisher, and URL
+- local raw file path
+- local extracted text path
+- local metadata path
+- source type
+- source reliability rating
+- information credibility score
+- acquisition quality
+- evidence support labels
 - actor claims exactly as stated by the source
-- relevance flags
+- usable-for flags
 - key entities and candidate ATT&CK techniques
 - limitations
+- promotion decision
 
 Do not promote sources that still contain placeholders, unverified dates, invented URLs, or unsupported claims.
+
+Important distinction:
+
+```text
+source-level evidence support != claim-level evidence label
+```
+
+At this stage, `Observed`, `Reported`, and `Assessed` describe the type of evidence the source can support in general. The final evidence label must still be assigned per extracted claim.
+
+Example promoted source structure:
+
+```yaml
+sources:
+  - id: src_incd_muddywater_darkbit_2023
+    source_number: 17
+    title: "Iranian Government-Sponsored Threat Actor MuddyWater Conducts Cyber Attack Against Israel"
+    publisher: "Israel National Cyber Directorate"
+    url: "https://www.gov.il/BlobFolder/news/_muddywater/en/government%20threat%20actor.pdf"
+    local_files:
+      raw: "docs/source-gathering/raw-sources/17-israel-national-cyber-directorate-muddywater-darkbit-pdf/source.pdf"
+      text: "docs/source-gathering/raw-sources/17-israel-national-cyber-directorate-muddywater-darkbit-pdf/source.txt"
+      metadata: "docs/source-gathering/raw-sources/17-israel-national-cyber-directorate-muddywater-darkbit-pdf/metadata.json"
+    source_type: "government_report"
+    source_reliability: "A"
+    information_credibility: 2
+    acquisition_quality: "usable"
+    evidence_support:
+      - "Observed"
+      - "Reported"
+      - "Assessed"
+    actor_claims:
+      - "MuddyWater"
+      - "Iran MOIS"
+    usable_for:
+      actor_profile: true
+      procedures: true
+      malware: true
+      infrastructure: true
+      detections: true
+      validation_lab: true
+      opencti_modeling: true
+    key_entities:
+      - "MuddyWater"
+      - "DarkBit"
+    candidate_attck_techniques:
+      - "T1486"
+      - "T1059.003"
+    limitations:
+      - "Israel-specific incident source; do not generalize every procedure to all MuddyWater activity."
+    promotion_decision: "promote"
+```
+
+First promotion batch:
+
+```text
+07, 17, 18, 05, 08, 19, 01, 02, 03, 22, 24, 29, 28, 33, 34, 11, 12, 37, 26, 35
+```
+
+This creates the first reviewed source register and prepares the project for claim extraction.
 
 ### 8. Extract Procedure Candidates
 
