@@ -871,6 +871,24 @@ Switch to the list view to count total relationships.
 - Screenshot of the relationship graph view showing MuddyWater connected to its malware and tools
 - Screenshot of the relationship list view showing attributed-to and uses relationships with counts
 
+**Done.** Knowledge graph confirmed on 2026-05-22 via `Threats → Intrusion Sets → MuddyWater → Knowledge`.
+
+Counters visible in screenshot:
+- Total analyses: 19
+- Total indicators: 0 (expected — no IOCs imported in Phase 3)
+- Total relations: 117
+
+Right panel breakdown:
+- Malware: 16 (9 from import + 7 from MITRE ATT&CK G0069)
+- Tools: 12 (4 from import + 8 from MITRE ATT&CK G0069)
+- Attack patterns: 73 (21 from procedures + MITRE G0069 full technique set)
+
+Distribution of reports: 100% attributed to Iran MOIS. Diamond view shows Capabilities populated; Infrastructure and Victimology empty by design — no IOCs or location data imported in Phase 3.
+
+Proof: `docs/proofs/phase-3/step-14-knowledge-graph.png`
+
+![Step 14 — MuddyWater Knowledge graph](proofs/phase-3/step-14-knowledge-graph.png)
+
 ### 15. Verify ATT&CK Technique Coverage
 
 Navigate in OpenCTI:
