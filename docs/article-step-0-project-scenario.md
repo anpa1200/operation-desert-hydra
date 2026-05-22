@@ -921,6 +921,24 @@ Threats → Intrusion Sets → MuddyWater → TTPs → View as matrix
 - Screenshot of the TTPs tab showing the technique list with total count
 - Screenshot of the ATT&CK matrix heatmap with MuddyWater techniques highlighted
 
+**Done.** ATT&CK matrix confirmed on 2026-05-22. Matrix shows 73 total techniques across 15 tactics with MuddyWater-linked techniques highlighted.
+
+Highlighted techniques visible in matrix (sample):
+- **Execution**: Command and Scripting Interpreter, Scheduled Task/Job, User Execution, Windows Management Instrumentation
+- **Stealth**: Archive Collected Data, Data Staged, Obfuscated Files or Information, Screen Capture, System Binary Proxy Execution
+- **Credential Access**: Credentials from Password Stores, OS Credential Dumping, Unsecured Credentials
+- **Discovery**: File and Directory Discovery, Process Discovery, Software Discovery, System Information Discovery, System Network Configuration Discovery, System Network Connections Discovery, System Owner/User Discovery
+- **Command and Control**: Remote Access Tools, Web Service
+- **Persistence**: Boot or Logon Autostart Execution, Scheduled Task/Job, Office Application Startup
+- **Initial Access**: Exploit Public-Facing Application, Phishing
+- **Exfiltration**: Exfiltration Over C2 Channel, Exfiltration Over Web Service
+
+Screenshot captured via `Techniques → Attack patterns kill chain` view (matrix export/fullscreen).
+
+Proof: `docs/proofs/phase-3/step-15-attck-matrix.png`
+
+![Step 15 — ATT&CK matrix heatmap](proofs/phase-3/step-15-attck-matrix.png)
+
 ### 16. Verify Malware and Tool Objects
 
 Navigate to each object type and confirm Desert Hydra objects are present.
