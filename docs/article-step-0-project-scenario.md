@@ -971,6 +971,10 @@ Confirm AteraAgent, SimpleHelp, Mimikatz, LaZagne are present.
 - Screenshot of BugSleep or AnchorRAT detail page showing description and relationship to MuddyWater
 - Screenshot of the Tool list showing AteraAgent and SimpleHelp
 
+> **Done.** BugSleep malware detail page confirms: description present, linked to MuddyWater via `USES` relationship, TLP:WHITE marking, author IRAN MOIS, confidence Confirmed.
+>
+> ![Step 16 – BugSleep malware detail](proofs/phase-3/step-16-bugsleep-malware-detail.png)
+
 ### 17. Verify Reports
 
 Navigate in OpenCTI:
