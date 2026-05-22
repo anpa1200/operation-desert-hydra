@@ -294,7 +294,78 @@ The review should identify:
 
 The result should be a clean candidate list for analyst review, not a larger pile of links.
 
-### 5. Promote Reviewed Sources
+### 5. Acquire Local Copies Of Sources
+
+After the source list is created, download or scrape every listed source into a separate local folder.
+
+Save raw source material under:
+
+```text
+docs/source-gathering/raw-sources/
+```
+
+Each source should have its own folder:
+
+```text
+NN-source-title/
+├── metadata.json
+├── headers.txt
+├── source.html | source.pdf | source.txt
+├── source.txt
+└── fallback-reader.txt
+```
+
+Short description:
+
+- `metadata.json` records the original URL, HTTP status, saved file paths, content type, and extraction status.
+- `headers.txt` stores the HTTP response headers.
+- `source.html`, `source.pdf`, or `source.txt` stores the raw acquired source.
+- `source.txt` stores extracted readable text for review.
+- `fallback-reader.txt` stores a reader-mode fallback when a site blocks direct scraping.
+
+This stage is acquisition only. It does not validate the source claims.
+
+### 6. Validate Saved Source Quality
+
+Iterate through every saved source folder and check acquisition quality before analytic validation.
+
+At this stage, validate only whether the saved file is usable:
+
+- the file opens correctly
+- the downloaded file is the intended report or article
+- PDFs are real PDFs, not HTML block pages saved as `.pdf`
+- HTML captures are readable and not only cookie banners, login pages, anti-bot pages, or access-denied pages
+- extracted `source.txt` contains meaningful article/report text
+- title, publisher, and URL in `metadata.json` match the saved content
+- direct-download files are complete enough for review
+- fallback-reader text is acceptable when direct scraping is blocked
+
+If a saved file is not correct, try to find and save a better version:
+
+- official PDF mirror
+- archived official page
+- publisher press-release version
+- government mirror
+- vendor mirror
+- reader-mode extraction
+- alternate direct-download URL
+
+Record the result in the source folder metadata or acquisition report.
+
+Quality labels for this stage:
+
+```text
+usable        = full/readable source saved
+partial       = enough text for review, but not ideal
+blocked       = only anti-bot/access-denied/login content saved
+wrong_file    = URL saved unrelated content
+duplicate     = same source already captured better elsewhere
+needs_retry   = alternate version required
+```
+
+Do not promote a source into `data/sources.yaml` until its saved copy is `usable` or explicitly accepted as `partial`.
+
+### 7. Promote Reviewed Sources
 
 Promote only reviewed sources into:
 
@@ -315,7 +386,7 @@ Each promoted source must have:
 
 Do not promote sources that still contain placeholders, unverified dates, invented URLs, or unsupported claims.
 
-### 6. Extract Procedure Candidates
+### 8. Extract Procedure Candidates
 
 After the source register is reviewed, extract procedure candidates into:
 
