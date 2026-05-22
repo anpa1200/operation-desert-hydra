@@ -24,8 +24,8 @@ NN-source-title/
 ## Acquisition Summary
 
 - Source list entries processed: 71
-- Source folders created: 71
-- Raw files saved: 71
+- Source folders retained after quality cleanup: 65
+- Source folders deleted after failing quality check: 6
 - Text extraction attempted for every source.
 - PDFs were saved as `source.pdf` and converted to `source.txt` when possible.
 - HTML pages were saved as `source.html` and converted to `source.txt`.
@@ -46,24 +46,31 @@ Before promotion into `data/sources.yaml`, each source still needs:
 - source reliability assessment
 - unsupported-claim removal
 
-## Blocked Or Partially Blocked Sources
+## Deleted After Quality Check
+
+The following acquired files were removed because the saved local copy was not full, correct, or high-quality enough for review.
+
+| Source | Reason | Replacement / Better Source |
+|---|---|---|
+| 04 CISA MuddyWater alert | weak duplicate and direct fetch blocked | 05 advisory fallback, 07 real PDF mirror |
+| 06 CISA AA22-055A PDF | `source.pdf` was an HTML access-denied page | 07 real PDF mirror |
+| 20 ClearSky Operation Quicksand blog | anti-bot/minimal content only | source list keeps URL; reacquire manually if needed |
+| 21 ClearSky Operation Quicksand PDF | `source.pdf` was anti-bot HTML; fallback only | source list keeps URL; reacquire manually if needed |
+| 25 HarfangLab Atera campaign | anti-bot page only; fallback not useful | source list keeps URL; reacquire manually/browser capture needed |
+| 52 CISA AA23-335A PDF | `source.pdf` was an HTML access-denied page | 51 advisory page fallback, source list keeps official URL |
+
+## Blocked Or Partially Blocked Sources Retained
 
 Some sources returned access-denied or anti-bot pages to direct curl requests. Where possible, a text fallback was saved as `fallback-reader.txt`.
 
 | Source | Direct Fetch | Fallback |
 |---|---:|---|
-| 04 CISA MuddyWater alert | 403 | weak duplicate of source 05 |
 | 05 CISA AA22-055A advisory page | 403 | useful fallback saved |
-| 06 CISA AA22-055A PDF | 403 | useful fallback saved; source 07 has direct PDF mirror |
 | 16 INCD MuddyWater page | 403 | useful fallback saved; source 17 has direct PDF |
-| 20 ClearSky Operation Quicksand blog | anti-bot HTML | weak fallback; source 21 has detailed report fallback |
-| 21 ClearSky Operation Quicksand PDF | anti-bot HTML | useful fallback saved |
-| 25 HarfangLab Atera campaign | anti-bot HTML | weak fallback only |
 | 27 SC Media brief | 403 | useful fallback saved |
 | 49 CISA Iran threat overview | 403 | useful fallback saved |
 | 50 CISA Iran publications | 403 | useful fallback saved |
 | 51 CISA AA23-335A page | 403 | useful fallback saved |
-| 52 CISA AA23-335A PDF | 403 | useful fallback saved |
 
 ## Next Step
 
