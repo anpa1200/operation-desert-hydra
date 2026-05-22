@@ -997,6 +997,10 @@ Open one government source report (e.g. `AA22-055A: Iranian Government-Sponsored
 - Screenshot of the Reports list showing at least 15 Desert Hydra reports visible
 - Screenshot of one government report detail page showing full description content
 
+> **Done.** Reports list shows 19 threat-report objects, all authored by Iran MOIS with TLP:WHITE marking. 19 of 20 expected reports present (one deduplicated on import — acceptable). All major sources visible: AA22-055A, MERCURY and DEV-1084, BugSleep, DarkBeatC2, Operation Olalampo, POWERSTATS, Wading Through Muddy Waters, and others.
+>
+> ![Step 17 – Reports list](proofs/phase-3/step-17-reports-list.png)
+
 ### 18. Re-run Import After Full MITRE Sync
 
 If Step 12 completed with `ATT&CK missing: 1` (T1574.002 not yet synced), re-run the import script once the MITRE connector shows the sync completed.
