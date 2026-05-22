@@ -1,0 +1,15 @@
+{
+  "number": 66,
+  "title": "STIX Project — Relationships",
+  "url": "https://stixproject.github.io/documentation/concepts/relationships/",
+  "curl_status": "200 https://stixproject.github.io/documentation/concepts/relationships/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  7085  100  7085    0     0  31855      0 --:--:-- --:--:-- --:--:-- 31914",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/66-stix-project-relationships/source.html",
+  "text_file": "docs/source-gathering/raw-sources/66-stix-project-relationships/source.txt",
+  "size_bytes": 42768,
+  "extract_error": ""
+}

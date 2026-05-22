@@ -1,0 +1,304 @@
+Skip to content
+
+You're not viewing the latest version. [ **Click here to go to latest.**
+](../../..)
+
+[ ![logo](../../assets/logo.png) ](../.. "OpenCTI Documentation")
+
+Initializing search
+
+[ GitHub  ](https://github.com/OpenCTI-Platform/opencti "Go to repository")
+
+  * [ Home ](../..)
+  * [ Deployment & Setup ](../../deployment/overview/)
+  * [ User Guide ](../getting-started/)
+  * [ Administration ](../../administration/introduction/)
+  * [ Reference ](../../reference/data-model/)
+  * [ Development ](../../development/environment_ubuntu/)
+
+[ ![logo](../../assets/logo.png) ](../.. "OpenCTI Documentation") OpenCTI
+Documentation
+
+[ GitHub  ](https://github.com/OpenCTI-Platform/opencti "Go to repository")
+
+  * [ Home  ](../..)
+  * Deployment & Setup  Deployment & Setup 
+    * Platform  Platform 
+      * [ Overview  ](../../deployment/overview/)
+      * [ Installation  ](../../deployment/installation/)
+      * [ Configuration  ](../../deployment/configuration/)
+      * Authentication  Authentication 
+        * [ Authentication via environment variables  ](../../deployment/authentication/)
+      * [ Telemetry  ](../../deployment/telemetry/)
+      * [ Upgrade  ](../../deployment/upgrade/)
+    * Ecosystem  Ecosystem 
+      * [ Connectors  ](../../deployment/connectors/)
+      * [ Integrations  ](../../deployment/integrations/)
+      * Manager  Manager 
+        * [ Overview  ](../../deployment/integration-manager/)
+        * [ Quick start  ](../../deployment/integration-manager/quick-start/)
+        * [ Architecture  ](../../deployment/integration-manager/architecture/)
+        * [ Private registry authentication  ](../../deployment/integration-manager/registry-authentication/)
+        * [ Proxy support  ](../../deployment/integration-manager/proxy-configuration/)
+        * [ Installation guide  ](../../deployment/integration-manager/installation/)
+        * [ Configuration  ](../../deployment/integration-manager/configuration/)
+        * [ Migration guide  ](../../deployment/integration-manager/migration/)
+        * [ Troubleshooting guide  ](../../deployment/integration-manager/troubleshooting/)
+      * [ Other resources  ](../../deployment/resources/)
+    * Advanced  Advanced 
+      * [ Platform managers  ](../../deployment/managers/)
+      * [ Liveness probe  ](../../deployment/liveness-probe/)
+      * [ Clustering  ](../../deployment/clustering/)
+      * [ Indices and rollover  ](../../deployment/rollover/)
+      * [ On-premise map server  ](../../deployment/map/)
+      * [ On-premise AI extraction  ](../../deployment/ai-import-document/)
+      * [ Troubleshooting  ](../../deployment/troubleshooting/)
+    * Breaking changes  Breaking changes 
+      * [ Index  ](../../deployment/breaking-changes/)
+      * Migration guides  Migration guides 
+        * [ SSO Migration from environment variable to UI  ](../../deployment/breaking-changes/7.260224.0-SSO-authentication-migration/)
+        * [ Metrics renamed in Client Python  ](../../deployment/breaking-changes/6.8-client-python-metrics/)
+        * [ OpenBAS scenario generation  ](../../deployment/breaking-changes/6.5-generation-scenario-opencti-openbas-placeholders/)
+        * [ Stream connectors data import  ](../../deployment/breaking-changes/6.3-removing-some-connectors/)
+        * [ Promote to Indicator  ](../../deployment/breaking-changes/6.2-promote-to-indicator/)
+        * [ SAML authentication  ](../../deployment/breaking-changes/6.2-saml-authentication/)
+        * [ New filter API  ](../../deployment/breaking-changes/5.12-filters/)
+  * User Guide  User Guide 
+    * [ Getting started  ](../getting-started/)
+    * Foundations  Foundations 
+      * Data model  [ Data model  ](./) Table of contents 
+        * Introduction 
+        * Standard 
+          * The STIX model 
+          * Extensions 
+        * Implementation in the platform 
+          * Diagram of types 
+          * Attributes and properties 
+      * [ Nested objects  ](../nested/)
+      * [ Containers  ](../containers/)
+      * [ Deduplication  ](../deduplication/)
+      * [ Reliability and confidence  ](../reliability-confidence/)
+      * [ Meaning of dates  ](../dates/)
+      * [ CTI Copilot ✨  ](../copilot/)
+    * Explore knowledge  Explore knowledge 
+      * [ Overview  ](../overview/)
+      * [ Search for knowledge  ](../search/)
+      * [ Insights and summaries ✨  ](../insights/)
+      * [ Priority Intelligence Requirements  ](../pir/)
+      * Explore by entity types  Explore by entity types 
+        * [ Analysis  ](../exploring-analysis/)
+        * [ Cases  ](../exploring-cases/)
+        * [ Events  ](../exploring-events/)
+        * [ Observations  ](../exploring-observations/)
+        * [ Threats  ](../exploring-threats/)
+        * [ Arsenal  ](../exploring-arsenal/)
+        * [ Techniques  ](../exploring-techniques/)
+        * [ Entities  ](../exploring-entities/)
+        * [ Locations  ](../exploring-locations/)
+      * [ Pivot and investigate  ](../pivoting/)
+    * Create knowledge  Create knowledge 
+      * Automated import  Automated import 
+        * [ Getting started  ](../import/getting-started/)
+        * [ Connectors  ](../import/external-connectors/)
+        * [ Streams  ](../import/internal-streams/)
+        * Feeds  Feeds 
+          * [ TAXII Feed  ](../import/taxii-feed/)
+          * [ TAXII push  ](../import/taxii-push/)
+          * [ RSS Feed  ](../import/rss-feed/)
+          * [ CSV Feed  ](../import/csv-feed/)
+          * [ JSON Feed  ](../import/json-feed/)
+      * [ Import from files  ](../import-files/)
+      * [ Manual creations  ](../manual-creation/)
+      * [ Create via form  ](../form-intake/)
+      * [ Draft workspaces  ](../draftWorkspaces/)
+      * [ Analyst workbench  ](../workbench/)
+    * Enrich knowledge  Enrich knowledge 
+      * [ Inferences and reasoning  ](../inferences/)
+      * [ Enrichment connectors  ](../enrichment/)
+      * [ Merge objects  ](../merging/)
+      * [ Refine content ✨  ](../refine-content/)
+    * Act on knowledge  Act on knowledge 
+      * [ Case management  ](../case-management/)
+      * [ Notifications and alerting  ](../notifications/)
+      * [ Background tasks  ](../background-tasks/)
+      * Dashboards  Dashboards 
+        * [ Custom dashboards  ](../dashboards/)
+        * [ Share custom dashboards  ](../dashboards-share/)
+        * [ Widget creation  ](../widgets/)
+        * [ Tips for widget creation  ](../tips-widget-creation/)
+      * [ Custom views  ](../custom-views/)
+      * [ Workflows and assignation  ](../workflows/)
+      * [ Indicators lifecycle  ](../indicators-lifecycle/)
+      * Playbook automation  Playbook automation 
+        * [ Introduction  ](../playbook-automation/)
+        * [ Playbook creation  ](../playbook-creation/)
+        * [ Playbook components  ](../playbook-components/)
+      * [ Security Coverage  ](../security-coverage/)
+    * [ Delete and restore knowledge  ](../delete-restore/)
+    * Sharing and exports  Sharing and exports 
+      * [ Native feeds  ](../feeds/)
+      * [ Manual export  ](../export/)
+  * Administration  Administration 
+    * [ Introduction  ](../../administration/introduction/)
+    * [ Enterprise edition  ](../../administration/enterprise/)
+    * [ Product life cycle  ](../../administration/product-life-cycle/)
+    * Data management  Data management 
+      * [ Merging and de-duplication  ](../../administration/merging/)
+      * [ CSV Mappers  ](../../administration/csv-mappers/)
+      * [ JSON Mappers  ](../../administration/json-mappers/)
+    * Platform settings  Platform settings 
+      * [ Parameters  ](../../administration/parameters/)
+      * Security  Security 
+        * [ Authentication  ](../../administration/authentication-via-ui/)
+        * [ Policies  ](../../administration/policies/)
+        * Users and RBAC  Users and RBAC 
+          * [ Users and RBAC  ](../../administration/users/)
+          * [ Protect sensitive configuration  ](../../administration/protect-sensitive-configuration/)
+        * Data segregation  Data segregation 
+          * [ Marking restriction  ](../../administration/segregation/)
+          * [ Organization segregation  ](../../administration/organization-segregation/)
+          * [ Authorized members  ](../../administration/authorized-members/)
+          * [ Request access  ](../../administration/request-access/)
+        * [ Dissemination list  ](../../administration/dissemination-list/)
+        * [ Email templates  ](../../administration/email-templates/)
+      * Customization  Customization 
+        * [ Entity types  ](../../administration/entities/)
+        * [ Rules engine  ](../../administration/reasoning/)
+        * Notifiers  Notifiers 
+          * [ Custom notifiers  ](../../administration/notifiers/)
+          * [ Notifier samples  ](../../administration/notifier-samples/)
+          * [ Tips to create notifiers  ](../../administration/tips-to-create-a-custom-notifier/)
+        * [ Retention policies  ](../../administration/retentions/)
+        * Decay rules & Decay Exclusion rules  Decay rules & Decay Exclusion rules 
+          * [ Decay rules  ](../../administration/decay-rules/)
+          * [ Decay exclusion rules  ](../../administration/decay-exclusion-rules/)
+        * [ Fintel designs  ](../../administration/fintel-designs/)
+        * [ Exclusion lists  ](../../administration/exclusion-lists/)
+      * [ Taxonomies  ](../../administration/ontologies/)
+      * Activity  Activity 
+        * [ Overview  ](../../administration/audit/overview/)
+        * [ Events  ](../../administration/audit/events/)
+        * [ Configuration  ](../../administration/audit/configuration/)
+        * [ Activity triggers  ](../../administration/audit/triggers/)
+      * [ File indexing  ](../../administration/file-indexing/)
+      * [ Support package  ](../../administration/support-package/)
+      * [ XTM Hub  ](../../administration/hub/)
+  * Reference  Reference 
+    * Data  Data 
+      * [ Data model  ](../../reference/data-model/)
+      * [ Data processing  ](../../reference/data-processing/)
+      * [ Taxonomy  ](../../reference/taxonomy/)
+      * [ Artificial intelligence  ](../../reference/artificial-intelligence/)
+    * APIs and feeds  APIs and feeds 
+      * [ GraphQL API  ](../../reference/api/)
+      * Filters  Filters 
+        * [ Filters knowledge  ](../../reference/filters/)
+      * [ Data Streaming  ](../../reference/streaming/)
+    * Deployment and stack  Deployment and stack 
+      * [ Usage telemetry  ](../../reference/usage-telemetry/)
+      * [ FIPS 140-2 installation  ](../../reference/fips/)
+  * Development  Development 
+    * Prerequisites  Prerequisites 
+      * [ Ubuntu  ](../../development/environment_ubuntu/)
+      * [ Windows  ](../../development/environment_windows/)
+    * [ Platform  ](../../development/platform/)
+    * [ Python library  ](../../development/python/)
+    * [ Connectors  ](../../development/connectors/)
+    * [ Integration Manager  ](../../development/integration-manager/)
+    * [ Playground  ](../../development/api-usage/)
+
+Table of contents
+
+  * Introduction 
+  * Standard 
+    * The STIX model 
+    * Extensions 
+  * Implementation in the platform 
+    * Diagram of types 
+    * Attributes and properties 
+
+  1. [ Home  ](../..)
+  2. [ User Guide  ](../getting-started/)
+  3. [ Foundations  ](./)
+
+[ ](https://github.com/OpenCTI-
+Platform/opencti/blob/master/docs/docs/usage/data-model.md "Edit this page") [
+](https://github.com/OpenCTI-Platform/opencti/raw/master/docs/docs/usage/data-
+model.md "View source of this page")
+
+# Data model
+
+## Introduction
+
+The OpenCTI core design relies on the concept of a [knowledge
+graph](https://en.wikipedia.org/wiki/Knowledge_graph), where you have two
+different kinds of object:
+
+  1. **Nodes** are used to describe `entities`, which have some `properties` or `attributes`.
+  2. **Edges** are used to describe `relationships`, which are created between two `entity` nodes and have some `properties` or `attributes`.
+
+Example
+
+An example would be that the entity `APT28` has a relationship `uses` to the
+malware entity `Drovorub`.
+
+## Standard
+
+### The STIX model
+
+To enable a unified approach in the description of threat intelligence
+knowledge as well as importing and exporting data, the OpenCTI data model is
+based on the [STIX 2.1 standard](https://docs.oasis-
+open.org/cti/stix/v2.1/stix-v2.1.html). Thus we highly recommend to take a
+look to the [STIX Introductory Walkthrough](https://oasis-open.github.io/cti-
+documentation/stix/walkthrough) and to the [different kinds of STIX
+relationships](https://oasis-open.github.io/cti-
+documentation/examples/visualized-sdo-relationships) to get a better
+understanding of how OpenCTI works.
+
+Some more important STIX naming shortcuts are:
+
+  * **STIX Domain Objects (SDO)** : Attack Patterns, Malware, Threat Actors, etc.
+  * **STIX Cyber Observable (SCO)** : IP Addresses, domain names, hashes, etc.
+  * **STIX Relationship Object (SRO)** : Relationships, Sightings
+
+[![STIX meta model](../assets/stix.png)](../assets/stix.png)
+
+### Extensions
+
+In some cases, the model has been extended to be able to:
+
+  * Support more types of SCOs to modelize information systems such as cryptocurrency wallets, user agents, etc.
+  * Support more types of SDOs to modelize disinformation and cybercrime such as channels, events, narrative, etc.
+  * Support more types of SROs to extend the new SDOs such as`amplifies`, `publishes`, etc.
+
+## Implementation in the platform
+
+### Diagram of types
+
+You can find below the digram of all types of entities and relationships
+available in OpenCTI.
+
+### Attributes and properties
+
+To get a comprehensive list of available properties for a given type of entity
+or relationship, you can use the GraphQL playground schema available in your
+"Profile > Playground". Then you can click on the Documentation button on the
+left. You can for instance search for the keyword `IntrusionSet`:
+
+[![STIX meta model](../assets/schema.png)](../assets/schema.png)
+
+2025-01-17 2023-05-18
+
+[ Previous  Getting started  ](../getting-started/) [ Next  Nested objects
+](../nested/)
+
+© 2026 Filigran. All rights reserved
+
+[ ](https://github.com/OpenCTI-Platform "github.com") [
+](https://blog.filigran.io "blog.filigran.io") [
+](https://community.filigran.io "community.filigran.io") [
+](https://linkedin.com/company/filigran "linkedin.com") [
+](https://twitter.com/FiligranHQ "twitter.com") [
+](https://facebook.com/FiligranHQ "facebook.com")
+

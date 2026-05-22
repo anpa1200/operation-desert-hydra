@@ -1,0 +1,15 @@
+{
+  "number": 64,
+  "title": "OASIS — STIX 2.1 HTML specification",
+  "url": "https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.html",
+  "curl_status": "200 https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.html",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  490k    0  490k    0     0  3799k      0 --:--:-- --:--:-- --:--:-- 3803k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/64-oasis-stix-2-1-html-specification/source.html",
+  "text_file": "docs/source-gathering/raw-sources/64-oasis-stix-2-1-html-specification/source.txt",
+  "size_bytes": 1766902,
+  "extract_error": ""
+}

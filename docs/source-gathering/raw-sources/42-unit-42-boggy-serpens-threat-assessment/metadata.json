@@ -1,0 +1,15 @@
+{
+  "number": 42,
+  "title": "Unit 42 — Boggy Serpens Threat Assessment",
+  "url": "https://unit42.paloaltonetworks.com/boggy-serpens-threat-assessment/",
+  "curl_status": "200 https://unit42.paloaltonetworks.com/boggy-serpens-threat-assessment/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 56747  100 56747    0     0   231k      0 --:--:-- --:--:-- --:--:--  231k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/42-unit-42-boggy-serpens-threat-assessment/source.html",
+  "text_file": "docs/source-gathering/raw-sources/42-unit-42-boggy-serpens-threat-assessment/source.txt",
+  "size_bytes": 303670,
+  "extract_error": ""
+}

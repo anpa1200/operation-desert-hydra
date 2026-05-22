@@ -1,0 +1,15 @@
+{
+  "number": 43,
+  "title": "Hive Pro — MuddyWater: Iran's Adaptive Cyber Espionage Machine",
+  "url": "https://hivepro.com/threat-advisory/muddywater-irans-adaptive-cyber-espionage-machine/",
+  "curl_status": "200 https://hivepro.com/threat-advisory/muddywater-irans-adaptive-cyber-espionage-machine/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  8240    0  8240    0     0  11868      0 --:--:-- --:--:-- --:--:-- 11856\n100 42434    0 42434    0     0  42356      0 --:--:--  0:00:01 --:--:-- 42391",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/43-hive-pro-muddywater-iran-s-adaptive-cyber-espionage-machine/source.html",
+  "text_file": "docs/source-gathering/raw-sources/43-hive-pro-muddywater-iran-s-adaptive-cyber-espionage-machine/source.txt",
+  "size_bytes": 206027,
+  "extract_error": ""
+}

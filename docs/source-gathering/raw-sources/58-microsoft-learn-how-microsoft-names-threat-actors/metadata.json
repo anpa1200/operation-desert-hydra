@@ -1,0 +1,15 @@
+{
+  "number": 58,
+  "title": "Microsoft Learn — How Microsoft names threat actors",
+  "url": "https://learn.microsoft.com/en-us/microsoft-365/security/defender/microsoft-threat-actor-naming?view=o365-worldwide",
+  "curl_status": "200 https://learn.microsoft.com/en-us/unified-secops/microsoft-threat-actor-naming?view=o365-worldwide",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n\n100 93599  100 93599    0     0   338k      0 --:--:-- --:--:-- --:--:--  338k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/58-microsoft-learn-how-microsoft-names-threat-actors/source.html",
+  "text_file": "docs/source-gathering/raw-sources/58-microsoft-learn-how-microsoft-names-threat-actors/source.txt",
+  "size_bytes": 93599,
+  "extract_error": ""
+}

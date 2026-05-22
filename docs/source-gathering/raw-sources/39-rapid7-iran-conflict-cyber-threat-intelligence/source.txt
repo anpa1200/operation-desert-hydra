@@ -1,0 +1,313 @@
+[![Rapid7](/_next/static/media/rapid7-logo.0wr-9470i7grz.svg)](/)
+
+  * Platform
+  * Services
+  * Resources
+  * Partners
+  * Company
+  * 
+
+##
+
+[](/contact/)[](https://insight.rapid7.com/saml/SSO)[Request Demo](/request-
+demo/)
+
+Rapid7 Intelligence & Response
+
+# Cyber Threat Activity Related to the Iran Conflict
+
+Rapid7 is actively monitoring cyber threat activity related to the Iran
+conflict. Review observed activity, official advisories, and recommended
+defensive actions.
+
+[Contact us ](/contact/)
+
+![rapid7-conflict-
+quote.jpeg](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt60d6159abe32c4a8%2F69c4ff05dfb8e06366df9607%2Frapid7-conflict-
+quote.jpeg&w=3840&q=75)
+
+![Author
+image](https://www.rapid7.com/cdn/images/blt2942f856c4bf9453/69c526527e9d07636a28293f/Rapid7-Labs-
+logo-white.svg)
+
+"As cyber threat activity ripples outward from the Iran conflict, Rapid7 is
+working around the clock to translate real-time regional intelligence into
+immediate, actionable protection for our customers worldwide."
+
+## How to protect your organization
+
+![Early-stage detection matters
+most](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fbltcc829a5e0010a69c%2F69aed6d14e5c7e00088ac967%2Fcard-
+digital-risk-protection.jpg&w=3840&q=75)
+
+### Early-stage detection matters most
+
+Campaigns are starting with initial access attempts, such as suspicious login
+activity, password spraying, or exploitation of exposed services. Detect early
+and prevent escalation.
+
+![Have full attack surface
+visibility](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblta93bc2aa099ff38d%2F69aed6e52b01730008d5f021%2Fcard-
+attack-surface-management.jpg&w=3840&q=75)
+
+### Have full attack surface visibility
+
+Correlate telemetry from endpoints, network traffic, identity systems, and
+cloud infrastructure fully to understand attacker behavior rather than relying
+on isolated alerts.
+
+![Reduce dwell time
+](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt00e0fdbce5229a8e%2F6970b39bb7d8668f895a7f05%2FMDR-
+Microsoft-hero-team.jpg&w=3840&q=75)
+
+### Reduce dwell time
+
+Attackers are moving quickly from access to impact. Use automation and well-
+defined workflows to remove the speed advantage by creating faster detection,
+validation, and response.
+
+![Understand expected attacker
+tactics](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt4180d9ccc3a54fb5%2F69aed6f8cb63a70008936e97%2Fcard-
+red-blue-purple-teaming.jpg&w=3840&q=75)
+
+### Understand expected attacker tactics
+
+Iran-linked actors and affiliates rely on well-established techniques, not
+novel exploits. Phishing, credential access, DDoS, and edge-device compromise
+are high in their playbooks.
+
+![Early-stage detection matters
+most](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fbltcc829a5e0010a69c%2F69aed6d14e5c7e00088ac967%2Fcard-
+digital-risk-protection.jpg&w=3840&q=75)
+
+### Early-stage detection matters most
+
+Campaigns are starting with initial access attempts, such as suspicious login
+activity, password spraying, or exploitation of exposed services. Detect early
+and prevent escalation.
+
+![Have full attack surface
+visibility](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblta93bc2aa099ff38d%2F69aed6e52b01730008d5f021%2Fcard-
+attack-surface-management.jpg&w=3840&q=75)
+
+### Have full attack surface visibility
+
+Correlate telemetry from endpoints, network traffic, identity systems, and
+cloud infrastructure fully to understand attacker behavior rather than relying
+on isolated alerts.
+
+![Reduce dwell time
+](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt00e0fdbce5229a8e%2F6970b39bb7d8668f895a7f05%2FMDR-
+Microsoft-hero-team.jpg&w=3840&q=75)
+
+### Reduce dwell time
+
+Attackers are moving quickly from access to impact. Use automation and well-
+defined workflows to remove the speed advantage by creating faster detection,
+validation, and response.
+
+![Understand expected attacker
+tactics](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt4180d9ccc3a54fb5%2F69aed6f8cb63a70008936e97%2Fcard-
+red-blue-purple-teaming.jpg&w=3840&q=75)
+
+### Understand expected attacker tactics
+
+Iran-linked actors and affiliates rely on well-established techniques, not
+novel exploits. Phishing, credential access, DDoS, and edge-device compromise
+are high in their playbooks.
+
+[Contact us ](/contact/)
+
+## Iran cyber conflict hub
+
+Rapid7 is tracking the conflict in Iran; providing support for our customers
+and the cybersecurity community. These publications look at the conflict’s
+cybersecurity implications from various angles and will be updated as new
+information is obtained.
+
+[![Muddying the Tracks: The State-Sponsored Shadow Behind Chaos
+Ransomware](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt4180d9ccc3a54fb5%2F69aed6f8cb63a70008936e97%2Fcard-
+red-blue-purple-teaming.jpg&w=3840&q=75)Blog postMuddying the Tracks: The
+State-Sponsored Shadow Behind Chaos RansomwareRapid7’s report finds that a
+likely Iranian state-sponsored group disguised its espionage operations as
+Chaos ransomware activity to obscure attribution and blend in with
+cybercriminal noise.Read blog](/blog/post/tr-muddying-tracks-state-sponsored-
+shadow-behind-chaos-ransomware/)[![Rapid7 detection coverage for Iran-linked
+cyber
+activity](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fbltebc2810157aecfaf%2F68af2715c53b04810df94abb%2Fblog-
+hero-generic-pixel.jpg&w=3840&q=75)BLOG POSTRapid7 detection coverage for
+Iran-linked cyber activityIran-linked cyber activity is blending disruption,
+espionage, and noisy hacktivism. Rapid7 is tracking campaigns, threat hunting,
+and updating detections to help organizations stay ahead.Read
+blog](/blog/post/tr-detection-coverage-iran-linked-cyber-activity/)[![Iran’s
+cyber playbook in the escalating regional
+conflict](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt0fb12b2dce179ff5%2F69c5238a980dc766169ea32c%2Fcard-
+alert-hologram-hero.jpeg&w=3840&q=75)BLOG POSTIran’s cyber playbook in the
+escalating regional conflictIran is using state-linked APT groups, proxy
+actors, and loosely affiliated hacktivist collectives with a focus on both
+visible disruption and less visible strategic positioning.Read
+blog](/blog/post/tr-iran-cyber-playbook-escalating-regional-
+conflict/)[![Iran’s cyber playbook
+webinar](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt6dda4525c6da4754%2F67f0fbfd7c35f20945998bb8%2Fwebcast-
+default.jpg&w=3840&q=75)On-demand webinarIran’s cyber playbook webinarA Rapid7
+expert explains the macro cyber threat landscape, outlines and summarizes
+Rapid7’s detection and enrichment coverage, and provides actionable steps to
+ensure protection.Watch now
+](https://www.brighttalk.com/webcast/10457/664846?utm_source=brighttalk&utm_medium=website&utm_content=irans-
+cyber-playbook&utm_campaign=global-idr-q1-2026-global-webinar-prospect-eng)
+
+[![Muddying the Tracks: The State-Sponsored Shadow Behind Chaos
+Ransomware](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt4180d9ccc3a54fb5%2F69aed6f8cb63a70008936e97%2Fcard-
+red-blue-purple-teaming.jpg&w=3840&q=75)Blog postMuddying the Tracks: The
+State-Sponsored Shadow Behind Chaos RansomwareRapid7’s report finds that a
+likely Iranian state-sponsored group disguised its espionage operations as
+Chaos ransomware activity to obscure attribution and blend in with
+cybercriminal noise.Read blog](/blog/post/tr-muddying-tracks-state-sponsored-
+shadow-behind-chaos-ransomware/)
+
+[![Rapid7 detection coverage for Iran-linked cyber
+activity](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fbltebc2810157aecfaf%2F68af2715c53b04810df94abb%2Fblog-
+hero-generic-pixel.jpg&w=3840&q=75)BLOG POSTRapid7 detection coverage for
+Iran-linked cyber activityIran-linked cyber activity is blending disruption,
+espionage, and noisy hacktivism. Rapid7 is tracking campaigns, threat hunting,
+and updating detections to help organizations stay ahead.Read
+blog](/blog/post/tr-detection-coverage-iran-linked-cyber-activity/)
+
+[![Iran’s cyber playbook in the escalating regional
+conflict](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt0fb12b2dce179ff5%2F69c5238a980dc766169ea32c%2Fcard-
+alert-hologram-hero.jpeg&w=3840&q=75)BLOG POSTIran’s cyber playbook in the
+escalating regional conflictIran is using state-linked APT groups, proxy
+actors, and loosely affiliated hacktivist collectives with a focus on both
+visible disruption and less visible strategic positioning.Read
+blog](/blog/post/tr-iran-cyber-playbook-escalating-regional-conflict/)
+
+[![Iran’s cyber playbook
+webinar](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fblt6dda4525c6da4754%2F67f0fbfd7c35f20945998bb8%2Fwebcast-
+default.jpg&w=3840&q=75)On-demand webinarIran’s cyber playbook webinarA Rapid7
+expert explains the macro cyber threat landscape, outlines and summarizes
+Rapid7’s detection and enrichment coverage, and provides actionable steps to
+ensure protection.Watch now
+](https://www.brighttalk.com/webcast/10457/664846?utm_source=brighttalk&utm_medium=website&utm_content=irans-
+cyber-playbook&utm_campaign=global-idr-q1-2026-global-webinar-prospect-eng)
+
+We can help
+
+## The Rapid7 incident response hotline is available 24/7
+
+In the event that your organization has been impacted or suspected to have
+been impacted by Iran-linked cyber attacks, Rapid7 is here to help.  
+Contact us or call our response team at [1-844-RAPID-IR](tel:1-844-RAPID-IR).
+
+[Contact us ](/contact/)
+
+![banner-connect-
+support.jpg](/_next/image/?url=https%3A%2F%2Fwww.rapid7.com%2Fcdn%2Fimages%2Fbltdc2af3ac3b37cdc3%2F67f4e048a306cb0ebf2d6cd4%2Fbanner-
+connect-support.jpg&w=3840&q=75)
+
+## FAQ
+
+###
+
+### What cyber threats are linked to the Iran conflict?
+
+###
+
+### Are U.S. organizations being targeted?
+
+###
+
+### How can organizations reduce risk?
+
+###
+
+### How is Rapid7 monitoring this activity?
+
+[Contact us ](/contact/)
+
+[![Rapid7](https://www.rapid7.com/cdn/images/blt3da7d9f2fa8a488c/6724caccac1d71e009a67c69/Rapid7_logo.svg)](https://www.rapid7.com/)
+
+### Get Started
+
+[Command Platform](/platform/)
+
+[Exposure Management](/products/command/exposure-management/)
+
+[MDR Services](/services/managed-detection-and-response-mdr/)
+
+### Take Action
+
+[Start a Free Trial](/products/command/attack-surface-management-asm/trial/)
+
+[Take a Product Tour](/product-tours/)
+
+[Get Breach Support](/services/incident-response/)
+
+[Contact Sales](/contact/)
+
+### Company
+
+  * [About Us](/about/)
+
+  * [Leadership](/about/leadership/)
+
+  * [Newsroom](/about/news/)
+
+  * [Our Customers](/customers/)
+
+  * [Partner Programs](/partners/)
+
+  * [Investors](https://investors.rapid7.com/)
+
+  * [Careers](https://careers.rapid7.com/)
+
+### Stay Informed
+
+  * [Blog](https://www.rapid7.com/blog/)
+
+  * [Emergent Threat Response](https://www.rapid7.com/blog/tag/emergent-threat-response/)
+
+  * [Webinars & Events](/about/events-webcasts/)
+
+  * [Rapid7 Labs Research](/research/)
+
+  * [Vulnerability Database](/db/)
+
+  * [Security Fundamentals](/fundamentals/)
+
+### For Customers
+
+  * [Sign In](https://insight.rapid7.com/saml/SSO)
+
+  * [Support Portal](/for-customers/)
+
+  * [Product Documentation](https://docs.rapid7.com/)
+
+  * [Extension Library](https://extensions.rapid7.com/)
+
+  * [Rapid7 Academy](https://academy.rapid7.com/)
+
+  * [Customer Escalation Portal](https://information.rapid7.com/Customer-Escalation.html)
+
+### Contact Support
+
+  * [+1-866-390-8113](tel:+1-866-390-8113)
+
+### Follow Us
+
+[![LinkedIn icon](/icons/footer/icon-
+linkedin.svg)LinkedIn](https://www.linkedin.com/company/39624)[![X \(Twitter\)
+icon](/icons/footer/icon-twitter.svg)X
+(Twitter)](https://twitter.com/Rapid7)[![Facebook icon](/icons/footer/icon-
+facebook.svg)Facebook](https://www.facebook.com/rapid7)[![Instagram
+icon](/icons/footer/icon-
+instagram.svg)Instagram](https://www.instagram.com/rapid7/)[![Bluesky
+icon](/icons/footer/icon-
+bluesky.svg)Bluesky](https://bsky.app/profile/rapid7.com)
+
+© Rapid7
+
+[Legal Terms](/legal/)[Privacy Policy](/privacy-policy/)[Export
+Notice](/export-notice/)[Trust](/trust/)[Cookie List](/cookie-
+list/)[Accessibility Statement](https://www.rapid7.com/legal/website-
+accessibility-statement/)
+

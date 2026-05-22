@@ -1,0 +1,15 @@
+{
+  "number": 67,
+  "title": "STIXnet — Extracting STIX Objects in CTI Reports",
+  "url": "https://arxiv.org/abs/2303.09999",
+  "curl_status": "200 https://arxiv.org/abs/2303.09999",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 48986  100 48986    0     0   170k      0 --:--:-- --:--:-- --:--:--  170k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/67-stixnet-extracting-stix-objects-in-cti-reports/source.html",
+  "text_file": "docs/source-gathering/raw-sources/67-stixnet-extracting-stix-objects-in-cti-reports/source.txt",
+  "size_bytes": 48986,
+  "extract_error": ""
+}

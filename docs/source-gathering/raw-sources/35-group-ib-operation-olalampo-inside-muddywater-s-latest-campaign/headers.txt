@@ -1,0 +1,24 @@
+HTTP/2 200 
+date: Fri, 22 May 2026 06:34:18 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: X-Forwarded-Proto,Accept-Encoding
+x-powered-by: PHP/8.2.30
+last-modified: Thu, 21 May 2026 08:02:08 GMT
+cache-control: max-age=0,private, max-age=3600
+expires: Fri, 22 May 2026 06:34:18 GMT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=JH8MzuKuLsdUT6n7wzqlzloNdxyIxiyZdMHh9EkAceBGpIjyu9PRfgz6RTofqKZDeI8EK%2FzoWTKLPeqTq3E%2FLNJWWJwYQh8xn8f8GueQ%2BuhQlNCUjcDVdExMlUwG4fmxjzI%3D"}]}
+access-control-allow-origin: https://www.group-ib.com
+strict-transport-security: max-age=15552000; preload
+content-security-policy: frame-ancestors 'self';
+x-frame-options: sameorigin
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+referrer-policy: strict-origin-when-cross-origin
+permissions-policy: accelerometer=(),autoplay=(),camera=(),encrypted-media=(),fullscreen=*,geolocation=(),gyroscope=(),magnetometer=(),microphone=(),midi=(),payment=(),sync-xhr=(),usb=(),xr-spatial-tracking=()
+x-envoy-upstream-service-time: 20
+cf-cache-status: DYNAMIC
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+content-encoding: br
+cf-ray: 9ff9cb58f9714476-TLV
+

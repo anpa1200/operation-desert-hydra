@@ -1,0 +1,15 @@
+{
+  "number": 17,
+  "title": "Israel National Cyber Directorate — MuddyWater / DarkBit PDF",
+  "url": "https://www.gov.il/BlobFolder/news/_muddywater/en/government%20threat%20actor.pdf",
+  "curl_status": "200 https://www.gov.il/BlobFolder/news/_muddywater/en/government%20threat%20actor.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  310k  100  310k    0     0  3424k      0 --:--:-- --:--:-- --:--:-- 3449k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/17-israel-national-cyber-directorate-muddywater-darkbit-pdf/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/17-israel-national-cyber-directorate-muddywater-darkbit-pdf/source.txt",
+  "size_bytes": 317905,
+  "extract_error": ""
+}

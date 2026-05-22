@@ -1,0 +1,948 @@
+#### [NEWExtraHop named a leader in the Gartner® Magic Quadrant™ for Network
+Detection and Response ](/experience/2026-gartner-mq)
+
+[![ExtraHop Logo](https://extrahop-cloud-assets.s3.us-
+west-2.amazonaws.com/logos/logor-header.svg)](/)
+
+  * [Platform](/platform)
+  * [Solutions](/solutions)
+  * [Modern NDR](/modern-ndr)
+  * [Resources](/resources)
+  * [Company](/about)
+
+[ExtraHop’s Modern NDR Platform](/platform)
+
+[Security![icon for Network Detection & Response](https://cloud-
+assets.extrahop.com/icons/2025-redesign/network-detection.svg)Network
+Detection & Response](/products/security/)
+
+[Performance![icon for Network Performance Monitoring](https://cloud-
+assets.extrahop.com/icons/2025-redesign/network-protection.svg)Network
+Performance Monitoring](/products/performance)
+
+Modules
+
+#### [![icon for Intrusion Detection](https://cloud-
+assets.extrahop.com/icons/2025-redesign/lock.svg)Intrusion
+Detection](/solutions/ids)
+
+#### [![icon for Packet Forensics](https://cloud-
+assets.extrahop.com/icons/2025-redesign/magnifying-glass.svg)Packet
+Forensics](/solutions/forensics)
+
+[![Modern NDR](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fwebsite%2Fgeneral%2Flaptop-
+UIoverview.png&w=828&q=75)FEATUREModern NDRLearn How NDR is critical to
+securing today’s modern infrastructure. ](/modern-ndr)
+
+#### Key Use Cases
+
+[Agentic SOC](/use-cases/agenticsoc)[Threat Detection & Response](/use-
+cases/threat-detection-and-response)[Threat Hunting](/use-cases/advanced-
+threat-hunting)[SOC Modernization](/solutions/initiatives/soc-
+modernization)[Incident Response & Investigation](/use-cases/network-
+forensics-and-investigations)[Performance Monitoring](/solutions#performance-
+cases)
+
+##### [View All Use Cases![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/cyan-right.svg)](/solutions#use-cases)
+
+#### Industries
+
+[Education](/solutions/industry/education)[Defense and
+Intelligence](/solutions/industry/defense-and-intel)[Financial
+Services](/solutions/industry/financial)[Healthcare](/solutions/industry/healthcare)[Public
+Sector](/solutions/industry/public-sector)[Retail](/solutions/industry/retail)
+
+##### [View All Industries![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/cyan-right.svg)](/solutions#industries)
+
+#### Integrations
+
+[Cloud Service Provider](/partners/integrations#cloud-
+service)[EDR](/partners/integrations#edr)[SASE](/partners/integrations#sase)[SIEM](/partners/integrations#siem)[SOAR](/partners/integrations#soar)[Ticketing](/partners/integrations#ticketing)
+
+##### [View All Integrations![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/cyan-right.svg)](/partners/integrations)
+
+[![Build Your Agentic SOC](/_next/image?url=https%3A%2F%2Fextrahop-cloud-
+assets.s3.us-west-2.amazonaws.com%2Fuse-cases%2Fagentic-soc-homepage-
+hero-522x380.jpg&w=828&q=75)FeatureBuild Your Agentic SOCReal-time context for
+accurate, defensible machine-speed decisions](/use-cases/agenticsoc)
+
+##### [Professional Services![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/sapphire-right.svg)](/professional-services)
+
+##### [Education Services![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/sapphire-right.svg)](/professional-
+services/live-training)
+
+##### [Partners![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/sapphire-right.svg)](/partners)
+
+##### [Partner Login![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/sapphire-
+right.svg)](https://partner.extrahop.com/s/login/?ec=302&startURL=%2Fs%2F)
+
+##### [Partner Finder![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/sapphire-right.svg)](/partners/locator)
+
+Directory
+
+#### [Resource Center](/resources)
+
+#### [Threat Insights](/resources/threat-insights)
+
+#### [Detections Catalog](/resources/detections)
+
+#### [Customer Stories](/customer-stories)
+
+#### [Customer Support](/customer-support)
+
+#### [Blog](/blog)
+
+[![ExtraHop is a Leader](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fresources%2Freports%2F2026gartnermq-
+feature-522x380.jpg&w=828&q=75)REPORTExtraHop is a LeaderSee why ExtraHop is a
+leader in the 2026 Gartner® Magic Quadrant™ for Network Detection &
+Response](/experience/2026-gartner-mq)
+
+[![The Agentic SOC Blueprint](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fresources%2Febooks%2Fthumbnail-the-agentic-soc-
+blueprint-ebook.jpg&w=828&q=75)FEATUREThe Agentic SOC BlueprintHigh-fidelity
+telemetry for autonomous decision-making.](/resources/papers/the-agentic-soc-
+blueprint-a-data-first-revolution)
+
+ABOUT US
+
+#### [Our Story](/about)
+
+#### [Leadership](/leadership)
+
+#### [Industry Recognition](/experience/2025-gartner-mq)
+
+#### [Careers](/careers)
+
+#### [Newsroom](/news)
+
+Events
+
+#### [In-Person Events](/events#in-person)
+
+#### [Virtual Events](/events#virtual)
+
+[![ExtraHop is a Leader](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fwebsite%2Fgeneral%2Fforrester-feature-
+card.jpg&w=828&q=75)FeatureExtraHop is a LeaderRead The Forrester Wave™:
+Network Analysis And Visibility Solutions, Q4
+2025](/experience/2025-forrester-wave)
+
+[![New: IDC Spotlight](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fwebsite%2Fgeneral%2Fblog-IDCreport-lateralmovement-
+extrahop-522x380.jpg&w=828&q=75)FEATURENew: IDC SpotlightDiscover strategies
+to detect lateral movement and how ExtraHop's RevealX is the right
+approach.](/experience/2025-idc-spotlight-lateral-movement)
+
+![Search](https://cloud-assets.extrahop.com/website/icons/search.svg)
+
+![Search Button](https://cloud-
+assets.extrahop.com/icons/2025-redesign/search.svg)
+
+[Get a Demo](/demo)
+
+[![User icon](https://cloud-
+assets.extrahop.com/icons/2025-redesign/user.svg)Sign
+In](https://customer.extrahop.com/s/)
+
+[Contact Us](/contact)
+
+[Get a Demo](/demo)
+
+![Menu icon](https://cloud-assets.extrahop.com/icons/site-nav/menu.svg)![X
+icon](https://cloud-assets.extrahop.com/icons/site-nav/x.svg)
+
+  * Platform![chevron right](https://cloud-assets.extrahop.com/icons/chevrons/right-cyan.svg)
+  * Solutions![chevron right](https://cloud-assets.extrahop.com/icons/chevrons/right-cyan.svg)
+  * Modern NDR![chevron right](https://cloud-assets.extrahop.com/icons/chevrons/right-cyan.svg)
+  * Resources![chevron right](https://cloud-assets.extrahop.com/icons/chevrons/right-cyan.svg)
+  * Company![chevron right](https://cloud-assets.extrahop.com/icons/chevrons/right-cyan.svg)
+
+[![User icon](https://cloud-
+assets.extrahop.com/icons/2025-redesign/user.svg)Sign
+In](https://customer.extrahop.com/s/)
+
+[Contact Us](/contact)
+
+Platform
+
+![arrow left](https://cloud-assets.extrahop.com/icons/arrows/tangerine-
+left.svg)
+
+[ExtraHop’s Modern NDR Platform](/platform)
+
+[Security![icon for Network Detection & Response](https://cloud-
+assets.extrahop.com/icons/2025-redesign/network-detection.svg)Network
+Detection & Response](/products/security/)
+
+[Performance![icon for Network Performance Monitoring](https://cloud-
+assets.extrahop.com/icons/2025-redesign/network-protection.svg)Network
+Performance Monitoring](/products/performance)
+
+Modules
+
+[![icon for Intrusion Detection](https://cloud-
+assets.extrahop.com/icons/2025-redesign/lock.svg)Intrusion
+Detection](/solutions/ids)
+
+[![icon for Packet Forensics](https://cloud-
+assets.extrahop.com/icons/2025-redesign/magnifying-glass.svg)Packet
+Forensics](/solutions/forensics)
+
+[![Modern NDR](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fwebsite%2Fgeneral%2Flaptop-
+UIoverview.png&w=828&q=75)FEATUREModern NDRLearn How NDR is critical to
+securing today’s modern infrastructure. ](/modern-ndr)
+
+Solutions
+
+![arrow left](https://cloud-assets.extrahop.com/icons/arrows/tangerine-
+left.svg)
+
+[Overview](/solutions)
+
+#### Key Use Cases
+
+[Agentic SOC](/use-cases/agenticsoc)[Threat Detection & Response](/use-
+cases/threat-detection-and-response)[Threat Hunting](/use-cases/advanced-
+threat-hunting)[SOC Modernization](/solutions/initiatives/soc-
+modernization)[Incident Response & Investigation](/use-cases/network-
+forensics-and-investigations)[Performance Monitoring](/solutions#performance-
+cases)
+
+##### [View All Use Cases![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/cyan-right.svg)](/solutions#use-cases)
+
+#### Industries
+
+[Education](/solutions/industry/education)[Defense and
+Intelligence](/solutions/industry/defense-and-intel)[Financial
+Services](/solutions/industry/financial)[Healthcare](/solutions/industry/healthcare)[Public
+Sector](/solutions/industry/public-sector)[Retail](/solutions/industry/retail)
+
+##### [View All Industries![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/cyan-right.svg)](/solutions#industries)
+
+#### Integrations
+
+[Cloud Service Provider](/partners/integrations#cloud-
+service)[EDR](/partners/integrations#edr)[SASE](/partners/integrations#sase)[SIEM](/partners/integrations#siem)[SOAR](/partners/integrations#soar)[Ticketing](/partners/integrations#ticketing)
+
+##### [View All Integrations![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/cyan-right.svg)](/partners/integrations)
+
+[![Build Your Agentic SOC](/_next/image?url=https%3A%2F%2Fextrahop-cloud-
+assets.s3.us-west-2.amazonaws.com%2Fuse-cases%2Fagentic-soc-homepage-
+hero-522x380.jpg&w=828&q=75)FeatureBuild Your Agentic SOCReal-time context for
+accurate, defensible machine-speed decisions](/use-cases/agenticsoc)
+
+##### [Professional Services![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/sapphire-right.svg)](/professional-services)
+
+##### [Education Services![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/sapphire-right.svg)](/professional-
+services/live-training)
+
+##### [Partners![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/sapphire-right.svg)](/partners)
+
+##### [Partner Login![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/sapphire-
+right.svg)](https://partner.extrahop.com/s/login/?ec=302&startURL=%2Fs%2F)
+
+##### [Partner Finder![Arrow pointing right](https://cloud-
+assets.extrahop.com/icons/arrows/sapphire-right.svg)](/partners/locator)
+
+Modern NDR
+
+![arrow left](https://cloud-assets.extrahop.com/icons/arrows/tangerine-
+left.svg)
+
+Resources
+
+![arrow left](https://cloud-assets.extrahop.com/icons/arrows/tangerine-
+left.svg)
+
+[Overview](/resources)
+
+Directory
+
+[Resource Center](/resources)
+
+[Threat Insights](/resources/threat-insights)
+
+[Detections Catalog](/resources/detections)
+
+[Customer Stories](/customer-stories)
+
+[Customer Support](/customer-support)
+
+[Blog](/blog)
+
+[![ExtraHop is a Leader](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fresources%2Freports%2F2026gartnermq-
+feature-522x380.jpg&w=828&q=75)REPORTExtraHop is a LeaderSee why ExtraHop is a
+leader in the 2026 Gartner® Magic Quadrant™ for Network Detection &
+Response](/experience/2026-gartner-mq)
+
+[![The Agentic SOC Blueprint](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fresources%2Febooks%2Fthumbnail-the-agentic-soc-
+blueprint-ebook.jpg&w=828&q=75)FEATUREThe Agentic SOC BlueprintHigh-fidelity
+telemetry for autonomous decision-making.](/resources/papers/the-agentic-soc-
+blueprint-a-data-first-revolution)
+
+Company
+
+![arrow left](https://cloud-assets.extrahop.com/icons/arrows/tangerine-
+left.svg)
+
+[Overview](/about)
+
+ABOUT US
+
+[Our Story](/about)
+
+[Leadership](/leadership)
+
+[Industry Recognition](/experience/2025-gartner-mq)
+
+[Careers](/careers)
+
+[Newsroom](/news)
+
+Events
+
+[In-Person Events](/events#in-person)
+
+[Virtual Events](/events#virtual)
+
+[![ExtraHop is a Leader](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fwebsite%2Fgeneral%2Fforrester-feature-
+card.jpg&w=828&q=75)FeatureExtraHop is a LeaderRead The Forrester Wave™:
+Network Analysis And Visibility Solutions, Q4
+2025](/experience/2025-forrester-wave)
+
+[![New: IDC Spotlight](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fwebsite%2Fgeneral%2Fblog-IDCreport-lateralmovement-
+extrahop-522x380.jpg&w=828&q=75)FEATURENew: IDC SpotlightDiscover strategies
+to detect lateral movement and how ExtraHop's RevealX is the right
+approach.](/experience/2025-idc-spotlight-lateral-movement)
+
+The Digital Front of Iranian Cyber Offensive Response
+
+![Share blog icon](https://cloud-assets.extrahop.com/icons/circle-share-
+icon.svg)
+
+Back to top
+
+![Back to top](https://cloud-assets.extrahop.com/icons/arrow-up-tangerine.svg)
+
+![blog image](/_next/image?url=https%3A%2F%2Fextrahop-cloud-assets.s3.us-
+west-2.amazonaws.com%2Fblog%2F0323-blog-iranian-cyber-
+response-522x380.jpg&w=1200&q=75)
+
+March 9, 2026
+
+# The Digital Front of Iranian Cyber Offensive Response
+
+Beginning on February 28, 2026, the simultaneous launch of Operation Epic
+Fury, by the United States, and Operation Roaring Lion, by the State of
+Israel, marked a peak in the integration of kinetic warfare and cyber
+operations. This coordinated military campaign, which resulted in the
+elimination of senior Iranian leadership, triggered an immediate and
+multifaceted retaliatory response in the digital domain. Despite a near-total
+internet blackout that saw Iran's national connectivity drop to between 1% and
+4%, state-aligned Advanced Persistent Threat (APT) actors and their cyber
+proxy ecosystem may still be conducting operations with tactical autonomy and
+in isolation.
+
+Amidst the systemic internal instability following the December 2025 uprising
+in Iran and the subsequent U.S.-Israeli military operations, Iran’s cyber
+threat landscape can be viewed as a 'triple-threat' model: a surge in state-
+sponsored espionage targeting dissent, destructive yet deniable hacktivism,
+and the integration of AI-accelerated malware into its asymmetric toolkit.
+Iranian actors have increasingly adopted a hybrid model that blurs the lines
+between state-sponsored intelligence collection and criminalized extortion.
+The shift complicates attribution while maximizing psychological and economic
+impact on Western and Gulf targets.
+
+This analysis examines tactics, techniques, and procedures (TTPs) and
+detection strategies for the most prominent Iranian-associated cyber threats
+active since December 2025, providing security practitioners with the
+necessary context to defend against these threats.
+
+### Decentralization and AI Operationalization
+
+The Iranian and pro-Iran cyber offensive in early 2026 functions as a
+sophisticated hybrid operation, rather than a series of isolated incidents.
+Security researchers are observing a consistent pattern where digital strikes
+are in lockstep with kinetic events, serving as a force multiplier for
+psychological messaging and physical disruption. Additionally, the formation
+of the #OpIsrael campaign, uniting pro-Iranian and pro-Russian hacktivists,
+demonstrates an expanded threat landscape. By aligning their efforts against
+mutual adversaries, these groups have moved beyond individual national
+interests to form a more unified, globalized front.
+
+The attack lifecycle has been fundamentally reshaped by the integration of
+generative AI (GenAI). For example, actors within the Iranian government-
+backed clusters, such as MuddyWater and APT42, have advanced their techniques.
+Instead of investing time in manual victim profiling and custom code
+development, these actors are increasingly leveraging Large Language Models
+(LLMs). This shift allows them to rapidly generate high-fidelity social
+engineering content, execute reconnaissance more effectively, and even create
+malicious code "just-in-time." This technological leap has allowed Iranian
+actors to accelerate their operations while reducing the technical barriers
+and costs associated with developing proprietary tools from scratch.
+
+### MuddyWater and the Genesis of Operation Olalampo
+
+**Aliases:** _APT33, Static Kitten, Mango Sandstorm, Seedworm_
+
+MuddyWater, a prolific threat actor group linked to Iran's Ministry of
+Intelligence and Security (MOIS), serves as the primary arm for regional
+espionage and disruptive campaigns. Since 2017, the group has refined its
+tradecraft, moving from basic script-based attacks to a sophisticated, modular
+approach. On January 26, 2026, MuddyWater initiated "Operation Olalampo," a
+campaign targeting organizations across the Middle East, North Africa (MENA),
+and eventually Western defense contractors.
+
+Operation Olalampo is technically significant not only for its geographic
+reach but also for the introduction of four new malware families: **CHAR**
+,**GhostBackDoor** ,**GhostFetch** , and **HTTP_VIP**. These tools demonstrate
+a transition toward memory-safe languages like Rust and provide evidence of
+GenAI involvement in Iranian malware development. This AI-assisted approach
+enables MuddyWater to rapidly iterate on custom tooling, creating polymorphic
+variations that evade traditional signature-based security products.
+
+In early February 2026, MuddyWater was found to have compromised several
+targets, including a U.S. financial institution, a U.S. Airport, and NGOs.
+They also targeted an Israeli branch of a U.S. software company that provides
+services to the defense and aerospace industries. The attacks involved the use
+of two new malwares: Dindoor and Fakeset. Given the timing of these
+compromises, it’s probable that follow-on cyber attacks may occur against
+these victims as a response to the U.S. and Israeli airstrikes.
+
+#### **The Rust-Based CHAR Backdoor**
+
+The **CHAR** backdoor is developed in Rust and is designed to provide
+operators with a highly functional remote shell while maintaining a low
+footprint on the host. The choice of Rust is likely a deliberate attempt to
+bypass EDR solutions that are more accustomed to C++ or C# malware signatures.
+Group-IB’s analysis of **CHAR** showed signs of AI-enhanced development, with
+the identification of debug strings containing emojis, a trait that human-
+authored code does not typically exhibit.
+
+The initial access vector for **CHAR** typically involves spear-phishing
+emails containing a malicious Microsoft Excel document. Once the user enables
+macros, a **Workbook_Open** event triggers a macro that decodes a payload
+stored in a hidden UI element (e.g., **UserForm1.TextBox1.Text**) and drops
+the binary to **C:\Users\Public\Downloads\novaservice.exe** , which initiates
+communication with a C2 server via the Telegram Bot API.
+
+The use of Telegram as a C2 channel is a hallmark of modern Iranian
+operations, as it leverages a legitimate, encrypted platform to blend
+malicious traffic with normal network traffic. **CHAR** facilitates the
+deployment of additional tools, such as the **FMAPP.dll** injector, which
+establishes a SOCKS5 reverse proxy. This proxy allows MuddyWater to tunnel
+network traffic through the infected host, enabling deep lateral movement
+within the target environment while evading perimeter firewalls.
+
+#### **GhostFetch and In-Memory Execution**
+
+Complementing the**CHAR** backdoor is**GhostFetch** , a first-stage downloader
+that prioritizes anti-analysis and stealth. Upon execution, **GhostFetch**
+conducts a comprehensive system profile to ensure it is not running in a
+sandbox or automated analysis environment. It does this by validating mouse
+movement and screen resolution and scanning for VM artifacts, debuggers, and
+antivirus software presence.
+
+If the environment is deemed safe,**GhostFetch** downloads secondary payloads,
+such as the **GhostBackDoor** implant, and executes them directly in memory.
+This technique, often called “reflective loading,” bypasses file-on-disk
+scanning and significantly complicates forensic investigations.
+**GhostBackDoor** itself is a secondary implant that supports interactive
+shell operations and file read/write capabilities, allowing attackers to
+manually navigate the victim's file system and stage data for exfiltration.
+
+#### **HTTP_VIP**
+
+**HTTP_VIP** is a custom downloader tool developed by MuddyWater to aid
+further exploitation. The malware has a selective execution flow that begins
+with performing system reconnaissance, checking specifically for a hard-coded
+domain, and terminating if the system belongs to it. The domain checked is
+believed to be a honeypot that the attacker intentionally avoids. If the
+system does not belong to the domain, it performs C2 authentication to then
+download and deploy Anydesk remote monitoring and management (RMM), taking
+over the compromised machine.
+
+#### **DinDoor and FakeSet**
+
+**Dindoor** functions as a backdoor that leverages Deno, a secure runtime
+environment for JavaScript and TypeScript, to execute its payload. This
+backdoor is digitally signed with a certificate issued to **“Amy Cherne**.”
+The actors also leveraged the **Rclone** utility, in an attempt to exfiltrate
+data to a Wasabi cloud storage bucket. There has not been confirmation if the
+attempt was successful.
+
+The **Fakeset** backdoor, a Python-based malware, utilizing signed
+certificates registered to "**Amy Cherne** " and "**Donald Gay**." Notably,
+the certificate associated with “**Donald Gay** ” has been observed in
+previous campaigns linked to the MuddyWater threat group.
+
+#### **Detection and Hunting Strategies**
+
+Detecting the sophisticated, AI-enhanced tools of MuddyWater requires a multi-
+layered approach that integrates network visibility with behavioral
+monitoring.
+
+  * **NDR Analysis:** NDR platforms like ExtraHop RevealX are critical for identifying the encrypted C2 traffic used by CHAR and GhostFetch. Because these tools use TLS-encrypted communications to legitimate domains like api.telegram.org or malicious ones like codefusiontech[.]org, simple packet filtering is insufficient. Modern NDR platforms utilize JA4 hashing to identify and monitor anomalous beaconing patterns.
+  * **IDS Signatures:** IDS solutions can flag specific URI structures used by the HTTP_VIP custom Python C2 server. Even if the payload is encrypted, the initial connection patterns and the deployment of AnyDesk remote management tools often generate high-fidelity alerts.
+
+**Threat Hunting:** Security teams should hunt for unusual PowerShell or
+cmd.exe activity originating from Office processes. Specifically, looking for
+the execution of a SOCKS5 reverse proxy or the creation of service
+**MicrosoftVersionUpdater** can help identify active GhostBackDoor infections.
+Monitoring for DNS requests to **whatsapp-meeting.duckdns[.]org** or the use
+of**FMAPP.dll** in temp directories is also recommended. NDR solutions like
+RevealX can decrypt Windows protocols such as WMI, WSMan, SMB and RPC to
+detect service creation, files transfers, and Powershell commands, including
+in-memory execution obfuscated commands.
+
+Table 1: MuddyWaters TTPs Mapped to ExtraHop NDR Capabilities
+
+Loading table...
+
+### Cotton Sandstorm
+
+**Aliases:**_Haywire Kitten_
+
+On March 1, 2026, the IRGC-affiliated group Cotton Sandstorm reactivated its
+"Altoufan Team" persona, which had been dormant for over a year. The group
+claims to have successfully breached multiple websites belonging to U.S.
+military-associated entities located in Bahrain. This persona is specifically
+used for fast-reaction disruptive campaigns that synchronize with regional
+geopolitical events.
+
+#### **TTPs: WezRat and WhiteLock Ransomware**
+
+Cotton Sandstorm’s current toolset centers on **WezRat** , a custom modular
+infostealer delivered via spear-phishing and masquerading as urgent software
+updates. In some cases, the group follows an initial intrusion by deploying
+WhiteLock ransomware, primarily targeting Israeli and Bahraini entities.
+
+A unique aspect of Cotton Sandstorm’s TTPs is their focus on influence
+operations. The group has gained unauthorized access to US-based IPTV
+streaming companies to broadcast AI-delivered war messages, primarily
+impacting the United Arab Emirates and Bahrain. This demonstrates their
+capability to hijack civilian digital infrastructure for state propaganda.
+
+#### **Detection and Hunting Strategies**
+
+  * **NDR Analysis:** Monitor and triage traffic associated with common commercial VPN exit nodes (e.g. Mullvad, NordVPN, and ProtonVPN), as Cotton Sandstorm routinely uses these to mask their origins. Review any unusual outbound data transfers that may indicate exfiltration by WezRat.
+  * **IDS Signatures:** Write signatures to detect Cotton Sandstorm’s spearphishing delivery patterns. Monitor for detectable host and network artifacts to detect **WezRat’s** capabilities such as command execution and file uploads.
+  * **Threat Hunting:** Security teams should hunt for logins from new countries or devices, as Iranian APT groups often log in from VPNs. Proactively hunt for dormant or reactivated hacktivist personas, such as “Altoufan Team”, making claims on social media that correlate with intrusion activity for your organization. Search for LOLBin abuse and lateral movement, patterns which are consistent with post-WezRat compromise activity.
+
+Table 3: Cotton Sandstorm’s TTPs Mapped to ExtraHop NDR Capabilities
+
+Loading table...
+
+### Handala
+
+**Aliases:**_Handala Hack Team, Void Manticore_
+
+Handala has emerged as a prominent Iranian-linked persona in the current
+conflict. Linked to the MOIS, Handala blends traditional hacktivism with
+highly destructive wiper and ransomware operations. The group’s primary
+objective is not financial gain but psychological warfare and the
+destabilization of critical infrastructure within Israel, Jordan, and Western
+nations.
+
+Since the U.S.-Israeli attacks, this group has reportedly carried out several
+operations, including an attack against Israel Opportunity Energy on March 3,
+2026, a major oil and gas exploration company, and fuel system of the country
+of Jordan. On the same day, Handala claimed to have successfully compromised
+Saudi Aramco, according to a post by FalconFeeds. The cyber actors alleged
+they destroyed Aramco's infrastructure and disrupted oil processing
+capabilities.
+
+Specific details regarding the incidents remain scarce, however, Handala has
+utilized Starlink IPs to scan publicly accessible applications for
+misconfigurations and weak login credentials for initial access.
+
+#### **The Influence of "RedWanted" and Tactical Autonomy**
+
+Handala initiated its "RedWanted" campaign in or around October 2025,
+primarily targeting and doxxing companies and individuals perceived as
+supporting Israel. The doxxing website, handala-redwanted[.]to, was created on
+July 12, 2025, although it appears to have remained inactive until October
+2025. A historical snapshot from October 8, 2025, indicates the site was not
+yet fully operational. Handala's operations appear to have been pre-planned,
+suggesting a readiness for execution. This is evidenced by the active display
+of doxxing information about their targets on the site by October 13, 2025
+through March 1, 2026.
+
+This operation, coupled with death threats directed at Iranian-American and
+Iranian-Canadian influencers, underscores the group's dual strategy of
+conducting information operations and engaging in intimidation tactics.
+
+![Handala doxxing site image](/_next/image?url=https%3A%2F%2Fextrahop-cloud-
+assets.s3.us-west-2.amazonaws.com%2Fblog%2Fimages%2Fhandala-doxxing-
+site.png&w=1920&q=75)
+
+_Image 1: Domain registration information for Handala 's site._
+
+![Handala website targeting Israel](/_next/image?url=https%3A%2F%2Fextrahop-
+cloud-assets.s3.us-west-2.amazonaws.com%2Fblog%2Fimages%2Fhandala-website-
+israel.png&w=1920&q=75)
+
+_Image 2: Handala doxxing site on October 8, 2025._
+
+Handala’s operations have proven resilient to Iran’s domestic internet
+blackout. During late February and early March 2026, researchers observed
+Handala traffic originating from Starlink satellite IP ranges, indicating that
+the group has maintained tactical autonomy and C2 capabilities despite Iran’s
+internet blackout. This autonomy likely stems from the degradation of
+centralized IRGC command structures following the February 28 strikes, forcing
+Handala cells to act in operational isolation.
+
+#### **Technical TTPs: The Wiper-Ransomware Hybrid**
+
+Handala often employs a "wipe-first, talk-later" strategy. Their attack chain
+typically involves spear-phishing with attachments that masquerade as
+installers or updates, such as **F5UPDATER.exe**. Once initial access is
+gained, they deploy multi-stage loaders that unpack wiper modules in memory.
+
+The group is known to use specialized tools like the "**ZeroShred** " wiper
+and "**GoneXML** " ransomware. Handala utilizes signed legitimate binaries as
+proxies to bypass application allow-lists, a tactic that makes their presence
+extremely difficult to detect without behavioral analysis. Furthermore, their
+exfiltration of data often occurs over non-standard ports or via encrypted
+cloud storage endpoints, frequently employing JA3/TLS fingerprinting to
+identify and mimic legitimate traffic.
+
+Table 4: Handala’s TTPs Mapped to ExtraHop NDR Capabilities
+
+Loading table...
+
+Cyber Islamic Resistance, Hacktivist Axis, and others
+
+Following the February 28 strikes, pro-Iranian and pro-Russian hacktivist
+groups consolidated their efforts under the “Cyber Islamic Resistance.” This
+coalition coordinates over 60 individual cyber groups to launch synchronized
+attacks against Israeli, Western, and Gulf state critical infrastructure.
+
+#### **Notable Operations**
+
+  * **DDoS claims:** Between February 28 and March 5, 2026, hacktivists claimed to launch DDoS attacks targeting at least 110 organizations across 16 countries, with 12 groups claiming responsibility for 74.6% of the activity. The Middle East was the primary target, with a focus on public infrastructure. Government organizations were the most affected sector, followed by finance, and telecommunications.
+  * **RipperSec and Cyb3rDrag0nzz** : These actors are known for data-wiping and DDoS attacks. They have claimed compromises of Israeli payment infrastructure and drone defense systems.
+  * **FAD Team (Fatimiyoun Cyber Team)** : This group specializes in attacks against SCADA/PLC systems and Turkish media organizations. They have taken responsibility for an **SQL injection** attack and the subsequent leaking of data from various entities. These compromised organizations reportedly include a small Pennsylvania town, educational institutions in France, Vietnam, and India, and a virtual U.S. Air Force group.
+
+### Prince of Persia
+
+**Aliases** : _Infy_
+
+Iran’s Prince of Persia APT group has resurfaced around December 2025 as an
+active and sophisticated threat following years of perceived dormancy.
+SafeBreach confirmed the group has been continuously operating, recently
+targeting government entities, critical infrastructure, dissidents and
+academics across Iran, Iraq, Turkey, India, Canada, and Europe. The group’s
+activity directly mirrors Iranian government interests, demonstrated by the
+fact that its operational tempo paused entirely during Iran’s country-wide
+internet blackout between January 8th to 27th, 2026. In addition, two days
+prior to the end of the blackout, on January 25, 2026, connectivity was
+briefly restored, which the group leveraged to register two new C2 domains.
+This synchronized behavior is strong evidence of direct state sponsorship and
+coordination by the Iranian regime, as indicated by SafeBreach.
+
+#### **Foudre, Tonnerre, and Tornado Malware Upgrades**
+
+Prince of Persia has upgraded its technical capabilities since 2022. The group
+now deploys a multi-stage malware ecosystem, including upgraded versions of
+Foudre, Tonnerre, and Tornado malware. These upgrades include domain
+generation algorithms (DGA), RSA-signed C2 channels, and novel Telegram API-
+based C2 to evade detection and maintain resilient infrastructure. In
+addition, SafeBreach discovered the group shifted from utilizing Microsoft
+macros to exploiting a WinRAR 1-day vulnerability (likely CVE-2025-8088 or
+CVE-2025-6218) to deploy malware into a victim’s startup folder to potentially
+increase successful infection rates.
+
+Table 5: Prince of Perisa’s TTPs Mapped to ExtraHop NDR Capabilities
+
+Loading table...
+
+### APT42: AI-Augmented Espionage and the TAMECAT Framework
+
+**Aliases:** _Charming Kitten, Mint Sandstorm, Crooked Charms_
+
+APT42, an Iranian state-sponsored actor affiliated with the Islamic
+Revolutionary Guard Corps Intelligence Organization (IRGC-IO), remains at the
+forefront of Iran’s global espionage operations. While no direct link has been
+established as a response to the U.S. and Israel airstrikes, APT42 is
+historically known for targeting non-governmental organizations (NGOs), media,
+and activists, the group has significantly matured its toolkit in 2026.
+Researchers have discovered a shift from simple credential harvesting toward
+long-term persistence in cloud environments and the deployment of
+sophisticated backdoors like**TAMECAT**.
+
+#### **The TAMECAT Backdoor and PowerShell Evasion**
+
+**TAMECAT** is a custom PowerShell-based implant designed for stealth and
+persistence. The infection chain typically begins with AI-enhanced targeted
+spear-phishing. By providing an LLM with a target's biography, APT42 creates
+highly convincing personas to establish a credible pretext for engagement. The
+lures often involve Google Drive or Dropbox links hosting malicious documents
+that execute a VBScript downloader.
+
+Once the VBScript is executed, it performs a reconnaissance check for local
+antivirus products. If the environment is deemed safe, it fetches a secondary
+loader, often masquerading as **nconf.txt** , from legitimate hosting services
+such as**tebi[.]io**. The**TAMECAT** script itself is obfuscated and AES-
+encrypted, designed to execute entirely in memory to evade file-based
+detection mechanisms.
+
+#### **TAMECAT Network Communication and C2 Protocol**
+
+**TAMECAT** communicates over HTTPS (Port 443) with C2 domains hosted on
+platforms like Glitch or various Cloudflare worker subdomains. A unique
+signature of this communication is the use of a custom HTTP header, **Content-
+DPR**. This header carries a 16-character initialization vector (IV) used for
+encrypting the POST request body.
+
+The POST body contains AES-encrypted and Base64-encoded system metadata,
+including the operating system, computer name, and unique victim token stored
+locally in **%LOCALAPPDATA%\config.txt**. The C2 response follows the same
+encryption logic. The malware then interprets commands based on a
+delimiter,**the paragraph symbol** (¶), separating values for language
+(PowerShell or C#), commands, and operational parameters.
+
+#### **Credential Theft via Browser Debugging**
+
+A critical advancement in APT42’s TTPs is the use of browser debugging ports
+to steal credentials without touching the disk. **TAMECAT** utilizes the
+**PsSuspend** utility to pause active Google Chrome or Microsoft Edge
+processes. It then restarts the browser with the **\--remote-debugging-
+port=9222** flag enabled. This allows the attacker to use standard browser
+debugging protocols to dump saved logins and cookie data from the browser's
+memory, bypassing standard security alerts that monitor file access to
+credential databases.
+
+#### **Detection and Hunting Strategies**
+
+Detecting APT42’s tools requires a multi-layered approach that integrates
+network visibility with behavioral monitoring.
+
+  * **NDR Analysis** : Security teams should monitor for HTTPS POST requests containing the Content-DPR header. This is a high-confidence indicator of TAMECAT C2 activity. NDR platforms like RevealX can identify the presence of system identifiers in these encrypted payloads by analyzing the entropy and structure of the POST body even when the traffic is TLS-encrypted.
+  * **IDS Signatures** : Rules should be implemented to alert on traffic to *.glitch.me or Cloudflare worker subdomains that use non-standard HTTP headers or exhibit beaconing intervals consistent with TAMECAT's heartbeat.
+  * **Threat Hunting** : Hunt for process creation events where chrome.exe or msedge.exe are launched with the --remote-debugging-port flag. This should be cross-referenced with the use of PsSuspend.exe or other Sysinternals-like utilities on workstations belonging to high-value targets.
+
+Table 2: APT 42’s TTPs Mapped to ExtraHop NDR Capabilities
+
+Loading table...
+
+### RedKitten: AI-enabled Cyber Operations
+
+The newly identified threat actor, RedKitten, launched a spear-phishing
+campaign in January 2026, specifically targeting Iranian protesters, human
+rights activists, and NGOs. This operation leveraged the emotional intensity
+surrounding the recent Dey 1404 protests, a period of significant civil unrest
+and economic strikes in Tehran (starting in late December 2025), and a deadly
+government crackdown resulting in mass arrests and casualties.
+
+RedKitten exploited this distress by using weaponized Excel files disguised as
+a list of casualties from the protests. The malicious lure was designed to
+trick victims into enabling hidden macros, which would then execute and deploy
+the **SloppyMIO** backdoor. No direct link has been established between
+RedKitten's activities and a response to the U.S. and Israeli airstrikes.
+
+#### **SloppyMIO: AI-derived Malware**
+
+**SloppyMIO** is architecturally notable for its modularity and novel C2
+infrastructure by abusing legitimate, trusted platforms to avoid detection.
+The malicious component first retrieves its configuration using steganography
+from images hosted at URLs obtained through a GitHub-backed Dead Drop Resolver
+(DDR). This configuration is hidden in the images' Least Significant Bit (LSB)
+payload and includes a XOR key, a Telegram bot token and chat ID, and module
+URLs. The attacker then uses Telegram as the C2 channel.
+
+By blending malicious traffic with normal use of these platforms, the
+operators make detection significantly harder. A key factor in this actor's
+operational speed is the use of AI to generate VBA macros and variable names,
+enabling them to evolve their toolsets faster than traditional signature-based
+defenses can adapt.
+
+Table 6: RedKitten’s TTPs Mapped to ExtraHop NDR Capabilities
+
+Loading table...
+
+### Conclusion: Adapting to the Hybrid Threat
+
+The Iranian and allied offensive of 2026 demonstrates that the digital domain
+has become a primary arena for national conflict. Threat actors have proven
+remarkably adaptive, utilizing decentralized command structures, memory-safe
+programming languages, and generative AI to maintain operational effectiveness
+in the face of significant pressure. The convergence of state-sponsored
+espionage with destructive hacktivism and pro-Russian botnet power creates a
+multi-faceted threat landscape, blending the line between state-sponsored
+attacks with sympathetic cyber actors.
+
+For security-minded organizations, the path forward requires a transition to
+threat-informed defense. By leveraging NDR platforms that provide deep
+protocol fluency across IT, OT, and cloud environments, defenders can expose
+the subtle behavioral anomalies that these sophisticated actors rely on to
+hide their presence. Maintaining visibility into unencrypted industrial
+protocols and establishing behavioral baselines for encrypted web traffic are
+critical steps in building resilience against the disruptive and destructive
+operations of the 2026 cyber battleground.
+
+#### **Learn More About ExtraHop**
+
+The network usually tells the story that logs and endpoints often miss. If you
+want to see how this actually works in practice, or if you're just curious
+about how your own environment holds up, there are a few ways we can help:
+
+  * **See it in action** : We can jump on a quick call to show you exactly how RevealX picks up on the TTPs used by threat actors.
+  * **Check your blind spots** : We offer a simple network security assessment to help you find out if there’s activity moving sideways through your environment that your current tools aren't catching.
+  * **Your experts speak with our experts** : If you have specific questions about detecting cyber threats, your team can spend time with ours.
+
+Click [**HERE**](https://www.extrahop.com/contact) to schedule your time with
+us and learn more about ExtraHop NDR.
+
+Discover more
+
+[NDR](/blog/?category=#ndr)[Security Threats](/blog/?category=#security-
+threats)[RevealX](/blog/?category=#revealx)
+
+![blog image](/_next/image?url=https%3A%2F%2Fextrahop-cloud-assets.s3.us-
+west-2.amazonaws.com%2Fblog%2F0323-blog-iranian-cyber-
+response-522x380.jpg&w=828&q=75)
+
+![Blog author](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Fblog%2Fauthors%2Fangelawilson.jpg&w=128&q=75)
+
+[Angela Wilson](/blog/authors/angela-wilson)
+
+Senior Cyber Threat Intelligence Analyst
+
+Angela Wilson is a Senior Cyber Threat Intelligence Analyst with over a decade
+of experience in the cybersecurity industry. She focuses on transforming
+complex threat data into strategic intelligence that enhances organizational
+resilience and informs proactive defense.
+
+##### Share
+
+[![LinkedIn logo](https://cloud-assets.extrahop.com/icons/linkedin-icon-
+sapphire.svg)](https://linkedin.com/shareArticle?url=https%3A%2F%2Fwww.extrahop.com%2Fblog%2Fthe-
+digital-front-of-iranian-cyber-offensive-and-defensive-
+response&title=ExtraHop%20Blog%20%7C%20The%20Digital%20Front%20of%20Iranian%20Cyber%20Offensive%20and%20Defensive%20Response)[![X
+logo](https://cloud-assets.extrahop.com/icons/x-icon-
+sapphire.svg)](https://twitter.com/share?text=null&url=https%3A%2F%2Fwww.extrahop.com%2Fblog%2Fthe-
+digital-front-of-iranian-cyber-offensive-and-defensive-response)[![Facebook
+logo](https://cloud-assets.extrahop.com/icons/fb-icon-
+sapphire.svg)](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.extrahop.com%2Fblog%2Fthe-
+digital-front-of-iranian-cyber-offensive-and-defensive-response)
+
+![blog image](/_next/image?url=https%3A%2F%2Fextrahop-cloud-assets.s3.us-
+west-2.amazonaws.com%2Fblog%2F0323-blog-iranian-cyber-
+response-522x380.jpg&w=828&q=75)
+
+![Blog author](https://cloud-
+assets.extrahop.com/blog/authors/angelawilson.jpg)
+
+[Angela Wilson](/blog/authors/angela-wilson)
+
+Senior Cyber Threat Intelligence Analyst
+
+Angela Wilson is a Senior Cyber Threat Intelligence Analyst with over a decade
+of experience in the cybersecurity industry. She focuses on transforming
+complex threat data into strategic intelligence that enhances organizational
+resilience and informs proactive defense.
+
+##### Share
+
+[![LinkedIn logo](https://cloud-assets.extrahop.com/icons/linkedin-icon-
+sapphire.svg)](https://linkedin.com/shareArticle?url=https%3A%2F%2Fwww.extrahop.com%2Fblog%2Fthe-
+digital-front-of-iranian-cyber-offensive-and-defensive-
+response&title=ExtraHop%20Blog%20%7C%20The%20Digital%20Front%20of%20Iranian%20Cyber%20Offensive%20and%20Defensive%20Response)[![X
+logo](https://cloud-assets.extrahop.com/icons/x-icon-
+sapphire.svg)](https://twitter.com/share?text=null&url=https%3A%2F%2Fwww.extrahop.com%2Fblog%2Fthe-
+digital-front-of-iranian-cyber-offensive-and-defensive-response)[![Facebook
+logo](https://cloud-assets.extrahop.com/icons/fb-icon-
+sapphire.svg)](https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.extrahop.com%2Fblog%2Fthe-
+digital-front-of-iranian-cyber-offensive-and-defensive-response)
+
+## Experience RevealX NDR for Yourself
+
+[Schedule a demo](/demo)
+
+[Contact us](/contact)
+
+Back to the top
+
+![Arrow upwards](https://cloud-assets.extrahop.com/website/icons/right-arrrow-
+circle-cyan.svg)
+
+[![ExtraHop Logo](/_next/image?url=https%3A%2F%2Fcloud-
+assets.extrahop.com%2Flogos%2Feh-logo-web-footer.png&w=1200&q=75)](/)[Contact
+Us](/contact)
+
+[![LinkedIn logo gray](https://cloud-
+assets.extrahop.com/logos/social/linkedin-
+gray.svg)](https://www.linkedin.com/company/extrahop-networks/)[![X \(formerly
+known as Twitter\) logo gray](https://cloud-
+assets.extrahop.com/logos/social/twitter-x-
+gray.svg)](https://twitter.com/ExtraHop/)[![Facebook logo gray](https://cloud-
+assets.extrahop.com/logos/social/facebook-
+gray.svg)](https://www.facebook.com/extrahop/)[![Instagram logo
+gray](https://cloud-assets.extrahop.com/logos/social/instagram-
+gray.svg)](https://www.instagram.com/extrahop/)[![YouTube logo
+gray](https://cloud-assets.extrahop.com/logos/social/youtube-
+gray.svg)](https://www.youtube.com/channel/UCUFjHkLX0NYMx3YLoGuFx6w)
+
+#### Products
+
+  * [Network Detection and ResponseRevealX™ NDR](/products/security/)
+  * [Network Performance MonitoringRevealX™ NPM](/products/performance/)
+  * [RevealX™ Platform](/platform)
+
+#### Company
+
+  * [About Us](/about)
+  * [Leadership](/leadership)
+  * [Careers](/careers)
+  * [Blog](/blog/)
+  * [Newsroom](/news)
+
+#### Products
+
+  * [Network Detection and ResponseRevealX™ NDR](/products/security/)
+  * [Network Performance MonitoringRevealX™ NPM](/products/performance/)
+  * [RevealX™ Platform](/platform)
+
+#### Company
+
+  * [About Us](/about)
+  * [Leadership](/leadership)
+  * [Careers](/careers)
+  * [Blog](/blog/)
+  * [Newsroom](/news)
+
+[Contact Us](/contact)
+
+© 2026 ExtraHop Networks, Inc.
+
+[Terms of Use](https://extrahop.com/terms-of-use/)[Trust
+Center](https://trust.extrahop.com/)[Privacy
+Notice](https://extrahop.com/privacy/statement/)[Do Not Sell My Personal
+Information](https://extrahop.com/privacy/statement#privacy-
+rights)[Vulnerability
+Disclosure](https://www.extrahop.com/legal/vulnerability-disclosure-policy)
+

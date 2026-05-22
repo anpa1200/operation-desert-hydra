@@ -1,0 +1,760 @@
+Skip to content
+
+Skip to main content [
+![Microsoft](https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png)
+](https://www.microsoft.com) [ Security ](https://www.microsoft.com/en-
+us/security) [Microsoft Defender](https://www.microsoft.com/en-
+us/security/business/microsoft-defender) [Microsoft
+Entra](https://www.microsoft.com/en-us/security/business/microsoft-entra)
+[Microsoft Intune](https://www.microsoft.com/en-
+us/security/business/microsoft-Intune) [Microsoft
+Purview](https://www.microsoft.com/en-us/security/business/microsoft-purview)
+[Microsoft Security Copilot](https://www.microsoft.com/en-
+us/security/business/ai-machine-learning/microsoft-security-copilot)
+[Microsoft Sentinel](https://www.microsoft.com/en-us/security/business/siem-
+and-xdr/microsoft-sentinel) [View all products](https://www.microsoft.com/en-
+us/security/view-all-products) [AI-powered
+cybersecurity](https://www.microsoft.com/en-
+us/security/business/solutions/generative-ai-cybersecurity) [Cloud
+security](https://www.microsoft.com/en-us/security/business/solutions/cloud-
+security) [Data security & governance](https://www.microsoft.com/en-
+us/security/business/solutions/data-security-governance) [Identity & network
+access](https://www.microsoft.com/en-us/security/business/solutions/identity-
+access) [Privacy & risk management](https://www.microsoft.com/en-
+us/security/business/solutions/privacy-risk-management) [Security for
+AI](https://www.microsoft.com/en-us/security/business/solutions/security-for-
+ai   ) [Small and medium business](https://www.microsoft.com/en-
+us/security/small-medium-business) [Unified
+SecOps](https://www.microsoft.com/en-us/security/business/solutions/ai-
+powered-unified-secops-platform) [Zero Trust](https://www.microsoft.com/en-
+us/security/business/zero-trust) [Pricing](https://www.microsoft.com/en-
+us/security/pricing-overview) [Services](https://www.microsoft.com/en-
+us/security/services) [Partners](https://www.microsoft.com/en-
+us/security/business/partnerships) [Why Microsoft
+Security](https://www.microsoft.com/en-us/security/why-microsoft-security)
+[Cybersecurity awareness](https://www.microsoft.com/en-
+us/security/business/cybersecurity-awareness) [Customer
+stories](https://www.microsoft.com/en-
+us/customers/search?filters=product%3Amicrosoft-security) [Security
+101](https://www.microsoft.com/en-us/security/business/security-101) [Product
+trials](https://www.microsoft.com/en-us/security/business/get-started/start-
+free-trial) [How we protect Microsoft](https://www.microsoft.com/en-
+us/insidetrack) [Industry recognition](https://www.microsoft.com/en-
+us/security/business/reports-analysis/industry-recognized-cybersecurity-
+leader) [Microsoft Security Insider](https://www.microsoft.com/en-
+us/security/security-insider/) [Microsoft Digital Defense
+Report](https://www.microsoft.com/en-us/security/security-insider/threat-
+landscape/microsoft-digital-defense-report-2025) [Security Response
+Center](https://www.microsoft.com/en-us/msrc/) [Microsoft Security
+Blog](https://www.microsoft.com/en-us/security/blog/) [Microsoft Security
+Events](https://www.microsoft.com/en-us/events/search-
+catalog?filters=topic%3Asecurity&scenario=events) [Microsoft Tech
+Community](https://techcommunity.microsoft.com/t5/security-compliance-and-
+identity/ct-p/MicrosoftSecurityandCompliance)
+[Documentation](https://learn.microsoft.com/en-us/security/) [Technical
+Content Library](https://learn.microsoft.com/en-us/security) [Training &
+certifications](https://learn.microsoft.com/en-
+us/learn/topics/sci?wt.mc_id=techcom_header-webpage-m365) [Compliance Program
+for Microsoft Cloud](https://www.microsoft.com/en-
+us/security/business/services/compliance-program-microsoft-cloud) [Microsoft
+Trust Center](https://www.microsoft.com/en-us/trust-center) [Security
+Engineering Portal](https://www.microsoft.com/en-us/securityengineering)
+[Service Trust Portal](https://servicetrust.microsoft.com/) [Microsoft Secure
+Future Initiative](https://www.microsoft.com/en-us/trust-
+center/security/secure-future-initiative) [Business Solutions
+Hub](https://www.microsoft.com/en-us/microsoft-cloud/solutions) [Contact
+Sales](https://www.microsoft.com/en-us/security/business/get-started/contact-
+us) [Start free trial](https://www.microsoft.com/en-us/security/business/get-
+started/start-free-trial) [Microsoft Security](https://www.microsoft.com/en-
+us/security) [Azure](https://azure.microsoft.com/en-us/) [Dynamics
+365](https://dynamics.microsoft.com/en-us/) [Microsoft
+365](https://www.microsoft.com/en-us/microsoft-365/business/) [Microsoft
+Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software)
+[Windows 365](https://www.microsoft.com/en-us/windows-365) [Microsoft
+AI](https://www.microsoft.com/en-us/ai?icid=DSM_AllCommercial_AI) [Azure
+Space](https://azure.microsoft.com/en-us/solutions/space/) [Mixed
+reality](https://www.microsoft.com/en-us/mixed-reality/windows-mixed-reality)
+[Microsoft HoloLens](https://www.microsoft.com/en-us/hololens) [Microsoft
+Viva](https://www.microsoft.com/en-us/microsoft-viva) [Quantum
+computing](https://azure.microsoft.com/en-us/solutions/quantum-computing/)
+[Sustainability](https://www.microsoft.com/en-us/sustainability/)
+[Education](https://www.microsoft.com/en-us/education)
+[Automotive](https://www.microsoft.com/en-us/industry/automotive) [Financial
+services](https://www.microsoft.com/en-us/industry/financial-services/banking)
+[Government](https://www.microsoft.com/en-us/industry/government)
+[Healthcare](https://www.microsoft.com/en-us/industry/health/microsoft-cloud-
+for-healthcare) [Manufacturing](https://www.microsoft.com/en-
+us/industry/manufacturing/microsoft-cloud-for-manufacturing)
+[Retail](https://www.microsoft.com/en-us/industry/consumer-goods) [Find a
+partner](https://partner.microsoft.com/en-US/) [Become a
+partner](https://partner.microsoft.com/en-US/membership/cloud-solution-
+provider) [Partner Network](https://partner.microsoft.com/en-us/membership)
+[Microsoft
+Marketplace](https://marketplace.microsoft.com?icid=DSM_AllCommercial_Marketplace&ocid=cmm3c8ee9bs)
+[Software companies](https://www.microsoft.com/software-development-
+companies?icid=DSM_AllCommercial_SoftwareCompanies&ocid=cmm3c8ee9bs)
+[Blog](https://blogs.microsoft.com/) [Microsoft
+Advertising](https://about.ads.microsoft.com/en-us?s_cid=dig-src_uhfcomm)
+[Developer Center](https://developer.microsoft.com/en-us/)
+[Documentation](https://learn.microsoft.com/docs/)
+[Events](https://www.microsoft.com/en-us/events)
+[Licensing](https://www.microsoft.com/en-us/licensing/) [Microsoft
+Learn](https://learn.microsoft.com/) [Microsoft
+Research](https://www.microsoft.com/en-us/research/) [View
+Sitemap](https://www.microsoft.com/en-us/sitemap)
+
+![](https://www.microsoft.com/en-us/security/blog/wp-content/themes/security-
+blog-2025/dist/images/single-bg.jpg)
+
+![](https://www.microsoft.com/en-us/security/blog/wp-content/themes/security-
+blog-2025/dist/images/single-bg-dark.jpg)
+
+  1. [ Home ](https://www.microsoft.com/en-us/security/blog/)
+  2. Exposing POLONIUM activity and infrastructure targeting Israeli organizations 
+
+Search
+
+![CISO \(chief information security officer\) collaborating with practitioners
+in a security operations center.](https://www.microsoft.com/en-
+us/security/blog/wp-content/uploads/2022/06/POLONIUM2.jpg)
+
+  * [Research](https://www.microsoft.com/en-us/security/blog/content-type/research/)
+  * June 2, 2022 
+  * 11 min read 
+
+#  Exposing POLONIUM activity and infrastructure targeting Israeli
+organizations
+
+By [Microsoft Digital Security Unit (DSU)](https://www.microsoft.com/en-
+us/security/blog/author/microsoft-digital-security-unit-dsu/ "Posts by
+Microsoft Digital Security Unit \(DSU\)") and [Microsoft Threat
+Intelligence](https://www.microsoft.com/en-us/security/blog/author/microsoft-
+security-threat-intelligence/ "Posts by Microsoft Threat Intelligence")
+
+* * *
+
+## Share
+
+  * [ Link copied to clipboard!  ](https://www.microsoft.com/en-us/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/)
+  * [ ](https://www.facebook.com/sharer/sharer.php?u=https://www.microsoft.com/en-us/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/)
+  * [ ](https://twitter.com/intent/tweet?url=https://www.microsoft.com/en-us/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/&text=Exposing+POLONIUM+activity+and+infrastructure+targeting+Israeli+organizations)
+  * [ ](https://www.linkedin.com/sharing/share-offsite/?url=https://www.microsoft.com/en-us/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/)
+
+## Tags
+
+  * [Sandstorm](https://www.microsoft.com/en-us/security/blog/tag/sandstorm/)
+  * [Token theft](https://www.microsoft.com/en-us/security/blog/tag/token-theft/)
+
+## Content types
+
+  * [Research](https://www.microsoft.com/en-us/security/blog/content-type/research/)
+
+## Topics
+
+  * [Threat intelligence](https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/)
+
+**April 2023 update** – Microsoft Threat Intelligence has shifted to a new
+threat actor naming taxonomy aligned around the theme of weather.**POLONIUM**
+is now tracked as **Plaid Rain** and **MERCURY** is now tracked as **Mango
+Sandstorm**. The DEV-#### designations are now tracked under the name
+Storm-#### using the same four-digit identifier.
+
+To learn about how the new taxonomy represents the origin, unique traits, and
+impact of threat actors, and to get a complete mapping of threat actor names,
+read this blog: [**Microsoft shifts to a new threat actor naming
+taxonomy**](https://www.microsoft.com/en-
+us/security/blog/2023/04/18/microsoft-shifts-to-a-new-threat-actor-naming-
+taxonomy/).
+
+* * *
+
+Microsoft successfully detected and disabled attack activity abusing OneDrive
+by a previously undocumented Lebanon-based activity group Microsoft Threat
+Intelligence Center (MSTIC) tracks as POLONIUM.  The associated indicators and
+tactics were used by the OneDrive team to improve detection of attack activity
+and disable offending actor accounts. To further address this abuse, Microsoft
+has suspended more than 20 malicious OneDrive applications created by POLONIUM
+actors, notified affected organizations, and deployed a series of security
+intelligence updates that will quarantine tools developed by POLONIUM
+operators. Our goal with this blog is to help deter future activity by
+exposing and sharing the POLONIUM tactics with the community at large.
+
+MSTIC assesses with high confidence that POLONIUM represents an operational
+group based in Lebanon. We also assess with moderate confidence that the
+observed activity was coordinated with other actors affiliated with Iran’s
+Ministry of Intelligence and Security (MOIS), based primarily on victim
+overlap and commonality of tools and techniques. Such collaboration or
+direction from Tehran would align with a string of revelations since late 2020
+that the Government of Iran is using third parties to carry out cyber
+operations on their behalf, likely to enhance Iran’s plausible deniability.
+
+POLONIUM has targeted or compromised more than 20 organizations based in
+Israel and one intergovernmental organization with operations in Lebanon over
+the past three months. This actor has deployed unique tools that abuse
+legitimate cloud services for command and control (C2) across most of their
+victims. POLONIUM was observed creating and using legitimate OneDrive
+accounts, then utilizing those accounts as C2 to execute part of their attack
+operation. This activity does not represent any security issues or
+vulnerabilities on the OneDrive platform. In addition, MSTIC does not, at
+present, see any links between this activity and other publicly documented
+groups linked to Lebanon like Volatile Cedar. This blog will also expose
+further details that show Iranian threat actors may be collaborating with
+proxies to operationalize their attacks. Microsoft continues to work across
+its platforms to identify abuse, take down malicious activity, and implement
+new proactive protections to discourage malicious actors from using our
+services.
+
+As with any observed nation-state actor activity, Microsoft directly notifies
+customers that have been targeted or compromised, providing them with the
+information they need to secure their accounts.
+
+## Observed actor activity
+
+Since February 2022, POLONIUM has been observed primarily targeting
+organizations in Israel with a focus on critical manufacturing, IT, and
+Israel’s defense industry. In at least one case, POLONIUM’s compromise of an
+IT company was used to target a downstream aviation company and law firm in a
+supply chain attack that relied on service provider credentials to gain access
+to the targeted networks. Multiple manufacturing companies they targeted also
+serve Israel’s defense industry, indicating a POLONIUM tactic that follows an
+increasing trend by many actors, including among several Iranian groups, of
+targeting service provider access to gain downstream access. Observed victim
+organizations were in the following sectors: critical manufacturing,
+information technology, transportation systems, defense industrial base,
+government agencies and services, food and agriculture, financial services,
+healthcare and public health, and other business types.
+
+### POLONIUM TTPs shared with Iran-based nation-state actors
+
+MSTIC assesses with moderate confidence that POLONIUM is coordinating its
+operations with multiple tracked actor groups affiliated with Iran’s Ministry
+of Intelligence and Security (MOIS), based on victim overlap and the following
+common techniques and tooling:
+
+  * **Common unique victim targeting:** MSTIC has observed POLONIUM active on or targeting multiple victims that MERCURY previously compromised. According to the [US Cyber Command](https://www.cybercom.mil/Media/News/Article/2897570/iranian-intel-cyber-suite-of-malware-uses-open-source-tools/), MuddyWater, a group we track as MERCURY, “is a subordinate element within the Iranian Ministry of Intelligence and Security.”
+  * **Evidence of possible “hand-off” operations:** The uniqueness of the victim organizations suggests a convergence of mission requirements with MOIS. It may also be evidence of a ‘hand-off’ operational model where MOIS provides POLONIUM with access to previously compromised victim environments to execute new activity. MSTIC continues to monitor both actors to further verify this ‘hand-off’ hypothesis.
+  * **Use of OneDrive for C2:**  MSTIC has observed both POLONIUM and DEV-0133 (aka [Lyceum](https://www.secureworks.com/blog/lyceum-takes-center-stage-in-middle-east-campaign)) using cloud services, including OneDrive, for data exfiltration and command and control. 
+  * **Use of AirVPN:** Both POLONIUM and DEV-0588 (aka CopyKittens) commonly use AirVPN for operational activity. While use of public VPN services is common across many actor sets, these actors’ specific choice to use AirVPN, combined with the additional overlaps documented above, further supports the moderate confidence assessment that POLONIUM collaborates with MOIS.
+
+### Abuse of cloud services
+
+POLONIUM has been observed deploying a series of custom implants that utilize
+cloud services for command and control as well as data exfiltration. MSTIC has
+observed implants connecting to POLONIUM-owned accounts in OneDrive and
+Dropbox. These tools are detected as the following malware:
+
+  * Trojan:PowerShell/CreepyDrive.A!dha
+  * Trojan:PowerShell/CreepyDrive.B!dha
+  * Trojan:PowerShell/CreepyDrive.C!dha
+  * Trojan:PowerShell/CreepyDrive.D!dha
+  * Trojan:PowerShell/CreepyDrive.E!dha
+  * Trojan:MSIL/CreepyBox.A!dha
+  * Trojan:MSIL/CreepyBox.B!dha
+  * Trojan:MSIL/CreepyBox.C!dha
+
+While OneDrive performs antivirus scanning on all uploaded content, POLONIUM
+is not using the cloud service to host their malware. If malware was hosted in
+the OneDrive account, Microsoft Defender Antivirus detections would block it.
+Instead, they are interacting with the cloud service in the same way that a
+legitimate customer would. OneDrive is partnering with MSTIC to identify and
+disable accounts that are linked to known adversary behavior.
+
+### CreepyDrive analysis
+
+The CreepyDrive implant utilizes a POLONIUM-owned OneDrive storage account for
+command and control. The implant provides basic functionality of allowing the
+threat actor to upload stolen files and download files to run.
+
+All web requests by the CreepyDrive implant use the _Invoke-WebRequest_
+cmdlet. The implant’s logic is wrapped in a _while true_ loop, ensuring
+continuous execution of the implant once running. The implant contains no
+native persistence mechanism; if terminated it would need to be re-executed by
+the threat actor.
+
+Due to the lack of victim identifiers in the CreepyDrive implant, using the
+same OneDrive account for multiple victims, while possible, may be
+challenging. It’s likely that a different threat actor-controlled OneDrive
+account is used per implant.
+
+#### **Getting an OAuth token**
+
+When run, the implant first needs to authenticate with OneDrive. The threat
+actor incorporated a refresh token within the implant. Refresh tokens are part
+of the Open Authorization 2 (OAuth) specification, allowing a new OAuth token
+to be issued when it expires. There are several mechanisms that make token
+theft difficult, including the use of the trusted platform module (TPM) to
+protect secrets. More information on these mechanisms can be found
+[here](https://docs.microsoft.com/en-us/azure/active-
+directory/devices/concept-primary-refresh-token).
+
+In this instance, the protection settings tied to the OneDrive account are
+fully controlled by the threat actor, allowing them to disable protections
+that prevent the theft of the token and client secrets. As the threat actor is
+in full control of all secrets and key material associated with the account,
+their sign-in activity looks like legitimate customer behavior and is thus
+challenging to detect.
+
+This token and client secret are transmitted in the body of request to a
+legitimate Microsoft endpoint to generate an OAuth token:
+
+    
+    
+    https[://]login.microsoftonline.com/consumers/oauth2/v2.0/token
+
+This request provides the requisite OAuth token for the implant to interact
+with the threat actor-owned OneDrive account. Using this OAuth token, the
+implant makes a request to the following Microsoft Graph API endpoint to
+access the file _data.txt_ :
+
+    
+    
+    https[://]graph.microsoft.com/v1.0/me/drive/root:/Documents/data.txt:/content
+
+The file _data.txt_ acts as the primary tasking mechanism for the implant,
+providing three branches of execution.
+
+**Upload**
+
+The first branch is triggered when the word “upload” is provided in the
+response. This response payload also contains two additional elements: a local
+file path to upload, and what is likely a threat actor-defined remote file
+name to upload the local file into. The request is structured as follows:
+
+    
+    
+    https[://]graph.microsoft.com/v1.0/me/drive/root:/Uploaded/???:/content
+
+**Download**
+
+The second branch is triggered when the word “download” is provided in the
+response. This response payload contains a file name to download from the
+threat actor-owned OneDrive account. The request is structured as follows:
+
+    
+    
+    https[://]graph.microsoft.com/v1.0/me/drive/root:/Downloaded/???:/content
+
+**Execute**
+
+This branch is triggered when no command is provided in the response. The
+response payload can contain either an array of commands to execute or file
+paths to files previously downloaded by the implant. The threat actor can also
+provide a mixture of individual commands and file paths.
+
+Each value from the array is passed individually into the below custom
+function, which uses the _Invoke-Expression_ cmdlet to run commands:
+
+![code](https://www.microsoft.com/en-us/security/blog/wp-
+content/uploads/2022/06/code-1-1024x291.png)
+
+The output of each executed command is aggregated and then written back to the
+following location in the threat actor-owned OneDrive account:
+
+    
+    
+    https[://]graph.microsoft.com/v1.0/me/drive/root:/Documents/response.json:/content
+
+During the execution of this mechanism, the threat actor resets the content of
+the original tasking file _data.txt_ with the following request:
+
+    
+    
+    https[://]graph.microsoft.com/v1.0/me/drive/root:/Documents/data.txt:/content
+
+Finally, the CreepyDrive implant sleeps, re-executing in a loop until the
+process is terminated.
+
+### Use of custom implant
+
+POLONIUM has also been observed deploying a custom PowerShell implant detected
+as Backdoor:PowerShell/CreepySnail.B!dha. The C2s for observed CreepySnail
+implants include:
+
+  * 135[.]125[.]147[.]170:80
+  * 185[.]244[.]129[.]79:63047
+  * 185[.]244[.]129[.]79:80
+  * 45[.]80[.]149[.]108:63047
+  * 45[.]80[.]149[.]108:80
+  * 45[.]80[.]149[.]57:63047
+  * 45[.]80[.]149[.]68:63047
+  * 45[.]80[.]149[.]71:80
+
+The code below demonstrates how the CreepySnail PowerShell implant, once
+deployed on a target network, attempts to authenticate using stolen
+credentials and connect to POLONIUM C2 for further actions on objectives, such
+as data exfiltration or further abuse as C2.
+
+![code](https://www.microsoft.com/en-us/security/blog/wp-
+content/uploads/2022/06/code-2-1024x643.png)
+![code](https://www.microsoft.com/en-us/security/blog/wp-
+content/uploads/2022/06/code-3-1024x643.png)
+![code](https://www.microsoft.com/en-us/security/blog/wp-
+content/uploads/2022/06/code-4-982x1024.png)
+
+### Use of commodity tools
+
+POLONIUM has also been observed dropping a secondary payload via their
+OneDrive implant. POLONIUM used a common SSH tool for automating interactive
+sign-ins called _plink_ to set up a redundant tunnel from the victim
+environment to the attacker-controlled infrastructure.
+
+The observed C2 IP addresses for POLONIUM plink tunnels include:
+
+  * 185[.]244[.]129 [.]109
+  * 172[.]96[.]188[.]51
+  * 51[.]83 [.]246 [.]73
+
+### Exploitation
+
+While we continue to pursue confirmation of how POLONIUM gained initial access
+to many of their victims, MSTIC notes that approximately 80% of the observed
+victims beaconing to _graph.microsoft.com_ were running Fortinet appliances.
+This suggests, but does not definitively prove, that POLONIUM compromised
+these Fortinet devices by exploiting the
+[CVE-2018-13379](https://cve.mitre.org/cgi-
+bin/cvename.cgi?name=CVE-2018-13379) vulnerability to gain access to the
+compromised organizations.
+
+### IT supply chain attacks
+
+In one case, POLONIUM compromised a cloud service provider based in Israel and
+likely used this access to compromise downstream customers of the service
+provider. Specifically, MSTIC observed that POLONIUM pivoted through the
+service provider and gained access to a law firm and an aviation company in
+Israel. The tactic of leveraging IT products and service providers to gain
+access to downstream customers remains a favorite of Iranian actors and their
+proxies.
+
+Microsoft will continue to monitor ongoing activity from POLONIUM and the
+other Iranian MOIS-affiliated actors discussed in this blog and implement
+protections for our customers. The current detections, advanced detections,
+and IOCs in place across our security products are detailed below.
+
+## Recommended customer actions
+
+The techniques used by the actor described in the “Observed actor activity”
+section can be mitigated by adopting the security considerations provided
+below:
+
+  * Use the included indicators of compromise to investigate whether they exist in your environment and assess for potential intrusion. [Microsoft Sentinel](https://azure.microsoft.com/services/microsoft-sentinel/#overview) queries are provided in the advanced hunting section below.
+  * Confirm that Microsoft Defender Antivirus is updated to [security intelligence update 1.365.40.0 or later](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus), or ensure that [cloud protection](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/cloud-protection-microsoft-defender-antivirus) is turned on, to detect the related indicators.
+  * Block in-bound traffic from IPs specified in the “Indicators of compromise” table.
+  * Review all authentication activity for remote access infrastructure (VPNs), with a particular focus on accounts configured with single factor authentication, to confirm authenticity and investigate any anomalous activity.
+  * Enable multifactor authentication (MFA) to mitigate potentially compromised credentials and ensure that MFA is enforced for all remote connectivity.  _NOTE:_ Microsoft strongly encourages all customers download and use passwordless solutions like [Microsoft Authenticator](https://www.microsoft.com/account/authenticator/) to secure your accounts.
+  * For customers that have relationships with service providers, [review and audit partner relationships](https://docs.microsoft.com/microsoft-365/commerce/manage-partners?view=o365-worldwide) to minimize any unnecessary permissions between your organization and upstream providers. Microsoft recommends immediately removing access for any partner relationships that look unfamiliar or have not yet been audited.
+
+## Indicators of compromise (IOCs)
+
+The below list provides IOCs observed during our investigation. We encourage
+our customers to investigate these indicators in their environments and
+implement detections and protections to identify past related activity and
+prevent future attacks against their systems.
+
+**Indicator**| **Type**| **Description**  
+---|---|---  
+135[.]125[.]147[.]170:80| IPv4 address| C2  for POLONIUM CreepySnail implant  
+185[.]244[.]129[.]79:63047| IPv4 address| C2  for POLONIUM CreepySnail implant  
+185[.]244[.]129[.]79:80| IPv4 address| C2  for POLONIUM CreepySnail implant  
+45[.]80[.]149[.]108:63047| IPv4 address| C2  for POLONIUM CreepySnail implant  
+45[.]80[.]149[.]108:80| IPv4 address| C2  for POLONIUM CreepySnail implant  
+45[.]80[.]149[.]57:63047| IPv4 address| C2  for POLONIUM CreepySnail implant  
+45[.]80[.]149[.]68:63047| IPv4 address| C2  for POLONIUM CreepySnail implant  
+45[.]80[.]149[.]71:80| IPv4 address| C2 for POLONIUM CreepySnail implant  
+185[.]244[.]129[.]109| IPv4 address| C2 for POLONIUM plink tunnels  
+172[.]96[.]188[.]51| IPv4 address| C2 for POLONIUM plink tunnels  
+51[.]83[.]246[.]73| IPv4 address| C2 for POLONIUM plink tunnels  
+Trojan:PowerShell/CreepyDrive.A!dha| Tool| Custom implant signature  
+Trojan:PowerShell/CreepyDrive.B!dha| Tool| Custom implant signature  
+Trojan:PowerShell/CreepyDrive.C!dha| Tool| Custom implant signature  
+Trojan:PowerShell/CreepyDrive.D!dha| Tool| Custom implant signature  
+Trojan:PowerShell/CreepyDrive.E!dha| Tool| Custom implant signature  
+Trojan:MSIL/CreepyBox.A!dha| Tool| Custom implant signature  
+Trojan:MSIL/CreepyBox.B!dha| Tool| Custom implant signature  
+Trojan:MSIL/CreepyBox.C!dha| Tool| Custom implant signature  
+Trojan:MSIL/CreepyRing.A!dha| Tool| Custom implant signature  
+Trojan:MSIL/CreepyWink.B!dha| Tool| Custom implant signature  
+Backdoor:PowerShell/CreepySnail.B!dha| Tool| Custom implant signature  
+  
+**NOTE:** These indicators should not be considered exhaustive for this
+observed activity.
+
+## Detections
+
+### Microsoft 365 Defender
+
+**Microsoft Defender Antivirus**
+
+Microsoft Defender Antivirus detects the malware tools and implants used by
+POLONIUM starting from signature build 1.365.40.0 as the following:
+
+  * Trojan:PowerShell/CreepyDrive.A!dha
+  * Trojan:PowerShell/CreepyDrive.B!dha
+  * Trojan:PowerShell/CreepyDrive.C!dha
+  * Trojan:PowerShell/CreepyDrive.D!dha
+  * Trojan:PowerShell/CreepyDrive.E!dha
+  * Trojan:MSIL/CreepyBox.A!dha
+  * Trojan:MSIL/CreepyBox.B!dha
+  * Trojan:MSIL/CreepyBox.C!dha
+  * Trojan:MSIL/CreepyRing.A!dha
+  * Trojan:MSIL/CreepyWink.B!dha
+  * Backdoor:PowerShell/CreepySnail.B!dha
+
+**Microsoft Defender for Endpoint**
+
+Microsoft Defender for Endpoint customers may see any or a combination of the
+following alerts as an indication of possible attack. These alerts are not
+necessarily an indication of POLONIUM compromise:
+
+  * POLONIUM Actor Activity Detected
+  * PowerShell made a suspicious network connection
+  * Suspicious behavior by powershell.exe was observed
+  * Hidden dual-use tool launch attempt
+  * Outbound connection to non-standard port
+
+**Microsoft Defender for Cloud Apps**
+
+The OAuth apps that were created in the victim tenants were created with only
+two specific scope of permissions: _offline_access_ and _Files.ReadWrite.All_.
+These applications were set to serve multi-tenant and performed only OneDrive
+operations. Applications accessed OneDrive workload via the Graph API, where
+most calls to the API from the application were made as search activities,
+with a few edit operations also observed.
+
+App made numerous searches and edits in OneDrive
+
+App governance, an add-on to Microsoft Defender for Cloud Apps, detects
+malicious OAuth applications that make numerous searches and edits in
+OneDrive. [Learn how to investigate anomaly detection
+alerts](https://docs.microsoft.com/en-us/defender-cloud-apps/app-governance-
+anomaly-detection-alerts#app-made-numerous-searches-and-edits-in-onedrive) in
+Microsoft Defender for Cloud Apps.
+
+![image](https://www.microsoft.com/en-us/security/blog/wp-
+content/uploads/2022/06/MDCA-alert.png)Microsoft Defender for Cloud Apps alert
+for malicious OAuth apps
+
+## Advanced hunting queries
+
+### Microsoft Sentinel
+
+#### Identify POLONIUM IOCs
+
+This query identifies POLONIUM network IOCs within available Azure Sentinel
+network logging:
+
+<https://github.com/Azure/Azure-
+Sentinel/tree/master/Detections/MultipleDataSources/POLONIUMIPIoC.yaml>
+
+#### Detect CreepySnail static URI parameters
+
+The CreepySnail tool utilizes static URI parameters that can be detected using
+the following query:
+
+<https://github.com/Azure/Azure-
+Sentinel/blob/master/Detections/CommonSecurityLog/CreepySnailURLParameters.yaml>
+
+#### Detect Base64-encoded/transmitted machine usernames or IP addresses
+
+CreepySnail also utilizes Base64-encoded parameters to transmit information
+from the victim to threat actor. The following queries detect machine
+usernames or IP addresses (based on Microsoft Defender for Endpoint logging)
+being transmitted under Base64 encoding in a web request:
+
+<https://github.com/Azure/Azure-
+Sentinel/tree/master/Detections/MultipleDataSources/B64UserInWebURIFromMDE.yaml>
+
+<https://github.com/Azure/Azure-
+Sentinel/tree/master/Detections/MultipleDataSources/B64IPInURLFromMDE.yaml>
+
+#### Detect POLONIUM requests to predictable OneDrive file paths
+
+The OneDrive capability that POLONIUM utilizes makes requests to predictable
+OneDrive file paths to access various folders and files. The following queries
+detect these paths in use:
+
+<https://github.com/Azure/Azure-
+Sentinel/blob/master/Detections/CommonSecurityLog/CreepyDriveURLs.yaml>
+
+#### Detect sequence of request events related to unique CreepyDrive re-
+authentication attempts
+
+The CreepyDrive implant makes a predictable sequence of requests to Microsoft
+authentication servers and OneDrive that can be detected using the following
+query:
+
+<https://github.com/Azure/Azure-
+Sentinel/blob/master/Detections/CommonSecurityLog/CreepyDriveRequestSequence.yaml>
+
+#### Hunt for other suspicious encoded request parameters
+
+The following hunting queries can be used to hunt for further suspicious
+encoded request parameters:
+
+<https://github.com/Azure/Azure-
+Sentinel/tree/master/Hunting%20Queries/CommonSecurityLog/B64IPInURL.yaml>
+
+<https://github.com/Azure/Azure-
+Sentinel/tree/master/Hunting%20Queries/CommonSecurityLog/RiskyCommandB64EncodedInUrl.yaml>
+
+![](https://www.microsoft.com/en-us/security/blog/wp-content/themes/blog-in-a-
+box/dist/images/default-avatar.png)
+
+#  Microsoft Digital Security Unit (DSU)
+
+[ See posts by this author ](https://www.microsoft.com/en-
+us/security/blog/author/microsoft-digital-security-unit-dsu/)
+
+![](https://www.microsoft.com/en-us/security/blog/wp-content/themes/blog-in-a-
+box/dist/images/default-avatar.png)
+
+#  Microsoft Threat Intelligence
+
+[ See posts by this author ](https://www.microsoft.com/en-
+us/security/blog/author/microsoft-security-threat-intelligence/)
+
+## Related posts
+
+  * ![A man and two women standing in front of a wall](https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/05/Identity-attacks-featured.webp)
+
+    * May 29, 2025 
+    * 12 min read 
+
+###  [ Defending against evolving identity attack techniques
+](https://www.microsoft.com/en-us/security/blog/2025/05/29/defending-against-
+evolving-identity-attack-techniques/)
+
+Threat actors continue to develop and leverage various techniques that aim to
+compromise cloud identities.
+
+  * ![A photo of a male standing in front of a computer](https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2024/08/Hexagon-overlay.webp)
+
+    * August 28, 2024 
+    * 14 min read 
+
+###  [ Peach Sandstorm deploys new custom Tickler malware in long-running
+intelligence gathering operations  ](https://www.microsoft.com/en-
+us/security/blog/2024/08/28/peach-sandstorm-deploys-new-custom-tickler-
+malware-in-long-running-intelligence-gathering-operations/)
+
+Between April and July 2024, Microsoft observed Iranian state-sponsored threat
+actor Peach Sandstorm deploying a new custom multi-stage backdoor, which we
+named Tickler.
+
+  * ![a conference room of people sitting around a table](https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2024/02/Featured-image.jpg)
+
+    * February 14, 2024 
+    * 13 min read 
+
+###  [ Staying ahead of threat actors in the age of AI
+](https://www.microsoft.com/en-us/security/blog/2024/02/14/staying-ahead-of-
+threat-actors-in-the-age-of-ai/)
+
+Microsoft, in collaboration with OpenAI, is publishing research on emerging
+threats in the age of AI, focusing on identified activity associated with
+known threat actors Forest Blizzard, Emerald Sleet, Crimson Sandstorm, and
+others.
+
+![](https://www.microsoft.com/en-us/security/blog/wp-content/themes/security-
+blog-2025/dist/images/bg-footer.png)
+
+![](https://www.microsoft.com/en-us/security/blog/wp-content/themes/security-
+blog-2025/dist/images/bg-footer.png)
+
+## Get started with Microsoft Security
+
+Protect your people, data, and infrastructure with AI-powered, end-to-end
+security from Microsoft.
+
+[Learn how](https://www.microsoft.com/en-
+us/security?wt.mc_id=AID730391_QSG_BLOG_319247&ocid=AID730391_QSG_BLOG_319247)
+
+![](https://www.microsoft.com/en-us/security/blog/wp-content/themes/security-
+blog-2025/dist/images/footer-promotional.jpg)
+
+Connect with us on social
+
+  * [X](https://twitter.com/msftsecurity)
+  * [YouTube](https://www.youtube.com/channel/UC4s3tv0Qq_OSUBfR735Jc6A)
+  * [LinkedIn](https://www.linkedin.com/showcase/microsoft-security/)
+
+[Surface Pro](https://www.microsoft.com/surface/devices/surface-pro) [Surface
+Laptop](https://www.microsoft.com/surface/devices/surface-laptop) [Surface
+Laptop Studio 2](https://www.microsoft.com/en-us/d/Surface-Laptop-
+Studio-2/8rqr54krf1dz) [Copilot for
+organizations](https://www.microsoft.com/en-us/microsoft-
+copilot/organizations?icid=DSM_Footer_CopilotOrganizations) [Copilot for
+personal use](https://www.microsoft.com/en-us/microsoft-copilot/for-
+individuals?form=MY02PT&OCID=GE_web_Copilot_Free_868g3t5nj) [AI in
+Windows](https://www.microsoft.com/en-us/windows/ai-
+features?icid=DSM_Footer_WhatsNew_AIinWindows) [Explore Microsoft
+products](https://www.microsoft.com/en-us/microsoft-products-and-apps)
+[Windows 11 apps](https://www.microsoft.com/en-us/windows/apps-for-
+windows?icid=DSM_Footer_WhatsNew_Windows11apps) [Account
+profile](https://account.microsoft.com/) [Download
+Center](https://www.microsoft.com/en-us/download) [Microsoft Store
+support](https://go.microsoft.com/fwlink/?linkid=2139749)
+[Returns](https://www.microsoft.com/en-us/store/b/returns) [Order
+tracking](https://www.microsoft.com/en-us/store/b/order-tracking) [Certified
+Refurbished](https://www.microsoft.com/en-us/store/b/certified-refurbished-
+products) [Microsoft Store Promise](https://www.microsoft.com/en-
+us/store/b/why-microsoft-store?icid=footer_why-msft-store_7102020) [Flexible
+Payments](https://www.microsoft.com/en-us/store/b/payment-financing-
+options?icid=footer_financing_vcc) [Microsoft in
+education](https://www.microsoft.com/en-us/education) [Devices for
+education](https://www.microsoft.com/en-us/education/devices/overview)
+[Microsoft Teams for Education](https://www.microsoft.com/en-
+us/education/products/teams) [Microsoft 365
+Education](https://www.microsoft.com/en-us/education/products/microsoft-365)
+[How to buy for your school](https://www.microsoft.com/education/how-to-buy)
+[Educator training and development](https://education.microsoft.com/) [Deals
+for students and parents](https://www.microsoft.com/en-us/store/b/education)
+[AI for education](https://www.microsoft.com/en-us/education/ai-in-education)
+
+[Microsoft AI](https://www.microsoft.com/en-us/ai?icid=DSM_Footer_AI)
+[Microsoft Security](https://www.microsoft.com/en-us/security) [Dynamics
+365](https://www.microsoft.com/en-us/dynamics-365) [Microsoft
+365](https://www.microsoft.com/en-us/microsoft-365/business) [Microsoft Power
+Platform](https://www.microsoft.com/en-us/power-platform) [Microsoft
+Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software)
+[Microsoft 365 Copilot](https://www.microsoft.com/en-
+us/microsoft-365-copilot?icid=DSM_Footer_Microsoft365Copilot) [Small
+Business](https://www.microsoft.com/en-
+us/store/b/business?icid=CNavBusinessStore)
+[Azure](https://azure.microsoft.com/en-us/) [Microsoft
+Developer](https://developer.microsoft.com/en-us/) [Microsoft
+Learn](https://learn.microsoft.com/) [Support for AI marketplace
+apps](https://www.microsoft.com/software-development-companies/offers-
+benefits/isv-success?icid=DSM_Footer_SupportAIMarketplace&ocid=cmm3atxvn98)
+[Microsoft Tech Community](https://techcommunity.microsoft.com/) [Microsoft
+Marketplace](https://marketplace.microsoft.com?icid=DSM_Footer_Marketplace&ocid=cmm3atxvn98)
+[Software companies](https://www.microsoft.com/software-development-
+companies?icid=DSM_All_SoftwareCompanies/ocid=cmm3atxvn98) [Visual
+Studio](https://visualstudio.microsoft.com/)
+[Careers](https://careers.microsoft.com/) [About
+Microsoft](https://www.microsoft.com/about) [Company
+news](https://news.microsoft.com/source/?icid=DSM_Footer_Company_CompanyNews)
+[Privacy at Microsoft](https://www.microsoft.com/en-
+us/privacy?icid=DSM_Footer_Company_Privacy)
+[Investors](https://www.microsoft.com/investor/default.aspx) [Diversity and
+inclusion](https://www.microsoft.com/en-
+us/diversity/default?icid=DSM_Footer_Company_Diversity)
+[Accessibility](https://www.microsoft.com/en-us/accessibility)
+[Sustainability](https://www.microsoft.com/en-us/corporate-
+responsibility/sustainability?icid=DSM_Footer_Sustainability)
+
+[English (United States)](https://www.microsoft.com/en-us/security/locale)
+
+[ Your Privacy Choices Opt-Out Icon Your Privacy Choices
+](https://aka.ms/yourcaliforniaprivacychoices) [ Your Privacy Choices Opt-Out
+Icon Your Privacy Choices ](https://aka.ms/yourcaliforniaprivacychoices)
+
+[Consumer Health Privacy](https://go.microsoft.com/fwlink/?linkid=2259814)
+[Sitemap](https://www.microsoft.com/en-us/sitemap1.aspx) [Contact
+Microsoft](https://support.microsoft.com/contactus) [Privacy
+](https://go.microsoft.com/fwlink/?LinkId=521839) Manage cookies [Terms of
+use](https://go.microsoft.com/fwlink/?LinkID=206977)
+[Trademarks](https://go.microsoft.com/fwlink/?linkid=2196228) [Safety &
+eco](https://go.microsoft.com/fwlink/?linkid=2196227)
+[Recycling](https://www.microsoft.com/en-us/legal/compliance/recycling) [About
+our ads](https://choice.microsoft.com)
+

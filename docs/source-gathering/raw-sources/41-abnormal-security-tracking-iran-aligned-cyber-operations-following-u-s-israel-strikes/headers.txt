@@ -1,0 +1,21 @@
+HTTP/2 200 
+access-control-allow-headers: Content-Type
+age: 234
+cache-control: public, max-age=0, s-maxage=86400, stale-while-revalidate=86400
+content-encoding: br
+content-security-policy: object-src data:; base-uri 'self' studio.plasmic.app analytics.plasmic.app; frame-ancestors 'self' studio.plasmic.app analytics.plasmic.app partners.abnormalsecurity.com partners.abnormal.ai cms.abnormalsecurity.com cms.abnormal.ai staging-cms.abnormalmarketing.dev getpeel.ai
+content-type: text/html; charset=utf-8
+date: Fri, 22 May 2026 02:30:22 GMT
+etag: W/"dv2aquxh0mw8zb"
+permissions-policy: accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), keyboard-map=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), usb=(), xr-spatial-tracking=(), clipboard-read=(), clipboard-write=(), gamepad=(), speaker-selection=(), conversion-measurement=(), serial=(), sync-script=(), trust-token-redemption=()
+referrer-policy: same-origin
+server: Vercel
+strict-transport-security: max-age=63072000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-matched-path: /blog/[slug]
+x-powered-by: Next.js
+x-vercel-cache: HIT
+x-vercel-id: fra1::sfo1::fpqpq-1779431663650-2c17ac40b079
+x-xss-protection: 1
+

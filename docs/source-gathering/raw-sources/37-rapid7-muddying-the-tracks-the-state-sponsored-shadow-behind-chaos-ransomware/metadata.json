@@ -1,0 +1,15 @@
+{
+  "number": 37,
+  "title": "Rapid7 — Muddying the Tracks: The State-Sponsored Shadow Behind Chaos Ransomware",
+  "url": "https://www.rapid7.com/blog/post/tr-muddying-tracks-state-sponsored-shadow-behind-chaos-ransomware/",
+  "curl_status": "200 https://www.rapid7.com/blog/post/tr-muddying-tracks-state-sponsored-shadow-behind-chaos-ransomware/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 24567    0 24567    0     0  43867      0 --:--:-- --:--:-- --:--:-- 43869\n100 86777    0 86777    0     0   148k      0 --:--:-- --:--:-- --:--:--  148k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/37-rapid7-muddying-the-tracks-the-state-sponsored-shadow-behind-chaos-ransomware/source.html",
+  "text_file": "docs/source-gathering/raw-sources/37-rapid7-muddying-the-tracks-the-state-sponsored-shadow-behind-chaos-ransomware/source.txt",
+  "size_bytes": 497055,
+  "extract_error": ""
+}

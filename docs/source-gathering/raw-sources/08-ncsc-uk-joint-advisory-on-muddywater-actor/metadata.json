@@ -1,0 +1,15 @@
+{
+  "number": 8,
+  "title": "NCSC-UK — Joint advisory on MuddyWater actor",
+  "url": "https://www.ncsc.gov.uk/news/joint-advisory-observes-muddywater-actors-conducting-cyber-espionage",
+  "curl_status": "200 https://www.ncsc.gov.uk/news/joint-advisory-observes-muddywater-actors-conducting-cyber-espionage",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 23250    0 23250    0     0   130k      0 --:--:-- --:--:-- --:--:--  131k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/08-ncsc-uk-joint-advisory-on-muddywater-actor/source.html",
+  "text_file": "docs/source-gathering/raw-sources/08-ncsc-uk-joint-advisory-on-muddywater-actor/source.txt",
+  "size_bytes": 136346,
+  "extract_error": ""
+}

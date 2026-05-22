@@ -1,0 +1,208 @@
+[![ATT&CK Home](/theme/images/mitre_attack_logo.png)](/)
+
+  * [ **Matrices** ](/matrices/)
+
+[Enterprise](/matrices/enterprise/) [Mobile](/matrices/mobile/)
+[ICS](/matrices/ics/)
+
+  * [ **Tactics** ](/tactics/)
+
+[Enterprise](/tactics/enterprise/) [Mobile](/tactics/mobile/)
+[ICS](/tactics/ics/)
+
+  * [ **Techniques** ](/techniques/)
+
+[Enterprise](/techniques/enterprise/) [Mobile](/techniques/mobile/)
+[ICS](/techniques/ics/)
+
+  * [ **Defenses** ](/mitigations)
+
+[ **Mitigations** ](/mitigations/)
+
+[Enterprise](/mitigations/enterprise/) [Mobile](/mitigations/mobile/)
+[ICS](/mitigations/ics/)
+
+[Assets](/assets)
+
+[ **Detections** ](/detectionstrategies/)
+
+[Detection Strategies](/detectionstrategies/) [Analytics](/analytics/) [Data
+Components](/datacomponents)
+
+  * [ **CTI** ](/groups)
+
+[Groups](/groups) [Software](/software) [Campaigns](/campaigns)
+
+  * [ **Resources** ](/resources/)
+
+[Get Started](/resources/) [Learn More about ATT&CK;](/resources/learn-more-
+about-attack/) [ATT&CK; Advisory Council](/resources/attack-advisory-council/)
+[ATT&CKcon;](/resources/attackcon/) [ATT&CK; Data & Tools](/resources/attack-
+data-and-tools/) [FAQ](/resources/faq/) [Engage with
+ATT&CK;](/resources/engage-with-attack/contact/) [Version
+History](/resources/versions/) [Updates](/resources/updates/) [Legal &
+Branding](/resources/legal-and-branding/)
+
+  * [**Benefactors**](/resources/engage-with-attack/benefactors/)
+  * [**Contribute**](/resources/engage-with-attack/contribute/)
+  * [ **Blog**   ![External site](/theme/images/external-site.svg) ](https://medium.com/mitre-attack/)
+  * Search 
+
+ATT&CK; v19 has been released! Check out the [blog
+post](https://medium.com/mitre-attack/attack-v19-ff329cb65d66) for more
+information.
+
+  1. [Home](/)
+  2. [Groups](/groups/)
+  3. Agrius
+
+#  Agrius
+
+[Agrius](/groups/G1030) is an Iranian threat actor active since 2020 notable
+for a series of ransomware and wiper operations in the Middle East, with an
+emphasis on Israeli
+targets.[[1]](https://assets.sentinelone.com/sentinellabs/evol-
+agrius)[[2]](https://research.checkpoint.com/2023/agrius-deploys-moneybird-in-
+targeted-attacks-against-israeli-organizations/) Public reporting has linked
+[Agrius](/groups/G1030) to Iran's Ministry of Intelligence and Security
+(MOIS).[[3]](https://www.microsoft.com/en-us/security/business/security-
+insider/wp-content/uploads/2023/05/Iran-turning-to-cyber-enabled-influence-
+operations-for-greater-effect-05022023.pdf)
+
+ID: G1030
+
+ⓘ
+
+Associated Groups: Pink Sandstorm, AMERICIUM, Agonizing Serpens, BlackShadow
+
+Contributors: Asritha Narina
+
+Version: 1.0
+
+Created: 21 May 2024
+
+Last Modified: 29 August 2024
+
+[Version Permalink](/versions/v19/groups/G1030/ "Permalink to this version of
+G1030")
+
+[Live Version](/versions/v19/groups/G1030/ "Go to the live version of G1030")
+
+## Associated Group Descriptions
+
+Name | Description  
+---|---  
+Pink Sandstorm  |  [[4]](https://learn.microsoft.com/en-us/microsoft-365/security/intelligence/microsoft-threat-actor-naming?view=o365-worldwide)  
+AMERICIUM  |  [[4]](https://learn.microsoft.com/en-us/microsoft-365/security/intelligence/microsoft-threat-actor-naming?view=o365-worldwide)  
+Agonizing Serpens  |  [[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+BlackShadow  |  [[2]](https://research.checkpoint.com/2023/agrius-deploys-moneybird-in-targeted-attacks-against-israeli-organizations/)  
+  
+**ATT &CK® Navigator Layers**
+
+###### Enterprise Layer
+
+[download](/groups/G1030/G1030-enterprise-layer.json) view
+![](/theme/images/external-site-dark.jpeg)
+
+## Techniques Used
+
+Domain | ID | Name | Use  
+---|---|---|---  
+Enterprise  |  [T1583](/techniques/T1583) |  [Acquire Infrastructure](/techniques/T1583) |  [Agrius](/groups/G1030) typically uses commercial VPN services for anonymizing last-hop traffic to victim networks, such as ProtonVPN.[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius)  
+Enterprise  |  [T1560](/techniques/T1560) |  [.001](/techniques/T1560/001) |  [Archive Collected Data](/techniques/T1560): [Archive via Utility](/techniques/T1560/001) |  [Agrius](/groups/G1030) used 7zip to archive extracted data in preparation for exfiltration.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1119](/techniques/T1119) |  [Automated Collection](/techniques/T1119) |  [Agrius](/groups/G1030) used a custom tool, `sql.net4.exe`, to query SQL databases and then identify and extract personally identifiable information.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1110](/techniques/T1110) |  [Brute Force](/techniques/T1110) |  [Agrius](/groups/G1030) engaged in various brute forcing activities via SMB in victim environments.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+|  |  [.003](/techniques/T1110/003) |  [Password Spraying](/techniques/T1110/003) |  [Agrius](/groups/G1030) engaged in password spraying via SMB in victim environments.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1059](/techniques/T1059) |  [.003](/techniques/T1059/003) |  [Command and Scripting Interpreter](/techniques/T1059): [Windows Command Shell](/techniques/T1059/003) |  [Agrius](/groups/G1030) uses [ASPXSpy](/software/S0073) web shells to enable follow-on command execution via `cmd.exe`.[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius)  
+Enterprise  |  [T1543](/techniques/T1543) |  [.003](/techniques/T1543/003) |  [Create or Modify System Process](/techniques/T1543): [Windows Service](/techniques/T1543/003) |  [Agrius](/groups/G1030) has deployed [IPsec Helper](/software/S1132) malware post-exploitation and registered it as a service for persistence.[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius)  
+Enterprise  |  [T1005](/techniques/T1005) |  [Data from Local System](/techniques/T1005) |  [Agrius](/groups/G1030) gathered data from database and other critical servers in victim environments, then used wiping mechanisms as an anti-analysis and anti-forensics mechanism.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1074](/techniques/T1074) |  [.001](/techniques/T1074/001) |  [Data Staged](/techniques/T1074): [Local Data Staging](/techniques/T1074/001) |  [Agrius](/groups/G1030) has used the folder, `C:\windows\temp\s\`, to stage data for exfiltration.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1140](/techniques/T1140) |  [Deobfuscate/Decode Files or Information](/techniques/T1140) |  [Agrius](/groups/G1030) has deployed base64-encoded variants of [ASPXSpy](/software/S0073) to evade detection.[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius)  
+Enterprise  |  [T1685](/techniques/T1685) |  [Disable or Modify Tools](/techniques/T1685) |  [Agrius](/groups/G1030) used several mechanisms to try to disable security tools. [Agrius](/groups/G1030) attempted to modify EDR-related services to disable auto-start on system reboot. [Agrius](/groups/G1030) used a publicly available driver, `GMER64.sys` typically used for anti-rootkit functionality, to selectively stop and remove security software processes.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1041](/techniques/T1041) |  [Exfiltration Over C2 Channel](/techniques/T1041) |  [Agrius](/groups/G1030) exfiltrated staged data using tools such as Putty and WinSCP, communicating with command and control servers.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1190](/techniques/T1190) |  [Exploit Public-Facing Application](/techniques/T1190) |  [Agrius](/groups/G1030) exploits public-facing applications for initial access to victim environments. Examples include widespread attempts to exploit CVE-2018-13379 in FortiOS devices and SQL injection activity.[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius)  
+Enterprise  |  [T1570](/techniques/T1570) |  [Lateral Tool Transfer](/techniques/T1570) |  [Agrius](/groups/G1030) downloaded some payloads for follow-on execution from legitimate filesharing services such as `ufile.io` and `easyupload.io`.[[2]](https://research.checkpoint.com/2023/agrius-deploys-moneybird-in-targeted-attacks-against-israeli-organizations/)  
+Enterprise  |  [T1036](/techniques/T1036) |  [Masquerading](/techniques/T1036) |  [Agrius](/groups/G1030) used the Plink tool for tunneling and connections to remote machines, renaming it `systems.exe` in some instances.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1046](/techniques/T1046) |  [Network Service Discovery](/techniques/T1046) |  [Agrius](/groups/G1030) used the open-source port scanner `WinEggDrop` to perform detailed scans of hosts of interest in victim networks.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1003](/techniques/T1003) |  [.001](/techniques/T1003/001) |  [OS Credential Dumping](/techniques/T1003): [LSASS Memory](/techniques/T1003/001) |  [Agrius](/groups/G1030) used tools such as [Mimikatz](/software/S0002) to dump LSASS memory to capture credentials in victim environments.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+|  |  [.002](/techniques/T1003/002) |  [OS Credential Dumping](/techniques/T1003): [Security Account Manager](/techniques/T1003/002) |  [Agrius](/groups/G1030) dumped the SAM file on victim machines to capture credentials.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1021](/techniques/T1021) |  [.001](/techniques/T1021/001) |  [Remote Services](/techniques/T1021): [Remote Desktop Protocol](/techniques/T1021/001) |  [Agrius](/groups/G1030) tunnels RDP traffic through deployed web shells to access victim environments via compromised accounts.[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius) [Agrius](/groups/G1030) used the Plink tool to tunnel RDP connections for remote access and lateral movement in victim environments.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1018](/techniques/T1018) |  [Remote System Discovery](/techniques/T1018) |  [Agrius](/groups/G1030) used the tool [NBTscan](/software/S0590) to scan for remote, accessible hosts in victim environments.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+Enterprise  |  [T1505](/techniques/T1505) |  [.003](/techniques/T1505/003) |  [Server Software Component](/techniques/T1505): [Web Shell](/techniques/T1505/003) |  [Agrius](/groups/G1030) typically deploys a variant of the [ASPXSpy](/software/S0073) web shell following initial access via exploitation.[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius)  
+Enterprise  |  [T1078](/techniques/T1078) |  [.002](/techniques/T1078/002) |  [Valid Accounts](/techniques/T1078): [Domain Accounts](/techniques/T1078/002) |  [Agrius](/groups/G1030) attempted to acquire valid credentials for victim environments through various means to enable follow-on lateral movement.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)  
+  
+## Software
+
+ID | Name | References | Techniques  
+---|---|---|---  
+[S1133](/software/S1133) |  [Apostle](/software/S1133) |  [Agrius](/groups/G1030) has used [Apostle](/software/S1133) as both a wiper and ransomware-like effects capability in intrusions.[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius) |  [Data Destruction](/techniques/T1485), [Data Encrypted for Impact](/techniques/T1486), [Deobfuscate/Decode Files or Information](/techniques/T1140), [Disable or Modify Tools](/techniques/T1685): [Clear Windows Event Logs](/techniques/T1685/005), [Disk Wipe](/techniques/T1561): [Disk Content Wipe](/techniques/T1561/001), [Execution Guardrails](/techniques/T1480), [Indicator Removal](/techniques/T1070): [File Deletion](/techniques/T1070/004), [Process Discovery](/techniques/T1057), [Scheduled Task/Job](/techniques/T1053): [Scheduled Task](/techniques/T1053/005), [System Shutdown/Reboot](/techniques/T1529)  
+[S0073](/software/S0073) |  [ASPXSpy](/software/S0073) |  [Agrius](/groups/G1030) relies on web shells for persistent access post exploitation, with an emphasis on variants of [ASPXSpy](/software/S0073).[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius) |  [Server Software Component](/techniques/T1505): [Web Shell](/techniques/T1505/003)  
+[S1136](/software/S1136) |  [BFG Agonizer](/software/S1136) |  [BFG Agonizer](/software/S1136) has been used by [Agrius](/groups/G1030) for wiping operations.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/) |  [Compromise Host Software Binary](/techniques/T1554), [Disk Wipe](/techniques/T1561): [Disk Structure Wipe](/techniques/T1561/002), [Inhibit System Recovery](/techniques/T1490), [System Shutdown/Reboot](/techniques/T1529)  
+[S1134](/software/S1134) |  [DEADWOOD](/software/S1134) |  [DEADWOOD](/software/S1134) has been used by [Agrius](/groups/G1030) in wiping operations.[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius) |  [Account Access Removal](/techniques/T1531), [Data Destruction](/techniques/T1485), [Deobfuscate/Decode Files or Information](/techniques/T1140), [Disk Wipe](/techniques/T1561): [Disk Content Wipe](/techniques/T1561/001), [Disk Wipe](/techniques/T1561): [Disk Structure Wipe](/techniques/T1561/002), [Masquerading](/techniques/T1036): [Masquerade Task or Service](/techniques/T1036/004), [Obfuscated Files or Information](/techniques/T1027): [Embedded Payloads](/techniques/T1027/009), [Obfuscated Files or Information](/techniques/T1027): [Encrypted/Encoded File](/techniques/T1027/013), [System Services](/techniques/T1569): [Service Execution](/techniques/T1569/002), [System Time Discovery](/techniques/T1124)  
+[S1132](/software/S1132) |  [IPsec Helper](/software/S1132) |  [Agrius](/groups/G1030) uses [IPsec Helper](/software/S1132) as a post-exploitation remote access tool framework.[[1]](https://assets.sentinelone.com/sentinellabs/evol-agrius) |  [Application Layer Protocol](/techniques/T1071): [Web Protocols](/techniques/T1071/001), [Command and Scripting Interpreter](/techniques/T1059): [PowerShell](/techniques/T1059/001), [Command and Scripting Interpreter](/techniques/T1059): [Visual Basic](/techniques/T1059/005), [Command and Scripting Interpreter](/techniques/T1059): [Windows Command Shell](/techniques/T1059/003), [Data from Local System](/techniques/T1005), [Exfiltration Over C2 Channel](/techniques/T1041), [Indicator Removal](/techniques/T1070), [Indicator Removal](/techniques/T1070): [Clear Persistence](/techniques/T1070/009), [Indicator Removal](/techniques/T1070): [File Deletion](/techniques/T1070/004), [Lateral Tool Transfer](/techniques/T1570), [Modify Registry](/techniques/T1112), [Obfuscated Files or Information](/techniques/T1027): [Encrypted/Encoded File](/techniques/T1027/013), [Process Discovery](/techniques/T1057), [System Services](/techniques/T1569): [Service Execution](/techniques/T1569/002), [Virtualization/Sandbox Evasion](/techniques/T1497): [Time Based Checks](/techniques/T1497/003)  
+[S0002](/software/S0002) |  [Mimikatz](/software/S0002) |  [Agrius](/groups/G1030) used [Mimikatz](/software/S0002) to dump credentials from LSASS memory.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/) |  [Access Token Manipulation](/techniques/T1134): [SID-History Injection](/techniques/T1134/005), [Account Manipulation](/techniques/T1098), [Boot or Logon Autostart Execution](/techniques/T1547): [Security Support Provider](/techniques/T1547/005), [Credentials from Password Stores](/techniques/T1555), [Credentials from Password Stores](/techniques/T1555): [Credentials from Web Browsers](/techniques/T1555/003), [Credentials from Password Stores](/techniques/T1555): [Windows Credential Manager](/techniques/T1555/004), [OS Credential Dumping](/techniques/T1003): [DCSync](/techniques/T1003/006), [OS Credential Dumping](/techniques/T1003): [Security Account Manager](/techniques/T1003/002), [OS Credential Dumping](/techniques/T1003): [LSASS Memory](/techniques/T1003/001), [OS Credential Dumping](/techniques/T1003): [LSA Secrets](/techniques/T1003/004), [Rogue Domain Controller](/techniques/T1207), [Steal or Forge Authentication Certificates](/techniques/T1649), [Steal or Forge Kerberos Tickets](/techniques/T1558): [Golden Ticket](/techniques/T1558/001), [Steal or Forge Kerberos Tickets](/techniques/T1558): [Silver Ticket](/techniques/T1558/002), [Unsecured Credentials](/techniques/T1552): [Private Keys](/techniques/T1552/004), [Use Alternate Authentication Material](/techniques/T1550): [Pass the Hash](/techniques/T1550/002), [Use Alternate Authentication Material](/techniques/T1550): [Pass the Ticket](/techniques/T1550/003)  
+[S1137](/software/S1137) |  [Moneybird](/software/S1137) |  [Moneybird](/software/S1137) is associated with ransomware operations launched by [Agrius](/groups/G1030).[[2]](https://research.checkpoint.com/2023/agrius-deploys-moneybird-in-targeted-attacks-against-israeli-organizations/) |  [Data Encrypted for Impact](/techniques/T1486), [Obfuscated Files or Information](/techniques/T1027): [Embedded Payloads](/techniques/T1027/009)  
+[S1135](/software/S1135) |  [MultiLayer Wiper](/software/S1135) |  [MultiLayer Wiper](/software/S1135) is associated with wiping operations linked to [Agrius](/groups/G1030).[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/) |  [Command and Scripting Interpreter](/techniques/T1059): [Windows Command Shell](/techniques/T1059/003), [Data Destruction](/techniques/T1485), [Data Manipulation](/techniques/T1565): [Stored Data Manipulation](/techniques/T1565/001), [Disable or Modify Tools](/techniques/T1685): [Clear Windows Event Logs](/techniques/T1685/005), [Disable or Modify Tools](/techniques/T1685), [Disk Wipe](/techniques/T1561): [Disk Structure Wipe](/techniques/T1561/002), [File and Directory Discovery](/techniques/T1083), [Indicator Removal](/techniques/T1070), [Indicator Removal](/techniques/T1070): [File Deletion](/techniques/T1070/004), [Indicator Removal](/techniques/T1070): [Timestomp](/techniques/T1070/006), [Inhibit System Recovery](/techniques/T1490), [Obfuscated Files or Information](/techniques/T1027): [Embedded Payloads](/techniques/T1027/009), [Scheduled Task/Job](/techniques/T1053): [Scheduled Task](/techniques/T1053/005), [System Shutdown/Reboot](/techniques/T1529)  
+[S0590](/software/S0590) |  [NBTscan](/software/S0590) |  [Agrius](/groups/G1030) used [NBTscan](/software/S0590) to scan victim networks for existing and accessible hosts.[[5]](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/) |  [Network Service Discovery](/techniques/T1046), [Network Sniffing](/techniques/T1040), [Remote System Discovery](/techniques/T1018), [System Network Configuration Discovery](/techniques/T1016), [System Owner/User Discovery](/techniques/T1033)  
+  
+## References
+
+  1. [ Amitai Ben & Shushan Ehrlich. (2021, May). From Wiper to Ransomware: The Evolution of Agrius. Retrieved May 21, 2024. ](https://assets.sentinelone.com/sentinellabs/evol-agrius)
+  2. [ Marc Salinas Fernandez & Jiri Vinopal. (2023, May 23). AGRIUS DEPLOYS MONEYBIRD IN TARGETED ATTACKS AGAINST ISRAELI ORGANIZATIONS. Retrieved May 21, 2024. ](https://research.checkpoint.com/2023/agrius-deploys-moneybird-in-targeted-attacks-against-israeli-organizations/)
+  3. [ Microsoft Threat Intelligence. (2023, May 2). Iran turning to cyber-enabled influence operations for greater effect. Retrieved May 21, 2024. ](https://www.microsoft.com/en-us/security/business/security-insider/wp-content/uploads/2023/05/Iran-turning-to-cyber-enabled-influence-operations-for-greater-effect-05022023.pdf)
+
+  1. [ Microsoft . (2023, July 12). How Microsoft names threat actors. Retrieved November 17, 2023. ](https://learn.microsoft.com/en-us/microsoft-365/security/intelligence/microsoft-threat-actor-naming?view=o365-worldwide)
+  2. [ Or Chechik, Tom Fakterman, Daniel Frank & Assaf Dahan. (2023, November 6). Agonizing Serpens (Aka Agrius) Targeting the Israeli Higher Education and Tech Sectors. Retrieved May 22, 2024. ](https://unit42.paloaltonetworks.com/agonizing-serpens-targets-israeli-tech-higher-ed-sectors/)
+
+×
+
+Core Objects: All
+
+Core ATT&CK; Objects All None
+
+Matrices  Tactics  Techniques  Sub-Techniques
+
+Defenses: All
+
+Defenses All None
+
+Mitigations  Assets  Detection Strategies  Analytics  Data Components
+
+CTI: All
+
+CTI All None
+
+Groups  Software  Campaigns
+
+Reference: All
+
+Reference All None
+
+Resources
+
+Domains: All
+
+Domains All None
+
+Enterprise  Mobile  ICS
+
+Reset filters
+
+[ ![](/theme/images/mitrelogowhiteontrans.gif) ](https://www.mitre.org)
+
+_[Contact Us](/resources/engage-with-attack/contact)_
+
+_[Terms of Use](/resources/legal-and-branding/terms-of-use)_
+
+_[Privacy Policy](/resources/legal-and-branding/privacy)_
+
+_[Website Changelog](/resources/changelog.html "ATT&CK content v19.1 Website
+v4.4.3")_
+
+_[Cookie Preferences](/resources/legal-and-branding/privacy/#)_
+
+(C) 2015 - 2026, The MITRE Corporation. MITRE ATT&CK; and ATT&CK; are
+registered trademarks of The MITRE Corporation.
+
+[ __](https://x.com/MITREattack) [ __](https://github.com/mitre-attack)
+

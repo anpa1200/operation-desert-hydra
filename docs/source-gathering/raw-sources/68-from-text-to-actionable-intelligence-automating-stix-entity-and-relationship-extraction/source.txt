@@ -1,0 +1,269 @@
+Skip to main content
+
+[![Cornell University](/static/browse/0.3.4/images/icons/cu/cornell-reduced-
+white-SMALL.svg)](https://www.cornell.edu/)
+
+[Learn about arXiv becoming an independent
+nonprofit.](https://tech.cornell.edu/arxiv/)
+
+We gratefully acknowledge support from the Simons Foundation, [member
+institutions](https://info.arxiv.org/about/ourmembers.html), and all
+contributors. [Donate](https://info.arxiv.org/about/donate.html)
+
+[](/IgnoreMe)
+
+[![arxiv logo](/static/browse/0.3.4/images/arxiv-logo-one-color-white.svg)](/)
+> [cs](/list/cs/recent) > arXiv:2507.16576
+
+[Help](https://info.arxiv.org/help) | [Advanced Search](https://arxiv.org/search/advanced)
+
+All fields Title Author Abstract Comments Journal reference ACM classification
+MSC classification Report number arXiv identifier DOI ORCID arXiv author ID
+Help pages Full text
+
+Search
+
+[![arXiv logo](/static/browse/0.3.4/images/arxiv-logomark-small-
+white.svg)](https://arxiv.org/)
+
+[ ![Cornell University Logo](/static/browse/0.3.4/images/icons/cu/cornell-
+reduced-white-SMALL.svg) ](https://www.cornell.edu/)
+
+GO
+
+## quick links
+
+  * [Login](https://arxiv.org/login)
+  * [Help Pages](https://info.arxiv.org/help)
+  * [About](https://info.arxiv.org/about)
+
+# Computer Science > Cryptography and Security
+
+**arXiv:2507.16576** (cs)
+
+[Submitted on 22 Jul 2025]
+
+# Title:From Text to Actionable Intelligence: Automating STIX Entity and
+Relationship Extraction
+
+Authors:[Ahmed
+Lekssays](https://arxiv.org/search/cs?searchtype=author&query=Lekssays,+A),
+[Husrev Taha
+Sencar](https://arxiv.org/search/cs?searchtype=author&query=Sencar,+H+T),
+[Ting Yu](https://arxiv.org/search/cs?searchtype=author&query=Yu,+T)
+
+View a PDF of the paper titled From Text to Actionable Intelligence:
+Automating STIX Entity and Relationship Extraction, by Ahmed Lekssays and
+Husrev Taha Sencar and Ting Yu
+
+[View PDF](/pdf/2507.16576) [HTML
+(experimental)](https://arxiv.org/html/2507.16576v1)
+
+> Abstract:Sharing methods of attack and their effectiveness is a cornerstone
+> of building robust defensive systems. Threat analysis reports, produced by
+> various individuals and organizations, play a critical role in supporting
+> security operations and combating emerging threats. To enhance the
+> timeliness and automation of threat intelligence sharing, several standards
+> have been established, with the Structured Threat Information Expression
+> (STIX) framework emerging as one of the most widely adopted. However,
+> generating STIX-compatible data from unstructured security text remains a
+> largely manual, expert-driven process. To address this challenge, we
+> introduce AZERG, a tool designed to assist security analysts in
+> automatically generating structured STIX representations. To achieve this,
+> we adapt general-purpose large language models for the specific task of
+> extracting STIX-formatted threat data. To manage the complexity, the task is
+> divided into four subtasks: entity detection (T1), entity type
+> identification (T2), related pair detection (T3), and relationship type
+> identification (T4). We apply task-specific fine-tuning to accurately
+> extract relevant entities and infer their relationships in accordance with
+> the STIX specification. To address the lack of training data, we compiled a
+> comprehensive dataset with 4,011 entities and 2,075 relationships extracted
+> from 141 full threat analysis reports, all annotated in alignment with the
+> STIX standard. Our models achieved F1-scores of 84.43% for T1, 88.49% for
+> T2, 95.47% for T3, and 84.60% for T4 in real-world scenarios. We validated
+> their performance against a range of open- and closed-parameter models, as
+> well as state-of-the-art methods, demonstrating improvements of 2-25% across
+> tasks.
+
+Comments: | This paper is accepted at RAID 2025  
+---|---  
+Subjects: |  Cryptography and Security (cs.CR)  
+Cite as: | [arXiv:2507.16576](https://arxiv.org/abs/2507.16576) [cs.CR]  
+  | (or  [arXiv:2507.16576v1](https://arxiv.org/abs/2507.16576v1) [cs.CR] for this version)   
+  |  <https://doi.org/10.48550/arXiv.2507.16576> Focus to learn more arXiv-issued DOI via DataCite  
+  
+## Submission history
+
+From: Ahmed Lekssays [[view email](/show-email/b7ccaadd/2507.16576)]  
+**[v1]** Tue, 22 Jul 2025 13:27:09 UTC (3,329 KB)  
+
+Full-text links:
+
+## Access Paper:
+
+View a PDF of the paper titled From Text to Actionable Intelligence:
+Automating STIX Entity and Relationship Extraction, by Ahmed Lekssays and
+Husrev Taha Sencar and Ting Yu
+
+  * [View PDF](/pdf/2507.16576)
+  * [HTML (experimental)](https://arxiv.org/html/2507.16576v1)
+  * [TeX Source ](/src/2507.16576)
+
+[ ![license icon](https://arxiv.org/icons/licenses/by-4.0.png) view license
+](http://creativecommons.org/licenses/by/4.0/ "Rights to this article")
+
+### Current browse context:
+
+cs.CR
+
+[< prev](/prevnext?id=2507.16576&function=prev&context=cs.CR "previous in cs.CR \(accesskey p\)")   |   [next >](/prevnext?id=2507.16576&function=next&context=cs.CR "next in cs.CR \(accesskey n\)")   
+
+[new](/list/cs.CR/new) |  [recent](/list/cs.CR/recent) | [2025-07](/list/cs.CR/2025-07)
+
+Change to browse by:
+
+[cs](/abs/2507.16576?context=cs)  
+
+### References & Citations
+
+  * [NASA ADS](https://ui.adsabs.harvard.edu/abs/arXiv:2507.16576)
+  * [Google Scholar](https://scholar.google.com/scholar_lookup?arxiv_id=2507.16576)
+  * [Semantic Scholar](https://api.semanticscholar.org/arXiv:2507.16576)
+
+export BibTeX citation Loading...
+
+## BibTeX formatted citation
+
+×
+
+loading...
+
+Data provided by:
+
+### Bookmark
+
+[ ![BibSonomy](/static/browse/0.3.4/images/icons/social/bibsonomy.png)
+](http://www.bibsonomy.org/BibtexHandler?requTask=upload&url=https://arxiv.org/abs/2507.16576&description=From
+Text to Actionable Intelligence: Automating STIX Entity and Relationship
+Extraction "Bookmark on BibSonomy") [
+![Reddit](/static/browse/0.3.4/images/icons/social/reddit.png)
+](https://reddit.com/submit?url=https://arxiv.org/abs/2507.16576&title=From
+Text to Actionable Intelligence: Automating STIX Entity and Relationship
+Extraction "Bookmark on Reddit")
+
+Bibliographic Tools
+
+# Bibliographic and Citation Tools
+
+Bibliographic Explorer Toggle
+
+Bibliographic Explorer _([What is the
+Explorer?](https://info.arxiv.org/labs/showcase.html#arxiv-bibliographic-
+explorer))_
+
+Connected Papers Toggle
+
+Connected Papers _([What is Connected
+Papers?](https://www.connectedpapers.com/about))_
+
+Litmaps Toggle
+
+Litmaps _([What is Litmaps?](https://www.litmaps.co/))_
+
+scite.ai Toggle
+
+scite Smart Citations _([What are Smart Citations?](https://www.scite.ai/))_
+
+Code, Data, Media
+
+# Code, Data and Media Associated with this Article
+
+alphaXiv Toggle
+
+alphaXiv _([What is alphaXiv?](https://alphaxiv.org/))_
+
+Links to Code Toggle
+
+CatalyzeX Code Finder for Papers _([What is
+CatalyzeX?](https://www.catalyzex.com))_
+
+DagsHub Toggle
+
+DagsHub _([What is DagsHub?](https://dagshub.com/))_
+
+GotitPub Toggle
+
+Gotit.pub _([What is GotitPub?](http://gotit.pub/faq))_
+
+Huggingface Toggle
+
+Hugging Face _([What is Huggingface?](https://huggingface.co/huggingface))_
+
+ScienceCast Toggle
+
+ScienceCast _([What is ScienceCast?](https://sciencecast.org/welcome))_
+
+Demos
+
+# Demos
+
+Replicate Toggle
+
+Replicate _([What is Replicate?](https://replicate.com/docs/arxiv/about))_
+
+Spaces Toggle
+
+Hugging Face Spaces _([What is
+Spaces?](https://huggingface.co/docs/hub/spaces))_
+
+Spaces Toggle
+
+TXYZ.AI _([What is TXYZ.AI?](https://txyz.ai))_
+
+Related Papers
+
+# Recommenders and Search Tools
+
+Link to Influence Flower
+
+Influence Flower _([What are Influence
+Flowers?](https://influencemap.cmlab.dev/))_
+
+Core recommender toggle
+
+CORE Recommender _([What is CORE?](https://core.ac.uk/services/recommender))_
+
+  * Author
+  * Venue
+  * Institution
+  * Topic
+
+About arXivLabs
+
+# arXivLabs: experimental projects with community collaborators
+
+arXivLabs is a framework that allows collaborators to develop and share new
+arXiv features directly on our website.
+
+Both individuals and organizations that work with arXivLabs have embraced and
+accepted our values of openness, community, excellence, and user data privacy.
+arXiv is committed to these values and only works with partners that adhere to
+them.
+
+Have an idea for a project that will add value for arXiv's community? [**Learn
+more about arXivLabs**](https://info.arxiv.org/labs/index.html).
+
+[Which authors of this paper are endorsers?](/auth/show-endorsers/2507.16576) | [Disable MathJax](javascript:setMathjaxCookie\(\)) ([What is MathJax?](https://info.arxiv.org/help/mathjax.html)) 
+
+  * [About](https://info.arxiv.org/about)
+  * [Help](https://info.arxiv.org/help)
+
+  * contact arXivClick here to contact arXiv [ Contact](https://info.arxiv.org/help/contact.html)
+  * subscribe to arXiv mailingsClick here to subscribe [ Subscribe](https://info.arxiv.org/help/subscribe)
+
+  * [Copyright](https://info.arxiv.org/help/license/index.html)
+  * [Privacy Policy](https://info.arxiv.org/help/policies/privacy_policy.html)
+
+  * [Web Accessibility Assistance](https://info.arxiv.org/help/web_accessibility.html)
+  * [arXiv Operational Status ](https://status.arxiv.org)  
+

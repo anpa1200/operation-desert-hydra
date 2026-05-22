@@ -1,0 +1,15 @@
+{
+  "number": 33,
+  "title": "Proofpoint — Around the World in 90 Days: State-Sponsored Actors Try ClickFix",
+  "url": "https://www.proofpoint.com/us/blog/threat-insight/around-world-90-days-state-sponsored-actors-try-clickfix",
+  "curl_status": "200 https://www.proofpoint.com/us/blog/threat-insight/around-world-90-days-state-sponsored-actors-try-clickfix",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 54971  100 54971    0     0   593k      0 --:--:-- --:--:-- --:--:--  596k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/33-proofpoint-around-the-world-in-90-days-state-sponsored-actors-try-clickfix/source.html",
+  "text_file": "docs/source-gathering/raw-sources/33-proofpoint-around-the-world-in-90-days-state-sponsored-actors-try-clickfix/source.txt",
+  "size_bytes": 240741,
+  "extract_error": ""
+}

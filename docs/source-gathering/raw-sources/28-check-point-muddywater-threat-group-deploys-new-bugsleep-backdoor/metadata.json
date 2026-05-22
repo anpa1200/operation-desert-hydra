@@ -1,0 +1,15 @@
+{
+  "number": 28,
+  "title": "Check Point — MuddyWater Threat Group Deploys New BugSleep Backdoor",
+  "url": "https://blog.checkpoint.com/research/muddywater-threat-group-deploys-new-bugsleep-backdoor/",
+  "curl_status": "200 https://blog.checkpoint.com/research/muddywater-threat-group-deploys-new-bugsleep-backdoor/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 23949    0 23949    0     0  82125      0 --:--:-- --:--:-- --:--:-- 82017",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/28-check-point-muddywater-threat-group-deploys-new-bugsleep-backdoor/source.html",
+  "text_file": "docs/source-gathering/raw-sources/28-check-point-muddywater-threat-group-deploys-new-bugsleep-backdoor/source.txt",
+  "size_bytes": 114122,
+  "extract_error": ""
+}

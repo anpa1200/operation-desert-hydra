@@ -1,0 +1,68 @@
+Title: Iran Threat Overview and Advisories | CISA
+
+URL Source: https://www.cisa.gov/topics/cyber-threats-and-advisories/advanced-persistent-threats/iran
+
+Markdown Content:
+![Image 1: U.S. flag](https://www.cisa.gov/profiles/cisad8_gov/themes/custom/gesso/dist/images/us_flag_small.png)
+
+An official website of the United States government
+
+[![Image 2: Cybersecurity & Infrastructure Security Agency logo America’s Cyber Security Defense Agency National Coordinator For Critical Infrastructure Security and Resilience](https://www.cisa.gov/sites/default/files/images/SVG/header_logo_tagline_update.svg)![Image 3: Cybersecurity & Infrastructure Security Agency logo America’s Cyber Security Defense Agency National Coordinator For Critical Infrastructure Security and Resilience](https://www.cisa.gov/sites/default/files/images/SVG/header_logo_tagline_update.png)](https://www.cisa.gov/)
+
+[![Image 4: CISA Logo](https://www.cisa.gov/sites/default/files/images/SVG/mobile_logo_wordmark.svg)](https://www.cisa.gov/)
+
+Search
+
+![Image 5: America's Cyber Defense Agency](https://www.cisa.gov/sites/default/files/images/SVG/header_tagline_mobile_update.svg)
+
+*   [Spotlight](https://www.cisa.gov/spotlight)
+
+![Image 6: Generic coding language design with red background](https://www.cisa.gov/sites/default/files/styles/hero_large/public/2022-12/AdobeStock_303249388%20%5BConverted%5D-01.png?h=1211a6fe&itok=1f2ycb-U)
+
+CISA works to ensure U.S. critical infrastructure, government partners, and others have the information and guidance to defend themselves against Iran State-Sponsored cybersecurity risks.
+
+[Report to CISA](https://www.cisa.gov/report "Report to CISA")
+
+CISA works to ensure U.S. critical infrastructure, government partners, and others have the information and guidance to defend themselves against Iran state-sponsored cybersecurity activity.
+
+![Image 7: STOCK -Cyber Alert and Advisory](https://www.cisa.gov/sites/default/files/styles/16x9_medium/public/2024-06/alertsadvisories.png?h=ae1281eb&itok=mgP_xXiB)
+
+## State-Sponsored Cyber Threat Advisories
+
+Review Iran-specific advisories here.
+
+Iranian government-affiliated actors routinely target poorly secured U.S. networks and internet-connected devices. Recent Iranian state-sponsored activity includes malicious cyber operations against operational technology devices by Islamic Revolutionary Guard Corps (IRGC)-affiliated advanced persistent threat (APT) cyber actors. The following actions are key to strengthening operational resilience against this threat:
+
+*   Rapidly mitigate external vulnerabilities, especially in network edge devices and appliances.
+*   Do not connect control systems directly to the public internet.
+*   Use strong unique passwords with different accounts for monitoring and changing control systems.
+
+![Image 8: Iran country illustration](https://www.cisa.gov/sites/default/files/styles/16x9_medium/public/2023-07/Countries%20illustration_Iran%20%281%29.png?h=999314bb&itok=07_l2tNS)
+
+## Iranian Cyber Actors Targeting US Critical Infrastructure
+
+CISA and partners caution U.S. organizations of ongoing cyber exploitation targeting internet-connected operational technology devices across multiple critical infrastructure sectors.
+
+![Image 9: Iran country illustration](https://www.cisa.gov/sites/default/files/styles/16x9_medium/public/2023-07/Countries%20illustration_Iran%20%281%29.png?h=999314bb&itok=07_l2tNS)
+
+## Iranian Cyber Actors May Target Vulnerable US Networks and Entities of Interest
+
+CISA, FBI, DC3, and NSA strongly urge organizations to remain vigilant for potential targeted cyber activity against U.S. critical infrastructure and other U.S. entities by Iranian-affiliated cyber actors.
+
+## Key Resources
+
+![Image 10: Advanced Persistent Threats](https://www.cisa.gov/sites/default/files/styles/16x9_small/public/2024-01/HERO-Advanced-Persistent-Threats-1600x600px.jpg?h=e0d9a4bb&itok=cHbuI1bK)
+
+![Image 11: image of crowded escalators](https://www.cisa.gov/sites/default/files/styles/16x9_small/public/2025-06/HERO_PublicCrowdBanner-01.png?h=c673cd1c&itok=xYbRHMYe)
+
+### [Physical Security](https://www.cisa.gov/topics/physical-security)
+
+Find preventative and protective strategies to strengthen physical security.
+
+![Image 12: A group of people in a course sitting in seats listening to an instructor up front](https://www.cisa.gov/sites/default/files/styles/16x9_small/public/2024-03/ISD-Teaser-CISA-Exercises.jpg?h=abce51c1&itok=_7PWu_YD)
+
+![Image 13: CISA Voluntary Cyber Incident Reporting](https://www.cisa.gov/sites/default/files/styles/16x9_small/public/2025-06/SOCIAL%20WEB%2024-0730%20Voluntary%20Cyber%20Incident%20Reporting_FBLinX.png?h=ae1281eb&itok=9JRgznUg)
+
+### [CISA Voluntary Cyber Incident Reporting](https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/cyber-incident-reporting-critical-infrastructure-act-2022-circia/voluntary-cyber-incident-reporting)
+
+This resource is designed to help entities that may be considering voluntarily reporting cyber incidents understand “who” CISA recommends report an incident, “why and when” CISA recommends they report, as well as “what and how to report.”

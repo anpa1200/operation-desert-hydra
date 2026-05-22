@@ -1,0 +1,21 @@
+HTTP/2 200 
+date: Fri, 22 May 2026 06:34:44 GMT
+content-type: application/pdf
+content-length: 2755652
+accept-ranges: bytes
+alt-svc: h3=":443"; ma=86400
+cache-control: max-age=3600
+etag: "d512jtaduku81n29w"
+last-modified: Mon, 21 Oct 2024 00:48:17 GMT
+permissions-policy: interest-cohort=()
+server: cloudflare
+strict-transport-security: max-age=5184000; preload
+vary: Accept-Encoding
+x-content-type-options: nosniff
+x-frame-options: DENY
+age: 771
+cf-cache-status: HIT
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=ZXStLGt7tiNCK963u3gwXyAgPnIt67FF3RrWAa1pkvN6niASlmFPctMbZloK62tOetAo8L%2BLFn7j7gUu8U5dD6g%2BX6SQtDT8%2FpSXcRI85I6G8uzaTnzyN2QWXRqJ0OPptzOS"}]}
+cf-ray: 9ff9cbf92e6314b7-TLV
+

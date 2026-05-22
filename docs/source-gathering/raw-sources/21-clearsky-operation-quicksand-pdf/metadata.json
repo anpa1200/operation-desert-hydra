@@ -1,0 +1,19 @@
+{
+  "number": 21,
+  "title": "ClearSky — Operation Quicksand PDF",
+  "url": "https://www.clearskysec.com/wp-content/uploads/2020/10/Operation-Quicksand.pdf",
+  "curl_status": "200 https://www.clearskysec.com/wp-content/uploads/2020/10/Operation-Quicksand.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   212  100   212    0     0   2819      0 --:--:-- --:--:-- --:--:--  2826",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/21-clearsky-operation-quicksand-pdf/source.html",
+  "text_file": "docs/source-gathering/raw-sources/21-clearsky-operation-quicksand-pdf/source.txt",
+  "size_bytes": 212,
+  "extract_error": "",
+  "fallback_reader_url": "https://r.jina.ai/http://r.jina.ai/http://https://www.clearskysec.com/wp-content/uploads/2020/10/Operation-Quicksand.pdf",
+  "fallback_reader_status": "200 48523",
+  "fallback_reader_file": "docs/source-gathering/raw-sources/21-clearsky-operation-quicksand-pdf/fallback-reader.txt",
+  "fallback_reader_useful": true
+}

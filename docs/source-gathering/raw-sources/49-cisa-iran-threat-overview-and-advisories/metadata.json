@@ -1,0 +1,19 @@
+{
+  "number": 49,
+  "title": "CISA — Iran Threat Overview and Advisories",
+  "url": "https://www.cisa.gov/topics/cyber-threats-and-advisories/advanced-persistent-threats/iran",
+  "curl_status": "403 https://www.cisa.gov/topics/cyber-threats-and-advisories/advanced-persistent-threats/iran",
+  "http_status": "403",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   466  100   466    0     0   1789      0 --:--:-- --:--:-- --:--:--  1792",
+  "saved": true,
+  "http_ok": false,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/49-cisa-iran-threat-overview-and-advisories/source.html",
+  "text_file": "docs/source-gathering/raw-sources/49-cisa-iran-threat-overview-and-advisories/source.txt",
+  "size_bytes": 466,
+  "extract_error": "",
+  "fallback_reader_url": "https://r.jina.ai/http://r.jina.ai/http://https://www.cisa.gov/topics/cyber-threats-and-advisories/advanced-persistent-threats/iran",
+  "fallback_reader_status": "200 5171",
+  "fallback_reader_file": "docs/source-gathering/raw-sources/49-cisa-iran-threat-overview-and-advisories/fallback-reader.txt",
+  "fallback_reader_useful": true
+}

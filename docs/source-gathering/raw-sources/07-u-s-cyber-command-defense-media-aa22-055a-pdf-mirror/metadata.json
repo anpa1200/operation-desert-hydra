@@ -1,0 +1,15 @@
+{
+  "number": 7,
+  "title": "U.S. Cyber Command / Defense media — AA22-055A PDF mirror",
+  "url": "https://media.defense.gov/2022/Feb/24/2002944274/-1/-1/0/CSA_AA22-055A_Iranian_Government-Sponsored_Actors_Conduct_Cyber_Operations.PDF",
+  "curl_status": "200 https://media.defense.gov/2022/Feb/24/2002944274/-1/-1/0/CSA_AA22-055A_Iranian_Government-Sponsored_Actors_Conduct_Cyber_Operations.PDF",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 1191k  100 1191k    0     0  1425k      0 --:--:-- --:--:-- --:--:-- 1424k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/07-u-s-cyber-command-defense-media-aa22-055a-pdf-mirror/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/07-u-s-cyber-command-defense-media-aa22-055a-pdf-mirror/source.txt",
+  "size_bytes": 1220598,
+  "extract_error": ""
+}

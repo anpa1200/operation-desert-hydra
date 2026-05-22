@@ -1,0 +1,15 @@
+{
+  "number": 34,
+  "title": "Proofpoint — Crossed Wires: a case study of Iranian espionage and attribution",
+  "url": "https://www.proofpoint.com/us/blog/threat-insight/crossed-wires-case-study-iranian-espionage-and-attribution",
+  "curl_status": "200 https://www.proofpoint.com/us/blog/threat-insight/crossed-wires-case-study-iranian-espionage-and-attribution",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 56987  100 56987    0     0   690k      0 --:--:-- --:--:-- --:--:--  695k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/34-proofpoint-crossed-wires-a-case-study-of-iranian-espionage-and-attribution/source.html",
+  "text_file": "docs/source-gathering/raw-sources/34-proofpoint-crossed-wires-a-case-study-of-iranian-espionage-and-attribution/source.txt",
+  "size_bytes": 267698,
+  "extract_error": ""
+}

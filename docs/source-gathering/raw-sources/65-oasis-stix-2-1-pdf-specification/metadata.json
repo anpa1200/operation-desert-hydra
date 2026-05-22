@@ -1,0 +1,15 @@
+{
+  "number": 65,
+  "title": "OASIS — STIX 2.1 PDF specification",
+  "url": "https://docs.oasis-open.org/cti/stix/v2.1/cs02/stix-v2.1-cs02.pdf",
+  "curl_status": "200 https://docs.oasis-open.org/cti/stix/v2.1/cs02/stix-v2.1-cs02.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 2495k    0 2495k    0     0  13.4M      0 --:--:-- --:--:-- --:--:-- 13.5M",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/65-oasis-stix-2-1-pdf-specification/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/65-oasis-stix-2-1-pdf-specification/source.txt",
+  "size_bytes": 4977405,
+  "extract_error": ""
+}

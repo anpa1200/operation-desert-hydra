@@ -1,0 +1,19 @@
+{
+  "number": 4,
+  "title": "CISA alert — Iranian Government-Sponsored MuddyWater Actors Conducting Malicious Cyber Operations",
+  "url": "https://www.cisa.gov/news-events/alerts/2022/02/24/iranian-government-sponsored-muddywater-actors-conducting-malicious",
+  "curl_status": "403 https://www.cisa.gov/news-events/alerts/2022/02/24/iranian-government-sponsored-muddywater-actors-conducting-malicious",
+  "http_status": "403",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   511  100   511    0     0   1603      0 --:--:-- --:--:-- --:--:--  1606",
+  "saved": true,
+  "http_ok": false,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/04-cisa-alert-iranian-government-sponsored-muddywater-actors-conducting-malicious-cyber-opera/source.html",
+  "text_file": "docs/source-gathering/raw-sources/04-cisa-alert-iranian-government-sponsored-muddywater-actors-conducting-malicious-cyber-opera/source.txt",
+  "size_bytes": 511,
+  "extract_error": "",
+  "fallback_reader_url": "https://r.jina.ai/http://r.jina.ai/http://https://www.cisa.gov/news-events/alerts/2022/02/24/iranian-government-sponsored-muddywater-actors-conducting-malicious",
+  "fallback_reader_status": "200 517",
+  "fallback_reader_file": "docs/source-gathering/raw-sources/04-cisa-alert-iranian-government-sponsored-muddywater-actors-conducting-malicious-cyber-opera/fallback-reader.txt",
+  "fallback_reader_useful": false
+}

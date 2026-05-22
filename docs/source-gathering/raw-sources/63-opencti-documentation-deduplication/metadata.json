@@ -1,0 +1,15 @@
+{
+  "number": 63,
+  "title": "OpenCTI documentation — Deduplication",
+  "url": "https://docs.opencti.io/latest/usage/deduplication/",
+  "curl_status": "200 https://docs.opencti.io/latest/usage/deduplication/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 15594  100 15594    0     0  67219      0 --:--:-- --:--:-- --:--:-- 67506",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/63-opencti-documentation-deduplication/source.html",
+  "text_file": "docs/source-gathering/raw-sources/63-opencti-documentation-deduplication/source.txt",
+  "size_bytes": 117695,
+  "extract_error": ""
+}

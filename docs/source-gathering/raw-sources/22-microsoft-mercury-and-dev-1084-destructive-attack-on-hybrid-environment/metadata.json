@@ -1,0 +1,15 @@
+{
+  "number": 22,
+  "title": "Microsoft — MERCURY and DEV-1084: Destructive attack on hybrid environment",
+  "url": "https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/",
+  "curl_status": "200 https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n100 16384    0 16384    0     0  11455      0 --:--:--  0:00:01 --:--:-- 11449\n100 58887    0 58887    0     0  40913      0 --:--:--  0:00:01 --:--:-- 40893",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/22-microsoft-mercury-and-dev-1084-destructive-attack-on-hybrid-environment/source.html",
+  "text_file": "docs/source-gathering/raw-sources/22-microsoft-mercury-and-dev-1084-destructive-attack-on-hybrid-environment/source.txt",
+  "size_bytes": 325657,
+  "extract_error": ""
+}

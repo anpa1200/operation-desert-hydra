@@ -1,0 +1,468 @@
+[![Check Point Software Technologies
+Ltd.](https://sc1.checkpoint.com/sc1/includes/assets/images/checkpoint-
+logo.svg)](https://www.checkpoint.com/)
+
+  * Products
+    * [Hybrid Mesh Network Security](https://www.checkpoint.com/hybrid-mesh-network-security/)
+
+[Data Center & Branch Firewalls](https://www.checkpoint.com/quantum/)
+
+      * [Next-generation Firewalls](https://www.checkpoint.com/quantum/next-generation-firewall/)
+      * [AI Factory Firewalls](https://www.checkpoint.com/ai/cloudprotect/)
+      * [SMB Firewalls](https://www.checkpoint.com/quantum/next-generation-firewall/small-business-firewall/)
+      * [Industrial Firewalls](https://www.checkpoint.com/quantum/next-generation-firewall/industrial-control-systems-appliances/)
+      * [SD-WAN](https://www.checkpoint.com/quantum/sd-wan/)
+      * [Remote Access VPN](https://www.checkpoint.com/quantum/remote-access-vpn/)
+      * [Firewall Cluster](https://www.checkpoint.com/quantum/maestro-hyperscale-network-security/)
+
+[Security Management](https://www.checkpoint.com/quantum/unified-management/)
+
+      * [Agentic Network Security Orchestration](https://www.checkpoint.com/quantum/unified-management/agentic-network-security/)
+      * [Security Management Appliances](https://www.checkpoint.com/quantum/unified-cyber-security-platform/smart-1-appliances/)
+      * [Playblocks](https://www.checkpoint.com/infinity/playblocks/)
+      * [AI Copilot Assistant](https://www.checkpoint.com/ai/copilot/)
+
+[Cloud](https://www.checkpoint.com/cloudguard/)
+
+      * [Cloud Firewalls](https://www.checkpoint.com/cloudguard/cloud-network-security/)
+      * [Cloud Virtual WAN](https://www.checkpoint.com/cloudguard/microsoft-azure-security/wan/)
+      * [Cloud Web Application and API Security](https://www.checkpoint.com/cloudguard/appsec/)
+      * [DDoS Protection](https://www.checkpoint.com/quantum/ddos-protector/)
+
+[SASE](https://sase.checkpoint.com/)
+
+      * [Private Access](https://sase.checkpoint.com/private-access)
+      * [Internet Access](https://sase.checkpoint.com/internet-access)
+      * [Enterprise Browser](https://sase.checkpoint.com/enterprise-browser)
+
+    * [Workspace](https://www.checkpoint.com/harmony/)
+
+      * [Email & Collaboration](https://www.checkpoint.com/harmony/email-security/email-office/)
+      * [Mobile](https://www.checkpoint.com/harmony/mobile-security/mobile/)
+      * [Endpoint](https://www.checkpoint.com/harmony/advanced-endpoint-protection/)
+      * [Browse](https://www.checkpoint.com/harmony/browse/)
+      * [SaaS](https://www.checkpoint.com/harmony/saas/)
+    * [Exposure Management](https://www.checkpoint.com/exposure-management/)
+
+      * [Threat Intelligence](https://www.checkpoint.com/exposure-management/threat-intelligence/)
+      * [Vulnerability Prioritization](https://www.checkpoint.com/exposure-management/vulnerability-prioritization/)
+      * [Cyber Asset Attack Surface Management](https://www.checkpoint.com/exposure-management/caasm/)
+      * [Safe Remediation](https://www.checkpoint.com/exposure-management/safe-remediation/)
+      * [ThreatCloud AI](https://www.checkpoint.com/ai/threatcloud/)
+    * [AI Security](https://www.checkpoint.com/ai-security/)
+
+      * [Workforce AI Security](https://www.checkpoint.com/ai-security/ai-workforce-security/)
+      * [AI Red Teaming](https://www.checkpoint.com/ai-security/ai-red-teaming/)
+      * [AI Agent Security](https://www.checkpoint.com/ai-security/ai-agent-security/)
+      * [View Products A-Z](https://www.checkpoint.com/products/)
+  * Solutions
+    * Use Cases
+
+      * [Anti-Ransomware](https://www.checkpoint.com/solutions/ransomware-protection/anti-ransomware/)
+      * [Collaboration Security](https://www.checkpoint.com/solutions/cloud-collaboration/)
+      * [Compliance](https://www.checkpoint.com/solutions/compliance-governance/)
+      * [Continuous Threat Exposure Management](https://www.checkpoint.com/solutions/continuous-threat-exposure-management/)
+      * [Email Security](https://www.checkpoint.com/solutions/email-security-solution/)
+      * [Hybrid Cloud](https://www.checkpoint.com/solutions/hybrid-data-center-security/)
+      * [Hybrid Mesh Firewall](https://www.checkpoint.com/solutions/hybrid-mesh-firewall/)
+      * [IoT Security Solutions](https://www.checkpoint.com/solutions/iot-security/)
+      * [SD-WAN](https://www.checkpoint.com/solutions/sd-wan-security/)
+      * [Secure Access Service Edge](https://www.checkpoint.com/solutions/secure-access-service-edge/)
+      * [Threat Hunting](https://www.checkpoint.com/solutions/threat-hunting/)
+      * [Threat Prevention](https://www.checkpoint.com/solutions/threat-prevention/)
+      * [Zero Trust & Least Privilege](https://www.checkpoint.com/solutions/zero-trust-security/)
+    * Industry
+
+      * [Education](https://www.checkpoint.com/industry/education/)
+      * [Entertainment & Sports](https://www.checkpoint.com/industry/sports-and-entertainment/)
+      * [Federal Government](https://www.checkpoint.com/industry/government-federal-security/)
+      * [Financial Services](https://www.checkpoint.com/industry/financial-services/)
+      * [Healthcare](https://www.checkpoint.com/industry/healthcare/)
+      * [Manufacturing](https://www.checkpoint.com/industry/manufacturing/)
+      * [Retail](https://www.checkpoint.com/industry/retail/)
+      * [State and Local Government](https://www.checkpoint.com/industry/government-state-local-security/)
+      * [Telco / Service Provider](https://www.checkpoint.com/industry/service-provider/)
+    * Business Size
+
+      * [Large Enterprise](https://www.checkpoint.com/solutions/enterprise-network-security/)
+      * [Small & Medium Business](https://www.checkpoint.com/solutions/small-medium-business-security/)
+  * Platform
+    *       * [Unified Platform Overview](https://www.checkpoint.com/infinity/)
+      * [Platform Services](https://www.checkpoint.com/infinity/core-services/)
+      * [Platform License Agreement](https://www.checkpoint.com/infinity/platform-agreement/)
+      * [Single Management Portal](https://www.checkpoint.com/infinity/portal/)
+    * ![2026 Cyber Security Report](https://sc1.checkpoint.com/sc1/includes/assets/images/security-report-2026-nav-promo.png)
+
+##### 2026 Cyber Security Report
+
+[Download report](https://www.checkpoint.com/security-report/)
+
+  * Services
+    * [Check Point Services](https://www.checkpoint.com/services/)
+
+[CPR ACT](https://www.checkpoint.com/services/cpr-act/)
+
+      * [Intelligence](https://www.checkpoint.com/services/cpr-act/#intelligence)
+      * [Readiness](https://www.checkpoint.com/services/strategy-and-risk/)
+      * [Detection](https://www.checkpoint.com/services/incident-response/managed-detection-and-response/)
+      * [Response](https://www.checkpoint.com/services/incident-response/)
+
+[Managed Security](https://www.checkpoint.com/services/managed-security/)
+
+      * [SOC-as-a-Service](https://www.checkpoint.com/services/managed-security/managed-xdr-with-siemsoar/)
+      * [NOC-as-a-Service](https://www.checkpoint.com/services/managed-security/managed-firewall/)
+      * [Managed Firewall as a Service](https://www.checkpoint.com/services/managed-security/managed-firewall-as-a-service/)
+      * [Cloud & IT](https://www.checkpoint.com/services/managed-security/managed-cspm/)
+
+[Professional Services](https://www.checkpoint.com/services/professional-
+services/)
+
+      * [Security Deployment and Optimization](https://www.checkpoint.com/professional-services/)
+      * [Lifecycle Management Services](https://www.checkpoint.com/support-services/lifecycle-management/)
+      * [Advanced Technical Account Management](https://www.checkpoint.com/professional-services/account-management/)
+
+[Training Programs](https://www.checkpoint.com/services/training/)
+
+      * [Training Courses](https://igs.checkpoint.com/categories/trainingprograms)
+      * [Certification Program](https://www.checkpoint.com/services/training/certification-program/)
+      * [Security Awareness](https://www.checkpoint.com/services/training/smartawareness/)
+      * [CISO Training](https://www.checkpoint.com/mind/ciso-academy/)
+      * [Secure Academy](https://www.checkpoint.com/services/training/secureacademy/)
+
+    * [Support Center](https://supportcenter.checkpoint.com/)
+
+      * [Support Plans](https://www.checkpoint.com/support-services/support-plans/)
+      * [Diamond Services](https://www.checkpoint.com/support-services/support-plans/diamond-services/)
+      * [Advocacy Management Services](https://www.checkpoint.com/support-services/support-plans/advocacy-management-services/)
+      * [Pro Support ](https://www.checkpoint.com/support-services/pro/)
+  * Resources
+    *       * [Resource Center](https://www.checkpoint.com/resources)
+      * [Blog](https://blog.checkpoint.com/)
+      * [CheckMates Community](https://community.checkpoint.com/)
+      * [Check Point Research](https://research.checkpoint.com/)
+      * [CISO Connections](https://www.checkpoint.com/ciso/)
+      * [Customer Stories](https://www.checkpoint.com/customer-stories/)
+      * [Cyber Hub](https://www.checkpoint.com/cyber-hub/)
+      * [Events & Webinars](https://www.checkpoint.com/events/)
+    * ![2026 Cyber Security Report](https://sc1.checkpoint.com/sc1/includes/assets/images/security-report-2026-nav-promo.png)
+
+##### 2026 Cyber Security Report
+
+[Download report](https://www.checkpoint.com/security-report/)
+
+  * Partners
+    *       * [Partner Program](https://www.checkpoint.com/partners/channel/)
+      * [Become a Partner](https://partner-signup.checkpoint.com/)
+      * [Find a Partner](https://partnerlocator.checkpoint.com/#/)
+      * [Channel Partners](https://www.checkpoint.com/partners/channel/)
+      * [Technology Partners](https://www.checkpoint.com/technology-partners/)
+      * [MSP Partners](https://www.checkpoint.com/partners/mssp-program/)
+      * [AWS Cloud](https://www.checkpoint.com/cloudguard/amazon-aws-security/)
+      * [Google Cloud Platform](https://www.checkpoint.com/cloudguard/google-cloud-platform-security/)
+      * [Azure Cloud](https://www.checkpoint.com/cloudguard/microsoft-azure-security/)
+      * [Partner Portal](https://usercenter.checkpoint.com/usercenter/index.jsp)
+    * ![Check Point Partner Program](https://sc1.checkpoint.com/sc1/includes/assets/images/partners-cta-2.jpg)
+
+##### Check Point is 100% Channel. Grow Your Business with Us!
+
+[Sign Up Now](https://www.checkpoint.com/partners/channel/)
+
+  * About Us
+    *       * [Company](https://www.checkpoint.com/about-us/)
+      * [Leadership](https://www.checkpoint.com/about-us/leadership/)
+      * [Careers](https://www.checkpoint.com/careers/)
+      * [Investor Relations](https://www.checkpoint.com/about-us/investor-relations/)
+      * [Newsroom](https://www.checkpoint.com/about-us/newsroom/)
+    * ![2026 Cyber Security Report](https://www.checkpoint.com/wp-content/uploads/security-report-2026-nav-promo.png)
+
+##### 2026 Cyber Security Report
+
+[Download report](https://www.checkpoint.com/security-report/)
+
+  * [Get a Demo](https://www.checkpoint.com/demos/)
+  * [Contact Sales](https://www.checkpoint.com/about-us/contact-us/)
+  * [Support](https://supportcenter.checkpoint.com/)
+  * [Log In](https://usercenter.checkpoint.com/usercenter/index.jsp)
+  * Search
+
+  *     * Choose your language...
+    * [English (English)](https://www.checkpoint.com/)
+    * [Spanish (Español)](https://www.checkpoint.com/es/)
+    * [French (Français)](https://www.checkpoint.com/fr/)
+    * [German (Deutsch)](https://www.checkpoint.com/de/)
+    * [Italian (Italiano)](https://www.checkpoint.com/it/)
+    * [Portuguese (Português)](https://www.checkpoint.com/pt/)
+    * [Japanese (日本語)](https://www.checkpoint.com/jp/)
+    * [Chinese (中文)](https://www.checkpoint.com.cn/)
+    * [Korean (한국어)](https://www.checkpoint.com/kr/)
+    * [Taiwan (繁體中文)](https://www.checkpoint.com/tw/)
+
+Toggle Navigation
+
+[Blog Home](https://blog.checkpoint.com/) >
+[Research](https://blog.checkpoint.com/research/) > MuddyWater Threat Group
+Deploys New BugSleep Backdoor
+
+Filter by:  Select category Research  (724) Security  (1,156) Securing the
+Cloud  (350) Workspace Security  (325) Company and Culture  (64) Innovation
+(62) Customer Stories  (21) Security Operations  (9) Securing the Network
+(51) Partners  (21) Email Security  (325) Artificial Intelligence  (99) Check
+Point Services  (39) Crypto  (20) Healthcare  (17) SASE  (42) MSSP  (9)
+Executive Insights  (264) Mobile  (4) Avanan  (58) Hybrid Mesh  (18) Services
+(3) Portal  (3) Exposure Management  (7) AI Security  (5) USA  (12) APAC  (4)
+EMEA  (7) __
+
+![](https://blog.checkpoint.com/wp-content/uploads/2024/07/muddywater-
+blog-2000x700-1-800x400.jpg)
+
+[Research](https://blog.checkpoint.com/research/)July 15, 2024
+
+# MuddyWater Threat Group Deploys New BugSleep Backdoor
+
+![author image](/wp-content/uploads/2023/02/author-image.png)
+
+By**Check Point Team**
+
+Share
+
+  * [ ](//www.facebook.com/sharer.php?u=https%3A%2F%2Fblog.checkpoint.com%2Fresearch%2Fmuddywater-threat-group-deploys-new-bugsleep-backdoor%2F "Share on Facebook")
+  * [ ](//twitter.com/share?url=https%3A%2F%2Fblog.checkpoint.com%2Fresearch%2Fmuddywater-threat-group-deploys-new-bugsleep-backdoor%2F&text=MuddyWater%20Threat%20Group%20Deploys%20New%20BugSleep%20Backdoor "Share on Twitter")
+  * [ ](//www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fblog.checkpoint.com%2Fresearch%2Fmuddywater-threat-group-deploys-new-bugsleep-backdoor%2F "Share on Linkedin")
+  * [ ](//www.reddit.com/submit?url=https%3A%2F%2Fblog.checkpoint.com%2Fresearch%2Fmuddywater-threat-group-deploys-new-bugsleep-backdoor%2F "Share on Reddit")
+  * [ ](/cdn-cgi/l/email-protection#c0ffb3b5a2aaa5a3b4fd8db5a4a4b997a1b4a5b2e5f2f094a8b2a5a1b4e5f2f087b2afb5b0e5f2f084a5b0acafb9b3e5f2f08ea5b7e5f2f082b5a793aca5a5b0e5f2f082a1a3aba4afafb2e6a1adb0fba2afa4b9fda8b4b4b0b3e5f381e5f286e5f286a2acafa7eea3a8a5a3abb0afa9aeb4eea3afade5f286b2a5b3a5a1b2a3a8e5f286adb5a4a4b9b7a1b4a5b2edb4a8b2a5a1b4eda7b2afb5b0eda4a5b0acafb9b3edaea5b7eda2b5a7b3aca5a5b0eda2a1a3aba4afafb2e5f286 "Share with Email")
+
+Check Point Research (CPR) warns that Iranian threat group MuddyWater has
+significantly increased its activities against Israel and is deploying a new,
+previously undocumented backdoor campaign.
+
+**Key Findings**
+
+  * MuddyWater, an Iranian threat group affiliated with the Ministry of Intelligence and Security (MOIS), has significantly increased its activities in Israel since the beginning of the Israel-Hamas war in October 2023. This parallels with activities against targets in Saudi Arabia, Turkey, Azerbaijan, India and Portugal
+  * The threat actors consistently use phishing campaigns sent from compromised organizational email accounts, leading to the deployment of legitimate Remote Management Tools such as Atera Agent and Screen Connect
+  * Recently, MuddyWater campaigns also led to the deployment of a new, previously undocumented tailor-made backdoor dubbed BugSleep, that is used to target organizations in Israel
+  * BugSleep is a backdoor designed to execute the threat actors’ commands and transfer files between the compromised machine and the C&C server. The backdoor is currently in development, with the threat actors continuously improving its functionality and addressing bugs
+
+**Overview**
+
+CPR has been [tracking MuddyWater](https://research.checkpoint.com/2019/the-
+muddy-waters-of-apt-attacks/), the Iranian threat group affiliated with the
+country’s Ministry of Intelligence and Security (MOIS), since 2019. Now, the
+group has significantly increased its activities in Israel since the beginning
+of the Israel-Hamas war in October 2023.
+
+In addition to their usual phishing campaigns, with malicious deployment of
+legitimate Remote Management Tools, MuddyWater has begun deploying a new,
+previously undocumented backdoor. This backdoor, which Check Point Research
+has named BugSleep, is being specifically used to target organizations in
+Israel.
+
+BugSleep is a new malware used in phishing lures since May 2024. Check Point
+Research discovered several versions of this malware being distributed. The
+backdoor updates are typically around improvements and bug fixes within the
+malware itself.
+
+**_For a deep dive analysis on the malware, and the latest malicious campaigns
+of MuddyWater visit the_**[** _Check Point Research
+blog_**](https://research.checkpoint.com/2024/new-bugsleep-backdoor-deployed-
+in-recent-muddywater-campaigns/)** _._**
+
+**Campaign Targets**
+
+These campaigns are targeting a number of different sectors, from governments
+to travel agencies and journalists. Most of these emails are targeted at
+Israeli companies, although others were aimed toward organizations in Turkey,
+Saudi Arabia, India and Portugal.
+
+![](https://blog.checkpoint.com/wp-content/uploads/2024/07/muddy1.png)
+
+Figure 1 - Notable sectors targeted by MuddyWater phishing campaigns.
+
+The usage of BugSleep marks a notable development in MuddyWater’s techniques,
+tactics and procedures (TTPs). Beginning in October 2023, the threat actors
+have been using phishing campaigns sent from compromised email accounts,
+leading to the deployment of legitimate Remote Management Tools (RMM) such as
+Atera Agent and Screen Connect. Since February 2024, CPR has identified over
+50 spear phishing emails, targeting more than 10 sectors, including
+municipalities, journalists and healthcare.
+
+MuddyWater continues to push the deployment of these tools. In fact, a recent
+phishing email was sent to a Saudi Arabian company and an Israeli company. The
+payload for the Saudi Arabian company was an RMM; for the Israeli company it
+was BugSleep.
+
+![](https://blog.checkpoint.com/wp-content/uploads/2024/07/muddy2.png)
+
+Figure 2 - Targeted countries for MuddyWater
+
+These campaigns reflect MuddyWater’s interests, focusing on specific sectors
+like airlines and media outlets. The nature of the lures has become simpler
+over time, and have evolved to introduce custom malware like BugSleep.
+Additionally, with a shift to generic lures and the increased use of English,
+the group can focus on higher volumes as opposed to specific targets.
+
+**Check Point Customers Remain Protected Against the Threats Described in this
+Report**.
+
+[**Harmony Email and
+Collaboration**](https://www.checkpoint.com/harmony/email-security/) provides
+comprehensive inline protection at the highest security level.
+
+[**ThreatCloud AI**](https://www.checkpoint.com/ai/threatcloud/)**’s Threat
+Emulation engine offers these protections:**
+
+APT.Wins.MuddyWater.ta.X
+
+APT.Wins.MuddyWater.ta.Y
+
+[**Harmony
+Endpoint**](https://www.checkpoint.com/harmony/endpoint/)**protections:  
+**APT.Win.MuddyWater.U
+
+APT.Win.MuddyWater.V
+
+APT.Win.MuddyWater.W
+
+Check Point Research will continue to monitor this group’s activities to
+ensure customers remain protected from their exploits.
+
+__0 __9567
+
+#### You may also like
+
+[![](https://blog.checkpoint.com/wp-content/uploads/2025/07/blog-
+template-2000x700-copy-e1752097735253-400x300.jpg)](https://blog.checkpoint.com/exposure-
+management/hacktivists-ransomware-and-a-124-surge-the-dach-threat-picture/)
+
+[Exposure Management](https://blog.checkpoint.com/exposure-management/) May
+18, 2026
+
+###  [Hacktivists, Ransomware, and a 124% Surge Across
+DACH](https://blog.checkpoint.com/exposure-management/hacktivists-ransomware-
+and-a-124-surge-the-dach-threat-picture/)
+
+Hacktivism and ransomware targeting organizations across Germany, Austria, and
+Switzerland ...
+
+[![](https://blog.checkpoint.com/wp-content/uploads/2026/01/Blog-
+banner-800x400_1-400x300.png)](https://blog.checkpoint.com/research/before-
+the-first-whistle-how-cyber-criminals-are-targeting-world-cup-2026/)
+
+[Research](https://blog.checkpoint.com/research/) May 14, 2026
+
+###  [Before the First Whistle: How Cyber Criminals Are Targeting World Cup
+2026](https://blog.checkpoint.com/research/before-the-first-whistle-how-cyber-
+criminals-are-targeting-world-cup-2026/)
+
+The FIFA World Cup 2026 is one of the most anticipated sporting ...
+
+[![](https://blog.checkpoint.com/wp-
+content/uploads/2024/07/cpr-400x300.jpg)](https://blog.checkpoint.com/research/when-
+the-ransomware-gang-gets-hacked-what-the-gentlemen-leak-reveals-about-modern-
+ransomware-risk/)
+
+[Research](https://blog.checkpoint.com/research/) May 13, 2026
+
+###  [When the Ransomware Gang Gets Hacked: What the Gentlemen Leak Reveals
+About Modern Ransomware Risk](https://blog.checkpoint.com/research/when-the-
+ransomware-gang-gets-hacked-what-the-gentlemen-leak-reveals-about-modern-
+ransomware-risk/)
+
+Key Findings The Gentlemen RaaS has 400+ public victims and ...
+
+[![](https://blog.checkpoint.com/wp-content/uploads/2025/07/q2-ransomware-
+Blog-
+banner-800x400-1-400x300.png)](https://blog.checkpoint.com/research/cyber-
+threats-spike-in-april-2026-as-ransomware-expands-and-attack-volumes-climb-
+after-short-lived-moderation/)
+
+[Research](https://blog.checkpoint.com/research/) May 12, 2026
+
+###  [Cyber Threats Spike in April 2026 as Ransomware Expands and Attack
+Volumes Climb After Short-Lived
+Moderation](https://blog.checkpoint.com/research/cyber-threats-spike-in-
+april-2026-as-ransomware-expands-and-attack-volumes-climb-after-short-lived-
+moderation/)
+
+Every Region Recorded Higher Attack Volumes in April In April ...
+
+__
+
+__
+
+  * Products
+
+    * [Hybrid Mesh Network Security](//www.checkpoint.com/quantum/)
+      * [Next-generation Firewalls](//www.checkpoint.com/quantum/next-generation-firewall/)
+      * [Enterprise Firewall](//www.checkpoint.com/quantum/next-generation-firewall/enterprise-security/)
+      * [Cloud Network Security](//www.checkpoint.com/cloudguard/cloud-network-security/)
+      * [Cloud WAF](//www.checkpoint.com/cloudguard/waf/)
+      * [SASE](//www.checkpoint.com/harmony/sase/)
+    * [Workspace Security](//www.checkpoint.com/harmony/)
+      * [Email Security](//www.checkpoint.com/harmony/email-security/)
+      * [Endpoint Protection Platform](//www.checkpoint.com/harmony/advanced-endpoint-protection/)
+    * [Exposure Management](//www.checkpoint.com/exposure-management/)
+      * [Threat Intelligence](//www.checkpoint.com/exposure-management/threat-intelligence/)
+      * [Vulnerability Prioritization](//www.checkpoint.com/exposure-management/vulnerability-prioritization/)
+      * [Safe Remediation](//www.checkpoint.com/exposure-management/safe-remediation/)
+    * [AI Security](//www.checkpoint.com/ai-security/)
+  * Resources
+
+    * [Resource Center](//resources.checkpoint.com/)
+    * [Cyber Hub](//www.checkpoint.com/cyber-hub/)
+    * [Check Point Research](//research.checkpoint.com/)
+    * [Check Point Blog](//blog.checkpoint.com/)
+    * [CheckMates Community](//community.checkpoint.com/)
+    * [Customer Stories](//www.checkpoint.com/customer-stories/)
+    * [Comparison](//www.checkpoint.com/comparison/)
+    * [Cyber Security Report](//www.checkpoint.com/security-report/)
+    * [Events & Webinars](//www.checkpoint.com/events/)
+    * [Threat Map](//threatmap.checkpoint.com/)
+  * Services & Support
+
+    * [Check Point Services](//www.checkpoint.com/services/infinity-global/)
+    * [Managed Security](//www.checkpoint.com/services/managed-security/)
+    * [Professional Services](//www.checkpoint.com/services/professional-services/)
+    * [Training Programs](//www.checkpoint.com/services/training/)
+    * [Strategy and Risk](//www.checkpoint.com/services/strategy-and-risk/)
+    * [Incident Response](//www.checkpoint.com/services/incident-response/)
+    * [Support Center](//supportcenter.checkpoint.com/)
+    * [User Center Sign In](//usercenter.checkpoint.com/usercenter/index.jsp)
+    * [Advisories](//advisories.checkpoint.com/advisories/)
+  * Company
+
+    * [About Us](//www.checkpoint.com/about-us/)
+    * [Leadership](//www.checkpoint.com/about-us/leadership/)
+    * [Careers](//careers.checkpoint.com/)
+    * [Investor Relations](//www.checkpoint.com/about-us/investor-relations/)
+    * [Newsroom](//www.checkpoint.com/press-releases/)
+    * [Trust Center](//www.checkpoint.com/trust-point/)
+    * [Contact Us](//www.checkpoint.com/about-us/contact-check-point/)
+    * [Legal](//www.checkpoint.com/legal/)
+
+  * Contact Sales
+
+    * North America: [+1-866-488-6691](tel:1-866-488-6691)
+    * International: [+44-125-333-5558](tel:44-125-333-5558)
+  * Contact Support
+
+    * North America: [+1-888-361-5030](tel:1-888-361-5030)
+    * International: [+44-114-478-2845](tel:44-114-478-2845)
+
+Follow Us
+
+[](//www.instagram.com/checkpointsoftware/ "Check Point Software Instagram")
+[](//www.facebook.com/checkpointsoftware "Check Point Software Facebook")
+[](//twitter.com/checkpointsw "Check Point Software X \(Twitter\)")
+[](//www.linkedin.com/company/check-point-software-technologies "Check Point
+Software LinkedIn") [](//www.youtube.com/user/CPGlobal "Check Point Software
+YouTube")
+
+WE SECURE YOUR AI TRANSFORMATION
+
+(C)1994- Check Point Software Technologies Ltd. All rights reserved.
+
+  * [Copyright](//www.checkpoint.com/copyright/)
+  * [Privacy Policy](//www.checkpoint.com/privacy/)
+  * Cookie Settings
+  * [Get the Latest News](//pages.checkpoint.com/subscribe.html)
+

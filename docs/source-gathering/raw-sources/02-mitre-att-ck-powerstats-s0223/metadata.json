@@ -1,0 +1,15 @@
+{
+  "number": 2,
+  "title": "MITRE ATT&CK — POWERSTATS S0223",
+  "url": "https://attack.mitre.org/software/S0223/",
+  "curl_status": "200 https://attack.mitre.org/software/S0223/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 10451  100 10451    0     0  49289      0 --:--:-- --:--:-- --:--:-- 49297",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/02-mitre-att-ck-powerstats-s0223/source.html",
+  "text_file": "docs/source-gathering/raw-sources/02-mitre-att-ck-powerstats-s0223/source.txt",
+  "size_bytes": 84243,
+  "extract_error": ""
+}

@@ -1,0 +1,15 @@
+{
+  "number": 70,
+  "title": "Brandefense — MuddyWater PDF",
+  "url": "https://brandefense.io/wp-content/uploads/2025/10/brandefense.io-muddywater-iran-linked-espionage-group-expanding-global-reach-muddywater-.pdf",
+  "curl_status": "200 https://brandefense.io/wp-content/uploads/2025/10/brandefense.io-muddywater-iran-linked-espionage-group-expanding-global-reach-muddywater-.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  528k    0  528k    0     0  5804k      0 --:--:-- --:--:-- --:--:-- 5811k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/70-brandefense-muddywater-pdf/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/70-brandefense-muddywater-pdf/source.txt",
+  "size_bytes": 789517,
+  "extract_error": "Syntax Warning: Invalid Font Weight\nSyntax Warning: Invalid Font Weight\nSyntax Warning: Invalid Font Weight"
+}

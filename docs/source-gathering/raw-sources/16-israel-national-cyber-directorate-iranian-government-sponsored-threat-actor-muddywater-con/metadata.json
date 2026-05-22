@@ -1,0 +1,19 @@
+{
+  "number": 16,
+  "title": "Israel National Cyber Directorate — Iranian Government-Sponsored Threat Actor MuddyWater Conducts Cyber Attack Against Israel",
+  "url": "https://www.gov.il/en/pages/_muddywater",
+  "curl_status": "403 https://www.gov.il/en/pages/_muddywater",
+  "http_status": "403",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  2089    0  2089    0     0  33095      0 --:--:-- --:--:-- --:--:-- 33158",
+  "saved": true,
+  "http_ok": false,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/16-israel-national-cyber-directorate-iranian-government-sponsored-threat-actor-muddywater-con/source.html",
+  "text_file": "docs/source-gathering/raw-sources/16-israel-national-cyber-directorate-iranian-government-sponsored-threat-actor-muddywater-con/source.txt",
+  "size_bytes": 5465,
+  "extract_error": "",
+  "fallback_reader_url": "https://r.jina.ai/http://r.jina.ai/http://https://www.gov.il/en/pages/_muddywater",
+  "fallback_reader_status": "200 6092",
+  "fallback_reader_file": "docs/source-gathering/raw-sources/16-israel-national-cyber-directorate-iranian-government-sponsored-threat-actor-muddywater-con/fallback-reader.txt",
+  "fallback_reader_useful": true
+}

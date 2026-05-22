@@ -1,0 +1,15 @@
+{
+  "number": 23,
+  "title": "Microsoft — Exposing POLONIUM activity and infrastructure targeting Israeli organizations",
+  "url": "https://www.microsoft.com/en-us/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/",
+  "curl_status": "200 https://www.microsoft.com/en-us/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n100 53420    0 53420    0     0  41137      0 --:--:--  0:00:01 --:--:-- 41155",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/23-microsoft-exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/source.html",
+  "text_file": "docs/source-gathering/raw-sources/23-microsoft-exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/source.txt",
+  "size_bytes": 303909,
+  "extract_error": ""
+}

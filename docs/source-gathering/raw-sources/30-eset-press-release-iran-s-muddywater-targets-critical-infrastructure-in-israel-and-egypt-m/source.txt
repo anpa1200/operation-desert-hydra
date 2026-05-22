@@ -1,0 +1,420 @@
+[](/uk/ "Go to ESET Homepage")
+
+MenuClose
+
+[ For Home ](/uk/home/protection-plans/)
+
+[ For Business ](/uk/business/)
+
+[ For Partners ](/uk/partner/)
+
+[ About ](/uk/about/)
+
+[ About ESET ](/uk/about-3/about-eset/)
+
+About ESET
+
+**Discover ESET**
+
+Our vision, values and technology.
+
+About ESET
+
+**[About ESET](/uk/about/)**
+
+Over 30 years of digital security innovation.
+
+**[Social Impact](/uk/about/socially-responsible/)**
+
+[ Newsroom ](/uk/newsroom-1-1/)
+
+Newsroom
+
+**Newsroom**
+
+Get the latest ESET updates.
+
+Newsroom
+
+**[Press releases](/uk/about/newsroom/press-releases-listing/)**
+
+Company news at your fingertips.
+
+**[Press contacts](/uk/about/newsroom/press-contacts/)**
+
+Contact information for media and agencies.
+
+[ Careers ](/uk/about-3/careers/)
+
+Careers
+
+**Careers**
+
+Build a career with ESET.
+
+Careers
+
+**[Careers at ESET](/uk/about/career/)**
+
+Progress your career with ESET.
+
+**[Life at ESET](/uk/about/career/vacancies/)**
+
+**[Meet the team](/uk/about/career/meet-the-team/)**
+
+**[Benefits, Values& Culture](/uk/about/career/benefits/)**
+
+**[Open positions](https://jobs.eset.com/en-
+UK/ESET_External?locations=2ccac49289a510c14c9f2d4a3551b9a8)**
+
+[ Contact ](/uk/about/contact/)
+
+[ About ](/uk/about/)
+
+[ Blog ](/uk/about/newsroom/corporate-blog/)
+
+[ Shop ](/uk/catalogue/)
+
+[ UNITED KINGDOM ](/uk/international-2/)
+
+# Iran’s MuddyWater targets critical infrastructure in Israel and Egypt,
+masquerades as Snake game – ESET Research discovers
+
+02.12.2025
+
+[Next story __](/uk/about/newsroom/press-releases/eset-threat-
+report-h2-2025-uk/)
+
+02.12.2025
+
+  * ESET researchers have identified new MuddyWater (Iran-aligned cyberespionage group) activity primarily targeting critical infrastructure organisations in Israel, with one confirmed target in Egypt
+  * The group used more advanced techniques to deploy MuddyViper, a new backdoor, by using a loader (Fooder) that reflectively loads it into memory and executes it.
+  * ESET provides technical analyses of the tools used in this campaign.
+
+MONTREAL, BRATISLAVA — December 2, 2025 — ESET researchers have identified new
+MuddyWater activity primarily targeting organisations in Israel, with one
+confirmed target in Egypt. The victims in Israel were in the technology,
+engineering, manufacturing, local government, and educational sectors.
+MuddyWater, also referred to as Mango Sandstorm or TA450, is an Iran-aligned
+cyberespionage group known for its persistent targeting of government and
+critical infrastructure sectors, often leveraging custom malware and publicly
+available tools, and has links to the Ministry of Intelligence and National
+Security of Iran. In this campaign, the attackers deployed a set of previously
+undocumented, custom tools with the objective of improving defence evasion and
+persistence. New backdoor MuddyViper enables the attackers to collect system
+information, execute files and shell commands, transfer files, and exfiltrate
+Windows login credentials and browser data. The campaign leverages additional
+credential stealers. Among these tools is Fooder, a custom loader that
+masquerades as the classic Snake game.
+
+In this campaign, initial access is typically achieved through spearphishing
+emails, often containing PDF attachments that link to installers for remote
+monitoring and management (RMM) software hosted on free file-sharing platforms
+such as OneHub, Egnyte, or Mega. These links lead to the download of tools
+including Atera, Level, PDQ, and SimpleHelp. Among the tools deployed by
+MuddyWater operators is also the VAX One backdoor, named after the legitimate
+software which it impersonates: Veeam, AnyDesk, Xerox, and the OneDrive
+updater service.
+
+The group’s continued reliance on this familiar playbook makes its activity
+relatively easy to detect and block. However, in this case, the group also
+used more advanced techniques to deploy MuddyViper, a new backdoor, by using a
+loader (Fooder) that reflectively loads MuddyViper into memory and executes
+it. Several versions of Fooder masquerade as the classic Snake game, hence the
+designation, MuddyViper. Another notable characteristic of Fooder is its
+frequent use of a custom delay function that implements the core logic of the
+Snake game, combined with “Sleep” API calls. These features are intended to
+delay execution in an attempt to hide malicious behaviour from automated
+analysis systems. Additionally, MuddyWater developers adopted CNG, the next-
+generation Windows cryptographic API, which is unique for Iran-aligned groups
+and somewhat atypical across the broader threat landscape. During this
+campaign, the operators deliberately avoided hands-on-keyboard interactive
+sessions, which is a historically noisy technique often characterised by
+mistyped commands. Thus, while some components remain noisy and easily
+detected, as is typical for MuddyWater, overall this campaign shows signs of
+technical evolution – increased precision, strategic targeting, and a more
+advanced toolset.
+
+The post-compromise toolset also includes multiple credential stealers: CE-
+Notes, which targets Chromium-based browsers; LP-Notes, which stages and
+verifies stolen credentials; and Blub, which steals login data from Chrome,
+Edge, Firefox, and Opera browsers.
+
+MuddyWater was first introduced to the public in 2017 by Unit 42, whose
+description of the group’s activity is consistent with ESET’s profiling – a
+focus on cyberespionage, the use of malicious documents as attachments
+designed to prompt users to enable macros and bypass security controls, and
+primarily targeting entities located in the Middle East.
+
+Notable past activities include Operation Quicksand (2020), a cyberespionage
+campaign targeting Israeli government entities and telecommunications
+organisations, which exemplifies the group’s evolution from basic phishing
+tactics to more advanced, multistage operations; and a campaign targeting
+political groups and organisations in Turkey, demonstrating the group’s
+geopolitical focus, its ability to adapt social engineering tactics to local
+contexts, and reliance on modular malware and flexible C&C infrastructure.
+
+ESET has documented multiple campaigns attributed to MuddyWater that highlight
+the group’s evolving toolset and shifting operational focus. In March and
+April 2023, MuddyWater targeted an unidentified victim in Saudi Arabia, and
+the group conducted a campaign in January and February 2025 that was notable
+for its operational overlap with Lyceum (an OilRig subgroup). This cooperation
+suggests that MuddyWater may be acting as an initial access broker for other
+Iran-aligned groups.
+
+For a more detailed analysis of the latest MuddyWater campaign, check out the
+latest ESET Research blogpost “[MuddyWater: Snakes by the
+riverbank](https://www.welivesecurity.com/en/eset-research/muddywater-snakes-
+riverbank/)” on WeLiveSecurity.com. Make sure to follow [ESET Research on
+Twitter (today known as X)](https://twitter.com/ESETresearch),
+[BlueSky](https://bsky.app/profile/esetresearch.bsky.social), and
+[Mastodon](https://infosec.exchange/@ESETresearch) for the latest news from
+ESET Research.
+
+_**Overview of Fooder loading MuddyViper or other supported payloads.**_
+
+![](https://web-
+assets.eset.com/fileadmin/ESET/INT/OG_images/ESET_Research/MuddyWater_Snake.png)
+
+## **About ESET**
+
+ESET® provides cutting-edge digital security to prevent attacks before they
+happen. By combining the power of AI and human expertise, ESET stays ahead of
+known and emerging cyberthreats — securing businesses, critical
+infrastructure, and individuals. Whether it’s endpoint, cloud or mobile
+protection, our AI-native, cloud-first solutions and services remain highly
+effective and easy to use. ESET technology includes robust detection and
+response, ultra-secure encryption, and multifactor authentication. With 24/7
+real-time defense and strong local support, we keep users safe and businesses
+running without interruption. An ever-evolving digital landscape demands a
+progressive approach to security: ESET is committed to world-class research
+and powerful threat intelligence, backed by R&D centers and a strong global
+partner network. For more information, visit [www.eset.com/uk
+](https://www.eset.com/uk/)or follow us on
+[LinkedIn](https://www.linkedin.com/company/eset-uk/), and
+[Facebook](https://www.facebook.com/ESETUK.official).
+
+  * [OlderESET Research: Chinese PlushDaemon group compromises network devices for adversary-in-the-middle attacks __](/uk/about/newsroom/press-releases/eset-research-chinese-plushdaemon-group-compromises-network-devices-for-adversary-in-the-middle-attacks-uk/)
+  * [Newer ESET Threat Report: AI-driven attacks on the rise; NFC threats increase and evolve in sophistication __](/uk/about/newsroom/press-releases/eset-threat-report-h2-2025-uk/)
+
+## Other Press Releases
+
+  * ### [ ESET doubles down on tailored solutions with ESET PRIVATE on a global scale ](/uk/about/newsroom/press-releases/about/newsroom/products/eset-private-global-launch-uk/)
+
+  * ### [ ESET enhances its European footprint with new ESET Nordics offices ](/uk/about/newsroom/press-releases/new-eset-nordics-offices-uk/)
+
+  * ### [ ESET Research analysed a critical flaw in Windows Imaging Component, which abuses JPG files ](/uk/about/newsroom/press-releases/eset-research-analyzed-a-critical-flaw-in-windows-imaging-component-which-abuses-jpg-files-uk/)
+
+  * ### [ New Chinese group LongNosedGoblin deploys cyberespionage tools in Southeast Asia and Japan, ESET Research discovers ](/uk/about/newsroom/press-releases/chinese-group-longnosedgoblin-cyberespionage-eset-research-uk/)
+
+  * [UK](/uk/ "UK")
+  * [About ESET](/uk/about/ "About ESET")
+  * [Newsroom](/uk/about/newsroom/ "Newsroom")
+  * [Press Releases](/uk/about/newsroom/press-releases-listing/ "Press Releases")
+  * Iran’s MuddyWater targets critical infrastructure in Israel and Egypt, masquerades as Snake game – ESET Research discovers
+
+[Trustpilot](https://www.trustpilot.com/review/eset.com/uk)
+
+[](/uk/)
+
+**ESET UK**  
+Third Floor, Ocean 80  
+80 Holdenhurst Road  
+Bournemouth  
+BH8 8AQ  
+  
+Phone: 01202 405 405  
+Business hours:  
+Mon - Fri / 08:30 - 17:30  
+[More info](/uk/about/contact/)
+
+[ United Kingdom (EN) ](/uk/partner/find/)
+
+####  For home
+
+  * [All solutions for home](/uk/catalogue/#home-all-products)
+  * [ESET HOME Security plans](/uk/home/protection-plans/)
+  * [Small office security](/uk/home/small-business-security/)
+  * [Android Security](/uk/home/mobile-security-android/)
+  * [NOD32 Antivirus](/uk/home/nod32-antivirus/)
+  * [Identity & Privacy Protection](/uk/home/digital-privacy-protection/)
+  * [Online virus scanner](/uk/home/online-scanner/)
+  * [Link checker](/uk/home/link-checker/)
+  * [Subscription flexibility](https://help.eset.com/home_eset/en-US/products_features.html)
+  * [Why ESET](/uk/home/why-eset/)
+
+####  Downloads for home
+
+  * [Download free trial](/uk/home/free-trial/)
+  * [I have a subscription](/uk/download-home/)
+
+####  For business
+
+  * [Small & Medium business security](/uk/business/small-and-medium/)
+  * [Enterprise security](/uk/business/enterprise/)
+  * [Services for business](/uk/business/services/)
+  * [Watch demo](/uk/business/demo/)
+  * [Customer stories](/uk/business/customer-stories/)
+
+####  Downloads for business
+
+  * [Request business trial](/uk/business-trial-form/)
+  * [I have a subscription](/uk/business/download/)
+
+
+
+####  Partnership
+
+  * [Partner with ESET](/uk/partner/)
+  * [Reseller Program](/uk/partner/reseller/)
+  * [MSP Program](/uk/partner/msp/)
+  * [Technology Alliance](/uk/partner/technology-alliance/)
+  * [Online Affiliates](/uk/partner/online-affiliates/)
+  * [Find a Partner](/uk/partner/finder/)
+  * [Refer a Friend](https://refer.eset.com/footeruk)
+
+####  Support
+
+  * [Existing customers](/uk/support/existing-customers/)
+  * [Support for home](https://support.eset.com/en/home)
+  * [Support for business](https://support.eset.com/en/business)
+  * [Security Forum](https://forum.eset.com/)
+  * [Renew your subscription](https://buy.eset.com/uk/cart/login)
+  * [ESET Status Portal](https://status.eset.com/)
+
+####  About ESET
+
+  * [About us](/uk/about/)
+  * [Newsroom](/uk/about/newsroom/)
+  * [Technology](/uk/about/technology/)
+  * [Blog](/uk/about/newsroom/corporate-blog/)
+  * [Careers](/uk/about/career/)
+
+####  Helpful Info
+
+  * [What is antivirus software?](/uk/what-is-antivirus/)
+  * [Types of Threats](/uk/types-of-cyber-threats/)
+  * [Security Top Tips](/uk/top-tips/)
+  * [Modern Parenting](/uk/modern-parenting-rules/)
+  * [Working From Home](/uk/business/remote-workforce/)
+
+#### [ For home ](/uk/footer/#for-home)
+
+  * [All solutions for home](/uk/catalogue/#home-all-products)
+  * [ESET HOME Security plans](/uk/home/protection-plans/)
+  * [Small office security](/uk/home/small-business-security/)
+  * [Android Security](/uk/home/mobile-security-android/)
+  * [NOD32 Antivirus](/uk/home/nod32-antivirus/)
+  * [Identity & Privacy Protection](/uk/home/digital-privacy-protection/)
+  * [Online virus scanner](/uk/home/online-scanner/)
+  * [Link checker](/uk/home/link-checker/)
+  * [Subscription flexibility](https://help.eset.com/home_eset/en-US/products_features.html)
+  * [Why ESET](/uk/home/why-eset/)
+
+####  Downloads for home
+
+  * [Download free trial](/uk/home/free-trial/)
+  * [I have a subscription](/uk/download-home/)
+
+#### [ For business ](/uk/footer/#for-business)
+
+  * [Small & Medium business security](/uk/business/small-and-medium/)
+  * [Enterprise security](/uk/business/enterprise/)
+  * [Services for business](/uk/business/services/)
+  * [Watch demo](/uk/business/demo/)
+  * [Customer stories](/uk/business/customer-stories/)
+
+####  Downloads for business
+
+  * [Request business trial](/uk/business-trial-form/)
+  * [I have a subscription](/uk/business/download/)
+
+
+
+#### [ Partnership ](/uk/footer/#partnership)
+
+  * [Partner with ESET](/uk/partner/)
+  * [Reseller Program](/uk/partner/reseller/)
+  * [MSP Program](/uk/partner/msp/)
+  * [Technology Alliance](/uk/partner/technology-alliance/)
+  * [Online Affiliates](/uk/partner/online-affiliates/)
+  * [Find a Partner](/uk/partner/finder/)
+  * [Refer a Friend](https://refer.eset.com/footeruk)
+
+#### [ Helpful Info ](/uk/footer/#helpful-info)
+
+  * [What is antivirus software?](/uk/what-is-antivirus/)
+  * [Types of Threats](/uk/types-of-cyber-threats/)
+  * [Security Top Tips](/uk/top-tips/)
+  * [Modern Parenting](/uk/modern-parenting-rules/)
+  * [Working From Home](/uk/business/remote-workforce/)
+
+#### [ Support ](/uk/footer/#support)
+
+  * [Existing customers](/uk/support/existing-customers/)
+  * [Support for home](https://support.eset.com/en/home)
+  * [Support for business](https://support.eset.com/en/business)
+  * [Security Forum](https://forum.eset.com/)
+  * [Renew your subscription](https://buy.eset.com/uk/cart/login)
+  * [ESET Status Portal](https://status.eset.com/)
+
+#### [ About ESET ](/uk/footer/#about-eset)
+
+  * [About us](/uk/about/)
+  * [Newsroom](/uk/about/newsroom/)
+  * [Technology](/uk/about/technology/)
+  * [Blog](/uk/about/newsroom/corporate-blog/)
+  * [Careers](/uk/about/career/)
+
+[](/uk/)
+
+**ESET UK**  
+Third Floor, Ocean 80  
+80 Holdenhurst Road  
+Bournemouth  
+BH8 8AQ  
+  
+Phone: 01202 405 405  
+Business hours:  
+Mon - Fri / 08:30 - 17:30  
+[More info](/uk/about/contact/)
+
+[ United Kingdom (EN) ](/uk/partner/find/)
+
+![](https://web-
+assets.eset.com/fileadmin/_processed_/7/8/csm_Visa_92b49a9f74.png)
+
+![](https://web-assets.eset.com/fileadmin/_processed_/f/a/csm_Visa-
+E_84f2f70d0b.png)
+
+![](https://web-
+assets.eset.com/fileadmin/_processed_/0/5/csm_Master_435681c219.png)
+
+![](https://web-
+assets.eset.com/fileadmin/_processed_/7/5/csm_Maestro_cdc7d28aa8.png)
+
+* * *
+
+[](https://www.facebook.com/ESETUK.official "Facebook")
+
+[](https://www.youtube.com/user/esetuk "Youtube")
+
+[](https://twitter.com/esetuk "Twitter")
+
+[](https://www.linkedin.com/company/eset-uk/ "Linkedin")
+
+  * **[Contact](/uk/about/contact/)**
+  * **[Policy Hub](/uk/policy-hub/)**
+  * [**Manage Cookies**](/uk/)
+  * **[About](/uk/about/)**
+  * **[Blog](/uk/about/newsroom/corporate-blog/)**
+  * **[Report vulnerabilities](/uk/security-vulnerability-reporting/)**
+  * **[Sitemap](/uk/sitemap/)**
+
+#####  © 1992 - 2024 ESET, spol. s r.o. - All rights reserved. Trademarks used
+therein are trademarks or registered trademarks of ESET, spol. s r.o. or ESET
+United Kingdom. All other names and brands are registered trademarks of their
+respective companies.
+
+5.87.0.mas.5a081815.awus
+

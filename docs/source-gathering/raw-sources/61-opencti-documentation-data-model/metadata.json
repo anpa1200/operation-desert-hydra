@@ -1,0 +1,15 @@
+{
+  "number": 61,
+  "title": "OpenCTI documentation — Data model",
+  "url": "https://docs.opencti.io/latest/usage/data-model/",
+  "curl_status": "200 https://docs.opencti.io/latest/usage/data-model/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 15357  100 15357    0     0  66820      0 --:--:-- --:--:-- --:--:-- 67061",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/61-opencti-documentation-data-model/source.html",
+  "text_file": "docs/source-gathering/raw-sources/61-opencti-documentation-data-model/source.txt",
+  "size_bytes": 114452,
+  "extract_error": ""
+}

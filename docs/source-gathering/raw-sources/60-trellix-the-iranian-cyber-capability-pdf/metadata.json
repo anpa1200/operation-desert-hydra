@@ -1,0 +1,15 @@
+{
+  "number": 60,
+  "title": "Trellix — The Iranian Cyber Capability PDF",
+  "url": "https://mirror.gpmidi.net/vx-underground/Malware%20Analysis/2024/2024-09-19%20-%20The%20Iranian%20Cyber%20Capability/Paper/2024-09-19%20-%20The%20Iranian%20Cyber%20Capability.pdf",
+  "curl_status": "200 https://mirror.gpmidi.net/vx-underground/Malware%20Analysis/2024/2024-09-19%20-%20The%20Iranian%20Cyber%20Capability/Paper/2024-09-19%20-%20The%20Iranian%20Cyber%20Capability.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 2691k  100 2691k    0     0  15.3M      0 --:--:-- --:--:-- --:--:-- 15.3M",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/60-trellix-the-iranian-cyber-capability-pdf/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/60-trellix-the-iranian-cyber-capability-pdf/source.txt",
+  "size_bytes": 2755652,
+  "extract_error": ""
+}

@@ -1,0 +1,15 @@
+{
+  "number": 30,
+  "title": "ESET press release — Iran's MuddyWater targets critical infrastructure in Israel and Egypt, masquerades as Snake game",
+  "url": "https://www.eset.com/uk/about/newsroom/press-releases/iran-muddywater-critical-infrastructure-israel-egypt-snake-game-eset-research-uk/",
+  "curl_status": "200 https://www.eset.com/uk/about/newsroom/press-releases/iran-muddywater-critical-infrastructure-israel-egypt-snake-game-eset-research-uk/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 33244  100 33244    0     0   172k      0 --:--:-- --:--:-- --:--:--  172k\n100 33244  100 33244    0     0   172k      0 --:--:-- --:--:-- --:--:--  172k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/30-eset-press-release-iran-s-muddywater-targets-critical-infrastructure-in-israel-and-egypt-m/source.html",
+  "text_file": "docs/source-gathering/raw-sources/30-eset-press-release-iran-s-muddywater-targets-critical-infrastructure-in-israel-and-egypt-m/source.txt",
+  "size_bytes": 122206,
+  "extract_error": ""
+}

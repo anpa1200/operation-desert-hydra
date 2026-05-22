@@ -1,0 +1,15 @@
+{
+  "number": 15,
+  "title": "Group-IB — MuddyWater APT Group Profile",
+  "url": "https://www.group-ib.com/masked-actors/muddywater/",
+  "curl_status": "200 https://www.group-ib.com/masked-actors/muddywater/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 26105    0 26105    0     0  76397      0 --:--:-- --:--:-- --:--:-- 76330\n100 55509    0 55509    0     0   125k      0 --:--:-- --:--:-- --:--:--  124k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/15-group-ib-muddywater-apt-group-profile/source.html",
+  "text_file": "docs/source-gathering/raw-sources/15-group-ib-muddywater-apt-group-profile/source.txt",
+  "size_bytes": 450665,
+  "extract_error": ""
+}

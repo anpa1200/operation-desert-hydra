@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Etag: "1779417713"
+Last-Modified: Fri, 22 May 2026 02:41:53 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 42782
+Content-Encoding: gzip
+Cache-Control: max-age=85600, public
+Expires: Sat, 23 May 2026 06:20:54 GMT
+Date: Fri, 22 May 2026 06:34:14 GMT
+X-Permitted-Cross-Domain-Policies: none
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Referrer-Policy: origin-when-cross-origin
+Feature-Policy: geolocation 'self'
+Content-Security-Policy: default-src 'self' blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://www.google-analytics.com https://www.googleoptimize.com https://www.googletagmanager.com https://munchkin.marketo.net https://app-abj.marketo.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://geoip-js.com https://ads.avocet.io https://trk.techtarget.com https://j.6sc.co https://tags.srv.stackadapt.com https://ads.avct.cloud https://js.driftt.com https://js-agent.newrelic.com https://bam.nr-data.net https://cdn.jsdelivr.net https://js.adsrvr.org https://go.affec.tv https://bat.bing.com https://s7.addthis.com https://m.addthis.com https://z.moatads.com https://snap.licdn.com https://tracking.g2crowd.com https://connect.facebook.net *.visualwebsiteoptimizer.com https://app.vwo.com *.sharethis.com https://unpkg.com https://d1hgczpbubj217.cloudfront.net https://app-static.turtl.co https://js.zi-scripts.com *.mutinycdn.com https://www.clarity.ms https://scripts.clarity.ms *.roundprinceweb.com https://www.redditstatic.com https://go.proofpoint.com https://www.google.com https://www.gstatic.com https://www.buzzsprout.com *.vimeocdn.com https://storage.googleapis.com https://js.navattic.com *.qualified.com https://wpaassets.blob.core.windows.net *.youtube.com vimeo.com *.vimeo.com cdn.cookielaw.org *.onetrust.com *.proofpoint.com https://live.rezync.com; object-src 'self'; style-src 'self' 'unsafe-inline' *; img-src 'self' 'unsafe-inline' data: blob: *; media-src 'self' *.qualified.com; frame-src 'self' 'unsafe-inline' *; frame-ancestors 'self' app.mutinyhq.com; child-src 'self' 'unsafe-inline' blob: *.qualified.com; worker-src 'self' blob:; font-src 'self' 'unsafe-inline' data: *; connect-src 'self' 'unsafe-inline' *; report-uri /report-csp-violation
+Set-Cookie: visid_incap_177663=GUpkZI3lTyaYqKTXcwvzO+b4D2oAAAAAQUIPAAAAAABuIHOO1uOWt1L6xnr6NFPM; expires=Fri, 21 May 2027 15:40:52 GMT; HttpOnly; path=/; Domain=.proofpoint.com; Secure; SameSite=None
+Set-Cookie: incap_ses_3302_177663=Q8O+E7Fhf1hbGlOpnw/TLeb4D2oAAAAAXLo7EDJ7aIAY8aY5Z2wikg==; path=/; Domain=.proofpoint.com; Secure; SameSite=None
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-CDN: Imperva
+X-Iinfo: 35-14437739-0 0CNN RT(1779431654491 62) q(0 -1 -1 -1) r(0 -1)
+

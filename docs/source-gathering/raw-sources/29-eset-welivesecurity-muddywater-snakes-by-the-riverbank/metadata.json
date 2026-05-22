@@ -1,0 +1,15 @@
+{
+  "number": 29,
+  "title": "ESET / WeLiveSecurity — MuddyWater: Snakes by the riverbank",
+  "url": "https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/",
+  "curl_status": "200 https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 38616  100 38616    0     0   148k      0 --:--:-- --:--:-- --:--:--  148k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/29-eset-welivesecurity-muddywater-snakes-by-the-riverbank/source.html",
+  "text_file": "docs/source-gathering/raw-sources/29-eset-welivesecurity-muddywater-snakes-by-the-riverbank/source.txt",
+  "size_bytes": 173423,
+  "extract_error": ""
+}

@@ -1,0 +1,15 @@
+{
+  "number": 36,
+  "title": "The Hacker News — MuddyWater Targets MENA Organizations with GhostFetch, CHAR, and HTTP_VIP",
+  "url": "https://thehackernews.com/2026/02/muddywater-targets-mena-organizations.html",
+  "curl_status": "200 https://thehackernews.com/2026/02/muddywater-targets-mena-organizations.html",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 53211    0 53211    0     0   120k      0 --:--:-- --:--:-- --:--:--  120k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/36-the-hacker-news-muddywater-targets-mena-organizations-with-ghostfetch-char-and-http-vip/source.html",
+  "text_file": "docs/source-gathering/raw-sources/36-the-hacker-news-muddywater-targets-mena-organizations-with-ghostfetch-char-and-http-vip/source.txt",
+  "size_bytes": 162016,
+  "extract_error": ""
+}

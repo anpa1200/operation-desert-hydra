@@ -1,0 +1,266 @@
+[ ![Masked Actors](https://www.group-ib.com/wp-content/themes/gib-
+theme/assets/images/mm-page/masked-actors.svg) ](/masked-actors)
+
+[ ![](https://www.group-ib.com/wp-content/themes/gib-theme/assets/images/mm-
+single-arrow.svg) ](/masked-actors)
+
+[ GROUP-IB.COM ↗ ](/)
+
+![](https://www.group-ib.com/wp-content/uploads/muddywater.png)
+
+06 MuddyWater
+
+# MuddyWater
+
+Region
+
+Middle East and Africa
+
+Industries
+
+Financial Services,
+
+Government,
+
+Healthcare,
+
+Logistics & Transportation,
+
+Science & Engineering,
+
+Software & IT
+
+First seen
+
+2017
+
+Cybercrime
+
+Intelligence gathering and cyberespionage
+
+Heritage
+
+Also known by the aliases TA450 and Seedworm
+
+Categorizations
+
+Nation-state adversary
+
+Aliases
+
+TEMP.Zagros, Seedworm, Static Kitten, SectorD02, TA450, Boggy Serpens,
+MERCURY, Mango Sandstorm, Earth Vetala, Mercury, Cobalt Ulster, ATK51,
+T-APT-14, Yellow Nix
+
+About
+
+MuddyWater is another hacker group of cyber spies. Believed to be a subset of
+Iran’s Ministry of Intelligence and Security (MOIS), these Masked Actors
+target government entities and various enterprises. MuddyWater made a mistake
+in 2019, allowing Group-IB experts to identify the threat actor’s real IP
+address — located in Tehran. Nevertheless, they’re still at large.
+
+Learn more about MuddyWater from Group-IB’s research
+
+[Blog "Catching fish in muddy waters"
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/themes/gib-theme/assets/images/link-
+arrow.svg)](https://www.group-ib.com/blog/muddywater/)
+
+[Blog "ClickFix: The Social Engineering Technique Hackers Use to Manipulate
+Victims"
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/themes/gib-theme/assets/images/link-
+arrow.svg)](https://www.group-ib.com/blog/clickfix-the-social-engineering-
+technique-hackers-use-to-manipulate-victims/)
+
+[Blog "SimpleHarm: Tracking MuddyWater’s infrastructure"
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/themes/gib-theme/assets/images/link-
+arrow.svg)](https://www.group-ib.com/blog/muddywater-infrastructure/)
+
+[Blog "We find many things that others do not even see"
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/themes/gib-theme/assets/images/link-
+arrow.svg)](https://www.group-ib.com/blog/rostovtsev/)
+
+[META Intelligence Insights Report, December 2024
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/themes/gib-theme/assets/images/link-
+arrow.svg)](https://www.group-ib.com/resources/research-hub/intelligence-
+insights-meta-december-2024/)
+
+[Blog "Mapping the Infrastructure and Malware Ecosystem of MuddyWater"
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/themes/gib-theme/assets/images/link-
+arrow.svg)](https://www.group-ib.com/blog/muddywater-infrastructure-malware/)
+
+[Podcast "MuddyWater & OilRig: The Cyber Espionage Playbook"
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/themes/gib-theme/assets/images/link-
+arrow.svg)](https://www.group-ib.com/resources/podcasts/masked-
+actors/muddywater-and-oilrig/)
+
+[Blog "Operation Olalampo: Inside MuddyWater’s Latest Campaign"
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/themes/gib-theme/assets/images/link-
+arrow.svg)](https://www.group-ib.com/blog/muddywater-operation-olalampo/)
+
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/muddywater-logo.png)
+
+Victims
+
+A range of government and private organizations across sectors, including
+finance, education, transport, government, military, IT, and healthcare.
+Typically, these victims are in the Middle East, Asia, and NATO-affiliated
+countries, with notable victims in Turkey, Afghanistan, Iraq, and Azerbaijan.
+
+What we know about MuddyWater members
+
+No known identities. Like OilRig above, MuddyWater is an APT group affiliated
+with the Iranian government.
+
+Motivations
+
+Cyber espionage, stealing intelligence that’s in Iran’s national interest via
+phishing campaigns.
+
+Top 10 Masked Actors for 2025
+
+[
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/ransomhub-logo.png) RansomHub
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201384%201701'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/01-ransomhub.png) #1 ](https://www.group-
+ib.com/masked-actors/ransomhub/) [
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/goldfactory-logo.png) GoldFactory
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201384%201701'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/goldfactory.png) #2 ](https://www.group-
+ib.com/masked-actors/goldfactory/) [
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/lazarus-logo.png) Lazarus
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201384%201701'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/lazarus-1.png) #3 ](https://www.group-ib.com/masked-
+actors/lazarus/) [
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/draginforce-logo.png) DragonForce
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201384%201701'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/dragonforce-1.png) #4 ](https://www.group-
+ib.com/masked-actors/dragonforce/) [
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/oilrig-logo.png) Oilrig
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201384%201701'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/oilrig-1.png) #5 ](https://www.group-ib.com/masked-
+actors/oilrig/) [
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/muddywater-logo.png) MuddyWater
+![](https://www.group-ib.com/wp-content/uploads/muddywater.png) #6
+](https://www.group-ib.com/masked-actors/muddywater/) [
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/braincipher-logo.png) Brain Cipher
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201384%201701'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/brain-cipher.png) #7 ](https://www.group-
+ib.com/masked-actors/brain-cipher/) [
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/boolka-logo.png) Boolka
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201384%201701'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/boolka.png) #8 ](https://www.group-ib.com/masked-
+actors/boolka/) [
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20201%20200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/ajina-logo.png) Ajina
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201384%201701'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/ajina.png) #9 ](https://www.group-ib.com/masked-
+actors/ajina/) [
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20200'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/teamtnt-logo.png) Team TNT
+![](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201384%201701'%3E%3C/svg%3E)![](https://www.group-
+ib.com/wp-content/uploads/teamtnt.png) #10 ](https://www.group-ib.com/masked-
+actors/team-tnt/)
+
+[![Cyber Security Services - Group-IB
+logo](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![Cyber
+Security Services - Group-IB logo](/wp-content/themes/gib-
+theme/assets/images/main-logo.svg)](/)
+
+![Scroll to
+top](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![Scroll
+to top](/wp-content/themes/gib-theme/assets/images/Arrow_Forward_Up.svg)
+
+###### Resources
+
+  * [Research Hub](https://www.group-ib.com/resources/research-hub/)
+  * [Success Stories](https://www.group-ib.com/resources/success-stories/)
+  * [Knowledge Hub](https://www.group-ib.com/resources/knowledge-hub/)
+  * [Certificates](https://www.group-ib.com/resources/certificates/)
+  * [Webinars](https://www.group-ib.com/resources/webinars/)
+  * [Podcasts](https://www.group-ib.com/resources/podcasts/)
+  * [Investigations](https://www.group-ib.com/top-investigations/)
+  * [FAQ](https://www.group-ib.com/faq/)
+  * [Ransomware Notes](https://www.group-ib.com/resources/ransomware-notes/)
+  * [AI Cybersecurity Hub](https://www.group-ib.com/ai-hub/)
+
+###### Products
+
+  * [Threat Intelligence](https://www.group-ib.com/products/threat-intelligence/)
+  * [Fraud Protection](https://www.group-ib.com/products/fraud-protection/)
+  * [Managed XDR](https://www.group-ib.com/products/managed-xdr/)
+  * [Attack Surface Management](https://www.group-ib.com/products/attack-surface-management/)
+  * [Digital Risk Protection](https://www.group-ib.com/products/digital-risk-protection/)
+  * [Business Email Protection](https://www.group-ib.com/products/business-email-protection/)
+  * [Cyber Fraud Intelligence Platform](https://www.group-ib.com/products/cyber-fraud-intelligence-platform/)
+  * [Unified Risk Platform](https://www.group-ib.com/products/unified-risk-platform/)
+  * [Integrations](https://www.group-ib.com/integrations/)
+
+###### Partners
+
+  * [Partner Program](https://www.group-ib.com/partner-program/)
+  * [MSSP and MDR Partner Program](https://www.group-ib.com/mssp-and-mdr-partner-program/)
+  * [Technology Partners](https://www.group-ib.com/technology-partners/)
+  * [Partner Locator](https://www.group-ib.com/partners/)
+
+###### Company
+
+  * [About Group-IB](https://www.group-ib.com/about-us/)
+  * [Team](https://www.group-ib.com/team/)
+  * [CERT-GIB](https://www.group-ib.com/services/cert/)
+  * [Careers](https://www.group-ib.com/careers/)
+  * [Internship](https://www.group-ib.com/careers/internship/)
+  * [Academic Aliance](https://www.group-ib.com/academic-alliance/)
+  * [Sustainability](https://www.group-ib.com/sustainability/)
+  * [Media Center](https://www.group-ib.com/media-center/)
+  * [Contact](https://www.group-ib.com/contacts/)
+
+[Subscription plans](/subscriptions/managed-xdr/)
+
+[ Services ](/services/)
+
+[ Resource Center  ](/resources)
+
+Subscribe to stay up to date with the latest cyber threat trends
+
+Contact
+
+  * APAC: [+65 3159 3798](tel:+6531593798)
+  * EU & NA: [+31 20 226 90 90](tel:+31202269090)
+  * MEA: [+971 4 568 1785](tel:+97145681785)
+
+[[email protected]](/cdn-cgi/l/email-
+protection#dfb6b1b9b09fb8adb0aaaff2b6bdf1bcb0b2)
+
+  * [ ![Group-IB on Twitter](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![Group-IB on Twitter](/wp-content/themes/gib-theme/assets/images/new-soc-icon/x.svg) ](https://twitter.com/GroupIB)
+  * [ ![Group-IB on LinkedIn](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![Group-IB on LinkedIn](/wp-content/themes/gib-theme/assets/images/new-soc-icon/linkedin.svg) ](https://www.linkedin.com/company/1382013/)
+  * [ ![Group-IB on Instagram](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![Group-IB on Instagram](/wp-content/themes/gib-theme/assets/images/instagram-icon.svg) ](https://instagram.com/groupibhq/)
+  * [ ![Group-IB on Facebook](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![Group-IB on Facebook](/wp-content/themes/gib-theme/assets/images/new-soc-icon/facebook.svg) ](https://www.facebook.com/groupibHQ)
+  * [ ![Group-IB on Telegram](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![Group-IB on Telegram](/wp-content/themes/gib-theme/assets/images/new-soc-icon/telegram.svg) ](https://t.me/Group_IB)
+  * [ ![Group-IB on Discord](data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E)![Group-IB on Discord](/wp-content/themes/gib-theme/assets/images/new-soc-icon/discord.svg) ](https://discord.com/invite/QSy3XqjFsh)
+
+© 2003 – 2026 Group-IB is a global leader in the fight against cybercrime,
+protecting customers around the world by preventing breaches, eliminating
+fraud and protecting brands.
+
+  * [Terms of Use](/terms-of-use/)
+  * [Cookie Policy](/cookie-policy/)
+  * [Privacy Policy](/privacy-policy/)
+

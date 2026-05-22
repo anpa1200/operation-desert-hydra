@@ -1,0 +1,15 @@
+{
+  "number": 3,
+  "title": "MITRE ATT&CK — PowGoop S1046",
+  "url": "https://attack.mitre.org/software/S1046/",
+  "curl_status": "200 https://attack.mitre.org/software/S1046/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  7239  100  7239    0     0  24165      0 --:--:-- --:--:-- --:--:-- 24210",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/03-mitre-att-ck-powgoop-s1046/source.html",
+  "text_file": "docs/source-gathering/raw-sources/03-mitre-att-ck-powgoop-s1046/source.txt",
+  "size_bytes": 48577,
+  "extract_error": ""
+}

@@ -1,0 +1,379 @@
+icons/chevron/16px/black
+
+Skip to main content
+
+Please enable JavaScript in your web browser to get the best experience.
+
+[ ![NCSC](/themes/custom/lakes/dist/ncsc-logo-CarDIzNF.svg) Home ](/)
+
+  * [ About NCSC ](/section/about-ncsc/what-we-do)
+  * [ Report an incident ](https://report.ncsc.gov.uk/)
+  * [ Contact us ](/section/about-this-website/contact-us)
+
+Open Search
+
+Menu
+
+  * Advice & guidance 
+
+Back
+
+## Advice & guidance
+
+Our advice & guidance covers a broad range of topics
+
+    * ####  Find information for... 
+
+      * [ You & your family  ](/section/advice-guidance/you-your-family)
+      * [ Small & medium sized organisations  ](/section/advice-guidance/small-medium-sized-organisations)
+      * [ Large organisations  ](/section/advice-guidance/large-organisations)
+      * [ Self employed & sole traders  ](/section/advice-guidance/self-employed-sole-traders)
+      * [ Public sector  ](/section/advice-guidance/public-sector)
+      * [ Cyber security professionals  ](/section/advice-guidance/cyber-security-professionals)
+      * [ All advice and guidance articles  ](/section/advice-guidance/all-articles)
+
+    * ####  Popular topics 
+
+      * [ Active Cyber Defence  ](/section/advice-guidance/all-topics/active-cyber-defence)
+      * [ Critical National Infrastructure (CNI)  ](/section/advice-guidance/all-topics/critical-national-infrastructure-cni)
+      * [ Passwords  ](/section/advice-guidance/all-topics/passwords)
+      * [ Phishing  ](/section/advice-guidance/all-topics/phishing)
+      * [ All topics  ](/section/advice-guidance/all-topics)
+
+    * ####  Other resources 
+
+      * [ Glossary of terms  ](/section/advice-guidance/glossary)
+      * [ Infographics  ](/section/infographics/home)
+      * [ Verify an NCSC contact  ](/guidance/how-to-spot-scammers-claiming-to-be-from-the-ncsc)
+      * [ Heightened cyber threat information  ](/section/keep-up-to-date/heightened-threat)
+      * [ Cyber Governance for Boards  ](/cyber-governance-for-boards/overview)
+
+  * Respond to a cyber attack 
+
+Back
+
+## Respond to a cyber attack
+
+Resources for individuals and organisations in the UK who have experienced an
+online scam or cyber attack.
+
+    * ####  Affecting you or your family 
+
+      * [ Overview  ](/section/respond-recover/you)
+      * [ Hacked account  ](/section/respond-recover/citizen-hacked-accounts)
+      * [ Suspicious messages  ](/section/respond-recover/phishing)
+      * [ Lost money online  ](/section/respond-recover/citizen-shopping-online)
+      * [ Device behaving strangely  ](/section/respond-recover/citizen-infected-devices)
+      * [ View more...  ](/section/respond-recover/you)
+
+    * ####  Affecting your small business 
+
+      * [ Overview  ](/section/respond-recover/sole-small)
+      * [ Suspicious messages  ](/section/respond-recover/phishing)
+      * [ Hacked account  ](/section/respond-recover/sole-hacked-accounts)
+      * [ Business payment fraud  ](/section/respond-recover/sole-business-payment-fraud)
+      * [ Infected device  ](/section/respond-recover/sole-infected-devices)
+      * [ View more...  ](/section/respond-recover/sole-small)
+
+    * ####  Affecting your organisation 
+
+      * [ Overview  ](/section/respond-recover/medium-large)
+      * [ Ransomware attack  ](/section/respond-recover/ml-ransomware-attack)
+      * [ Brand impersonation  ](/section/respond-recover/ml-brand-impersonation)
+      * [ Denial of service (DoS) attack  ](/section/respond-recover/ml-dos)
+      * [ Malware  ](/section/respond-recover/ml-malware)
+      * [ View more...  ](/section/respond-recover/medium-large)
+
+  * Find a product or service 
+
+Back
+
+## Find a product or service
+
+Find a range of products & services from NCSC and certified 3rd party
+suppliers
+
+    * ####  In this section 
+
+      * [ Overview  ](/section/products-services/overview)
+      * [ Browse cyber security services  ](/section/products-services/browse-services)
+      * [ NCSC assured services  ](/section/products-services/assured-services)
+      * [ Assuring technology  ](/section/products-services/assuring-technology)
+      * [ Search assured providers  ](/section/products-services/search)
+      * [ Cyber Essentials  ](/cyberessentials/overview)
+
+    * ####  Useful links 
+
+      * [ Active Cyber Defence services  ](/section/active-cyber-defence/services)
+      * [ MyNCSC  ](/information/myncsc)
+
+  * Education & skills 
+
+Back
+
+## Education & skills
+
+Working with industry, government and academia to support the next generation
+of researchers, students and cyber security professionals
+
+    * ####  Find information for... 
+
+      * [ Schools  ](/section/education-skills/schools)
+      * [ Higher education  ](/section/education-skills/higher-education)
+      * [ Professional skills training  ](/section/education-skills/professional-skills-training)
+      * [ Working with the NCSC  ](/section/education-skills/working-with-the-ncsc)
+      * [ Research & academia  ](/section/education-skills/research-and-academia)
+
+    * ####  Education & academia resources 
+
+      * [ CyberFirst  ](/cyberfirst/overview)
+      * [ CyberSprinters (7-11 year olds)  ](/collection/cybersprinters)
+      * [ CyberFirst Navigators (11-14 year olds)  ](/collection/cyberfirstnavigators)
+      * [ Training resources for school staff  ](/information/cyber-security-training-schools)
+      * [ Resources for higher education institutions  ](/section/education-skills/cyber-security-heis-feis)
+      * [ Cyber Security Body of Knowledge (CyBOK)  ](/section/education-skills/cybok)
+
+    * ####  Industry & skill resources 
+
+      * [ CYBERUK 2026  ](/section/keep-up-to-date/cyberuk)
+      * [ NCSC for StartUps  ](/section/ncsc-for-startups/overview)
+      * [ Industry 100  ](/section/industry-100/about)
+      * [ Cyber League  ](/information/cyber-league)
+
+  * News 
+
+Back
+
+## News
+
+All the latest information to help you keep track of what's happening
+
+    * ####  In this section 
+
+      * [ News  ](/section/keep-up-to-date)
+      * [ Blogs  ](/section/keep-up-to-date/all-blogs)
+      * [ Speeches  ](/section/keep-up-to-date/all-speeches)
+      * [ Reports & advisories  ](/section/keep-up-to-date/reports-advisories)
+      * [ Malware analysis reports  ](/section/keep-up-to-date/malware-analysis-reports)
+      * [ CYBERUK 2026  ](/section/keep-up-to-date/cyberuk)
+
+    * ####  Stay up to date 
+
+      * [ Subscribe  ](/register/subscribe)
+
+  * [ About NCSC ](/section/about-ncsc/what-we-do)
+  * [ Report an incident ](https://report.ncsc.gov.uk/)
+  * [ Contact us ](/section/about-this-website/contact-us)
+
+Close Search
+
+## Search
+
+Please enter a search term
+
+Search
+
+### Popular Searches
+
+  * [Passkeys](/search?keyword=passkeys)
+  * [Artificial intelligence](/section/advice-guidance/all-topics/artificial-intelligence)
+  * [Phishing](/section/advice-guidance/all-topics/phishing)
+  * [Training](/search?keyword=training)
+  * [Cyber Assessment Framework](/section/advice-guidance/all-topics/cyber-assessment-framework)
+
+News
+
+[ Download & print article PDF  ](/sites/default/files/pdfs/news/joint-
+advisory-observes-muddywater-actors-conducting-cyber-espionage.pdf)
+
+[ Download & print article PDF  ](/sites/default/files/pdfs/news/joint-
+advisory-observes-muddywater-actors-conducting-cyber-espionage.pdf)
+
+# Joint advisory on MuddyWater actor
+
+A joint advisory with international partners on the Iranian actor MuddyWater.
+
+![](/sites/default/files/styles/uncropped_2xs/public/images/cyber-security-
+alert-triangle.png?itok=EsTq2x5l)
+
+Art Alex via Getty Images
+
+This joint advisory provides information about activity carried out by the
+Iranian actor MuddyWater against global government and commercial
+organisations. It was written by cyber security authorities in the US and is a
+joint product from the Federal Bureau of Investigation (FBI), the
+Cybersecurity and Infrastructure Security Agency (CISA), and the National
+Security Agency (NSA), the US Cyber Command Cyber National Mission Force and
+the NCSC provides information on the Iranian actor MuddyWater.
+
+The advisory and malware analysis report are available to read in full on
+[CISA's website](https://www.cisa.gov/uscert/ncas/current-
+activity/2022/02/24/iranian-government-sponsored-muddywater-actors-
+conducting).
+
+[Read the full advisory](https://www.cisa.gov/uscert/ncas/alerts/aa22-055a)
+(opens to CISA's website)
+
+The NCSC malware analysis report (and accompanying STIX files and indicators
+of compromise) on MuddyWater malware is also available below.
+
+* * *
+
+##  Downloads
+
+[ ![decorative image](/sites/default/files/images/small-sieve-
+thumbnail%20-%20Copy.png)
+
+  * Pdf
+  * 402.46 KB
+
+Malware Analysis Report Small SieveTelegram Bot API based Python backdoor with
+file download and execution capability.](/sites/default/files/documents/NCSC-
+Malware-Analysis-Report-Small-Sieve.pdf) [ ![decorative
+image](/sites/default/files/images/small-sieve-thumbnail%20-%20Copy.png)
+
+  * Csv
+  * 1.44 KB
+
+Malware Analysis Report Small Sieve - Indicators
+](/sites/default/files/documents/NCSC-MAR-Small-Sieve-Inidicators.csv) [
+![decorative image](/sites/default/files/images/small-sieve-
+thumbnail%20-%20Copy.png)
+
+  * Json
+  * 93.04 KB
+
+Malware Analysis Report Small Sieve - STIX2.1
+](/sites/default/files/documents/NCSC-Malware-Analysis-Report-Small-
+Sieve.json)
+
+### Topics
+
+[ Malware  ](/section/advice-guidance/all-topics/malware)
+
+#### Share and print this article
+
+[ Download & print article PDF  ](/sites/default/files/pdfs/news/joint-
+advisory-observes-muddywater-actors-conducting-cyber-espionage.pdf)
+
+[ Download & print article PDF  ](/sites/default/files/pdfs/news/joint-
+advisory-observes-muddywater-actors-conducting-cyber-espionage.pdf)
+
+Share
+
+Share
+
+Close share options
+
+[ Share onFacebook
+](http://www.facebook.com/share.php?u=https://www.ncsc.gov.uk/news/joint-
+advisory-observes-muddywater-actors-conducting-cyber-espionage) [ Share
+onLinkedIn
+](https://www.linkedin.com/shareArticle?mini=true&url=https://www.ncsc.gov.uk/news/joint-
+advisory-observes-muddywater-actors-conducting-cyber-espionage&title=) [ Share
+onX
+](https://twitter.com/intent/tweet?text=&url=https://www.ncsc.gov.uk/news/joint-
+advisory-observes-muddywater-actors-conducting-cyber-espionage)
+
+Copy Link
+
+#### Published
+
+### Publish date
+
+24 February 2022
+
+#### Written for
+
+### Written for
+
+[Cyber security professionals](/section/advice-guidance/cyber-security-
+professionals) [Public sector](/section/advice-guidance/public-sector)
+
+#### News type
+
+Alert
+
+##  Was this article helpful?
+
+  * [ Yes the article was helpful ](/feedback-form/webform/nojs/ennerdale_webform/feedback_webform?page=/news/joint-advisory-observes-muddywater-actors-conducting-cyber-espionage&was_this_page_helpful=Yes)
+  * [ No the article was not helpful ](/feedback-form/webform/nojs/ennerdale_webform/feedback_webform?page=/news/joint-advisory-observes-muddywater-actors-conducting-cyber-espionage&was_this_page_helpful=No)
+
+Close Feedback Form
+
+Back to top
+
+Share
+
+Close share options
+
+[ Share onFacebook
+](http://www.facebook.com/share.php?u=https://www.ncsc.gov.uk/news/joint-
+advisory-observes-muddywater-actors-conducting-cyber-espionage) [ Share
+onLinkedIn
+](https://www.linkedin.com/shareArticle?mini=true&url=https://www.ncsc.gov.uk/news/joint-
+advisory-observes-muddywater-actors-conducting-cyber-espionage&title=) [ Share
+onX
+](https://twitter.com/intent/tweet?text=&url=https://www.ncsc.gov.uk/news/joint-
+advisory-observes-muddywater-actors-conducting-cyber-espionage)
+
+Copy Link
+
+## Also see
+
+[ ![](/sites/default/files/styles/3_4_media_md/public/images/malware-analysis-
+report-notice-news-item.jpg?h=889abaf5&itok=S3jHV_Om) News Publish date 25 Sep
+2025NCSC warns of persistent malware campaign targeting Cisco devices Latest
+malware analysis report helps organisations detect and mitigate malicious
+activity targeting certain Cisco devices. ](/news/persistent-malicious-
+targeting-cisco-devices)
+
+[
+![](/sites/default/files/styles/3_4_media_md/public/images/ablog131124.png?h=cf6b9b5c&itok=jevtcjWg)
+Blog Post Publish date 6 Nov 2024Helping banish malicious adverts – and drive
+a secure advertising ecosystem If your brand uses digital advertising, the
+NCSC has new guidance to help you choose a security-minded partner. ](/blog-
+post/helping-banish-malicious-adverts)
+
+[
+![](/sites/default/files/styles/3_4_media_md/public/images/Advertising.png?h=2aa300aa&itok=m5rZnd2V)
+Guidance Publish date 6 Nov 2024Guidance for brands to help advertising
+partners counter malvertising Advice to make it harder for cyber criminals to
+deliver malicious advertising, and reduce the risk of cyber-facilitated fraud.
+](/guidance/guidance-brands-advertising-partners-counter-malvertising)
+
+[ ![NCSC](/themes/custom/lakes/dist/ncsc-logo-CarDIzNF.svg) Home ](/)
+
+## Follow us
+
+  * [ X ](https://x.com/ncsc)
+  * [ LinkedIn ](https://uk.linkedin.com/company/national-cyber-security-centre)
+  * [ Instagram ](https://www.instagram.com/cyberhq/)
+  * [ Threads ](https://www.threads.com/@cyberhq)
+  * [ RSS ](/information/rss-feeds)
+
+## About this website
+
+  * [ Privacy notice ](/section/about-this-website/privacy-statement)
+  * [ Cookies ](/section/about-this-website/cookies)
+  * [ Accessibility ](/section/about-this-website/accessibility-statement-for-wwwncscgovuk)
+  * [ Terms & conditions ](/section/about-this-website/terms-and-conditions)
+  * [ Social media policy ](/section/about-this-website/social-media-policy)
+
+## Contact the NCSC
+
+  * [ Report an incident ](https://report.ncsc.gov.uk/)
+  * [ Report suspicious messages or websites ](/collection/phishing-scams)
+  * [ Verify an NCSC contact ](/guidance/how-to-spot-scammers-claiming-to-be-from-the-ncsc)
+  * [ Report a vulnerability ](/information/vulnerability-reporting)
+  * [ Contact the press office ](/section/about-ncsc/media-centre)
+  * [ Can't find what you're looking for? ](/section/about-this-website/cant-find-what-you-are-looking-for)
+
+## Useful links
+
+  * [ GCHQ ](https://www.gchq.gov.uk/)
+  * [ MI5 ](https://www.mi5.gov.uk/)
+  * [ SIS ](https://www.sis.gov.uk/)
+  * [ NPSA ](https://www.npsa.gov.uk/)
+  * [ GOV.UK ](https://www.gov.uk/)
+

@@ -1,0 +1,22 @@
+HTTP/2 200 
+date: Fri, 22 May 2026 06:34:10 GMT
+content-type: application/pdf
+content-length: 823323
+last-modified: Thu, 04 Dec 2025 13:35:33 GMT
+accept-ranges: bytes
+etag: "3984cdd2265dc1:0"
+access-control-allow-origin: *
+b: 2
+set-cookie: p_hosting=!VOiDrsnMX5u9d5+pA4NqF4ITabj/I1S+ICoVk+O9ossIuUkJ8nlzsIPcOVXG2+Zb7ysL+craIlogyGs=; path=/; Httponly; Secure
+set-cookie: TS016f2f2d=0124934a816294d2ac6a5ad9189e0698238dd823ca6dd4b2dc03cc521ba33fc8efac59778f03a455ffe2cd38a0f5730333ba8eb49f; Path=/; Domain=.www.gov.il; Secure; HttpOnly
+set-cookie: __cf_bm=6MmlYkDtrek9igTN_oalr6kNs2N9qUwlSC.R52UIIc8-1779431650.8049216-1.0.1.1-tr.GZAr_EtxXFzs9R6GHBzHEnJm2CjjcOiuqDtAt6N5jMkweR7Ner6edCGJpLXx2Su36_C.N23TIgrgEcbur_HJ5_KqjU1aHSRgoTMqsOMGBwPcgTRS1M1BtwNTmFRQX; HttpOnly; SameSite=None; Secure; Path=/; Domain=www.gov.il; Expires=Fri, 22 May 2026 07:04:10 GMT
+server-timing: 
+timing-allow-origin: 
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+strict-transport-security: max-age=31536000; preload
+cf-cache-status: DYNAMIC
+server: cloudflare
+cf-ray: 9ff9cb298e729b09-TLV
+

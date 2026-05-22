@@ -1,0 +1,15 @@
+{
+  "number": 54,
+  "title": "MITRE ATT&CK — APT35 / Charming Kitten",
+  "url": "https://attack.mitre.org/groups/G0059/",
+  "curl_status": "200 https://attack.mitre.org/groups/G0059/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 23976  100 23976    0     0   109k      0 --:--:-- --:--:-- --:--:--  109k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/54-mitre-att-ck-apt35-charming-kitten/source.html",
+  "text_file": "docs/source-gathering/raw-sources/54-mitre-att-ck-apt35-charming-kitten/source.txt",
+  "size_bytes": 222652,
+  "extract_error": ""
+}

@@ -1,0 +1,15 @@
+{
+  "number": 69,
+  "title": "Context-aware Entity-Relation Extraction for Threat Intelligence Knowledge Graphs",
+  "url": "https://arxiv.org/abs/2605.15904",
+  "curl_status": "200 https://arxiv.org/abs/2605.15904",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 47813  100 47813    0     0   159k      0 --:--:-- --:--:-- --:--:--  159k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/69-context-aware-entity-relation-extraction-for-threat-intelligence-knowledge-graphs/source.html",
+  "text_file": "docs/source-gathering/raw-sources/69-context-aware-entity-relation-extraction-for-threat-intelligence-knowledge-graphs/source.txt",
+  "size_bytes": 47813,
+  "extract_error": ""
+}

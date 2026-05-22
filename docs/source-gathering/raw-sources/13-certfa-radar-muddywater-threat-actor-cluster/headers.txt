@@ -1,0 +1,30 @@
+HTTP/2 103 
+link: </res/lib/cache/css/min.f0cda5cefedf.css>; as=style; rel=preload, </res/lib/cache/js/min.a8b227416a64.js>; as=script; rel=preload, </res/lib/cache/js/min.660dc7713ba8.js>; as=script; rel=preload, </res/lib/cache/js/min.e4db78eb292f.js>; as=script; rel=preload, </res/lib/cache/js/min.3e6c30f581c6.js>; as=script; rel=preload, </res/lib/fonts/jura/z7NbdRfiaC4VXcRJUQ.woff2>; as=font; crossorigin=anonymous; rel=preload
+
+HTTP/2 200 
+date: Fri, 22 May 2026 06:34:08 GMT
+content-type: text/html; charset=utf-8
+content-length: 223021
+cache-control: public, max-age=120, must-revalidate
+cf-cache: DYNAMIC-EDGE,MISS-FRONT
+content-language: en
+content-security-policy: base-uri 'self'; script-src 'strict-dynamic' 'nonce-YmNjM2RiZWM5NTlmNGY2MDE0YzYxNDVi' 'sha256-6qU/tPsduD/x0VKuH6/Z8sgYYHr0Kk62H2tqu8ni6C4=' 'sha256-omiK2+LK0fCkvCjjJ8xWuxov6wc6W1WSbnn3pvj89XQ=' 'sha256-pBqpxaUYputH9k2eSEBB3VOO0LvfcJX9My7nHQ1WHxo=' 'sha256-6pxnL+t7NoLi5GLTL5Hb6vlrJbdPDV5cNwr3H3wh3so='; script-src-elem 'self' 'unsafe-inline'; style-src 'self' 'nonce-YmNjM2RiZWM5NTlmNGY2MDE0YzYxNDVi' 'sha256-iklyLRuGAEz4yQXc8Co1+oWq6WUpgLfHcmRzV/NFDpM='; style-src-elem 'self' 'nonce-YmNjM2RiZWM5NTlmNGY2MDE0YzYxNDVi' 'sha256-iklyLRuGAEz4yQXc8Co1+oWq6WUpgLfHcmRzV/NFDpM=';media-src 'self'; font-src 'self'; worker-src 'self'; img-src 'self' data: blob:; connect-src 'self'; manifest-src 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; frame-src 'self'; block-all-mixed-content; upgrade-insecure-requests; report-to default
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+cross-origin-embedder-policy: require-corp
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-origin
+etag: "f19db15441555d478d590d2c3ea219d4"
+last-modified: Fri, 15 May 2026 07:41:37 GMT
+link: <https://radar.certfa.com/en/insights/cluster/fe272810/>; rel=canonical, </res/lib/cache/css/min.f0cda5cefedf.css>; rel=preload; as=style, </res/lib/cache/js/min.a8b227416a64.js>; rel=preload; as=script, </res/lib/cache/js/min.660dc7713ba8.js>; rel=preload; as=script, </res/lib/cache/js/min.e4db78eb292f.js>; rel=preload; as=script, </res/lib/cache/js/min.3e6c30f581c6.js>; rel=preload; as=script, </res/lib/fonts/jura/z7NbdRfiaC4VXcRJUQ.woff2>; rel=preload; as=font; crossorigin=anonymous
+permissions-policy: geolocation=(), microphone=(), camera=()
+referrer-policy: same-origin
+server: cloudflare
+set-cookie: __Secure-digest=3344de0d470f0cdf4919d760e3807e94f9abbb392990db1a727a0b296d34e9d0; Domain=radar.certfa.com; expires=Fri, 22 May 2026 07:34:08 GMT; HttpOnly; Max-Age=3600; Path=/; SameSite=Strict; Secure
+vary: DNT, Save-Data, Accept, Accept-Language, Cookie, accept-encoding
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+cf-cache-status: BYPASS
+cf-ray: 9ff9cb13c92fb7bf-TLV
+alt-svc: h3=":443"; ma=86400
+

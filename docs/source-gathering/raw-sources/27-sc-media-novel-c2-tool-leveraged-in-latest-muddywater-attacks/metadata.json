@@ -1,0 +1,19 @@
+{
+  "number": 27,
+  "title": "SC Media — Novel C2 tool leveraged in latest MuddyWater attacks",
+  "url": "https://www.scworld.com/brief/novel-c2-tool-leveraged-in-latest-muddywater-attacks",
+  "curl_status": "403 https://www.scworld.com/brief/novel-c2-tool-leveraged-in-latest-muddywater-attacks",
+  "http_status": "403",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  1889    0  1889    0     0  35880      0 --:--:-- --:--:-- --:--:-- 36326",
+  "saved": true,
+  "http_ok": false,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/27-sc-media-novel-c2-tool-leveraged-in-latest-muddywater-attacks/source.html",
+  "text_file": "docs/source-gathering/raw-sources/27-sc-media-novel-c2-tool-leveraged-in-latest-muddywater-attacks/source.txt",
+  "size_bytes": 5466,
+  "extract_error": "",
+  "fallback_reader_url": "https://r.jina.ai/http://r.jina.ai/http://https://www.scworld.com/brief/novel-c2-tool-leveraged-in-latest-muddywater-attacks",
+  "fallback_reader_status": "200 3444",
+  "fallback_reader_file": "docs/source-gathering/raw-sources/27-sc-media-novel-c2-tool-leveraged-in-latest-muddywater-attacks/fallback-reader.txt",
+  "fallback_reader_useful": true
+}

@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: Apache
+X-Pingback: https://unit42.paloaltonetworks.com/xmlrpc.php
+Link: <https://unit42.paloaltonetworks.com/wp-json/>; rel="https://api.w.org/", <https://unit42.paloaltonetworks.com/wp-json/wp/v2/posts/49278>; rel="alternate"; title="JSON"; type="application/json", <https://unit42.paloaltonetworks.com/?p=49278>; rel=shortlink
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 22 May 2026 06:34:07 GMT
+Content-Length: 41598
+Connection: keep-alive
+

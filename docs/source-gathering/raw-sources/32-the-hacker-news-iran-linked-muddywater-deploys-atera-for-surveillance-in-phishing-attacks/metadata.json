@@ -1,0 +1,15 @@
+{
+  "number": 32,
+  "title": "The Hacker News — Iran-Linked MuddyWater Deploys Atera for Surveillance in Phishing Attacks",
+  "url": "https://thehackernews.com/2024/03/iran-linked-muddywater-deploys-atera.html",
+  "curl_status": "200 https://thehackernews.com/2024/03/iran-linked-muddywater-deploys-atera.html",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 52860    0 52860    0     0   174k      0 --:--:-- --:--:-- --:--:--  174k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/32-the-hacker-news-iran-linked-muddywater-deploys-atera-for-surveillance-in-phishing-attacks/source.html",
+  "text_file": "docs/source-gathering/raw-sources/32-the-hacker-news-iran-linked-muddywater-deploys-atera-for-surveillance-in-phishing-attacks/source.txt",
+  "size_bytes": 160290,
+  "extract_error": ""
+}

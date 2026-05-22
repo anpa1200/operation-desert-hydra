@@ -1,0 +1,15 @@
+{
+  "number": 26,
+  "title": "Deep Instinct — DarkBeatC2: The Latest MuddyWater Attack Framework",
+  "url": "https://www.deepinstinct.com/blog/darkbeatc2-the-latest-muddywater-attack-framework",
+  "curl_status": "200 https://www.deepinstinct.com/blog/darkbeatc2-the-latest-muddywater-attack-framework",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 28870  100 28870    0     0  53022      0 --:--:-- --:--:-- --:--:-- 53069",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/26-deep-instinct-darkbeatc2-the-latest-muddywater-attack-framework/source.html",
+  "text_file": "docs/source-gathering/raw-sources/26-deep-instinct-darkbeatc2-the-latest-muddywater-attack-framework/source.txt",
+  "size_bytes": 179202,
+  "extract_error": ""
+}

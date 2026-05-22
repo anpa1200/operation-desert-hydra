@@ -1,0 +1,15 @@
+{
+  "number": 18,
+  "title": "Israel National Cyber Directorate — Technological Advancement and Evolution of MuddyWater in 2024 PDF",
+  "url": "https://www.gov.il/BlobFolder/reports/maddy_water_2024/en/ALERT_CERT_IL_W_1858.pdf",
+  "curl_status": "200 https://www.gov.il/BlobFolder/reports/maddy_water_2024/en/ALERT_CERT_IL_W_1858.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 1354k  100 1354k    0     0  6115k      0 --:--:-- --:--:-- --:--:-- 6130k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/18-israel-national-cyber-directorate-technological-advancement-and-evolution-of-muddywater-in/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/18-israel-national-cyber-directorate-technological-advancement-and-evolution-of-muddywater-in/source.txt",
+  "size_bytes": 1387323,
+  "extract_error": ""
+}

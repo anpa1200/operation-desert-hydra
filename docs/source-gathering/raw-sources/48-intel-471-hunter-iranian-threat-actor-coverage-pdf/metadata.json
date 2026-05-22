@@ -1,0 +1,15 @@
+{
+  "number": 48,
+  "title": "Intel 471 — HUNTER Iranian Threat Actor Coverage PDF",
+  "url": "https://go.intel471.com/hubfs/Emerging%20Threats/2025%20Emerging%20Threats/Upd%20HUNTER%20-%20Iranian%20Threat%20Actor%20Coverage.pdf",
+  "curl_status": "200 https://go.intel471.com/hubfs/Emerging%20Threats/2025%20Emerging%20Threats/Upd%20HUNTER%20-%20Iranian%20Threat%20Actor%20Coverage.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  487k  100  487k    0     0  3667k      0 --:--:-- --:--:-- --:--:-- 3691k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/48-intel-471-hunter-iranian-threat-actor-coverage-pdf/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/48-intel-471-hunter-iranian-threat-actor-coverage-pdf/source.txt",
+  "size_bytes": 499015,
+  "extract_error": ""
+}

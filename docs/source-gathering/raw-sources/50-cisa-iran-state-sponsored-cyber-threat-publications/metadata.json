@@ -1,0 +1,19 @@
+{
+  "number": 50,
+  "title": "CISA — Iran state-sponsored cyber threat publications",
+  "url": "https://www.cisa.gov/topics/cyber-threats-and-advisories/nation-state-cyber-actors/iran/publications",
+  "curl_status": "403 https://www.cisa.gov/topics/cyber-threats-and-advisories/nation-state-cyber-actors/iran/publications",
+  "http_status": "403",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   485  100   485    0     0   2440      0 --:--:-- --:--:-- --:--:--  2449",
+  "saved": true,
+  "http_ok": false,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/50-cisa-iran-state-sponsored-cyber-threat-publications/source.html",
+  "text_file": "docs/source-gathering/raw-sources/50-cisa-iran-state-sponsored-cyber-threat-publications/source.txt",
+  "size_bytes": 485,
+  "extract_error": "",
+  "fallback_reader_url": "https://r.jina.ai/http://r.jina.ai/http://https://www.cisa.gov/topics/cyber-threats-and-advisories/nation-state-cyber-actors/iran/publications",
+  "fallback_reader_status": "200 9842",
+  "fallback_reader_file": "docs/source-gathering/raw-sources/50-cisa-iran-state-sponsored-cyber-threat-publications/fallback-reader.txt",
+  "fallback_reader_useful": true
+}

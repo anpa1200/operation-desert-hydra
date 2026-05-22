@@ -1,0 +1,15 @@
+{
+  "number": 19,
+  "title": "Israel National Cyber Directorate — Overview of Recent Phishing PDF",
+  "url": "https://www.gov.il/BlobFolder/reports/alert_1947/he/ALERT-CERT-IL-W-1947.pdf",
+  "curl_status": "200 https://www.gov.il/BlobFolder/reports/alert_1947/he/ALERT-CERT-IL-W-1947.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n 11  804k   11 94419    0     0   932k      0 --:--:-- --:--:-- --:--:--  931k\n100  804k  100  804k    0     0  5068k      0 --:--:-- --:--:-- --:--:-- 5056k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/19-israel-national-cyber-directorate-overview-of-recent-phishing-pdf/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/19-israel-national-cyber-directorate-overview-of-recent-phishing-pdf/source.txt",
+  "size_bytes": 823323,
+  "extract_error": ""
+}

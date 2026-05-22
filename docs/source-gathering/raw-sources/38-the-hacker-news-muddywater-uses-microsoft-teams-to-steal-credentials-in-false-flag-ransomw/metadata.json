@@ -1,0 +1,15 @@
+{
+  "number": 38,
+  "title": "The Hacker News — MuddyWater Uses Microsoft Teams to Steal Credentials in False Flag Ransomware Attack",
+  "url": "https://thehackernews.com/2026/05/muddywater-uses-microsoft-teams-to.html",
+  "curl_status": "200 https://thehackernews.com/2026/05/muddywater-uses-microsoft-teams-to.html",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 56565    0 56565    0     0   155k      0 --:--:-- --:--:-- --:--:--  155k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/38-the-hacker-news-muddywater-uses-microsoft-teams-to-steal-credentials-in-false-flag-ransomw/source.html",
+  "text_file": "docs/source-gathering/raw-sources/38-the-hacker-news-muddywater-uses-microsoft-teams-to-steal-credentials-in-false-flag-ransomw/source.txt",
+  "size_bytes": 170081,
+  "extract_error": ""
+}

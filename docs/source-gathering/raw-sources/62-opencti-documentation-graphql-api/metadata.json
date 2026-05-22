@@ -1,0 +1,15 @@
+{
+  "number": 62,
+  "title": "OpenCTI documentation — GraphQL API",
+  "url": "https://docs.opencti.io/latest/reference/api/",
+  "curl_status": "200 https://docs.opencti.io/latest/reference/api/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 16460  100 16460    0     0  66552      0 --:--:-- --:--:-- --:--:-- 66370",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/62-opencti-documentation-graphql-api/source.html",
+  "text_file": "docs/source-gathering/raw-sources/62-opencti-documentation-graphql-api/source.txt",
+  "size_bytes": 124008,
+  "extract_error": ""
+}

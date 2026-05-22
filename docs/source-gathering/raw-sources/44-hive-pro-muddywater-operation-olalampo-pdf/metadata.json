@@ -1,0 +1,15 @@
+{
+  "number": 44,
+  "title": "Hive Pro — MuddyWater / Operation Olalampo PDF",
+  "url": "https://hivepro.com/wp-content/uploads/2026/03/TA2026082.pdf",
+  "curl_status": "200 https://hivepro.com/wp-content/uploads/2026/03/TA2026082.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 1866k  100 1866k    0     0  9470k      0 --:--:-- --:--:-- --:--:-- 9475k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/44-hive-pro-muddywater-operation-olalampo-pdf/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/44-hive-pro-muddywater-operation-olalampo-pdf/source.txt",
+  "size_bytes": 1911552,
+  "extract_error": ""
+}

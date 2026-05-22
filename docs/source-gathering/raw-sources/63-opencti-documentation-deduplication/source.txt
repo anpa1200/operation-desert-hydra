@@ -1,0 +1,333 @@
+Skip to content
+
+You're not viewing the latest version. [ **Click here to go to latest.**
+](../../..)
+
+[ ![logo](../../assets/logo.png) ](../.. "OpenCTI Documentation")
+
+Initializing search
+
+[ GitHub  ](https://github.com/OpenCTI-Platform/opencti "Go to repository")
+
+  * [ Home ](../..)
+  * [ Deployment & Setup ](../../deployment/overview/)
+  * [ User Guide ](../getting-started/)
+  * [ Administration ](../../administration/introduction/)
+  * [ Reference ](../../reference/data-model/)
+  * [ Development ](../../development/environment_ubuntu/)
+
+[ ![logo](../../assets/logo.png) ](../.. "OpenCTI Documentation") OpenCTI
+Documentation
+
+[ GitHub  ](https://github.com/OpenCTI-Platform/opencti "Go to repository")
+
+  * [ Home  ](../..)
+  * Deployment & Setup  Deployment & Setup 
+    * Platform  Platform 
+      * [ Overview  ](../../deployment/overview/)
+      * [ Installation  ](../../deployment/installation/)
+      * [ Configuration  ](../../deployment/configuration/)
+      * Authentication  Authentication 
+        * [ Authentication via environment variables  ](../../deployment/authentication/)
+      * [ Telemetry  ](../../deployment/telemetry/)
+      * [ Upgrade  ](../../deployment/upgrade/)
+    * Ecosystem  Ecosystem 
+      * [ Connectors  ](../../deployment/connectors/)
+      * [ Integrations  ](../../deployment/integrations/)
+      * Manager  Manager 
+        * [ Overview  ](../../deployment/integration-manager/)
+        * [ Quick start  ](../../deployment/integration-manager/quick-start/)
+        * [ Architecture  ](../../deployment/integration-manager/architecture/)
+        * [ Private registry authentication  ](../../deployment/integration-manager/registry-authentication/)
+        * [ Proxy support  ](../../deployment/integration-manager/proxy-configuration/)
+        * [ Installation guide  ](../../deployment/integration-manager/installation/)
+        * [ Configuration  ](../../deployment/integration-manager/configuration/)
+        * [ Migration guide  ](../../deployment/integration-manager/migration/)
+        * [ Troubleshooting guide  ](../../deployment/integration-manager/troubleshooting/)
+      * [ Other resources  ](../../deployment/resources/)
+    * Advanced  Advanced 
+      * [ Platform managers  ](../../deployment/managers/)
+      * [ Liveness probe  ](../../deployment/liveness-probe/)
+      * [ Clustering  ](../../deployment/clustering/)
+      * [ Indices and rollover  ](../../deployment/rollover/)
+      * [ On-premise map server  ](../../deployment/map/)
+      * [ On-premise AI extraction  ](../../deployment/ai-import-document/)
+      * [ Troubleshooting  ](../../deployment/troubleshooting/)
+    * Breaking changes  Breaking changes 
+      * [ Index  ](../../deployment/breaking-changes/)
+      * Migration guides  Migration guides 
+        * [ SSO Migration from environment variable to UI  ](../../deployment/breaking-changes/7.260224.0-SSO-authentication-migration/)
+        * [ Metrics renamed in Client Python  ](../../deployment/breaking-changes/6.8-client-python-metrics/)
+        * [ OpenBAS scenario generation  ](../../deployment/breaking-changes/6.5-generation-scenario-opencti-openbas-placeholders/)
+        * [ Stream connectors data import  ](../../deployment/breaking-changes/6.3-removing-some-connectors/)
+        * [ Promote to Indicator  ](../../deployment/breaking-changes/6.2-promote-to-indicator/)
+        * [ SAML authentication  ](../../deployment/breaking-changes/6.2-saml-authentication/)
+        * [ New filter API  ](../../deployment/breaking-changes/5.12-filters/)
+  * User Guide  User Guide 
+    * [ Getting started  ](../getting-started/)
+    * Foundations  Foundations 
+      * [ Data model  ](../data-model/)
+      * [ Nested objects  ](../nested/)
+      * [ Containers  ](../containers/)
+      * Deduplication  [ Deduplication  ](./) Table of contents 
+        * Creation behavior 
+          * Entities 
+          * Relationships 
+          * Observables 
+        * Update behavior 
+      * [ Reliability and confidence  ](../reliability-confidence/)
+      * [ Meaning of dates  ](../dates/)
+      * [ CTI Copilot ✨  ](../copilot/)
+    * Explore knowledge  Explore knowledge 
+      * [ Overview  ](../overview/)
+      * [ Search for knowledge  ](../search/)
+      * [ Insights and summaries ✨  ](../insights/)
+      * [ Priority Intelligence Requirements  ](../pir/)
+      * Explore by entity types  Explore by entity types 
+        * [ Analysis  ](../exploring-analysis/)
+        * [ Cases  ](../exploring-cases/)
+        * [ Events  ](../exploring-events/)
+        * [ Observations  ](../exploring-observations/)
+        * [ Threats  ](../exploring-threats/)
+        * [ Arsenal  ](../exploring-arsenal/)
+        * [ Techniques  ](../exploring-techniques/)
+        * [ Entities  ](../exploring-entities/)
+        * [ Locations  ](../exploring-locations/)
+      * [ Pivot and investigate  ](../pivoting/)
+    * Create knowledge  Create knowledge 
+      * Automated import  Automated import 
+        * [ Getting started  ](../import/getting-started/)
+        * [ Connectors  ](../import/external-connectors/)
+        * [ Streams  ](../import/internal-streams/)
+        * Feeds  Feeds 
+          * [ TAXII Feed  ](../import/taxii-feed/)
+          * [ TAXII push  ](../import/taxii-push/)
+          * [ RSS Feed  ](../import/rss-feed/)
+          * [ CSV Feed  ](../import/csv-feed/)
+          * [ JSON Feed  ](../import/json-feed/)
+      * [ Import from files  ](../import-files/)
+      * [ Manual creations  ](../manual-creation/)
+      * [ Create via form  ](../form-intake/)
+      * [ Draft workspaces  ](../draftWorkspaces/)
+      * [ Analyst workbench  ](../workbench/)
+    * Enrich knowledge  Enrich knowledge 
+      * [ Inferences and reasoning  ](../inferences/)
+      * [ Enrichment connectors  ](../enrichment/)
+      * [ Merge objects  ](../merging/)
+      * [ Refine content ✨  ](../refine-content/)
+    * Act on knowledge  Act on knowledge 
+      * [ Case management  ](../case-management/)
+      * [ Notifications and alerting  ](../notifications/)
+      * [ Background tasks  ](../background-tasks/)
+      * Dashboards  Dashboards 
+        * [ Custom dashboards  ](../dashboards/)
+        * [ Share custom dashboards  ](../dashboards-share/)
+        * [ Widget creation  ](../widgets/)
+        * [ Tips for widget creation  ](../tips-widget-creation/)
+      * [ Custom views  ](../custom-views/)
+      * [ Workflows and assignation  ](../workflows/)
+      * [ Indicators lifecycle  ](../indicators-lifecycle/)
+      * Playbook automation  Playbook automation 
+        * [ Introduction  ](../playbook-automation/)
+        * [ Playbook creation  ](../playbook-creation/)
+        * [ Playbook components  ](../playbook-components/)
+      * [ Security Coverage  ](../security-coverage/)
+    * [ Delete and restore knowledge  ](../delete-restore/)
+    * Sharing and exports  Sharing and exports 
+      * [ Native feeds  ](../feeds/)
+      * [ Manual export  ](../export/)
+  * Administration  Administration 
+    * [ Introduction  ](../../administration/introduction/)
+    * [ Enterprise edition  ](../../administration/enterprise/)
+    * [ Product life cycle  ](../../administration/product-life-cycle/)
+    * Data management  Data management 
+      * [ Merging and de-duplication  ](../../administration/merging/)
+      * [ CSV Mappers  ](../../administration/csv-mappers/)
+      * [ JSON Mappers  ](../../administration/json-mappers/)
+    * Platform settings  Platform settings 
+      * [ Parameters  ](../../administration/parameters/)
+      * Security  Security 
+        * [ Authentication  ](../../administration/authentication-via-ui/)
+        * [ Policies  ](../../administration/policies/)
+        * Users and RBAC  Users and RBAC 
+          * [ Users and RBAC  ](../../administration/users/)
+          * [ Protect sensitive configuration  ](../../administration/protect-sensitive-configuration/)
+        * Data segregation  Data segregation 
+          * [ Marking restriction  ](../../administration/segregation/)
+          * [ Organization segregation  ](../../administration/organization-segregation/)
+          * [ Authorized members  ](../../administration/authorized-members/)
+          * [ Request access  ](../../administration/request-access/)
+        * [ Dissemination list  ](../../administration/dissemination-list/)
+        * [ Email templates  ](../../administration/email-templates/)
+      * Customization  Customization 
+        * [ Entity types  ](../../administration/entities/)
+        * [ Rules engine  ](../../administration/reasoning/)
+        * Notifiers  Notifiers 
+          * [ Custom notifiers  ](../../administration/notifiers/)
+          * [ Notifier samples  ](../../administration/notifier-samples/)
+          * [ Tips to create notifiers  ](../../administration/tips-to-create-a-custom-notifier/)
+        * [ Retention policies  ](../../administration/retentions/)
+        * Decay rules & Decay Exclusion rules  Decay rules & Decay Exclusion rules 
+          * [ Decay rules  ](../../administration/decay-rules/)
+          * [ Decay exclusion rules  ](../../administration/decay-exclusion-rules/)
+        * [ Fintel designs  ](../../administration/fintel-designs/)
+        * [ Exclusion lists  ](../../administration/exclusion-lists/)
+      * [ Taxonomies  ](../../administration/ontologies/)
+      * Activity  Activity 
+        * [ Overview  ](../../administration/audit/overview/)
+        * [ Events  ](../../administration/audit/events/)
+        * [ Configuration  ](../../administration/audit/configuration/)
+        * [ Activity triggers  ](../../administration/audit/triggers/)
+      * [ File indexing  ](../../administration/file-indexing/)
+      * [ Support package  ](../../administration/support-package/)
+      * [ XTM Hub  ](../../administration/hub/)
+  * Reference  Reference 
+    * Data  Data 
+      * [ Data model  ](../../reference/data-model/)
+      * [ Data processing  ](../../reference/data-processing/)
+      * [ Taxonomy  ](../../reference/taxonomy/)
+      * [ Artificial intelligence  ](../../reference/artificial-intelligence/)
+    * APIs and feeds  APIs and feeds 
+      * [ GraphQL API  ](../../reference/api/)
+      * Filters  Filters 
+        * [ Filters knowledge  ](../../reference/filters/)
+      * [ Data Streaming  ](../../reference/streaming/)
+    * Deployment and stack  Deployment and stack 
+      * [ Usage telemetry  ](../../reference/usage-telemetry/)
+      * [ FIPS 140-2 installation  ](../../reference/fips/)
+  * Development  Development 
+    * Prerequisites  Prerequisites 
+      * [ Ubuntu  ](../../development/environment_ubuntu/)
+      * [ Windows  ](../../development/environment_windows/)
+    * [ Platform  ](../../development/platform/)
+    * [ Python library  ](../../development/python/)
+    * [ Connectors  ](../../development/connectors/)
+    * [ Integration Manager  ](../../development/integration-manager/)
+    * [ Playground  ](../../development/api-usage/)
+
+Table of contents
+
+  * Creation behavior 
+    * Entities 
+    * Relationships 
+    * Observables 
+  * Update behavior 
+
+  1. [ Home  ](../..)
+  2. [ User Guide  ](../getting-started/)
+  3. [ Foundations  ](../data-model/)
+
+[ ](https://github.com/OpenCTI-
+Platform/opencti/blob/master/docs/docs/usage/deduplication.md "Edit this
+page") [ ](https://github.com/OpenCTI-
+Platform/opencti/raw/master/docs/docs/usage/deduplication.md "View source of
+this page")
+
+# Deduplication
+
+One of the core concept of the OpenCTI knowledge graph is all underlying
+mechanisms implemented to accurately de-duplicate and consolidate (aka.
+`upserting`) information about entities and relationships.
+
+## Creation behavior
+
+When an object is created in the platform, whether manually by a user or
+automatically by the connectors / workers chain, the platform checks if
+something already exist based on some properties of the object. If the object
+already exists, it will return the existing object and, in some cases, update
+it as well.
+
+Technically, OpenCTI generates deterministic IDs based on the listed
+properties below to prevent duplicate (aka "ID Contributing Properties").
+Also, it is important to note that there is a special link between `name` and
+`aliases` leading to not have entities with overlapping aliases or an alias
+already used in the name of another entity.
+
+### Entities
+
+Type | Attributes  
+---|---  
+Area | (`name` OR `x_opencti_alias`) AND `x_opencti_location_type`  
+Attack Pattern | (`name` OR `alias`) AND optional `x_mitre_id`  
+Campaign | `name` OR `alias`  
+Channel | `name` OR `alias`  
+City | (`name` OR `x_opencti_alias`) AND `x_opencti_location_type`  
+Country | (`name` OR `x_opencti_alias`) AND `x_opencti_location_type`  
+Course Of Action | (`name` OR `alias`) AND optional `x_mitre_id`  
+Data Component | `name` OR `alias`  
+Data Source | `name` OR `alias`  
+Event | `name` OR `alias`  
+Feedback Case | `name` AND `created` (date)  
+Grouping | `name` AND `context`  
+Incident | `name` OR `alias`  
+Incident Response Case | `name` OR `alias`  
+Indicator | `pattern` OR `alias`  
+Individual | (`name` OR `x_opencti_alias`) and `identity_class`  
+Infrastructure | `name` OR `alias`  
+Intrusion Set | `name` OR `alias`  
+Language | `name` OR `alias`  
+Malware | `name` OR `alias`  
+Malware Analysis | `name` OR `alias`  
+Narrative | `name` OR `alias`  
+Note | _None_  
+Observed Data | `name` OR `alias`  
+Opinion | _None_  
+Organization | (`name` OR `x_opencti_alias`) and `identity_class`  
+Position | (`name` OR `x_opencti_alias`) AND `x_opencti_location_type`  
+Region | `name` OR `alias`  
+Report | `name` AND `published` (date)  
+RFI Case | `name` AND `created` (date)  
+RFT Case | `name` AND `created` (date)  
+Sector | (`name` OR `alias`) and `identity_class`  
+Task | _None_  
+Threat Actor | `name` OR `alias`  
+Tool | `name` OR `alias`  
+Vulnerability | `name` OR `alias`  
+  
+Names and aliases management
+
+The name and aliases of an entity define a set of unique values, so it's not
+possible to have the name equal to an alias and vice versa.
+
+### Relationships
+
+The deduplication process of relationships is based on the following criteria:
+
+  * Type
+  * Source
+  * Target
+  * Start time between -30 days / + 30 days
+  * Stop time between -30 days / + 30 days
+
+### Observables
+
+For STIX Cyber Observables, OpenCTI also generate deterministic IDs based on
+the [STIX specification](https://docs.oasis-
+open.org/cti/stix/v2.1/csprd01/stix-v2.1-csprd01.html#_Toc16070607) using the
+"ID Contributing Properties" defined for each type of observable.
+
+## Update behavior
+
+In cases where an entity already exists in the platform, incoming creations
+can trigger updates to the existing entity's attributes. This logic has been
+implemented to converge the knowledge base towards the highest confidence and
+quality levels for both entities and relationships.
+
+To understand in details how the deduplication mechanism works in context of
+the maximum confidence level, you can navigate through this diagram (section
+deduplication):
+
+2026-03-05 2023-05-31
+
+[ Previous  Containers  ](../containers/) [ Next  Reliability and confidence
+](../reliability-confidence/)
+
+© 2026 Filigran. All rights reserved
+
+[ ](https://github.com/OpenCTI-Platform "github.com") [
+](https://blog.filigran.io "blog.filigran.io") [
+](https://community.filigran.io "community.filigran.io") [
+](https://linkedin.com/company/filigran "linkedin.com") [
+](https://twitter.com/FiligranHQ "twitter.com") [
+](https://facebook.com/FiligranHQ "facebook.com")
+

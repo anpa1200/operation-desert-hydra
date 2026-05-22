@@ -1,0 +1,15 @@
+{
+  "number": 1,
+  "title": "MITRE ATT&CK — MuddyWater G0069",
+  "url": "https://attack.mitre.org/groups/G0069/",
+  "curl_status": "200 https://attack.mitre.org/groups/G0069/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 28620  100 28620    0     0   130k      0 --:--:-- --:--:-- --:--:--  130k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/01-mitre-att-ck-muddywater-g0069/source.html",
+  "text_file": "docs/source-gathering/raw-sources/01-mitre-att-ck-muddywater-g0069/source.txt",
+  "size_bytes": 274491,
+  "extract_error": ""
+}

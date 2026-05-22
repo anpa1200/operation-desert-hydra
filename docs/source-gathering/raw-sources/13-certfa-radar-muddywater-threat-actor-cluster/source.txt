@@ -1,0 +1,2307 @@
+[Certfa RadarBeta](/)
+
+Search... `/`
+
+Change Theme ColorOpen main menu
+
+Close menu
+
+[Home](/en/)[Threats Feed](/en/threats/iran/)[Actors
+Insights](/en/insights/iran/)[Alerts &
+Notice](/en/alerts/iran/)[Search...](/en/search/)
+
+Change Theme Color
+
+[Home](/en/)[Threats Feed](/en/threats/iran/)[Actors
+Insights](/en/insights/iran/)[Alerts & Notice](/en/alerts/iran/)
+
+Actors Insights|Latest update15/05/2026
+
+# MuddyWater Cluster
+
+Suspected state sponsor: Islamic Republic of Iran
+
+MuddyWater is one of Iran's most active and longest-running cyber espionage
+clusters, linked to Iran's Ministry of Intelligence and Security (MOIS) and
+active since at least 2017. US Cyber Command formally attributed MuddyWater to
+MOIS in February 2022. The group conducts persistent espionage operations
+across the Middle East, Central Asia, Europe, and beyond, with a particular
+focus on government, telecommunications, defense, and energy sector targets.
+
+**Targets and Goals**
+
+MuddyWater's targeting spans a broad geographic and sectoral range. Documented
+victims include government agencies, telecommunications companies, defense
+organizations, oil and gas firms, and managed service providers in Turkey,
+Saudi Arabia, Israel, UAE, Iraq, Jordan, Pakistan, Afghanistan, and multiple
+European and Asian countries. The group's consistent focus on government and
+communications infrastructure reflects MOIS's intelligence collection
+priorities for both foreign intelligence and domestic security purposes.
+
+**Tooling and Tactics**
+
+MuddyWater relies heavily on spear phishing with macro-enabled Office
+documents and PDF lures to deliver custom PowerShell-based implants. The group
+is known for using legitimate remote administration tools — including
+ScreenConnect, RemoteUtilities, and SimpleHelp — as part of its post-
+compromise toolkit, blending into normal IT traffic. Custom malware families
+include POWERSTATS (a PowerShell backdoor), BugSleep, and various PowerShell-
+based loaders. The group frequently updates its tooling to evade detection and
+abuses file-sharing services like OneHub and Sync for tool distribution. In
+2023, a subgroup tracked as DEV-1084/Storm-1084 conducted a highly destructive
+operation against Israeli organizations using the DarkBit ransomware-wiper.
+
+**Aliases**
+
+MuddyWater is tracked across the industry as Seedworm (Symantec), TEMP.Zagros
+(Mandiant), Mercury and Mango Sandstorm (Microsoft), Static Kitten (Anomali),
+Cobalt Ulster (Secureworks), TA450 (Proofpoint), and UNC3313 (Mandiant). All
+refer to the same MOIS-attributed Iranian threat cluster.
+
+## observatory results
+
+First Seen:Jan 2017
+
+Last Seen:May 2026
+
+Indexed Reports:91
+
+Public IOCs:4,398
+
+  * ### [Cobalt UlsterCobalt Ulster is named by SecureWorks and at the moment 1 indexed report with 30 related IOCs](/en/insights/actor/2c3105fd/)
+  * ### [DEV-1084DEV-1084 is named by Microsoft and at the moment 0 indexed report with 0 related IOCs](/en/insights/actor/268e4ba4/)
+  * ### [Mango SandstormMango Sandstorm is named by Microsoft and at the moment 3 indexed report with 49 related IOCs](/en/insights/actor/5866d070/)
+  * ### [MercuryMercury is named by Microsoft and at the moment 3 indexed report with 49 related IOCs](/en/insights/actor/57b5678e/)
+  * ### [MuddyWaterMuddyWater is named by Palo Alto and at the moment 75 indexed report with 3069 related IOCs](/en/insights/actor/fe272810/)
+  * ### [SeedwormSeedworm is named by Symantec and at the moment 8 indexed report with 121 related IOCs](/en/insights/actor/a4565c53/)
+  * ### [Static KittenStatic Kitten is named by CrowdStrike and at the moment 1 indexed report with 13 related IOCs](/en/insights/actor/70f6cf2c/)
+  * ### [Storm-1084Storm-1084 is named by Microsoft and at the moment 0 indexed report with 0 related IOCs](/en/insights/actor/ccc08bb1/)
+  * ### [TA450TA450 is named by Proofpoint and at the moment 1 indexed report with 3 related IOCs](/en/insights/actor/6f3c21d5/)
+  * ### [TEMP.ZagrosTEMP.Zagros is named by Mandiant and at the moment 1 indexed report with 1035 related IOCs](/en/insights/actor/3dc3d448/)
+  * ### [UNC3313UNC3313 is named by Mandiant and at the moment 1 indexed report with 13 related IOCs](/en/insights/actor/7de13501/)
+
+## Most Common Tactics
+
+## Targeted Regions
+
+![Afghanistan](/res/lib/img/loading.jpg)
+
+AF
+
+    
+    
+    Afghanistan
+
+Afghanistan
+
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Jan 2017 ~ Apr 2019
+    May 2018 ~ Oct 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Feb 2019 ~ Jun 2019
+    May 2018 ~ Oct 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Feb 2019 ~ Jun 2019
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+
+![Albania](/res/lib/img/loading.jpg)
+
+AL
+
+    
+    
+    Albania
+
+Albania
+
+    
+    
+    Nov 2023 ~ Nov 2023
+
+![Algeria](/res/lib/img/loading.jpg)
+
+DZ
+
+    
+    
+    Algeria
+
+Algeria
+
+    
+    
+    Oct 2023 ~ Apr 2024
+    
+    
+    Oct 2023 ~ Apr 2024
+
+![Argentina](/res/lib/img/loading.jpg)
+
+AR
+
+    
+    
+    Argentina
+
+Argentina
+
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+
+![Armenia](/res/lib/img/loading.jpg)
+
+AM
+
+    
+    
+    Armenia
+
+Armenia
+
+    
+    
+    Sep 2018 ~ Dec 2018
+    
+    
+    Sep 2018 ~ Dec 2018
+    
+    
+    Nov 2019 ~ Mar 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2021 ~ Jan 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2021 ~ Jan 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2021 ~ Jan 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Oct 2024 ~ Oct 2024
+
+![Austria](/res/lib/img/loading.jpg)
+
+AT
+
+    
+    
+    Austria
+
+Austria
+
+    
+    
+    May 2018 ~ Oct 2018
+    
+    
+    May 2018 ~ Oct 2018
+
+![Azerbaijan](/res/lib/img/loading.jpg)
+
+AZ
+
+    
+    
+    Azerbaijan
+
+Azerbaijan
+
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Jan 2017 ~ Apr 2019
+    May 2018 ~ Oct 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Feb 2019 ~ Jun 2019
+    May 2018 ~ Oct 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Jun 2019 ~ Feb 2020
+    Feb 2019 ~ Jun 2019
+    
+    
+    Jun 2019 ~ Feb 2020
+    Dec 2019 ~ Oct 2020
+    
+    
+    Jun 2019 ~ Feb 2020
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Feb 2021 ~ Mar 2021
+    Dec 2019 ~ Oct 2020
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Oct 2023 ~ Jul 2024
+    
+    
+    Oct 2023 ~ Jul 2024
+    Jun 2024 ~ Jul 2024
+    
+    
+    Aug 2025 ~ Dec 2025
+    
+    
+    Aug 2025 ~ Dec 2025
+
+![Bahrain](/res/lib/img/loading.jpg)
+
+BH
+
+    
+    
+    Bahrain
+
+Bahrain
+
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Jan 2017 ~ Apr 2019
+    May 2018 ~ Oct 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    May 2018 ~ Oct 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Feb 2021 ~ Mar 2021
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+
+![Belarus](/res/lib/img/loading.jpg)
+
+BY
+
+    
+    
+    Belarus
+
+Belarus
+
+    
+    
+    Jan 2019 ~ Jun 2019
+    Jan 2019 ~ Apr 2019
+    
+    
+    Jan 2019 ~ Jun 2019
+    Jan 2019 ~ Apr 2019
+
+![Cambodia](/res/lib/img/loading.jpg)
+
+KH
+
+    
+    
+    Cambodia
+
+Cambodia
+
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+
+![Canada](/res/lib/img/loading.jpg)
+
+CA
+
+    
+    
+    Canada
+
+Canada
+
+    
+    
+    Feb 2026 ~ Mar 2026
+
+![China](/res/lib/img/loading.jpg)
+
+CN
+
+    
+    
+    China
+
+China
+
+    
+    
+    Mar 2019 ~ Jun 2019
+
+![Cyprus](/res/lib/img/loading.jpg)
+
+CY
+
+    
+    
+    Cyprus
+
+Cyprus
+
+    
+    
+    Mar 2019 ~ Jun 2019
+
+![Denmark](/res/lib/img/loading.jpg)
+
+DK
+
+    
+    
+    Denmark
+
+Denmark
+
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Jan 2019 ~ Jun 2019
+
+![Egypt](/res/lib/img/loading.jpg)
+
+EG
+
+    
+    
+    Egypt
+
+Egypt
+
+    
+    
+    Feb 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    
+    
+    May 2018 ~ May 2018
+    May 2018 ~ Jun 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2019 ~ Jun 2019
+    Sep 2018 ~ Dec 2018
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2019 ~ Jun 2019
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Sep 2022 ~ Jan 2023
+    Jan 2020 ~ Nov 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Mar 2019 ~ Feb 2026
+    Sep 2022 ~ Jan 2023
+    Jan 2020 ~ Nov 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Oct 2023 ~ Apr 2024
+    Nov 2023 ~ Dec 2023
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Oct 2023 ~ Apr 2024
+    
+    
+    Mar 2019 ~ Feb 2026
+    Sep 2024 ~ Dec 2025
+    
+    
+    Mar 2019 ~ Feb 2026
+    Sep 2024 ~ Dec 2025
+    
+    
+    Mar 2019 ~ Feb 2026
+    Sep 2024 ~ Dec 2025
+    
+    
+    Feb 2026 ~ Apr 2026
+    Mar 2019 ~ Feb 2026
+    Sep 2024 ~ Dec 2025
+    
+    
+    Feb 2026 ~ Apr 2026
+
+![Europe](/res/lib/img/loading.jpg)
+
+EU
+
+    
+    
+    Europe
+
+Europe
+
+    
+    
+    Jan 2022 ~ Jan 2022
+    Jan 2022 ~ Feb 2022
+    
+    
+    Feb 2022 ~ Feb 2022
+    Jan 2022 ~ Jan 2022
+    Jan 2022 ~ Feb 2022
+    
+    
+    Mar 2024 ~ Aug 2025
+    
+    
+    Mar 2024 ~ Aug 2025
+    
+    
+    Mar 2024 ~ Aug 2025
+    
+    
+    Mar 2024 ~ Aug 2025
+    Aug 2025 ~ Oct 2025
+    
+    
+    Dec 2025 ~ Jan 2026
+    Aug 2025 ~ Oct 2025
+
+![Georgia](/res/lib/img/loading.jpg)
+
+GE
+
+    
+    
+    Georgia
+
+Georgia
+
+    
+    
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Jan 2019 ~ Jun 2019
+    Jun 2019 ~ Feb 2020
+    
+    
+    Jun 2019 ~ Feb 2020
+    Dec 2019 ~ Oct 2020
+    
+    
+    Jun 2019 ~ Feb 2020
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+
+![India](/res/lib/img/loading.jpg)
+
+IN
+
+    
+    
+    India
+
+India
+
+    
+    
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2018 ~ Mar 2018
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Mar 2019 ~ Jun 2019
+    Jan 2019 ~ Jun 2019
+    
+    
+    Oct 2023 ~ Jul 2024
+    Oct 2023 ~ Apr 2024
+    
+    
+    Oct 2023 ~ Jul 2024
+    Oct 2023 ~ Apr 2024
+    
+    
+    Feb 2026 ~ Apr 2026
+    
+    
+    Feb 2026 ~ Apr 2026
+
+![Iran](/res/lib/img/loading.jpg)
+
+IR
+
+    
+    
+    Iran
+
+Iran
+
+    
+    
+    Feb 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    
+    
+    May 2018 ~ Oct 2018
+    
+    
+    Jan 2019 ~ Jun 2019
+    Feb 2019 ~ Jun 2019
+    May 2018 ~ Oct 2018
+    
+    
+    Jan 2019 ~ Jun 2019
+    Feb 2019 ~ Jun 2019
+    
+    
+    Jul 2024 ~ Jul 2025
+    
+    
+    Jul 2024 ~ Jul 2025
+    
+    
+    Jul 2024 ~ Jul 2025
+    
+    
+    Jul 2024 ~ Jul 2025
+
+![Iraq](/res/lib/img/loading.jpg)
+
+IQ
+
+    
+    
+    Iraq
+
+Iraq
+
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Jul 2017 ~ Oct 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Feb 2018 ~ May 2018
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    May 2018 ~ Oct 2018
+    Feb 2018 ~ May 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Feb 2019 ~ Jun 2019
+    May 2018 ~ Oct 2018
+    Nov 2018 ~ Apr 2019
+    Sep 2018 ~ Dec 2018
+    
+    
+    Mar 2019 ~ Feb 2026
+    Mar 2019 ~ Jun 2019
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Mar 2019 ~ Mar 2019
+    Jun 2019 ~ Feb 2020
+    Feb 2019 ~ Jun 2019
+    Nov 2018 ~ Apr 2019
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jun 2019 ~ Feb 2020
+    Dec 2019 ~ Oct 2020
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jun 2019 ~ Feb 2020
+    Jan 2020 ~ Nov 2023
+    Dec 2019 ~ Oct 2020
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    Dec 2019 ~ Oct 2020
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    Dec 2019 ~ Oct 2020
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Sep 2022 ~ Jan 2023
+    Jan 2020 ~ Nov 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Mar 2019 ~ Feb 2026
+    Sep 2022 ~ Jan 2023
+    Jan 2020 ~ Nov 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+
+![Israel](/res/lib/img/loading.jpg)
+
+IL
+
+    
+    
+    Israel
+
+Israel
+
+    
+    
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2019 ~ Jun 2019
+    
+    
+    Mar 2019 ~ Feb 2026
+    Dec 2019 ~ Oct 2020
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    Dec 2019 ~ Oct 2020
+    
+    
+    Mar 2019 ~ Feb 2026
+    Oct 2020 ~ Oct 2020
+    Jan 2020 ~ Nov 2023
+    Dec 2019 ~ Oct 2020
+    
+    
+    Mar 2019 ~ Feb 2026
+    Oct 2020 ~ Oct 2020
+    Jan 2020 ~ Nov 2023
+    Feb 2021 ~ Mar 2021
+    Dec 2019 ~ Oct 2020
+    Nov 2020 ~ Jun 2022
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    Jun 2021 ~ Dec 2021
+    Nov 2020 ~ Jun 2022
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    Nov 2021 ~ Jun 2023
+    Jun 2021 ~ Dec 2021
+    Nov 2020 ~ Jun 2022
+    
+    
+    Feb 2022 ~ Mar 2023
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    Nov 2021 ~ Jun 2023
+    Nov 2020 ~ Jun 2022
+    
+    
+    Feb 2022 ~ Mar 2023
+    Mar 2019 ~ Feb 2026
+    Sep 2022 ~ Jan 2023
+    Jan 2020 ~ Nov 2023
+    Jul 2022 ~ Dec 2022
+    Nov 2021 ~ Jun 2023
+    Jul 2022 ~ Aug 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Feb 2022 ~ Mar 2023
+    Mar 2019 ~ Feb 2026
+    Nov 2022 ~ Apr 2025
+    Sep 2022 ~ Jan 2023
+    Jan 2020 ~ Nov 2023
+    Jul 2022 ~ Dec 2022
+    Nov 2021 ~ Jun 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Nov 2022 ~ Apr 2025
+    Jan 2020 ~ Nov 2023
+    Nov 2021 ~ Jun 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Nov 2022 ~ Apr 2025
+    Oct 2023 ~ Jul 2024
+    Oct 2023 ~ Apr 2024
+    Feb 2024 ~ Apr 2024
+    Oct 2023 ~ Mar 2024
+    Jan 2020 ~ Nov 2023
+    Oct 2023 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    May 2024 ~ Feb 2025
+    Nov 2022 ~ Apr 2025
+    Oct 2023 ~ Jul 2024
+    Jun 2024 ~ Jul 2024
+    Oct 2023 ~ Apr 2024
+    Feb 2024 ~ Apr 2024
+    Oct 2023 ~ Mar 2024
+    Mar 2024 ~ Mar 2024
+    Mar 2024 ~ Mar 2024
+    
+    
+    Mar 2019 ~ Feb 2026
+    May 2024 ~ Feb 2025
+    Sep 2024 ~ Dec 2025
+    Nov 2022 ~ Apr 2025
+    Oct 2024 ~ Nov 2024
+    
+    
+    Mar 2019 ~ Feb 2026
+    May 2024 ~ Feb 2025
+    Sep 2024 ~ Dec 2025
+    Nov 2022 ~ Apr 2025
+    
+    
+    Oct 2025 ~ Mar 2026
+    Mar 2019 ~ Feb 2026
+    Aug 2025 ~ Dec 2025
+    Sep 2024 ~ Dec 2025
+    
+    
+    Feb 2026 ~ May 2026
+    Feb 2026 ~ Apr 2026
+    Jan 2026 ~ Apr 2026
+    Nov 2025 ~ Dec 2025
+    Oct 2025 ~ Mar 2026
+    Jan 2026 ~ Mar 2026
+    Mar 2019 ~ Feb 2026
+    Nov 2025 ~ Jan 2026
+    Aug 2025 ~ Dec 2025
+    Sep 2024 ~ Dec 2025
+    
+    
+    Feb 2026 ~ May 2026
+    Feb 2026 ~ Apr 2026
+    Jan 2026 ~ Apr 2026
+
+![Italy](/res/lib/img/loading.jpg)
+
+IT
+
+    
+    
+    Italy
+
+Italy
+
+    
+    
+    Oct 2023 ~ Apr 2024
+    
+    
+    Oct 2023 ~ Apr 2024
+
+![Jordan](/res/lib/img/loading.jpg)
+
+JO
+
+    
+    
+    Jordan
+
+Jordan
+
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    May 2018 ~ Oct 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Jan 2019 ~ Jun 2019
+    Oct 2018 ~ Oct 2018
+    May 2018 ~ Oct 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Jan 2019 ~ Jun 2019
+    Jun 2019 ~ Feb 2020
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jun 2019 ~ Feb 2020
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jun 2019 ~ Feb 2020
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    Jun 2021 ~ Dec 2021
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    Jun 2021 ~ Dec 2021
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Sep 2022 ~ Jan 2023
+    Jan 2020 ~ Nov 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Mar 2019 ~ Feb 2026
+    Sep 2022 ~ Jan 2023
+    Jan 2020 ~ Nov 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Feb 2024 ~ Apr 2024
+    Jan 2020 ~ Nov 2023
+    
+    
+    Mar 2019 ~ Feb 2026
+    Jun 2024 ~ Jul 2024
+    Feb 2024 ~ Apr 2024
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+
+![Kazakhstan](/res/lib/img/loading.jpg)
+
+KZ
+
+    
+    
+    Kazakhstan
+
+Kazakhstan
+
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+
+![Kuwait](/res/lib/img/loading.jpg)
+
+KW
+
+    
+    
+    Kuwait
+
+Kuwait
+
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Jan 2021 ~ Feb 2021
+    Dec 2019 ~ Oct 2020
+    
+    
+    Jun 2021 ~ Dec 2021
+    
+    
+    Jun 2021 ~ Dec 2021
+
+![Laos](/res/lib/img/loading.jpg)
+
+LA
+
+    
+    
+    Laos
+
+Laos
+
+    
+    
+    Jun 2021 ~ Dec 2021
+    
+    
+    Jun 2021 ~ Dec 2021
+
+![Lebanon](/res/lib/img/loading.jpg)
+
+LB
+
+    
+    
+    Lebanon
+
+Lebanon
+
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    
+    
+    Jan 2017 ~ Apr 2019
+    Nov 2018 ~ Dec 2018
+    Oct 2018 ~ Nov 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+
+![Malaysia](/res/lib/img/loading.jpg)
+
+MY
+
+    
+    
+    Malaysia
+
+Malaysia
+
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+    
+    
+    Mar 2019 ~ Feb 2026
+
+![Mali](/res/lib/img/loading.jpg)
+
+ML
+
+    
+    
+    Mali
+
+Mali
+
+    
+    
+    May 2018 ~ Oct 2018
+    
+    
+    May 2018 ~ Oct 2018
+
+![Malta](/res/lib/img/loading.jpg)
+
+MT
+
+    
+    
+    Malta
+
+Malta
+
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Jan 2019 ~ Jun 2019
+
+![Middle East](/res/lib/img/loading.jpg)
+
+ME
+
+    
+    
+    Middle East
+
+Middle East
+
+    
+    
+    Oct 2017 ~ Nov 2017
+    Jul 2017 ~ Oct 2017
+    
+    
+    Feb 2018 ~ May 2018
+    Oct 2017 ~ Nov 2017
+    
+    
+    Feb 2018 ~ May 2018
+    
+    
+    Apr 2019 ~ May 2019
+    
+    
+    Nov 2019 ~ Mar 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    
+    
+    Sep 2020 ~ Oct 2020
+    Nov 2019 ~ Mar 2022
+    
+    
+    Dec 2020 ~ Dec 2020
+    Nov 2019 ~ Mar 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2021 ~ Dec 2021
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jan 2022 ~ Jan 2022
+    Jan 2022 ~ Feb 2022
+    Jun 2021 ~ Dec 2021
+    Nov 2021 ~ Feb 2022
+    Jan 2022 ~ Jan 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jan 2022 ~ Jan 2022
+    Jan 2022 ~ Feb 2022
+    Nov 2021 ~ Feb 2022
+    Jan 2022 ~ Jan 2022
+    
+    
+    Jun 2022 ~ Apr 2023
+    
+    
+    Jun 2022 ~ Apr 2023
+    
+    
+    Jun 2022 ~ Apr 2023
+    
+    
+    May 2024 ~ Feb 2025
+    
+    
+    May 2024 ~ Feb 2025
+    
+    
+    May 2024 ~ Feb 2025
+    
+    
+    Oct 2025 ~ Mar 2026
+    Oct 2025 ~ Feb 2026
+    Aug 2025 ~ Oct 2025
+    
+    
+    Feb 2026 ~ May 2026
+    Oct 2025 ~ Apr 2026
+    Oct 2025 ~ Mar 2026
+    Oct 2025 ~ Feb 2026
+    Dec 2025 ~ Jan 2026
+    Nov 2025 ~ Jan 2026
+    Aug 2025 ~ Oct 2025
+    
+    
+    Feb 2026 ~ May 2026
+    Oct 2025 ~ Apr 2026
+
+![Netherlands](/res/lib/img/loading.jpg)
+
+NL
+
+    
+    
+    Netherlands
+
+Netherlands
+
+    
+    
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2019 ~ Jun 2019
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2019 ~ Jun 2019
+
+![Oman](/res/lib/img/loading.jpg)
+
+OM
+
+    
+    
+    Oman
+
+Oman
+
+    
+    
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2019 ~ Jun 2019
+    Nov 2018 ~ Dec 2018
+    Oct 2018 ~ Nov 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Oct 2025 ~ Mar 2026
+    
+    
+    Oct 2025 ~ Mar 2026
+
+![Pakistan](/res/lib/img/loading.jpg)
+
+PK
+
+    
+    
+    Pakistan
+
+Pakistan
+
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Oct 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Jan 2018 ~ Mar 2018
+    Feb 2018 ~ May 2018
+    Oct 2017 ~ Nov 2017
+    Feb 2018 ~ Mar 2018
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    May 2018 ~ Oct 2018
+    Feb 2018 ~ May 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Oct 2018 ~ Oct 2018
+    May 2018 ~ Oct 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Mar 2019 ~ Jun 2019
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    
+    
+    Nov 2019 ~ Mar 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2021 ~ Jan 2022
+    Jun 2021 ~ Dec 2021
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2021 ~ Jan 2022
+    Jun 2021 ~ Dec 2021
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2021 ~ Jan 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+
+![Portugal](/res/lib/img/loading.jpg)
+
+PT
+
+    
+    
+    Portugal
+
+Portugal
+
+    
+    
+    Oct 2023 ~ Jul 2024
+    
+    
+    Oct 2023 ~ Jul 2024
+    
+    
+    Feb 2026 ~ Apr 2026
+    
+    
+    Feb 2026 ~ Apr 2026
+
+![Qatar](/res/lib/img/loading.jpg)
+
+QA
+
+    
+    
+    Qatar
+
+Qatar
+
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+
+![Russia](/res/lib/img/loading.jpg)
+
+RU
+
+    
+    
+    Russia
+
+Russia
+
+    
+    
+    May 2018 ~ Oct 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    May 2018 ~ Oct 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Nov 2025 ~ Apr 2026
+    
+    
+    Nov 2025 ~ Apr 2026
+
+![Saudi Arabia](/res/lib/img/loading.jpg)
+
+SA
+
+    
+    
+    Saudi Arabia
+
+Saudi Arabia
+
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Jul 2017 ~ Oct 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    May 2018 ~ Oct 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    May 2018 ~ Oct 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    
+    
+    Feb 2021 ~ Mar 2021
+    
+    
+    Jun 2021 ~ Dec 2021
+    
+    
+    Jun 2021 ~ Dec 2021
+    
+    
+    Oct 2023 ~ Jul 2024
+    Feb 2024 ~ Apr 2024
+    
+    
+    Oct 2023 ~ Jul 2024
+    Jun 2024 ~ Jul 2024
+    Feb 2024 ~ Apr 2024
+
+![South Africa](/res/lib/img/loading.jpg)
+
+ZA
+
+    
+    
+    South Africa
+
+South Africa
+
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+
+![South Korea](/res/lib/img/loading.jpg)
+
+KR
+
+    
+    
+    South Korea
+
+South Korea
+
+    
+    
+    Feb 2026 ~ May 2026
+    
+    
+    Feb 2026 ~ May 2026
+
+![Sudan](/res/lib/img/loading.jpg)
+
+SD
+
+    
+    
+    Sudan
+
+Sudan
+
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2023 ~ Dec 2023
+
+![Switzerland](/res/lib/img/loading.jpg)
+
+CH
+
+    
+    
+    Switzerland
+
+Switzerland
+
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Jan 2019 ~ Jun 2019
+
+![Syria](/res/lib/img/loading.jpg)
+
+SY
+
+    
+    
+    Syria
+
+Syria
+
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2020 ~ Jun 2022
+
+![Tajikistan](/res/lib/img/loading.jpg)
+
+TJ
+
+    
+    
+    Tajikistan
+
+Tajikistan
+
+    
+    
+    Jan 2018 ~ Mar 2018
+    Feb 2018 ~ Mar 2018
+    
+    
+    Jan 2019 ~ Jun 2019
+    Feb 2019 ~ Jun 2019
+    
+    
+    Mar 2019 ~ Jun 2019
+    Jan 2019 ~ Jun 2019
+    Feb 2019 ~ Jun 2019
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+
+![Tanzania](/res/lib/img/loading.jpg)
+
+TZ
+
+    
+    
+    Tanzania
+
+Tanzania
+
+    
+    
+    Nov 2023 ~ Dec 2023
+
+![Thailand](/res/lib/img/loading.jpg)
+
+TH
+
+    
+    
+    Thailand
+
+Thailand
+
+    
+    
+    Jun 2021 ~ Dec 2021
+    
+    
+    Jun 2021 ~ Dec 2021
+
+![Tunisia](/res/lib/img/loading.jpg)
+
+TN
+
+    
+    
+    Tunisia
+
+Tunisia
+
+    
+    
+    Feb 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+
+![Turkey](/res/lib/img/loading.jpg)
+
+TR
+
+    
+    
+    Turkey
+
+Turkey
+
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    Feb 2017 ~ Nov 2017
+    Jan 2018 ~ Mar 2018
+    Feb 2018 ~ May 2018
+    Feb 2018 ~ Mar 2018
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2017 ~ Apr 2019
+    May 2018 ~ Oct 2018
+    Feb 2018 ~ May 2018
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Nov 2018 ~ Dec 2018
+    Oct 2018 ~ Oct 2018
+    Nov 2018 ~ Nov 2018
+    Jan 2019 ~ Apr 2019
+    Feb 2019 ~ Jun 2019
+    May 2018 ~ Oct 2018
+    Nov 2018 ~ Apr 2019
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2017 ~ Apr 2019
+    Jan 2019 ~ Jun 2019
+    Jun 2019 ~ Feb 2020
+    Jan 2019 ~ Apr 2019
+    Feb 2019 ~ Jun 2019
+    Nov 2018 ~ Apr 2019
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2019 ~ Feb 2020
+    Dec 2019 ~ Oct 2020
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2019 ~ Feb 2020
+    Dec 2019 ~ Oct 2020
+    
+    
+    Nov 2019 ~ Mar 2022
+    Dec 2019 ~ Oct 2020
+    
+    
+    Nov 2019 ~ Mar 2022
+    Dec 2019 ~ Oct 2020
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2021 ~ Jan 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2021 ~ Jan 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Nov 2019 ~ Mar 2022
+    Jun 2021 ~ Jan 2022
+    Nov 2020 ~ Jun 2022
+    
+    
+    Jun 2022 ~ Apr 2023
+    Nov 2020 ~ Jun 2022
+    
+    
+    Jun 2022 ~ Apr 2023
+    
+    
+    Jun 2022 ~ Apr 2023
+    
+    
+    Oct 2023 ~ Jul 2024
+    Oct 2023 ~ Apr 2024
+    Oct 2023 ~ Mar 2024
+    
+    
+    Oct 2023 ~ Jul 2024
+    Jun 2024 ~ Jul 2024
+    Oct 2023 ~ Apr 2024
+    Oct 2023 ~ Mar 2024
+    
+    
+    Aug 2025 ~ Dec 2025
+    
+    
+    Aug 2025 ~ Dec 2025
+
+![Turkmenistan](/res/lib/img/loading.jpg)
+
+TM
+
+    
+    
+    Turkmenistan
+
+Turkmenistan
+
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Nov 2025 ~ Jan 2026
+
+![Ukraine](/res/lib/img/loading.jpg)
+
+UA
+
+    
+    
+    Ukraine
+
+Ukraine
+
+    
+    
+    Jan 2019 ~ Apr 2019
+    
+    
+    Jan 2019 ~ Apr 2019
+
+![United Arab Emirates](/res/lib/img/loading.jpg)
+
+AE
+
+    
+    
+    United Arab Emirates
+
+United Arab Emirates
+
+    
+    
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Mar 2019 ~ Jun 2019
+    Jan 2019 ~ Jun 2019
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Jan 2021 ~ Feb 2021
+    Feb 2021 ~ Mar 2021
+    Dec 2019 ~ Oct 2020
+    
+    
+    Jun 2021 ~ Dec 2021
+    
+    
+    Jun 2021 ~ Dec 2021
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Sep 2022 ~ Jan 2023
+    Jul 2022 ~ Dec 2022
+    
+    
+    Oct 2025 ~ Mar 2026
+    
+    
+    Feb 2026 ~ Apr 2026
+    Oct 2025 ~ Mar 2026
+    Nov 2025 ~ Jan 2026
+    
+    
+    Feb 2026 ~ Apr 2026
+
+![United Kingdom](/res/lib/img/loading.jpg)
+
+GB
+
+    
+    
+    United Kingdom
+
+United Kingdom
+
+    
+    
+    Feb 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+
+![United States](/res/lib/img/loading.jpg)
+
+US
+
+    
+    
+    United States
+
+United States
+
+    
+    
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Feb 2017 ~ Nov 2017
+    Jan 2017 ~ Nov 2017
+    
+    
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2019 ~ Jun 2019
+    Sep 2018 ~ Dec 2018
+    
+    
+    Jan 2019 ~ Jun 2019
+    Apr 2019 ~ Jan 2020
+    
+    
+    Apr 2019 ~ Jan 2020
+    
+    
+    Apr 2019 ~ Jan 2020
+    
+    
+    Jan 2022 ~ Jan 2022
+    Jan 2022 ~ Feb 2022
+    
+    
+    Feb 2022 ~ Feb 2022
+    Jan 2022 ~ Jan 2022
+    Jan 2022 ~ Feb 2022
+    
+    
+    Oct 2025 ~ Mar 2026
+    
+    
+    Feb 2026 ~ May 2026
+    Nov 2025 ~ Apr 2026
+    Jan 2026 ~ Apr 2026
+    Oct 2025 ~ Mar 2026
+    Feb 2026 ~ Mar 2026
+    
+    
+    Feb 2026 ~ May 2026
+    Nov 2025 ~ Apr 2026
+    Jan 2026 ~ Apr 2026
+
+![Uzbekistan](/res/lib/img/loading.jpg)
+
+UZ
+
+    
+    
+    Uzbekistan
+
+Uzbekistan
+
+    
+    
+    Jan 2019 ~ Jun 2019
+    
+    
+    Jan 2019 ~ Jun 2019
+
+![Vietnam](/res/lib/img/loading.jpg)
+
+VN
+
+    
+    
+    Vietnam
+
+Vietnam
+
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+    
+    
+    Dec 2019 ~ Oct 2020
+
+Jan 2017Aug 2026
+
+## Recent Activities
+
+  1. May 12, 2026
+
+Public
+
+[Iran-Linked Seedworm Escalates Global Espionage with Enhanced Node.js
+Tradecraft](/en/threats/view/34457623/)
+
+  2. May 06, 2026
+
+Public
+
+[False Flag Cyber Espionage: How Iranian Actors Weaponized the Chaos RaaS
+Brand](/en/threats/view/7396dc8a/)
+
+  3. April 21, 2026
+
+Public
+
+[DinDoor Malware Exploits Deno Runtime to Target US and Russian
+Entities](/en/threats/view/ee0ab80e/)
+
+[see more](/en/threats/cluster/fe272810/)
+
+**Disclaimer:** We are working on indexing and analyzing relevant data and
+this process is not fully completed yet. Therefore, displayed details and
+statistics may will change in the future.
+
+[Twitter](https://twitter.com/certfalab)
+
+© CERTFA Lab 2018 - Present[Changelog - v0.1.6](/en/resources/changelog/)
+
+Type`>`for Threats,to search Threats Feed,`@`for Actors.for view Actors
+Insights.
+

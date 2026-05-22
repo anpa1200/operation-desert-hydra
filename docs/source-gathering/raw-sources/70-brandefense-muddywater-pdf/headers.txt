@@ -1,0 +1,22 @@
+HTTP/2 200 
+date: Fri, 22 May 2026 06:34:54 GMT
+content-type: application/pdf
+server: cloudflare
+last-modified: Wed, 01 Oct 2025 13:01:29 GMT
+vary: Accept-Encoding
+speculation-rules: "/cdn-cgi/speculation"
+x-xss-protection: 0;
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-permitted-cross-domain-policies: master-only
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+alt-svc: h3=":443"; ma=86400
+age: 1097968
+cache-control: max-age=31536000
+cf-cache-status: HIT
+etag: W/"68dd2629-c0c0d"
+content-encoding: zstd
+cf-ray: 9ff9cc3c494c3120-TLV
+

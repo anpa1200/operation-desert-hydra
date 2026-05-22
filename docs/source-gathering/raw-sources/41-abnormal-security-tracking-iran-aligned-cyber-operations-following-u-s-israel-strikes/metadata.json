@@ -1,0 +1,15 @@
+{
+  "number": 41,
+  "title": "Abnormal Security — Tracking Iran-Aligned Cyber Operations Following U.S.-Israel Strikes",
+  "url": "https://abnormal.ai/blog/iran-aligned-cyber-operations-email-threats",
+  "curl_status": "200 https://abnormal.ai/blog/iran-aligned-cyber-operations-email-threats",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  251k    0  251k    0     0   704k      0 --:--:-- --:--:-- --:--:--  704k\n100  307k    0  307k    0     0   848k      0 --:--:-- --:--:-- --:--:--  848k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/41-abnormal-security-tracking-iran-aligned-cyber-operations-following-u-s-israel-strikes/source.html",
+  "text_file": "docs/source-gathering/raw-sources/41-abnormal-security-tracking-iran-aligned-cyber-operations-following-u-s-israel-strikes/source.txt",
+  "size_bytes": 1504974,
+  "extract_error": ""
+}

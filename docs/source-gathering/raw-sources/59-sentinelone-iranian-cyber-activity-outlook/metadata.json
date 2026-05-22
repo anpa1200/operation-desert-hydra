@@ -1,0 +1,15 @@
+{
+  "number": 59,
+  "title": "SentinelOne — Iranian Cyber Activity Outlook",
+  "url": "https://www.sentinelone.com/blog/sentinelone-intelligence-brief-iranian-cyber-activity-outlook/",
+  "curl_status": "200 https://www.sentinelone.com/blog/sentinelone-intelligence-brief-iranian-cyber-activity-outlook/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  106k    0  106k    0     0   656k      0 --:--:-- --:--:-- --:--:--  660k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/59-sentinelone-iranian-cyber-activity-outlook/source.html",
+  "text_file": "docs/source-gathering/raw-sources/59-sentinelone-iranian-cyber-activity-outlook/source.txt",
+  "size_bytes": 387480,
+  "extract_error": ""
+}

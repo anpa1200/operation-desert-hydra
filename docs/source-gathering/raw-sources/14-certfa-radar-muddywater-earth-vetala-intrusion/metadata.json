@@ -1,0 +1,15 @@
+{
+  "number": 14,
+  "title": "CERTFA Radar — MuddyWater / Earth Vetala Intrusion",
+  "url": "https://radar.certfa.com/en/threats/view/d7c9c420/",
+  "curl_status": "200 https://radar.certfa.com/en/threats/view/d7c9c420/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 68356  100 68356    0     0   102k      0 --:--:-- --:--:-- --:--:--  102k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/14-certfa-radar-muddywater-earth-vetala-intrusion/source.html",
+  "text_file": "docs/source-gathering/raw-sources/14-certfa-radar-muddywater-earth-vetala-intrusion/source.txt",
+  "size_bytes": 68356,
+  "extract_error": ""
+}

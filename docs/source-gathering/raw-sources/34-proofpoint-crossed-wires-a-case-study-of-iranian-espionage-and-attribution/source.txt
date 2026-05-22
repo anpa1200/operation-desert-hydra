@@ -1,0 +1,1297 @@
+Skip to main content
+
+  * ![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__globe.svg)**us:** English: Americas
+
+Select a Language **us:** English: Americas [English: Europe, Middle East,
+Africa](/uk/blog/threat-insight/crossed-wires-case-study-iranian-espionage-
+and-attribution) [English: Asia Pacific](/au/blog/threat-insight/crossed-
+wires-case-study-iranian-espionage-and-attribution) [日本語](/jp/blog/threat-
+insight/crossed-wires-case-study-iranian-espionage-and-attribution)
+
+  * Search ![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__search.svg)
+  * Partners![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__drop.svg)
+
+[ Channel Partners and Distributors![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/channel-partners-and-
+distributors) [ MSP Partners![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/partners/msp) [ Technology and
+Alliance Partners![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/partners/technology-alliance-partners)
+
+  * Support![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__drop.svg)
+
+[ Support Login![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://proofpoint.my.site.com/community/s/) [ Sendmail
+Support Login![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://proofpoint.my.site.com/community/s/) [ IP
+Address Blocked![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/postmaster)
+
+  * Login![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__drop.svg)
+
+Training [ Proofpoint Cybersecurity
+Academy![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](https://learningmanager.adobe.com/proofpointcybersecurityacademy)
+Partners [ Partner Hub![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg)
+](https://partners.proofpoint.com/English/)
+
+Products [ Digital Risk Portal![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg)
+](https://v1.us1.digitalrisk.proofpoint.com/users/sign_in) [ ET
+Intelligence![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://threatintel.proofpoint.com) [ Email Fraud
+Defense![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](https://app.emaildefense.proofpoint.com/login) [ Proofpoint
+Essentials![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://us1.proofpointessentials.com/app/login.php)
+
+![Back](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg)
+
+Back
+
+[ ![Proofpoint](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__logo.svg) ](/us)
+
+![Search](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__search.svg) ![Search](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__menu.svg)
+![Search](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__x-
+white.svg)
+
+Platform Solutions Why Proofpoint Resources Company
+
+[ Get a Demo ](/us/free-demo-request) [ Contact Us ](/us/contact)
+
+![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__search-
+white.svg)
+
+Top Suggestions:
+
+Email Security Phishing DLP Email Fraud Prime Threat Protection
+
+  * ![](/sites/default/files/nav-icons/pfpt-platform-icon.svg)
+
+Platform
+
+  * ![](/sites/default/files/nav-icons/pfpt-collaboration-security-icon.svg)
+
+Collaboration Security
+
+  * ![](/sites/default/files/nav-icons/pfpt-data-security-and-governance-icon.svg)
+
+Data Security and Governance
+
+  * ![](/sites/default/files/nav-icons/pfpt-artificial-intelligence-icon.svg)
+
+AI Security
+
+  * ![](/sites/default/files/nav-icons/pfpt-platform-technologies-icon.svg)
+
+Platform Technologies
+
+  * ![](/sites/default/files/nav-icons/pfpt-services-icon.svg)
+
+Services
+
+Platform
+
+### Cybersecurity for the agentic workspace starts with Proofpoint’s human and
+agent-centric security platform.
+
+[ Collaboration Security![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/collaboration-
+security-prime)
+
+Defend humans and agents against modern cyber threats across email and
+collaboration channels.
+
+[ Data Security and Governance​![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/data-security-
+governance)
+
+Protect the data that powers human and AI collaboration​.
+
+[ AI Security![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/platform/ai-security)
+
+Secure the use of AI by people and AI Agents
+
+[ Platform Technologies![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/platform)
+
+Leverage Proofpoint’s market-leading technologies powering cybersecurity for
+people, data and AI.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+platform-promo-img.png.webp?itok=3n5K634l) Featured Join a live Protect
+event—learn how to protect people, data, and AI Live Events
+](/us/events/protect-series)
+
+Collaboration Security
+
+### Stop cyberthreats with AI-driven multichannel protection.
+
+[ Discover Collaboration Security Prime ](/us/products/collaboration-security-
+prime)
+
+[ Core Email Protection![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-protection)
+
+Activate industry-leading threat protection delivered via API or Gateway.
+
+[ Email Fraud Defense![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-
+protection/email-fraud-defense)
+
+Protect your brand reputation, increase deliverability and identify domain
+lookalikes.
+
+[ ZenGuide![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products/mitigate-human-risk)
+
+Turn your workforce into your first line of defense with targeted, behavior-
+changing security awareness training.
+
+[ Secure Email Relay![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-security-and-
+protection/secure-email-relay)
+
+Secure your application email and accelerate DMARC implementation.
+
+[ Account Takeover Protection![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/identity-
+protection/account-takeover)
+
+Detect, investigate, and respond to account takeovers.
+
+[ All Products![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products)
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+collaboration-protection-promo-img.png.webp?itok=eblURr2R) Featured Experience
+Core Email Protection in action—block 99.99% of email threats Interactive Demo
+](/us/learn-more/cep-demo)
+
+Data Security and Governance
+
+### Transform data security with a unified, omnichannel approach.
+
+[ See why Proofpoint is a leader ](/us/resources/analyst-reports/gartner-
+market-guide-ai-trism)
+
+[ Data Security for AI![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/data-security-for-ai)
+
+Secure data across shadow and approved AI.
+
+[ Enterprise DLP![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products/data-loss-prevention)
+
+Transform DLP with a modern platform that prevents data loss across email,
+cloud, and endpoints.
+
+[ Adaptive Email DLP![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/adaptive-email-dlp)
+
+Prevent misdirected emails and hidden exfiltration of sensitive data.
+
+[ Insider Threat Management![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/insider-threat-
+management)
+
+Get visibility into risky behavior by careless, malicious and compromised
+users.
+
+[ Data Security Posture Management![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/data-security-
+posture-management)
+
+Discover, classify and protect sensitive data across cloud and hybrid
+environments.
+
+[ Digital Communications Governance![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/digital-
+communications-governance)
+
+Capture, retain and discover digital communications intelligently to ensure
+compliance.
+
+[ All Products![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products)
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+data-security-and-governance-promo-img.png.webp?itok=JTuZwAuj) Featured
+Understand the top data security risks organizations face — and how to stay
+ahead Research Report ](/us/resources/threat-reports/data-security-landscape-
+report)
+
+AI Security
+
+### Unify AI security across people, agents, and MCP
+
+[ Secure every layer of your AI ](/us/platform/ai-security)
+
+[ Secure AI Usage by People ![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/ai-access-security)
+
+Get visibility into and apply controls around the use of AI by employees
+
+[ Secure AI Usage by Agents![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/agentic-ai-security)
+
+Understand intent of AI Agents and control how they use other AI tools
+
+[ Secure MCP Across Your Enterprise![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/ai-mcp-security)
+
+Unify MCP discovery, authorization, and monitoring to secure AI connectivity
+at scale.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+resources-promo-img.png.webp?itok=WF791rss) Featured AI at Proofpoint
+](/us/resources/solution-briefs/ai-at-proofpoint-nexus-ai-detection)
+
+Platform Technologies
+
+### Proofpoint technologies powering human and agent-centric security.
+
+[ Discover the security risks ](/us/platform)
+
+[ Proofpoint Nexus![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/platform/nexus)
+
+Advanced AI and threat intelligence to detect threats and assess data risk.
+
+[ Proofpoint Zen![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/platform/zen)
+
+Integrated control points to protect people and data, wherever work happens.
+
+[ Proofpoint Satori![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/platform/satori)
+
+The power behind agentic security operations.
+
+[ Proofpoint 365 Total Protection![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-
+protection/essentials)
+
+Enabling the channel. Safeguarding humans and agents.
+
+![](/sites/default/files/styles/webp_conversion/public/nav-promo-
+graphics/pfpt-nav-platform-promo-graphic.png.webp?itok=xEMMR-So)
+
+#### AI at Proofpoint
+
+[ Learn more ](/us/resources/solution-briefs/ai-at-proofpoint-nexus-ai-
+detection)
+
+Services
+
+### Optimize Proofpoint solutions with expert services.
+
+[ Advisory Services![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/premium-
+services/advisory-services)
+
+Give your team access to expert guidance while they manage daily operations of
+your Proofpoint platform.
+
+[ Applied Services![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products/premium-services/applied-services)
+
+Gain a hightouch strategic partnership with a team of Proofpoint specialists
+who optimize your security and monitoring.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+services-promo-img.png.webp?itok=MH2LchvY) Featured "The partnership with
+Proofpoint, it's an extention of our team." –Celesta Capital Customer Story
+](/us/customer-stories/celesta-capital-strengthens-security-across-its-deep-
+tech-portfolio-proofpoint)
+
+  * ![](/sites/default/files/nav-icons/pfpt-use-case-icon.svg)
+
+Use Case
+
+  * ![](/sites/default/files/nav-icons/pfpt-industry-icon.svg)
+
+Industry
+
+Use Case
+
+### Comprehensive solutions for today’s cybersecurity threats.
+
+[ Ensure Acceptable GenAI Use![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/ensure-acceptable-
+genai-use)
+
+Empower your workforce with safe GenAI practices.
+
+[ Secure Microsoft365![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/secure-
+microsoft-365)
+
+Implement the best security and compliance solution for Microsoft 365.
+
+[ Prevent Loss from Ransomware![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/prevent-loss-from-
+ransomware)
+
+Stop attacks by securing ransomware's top vector.
+
+[ Combat Email and Cloud Threats![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/combat-email-and-
+cloud-threats)
+
+Protect your people from email and cloud threats with an intelligent and
+holistic approach.
+
+[ Protect Cloud Apps![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/protect-cloud-apps)
+
+Keep your people and their cloud apps secure by eliminating threats and data
+loss.
+
+[ Change User Behavior![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/change-user-
+behavior)
+
+Help your employees identify, resist and report attacks before the damage is
+done.
+
+[ Modernize Compliance and Archiving![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/enable-digital-
+communications-governance)
+
+Manage risk and data retention needs with a modern solution.
+
+[ Authenticate Your Email![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/email-
+authentication-with-dmarc)
+
+Protect your email deliverability with DMARC.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+use-case-promo-img.png.webp?itok=Y2gMlfii) Featured Learn about new AI
+risks—and how to build a secure foundation for enterprise adoption White Paper
+](/us/resources/white-papers/securing-governing-ai-data-guide)
+
+Industry
+
+### Superior protection for every industry, from small business to large
+enterprise.
+
+[ Federal Government![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/federal)
+
+Enable your agency with cybersecurity built for federal government
+environments.
+
+[ Higher Education![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/solutions/higher-education-security-legacy)
+
+Protect your campus, people, data, and research with advanced security.
+
+[ Healthcare![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/solutions/healthcare-information-security)
+
+Safeguard your clinicians, patient data, and intellectual property from
+advanced threats.
+
+[ Internet Service Providers![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/email-security-
+solutions-for-service-providers)
+
+Deliver secure, high-performance email protection for your networks and
+customers with Cloudmark.
+
+[ State and Local Government![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/state-and-local-
+government)
+
+Secure your institutions, services, and communities against cyber threats.
+
+[ Financial Services![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/financial-services-
+and-insurance)
+
+Protect your institution while meeting regulatory and compliance requirements.
+
+[ Mobile Operators![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/solutions/mobile-message-security-solutions-for-
+service-providers)
+
+Secure your messaging environments and protect subscribers at scale.
+
+[ Small and Medium Businesses![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/protection-
+compliance-small-business-legacy)
+
+Strengthen your business with enterprise-grade security built to grow with
+you.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+industry-promo-img.png.webp?itok=hOp6VWCk) Featured Discover the security
+risks healthcare organizations can't afford to ignore Threat Report
+](/us/resources/threat-reports/ponemon-healthcare-cybersecurity-report)
+
+Why Proofpoint
+
+### More than 80 of the Fortune 100 choose Proofpoint to protect their people,
+data, and AI.
+
+[ Why Proofpoint ](/us/why-proofpoint)
+
+[ Customer Stories![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/customer-stories-legacy)
+
+Learn how organizations use Proofpoint to strengthen their cybersecurity,
+protect their data, and reduce risk.
+
+[ Awards![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/newsroom/awards)
+
+See how our innovation and leadership have been recognized across the industry
+by leading analysts and publications.
+
+[ Threat Insight Blog![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/blog/threat-insight)
+
+Stay up to date on emerging cyber threats with insights from our industry-
+leading threat research team.
+
+[ Comparing Proofpoint![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/compare)
+
+Evaluating cybersecurity vendors? Check out our side-by-side comparison of
+Proofpoint vs. competitors.
+
+#### Evaluating security vendors? Compare us by checking out side-by-side
+comparisons.
+
+[ Comparison Overview ](/us/compare)
+
+[ Proofpoint vs. Abnormal Security ](/us/compare/proofpoint-vs-abnormal-
+security)
+
+[ Proofpoint vs. Mimecast ](/us/compare/proofpoint-vs-mimecast)
+
+[ Proofpoint vs. Check Point Harmony ](/us/compare/proofpoint-vs-check-point-
+harmony)
+
+[ Proofpoint vs. Cisco ](/us/compare/proofpoint-vs-cisco)
+
+[ Proofpoint vs. Symantec ](/us/compare/proofpoint-vs-symantec)
+
+[ Proofpoint vs. Microsoft Purview ](/us/compare/proofpoint-vs-microsoft-
+purview)
+
+[ Proofpoint vs. Legacy DLP ](/us/compare/proofpoint-vs-legacy-dlp)
+
+[ Proofpoint vs. SSE Vendors ](/us/compare/proofpoint-data-security-vs-sse-
+vendors)
+
+[ Proofpoint vs. DSPM Vendors ](/us/industry-comparison/dspm)
+
+  * ![](/sites/default/files/nav-icons/pfpt-resources-icon.svg)
+
+Resources
+
+  * ![](/sites/default/files/nav-icons/pfpt-threat-intelligence-icon.svg)
+
+Threat Intelligence
+
+Resources
+
+### Research, insights and resources from Proofpoint experts.
+
+[ Resource Library ](/us/resources)
+
+[ Blog![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](/us/blog)
+
+Keep up with the latest news and happenings from our industry leading experts.
+
+[ Cybersecurity Academy![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/cybersecurityacademy)
+
+Earn your certification to become a Proofpoint Certified Guardian.
+
+[ Events![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/company/events-old)
+
+Connect with peers in person and learn from the experts.
+
+[ Webinars![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/webinars)
+
+Browse our webinar library to learn about the latest threats and issues in
+cybersecurity.
+
+[ Podcasts![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/podcasts)
+
+Listen to expert conversations and insights on cybersecurity trends, threats
+and best practices.
+
+[ Customer Stories![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/customer-stories)
+
+Read how our customers solve their most pressing cybersecurity challenges
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+resources-promo-img.png.webp?itok=WF791rss) Featured New Agents, New Attacks:
+Securing Collaboration in the Agentic Era Live Webinar Series—Register Now
+](/us/resources/webinar-displays/new-agents-new-attacks-securing-
+collaboration-agentic-era)
+
+Threat Intelligence
+
+### Learn from our expert threat intelligence and insights that you won’t find
+anywhere else.
+
+[ Threat Glossary![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/threat-reference)
+
+Learn about the latest security threats and techniques.
+
+[ Podcasts![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/podcasts)
+
+Stay informed with our renowned threat researchers.
+
+[ Power Series![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://go.proofpoint.com/PowerSeries?utm_source=pfpt-
+website&utm_medium=web&utm_campaign=EventsPage)
+
+Join our virtual event series on the industry's most pressing topics.
+
+[ Threat Insight Blog![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/blog/threat-insight)
+
+Gain insight through actionable threat intelligence and expert analysis.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+threat-intelligence-promo-img.png.webp?itok=n01HycTs) Featured Proofpoint
+DISCARDED Tales from the threat research trenches Podcast
+](/us/resources/podcasts/discarded-live-john-hultquist)
+
+Company
+
+### Learn more about the team driving human and agent-centric security.
+
+[ About Proofpoint ](/us/company/about)
+
+[ Leadership![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/our-leadership-team)
+
+Learn about the executive team leading Proofpoint’s strategy and vision.
+
+[ News Center![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/newsroom)
+
+Read the latest press releases, news stories and media highlights about
+Proofpoint.
+
+[ AI, Privacy and Trust![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/legal/trust)
+
+Learn about how we handle data and make commitments to privacy and other
+regulations.
+
+[ ESG![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](/us/legal/esg)
+
+Learn how we apply our environmental, social, and governance principles to
+positively impact our community.
+
+[ Careers![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/company/careers)
+
+Stand out and make a difference at one of the world's leading cybersecurity
+companies.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-
+images/pfpt-stop-threats-every-layer-nav-image.jpg.webp?itok=pqw6vHkw)
+Featured Stop Threats at Every Layer—People, Data, AI Proofpoint provides
+intent-based protection for every human, every AI agent, across all data.
+](/us/agenticworkspace)
+
+[Blog](/us/blog)
+
+[Threat Insight](/us/blog/threat-insight)
+
+Crossed wires: a case study of Iranian espionage and attribution
+
+![Fiber optics](/sites/default/files/styles/image_768_300/public/blog-
+banners/pfpt-us-fiberoptics.jpg.webp?itok=uazvO32w)
+
+#  Crossed wires: a case study of Iranian espionage and attribution
+
+Share with your network!
+
+November 05, 2025 Saher Naumaan and the Proofpoint Threat Research Team
+
+_Proofpoint would like to thank Josh Miller for his initial research on
+UNK_SmudgedSerpent and contribution to this report.  _
+
+### Key findings
+
+  * Between June and August 2025, Proofpoint began tracking a previously unidentified threat actor dubbed UNK_SmudgedSerpent targeting academics and foreign policy experts. 
+  * UNK_SmudgedSerpent leveraged domestic political lures, including societal change in Iran and investigation into the militarization of the IRGC. 
+  * UNK_SmudgedSerpent used benign conversation starters, health-themed infrastructure, OnlyOffice file hosting spoofs, and Remote Management & Monitoring (RMM) tools. 
+  * Throughout the investigation, UNK_SmudgedSerpent demonstrated tactics resembling several Iranian actors: TA455 (C5 Agent, Smoke Sandstorm), TA453 (Charming Kitten, Mint Sandstorm), and TA450 (MuddyWater, Mango Sandstorm). 
+  * Overlapping TTPs prevent high confidence attribution, but several hypotheses could explain the nature of the relationship between UNK_SmudgedSerpent and other Iranian groups. 
+
+### Overview  
+
+In June, Proofpoint Threat Research began investigating a benign email
+discussing economic uncertainty and domestic political unrest in Iran. While
+coinciding with the escalations in the [Iran-Israel
+conflict](https://www.bbc.com/news/articles/czjk3kxr3zno), there was no
+indication that the observed activity was directly correlated with Israel’s
+attacks on Iranian nuclear facilities or Iran’s actions in response.
+
+Initial analysis of the activity found tactics, techniques, and procedures
+(TTP) overlaps with multiple Iranian aligned groups, including TA455 (C5
+Agent, Smoke Sandstorm), TA453 (Mint Sandstorm, Charming Kitten), and TA450
+(MuddyWater, Mango Sandstorm). Given a lack of high confidence links to any
+one established threat group, we designated the activity as a temporary
+cluster called UNK_SmudgedSerpent.
+
+![Figure 1](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.38.53%E2%80%AFAM.png)
+
+
+
+_**Figure 1.** UNK_SmudgedSerpent infection chain with known actor overlaps. _
+
+The infection chain began with a benign conversation, followed by an email
+exchange and a credential harvesting attempt. After this initial credential
+harvesting attempt, UNK_SmudgedSerpent continued to conduct phishing activity
+within the same email thread with a specific target and subsequently delivered
+a URL that hosted an archive file with an MSI that loaded RMM payloads.
+
+### Iranian connections
+
+#### Initial TA453 leads
+
+UNK_SmudgedSerpent’s first identified campaign within Proofpoint data spoofed
+a member of the Brookings Institute reaching out to over 20 members of a
+United States-based think tank in mid-June 2025. Targeting specific subject
+matter experts in Iran-related policy areas is often a characteristic of TA453
+activity, particularly using a benign conversation starter. However,
+approaching a significant number of individuals at a single organization
+diverges from Proofpoint Threat Research’s observations of typical TA453
+techniques.
+
+In another deviation from typical TA453 activity, members of the targeted
+organization focused across almost all areas of expertise including national
+defense, advanced technology, economic security, and global health, along with
+region-specific experts. TA453 primarily focuses on Middle Eastern policy
+topics, such as Iranian nuclear negotiations or Iran’s foreign relations.
+Regardless of each recipient’s expertise, UNK_SmudgedSerpent leveraged the
+same collaboration lure about impending Iranian societal reform.
+
+The attackers’ approach impersonated Suzanne Maloney – the vice president and
+director of the Foreign Policy program at the Brookings Institution and an
+expert on Iran – using a Gmail address and misspelled version of her name,
+“Suzzane Maloney.”
+
+![Figure 2](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.39.34%E2%80%AFAM.png)
+
+_**Figure 2.** UNK_SmudgedSerpent initial approach. _
+
+Following a response, the Suzzane Maloney persona was more cautious than
+Proofpoint has observed in past interactions with TA453. The attacker insisted
+on verifying the identity of the target and authenticity of the email address
+before proceeding with any collaboration attempts.
+
+![Figure 3](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.41.37%E2%80%AFAM.png)
+
+_**Figure 3.** UNK_SmudgedSerpent follow-up email. _
+
+As the engagement continued, the persona sent an appointed time for a meeting,
+using Israel time as a point of reference though the target was based in the
+US. At the delivery stage, the actor began to deviate from TA453’s typical
+TTPs and sent a link appearing to be an OnlyOffice URL belonging to "Suzzane
+Maloney” (again spelled incorrectly) with documents relevant to the upcoming
+meeting.
+
+![Figure 4](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.42.38%E2%80%AFAM.png)
+
+_**Figure 4.** UNK_SmudgedSerpent URL delivery. _
+
+#### Transition to TA455
+
+The URL was only masquerading as an OnlyOffice link in the email but instead
+hyperlinked to a health-themed attacker domain thebesthomehealth[.]com, which
+redirected to a second health-themed attacker domain
+mosaichealthsolutions[.]com that displayed a Microsoft 365 login page. The URL
+hosted a customized credential harvesting page with the user’s information
+pre-loaded.
+
+![Figure 5](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.44.06%E2%80%AFAM.png)  
+
+_**Figure 5.** Customized Microsoft credential harvesting page. _
+
+##### Delivery variation
+
+Another version of this infection chain can be found on VirusTotal, where both
+domains were similarly used in a Microsoft-related redirection chain.
+hxxps://thebesthomehealth[.]com/[redacted15characterstring] masqueraded as a
+Microsoft Teams login before redirecting to the  mosaichealthsolutions[.]com
+domain.  
+
+![Figure 6](/sites/default/files/inline-images/Figure6.png)
+
+_**Figure 6.** Microsoft Teams meeting spoof (VirusTotal). _
+
+However, the next stages following clicking the “Join Now” button are unclear
+at the time of writing.
+
+#### TA455 continued
+
+In Proofpoint’s investigation, after the target communicated suspicions about
+the credential harvesting page, UNK_SmudgedSerpent removed the password
+requirement on the initial thebesthomehealth[.]com URL. The link then
+proceeded to a spoofed OnlyOffice login page.
+
+![Figure 7](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.46.36%E2%80%AFAM.png)
+
+_**Figure 7.** UNK_SmudgedSerpent OnlyOffice login spoof. _
+
+Clicking on “Continue” or login loads another page also hosted on
+thebesthomehealth[.]com, which continues to resemble OnlyOffice and hosted two
+PDFs, an Excel document, and a ZIP archive.
+
+![Figure 8](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.47.22%E2%80%AFAM.png)
+
+_**Figure 8.** Files hosted on thebesthomehealth[.]com. _
+
+UNK_SmudgedSerpent’s reference to OnlyOffice URLs and health-themed domains is
+reminiscent of TA455 activity. TA455 began registering health-related domains
+at least since October 2024 following a consistent stream of domains with
+aerospace interest, with OnlyOffice becoming popular to host files more
+recently in June 2025, as shown by the timeline below.
+
+![Figure 9](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.48.09%E2%80%AFAM.png)
+
+_**Figure 9.** TA455 Domain Registration / First Seen Timeline (May 2024 –
+July 2025). _
+
+UNK_SmudgedSerpent domains began appearing in April 2025, several weeks before
+the first campaign was observed in June.
+
+#### Completing the chain with TA450
+
+Upon execution, UNK_SmudgedSerpent’s ZIP archive loaded an MSI file, which
+launched the PDQConnect Remote Monitoring & Management (RMM) software. The
+rest of the documents appeared to be decoys.
+
+During our research, Threat Research observed UNK_SmudgedSerpent engaging in
+suspected hands-on-keyboard activity where the attackers leveraged PDQConnect
+to install additional RMM software, ISL Online.
+
+![Figure 10](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.48.42%E2%80%AFAM.png)
+
+_**Figure 10.** ISL Online RMM pop-up. _
+
+The reason for the attackers' sequential deployment of two distinct RMM tools
+remains unclear. It is possible UNK_SmudgedSerpent may have deployed RMM
+software as a throwaway option after the credential harvesting attempt didn’t
+succeed, and the threat actor became suspicious of Proofpoint’s investigation.
+However, neither hypothesis can be confirmed at the time of writing.
+
+While the use of RMMs is a generic technique abusing common legitimate tools,
+it is rare to see them associated with state-sponsored actors and have been
+documented in use by only one Iranian actor, in [TA450 campaigns over the last
+several years](https://harfanglab.io/insidethelab/muddywater-rmm-campaign/).
+
+#### Follow-on activity
+
+Before the email exchange discussed ended on 26 June, Proofpoint identified an
+additional Gmail account on 23 June spoofing Dr. Maloney (with her name
+spelled correctly) – suzannemaloney68@gmail[.]com – targeting a US-based
+academic that appeared to be Israeli. In this lure, UNK_SmudgedSerpent asked
+for assistance investigating the IRGC.
+
+![Figure 11](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.49.27%E2%80%AFAM.png)
+
+_**Figure 11.** Second UNK_SmudgedSerpent phishing email. _
+
+A different persona, one spoofing Patrick Clawson – a Director at the
+Washington Institute – used the exact same content one week later to target
+the same academic using patrickclawson51@gmail[.]com.
+
+In early August 2025, UNK_SmudgedSerpent surfaced again, this time soliciting
+information and collaboration on Iran’s efforts in Latin America. The phishing
+email originated from another spoof of Patrick Clawson, this time using an
+Outlook email address: patrick.clawson51@outlook[.]com. However, the email in
+the signature did not match and included both potentially legitimate emails
+and patrickclawson51@gmail[.]com, which was the previously used spoofed email.
+
+![Figure 12](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.50.27%E2%80%AFAM.png)
+
+_**Figure 12.** UNK_SmudgedSerpent Patrick Clawson Spoof #2. _
+
+The timeline below shows the campaigns and cadence of UNK_SmudgedSerpent
+activity, which appears to be topical and sporadic. After the initial approach
+that targeted over 20 individuals, Proofpoint data showed the actor focused
+only on solitary targets in further campaigns.
+
+![Figure 13](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.52.48%E2%80%AFAM.png)
+
+_**Figure 13.** UNK_SmudgedSerpent phishing activity timeline. _
+
+Since early August, no further activity has been observed from this actor.
+
+### Infrastructure
+
+Investigating suspected UNK_SmudgedSerpent infrastructure, such as
+healthcrescent[.]com, surfaced additional activity that further complicates
+UNK_SmudgedSerpent’s relationship and overlaps with TA455.
+
+healthcrescent[.]com shares server configuration similarities with a set of
+domains, including  ebixcareers[.]com, that displays a fake Teams portal. The
+career-themed domain and Teams spoof are both reminiscent of previous TA455
+activity.
+
+![Figure 14](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.53.16%E2%80%AFAM.png)
+
+_**Figure 14.** Fake Teams portal landing page. _
+
+Related URLs resembled previously seen activity from TA453, using
+[“meeting”](https://blog.certfa.com/posts/charming-kitten-can-we-wave-a-
+meeting/) [themes.](https://cloud.google.com/blog/topics/threat-
+intelligence/untangling-iran-apt42-operations)
+hxxps://interview.ebixcareers[.]com/teams/join-online-room-homv-patm-elro/
+fetched a payload from the following OnlyOffice URL:
+
+hxxps://docspace-
+mpv1y2.onlyoffice[.]com/rooms/share?key=ZXVSTEhNKzM3NHBIeHg3R3M4cnBRcDFDUnk0b[…]0_Ijg4YzkzZTRhLWNmYzktNGJkMy1iYzYyLWY2NWY0OTczNTBlZCI
+
+
+
+![Figure 15](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.53.57%E2%80%AFAM.png)
+
+_**Figure 15.** Files Hosted on OnlyOffice URL. _
+
+Files hosted on this page in mid-September included benign recruitment-related
+PDFs for Boeing, a traditional aspect of TA455’s operations involving both
+aerospace and career-themed interests.
+
+![Figure 16](/sites/default/files/inline-
+images/Screenshot%202025-11-05%20at%208.54.25%E2%80%AFAM.png)
+
+_**Figure 16.** Benign PDFs. _
+
+Hiring Portal.zip contained two DLLs and an executable; the legitimate EXE
+sideloads userenv.dlland through another legitimate EXE, sideloads
+xmllite.exe. userenv.dll is a TA455 custom backdoor termed
+[MiniJunk](https://research.checkpoint.com/2025/nimbus-manticore-deploys-new-
+malware-targeting-europe/) in public reporting, a version of previously
+reported malware called
+[MiniBike.](https://cloud.google.com/blog/topics/threat-
+intelligence/suspected-iranian-unc1549-targets-israel-middle-east) While the
+infrastructure likely aligns with UNK_SmudgedSerpent, it remains unclear why
+it is simultaneously hosting TA455 custom malware.
+
+The final file hosted on the OnlyOffice URL was Interview time.msi, a loader
+responsible for installing the RMM tool PDQConnect, seen deployed in both
+UNK_SmudgedSerpent and TA450 activity, though not previously seen associated
+with TA455.
+
+The exploration of infrastructure and operations connected to
+UNK_SmudgedSerpent activity further blurs the lines of attribution and the
+nature of the relationship to TA455.
+
+### Attribution
+
+Proofpoint Threat Research is currently tracking this activity separately as a
+new threat actor – UNK_SmudgedSerpent – and clustered distinctly from TA453,
+TA455, and TA450. While there are several overlaps with established threat
+actors in various stages of the infection chain, which are shown below, they
+remain tenuous in some cases without high confidence links.
+
+**TTP  ** |  **UNK_SmudgedSerpent  ** |  **TA453  ** |  **TA455  ** |  **TA450  **  
+---|---|---|---|---  
+Sender emails  |  Freemail (Outlook, Gmail)  |  Freemail (Outlook, Gmail, ProtonMail, Yahoo)  |  Attacker-owned domains  |  Compromised corporate accounts   
+Initial approach  |  Benign conversation  |  Benign conversation  |  Malicious recruitment applications  |  Malicious event invitations   
+Targeting  |  Policy experts, thinktanks  |  Policy experts, thinktanks  |  Aerospace and defense, transportation/logistics, technology  |  Government, telecommunications, transportation   
+Delivery  |  OnlyOffice spoof, Teams spoof  |  Teams spoof, Scalingo, OneDrive  |  OnlyOffice  |  Mega.nz, FliQR   
+Objective  |  Credential theft, malware delivery  |  Credential theft, malware delivery  |  Malware delivery  |  Malware delivery   
+Domain themes  |  Health and recruitment, organization spoofs  |  Organization, meeting, Google, Microsoft, and technology spoofs  |  Health, aerospace, and recruitment  |  Technology, other   
+Infrastructure  |  Cloudflare, Namecheap  |  Hetzner, OVH, RouterHosting, Namecheap  |  Cloudflare, Namecheap  |  NordVPN, Cloudflare Namecheap   
+Malware  |  RMM (PDQConnect)  |  PowerShell backdoors (occasional)  |  Custom backdoors (MiniJunk, MINIBIKE, MINIBUS)  |  RMMs, custom PowerShell and .NET backdoors (Phoenix)   
+  
+
+
+Given the dynamic nature of the Iranian ecosystem and its heavy use of
+contracting companies, there are often instances where groups, activity,
+malware, and infrastructure intersect. We hypothesize there are several
+possibilities for the group’s convergence of TTPs with varying degrees of
+likelihood, which include:
+
+  * Centralized procurement: a shared resource that registers and distributes infrastructure or a shared malware developer. 
+  * Personnel mobility: one group dissolves, and another absorbs team members, or groups merge based on new requirements or shared remits. 
+  * Interpersonal relationships: individual members of the same team have TTP preferences, and operators share their preferred techniques with one another. 
+  * Parallel contractor deployment: the parent/sponsoring agency tasks more than one contracting company to a particular threat group or campaign. 
+  * Institutional collaboration: cross-agency exchanges between IRGC and MOIS at an organizational level due to the groups’ affiliations with differing agencies. 
+
+### Conclusion
+
+UNK_SmudgedSerpent’s first observed campaign was in June 2025, after which the
+group was seen a few times targeting policy experts in the US using lures
+about internal political developments in Iran. The subsequent investigation
+revealed multiple overlaps in TTPs with TA453, TA450, and TA455. However, the
+abundance of links prevents high confidence attribution to any one of these
+groups.
+
+While UNK_SmudgedSerpent has not been observed in email campaigns since August
+2025, related activity likely remains ongoing. The appearance of a new actor
+with borrowed techniques suggests there may be personnel mobility or exchange
+between teams, but with a consistent remit; however, there is no confirmed
+attribution for UNK_SmudgedSerpent at the time of writing. The TTPs and
+infrastructure are an extension of previously observed behavior from Iranian
+threat groups, and the targeting of Iran foreign policy experts continues to
+reflect the Iranian government’s intelligence collection priorities.
+
+### ET rules
+
+  
+[2054935 - ET INFO PDQ Remote Management HTTP Header Observed (x-pdq-key-
+ids)](https://threatintel.proofpoint.com/sid/2054935)
+
+[2054936 - ET INFO PDQ Remote Management User-Agent Observed (PDQ
+rover)](https://threatintel.proofpoint.com/sid/2054936)
+
+[2054937 - ET INFO PDQ Remote Management Agent HTTP
+Activity](https://threatintel.proofpoint.com/sid/2054937)
+
+[2054938 - ET INFO PDQ Remote Management Agent
+Checkin](https://threatintel.proofpoint.com/sid/2054938)
+
+[2062767 - ET INFO Observed DNS Query to Online Document Sharing Service
+(onlyoffice .com)](https://threatintel.proofpoint.com/sid/2062767)
+
+[2062768 - ET INFO Observed Online Document Sharing Service Domain (onlyoffice
+.com in TLS SNI)](https://threatintel.proofpoint.com/sid/2062768)
+
+[2065399 - ET PHISHING Observed UNK_SmudgedSerpent Style
+URI](https://threatintel.proofpoint.com/sid/2065399)
+
+[2065427 - ET MALWARE Observed DNS Query to TA455 Domain (msnapp
+.help)](https://threatintel.proofpoint.com/sid/2065427)
+
+[2065434 - ET MALWARE Observed DNS Query to TA455 Domain (accountroyal
+.com)](https://threatintel.proofpoint.com/sid/2065434)
+
+[2065439 - ET MALWARE Observed DNS Query to TA455 Domain (palaerospace
+.careers)](https://threatintel.proofpoint.com/sid/2065439)
+
+[2065444 - ET MALWARE Observed DNS Query to TA455 Domain (msnapp
+.live)](https://threatintel.proofpoint.com/sid/2065444)
+
+[2065448 - ET MALWARE Observed DNS Query to TA455 Domain (healthiestmama
+.com)](https://threatintel.proofpoint.com/sid/2065448)
+
+[2065449 - ET MALWARE Observed DNS Query to TA455 Domain
+(mojavemassageandwellness
+.com)](https://threatintel.proofpoint.com/sid/2065449)
+
+[2065450 - ET MALWARE Observed DNS Query to TA455 Domain (alwayslivehealthy
+.com)](https://threatintel.proofpoint.com/sid/2065450)
+
+[2065451 - ET MALWARE Observed DNS Query to TA455 Domain
+(rhealthylivingsolutions
+.com)](https://threatintel.proofpoint.com/sid/2065451)
+
+[2065452 - ET MALWARE Observed DNS Query to TA455 Domain (rheinmetallcareer
+.org)](https://threatintel.proofpoint.com/sid/2065452)
+
+[2065453 - ET MALWARE Observed DNS Query to TA455 Domain (chakracleansetherapy
+.com)](https://threatintel.proofpoint.com/sid/2065453)
+
+[2065454 - ET MALWARE Observed DNS Query to TA455 Domain
+(clearmindhealthandwellness
+.com)](https://threatintel.proofpoint.com/sid/2065454)
+
+[2065455 - ET MALWARE Observed DNS Query to TA455 Domain (joinboeing
+.com)](https://threatintel.proofpoint.com/sid/2065455)
+
+[2065456 - ET MALWARE Observed DNS Query to TA455 Domain (healthcarefluent
+.com)](https://threatintel.proofpoint.com/sid/2065456)
+
+[2065459 - ET MALWARE Observed DNS Query to TA455 Domain (rheinmetallcareer
+.com)](https://threatintel.proofpoint.com/sid/2065459)
+
+[2065464 - ET MALWARE Observed DNS Query to TA455 Domain (zytonhealth
+.com)](https://threatintel.proofpoint.com/sid/2065464)
+
+[2065470 - ET MALWARE Observed DNS Query to TA455 Domain
+(sulumorbusinessservices
+.com)](https://threatintel.proofpoint.com/sid/2065470)
+
+[2065475 - ET MALWARE Observed DNS Query to TA455 Domain (airbushiring
+.com)](https://threatintel.proofpoint.com/sid/2065475)
+
+[2065481 - ET MALWARE Observed DNS Query to TA455 Domain
+(healthinfusiontherapy .com)](https://threatintel.proofpoint.com/sid/2065481)
+
+[2065484 - ET MALWARE Observed DNS Query to TA455 Domain
+(bodywellnessbycynthia .com)](https://threatintel.proofpoint.com/sid/2065484)
+
+[2065486 - ET MALWARE Observed DNS Query to TA455 Domain (careers-portal
+.org)](https://threatintel.proofpoint.com/sid/2065486)
+
+[2065487 - ET MALWARE Observed TA455 Domain (msnapp .help in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065487)
+
+[2065488 - ET MALWARE Observed TA455 Domain (accountroyal .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065488)
+
+[2065489 - ET MALWARE Observed TA455 Domain (palaerospace .careers in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065489)
+
+[2065490 - ET MALWARE Observed TA455 Domain (msnapp .live in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065490)
+
+[2065491 - ET MALWARE Observed TA455 Domain (healthiestmama .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065491)
+
+[2065493 - ET MALWARE Observed TA455 Domain (mojavemassageandwellness .com in
+TLS SNI)](https://threatintel.proofpoint.com/sid/2065493)
+
+[2065495 - ET MALWARE Observed TA455 Domain (alwayslivehealthy .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065495)
+
+[2065498 - ET MALWARE Observed TA455 Domain (rhealthylivingsolutions .com in
+TLS SNI)](https://threatintel.proofpoint.com/sid/2065498)
+
+[2065501 - ET MALWARE Observed TA455 Domain (rheinmetallcareer .org in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065501)
+
+[2065502 - ET MALWARE Observed TA455 Domain (chakracleansetherapy .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065502)
+
+[2065503 - ET MALWARE Observed TA455 Domain (clearmindhealthandwellness .com
+in TLS SNI)](https://threatintel.proofpoint.com/sid/2065503)
+
+[2065504 - ET MALWARE Observed TA455 Domain (joinboeing .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065504)
+
+[2065505 - ET MALWARE Observed TA455 Domain (healthcarefluent .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065505)
+
+[2065506 - ET MALWARE Observed TA455 Domain (rheinmetallcareer .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065506)
+
+[2065507 - ET MALWARE Observed TA455 Domain (zytonhealth .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065507)
+
+[2065508 - ET MALWARE Observed TA455 Domain (sulumorbusinessservices .com in
+TLS SNI)](https://threatintel.proofpoint.com/sid/2065508)
+
+[2065509 - ET MALWARE Observed TA455 Domain (airbushiring .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065509)
+
+[2065510 - ET MALWARE Observed TA455 Domain (healthinfusiontherapy .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065510)
+
+[2065511 - ET MALWARE Observed TA455 Domain (bodywellnessbycynthia .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065511)
+
+[2065512 - ET MALWARE Observed TA455 Domain (careers-portal .org in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065512)
+
+[2065513 - ET PHISHING Observed DNS Query to UNK_SmudgedSerpent Domain
+(mosaichealthsolutions .com)](https://threatintel.proofpoint.com/sid/2065513)
+
+[2065514 - ET PHISHING Observed DNS Query to UNK_SmudgedSerpent Domain
+(ebixcareers .com)](https://threatintel.proofpoint.com/sid/2065514)
+
+[2065515 - ET PHISHING Observed DNS Query to UNK_SmudgedSerpent Domain
+(healthcrescent .com)](https://threatintel.proofpoint.com/sid/2065515)
+
+[2065516 - ET PHISHING Observed DNS Query to UNK_SmudgedSerpent Domain
+(thebesthomehealth .com)](https://threatintel.proofpoint.com/sid/2065516)
+
+[2065517 - ET PHISHING Observed UNK_SmudgedSerpent Domain
+(mosaichealthsolutions .com in TLS
+SNI)](https://threatintel.proofpoint.com/sid/2065517)
+
+[2065518 - ET PHISHING Observed UNK_SmudgedSerpent Domain (ebixcareers .com in
+TLS SNI)](https://threatintel.proofpoint.com/sid/2065518)
+
+[2065519 - ET PHISHING Observed UNK_SmudgedSerpent Domain (healthcrescent .com
+in TLS SNI)](https://threatintel.proofpoint.com/sid/2065519)
+
+[2065520 - ET PHISHING Observed UNK_SmudgedSerpent Domain (thebesthomehealth
+.com in TLS SNI)](https://threatintel.proofpoint.com/sid/2065520)
+
+###  
+Indicators
+
+**UNK_SmudgedSerpent  **  
+---  
+**Indicator  ** |  **Type  ** |  **Description  ** |  **First Seen  **  
+suzzanemaloney@gmail[.]com  |  Email address  |  Phishing  |  June 2025   
+suzannemaloney68@gmail[.]com  |  Email address  |  Phishing  |  June 2025   
+patrickclawson51@gmail[.]com  |  Email address  |  Phishing  |  June 2025   
+patrick.clawson51@outlook[.]com  |  Email address  |  Phishing  |  August 2025   
+hxxps://suzzanemaloney2506090953.onlyoffice[.]com/s.-k6vjflsdagdsfgh  |  URL  |  Delivery  |  June 2025   
+thebesthomehealth[.]com  |  Domain  |  Delivery  |  April 2025   
+mosaichealthsolutions[.]com  |  Domain  |  Delivery  |  April 2025   
+healthcrescent[.]com  |  Domain  |  Delivery  |  May 2025   
+ebixcareers[.]com  |  Domain  |  Delivery  |  July 2025   
+6eb7df21d6f1e3546c252a112504eefbb19205167db89038f2861118bbc8871c  |  SHA256  |  Benign PDF  |  September 2025   
+0bdb64fc1d5533f7b3fffaf821e89f286ad2d7400a914f21abdcbb7bb8a39e63  |  SHA256  |  Benign PDF  |  September 2025   
+cac018dccdf6ce4bef19ab71e3e737724aed104bc824332a5213c878b065ff50  |  SHA256  |  EXE  |  September 2025   
+7b5fb8202bff90398ab007579713f66430778249e43b46f35df6c3ded628f129  |  SHA256  |  DLL  |  September 2025   
+129a40e38ef075c7d33d8517b268eb023093c765a32e406b58f39fab6cc6a040  |  SHA256  |  DLL  |  September 2025   
+85858880ee7659cc1152b6a126bc20b9b4fb1b46dddea5af2d65d48d58cd0589  |  SHA256  |  MSI  |  September 2025   
+0fcdaa2f4db94e0589617830d3d80430627815ef0e4b0c7b7ff5c1ebb82a4136  |  SHA256  |  Benign PDF  |  September 2025   
+1e9c31ce0eba2100d416f5bc3b97dafe2da0d3d9aee96de59ec774365fe3fe89  |  SHA256  |  ZIP  |  September 2025   
+  
+
+
+**TA455  **  
+---  
+**Indicator  ** |  **Type  ** |  **Description  ** |  **First Seen  **  
+emiratesgroup-careers[.]com  |  Domain  |  Related infrastructure  |  May 2024   
+flydubai-careers[.]com  |  Domain  |  Related infrastructure  |  May 2024   
+airbusgroup-careers[.]com  |  Domain  |  Related infrastructure  |  May 2024   
+gocareers[.]org  |  Domain  |  Related infrastructure Related infrastructure  |  June 2024   
+rheinmetallcareers[.]com  |  Domain  |  Related infrastructure  |  June 2024   
+careers2find[.]com  |  Domain  |  Related infrastructure  |  June 2024   
+opportunities2get[.]com  |  Domain  |  Related infrastructure  |  June 2024   
+emiratescareers[.]org  |  Domain  |  Related infrastructure  |  July 2024   
+droneflywell[.]com  |  Domain  |  Related infrastructure  |  July 2024   
+usa-careers[.]com  |  Domain  |  Related infrastructure  |  August 2024   
+careers-hub[.]org  |  Domain  |  Related infrastructure  |  September 2024   
+global-careers[.]com  |  Domain  |  Related infrastructure  |  September 2024   
+ehealthpsuluth[.]com  |  Domain  |  Related infrastructure  |  September 2024   
+worldcareers[.]org  |  Domain  |  Related infrastructure  |  September 2024   
+uavnodes[.]com  |  Domain  |  Related infrastructure  |  September 2024   
+careersworld[.]org  |  Domain  |  Related infrastructure  |  September 2024   
+thecareershub[.]org  |  Domain  |  Related infrastructure  |  September 2024   
+germanywork[.]org  |  Domain  |  Related infrastructure  |  September 2024   
+easymarketing101[.]com  |  Domain  |  Related infrastructure  |  September 2024   
+collaboromarketing[.]com  |  Domain  |  Related infrastructure  |  September 2024   
+virgomarketingsolutions[.]com  |  Domain  |  Related infrastructure  |  September 2024   
+marketinglw[.]com  |  Domain  |  Related infrastructure  |  September 2024   
+anteromarketing[.]com  |  Domain  |  Related infrastructure  |  September 2024   
+airbusaerodefence[.]nl  |  Domain  |  Related infrastructure  |  November 2024   
+dronetechasia[.]org  |  Domain  |  Related infrastructure  |  November 2024   
+asiandefenses[.]com  |  Domain  |  Related infrastructure  |  November 2024   
+msnclouds[.]com  |  Domain  |  Related infrastructure  |  November 2024   
+kibanacore[.]com  |  Domain  |  Related infrastructure  |  November 2024   
+boeingspace[.]com  |  Domain  |  Related infrastructure  |  November 2024   
+airbusaerodefence[.]com  |  Domain  |  Related infrastructure  |  December 2024   
+jadehealthcenter[.]com  |  Domain  |  Related infrastructure  |  December 2024   
+clearmindhealthandwellness[.]com  |  Domain  |  Related infrastructure  |  January 2025   
+accountroyal[.]com  |  Domain  |  Related infrastructure  |  January 2025   
+msnapp[.]help  |  Domain  |  Related infrastructure  |  January 2025   
+msnapp[.]live  |  Domain  |  Related infrastructure  |  January 2025   
+zytonhealth[.]com  |  Domain  |  Related infrastructure  |  February 2025   
+alwayslivehealthy[.]com  |  Domain  |  Related infrastructure  |  February 2025   
+healthiestmama[.]com  |  Domain  |  Related infrastructure  |  February 2025   
+healthcarefluent[.]com  |  Domain  |  Related infrastructure  |  February 2025   
+healthinfusiontherapy[.]com  |  Domain  |  Related infrastructure  |  February 2025   
+mojavemassageandwellness[.]com  |  Domain  |  Related infrastructure  |  February 2025   
+chakracleansetherapy[.]com  |  Domain  |  Related infrastructure  |  February 2025   
+bodywellnessbycynthia[.]com  |  Domain  |  Related infrastructure  |  February 2025   
+palaerospace[.]careers  |  Domain  |  Related infrastructure  |  February 2025   
+rhealthylivingsolutions[.]com  |  Domain  |  Related infrastructure  |  April 2025   
+sulumorbusinessservices[.]com  |  Domain  |  Related infrastructure  |  April 2025   
+airbushiring[.]com  |  Domain  |  Related infrastructure  |  April 2025   
+joinboeing[.]com  |  Domain  |  Related infrastructure  |  May 2025   
+rheinmetallcareer[.]org  |  Domain  |  Related infrastructure  |  May 2025   
+rheinmetallcareer[.]onlyoffice[.]com  |  Domain  |  Related infrastructure  |  May 2025   
+rheinmetallcareer[.]com  |  Domain  |  Related infrastructure  |  May 2025   
+careers-portal[.]org  |  Domain  |  Related infrastructure  |  May 2025   
+boeinginformation[.]onlyoffice[.]com  |  Domain  |  Related infrastructure  |  May 2025   
+airbus-careers[.]onlyoffice[.]com  |  Domain  |  Related infrastructure  |  June 2025   
+airbus-survay[.]onlyoffice[.]com  |  Domain  |  Related infrastructure  |  July 2025   
+malebachhew2506090936.onlyoffice[.]com  |  Domain  |  Related infrastructure  |  July 2025   
+randcorp.onlyoffice[.]com  |  Domain  |  Related infrastructure  |  July 2025   
+  
+[Previous Blog Post](/us/blog/threat-insight/crossed-wires-case-study-iranian-
+espionage-and-attribution)
+
+[Next Blog Post](/us/blog/threat-insight/operation-endgame-quakes-
+rhadamanthys)
+
+###  Subscribe to the Proofpoint Blog
+
+![](/themes/custom/proofpoint/dist/app-drupal/assets/footer_contact.webp)
+
+## Turn _people_ into your _best defense_ with Proofpoint
+
+[ Get in Touch ](/us/contact)
+
+Products
+
+  * [Collaboration Security](/us/products/threat-protection)
+  * [Data Security and Governance](/us/products/defend-data)
+
+Partners
+
+  * [Channel Partners and Distributors](/us/channel-partners-and-distributors)
+  * [MSP Partners](/us/partners/msp)
+  * [Technology and Alliance Partners](/us/partners/technology-alliance-partners)
+
+Get Support
+
+  * [Product Support Login](https://proofpoint.my.site.com/community/s/)
+  * [Support Services](/us/support-services)
+  * [IP Address Blocked?](/us/postmaster)
+
+More
+
+  * [About Proofpoint](/us/company/about)
+  * [Why Proofpoint](/us/why-proofpoint)
+  * [How to Buy](/us/products/how-to-buy/collaboration-security)
+  * [Careers](/us/company/careers)
+  * [Leadership Team](/us/company/leadership)
+  * [News Center](/us/newsroom)
+  * [AI, Privacy and Trust](/us/legal/trust)
+  * [Hornetsecurity](https://www.proofpoint-total-protection.com/)
+
+Connect with Us
+
+  *     * [Facebook](http://www.facebook.com/proofpoint)
+    * [X](https://x.com/proofpoint)
+    * [LinkedIn](https://www.linkedin.com/company/proofpoint)
+    * [YouTube](https://www.youtube.com/channel/UCIvtJgsrUzFo90NKeiVozhQ)
+    * [Instagram](https://www.instagram.com/proofpoint)
+  * [+1 408 517 4710](tel:+1 408 517 4710)
+  * [Attend an Event](/us/events)
+  * [Contact Us](/us/contact)
+  * [Free Demo Request](/us/free-demo-request)
+
+[ Proofpoint home ](/us)
+
+(C) 2026\. All rights reserved.
+
+[Terms and conditions](/us/legal/license) [Privacy Policy](/us/legal/privacy-
+policy) [Sitemap](/us/sitemap) Cookie Settings
+
+![](//googleads.g.doubleclick.net/pagead/viewthroughconversion/950296937/?value=0&guid=ON&script=0)
+

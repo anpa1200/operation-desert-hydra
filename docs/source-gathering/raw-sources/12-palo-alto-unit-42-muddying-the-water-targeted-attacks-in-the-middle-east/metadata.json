@@ -1,0 +1,15 @@
+{
+  "number": 12,
+  "title": "Palo Alto Unit 42 — Muddying the Water: Targeted Attacks in the Middle East",
+  "url": "https://unit42.paloaltonetworks.com/unit42-muddying-the-water-targeted-attacks-in-the-middle-east/",
+  "curl_status": "200 https://unit42.paloaltonetworks.com/unit42-muddying-the-water-targeted-attacks-in-the-middle-east/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 41598  100 41598    0     0   122k      0 --:--:-- --:--:-- --:--:--  122k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/12-palo-alto-unit-42-muddying-the-water-targeted-attacks-in-the-middle-east/source.html",
+  "text_file": "docs/source-gathering/raw-sources/12-palo-alto-unit-42-muddying-the-water-targeted-attacks-in-the-middle-east/source.txt",
+  "size_bytes": 240866,
+  "extract_error": ""
+}

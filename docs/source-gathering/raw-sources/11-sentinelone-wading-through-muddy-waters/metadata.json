@@ -1,0 +1,15 @@
+{
+  "number": 11,
+  "title": "SentinelOne — Wading Through Muddy Waters",
+  "url": "https://www.sentinelone.com/labs/wading-through-muddy-waters-recent-activity-of-an-iranian-state-sponsored-threat-actor/",
+  "curl_status": "200 https://www.sentinelone.com/labs/wading-through-muddy-waters-recent-activity-of-an-iranian-state-sponsored-threat-actor/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  101k    0  101k    0     0   318k      0 --:--:-- --:--:-- --:--:--  319k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/11-sentinelone-wading-through-muddy-waters/source.html",
+  "text_file": "docs/source-gathering/raw-sources/11-sentinelone-wading-through-muddy-waters/source.txt",
+  "size_bytes": 329022,
+  "extract_error": ""
+}

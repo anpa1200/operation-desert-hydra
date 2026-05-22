@@ -1,0 +1,23 @@
+HTTP/2 200 
+date: Fri, 22 May 2026 06:34:45 GMT
+content-type: text/html
+last-modified: Sun, 05 Apr 2026 13:17:50 GMT
+server: cloudflare
+x-amz-server-side-encryption: AES256
+cache-control: public, max-age=31536000, immutable
+x-amz-version-id: null
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=3Gadh4uQ7dTuz3b7%2BubrUmrCyGgjYgABpGKsOmiVIxNqenG9UbORlusUa3r84tRqip%2FANMPqDrV9ZaNlOch%2BKSbVx1MVUQOXs8eVm718BsJI4y%2Bpm1gxOQQUW6JWPz2jca9NH7tS"}]}
+speculation-rules: "/cdn-cgi/speculation"
+vary: Accept-Encoding
+via: 1.1 ce56f9cb3598ee420df155ae7a73ed18.cloudfront.net (CloudFront)
+alt-svc: h3=":443"; ma=86400
+age: 770
+link: <https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.html>; rel="canonical"
+x-cache: Hit from cloudfront
+x-amz-cf-pop: TLV55-P1
+x-amz-cf-id: w9aVMPtCqWbvK3uzczRe8rVdzCjNyD3DMZ5pYXNO-mN1iQQ7QoqD3Q==
+cf-cache-status: HIT
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+content-encoding: zstd
+cf-ray: 9ff9cc01dfc08cd1-TLV
+

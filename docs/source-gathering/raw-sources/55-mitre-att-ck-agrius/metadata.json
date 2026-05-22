@@ -1,0 +1,15 @@
+{
+  "number": 55,
+  "title": "MITRE ATT&CK — Agrius",
+  "url": "https://attack.mitre.org/groups/G1030/",
+  "curl_status": "200 https://attack.mitre.org/groups/G1030/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 11635  100 11635    0     0  57452      0 --:--:-- --:--:-- --:--:-- 57599",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/55-mitre-att-ck-agrius/source.html",
+  "text_file": "docs/source-gathering/raw-sources/55-mitre-att-ck-agrius/source.txt",
+  "size_bytes": 87957,
+  "extract_error": ""
+}

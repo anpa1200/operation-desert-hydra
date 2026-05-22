@@ -1,0 +1,15 @@
+{
+  "number": 53,
+  "title": "MITRE ATT&CK — APT34",
+  "url": "https://attack.mitre.org/groups/G0049/",
+  "curl_status": "200 https://attack.mitre.org/groups/G0049/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 30454  100 30454    0     0   104k      0 --:--:-- --:--:-- --:--:--  104k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/53-mitre-att-ck-apt34/source.html",
+  "text_file": "docs/source-gathering/raw-sources/53-mitre-att-ck-apt34/source.txt",
+  "size_bytes": 302223,
+  "extract_error": ""
+}

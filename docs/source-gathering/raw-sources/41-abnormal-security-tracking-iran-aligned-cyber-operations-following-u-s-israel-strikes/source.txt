@@ -1,0 +1,379 @@
+[](/)[](/)
+
+[Why Abnormal](/why-abnormal)/Products/Solutions/Customers/Resources/Company/
+
+[See a Demo](/demo)
+
+  1. [Abnormal Blog](/blog)/
+  2. [Threat Intel](/blog/category/threat-intel)/
+  3. Tracking Iran-Aligned Cyber Operations Following U.S.-Israel Strikes
+
+### Tracking Iran-Aligned Cyber Operations Following U.S.-Israel Strikes
+
+Iran-aligned groups are conducting cyber operations after strikes by the U.S.
+and Israel. Explore their tactics and how Abnormal can strengthen defenses.
+
+[Piotr Wojtyla](/blog/author/piotr-wojtyla)
+
+March 24, 2026
+
+/
+
+9 min read
+
+![Placeholder](/_next/image?url=https%3A%2F%2Fimages.abnormalsecurity.com%2Fproduction%2Fimages%2Fblog%2FB-
+Tracking-Iran-Aligned-Cyber-
+Operations.png%3Fw%3D760%26h%3D760%26q%3D80%26fm%3Djpg%26fit%3Dcrop%26crop%3Dfocalpoint%26fp-x%3D0.5%26fp-y%3D0.5%26dm%3D1774362833%26s%3D472261fff48e940dff909aa74484e24d&w=825&q=75)
+
+* * *
+
+On February 28, 2026, the United States and Israel launched a coordinated
+military offensive against Iran. Within hours, Iran's domestic internet
+connectivity dropped to between 1–4% availability—whether due to strikes or a
+deliberate government shutdown—and reports indicated significant disruption to
+Iranian leadership infrastructure and command and control within the Islamic
+Revolutionary Guard Corps (IRGC) and the Ministry of Intelligence (MOIS).
+
+Iran has a well-documented history of using cyber operations—particularly
+email-based attacks—to respond to perceived adversaries during geopolitical
+escalations. Based on intelligence from U.S. government agencies and leading
+threat research organizations, the key concern for defenders is how Iran-
+aligned threat groups may escalate, and for most organizations, that threat
+starts in the inbox. Organizations in financial services, critical
+infrastructure, healthcare, defense, and those with Middle East operations or
+supply chain exposure should be especially vigilant.
+
+While Abnormal AI is not seeing an indiscriminate surge in email attacks at
+scale, Iran-aligned threat actors are conducting operations, including website
+defacements, access disruption, and at least one reported large-scale wipe of
+a major U.S. organization's Microsoft environment. We are operating at our
+highest level of alert.  
+
+## An Active and Evolving Threat Environment
+
+Cyber operations linked to Iran-aligned threat groups are already underway.
+Multiple authoritative sources assess that Iranian cyber espionage has resumed
+after an initial lull. Additionally, hacktivist groups that threat researchers
+have linked to the IRGC are claiming and executing disruptive operations.
+
+Connectivity constraints inside Iran have not eliminated the threat. Many
+Iranian cyber capabilities are pre-positioned on infrastructure outside the
+country's borders. Proxy and hacktivist groups operate independently from
+external locations. And established access to target networks, obtained
+through prior campaigns, may still be exploitable.
+
+Over 70 Iran-aligned groups operating under an "Axis of Resistance" banner
+have been active since February 28, with a coordinating "Electronic Operations
+Room" synchronizing campaigns across collectives.  
+
+## Iran-Nexus Threat Groups Operating Through Email
+
+Email is the primary initial access vector for many of Iran's most capable
+cyber threat groups. The ecosystem spans two state-sponsoring
+organizations—the Islamic Revolutionary Guard Corps (IRGC) and the Ministry of
+Intelligence and Security (MOIS)—as well as hacktivist groups operating in
+support of state-aligned objectives, according to multiple threat intelligence
+vendors.  
+
+### **MuddyWater (MOIS-Linked)**
+
+_Also tracked as: Seedworm, Mango Sandstorm, TA450, Static Kitten, Mercury_
+
+MuddyWater is one of the most active email-based threat groups in the Iranian
+ecosystem, based on the volume and frequency of documented campaigns. Publicly
+attributed to the MOIS by U.S. government agencies, MuddyWater has conducted
+cyber espionage campaigns against government, defense, telecommunications,
+energy, healthcare, and manufacturing organizations across the Middle East,
+Europe, and North America since at least 2017.
+
+**Spearphishing with Malicious Attachments**  
+MuddyWater delivers emails containing malicious Microsoft Office documents
+with VBA macros, PDF attachments linking to malware hosted on file-sharing
+platforms (OneHub, Egnyte, Mega), and links to installers for legitimate
+remote monitoring and management (RMM) tools such as SimpleHelp, Atera, Level,
+PDQ, and Syncro that are repurposed for persistent access.**  
+  
+Lateral Phishing from Compromised Mailboxes**  
+MuddyWater compromises a legitimate organizational email account and uses it
+to phish the target's coworkers, bypassing external sender filtering and
+exploiting trust between colleagues. Research indicates that most recipients
+of these internal messages interacted with the malicious content, making this
+one of the group's most effective techniques in 2025.**  
+  
+Evolving Malware Delivery**  
+Recent campaigns have deployed new malware families, including the Phoenix
+backdoor (distributed via compromised mailboxes in an August 2025 campaign
+targeting 100+ government entities), MuddyViper (a C/C++ backdoor delivered
+via a loader disguised as a Snake game), RustyWater (a Rust-based RAT
+representing a significant capability evolution), and new implants designated
+Dindoor and Fakeset reported to be operating in U.S. and allied environments
+since February 2026.**  
+  
+Credential Theft as a Core Objective**  
+MuddyWater tools frequently present fake Windows Security dialogs to harvest
+credentials. The group also deploys custom browser credential stealers (such
+as Chromium_Stealer, which masqueraded as a calculator app) and Mimikatz
+loaders to extract authentication data. Research suggests MuddyWater may act
+as an initial access broker for other Iran-aligned groups.
+
+### **APT42/Charming Kitten (IRGC-Linked)**
+
+_Also tracked as: Educated Manticore, Mint Sandstorm, TA453, Yellow Garuda,
+ITG18_
+
+APT42 is assessed with moderate confidence to operate on behalf of the IRGC
+Intelligence Organization. What distinguishes APT42 is its focus on targeting
+individuals—journalists, researchers, policy analysts, academics, government
+officials, and activists—through patient, high-trust social engineering that
+unfolds over days to weeks before delivering a credential harvesting link.**  
+  
+Credential Harvesting as a Core Competency**  
+APT42 uses custom phishing kits that clone Google, Microsoft, and Yahoo login
+pages with high fidelity, including pre-filled email fields for added realism.
+These kits capture passwords and MFA tokens in real time via WebSocket
+connections, allowing the operator to log in before a time-based token
+expires. This defeats standard TOTP and SMS-based MFA. Only phishing-resistant
+methods, such as FIDO2 security keys or passkeys, are immune.**  
+  
+Multi-Channel Social Engineering**  
+Operators impersonate journalists, researchers, and event organizers, building
+rapport via email or messaging platforms before introducing a credential
+harvesting link disguised as a shared document or meeting invitation.**  
+  
+Cloud-First Exploitation**  
+A single set of stolen credentials gives APT42 direct access to cloud-hosted
+email, documents, and collaboration tools—without deploying any endpoint
+malware, making compromise particularly difficult to detect through
+traditional endpoint security.
+
+### **Void Manticore/Handala (MOIS-Linked)**
+
+_Also tracked as: Storm-842; operates under personas including "Handala Hack
+Team," "Karma," and "Homeland Justice"_
+
+Void Manticore pairs destructive wiping attacks with influence operations.
+Threat intelligence research documents a "handoff" model in which a more
+espionage-focused actor (Scarred Manticore/Storm-861) establishes access, then
+Void Manticore conducts destructive actions and public-facing leak
+operations.**  
+  
+Email as Initial Access for Maximum Damage**  
+Documented campaigns include phishing emails impersonating F5 security updates
+and Israel's National Cyber Directorate, delivering multi-stage loader chains
+culminating in destructive wipers. The Handala persona has also paired the
+commercial infostealer Rhadamanthys with custom wipers in phishing lures—a
+convergence of cybercrime tooling and state-aligned destructive operations.**  
+  
+Email-Based Intimidation**  
+Handala has used email to directly threaten public figures, journalists, and
+executives, including death threats. These operations accompany doxxing and
+social engineering workflows that can precede fraud or account abuse.
+
+### **Iranian Brute Force and Credential Access Operations**
+
+Beyond phishing, Iranian cyber operators also pursue credential access through
+brute force at scale—a complementary technique that targets the same cloud
+environments their phishing campaigns aim to compromise.
+
+A joint FBI, CISA, NSA advisory (AA24-290A) documented that since October
+2023, Iranian threat actors have used password spraying and MFA push bombing
+to compromise accounts across healthcare, government, IT, engineering, and
+energy sectors. These operators frequently modified MFA registrations to
+enable persistent access and sold stolen credentials on cybercriminal
+forums—meaning that an Iranian intrusion can lead to follow-on attacks by
+unrelated criminal actors.
+
+## Activity We're Currently Monitoring
+
+As of March 24, 2026, Abnormal is tracking elevated signals consistent with
+the following activity:  
+
+  * **Conflict-themed phishing lures:** We are detecting phishing campaigns leveraging war, humanitarian, and “urgent security update” pretexts—consistent with intelligence indicating that criminal and state-aligned threat groups are exploiting the conflict to maximize infection rates.
+
+  * **Credential attacks against cloud environments:** Credential stuffing and password spraying patterns targeting Microsoft 365, Google Workspace, and SSO endpoints are consistent with baseline Iranian activity that has continued through the current escalation window.
+
+  * **MOIS-linked intrusion activity:** Intrusions attributed to MOIS-linked actors against U.S. financial, transportation, and technology sector organizations have been identified, using novel backdoors with data exfiltration to cloud storage.
+
+  * **Spoofed defense infrastructure:** Infrastructure associated with Iranian cyber operators has been identified spoofing U.S. defense domains via URL-shortener lookalike domains, assessed as likely ready for deployment during this conflict window.
+
+The absence of a large-scale email surge should not be mistaken for a low-risk
+environment. Iranian threat actors have historically conducted cyber responses
+on delayed timelines relative to the triggering event, and the activity we are
+observing is consistent with the early stages of a broader campaign posture.
+We will share additional intelligence as the situation develops.  
+
+## Where to Focus Your Defenses
+
+The activity described above points to a clear set of defensive priorities.
+The email-centric nature of Iranian threat operations means that the most
+impactful defensive actions center on identity, user awareness, and email
+security controls. The following recommendations are prioritized based on
+documented threat patterns.  
+
+### **Immediate Actions**
+
+**Enforce Phishing-Resistant MFA**
+
+Standard TOTP and SMS-based MFA are defeated by real-time phishing kits used
+by APT42 and related groups. Deploy FIDO2 security keys or passkeys for high-
+value accounts, especially executives, IT administrators, and anyone with
+privileged access to email or identity systems.
+
+**Heighten Scrutiny of “Urgent” Vendor and Security-Themed Emails**
+
+Iranian threat actors specifically impersonate security vendors, software
+update notifications, and national cybersecurity authorities in their phishing
+lures. Remind employees that legitimate vendors do not instruct recipients to
+run commands or download fixes directly from email.
+
+**Train Employees to Recognize Social Engineering Beyond Email**
+
+Opportunistic groups use vishing, helpdesk impersonation via phone and
+collaboration platforms, and fake IT support outreach to trick users into
+granting remote access or sharing credentials. Establish verified callback
+procedures for IT support and remind staff that legitimate teams never bypass
+security controls under time pressure.
+
+**Alert Employees to Spam Bombing as a Precursor to Helpdesk Social
+Engineering**
+
+Threat actors flood a target’s inbox by mass-subscribing them to legitimate
+services, then call posing as IT support to “fix” the problem—guiding targets
+into granting remote access. A sudden surge of spam emails should be treated
+as a potential attack indicator, not just a nuisance.
+
+**Treat Inbound Threats as Both Physical Safety and Cyber Concerns**
+
+Given documented email-based intimidation campaigns by Iranian personas,
+organizations should preserve email headers from threatening messages and
+escalate through both security and physical safety channels.
+
+### **Ongoing Vigilance**
+
+**Apply Least-Privilege and Multi-Admin Approval across Endpoint Management**  
+  
+Use role-based access control to limit admin permissions to only what's
+necessary, and require a second administrator to approve sensitive actions
+like device wipes, application updates, and RBAC changes.
+
+**Audit OAuth App Consents and MFA Registrations**
+
+Iranian threat actors frequently modify MFA registrations and abuse OAuth
+consent grants to maintain persistent access after initial compromise. Review
+recent OAuth application consents, new MFA device registrations, and service
+principal creation in your identity provider.
+
+**Harden and Monitor Administrative Access**
+
+Enforce phishing-resistant MFA on all Global Admin and privileged roles.
+Monitor Privileged Identity Management (PIM) for unusual role activations,
+creation of new accounts with elevated permissions, and changes to device
+management policies. Administrative compromise is how environment-wide
+disruption propagates.
+
+**Validate Email Security Controls**
+
+Ensure your Abnormal deployment is fully configured to protect against
+advanced social engineering, vendor impersonation, credential phishing, and
+account takeover. Customers on Abnormal’s platform benefit from behavioral AI
+detection that does not rely on known IOCs or threat signatures—a critical
+advantage against adversaries who rapidly rotate infrastructure.  
+
+## Access Is the Goal. Email Is the Path.
+
+The Iranian cyber threat ecosystem is persistent, structured, and increasingly
+characterized by overlap between state-aligned objectives and cybercrime
+tooling. For most organizations, the front line of that threat runs through
+the inbox. The time to strengthen defenses is now.
+
+The threat groups profiled in this article share infrastructure, hand off
+access between teams, and borrow from the cybercrime ecosystem to scale their
+reach and complicate attribution. What begins as a phishing email can end as a
+wiped environment, a leaked dataset, or a compromised identity used to stage
+the next attack.
+
+Recent campaigns also highlight a broader challenge: once access is
+established, attackers often move through legitimate identity and device
+management systems, making their activity difficult to detect. This places
+greater importance on visibility into privileged roles and managed devices,
+where misconfigurations can allow attacks to spread. Strengthening your
+security posture across these areas will help surface these risks earlier and
+limit downstream impact. Abnormal customers using Security Posture Management
+can enable added visibility into Microsoft Intune postures by following the
+integration steps here: [SPM Integration
+Guide](https://abnormalsecurity.my.site.com/support/s/article/Update-
+Abnormal-M365-Integration-for-Security-Posture-Management)
+
+This is not a threat with a predictable resolution timeline. Organizations
+that treat this moment as a reason to audit, harden, and educate—rather than
+wait for a confirmed attack against their own environment—will be the ones
+best positioned when the next phase of this campaign unfolds. Abnormal will
+continue to monitor the threat landscape and share actionable intelligence as
+the situation evolves.  
+
+**_See for yourself how Abnormal AI can help protect your organization.
+Schedule a demo today._**
+
+[Schedule a Demo](https://abnormal.ai/demo)
+
+_\---_
+
+_Sources_
+
+  * _Abnormal Intelligence: Direct telemetry and monitoring from Abnormal’s threat detection platform across our customer base_
+
+  *  _Government and official public-sector reporting: CISA, FBI, NSA joint advisories (AA24-290A)_
+
+  * _Vendor threat intelligence research: Unit 42 (Palo Alto Networks), Google Threat Intelligence Group/Mandiant, ESET, Check Point Research, Group-IB, Intezer, Broadcom/Symantec, CloudSEK_
+
+Related Posts
+
+![Blog
+Thumbnail](https://images.abnormalsecurity.com/production/images/blog/How-
+Peak-Technologies-Transformed-Email-Security-
+Cover.png?w=760&h=760&q=80&fm=jpg&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1779138316&s=17904a51f6f062a1d55d8c4b32fdc823)From
+Reactive to Autonomous: How Peak Technologies Transformed Email Security with
+Behavioral AIMay 19, 2026](https://abnormal.ai/blog/peak-technologies-email-
+security-behavioral-ai)
+
+[![Blog
+Thumbnail](https://images.abnormalsecurity.com/production/images/blog/Device-
+Code-Phishing-Is-Hard-to-Remediate-
+Cover.png?w=760&h=760&q=80&fm=jpg&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1779109788&s=5e1f44f262177f45731201747acaeb60)Why
+Device Code Phishing Demands a Modern Account Takeover ResponseMay 18,
+2026](https://abnormal.ai/blog/device-code-phishing-account-takeover-
+microsoft-365)
+
+[![Blog
+Thumbnail](https://images.abnormalsecurity.com/production/images/blog/1500x1500-Not-
+All-AI-Is-Created-Equal-What-Makes-Abnormals-Detection-Engine-
+Different.png?w=760&h=760&q=80&fm=jpg&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1779371333&s=d47fcaac575f7d4418f49535a1c60dce)Not
+All AI Is Created Equal: What Makes Abnormal's Detection Engine DifferentMay
+14, 2026](https://abnormal.ai/blog/what-makes-abnormal-ai-detection-different)
+
+See Abnormal in Action
+
+[Get a Demo](https://abnormal.ai/demo)
+
+#### Get the Latest Email Security Insights
+
+Subscribe to our newsletter to receive updates on the latest attacks and new
+trends in the email threat landscape.
+
+Email Address*
+
+By submitting this form, you agree to the terms listed in our [_privacy
+policy_](https://abnormal.ai/privacy-policy/)
+
+Loading...
+
+Loading...
+
+Subscribe
+
+Discover How It All Works
+
+## See How Abnormal AI Protects Humans
+
+[Product Platform](/products)[About Abnormal AI](/about)[Get a Demo](/demo)
+

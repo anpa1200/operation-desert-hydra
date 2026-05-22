@@ -1,0 +1,38 @@
+Title: Novel C2 tool leveraged in latest MuddyWater attacks
+
+URL Source: https://www.scworld.com/brief/novel-c2-tool-leveraged-in-latest-muddywater-attacks
+
+Published Time: 2024-04-15T09:16:32-04:00
+
+Markdown Content:
+[Vulnerability Management](https://www.scworld.com/topic/vulnerability-management), [Threat Intelligence](https://www.scworld.com/topic/threat-intelligence), [Phishing](https://www.scworld.com/topic/phishing)
+
+April 15, 2024
+
+![Image 1: Technology background with national flag of Iran. 3D rendering](https://image-optimizer.cyberriskalliance.com/unsafe/1920x0/https://files.cyberriskalliance.com/wp-content/uploads/2024/01/011824_iran_flag.jpg)
+
+(Adobe Stock)
+
+Iranian state-backed threat operation [MuddyWater,](https://www.scworld.com/brief/novel-muddywater-phishing-campaign-hits-israel) also known as TA450, Mango Sandstorm, and Boggy Sandstorm, leveraged the novel DarkBeatC2 command-and-control infrastructure tool as part of its latest attack campaign, [The Hacker News](https://thehackernews.com/2024/04/iranian-muddywater-hackers-adopt-new-c2.html) reports.
+
+Intrusions involved the usage of a compromised email account belonging to Israeli educational institution Kinneratacil to deliver spearphishing emails that contained Egnyte-hosted attachments that deploy the Atera Agent software, according to a report from Deep Instinct.
+
+Kinneratacil was breached following an attack by Lord Nemesis, also known as TunnelVision and Nemesis Kitten, against third-party provider Rashim, indicating that other Rashim customers could have also been subjected to a similar campaign. Meanwhile, DarkBeatC2 had been used by MuddyWater for infected endpoint management, with a C2 connection created to enable further PowerShell script retrieval.
+
+"While occasionally switching to a new remote administration tool or changing their C2 framework, MuddyWater's methods remain constant," said researcher Simon Kenin.
+
+Such a development follows a report from Palo Alto Networks Unit 42 detailing aerospace and defense-targeted attacks by Iranian state-sponsored group APT33, also known as Peach Sandstorm, Elfin, Refined Kitten, and Curious Serpens, distributing the FalseFont backdoor.
+
+![Image 2: SC Staff](https://www.scworld.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fscm-person.e6ed9e91.png&w=1920&q=75)
+
+### Related
+
+[![Image 3: (Credit: monticellllo &#8211; stock.adobe.com)](https://image-optimizer.cyberriskalliance.com/unsafe/1920x0/https://files.cyberriskalliance.com/wp-content/uploads/2025/02/AdobeStock_411487461_Editorial_Use_Only.jpg)](https://www.scworld.com/brief/attackers-exploit-sonicwall-vpn-vulnerability-to-bypass-mfa)
+
+[![Image 4: Today&#8217;s columnist, Jim Richberg of Fortinet, explains why business and government must cooperate as GenAI develops. (Adobe Stock)](https://image-optimizer.cyberriskalliance.com/unsafe/1920x0/https://files.cyberriskalliance.com/wp-content/uploads/2024/12/AdobeStock_893733247.jpg)](https://www.scworld.com/resource/apis-under-pressure-how-ai-is-rewriting-the-rules-of-enterprise-security)
+
+[![Image 5](https://image-optimizer.cyberriskalliance.com/unsafe/1920x0/https://files.cyberriskalliance.com/wp-content/uploads/2025/12/AdobeStock_233277906.jpg)](https://www.scworld.com/brief/max-severity-vulnerability-in-chromadb-allows-unauthenticated-remote-code-execution)
+
+### Get daily email updates
+
+SC Media's daily must-read of the most current and pressing daily news

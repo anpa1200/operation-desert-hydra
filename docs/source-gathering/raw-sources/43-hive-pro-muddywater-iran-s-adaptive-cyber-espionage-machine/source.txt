@@ -1,0 +1,637 @@
+**Threat Advisories:**
+
+[ Inside Storm-2949’s Cloud Takeover Campaign Targeting Microsoft 365 and
+Azure ](https://hivepro.com/threat-advisory/inside-storm-2949s-cloud-takeover-
+campaign-targeting-microsoft-365-and-azure/) [ Dead.Letter Walking:
+Unauthenticated RCE Stalks Exim Mail Servers ](https://hivepro.com/threat-
+advisory/dead-letter-walking-unauthenticated-rce-stalks-exim-mail-servers/) [
+One Million WordPress Sites at Risk: Avada Builder Flaws Expose Sensitive Data
+](https://hivepro.com/threat-advisory/one-million-wordpress-sites-at-risk-
+avada-builder-flaws-expose-sensitive-data/) [ Three Strikes in Two Weeks:
+Fragnesia Joins the Dirty Frag Family ](https://hivepro.com/threat-
+advisory/three-strikes-in-two-weeks-fragnesia-joins-the-dirty-frag-family/) [
+Critical NGINX Vulnerabilities Including 18-Year-Old RCE Flaw Actively
+Exploited ](https://hivepro.com/threat-advisory/critical-nginx-
+vulnerabilities-including-18-year-old-rce-flaw-actively-exploited/) [ Active
+Exploitation of CVE-2026-42897 Targets Microsoft Exchange Servers
+](https://hivepro.com/threat-advisory/active-exploitation-of-
+cve-2026-42897-targets-microsoft-exchange-servers/) [ FamousSparrow's
+Persistent Hold on Azerbaijani Oil & Gas ](https://hivepro.com/threat-
+advisory/famoussparrow-persistent-hold-on-azerbaijani-oil-gas/) [ Cisco SD-WAN
+Authentication Bypass Exploited in Zero-Day Attacks
+](https://hivepro.com/threat-advisory/cisco-sd-wan-authentication-bypass-
+exploited-in-zero-day-attacks/) [ Mini Shai-Hulud npm Supply Chain Worm:
+TanStack and Multi-Ecosystem Compromise ](https://hivepro.com/threat-
+advisory/mini-shai-hulud-npm-supply-chain-worm-tanstack-and-multi-ecosystem-
+compromise/) [ Malicious Ruby Gems Fuel GemStuffer Data Theft Campaign
+](https://hivepro.com/threat-advisory/malicious-ruby-gems-fuel-gemstuffer-
+data-theft-campaign/) [ Microsoft's May 2026 Patch Tuesday
+](https://hivepro.com/threat-advisory/microsofts-may-2026-patch-tuesday/) [
+PCPJack Hijacks Vulnerable Servers With Worm-Like Cloud Propagation Tactics
+](https://hivepro.com/threat-advisory/pcpjack-hijacks-vulnerable-servers-with-
+worm-like-cloud-propagation-tactics/) [ QLNX Unmasked: Advanced Linux Malware
+Targets Developers and Cloud Infrastructure ](https://hivepro.com/threat-
+advisory/qlnx-unmasked-advanced-linux-malware-targets-developers-and-cloud-
+infrastructure/) [ Dirty Frag A 2017 Optimization That Aged Into a Root
+Exploit ](https://hivepro.com/threat-advisory/dirty-frag-a-2017-optimization-
+that-aged-into-a-root-exploit/) [ TCLBanker: Trojanized Logitech Installer
+Fuels Banking Malware Campaign ](https://hivepro.com/threat-
+advisory/tclbanker-trojanized-logitech-installer-fuels-banking-malware-
+campaign/) [ Ivanti EPMM Flaws Threaten Enterprise Device Management Systems
+](https://hivepro.com/threat-advisory/ivanti-epmm-flaws-threaten-enterprise-
+device-management-systems/) [ Is Your Spring Config Server an Open Door?
+CVE-2026-40982 Says Yes ](https://hivepro.com/threat-advisory/is-your-spring-
+config-server-an-open-door-cve-2026-40982-says-yes/) [ PAN-OS Buffer Overflow
+Flaw Under Active State-Sponsored Exploitation ](https://hivepro.com/threat-
+advisory/pan-os-buffer-overflow-flaw-under-active-state-sponsored-
+exploitation/) [ Unauthenticated RCE in Weaver E-cology Actively Exploited
+](https://hivepro.com/threat-advisory/unauthenticated-rce-in-weaver-e-cology-
+actively-exploited/) [ Tax Trap to Full Takeover: Inside the Silver Fox Multi-
+Stage Intrusion Chain ](https://hivepro.com/threat-advisory/tax-trap-to-full-
+takeover-inside-the-silver-fox-multi-stage-intrusion-chain/)
+
+❚❚ ✖
+
+New Report ![](https://hivepro.com/wp-content/uploads/2026/04/report-2.png)
+**Critical Threat Research : The Iranian Cyber War Intensifies!** [Download
+the Report](https://resources.hivepro.com/iranian-cyber-war-intensifies-
+part-2-hivepro)
+
+[ ![Hive Pro](https://hivepro.com/wp-content/themes/hive-
+pro/assets/img/logo.webp) ![Hive Pro dark style](https://hivepro.com/wp-
+content/themes/hive-pro/assets/img/logo-dark.webp) ](https://hivepro.com/)
+
+Platform
+
+Comprehensive Threat Exposure Management Platform
+
+[Uni5 Xposure PlatformUni5 Xposure leverages exposure assessment and
+adversarial exposure validation to deliver a unified view of your cyber risks
+and all actionable pathways to resolve them. Powered
+by:](https://hivepro.com/platform/)
+
+[IntegrationsOut of box integrations available with a comprehensive set of
+Security and IT operations tools in your
+organisation.](https://hivepro.com/integrations/)
+
+[HiveForce LabsThe in-house intelligence that enables customers to identify
+and address immediate cyber risks and potential threats with precision, clear
+insights, and swift action.](https://hivepro.com/hiveforce-labs/)
+
+Hive Pro's ComparisonSave Cost , Reduce Complexity and Increase Security by
+Augmenting and Replacing your existing Vulnerability Management platform
+
+[Hive Pro vs Rapid7](https://hivepro.com/hivepro_vs_rapid7/)
+
+[Hive Pro vs Tenable](https://hivepro.com/hivepro_vs_tenable/)
+
+[Hive Pro vs Qualys](https://hivepro.com/hivepro_vs_qualys_vmdr/)
+
+[Hive Pro vs Nucleus
+Security](https://hivepro.com/hivepro_vs_nucleus_security/)
+
+Solutions
+
+By Use Case
+
+[Total Attack Surface Management](https://hivepro.com/cyber-asset-attack/)
+
+[Multi-Environment Security Scanners](https://hivepro.com/code-to-cloud-
+scanning/)
+
+[Complete Exposure Assessment](https://hivepro.com/security-scan/)
+
+[Comprehensive Security Intelligence](https://hivepro.com/comprehensive-
+security-intelligence/)
+
+[Vulnerability & Threat Prioritization](https://hivepro.com/vulnerability-
+threat-prioritization/)
+
+[Adversarial Exposure Validation](https://hivepro.com/security-control-
+validation/)
+
+By Role
+
+[CISO](https://hivepro.com/ciso/)
+
+[Vulnerability Management](https://hivepro.com/vulnerability-management/)
+
+[Security Operations](https://hivepro.com/security-operations/)
+
+[DevOps](https://hivepro.com/devops/)
+
+Industry
+
+[Telecommunications](https://hivepro.com/telecommunications/)
+
+[Healthcare](https://hivepro.com/healthcare/)
+
+[Financial Services](https://hivepro.com/financial-services/)
+
+[Government & Public Sector](https://hivepro.com/government/)
+
+[Retail & E-Commerce](https://hivepro.com/retail/)
+
+[Educational Institutions](https://hivepro.com/education/)
+
+Resources
+
+[Learning Center](/quick-resources/)
+
+[Podcasts](https://hivepro.com/podcasts/)
+
+[Threat Advisories](/threat-advisory/)
+
+[Threat Digests](/threat-digest-page/)
+
+[Blog](/blog/)
+
+[Whitepapers](/whitepaper/)
+
+Resources
+
+Advisories & Digests
+
+[Threat Advisories](https://hivepro.com/threat-advisory/)
+
+[Threat Digests](https://hivepro.com/threat-digest-page/)
+
+Content Library
+
+learn
+
+[Blog](https://hivepro.com/blog/)
+
+[Whitepapers](https://hivepro.com/whitepaper/)
+
+[Press Releases](https://hivepro.com/press-releases/)
+
+connect
+
+[Webinars & Videos](https://hivepro.com/webinars/)
+
+Company
+
+[About Us](https://hivepro.com/about-us/)
+
+[Careers](https://hivepro.com/careers/)
+
+[Our Leadership](https://hivepro.com/our-leadership/)
+
+[Contact Us](https://hivepro.com/contact-us/)
+
+×
+
+Search
+
+[Book a Demo](https://hivepro.com/book-a-demo/)[Free Iranian Exposure
+Assessment](https://resources.hivepro.com/free-exposure-assessment)
+
+Platform
+
+Back
+
+Platform
+
+Comprehensive Threat Exposure Management Platform
+
+[Uni5 Xposure PlatformUni5 Xposure leverages exposure assessment and
+adversarial exposure validation to deliver a unified view of your cyber risks
+and all actionable pathways to resolve them. Powered
+by:](https://hivepro.com/platform/)
+
+[IntegrationsOut of box integrations available with a comprehensive set of
+Security and IT operations tools in your
+organisation.](https://hivepro.com/integrations/)
+
+[HiveForce LabsThe in-house intelligence that enables customers to identify
+and address immediate cyber risks and potential threats with precision, clear
+insights, and swift action.](https://hivepro.com/hiveforce-labs/)
+
+Hive Pro's Comparison
+
+[Hive Pro vs Rapid7](https://hivepro.com/hivepro_vs_rapid7/)
+
+[Hive Pro vs Tenable](https://hivepro.com/hivepro_vs_tenable/)
+
+[Hive Pro vs Qualys](https://hivepro.com/hivepro_vs_qualys_vmdr/)
+
+[Hive Pro vs Nucleus
+Security](https://hivepro.com/hivepro_vs_nucleus_security/)
+
+Solutions
+
+Back
+
+Solutions
+
+By Use Case
+
+[Total Attack Surface Management](https://hivepro.com/cyber-asset-attack/)
+
+[Multi-Environment Security Scanners](https://hivepro.com/code-to-cloud-
+scanning/)
+
+[Complete Exposure Assessment](https://hivepro.com/security-scan/)
+
+[Comprehensive Security Intelligence](https://hivepro.com/comprehensive-
+security-intelligence/)
+
+[Vulnerability & Threat Prioritization](https://hivepro.com/vulnerability-
+threat-prioritization/)
+
+[Adversarial Exposure Validation](https://hivepro.com/security-control-
+validation/)
+
+By Role
+
+[CISO](https://hivepro.com/ciso/)
+
+[Vulnerability Management](https://hivepro.com/vulnerability-management/)
+
+[Security Operations](https://hivepro.com/security-operations/)
+
+[DevOps](https://hivepro.com/devops/)
+
+Industry
+
+Back
+
+Industry
+
+[Telecommunications](https://hivepro.com/telecommunications/)
+
+[Healthcare](https://hivepro.com/healthcare/)
+
+[Financial Services](https://hivepro.com/financial-services/)
+
+[Government & Public Sector](https://hivepro.com/government/)
+
+[Retail & E-Commerce](https://hivepro.com/retail/)
+
+[Educational Institutions](https://hivepro.com/education/)
+
+Resources
+
+Back
+
+Resources
+
+[Learning Center](/quick-resources/)
+
+[Podcasts](https://hivepro.com/podcasts/)
+
+[Threat Advisories](/threat-advisory/)
+
+[Threat Digests](/threat-digest-page/)
+
+[Blog](/blog/)
+
+[Whitepapers](/whitepaper/)
+
+Resources
+
+Back
+
+Resources
+
+Advisories & Digests
+
+[Threat Advisories](https://hivepro.com/threat-advisory/)
+
+[Threat Digests](https://hivepro.com/threat-digest-page/)
+
+Content Library
+
+learn
+
+[Blog](https://hivepro.com/blog/)
+
+[Whitepapers](https://hivepro.com/whitepaper/)
+
+[Press Releases](https://hivepro.com/press-releases/)
+
+connect
+
+[Webinars & Videos](https://hivepro.com/webinars/)
+
+Company
+
+Back
+
+Company
+
+[About Us](https://hivepro.com/about-us/)
+
+[Careers](https://hivepro.com/careers/)
+
+[Our Leadership](https://hivepro.com/our-leadership/)
+
+[Contact Us](https://hivepro.com/contact-us/)
+
+[Book a Demo](https://hivepro.com/book-a-demo/)[Free Iranian Exposure
+Assessment](https://resources.hivepro.com/free-exposure-assessment)
+
+# MuddyWater: Iran’s Adaptive Cyber Espionage Machine
+
+Red | Actor Report
+
+[Download PDF](https://hivepro.com/wp-content/uploads/2026/03/TA2026082.pdf)
+
+## Summary
+
+MuddyWater is an Iranian state-sponsored advanced persistent threat (APT)
+group active since at least 2017, widely attributed to Iran's Ministry of
+Intelligence and Security (MOIS). This Iranian APT group operations are
+primarily centered on cyber espionage, with consistent targeting of
+government, defense, telecommunications, energy, financial services, and other
+critical infrastructure sectors across the Middle East, North America, Europe,
+and Africa. The MuddyWater threat actor group activity aligns closely with
+Iran's strategic intelligence-gathering objectives, often focusing on
+organizations of geopolitical and economic significance to Iranian national
+interests. MuddyWater APT targets span Afghanistan, Armenia, Austria,
+Azerbaijan, Bahrain, Belarus, Egypt, Georgia, India, Iran, Iraq, Israel,
+Jordan, Kuwait, Laos, Lebanon, Mali, Netherlands, Oman, Pakistan, Portugal,
+Qatar, Russia, Saudi Arabia, Sudan, Tajikistan, Tanzania, Thailand, Tunisia,
+Turkey, UAE, Ukraine, USA, Canada, and North Africa across aviation, defense,
+education, energy, financial, food and agriculture, gaming, government,
+healthcare, high-tech, IT, media, NGOs, oil and gas, shipping and logistics,
+telecommunications, transportation, software technology, and critical
+infrastructure sectors.
+
+## Actor Details
+
+### Iranian State-Sponsored APT Group Attribution
+
+MuddyWater is an Iranian state-sponsored advanced persistent threat group
+active since at least 2017, widely attributed to Iran's Ministry of
+Intelligence and Security (MOIS). The MuddyWater cyber espionage operations
+are primarily centered on intelligence collection, with consistent targeting
+of government, defense, telecommunications, energy, financial services, and
+other critical infrastructure sectors across the Middle East, North America,
+Europe, and Africa. The MuddyWater APT group activity aligns closely with
+Iran's strategic intelligence-gathering objectives for the Iranian government,
+often focusing on organizations of geopolitical and economic significance.
+
+### Adaptive Tooling and Evolving Tradecraft
+
+The MuddyWater threat actor group is characterized by its agility in adopting
+new tooling and evolving its tradecraft. MuddyWater frequently develops
+malware across multiple programming languages, including PowerShell, Python,
+JavaScript, and increasingly Rust, while maintaining a strong dependence on
+social engineering, particularly spear-phishing, for initial access to target
+networks. In parallel, MuddyWater actively exploits vulnerabilities in public-
+facing applications to establish footholds, reflecting a hybrid intrusion
+approach that blends opportunistic exploitation with targeted intrusion
+techniques characteristic of Iranian APT operations.
+
+### Recent MuddyWater Campaign Activity - Dindoor Backdoor
+
+Recent MuddyWater campaigns highlight a notable shift in both tooling
+sophistication and operational tempo. Since early February 2026, MuddyWater
+has deployed the previously undocumented Dindoor backdoor, built on the Deno
+JavaScript runtime, targeting U.S. entities such as banks, airports, NGOs, and
+an Israeli defense software affiliate. Alongside the Dindoor malware, the
+MuddyWater group leveraged the Python-based Fakeset backdoor and used Rclone
+to exfiltrate data to Wasabi cloud storage. This surge in MuddyWater activity
+coincides with heightened geopolitical tensions, raising concerns that
+existing intrusions could transition into disruptive or destructive operations
+aligned with Iranian strategic objectives.
+
+### Operation Olalampo and Advanced Malware Arsenal
+
+In parallel, the MuddyWater APT group conducted Operation Olalampo (January-
+February 2026), targeting organizations across the MENA region with a new
+malware arsenal including GhostFetch, GhostBackDoor, HTTP_VIP, and the CHAR
+backdoor written in Rust. Notably, this MuddyWater campaign incorporated
+Telegram-based command-and-control channels and exhibited indicators of AI-
+assisted development, signaling an evolution in both development practices and
+operational flexibility. Additional MuddyWater activity in March 2026 suggests
+continued targeting of government and telecom sectors across GCC countries,
+including Saudi Arabia, the UAE, Kuwait, and Bahrain, demonstrating the
+Iranian threat actor's sustained focus on Middle Eastern targets.
+
+### Enhanced MuddyWater Toolkit Capabilities
+
+MuddyWater has recently strengthened its toolkit with more evasive and
+persistent capabilities, introducing tools like the UDPGangster backdoor for
+stealthy communication and LampoRAT, a Rust-based RAT used in targeted
+attacks. The MuddyWater group is also leveraging AI-assisted development and
+Rust-based implants such as BlackBeard to rapidly deploy tailored payloads. In
+a MuddyWater campaign using a malicious Excel lure, the Iranian APT delivered
+a new payload family, Nuso, highlighting a shift toward more advanced final-
+stage infections and a modular, adaptive attack approach.
+
+### Large-Scale Middle East Spear-Phishing Operations
+
+Throughout 2025, MuddyWater sustained large-scale spear-phishing campaigns
+across the Middle East, leveraging compromised legitimate email accounts to
+enhance credibility. These MuddyWater operations delivered malware such as
+RustyWater, a Rust-based remote access implant featuring asynchronous C2
+communication, registry-based persistence, and modular post-exploitation
+capabilities, as well as the Phoenix backdoor. The Iranian APT group combined
+custom payloads with legitimate remote management tools to improve stealth and
+persistence, while using techniques such as icon spoofing and macro-enabled
+Word documents to increase infection success rates.
+
+### Exposed MuddyWater Infrastructure and Operational Ecosystem
+
+Exposure of the MuddyWater group's infrastructure has further revealed a
+mature and layered operational ecosystem. This includes extensive
+reconnaissance using tools like Shodan, Nuclei, and Subfinder; custom command-
+and-control frameworks such as KeyC2, PersianC2, and ArenaC2; and tunneling
+utilities like Neo-reGeorg and Resocks. Evidence also points to MuddyWater
+password spraying activity, exploitation attempts across numerous CVEs, and
+the use of a PowerShell-based loader. Collectively, these capabilities
+underscore MuddyWater's adaptability and depth in both offensive tooling and
+infrastructure management.
+
+### Sustained High-Risk Iranian Cyber Threat
+
+Overall, MuddyWater remains a high-risk threat actor with a strong likelihood
+of sustained and potentially escalating activity. The Iranian APT group's
+continued investment in diverse malware development, combined with its
+alignment to Iranian strategic interests and current geopolitical dynamics,
+positions MuddyWater as a persistent and evolving threat to organizations
+operating in sensitive or high-value sectors across government, defense,
+telecommunications, energy, and critical infrastructure.
+
+## Recommendations
+
+### Strengthen Email and Initial Access Defenses
+
+MuddyWater heavily relies on spear-phishing to gain initial access, making
+email security a critical first line of defense. Organizations should
+implement advanced email filtering, block malicious attachments, and disable
+macros by default. Regular security awareness training can help employees
+identify phishing attempts, especially those that appear to originate from
+trusted or internal sources. At the same time, all public-facing systems
+should be regularly updated and patched to prevent exploitation of known
+vulnerabilities by MuddyWater and other Iranian APT groups.
+
+### Enhance Visibility and Threat Detection
+
+Early detection is key to limiting impact from MuddyWater intrusions. Security
+teams should monitor for unusual activity involving scripting environments
+such as PowerShell, Python, and JavaScript runtimes, as MuddyWater frequently
+abuses these for malware execution. The use of tools like Rclone for data
+exfiltration should also be closely tracked. Deploying endpoint detection and
+response (EDR) solutions, combined with centralized logging, enables faster
+identification of suspicious behavior associated with MuddyWater operations.
+Enforcing multi-factor authentication (MFA) and limiting administrative
+privileges further reduces the attack surface.
+
+### Adopt Zero Trust and Network Controls
+
+Given the MuddyWater group's tendency to blend malicious activity with
+legitimate tools and services, organizations should adopt a zero-trust
+approach, verifying every access request regardless of origin. Network
+segmentation is equally important, as it helps contain threats and prevents
+lateral movement within the environment. Monitoring outbound traffic,
+particularly to cloud storage services, can help detect covert data
+exfiltration and command-and-control communications associated with MuddyWater
+malware.
+
+### Prepare for Incident Response and Recovery
+
+Organizations should assume that sophisticated actors like MuddyWater may
+eventually gain access and plan accordingly. Maintaining regular, secure
+backups ensures that critical data can be restored if needed. A well-defined
+and tested incident response plan allows teams to respond quickly, contain
+threats, and minimize damage from MuddyWater intrusions. Staying up to date on
+emerging threat activity and continuously refining defensive measures will
+help organizations remain resilient against evolving campaigns.
+
+## MITRE ATT&CK TTPs
+
+**Initial Access:**
+
+  * T1566: Phishing 
+    * T1566.001: Spear-Phishing Attachment
+  * T1190: Exploit Public-Facing Application
+
+**Execution:**
+
+  * T1059: Command and Scripting Interpreter 
+    * T1059.007: JavaScript
+    * T1059.006: Python
+    * T1059.001: PowerShell
+  * T1204: User Execution 
+    * T1204.002: Malicious File
+
+**Persistence:**
+
+  * T1053: Scheduled Task/Job
+  * T1219: Remote Access Software
+
+**Defense Evasion:**
+
+  * T1027: Obfuscated Files or Information
+  * T1553: Subvert Trust Controls 
+    * T1553.002: Code Signing
+
+**Credential Access:**
+
+  * T1110: Brute Force 
+    * T1110.003: Password Spraying
+
+**Discovery:**
+
+  * T1082: System Information Discovery
+
+**Lateral Movement:**
+
+  * T1021: Remote Services
+
+**Collection:**
+
+  * T1115: Clipboard Data
+
+**Command and Control:**
+
+  * T1071: Application Layer Protocol 
+    * T1071.001: Web Protocols
+  * T1102: Web Service
+  * T1105: Ingress Tool Transfer
+  * T1572: Protocol Tunneling
+
+**Exfiltration:**
+
+  * T1567: Exfiltration Over Web Service 
+    * T1567.002: Exfiltration to Cloud Storage
+
+**Resource Development:**
+
+  * T1588: Obtain Capabilities 
+    * T1588.006: Vulnerabilities
+
+## References
+
+  * <https://www.security.com/threat-intelligence/iran-cyber-threat-activity-us>
+  * <https://securityaffairs.com/189060/apt/iran-linked-muddywater-deploys-dindoor-malware-against-u-s-organizations.html>
+  * <https://www.darkreading.com/threat-intelligence/iran-muddywater-new-malware-tensions-mount>
+  * <https://www.esentire.com/security-advisories/iranian-apt-muddywater-exposed>
+  * <https://hivepro.com/threat-advisory/muddywaters-rust-implants-target-the-middle-east/>
+  * <https://hivepro.com/threat-advisory/operation-olalampo-muddywater-expanding-campaign-across-mena/>
+  * <https://attack.mitre.org/groups/G0069/>
+
+## What’s new on HivePro
+
+Get through updates and upcoming events, and more directly in your inbox
+
+[ ![Hive Pro](https://hivepro.com/wp-content/themes/hive-
+pro/assets/img/logo.webp) ](https://hivepro.com/)
+
+Follow us
+
+[ __](https://www.linkedin.com/company/30191918/) [
+__](https://twitter.com/hiveproinc) [
+__](https://www.youtube.com/channel/UC6vRwkCuSMGgl0B5lvxIb4g)
+
+Platform
+
+  * [Uni5 Xposure Platform](https://hivepro.com/uni5-xposure/)
+  * [Integrations](https://hivepro.com/integrations/)
+  * [HiveForce Labs](https://hivepro.com/hiveforce-labs/)
+
+Solutions
+
+  * [Total Attack Surface Management](https://hivepro.com/cyber-asset-attack/)
+  * [Multi-Environment Security Scanners](https://hivepro.com/code-to-cloud-scanning/)
+  * [Complete Exposure Assessment](https://hivepro.com/security-scan/)
+  * [Comprehensive Security Intelligence](https://hivepro.com/comprehensive-security-intelligence/)
+  * [Vulnerability & Threat Prioritization](https://hivepro.com/vulnerability-threat-prioritization/)
+  * [Security Control Validation](https://hivepro.com/security-control-validation/)
+
+Industry
+
+  * [Telecommunications](https://hivepro.com/telecommunications/)
+  * [Healthcare](https://hivepro.com/healthcare/)
+  * [Financial Services](https://hivepro.com/financial-services/)
+  * [Government & Public Sector](https://hivepro.com/government/)
+  * [Retail & E-Commerce](https://hivepro.com/retail/)
+  * [Educational Institutions](https://hivepro.com/education/)
+
+Resources
+
+  * [Threat Advisories](https://hivepro.com/threat-advisory/)
+  * [Threat Digests](https://hivepro.com/threat-digest-page/)
+  * [Blog](https://hivepro.com/blog/)
+  * [White Papers & Content Sheets](https://hivepro.com/whitepaper/)
+  * [Webinars & Videos](https://hivepro.com/webinars/)
+
+Company
+
+  * [About](https://hivepro.com/about-us/)
+  * [Our Leadership](https://hivepro.com/our-leadership/)
+  * [Partner Program](https://hivepro.com/partner-program/)
+  * [Press Releases](https://hivepro.com/press-releases/)
+  * [Contact](https://hivepro.com/contact-us/)
+  * [Help Center](https://hivepro.com/help-center/)
+
+© 2026 Hive Pro Inc.
+
+  * [Privacy Policy](https://hivepro.com/privacy-policy/)
+  * [Terms & Conditions](https://hivepro.com/terms-conditions/)
+  * [Site by Takeoff](https://www.takeoffnyc.com/)
+

@@ -1,0 +1,19 @@
+{
+  "number": 5,
+  "title": "CISA / FBI / CNMF / NCSC-UK / NSA — AA22-055A advisory page",
+  "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a",
+  "curl_status": "403 https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a",
+  "http_status": "403",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100   432  100   432    0     0   1957      0 --:--:-- --:--:-- --:--:--  1963",
+  "saved": true,
+  "http_ok": false,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/05-cisa-fbi-cnmf-ncsc-uk-nsa-aa22-055a-advisory-page/source.html",
+  "text_file": "docs/source-gathering/raw-sources/05-cisa-fbi-cnmf-ncsc-uk-nsa-aa22-055a-advisory-page/source.txt",
+  "size_bytes": 432,
+  "extract_error": "",
+  "fallback_reader_url": "https://r.jina.ai/http://r.jina.ai/http://https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-055a",
+  "fallback_reader_status": "200 42342",
+  "fallback_reader_file": "docs/source-gathering/raw-sources/05-cisa-fbi-cnmf-ncsc-uk-nsa-aa22-055a-advisory-page/fallback-reader.txt",
+  "fallback_reader_useful": true
+}

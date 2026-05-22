@@ -1,0 +1,18 @@
+HTTP/2 200 
+x-frame-options: SAMEORIGIN
+last-modified: Tue, 28 May 2024 07:07:25 GMT
+x-frame-options: SAMEORIGIN
+x-sky-isauth: 0
+content-encoding: gzip
+x-vhost: publish
+x-xss-protection: 1; mode=block
+content-type: application/pdf
+x-content-type-options: nosniff
+accept-ranges: bytes
+strict-transport-security: max-age=31557600
+x-served-by: cache-ams2100094-AMS
+x-timer: S1779430921.085170,VS0,VS0,VE96
+date: Fri, 22 May 2026 06:34:55 GMT
+content-length: 410236
+vary: Accept-Encoding
+

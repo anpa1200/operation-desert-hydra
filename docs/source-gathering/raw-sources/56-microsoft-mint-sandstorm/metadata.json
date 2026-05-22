@@ -1,0 +1,15 @@
+{
+  "number": 56,
+  "title": "Microsoft — Mint Sandstorm",
+  "url": "https://www.microsoft.com/en-us/security/security-insider/mint-sandstorm",
+  "curl_status": "200 https://www.microsoft.com/en-us/security/security-insider/threat-landscape/mint-sandstorm",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n\n100 20127  100 20127    0     0  45139      0 --:--:-- --:--:-- --:--:-- 45139",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/56-microsoft-mint-sandstorm/source.html",
+  "text_file": "docs/source-gathering/raw-sources/56-microsoft-mint-sandstorm/source.txt",
+  "size_bytes": 130357,
+  "extract_error": ""
+}

@@ -1,0 +1,1341 @@
+[ ![Logo](/wp-content/uploads/2021/07/PANW_Parent.png)
+](https://www.paloaltonetworks.com/)
+
+[ ![Unit42 Logo](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/unit42-logo-white.svg)
+](https://unit42.paloaltonetworks.com/)
+
+__
+
+Menu
+
+  * [Tools](https://unit42.paloaltonetworks.com/tools/)
+  * [ATOMs](https://unit42.paloaltonetworks.com/atoms/)
+  * [Security Consulting](https://www.paloaltonetworks.com/unit42)
+  * [About Us](https://unit42.paloaltonetworks.com/about-unit-42/)
+  * [**Under Attack?**](https://start.paloaltonetworks.com/contact-unit42.html)
+
+  * [Threat Research Center](https://unit42.paloaltonetworks.com "Threat Research")
+  * [Threat Research](https://unit42.paloaltonetworks.com/category/threat-research/ "Threat Research")
+  * [Cybercrime](https://unit42.paloaltonetworks.com/category/cybercrime/ "Cybercrime")
+
+[Cybercrime](https://unit42.paloaltonetworks.com/category/cybercrime/)
+
+# Boggy Serpens Threat Assessment
+
+![Clock Icon](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-clock.svg) 19 min read
+
+Related Products
+
+[![Advanced DNS Security icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/strata_RGB_logo_Icon_Color.png)Advanced DNS
+Security](https://unit42.paloaltonetworks.com/product-category/advanced-dns-
+security/ "Advanced DNS Security")[![Advanced URL Filtering
+icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/strata_RGB_logo_Icon_Color.png)Advanced URL
+Filtering](https://unit42.paloaltonetworks.com/product-category/advanced-url-
+filtering/ "Advanced URL Filtering")[![Advanced WildFire
+icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/strata_RGB_logo_Icon_Color.png)Advanced
+WildFire](https://unit42.paloaltonetworks.com/product-category/advanced-
+wildfire/ "Advanced WildFire")[![Cloud-Delivered Security Services
+icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/strata_RGB_logo_Icon_Color.png)Cloud-Delivered
+Security Services](https://unit42.paloaltonetworks.com/product-category/cloud-
+delivered-security-services/ "Cloud-Delivered Security Services")[![Cortex
+icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/cortex_RGB_logo_Icon_Color.png)Cortex](https://unit42.paloaltonetworks.com/product-
+category/cortex/ "Cortex")[![Cortex XDR
+icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/cortex_RGB_logo_Icon_Color.png)Cortex
+XDR](https://unit42.paloaltonetworks.com/product-category/cortex-xdr/ "Cortex
+XDR")[![Cortex XSIAM icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/cortex_RGB_logo_Icon_Color.png)Cortex
+XSIAM](https://unit42.paloaltonetworks.com/product-category/cortex-xsiam/
+"Cortex XSIAM")[![Unit 42 Incident Response
+icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/unit42_RGB_logo_Icon_Color.png)Unit 42 Incident
+Response](https://unit42.paloaltonetworks.com/product-
+category/unit-42-incident-response/ "Unit 42 Incident Response")
+
+  * ![Profile Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-profile-grey.svg)
+
+By:
+
+    * [Unit 42](https://unit42.paloaltonetworks.com/author/unit42/)
+
+  * ![Published Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-calendar-grey.svg)
+
+Published:March 16, 2026
+
+  * ![Tags Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-category.svg)
+
+Categories:
+
+    * [Cybercrime](https://unit42.paloaltonetworks.com/category/cybercrime/)
+    * [Nation-State Cyberattacks](https://unit42.paloaltonetworks.com/category/nation-state-cyberattacks/)
+    * [Threat Actor Groups](https://unit42.paloaltonetworks.com/category/threat-actor-groups/)
+    * [Threat Research](https://unit42.paloaltonetworks.com/category/threat-research/)
+
+  * ![Tags Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-tags-grey.svg)
+
+Tags:
+
+    * [Advanced Persistent Threat](https://unit42.paloaltonetworks.com/tag/advanced-persistent-threat/)
+    * [Boggy Serpens](https://unit42.paloaltonetworks.com/tag/boggy-serpens/)
+    * [C2](https://unit42.paloaltonetworks.com/tag/c2/)
+    * [LampoRAT](https://unit42.paloaltonetworks.com/tag/lamporat/)
+    * [Malware](https://unit42.paloaltonetworks.com/tag/malware/)
+    * [MuddyWater](https://unit42.paloaltonetworks.com/tag/muddywater/)
+    * [Nation-state](https://unit42.paloaltonetworks.com/tag/nation-state/)
+    * [Remote Access Trojan](https://unit42.paloaltonetworks.com/tag/remote-access-trojan/)
+    * [Spear Phishing](https://unit42.paloaltonetworks.com/tag/spear-phishing/)
+
+  * [ ![Download Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-download.svg)](https://unit42.paloaltonetworks.com/boggy-serpens-threat-assessment/?pdf=download&lg=en&_wpnonce=2c5aefd0ad "Click here to download")
+  * [ ![Print Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-print.svg)](https://unit42.paloaltonetworks.com/boggy-serpens-threat-assessment/?pdf=print&lg=en&_wpnonce=2c5aefd0ad "Click here to print")
+
+Share![Down arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/down-arrow.svg)
+
+  * ![Link Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-share-link.svg)
+  * [ ![Link Email](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-sms.svg)](mailto:?subject=Boggy%20Serpens%20Threat%20Assessment&body=Check%20out%20this%20article%20https%3A%2F%2Funit42.paloaltonetworks.com%2Fboggy-serpens-threat-assessment%2F "Share in email")
+  * [ ![Facebook Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-fb-share.svg)](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Funit42.paloaltonetworks.com%2Fboggy-serpens-threat-assessment%2F "Share in Facebook")
+  * [ ![LinkedIn Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-linkedin-share.svg)](https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Funit42.paloaltonetworks.com%2Fboggy-serpens-threat-assessment%2F&title=Boggy%20Serpens%20Threat%20Assessment "Share in LinkedIn")
+  * [ ![Twitter Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-twitter-share.svg)](https://twitter.com/intent/tweet?url=https%3A%2F%2Funit42.paloaltonetworks.com%2Fboggy-serpens-threat-assessment%2F&text=Boggy%20Serpens%20Threat%20Assessment "Share in Twitter")
+  * [ ![Reddit Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-reddit-share.svg)](//www.reddit.com/submit?url=https%3A%2F%2Funit42.paloaltonetworks.com%2Fboggy-serpens-threat-assessment%2F "Share in Reddit")
+  * [ ![Mastodon Icon](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/icon-mastodon-share.svg)](https://mastodon.social/share?text=Boggy%20Serpens%20Threat%20Assessment%20https%3A%2F%2Funit42.paloaltonetworks.com%2Fboggy-serpens-threat-assessment%2F "Share in Mastodon")
+
+## **Executive Summary**
+
+We have been tracking ongoing cyberespionage campaigns by the threat group
+Boggy Serpens, also known as MuddyWater. Attributed to the Iranian Ministry of
+Intelligence and Security (MOIS), the group consistently targets diplomatic
+and critical infrastructure – including energy, maritime and finance – across
+the Middle East and other strategic targets around the world.
+
+We provide a comprehensive threat assessment of Boggy Serpens’ activities over
+the last year. Our analysis reveals a highly adaptable threat actor that has
+refined its operational strategy to focus on trusted relationship compromises
+and multi-wave targeting of key strategic organizations.
+
+While social engineering remains its defining trait, the group is also
+increasing its technological capabilities. Its diverse toolset includes AI-
+enhanced malware implants that incorporate anti-analysis techniques for long-
+term persistence. This combination of social engineering and rapidly developed
+tools creates a potent threat profile.
+
+Boggy Serpens primarily leverages hijacked accounts to wage its attacks,
+targeting high-profile victims like diplomats and IT vendors. The attackers
+exploit this access to bypass reputation-based blocking and utilize a
+secondary social engineering prompt to deliver malware.
+
+The group’s determination is best exemplified by a sustained campaign against
+a national marine and energy company in the Middle East. We outline four
+distinct waves of attack against this single entity from August 2025 through
+February 2026, demonstrating the group’s attempts to infiltrate regional
+maritime infrastructure.
+
+To maintain access, the group has matured its development approach, employing
+AI-generated code, and Rust-based tools like the BlackBeard backdoor to
+rapidly deploy custom implants. Additionally, the group leverages standard
+HTTP status codes, customized user diagram protocol (UDP)-based traffic, and
+the Telegram API for command and control (C2).
+
+Palo Alto Networks customers are better protected against the threats
+discussed in this article through [Cortex XDR](https://docs-
+cortex.paloaltonetworks.com/p/XDR) and [XSIAM](https://docs-
+cortex.paloaltonetworks.com/p/XSIAM), the Cortex [Advanced Email Security
+](https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-
+XDR-4.x-Documentation/Cortex-Advanced-Email-Security-module-overview)module,
+[Advanced WildFire](https://docs.paloaltonetworks.com/wildfire), [Advanced URL
+Filtering](https://www.paloaltonetworks.com/network-security/advanced-url-
+filtering) and [Advanced DNS Security](https://docs.paloaltonetworks.com/dns-
+security).
+
+Cortex’s [AgentiX](https://docs-cortex.paloaltonetworks.com/r/Cortex-
+AgentiX/Cortex-AgentiX-Documentation/Get-Started-with-Cortex-AgentiX) Agentic
+Assistant can assist investigations by providing context and insights, as well
+as recommendations for actions to take.
+
+If you think you might have been compromised or have an urgent matter, contact
+the [Unit 42 Incident Response
+team](https://start.paloaltonetworks.com/contact-unit42.html).
+
+**Related Unit 42 Topics** | **[Boggy Serpens](https://unit42.paloaltonetworks.com/tag/boggy-serpens/), [Advanced Persistent Threat (APT)](https://unit42.paloaltonetworks.com/tag/advanced-persistent-threat/), [Malware](https://unit42.paloaltonetworks.com/category/malware/), [Cybercrime](https://unit42.paloaltonetworks.com/category/cybercrime/), [Cyberespionage](https://unit42.paloaltonetworks.com/tag/cyber-espionage/), [RAT](https://unit42.paloaltonetworks.com/tag/remote-access-trojan/)**  
+---|---  
+  
+## Boggy Serpens Overview
+
+Boggy Serpens is an Iranian nation-state cyberespionage group active since at
+least 2017. Assessed to be a subordinate [element of the
+MOIS](https://www.cisa.gov/news-events/alerts/2022/02/24/iranian-government-
+sponsored-muddywater-actors-conducting-malicious-cyber-operations), the group
+has primarily targeted government, military and critical infrastructure
+sectors across the Middle East, the Caucasus, Central and Western Asia, South
+America and Europe.
+
+Early campaigns by this group were characterized by a high-volume, low-
+sophistication operational style. Boggy Serpens favored speed over stealth,
+frequently launching noisy and widespread [spear phishing
+campaigns](https://www.deepinstinct.com/blog/muddywater-en-able-spear-
+phishing-with-new-ttps). These campaigns heavily relied on living-off-the-land
+([LOTL](https://www.cisa.gov/resources-tools/resources/identifying-and-
+mitigating-living-land-techniques)) tactics, abusing legitimate remote
+monitoring and management ([RMM](https://attack.mitre.org/techniques/T1219/))
+tools like [Atera](https://www.atera.com/),
+[ScreenConnect](https://www.screenconnect.com/) and
+[SimpleHelp](https://simple-help.com/), alongside publicly available utilities
+such as [LaZagne](https://attack.mitre.org/software/S0349/) and
+[CrackMapExec](https://attack.mitre.org/software/S0488/).
+
+Recent campaigns reflect the group’s prioritization of long-term persistence,
+stealthier tactics, techniques and procedures (TTPs) and advanced defense
+evasion techniques. This is evidenced by its adoption of the Rust programming
+language and the integration of AI-assisted techniques into its malware
+development lifecycle.
+
+Boggy Serpens is likely benefiting from a significant influx of resources and
+cross-unit coordination. Early 2025 operations highlighted [operational
+overlaps](https://www.welivesecurity.com/en/eset-research/muddywater-snakes-
+riverbank/) with Evasive Serpens, also known as
+[Lyceum](https://attack.mitre.org/groups/G1001/) (a subgroup of
+[OilRig](https://malpedia.caad.fkie.fraunhofer.de/actor/oilrig)), indicating
+shared resources and intelligence coordination within the Iranian threat
+landscape.
+
+While the group’s focus remains cyberespionage, Boggy Serpens has conducted
+disruptive operations in the past. In February 2023, the group [targeted the
+Technion Israel Institute of
+Technology](https://www.gov.il/en/pages/_muddywater), masquerading as the
+[DarkBit](https://malpedia.caad.fkie.fraunhofer.de/details/win.darkbit)
+ransomware gang. The operation disrupted academic infrastructure under the
+guise of financial crime, masking its state-sponsored origins. This tactic
+introduced an additional dimension of psychological warfare through false
+flags and intimidation.
+
+Over the last year, Boggy Serpens has implemented a more effective “trusted
+relationship compromise” model to bypass perimeter defenses. This technique
+relies on hijacking legitimate internal accounts. Boggy Serpens misuses
+established credibility to deliver malware that evades standard reputation-
+based filtering. Once access is established, the group sustains operations
+using custom-compiled toolkits.
+
+The group’s targeting has expanded beyond government entities to encompass the
+maritime, aviation and financial sectors, reflecting a heightened interest in
+regional logistics and critical economic infrastructure. Recent campaigns have
+struck entities in Israel, Hungary, Turkey, Saudi Arabia, the UAE,
+Turkmenistan, Egypt and South America. These attacks demonstrate an ability to
+pivot between sectors while conducting multiple, consecutive attacks against
+different targets.
+
+Figure 1 shows a chronological overview of the phishing campaigns and specific
+regional entities targeted throughout the last year that we attribute with
+high confidence to Boggy Serpens.
+
+Figure 1. Identified Boggy Serpens campaigns from April 2025 to February 2026.
+
+## Campaigns, Phishing Themes and Documents Analysis
+
+Our analysis of Boggy Serpens phishing activity in 2025 and early 2026 reveals
+a significant shift in Boggy Serpens’ tradecraft, characterized by tailored
+social engineering lures and the deployment of specialized toolkits for mass
+email distribution and account exploitation.
+
+### Persistent Targeting of Critical Infrastructure
+
+A defining example of Boggy Serpens’ recent operations is the targeting of [an
+energy and marine services company in the Middle East](https://www.group-
+ib.com/blog/muddywater-operation-olalampo/). The organization is a high-value
+industrial entity with significant ties to the local sovereign establishment.
+
+Over a six-month period, we observed four distinct attack waves targeting this
+Middle East-based entity, each using lures customized to different internal
+departments. This persistence suggests a specific mandate to infiltrate
+regional maritime and engineering infrastructure.
+
+#### Wave 1: Engineering Theme – Aug. 16, 2025
+
+The initial campaign targeted project engineers using industry-specific
+terminology for subsea pipelines. The lure document was blurred in order to
+deceive targets into clicking “Enable Content,” thereby triggering the
+execution of the embedded macro. Figure 2 shows the document.
+
+Figure 2. Lure document containing engineering terms to mimic a status update.
+
+#### Wave 2: Financial Deception – Jan. 30, 2026
+
+Shifting its focus to the finance and supply chain departments, in a
+subsequent attack the group deployed an Excel file that mimicked the target’s
+internal financial records. This lure was designed as a spreadsheet containing
+payment and cash flow projections.
+
+As Figure 3 shows, the infected document contains specific references to
+“Engineering, Construction & Marine Services” and local currency (AED),
+alongside legitimate-looking transaction codes like “Payroll Payments via
+WPS”.
+
+Figure 3. The infected Excel document, masquerading as transaction and cash
+flow information.
+
+#### Wave 3: Travel Ticket – Jan. 30, 2026
+
+The group launched a parallel spear phishing effort targeting an individual
+associated with the company. The attackers created what appears to be a
+personalized Air Arabia flight reservation in Word format, as Figure 4 shows.
+
+Figure 4. The fake airline ticket sent to a targeted individual.
+
+The high level of detail – specifically the passenger name, flight route and
+“Corporate Fare” category – strongly suggests that this lure was not generated
+at random. The actor likely leveraged intelligence gathered from a prior
+compromise, such as exfiltrated internal emails and travel itineraries.
+
+The delivery of a flight itinerary as a Word document instead of a native PDF
+is a distinct operational anomaly. This creates a situation in which high-
+quality social engineering is undermined by a technical delivery that creates
+a detectable point of friction for trained users and automated sandboxes.
+
+In this campaign, the lure deploys malware named GhostBackDoor, a newly
+documented malware family recently identified by [Group-IB](https://www.group-
+ib.com/blog/muddywater-operation-olalampo/).
+
+#### Wave 4: Operational Logistics and Technical Evolution – Feb. 11, 2026
+
+Most recently, we observed a fourth attack that utilized an Excel file titled
+Consumption Report (Jan 21 2025 – Feb 20 2026).xls, as Figure 5 shows.
+
+Figure 5. The Consumption Report Excel document.
+
+While the social engineering themes and macro delivery structures remain
+consistent with Boggy Serpens TTPs, the group’s focus in this attack was on
+the final infection stage. In this campaign, the blurred document lure
+delivers an entirely new payload family, known as Nuso. See Appendix A for
+technical analysis of this custom HTTP backdoor family.
+
+### A Phishing Email Delivery Platform
+
+To support its large-scale social engineering campaigns, Boggy Serpens uses a
+custom-built, web-based orchestration platform. This tool enables operators to
+automate mass email delivery while maintaining granular control over sender
+identities and target lists.
+
+On Oct. 3, 2025, we observed the IP 157.20.182[.]75 hosting a unique web-based
+Python server on port 5000. We assess that the threat actor uses this server
+to deliver emails to targets. The platform includes the following input fields
+and controls:
+
+  * **Upload User Lists:** Ability to upload files with target email addresses
+  * **Sender Email:** Option to customize Sender Email
+  * **Email Subject:** Field to customize Email Subject
+  * **Email Body**
+  * **SMTP Server:** Field to set the IP address of the SMTP Server
+  * **SMTP Port:** Field to set the SMTP Port
+  * **Upload Attachment:** Option to add an attachment to the email
+  * **Preview Email**
+  * **Run**
+
+Figure 6 shows the platform interface.
+
+Figure 6. A mass email delivery platform that was seen on the attacker's
+infrastructure.
+
+### Exploiting Trusted Relationships for Payload Delivery
+
+Throughout the last year, Boggy Serpens systematically hijacked official
+government and corporate accounts to bypass standard email filtering – a
+technique they utilized in over 15 attacks around the world.
+
+In August 2025, Boggy Serpens leveraged a [compromised
+mailbox](https://dreamgroup.com/blog-cti/) of the Omani Ministry of Foreign
+Affairs to distribute documents to other foreign ministries in different
+countries. These documents were disguised as official diplomatic
+communications.
+
+Following regional conflicts in June 2025, the group sent a “Sustainable
+Peace” seminar invitation as a lure to solicit engagement from targeted
+recipients, as Figure 7 shows.
+
+Figure 7. An email sent from a compromised email account to foreign embassies,
+government ministries and international organizations.
+
+The suspicious content and thematic anomalies in the lure triggered Cortex XDR
+to flag this threat as high-risk, and prevent its execution before any user
+interaction could take place. The infection and prevention are shown in Figure
+8.
+
+Figure 8. The infection chain originating in a phishing email, as seen,
+detected and prevented by Cortex XDR.
+
+On Jan. 6, 2026, we observed a highly targeted attack against a major
+telecommunications provider in Turkmenistan. As shown in Figure 9, the threat
+actor used a compromised internal account info@<company_name>.tm to distribute
+a Cybersecurity.doc file.
+
+Figure 9. Internal phishing email sent from the compromised account.
+
+This tactic mirrors the campaign that targeted Israeli organizations on Nov.
+17, 2025, as [reported by the Israeli National Cyber
+Directorate](https://www.gov.il/BlobFolder/reports/alert_1947/he/ALERT-CERT-
+IL-W-1947.pdf) (INCD), where the group hijacked internal accounts to
+distribute Webinar and HR lures.
+
+In both instances, the emails received a negative [spam confidence
+level](https://learn.microsoft.com/en-us/defender-office-365/anti-spam-spam-
+confidence-level-scl-about) (SCL -1), because they originated from
+authenticated, internal accounts. This negative value resulted in the emails
+bypassing spam filters.
+
+## Macros Analysis
+
+Boggy Serpens utilizes a two-tiered social engineering strategy designed to
+bypass both automated filters and human intuition. First, the attackers hijack
+internal accounts. This deceives targeted victims into believing that an
+attachment was sent from a credible source. When a victim opens the file, a
+second layer of deception is triggered.
+
+To coerce targets into enabling the malicious code, many of the documents are
+presented as blurred content when opened. The lure displays a message claiming
+that the content was created in an older version of Microsoft Word or Excel.
+Once the user clicks “Enable Content,” the VBA macro’s initial routine is to
+delete this overlay and reveal the clear, legible document underneath. This
+immediate visual feedback reinforces the apparent legitimacy of the lure,
+effectively masking the simultaneous execution of the dropper payload in the
+background.
+
+Forensic analysis of last year’s campaign artifacts reveals that Boggy Serpens
+relies on a persistent VBA builder. The group split its operations into
+separate tracks to handle different types of targets:
+
+  * Phoenix Lineage, delivering fully-fledged backdoors
+  * UDPGangster Operations, delivering a more lightweight, less advanced backdoor
+
+Figure 10 shows the technical overlap of these tracks. The similarities
+include an identical shared decryption key and the novaservice.exe file path,
+linking these parallel operations to a single development team.
+
+Figure 10. Correlation and shared artifacts among campaigns.
+
+A detailed technical analysis of the VBA builders is available in Appendix B.
+
+## Boggy Serpens Toolset Overview
+
+In recent campaigns, Boggy Serpens used several tools designed for persistence
+and evasion. This diverse toolkit allows the group to maintain resilient
+infrastructure capable of adapting to various defensive environments.
+
+An analysis of the Rust-based backdoor known as “BlackBeard” and related
+infrastructure can be found in Appendix C.
+
+### The UDPGangster Backdoor
+
+The UDPGangster backdoor is designed to bypass traditional network defenses,
+utilizing a UDP-based communication protocol to execute commands, exfiltrate
+data and deploy secondary payloads.
+
+Building on recent findings by [FortiGuard
+Labs](https://www.fortinet.com/blog/threat-research/udpgangster-campaigns-
+target-multiple-countries), our analysis confirms that this malware is
+primarily delivered via Microsoft Office documents embedded with VBA macros.
+Upon execution, the malware employs multiple anti-analysis techniques to
+detect research environments, ensuring stealthy persistence on infected
+networks.
+
+#### Mapping Multiple UDPGangster Variants
+
+Analysis of campaign-specific document lures revealed multiple UDPGangster
+variants. Each sample was delivered via a highly tailored social engineering
+document whose theme, language, and content were specifically aligned with the
+intended target’s sector and geography.
+
+By tracing the execution from the initial lure to the final payload, we mapped
+usernames to their respective targets based on the embedded PDBs paths, as
+shown in Table 1.
+
+**Country** | **Sector** | **PDB Path**  
+---|---|---  
+**Israel** | **Aviation** | C:\Users\gangster\source\repos\udp_3.0 - Copy - Copy\x64\release_86\udp_3.0.pdb  
+**Azerbaijan** | **Finance** | C:\Users\piper\source\repos\udp_3.0 - Copy\x64\release_86\udp_3.0.pdb  
+**Israel** | **Telecom** | C:\Users\surge\source\repos\udp_3.0 - Copy\x64\release_86\udp_3.0.pdb  
+  
+Table 1: Different users in the PDB paths and their respective targets.
+
+#### Observed Live Activity by Boggy Serpens
+
+During our analysis of UDPGangster, we observed live threat actor interaction
+with a controlled test environment. Approximately 12 hours after the initial
+C2 heartbeat connections were established, the threat actor began issuing
+commands to the simulated victim.
+
+This interaction provided a unique window into the actor’s operational
+procedures, confirming a distinct shift from automated infection to manual,
+human-led triage.
+
+  1. **~07:30 CST (17:00 Iranian standard time):** The actor sent a packet prefixed with byte 0x0A. This instruction triggered the creation of a named pipe on the target host to facilitate subsequent command shell execution. This timestamp corresponds to 17:00 in Tehran, placing the activity directly at the end of the standard Iranian business day.
+  2. **Reconnaissance:** Once the pipe was established, the actor issued a succession of reconnaissance commands via the UDP C2 channel: 
+     * nslookup ad
+     * ipconfig /all
+     * dir C:\users
+     * dir C:\users\\[REDACTED]\Desktop
+     * Quser
+
+The command dir C:\users\%username%\Desktop specifically targeted a user
+folder identified in the output of the previous dir command. This step
+confirms that a human operator was manually triaging the host in real-time,
+rather than relying on an automated script.
+
+##### Anomalous Behavior
+
+We also observed the actor sending a packet beginning with byte 0x0B –
+distinct from the functional 0x0A command. Static analysis of the malware
+indicates no functionality associated with 0x0B. This discrepancy suggests
+either a manual mistake by the threat actor during command entry, or the
+existence of separate malware versions with differing command sets.
+
+### LampoRAT
+
+Our analysis uncovered another new tool used by Boggy Serpens – a remote
+access trojan
+([RAT](https://www.virustotal.com/gui/file/81a6e6416eb7ab6ce6367c6102c031e2ae2730c3c50ab9ce0b8668fec3487848/))
+written in Rust named LampoRAT (also known as Olalampo). This binary was used
+in the recent targeted campaign against a Middle East-based marine and energy
+company. The sample masquerades as an executable for legitimate security
+software – avp.exe (Kaspersky Anti-Virus process) – and embeds the string
+Kaspersky in the file’s metadata.
+
+The malware leverages the Telegram Bot API for command and control, a
+technique that allows malicious traffic to blend in with legitimate encrypted
+HTTPS communications.
+
+Functionally, the RAT is a streamlined shell executor. Upon infection, it
+connects to the hardcoded bot token
+(8398566164:AAEJbk6EOirZ_ybm4PJ-q8mOpr1RkZx1H7Q) and awaits instructions.
+
+When a command is received, the malware passes it to a dispatcher logic that
+supports system execution and basic internal commands like /cd for navigation.
+The malware spawns a shell using a specific argument string: cmd.exe /e:ON
+/v:OFF /d /c <payload>. The dispatcher then captures the output and transmits
+the results back to the attacker’s Telegram chat.
+
+An overview of the malware’s capabilities was recently published by [Group-
+IB](https://www.group-ib.com/blog/muddywater-operation-olalampo/).
+
+#### Bot Profile and Configuration
+
+Querying the /getMe Telegram API for the hardcoded token reveals the bot’s
+public profile configuration, as seen in Figure 11.
+
+Figure 11. Bot configuration with developer-assigned stager_51_bot identifier.
+
+The metadata provides further insight into the attacker’s naming conventions
+and operational structure:
+
+  * Display Name: Olalampo
+  * Username: stager_51_bot
+
+The specific choice of the username stager_51_bot indicates the malware’s
+intended function. In offensive operations, a stager is typically a
+lightweight payload designed to establish a foothold and download further
+modules. The “51” numbering suggests this may be part of a larger series of
+bots generated for distinct campaigns or targets, reinforcing the hypothesis
+of a segmented, high-volume infrastructure.
+
+#### Indicators of AI-Assisted Development
+
+A distinct stylistic artifact within the binary’s strings strongly suggests
+the threat actor used generative AI to accelerate development. The command
+dispatcher uses emojis for status reporting – specifically, strings such as
+the following:
+
+  * ✅ CD to
+  * ❌ CD error:
+
+This usage is not typical for malware authors, who usually favor standard
+ASCII logging ([+] or ERROR: ), to ensure the output is readable on any system
+and to avoid creating unique signatures. In contrast, code generated by large
+language models (LLMs) frequently includes user-friendly visual indicators by
+default when prompted to create command-line interfaces (CLIs) or Telegram
+bots.
+
+This finding is a strong indication that Boggy Serpens is leveraging
+generative AI to write code and accelerate the creation of new malware
+variants.
+
+## Conclusion
+
+Boggy Serpens’ recent activity exemplifies a maturing threat profile, as the
+group integrates its established methodologies with refined mechanisms for
+operational persistence. By diversifying its development pipeline to include
+modern coding languages like Rust and AI-assisted workflows, the group creates
+parallel tracks that ensure the redundancy needed to sustain a high
+operational tempo. This persistence has enabled a coordinated campaign across
+critical sectors in the Middle East, the Caucasus, Central Asia and more.
+
+The defining characteristic of the threat actor activity remains the
+exploitation of trusted relationships to bypass traditional security
+mechanisms. Merging sophisticated implants with high-confidence social
+engineering, the group demonstrates distinct agility in shifting targets. This
+strategy allowed it to pivot between sectors with ease, signaling a clear
+intent for economic espionage and potential capabilities for regional
+disruption.
+
+As the group continues to prioritize identity-based attacks alongside rapid,
+AI-assisted development cycles, we believe that the attackers are well-
+positioned to expand this targeting to increasingly sensitive upstream
+entities.
+
+Organizations must look beyond sender reputation and automated spam filters
+and focus on detecting underlying behavioral anomalies to counter this
+evolving threat. Neutralizing secondary infection stages requires strict macro
+execution policies, alongside behavioral monitoring of endpoint processes.
+These practices help detect evasive executable payloads and memory-resident
+payloads before they establish persistence.
+
+### Palo Alto Networks Protection and Mitigation
+
+Palo Alto Networks customers are better protected from the threats discussed
+above through the following products:
+
+  * [Cortex XDR](https://www.paloaltonetworks.com/cortex/cortex-xdr?_gl=1*13pmp8e*_ga*NzQyNjM2NzkuMTY2NjY3OTczNw..*_ga_KS2MELEEFC*MTY2OTczNjA2MS4zMS4wLjE2Njk3MzYwNjEuNjAuMC4w) and [XSIAM](https://www.paloaltonetworks.com/resources/datasheets/cortex-xsiam-aag) help to prevent the threats described in this article, by employing the [Malware Prevention Engine](https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-4.x-Documentation/Malware-protection). This approach combines several layers of protection, including [Advanced WildFire](https://docs.paloaltonetworks.com/wildfire), Behavioral Threat Protection and the Local Analysis module, designed to prevent both known and unknown malware from causing harm to endpoints.
+  * [Next-Generation Firewalls](https://docs.paloaltonetworks.com/ngfw) with [Advanced WildFire](https://docs.paloaltonetworks.com/wildfire) identify and block the malicious VBA macros and binary payloads to help prevent initial infection.
+  * [Advanced URL Filtering](https://www.paloaltonetworks.com/network-security/advanced-url-filtering) and [Advanced DNS Security](https://docs.paloaltonetworks.com/dns-security) can help categorize and block access to the malicious and compromised domains used for C2 and payload delivery.
+  * The Cortex [Advanced Email Security](https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-4.x-Documentation/Cortex-Advanced-Email-Security-module-overview) module extends the power of the Cortex platform into cloud-hosted email environments, providing a scalable, AI-driven layer for detection, investigation and response.
+  * Cortex’s [AgentiX](https://docs-cortex.paloaltonetworks.com/r/Cortex-AgentiX/Cortex-AgentiX-Documentation/Get-Started-with-Cortex-AgentiX) Agentic Assistant streamlined our investigation by enabling the team to query the data using natural language, providing deeper context and insights, and suggesting clear recommendations on what should be done next. Figure 12 shows the AgentiX interface when querying for malicious activity in a tenant.
+
+Figure 12. Querying for malicious activity in the tenant, using AgentiX.
+
+If you think you may have been compromised or have an urgent matter, get in
+touch with the [Unit 42 Incident Response
+team](https://start.paloaltonetworks.com/contact-unit42.html) or call:
+
+  * North America: Toll Free: +1 (866) 486-4842 (866.4.UNIT42)
+  * UK: +44.20.3743.3660
+  * Europe and Middle East: +31.20.299.3130
+  * Asia: +65.6983.8730
+  * Japan: +81.50.1790.0200
+  * Australia: +61.2.4062.7950
+  * India: 000 800 050 45107
+  * South Korea: +82.080.467.8774
+
+Palo Alto Networks has shared these findings with our fellow Cyber Threat
+Alliance (CTA) members. CTA members use this intelligence to rapidly deploy
+protections to their customers and to systematically disrupt malicious cyber
+actors. Learn more about the [Cyber Threat
+Alliance](https://www.cyberthreatalliance.org).
+
+## Indicators of Compromise
+
+### Phishing Document IOCs
+
+**Lure Filename** | **First Seen** | **SHA256 Hash**  
+---|---|---  
+Unknown file name | April 17, 2025 | c3afd5ce1ca50a38438bb5026cca27bfbf2d8e786e03f323adceb8ad17517eca  
+sh*t.doc (profanity masked) | July 24, 2025 | 52d8fb9a11920f27b9a3b43f27c275767a57cdffc95af94b7b66433506287314  
+Online Seminar.FM.gov.om.doc | August 19, 2025 | b2c52fde1301a3624a9ceb995f2de4112d57fcbc6a4695799aec15af4fa0a122  
+Online Seminar.MFA.gov.ct.tr (2).doc | August 19, 2025 | 1c16b271c0c4e277eb3d1a7795d4746ce80152f04827a4f3c5798aaf4d51f6a1  
+Transfer receipt #27790.doc | August 11, 2025 | 4db3645f678fb519b9f529dde41f77944754f574f16a9a845c22d3703da5bed0  
+DPR for dredging in FreeSpan_16082025.2.doc | August 16, 2025 | 2c92c7bf2d6574f9240032ec6adee738edddc2ba8d3207eb102eddf4ab963db0  
+AIC_2025.doc | September 16, 2025 | 23f3a98befdff13c802eed32eea754018b8b525ec0dd3afce8459a0287df74ec  
+Middle East and Maritime Economy.doc | October 2025 | 69e038b9f3a228f09059bc1ce92b1c5c49396bb70987a38df0fdb39eed380b22  
+sondouq.doc | October 2025 | 84e665a0dfbff74b4c356bfa282c7c253ae3411a8f4d58bfe121c8411c52552c  
+Webinar.doc (in Webinar.zip) | October/November 2025 | 6f079c1e2655ed391fb8f0b6bfafa126acf905732b5554f38a9d32d0b9ca407d  
+Scheduled_Internet_Outages.doc | November 2025 | 7ea4b307e84c8b32c0220eca13155a4cf66617241f96b8af26ce2db8115e3d53  
+Cybersecurity.doc | January 2026 | f38a56b8dc0e8a581999621eef65ef497f0ac0d35e953bd94335926f00e9464f  
+Transaction Volumes Sheet_Filled.xls | February 2026 | 0ce54a5a6f061b158e3891aadd03773d0bae220b0316e84fc042a741924b3525  
+Sajeev Saliha Beevi.doc | February 2026 | 167d5ab70f55c100e51833fbfea44048095889c162e1330df0631423fc547409  
+Consumption Report (Jan 21 2025 – Feb 20 2026).xls | February 2026 | 4d2958d93d4650fc4a70f70663fe6943e8c11d61b2824512da296e8fd84e5bb9  
+  
+### Domains
+
+These domains serve as C2 infrastructure for various malware families,
+including the new Rust-based BlackBeard and the evolving Phoenix line.
+
+  * bootcamptg[.]org
+  * codefusiontech[.]org
+  * maxisteq[.]org
+  * miniquest[.]org
+  * Netivtech[.]org
+  * nomercys.it[.]com
+  * promoverse[.]org
+  * reminders[.]trahum[.]org
+  * screenai[.]online
+  * stratioai[.]org
+
+### IP Addresses
+
+Port 1269/1259 – UDPGangster communication
+
+  * 157.20.182[.]75
+
+Hardcoded UDPGangster C2
+
+  * 64.7.198[.]12
+
+Phoenix C2
+
+  * 46.101.36[.]39
+
+BlackBeard C2
+
+  * 159.198.68[.]25
+  * 159.198.66[.]153
+
+### SHA256 File Hashes
+
+This list includes the core Phoenix, BlackBeard, UDPGangster, LampoRAT and
+Nuso implants, their specialized loaders, and the initial malicious documents.
+
+**Category** | **SHA256 Hash**  
+---|---  
+BlackBeard Variant | 156b325231742a73ded4104fbde1c55ad3913d2eaf09b5194ef74c81ee3ba393  
+BlackBeard Variant | cc2ec568f978f328b6de112670a1b35ca1f9db377ff32cb9d313a5b2ac3c127b  
+BlackBeard Variant (Reddit.exe) | 7523e53c979692f9eecff6ec760ac3df5b47f172114286e570b6bba3b2133f58  
+BlackBeard Variant (Reddit.exe) | 0be499354dc498248d27f6d186eb3bb75a607ae4a2c0a6734c76f1a1b7b1d316  
+LampoRAT | 81a6e6416eb7ab6ce6367c6102c031e2ae2730c3c50ab9ce0b8668fec3487848  
+Loader/Injector | 47bb271c34210f52e3e08339a0c83688d9e9aa5c7cfc45b3e4bdffd1753f6cb2  
+Nuso Variant | 1b9e6fe4b03285b2e768c57e320d84323ac9167598395918d56a12e568b0009a  
+Nuso Variant | 9c207c51c448f96eaae91241a39c8bb85e2307f2d2a99244763a53176cf4c02f  
+Nuso Variant | c91413ad7c94c0e2694862b9d671d1204873bf65576ba2cb91fbd562a4ccf79b  
+Phoenix v4/Mononoke | 668dd5b6fb06fe30a98dd59dd802258b45394ccd7cd610f0aaab43d801bf1a1e  
+Phoenix v4/Mononoke | 5ec5a2adaa82a983fcc42ed9f720f4e894652bd7bd1f366826a16ac98bb91839  
+Rust Payload (BlackBeard) | a2001892410e9f34ff0d02c8bc9e7c53b0bd10da58461e1e9eab26bdbf410c79  
+Rust Payload (BlackBeard) | 1bcd8d7dc7bed5873bbdd2822e84e19773a33d659b16587ca9dc6db204447a86  
+UDPGangster Payload | fc4a7eed5cb18c52265622ac39a5cef31eec101c898b4016874458d2722ec430  
+GhostBackDoor | 8d2227f2c53d7e22a57e12c45cecdd43dbec08dbc3ab93e74e6df52cdf80548b  
+  
+### PDBs
+
+**Context/Malware** | **PDB Path**  
+---|---  
+BlackBeard and generic Phoenix family variants | C:\Users\win10\Desktop\phonix\phoenix\x64\Release\phoenix.pdb  
+LampoRAT | Char.pdb  
+Nuso variant | C:\Users\nuso\source\repos\http_vip\http_vip\f*ckAnalyzor.pdb  
+Nuso variant | C:\Users\nuso\source\repos\http_last_ver\http_last_ver\f*ckAnalyser.pdb  
+Phoenix Dropper and Phoenix Malware | D:\phonix\phoenixV3\phoenixV3\phoenixV2\x64\Release\phoenix.pdb  
+Phoenix v4 variant | C:\Users\win10\Desktop\phoenixV4\phoenixV3\phoenixV2\x64\Release\phoenix.pdb  
+Phoenix v4/Mononoke backdoor | C:\Users\win10\Desktop\phoenixV4\phoenixV3\phoenixV2\x64\Debug\phoenix.pdb  
+UDPGangster (Target: Azerbaijan) | C:\Users\piper\source\repos\udp_3.0 - Copy\x64\release_86\udp_3.0.pdb  
+UDPGangster (Target: Israel) | C:\Users\gangster\source\repos\udp_3.0 - Copy - Copy\x64\release_86\udp_3.0.pdb  
+UDPGangster (Target: Israel) | C:\Users\SURGE\source\repos\udp_3.0 - Copy\x64\release_86\udp_3.0.pdb  
+  
+### Encryption Keys
+
+**AES-256-GCM Encryption – Rust Payload**  
+---  
+File Hash | 1bcd8d7dc7bed5873bbdd2822e84e19773a33d659b16587ca9dc6db204447a86  
+IV | ft3mqb65h4hc  
+Key | kqdkc83pe81zmq709c4npejvto9eg20e  
+**XOR – C++ Dropper**  
+---  
+File Hash | 5323a573e3f423b69ef965dadb3c059879d718b1c9052038ef749868cf361891  
+Key | jfdghkjfdgklhjdfhgsfd09g9045jlkdfjlkgedfg5949045dfjgdflgljkdfgdf  
+  
+### Telegram Bot IDs
+
+**Telegram Bot ID**  
+---  
+Value | 8398566164:AAEJbk6EOirZ_ybm4PJ-q8mOpr1RkZx1H7Q  
+  
+## Additional Resources
+
+  * [Threat Brief: March 2026 Escalation of Cyber Risk Related to Iran](https://unit42.paloaltonetworks.com/iranian-cyberattacks-2026/) – Unit 42, Palo Alto Networks
+  * [Iranian Cyber Threat Evolution: From MBR Wipers to Identity Weaponization](https://unit42.paloaltonetworks.com/evolution-of-iran-cyber-threats/) – Unit 42, Palo Alto Networks
+  * [Insights: Increased Risk of Wiper Attacks](https://unit42.paloaltonetworks.com/handala-hack-wiper-attacks/) – Unit 42, Palo Alto Networks
+  * [Iranian Government-Sponsored MuddyWater Actors Conducting Malicious Cyber Operations](https://www.cisa.gov/news-events/alerts/2022/02/24/iranian-government-sponsored-muddywater-actors-conducting-malicious-cyber-operations) – CISA
+  * [Identifying and Mitigating Living Off the Land Techniques](https://www.cisa.gov/resources-tools/resources/identifying-and-mitigating-living-land-techniques) – CISA
+  * [MuddyWater eN-Able Spear-Phishing with New TTPs](https://www.deepinstinct.com/blog/muddywater-en-able-spear-phishing-with-new-ttps) – Deep Instinct
+  * [CTI Analysis: Malicious Email Campaign](https://dreamgroup.com/blog-cti/) – Dream
+  * [MuddyWater: Snakes by the Riverbank](https://www.welivesecurity.com/en/eset-research/muddywater-snakes-riverbank/) – ESET Research
+  * [UDPGangster Campaigns Target Multiple Countries](https://www.fortinet.com/blog/threat-research/udpgangster-campaigns-target-multiple-countries) – Fortinet
+  * [Iran-Based Psychological Operation Sets Saudi Aramco in its Crosshairs](https://www.fdd.org/analysis/2025/06/26/iran-based-psychological-operation-sets-saudi-aramco-in-its-crosshairs/) – Foundation for Defense of Democracies (FDD)
+  * [Mapping the Infrastructure and Malware Ecosystem of MuddyWater](https://www.group-ib.com/blog/muddywater-infrastructure-malware/) – Group IB
+  * [Operation Olalampo: Inside MuddyWater’s Latest Campaign](https://www.group-ib.com/blog/muddywater-operation-olalampo/) – Group IB
+  * [Unmasking MuddyWater’s New Malware Toolkit Driving International Espionage](https://www.group-ib.com/blog/muddywater-espionage/) – Group IB
+  * [Iranian Government-Sponsored Threat Actor MuddyWater Conducts Cyber Attack Against Israel](https://www.gov.il/en/pages/_muddywater) – Israel Government
+  * [Overview of Recent Phishing Campaigns in Israel - MuddyWater](https://www.gov.il/BlobFolder/reports/alert_1947/he/ALERT-CERT-IL-W-1947.pdf) – Israel National Cyber Directorate (INCD)
+
+## Appendix A: The Nuso Development Track
+
+Nuso is a custom HTTP backdoor family identified as the final payload in Wave
+4 of the campaign against a Middle East-based energy company. Relying on
+Dynamic API Resolution rather than standard Import Address Tables (IAT), the
+malware serves as a highly evasive reconnaissance and command execution tool.
+
+  * **Command Execution:** Instead of traditional command strings, Nuso uses HTTP status codes as triggers. For example, 201/204 initiates a remote shell, 210/222 updates the C2 polling interval, and 350/404 signals termination.
+  * **C2 Architecture:** Nuso beacons over HTTP/S, exfiltrating system information via bit-rotated custom headers like X-Computer-Name and X-Username. Figure 13 shows an example request, including the custom headers.
+
+Figure 13. Simulation of the first request sent by the malware to the C2
+server.
+
+The malware’s full capabilities are analyzed by [Group-IB](https://www.group-
+ib.com/blog/muddywater-operation-olalampo/) under the name HTTP_VIP.
+
+#### Cross-Variant Attribution via PDB Metadata
+
+We analyzed three distinct variants of the Nuso backdoor. The PDB paths in the
+compiled binaries of the second and third variants show that they are linked:
+
+  * [Variant 2](https://www.virustotal.com/gui/file/9c207c51c448f96eaae91241a39c8bb85e2307f2d2a99244763a53176cf4c02f): C:\Users\**nuso** \source\repos\http_vip\http_vip\f*ckAnalyzor.pdb (profanity masked)
+  * [Variant 3](https://www.virustotal.com/gui/file/c91413ad7c94c0e2694862b9d671d1204873bf65576ba2cb91fbd562a4ccf79b): C:\Users\**nuso** \source\repos\http_last_ver\http_last_ver\f*ckAnalyser.pdb
+
+The presence of the nuso user profile in these paths identifies the
+developer’s environment. Furthermore, the transition from the misspelled
+Analyzor in the VIP build to the corrected Analyser in the Last Ver build
+suggests that a single author has been maintaining and refining the codebase
+over time.
+
+## Appendix B: Deconstructing the Phoenix and UDPGangster VBA Builders
+
+Our analysis revealed two parallel development lines of VBA Builders, each
+employing a completely different payload. In this section, we analyze the VBA
+code and discuss the connection between the two lines.
+
+### The Phoenix Lineage
+
+The Phoenix track represents the group’s primary development line, which
+delivers the [Phoenix](https://www.group-ib.com/blog/muddywater-espionage/)
+and [BugSleep](https://www.group-ib.com/blog/muddywater-infrastructure-
+malware/) malware.
+
+Analysis of the Phoenix macros development track reveals increasing technical
+maturity. Over the past year, we have observed more than 10 variants, with
+each subsequent iteration incorporating more complex analysis evasion
+techniques, several of which we highlight here.
+
+#### Variant One
+
+The group’s initial campaigns demonstrated the use of core obfuscation
+techniques. The early-stage macros that continue to characterize the group’s
+operations include:
+
+  * **Property-based payload encapsulation:** The payload is not present in the macro code itself. Instead, it is concealed as a hexadecimal string within the properties of a generic user interface element UserForm1.TextBox1. The script retrieves and decodes this hidden string using a custom function named HH.
+  * **Drop-rename execution:** The script writes the decoded payload to the C:\Users\public path with a benign .log extension to bypass initial file-write detection. Immediately after creation, the script renames the file extension to .exe and executes the payload using the ShellExecuteA API, completing the infection chain.
+
+#### Variant Two: Novaservice
+
+This variant introduced a custom hex-shift rotation cipher to decrypt the
+payload and implements the same drop-rename workflow:
+
+  * **Drop:** Writes the malware as a benign text file: novaservice.txt
+  * **Rename:** Renames the file extension to .exe
+  * **Execute:** Launches the file using the ShellExecuteEx API
+
+This rotation pattern is shown in Figure 14.
+
+Figure 14. A code snippet showing the rotation pattern.
+
+Decoding the hexadecimal string in the above code snippet provides the
+malware’s path:
+
+  * String: 4A41635C7A6C797A63577C6973706A634B767E757376686B7A6375767D687A6C797D706A6C356C7F6C
+  * Decoded path: C:\Public\Downloads\novaservice.exe
+
+Figure 15 shows the stages of the “drop-rename” Novaservice variant.
+
+Figure 15. The macro’s drop-rename flow.
+
+Cortex XDR’s Behavioral Threat Protection is designed to block high-severity
+“drops and executes” actions by identifying abnormal behavior by the VBA
+script. While VBA scripts are capable of launching executables, it is not
+their intended behavior. Figure 16 shows the alert that is triggered.
+
+Figure 16. Cortex XDR detection of the Office document dropping and executing
+malware.
+
+Other features of the macros identified in more recent campaigns include:
+
+  * **Lateral execution:** Instead of standard shell commands, this variant utilizes Windows Management Instrumentation (WMI) (Win32_Process.Create) or Windows API calls (CreateProcessW). This decouples the malware process from Microsoft Office documents, breaking the commonly monitored parent-child process tree.
+  * **Brute-force stalling** : One variant implements a mathematical “time-loop” (function laylay) that forces the CPU to execute over 100 million operations. This stalls execution long enough for many automated analysis tools to time out, as Figure 17 shows.
+
+Figure 17. A code snippet showing the time loop implemented in the macros.
+
+### The UDPGangster Operations
+
+The UDPGangster backdoor operates in parallel to the Phoenix lineage, and was
+previously analyzed by [Fortinet](https://www.fortinet.com/blog/threat-
+research/udpgangster-campaigns-target-multiple-countries).
+
+Comparative analysis of the dropper code reveals that UDPGangster and
+Novaservice share identical decryption routines and similar file paths. This
+overlap confirms that both malware families originate from a shared
+development pipeline.
+
+Both VBA builders rely on the DSDSDSDS decryption function, stash their
+payloads in the same UserForm1.TextBox1 location and utilize an identical hex
+string starting with 4A4163. The hex decodes to one of the following locations
+for the drop path:
+
+  * C:\Users\Public\Documents\novaservice.exe
+  * C:\Users\Public\Documents\novaservice.txt
+
+Figure 18 shows these functions.
+
+Figure 18. Code snippet showing reuse of the same hex and rotation mechanism
+to yield the same path.
+
+## Appendix C: BlackBeard, a Backdoor Written in Rust
+
+Recently tracked by the [Israeli National Cyber
+Directorate](https://www.gov.il/BlobFolder/reports/alert_1947/he/ALERT-CERT-
+IL-W-1947.pdf) (INCD) as BlackBeard, this Rust-based backdoor marks a
+strategic shift toward memory-safe languages to complicate reverse engineering
+efforts. Despite the new language, its intermediate C++ loader contains PDB
+paths referencing phoenix, strongly suggesting it was developed by the same
+Boggy Serpens cell.
+
+#### C++ Dropper and Injector Analysis
+
+The intermediate C++ stager is built for stealth. It employs dynamic API
+resolution, string obfuscation (addition ciphers), and Fibonacci-based CPU
+delays to defeat sandboxes. The stager decrypts the final Rust payload using a
+hardcoded XOR key and executes it in memory using [process
+hollowing](https://attack.mitre.org/techniques/T1055/012/) (RunPE).
+
+The [deployed
+payload](https://www.virustotal.com/gui/file/a2001892410e9f34ff0d02c8bc9e7c53b0bd10da58461e1e9eab26bdbf410c79)
+is the BlackBeard malware. Figure 19 illustrates this XOR decryption routine.
+
+Figure 19. XOR decryption used by the malware.
+
+Figure 20 illustrates how Cortex XDR’s Behavioral Threat Protection caught a
+suspicious PE injection to a remote process. This is a critical detection for
+any security team, because process injection is a well-known method for
+evading EDR tools and escalating privileges by executing malicious code within
+the memory space of a trusted, legitimate process.
+
+Figure 20. Process Injection detection of BlackBeard by Cortex XDR.
+
+#### The Final BlackBeard Payload
+
+The self-signed Rust
+[binary](https://www.virustotal.com/gui/file/1bcd8d7dc7bed5873bbdd2822e84e19773a33d659b16587ca9dc6db204447a86)
+initiates its execution by scanning the %PROGRAMDATA% directory for over 15
+distinct security products. The BlackBeard payload operates through several
+modules:
+
+  * **C2 Communication**
+    * The malware communicates with stratioai[.]org using the reqwest Rust crate.
+    * System data (such as antivirus vendors and username) is encrypted with AES-256-GCM, with a hardcoded key and initialization vector, and exfiltrated in the HTTP Expires header.
+  * **HTTP Status Commands**
+    * Like Nuso, the Rust binary relies on HTTP response codes.
+    * Codes 201 and 202 instruct the malware to drop decrypted content received from the C2 server to the C:\ProgramData\WebDeepPlayer.scr path.
+    * Code 418 triggers an exit.
+  * **Persistence**
+    * The group ensures malware persistence by creating a custom file association.
+    * The payload registers the nonexistent .wdlp extension in the HKCU\Software\Classes\\.wdlp registry to execute WebDeepPlayer.scr. This ensures that when a file with the .wdlp extension is opened, the WebDeepPlayer.scr program is executed.
+    * The malware drops a file named Oregon.wdlp into the startup folder – effectively triggering the infection chain every time the computer is restarted.
+
+Figure 21 shows the registry key that ensures malware execution.
+
+Figure 21. The registry key that is created to enforce the execution logic.
+
+_Updated March 23, 2026, at 3:26 p.m. PT, to add more additional resources_
+
+_Updated March 27, 2026, at 6:30 a.m. PT, to make clarifying copyedits_
+
+Back to top
+
+### Tags
+
+  * [Advanced Persistent Threat](https://unit42.paloaltonetworks.com/tag/advanced-persistent-threat/ "Advanced Persistent Threat")
+  * [Boggy Serpens](https://unit42.paloaltonetworks.com/tag/boggy-serpens/ "Boggy Serpens")
+  * [C2](https://unit42.paloaltonetworks.com/tag/c2/ "C2")
+  * [LampoRAT](https://unit42.paloaltonetworks.com/tag/lamporat/ "LampoRAT")
+  * [Malware](https://unit42.paloaltonetworks.com/tag/malware/ "malware")
+  * [MuddyWater](https://unit42.paloaltonetworks.com/tag/muddywater/ "MuddyWater")
+  * [Nation-state](https://unit42.paloaltonetworks.com/tag/nation-state/ "Nation-state")
+  * [Remote Access Trojan](https://unit42.paloaltonetworks.com/tag/remote-access-trojan/ "Remote Access Trojan")
+  * [Spear Phishing](https://unit42.paloaltonetworks.com/tag/spear-phishing/ "Spear Phishing")
+
+[ Threat Research Center ](https://unit42.paloaltonetworks.com "Threat
+Research") [ Next: Iranian Cyber Threat Evolution: From MBR Wipers to Identity
+Weaponization ](https://unit42.paloaltonetworks.com/evolution-of-iran-cyber-
+threats/ "Iranian Cyber Threat Evolution: From MBR Wipers to Identity
+Weaponization")
+
+### Table of Contents
+
+  * 
+
+### Related Articles
+
+  * [ Tracking TamperedChef Clusters via Certificate and Code Reuse ](https://unit42.paloaltonetworks.com/tracking-tampered-chef-clusters/ "article - table of contents")
+  * [ That AI Extension Helping You Write Emails? It’s Reading Them First ](https://unit42.paloaltonetworks.com/high-risk-gen-ai-browser-extensions/ "article - table of contents")
+  * [ Fracturing Software Security With Frontier AI Models ](https://unit42.paloaltonetworks.com/ai-software-security-risks/ "article - table of contents")
+
+## Related Resources
+
+![A pictorial representation of CL-STA-1087 state-sponsored espionage. An
+illustration of a glowing red warning icon centered on a detailed blue circuit
+board background, representing the detection of this persistent campaign
+targeting Southeast Asian military
+organizations.](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2026/03/09_Nation-State-cyberattacks_1920x900-1-786x368.jpg)
+
+[![ category icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/icon-threat-research.svg)Threat
+Research](https://unit42.paloaltonetworks.com/category/threat-research/) March
+12, 2026 #### [Suspected China-Based Espionage Operation Against Military
+Targets in Southeast Asia ](https://unit42.paloaltonetworks.com/espionage-
+campaign-against-military-targets/)
+
+  * [Advanced Persistent Threat](https://unit42.paloaltonetworks.com/tag/advanced-persistent-threat/ "Advanced Persistent Threat")
+  * [AppleChris](https://unit42.paloaltonetworks.com/tag/applechris/ "AppleChris")
+  * [Backdoor](https://unit42.paloaltonetworks.com/tag/backdoor/ "backdoor")
+
+[ Read now ![Right arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-right-arrow-withtail.svg)
+](https://unit42.paloaltonetworks.com/espionage-campaign-against-military-
+targets/ "Suspected China-Based Espionage Operation Against Military Targets
+in Southeast Asia")
+
+![Pictorial representation of Muddled Libra, aka Scattered Spider. A vibrant
+illustration of the Libra zodiac sign, featuring a stylized balance scale
+overlaid with a prominent Libra symbol. The background is a starry night sky
+with shades of purple and blue, suggesting a cosmic
+theme.](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2026/02/03-1-Muddle-Libra-1920x900-1-786x368.png)
+
+[![ category icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/07/threat-actor-groups.svg)Threat Actor
+Groups](https://unit42.paloaltonetworks.com/category/threat-actor-groups/)
+February 10, 2026 #### [A Peek Into Muddled Libra’s Operational Playbook
+](https://unit42.paloaltonetworks.com/muddled-libra-ops-playbook/)
+
+  * [Muddled Libra](https://unit42.paloaltonetworks.com/tag/muddled-libra/ "Muddled Libra")
+  * [PowerShell](https://unit42.paloaltonetworks.com/tag/powershell/ "PowerShell")
+  * [Scattered Spider](https://unit42.paloaltonetworks.com/tag/scattered-spider/ "Scattered Spider")
+
+[ Read now ![Right arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-right-arrow-withtail.svg)
+](https://unit42.paloaltonetworks.com/muddled-libra-ops-playbook/ "A Peek Into
+Muddled Libra’s Operational Playbook")
+
+![Pictorial representation of the shadow campaigns. Digital graphic showing a
+networked globe with various data points and connectivity lines, symbolizing
+global digital communication and information
+technology.](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2026/02/03_Nation-State-cyberattacks_1920x900-786x368.jpg)
+
+[![ category icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/07/threat-actor-groups.svg)Threat Actor
+Groups](https://unit42.paloaltonetworks.com/category/threat-actor-groups/)
+February 5, 2026 #### [The Shadow Campaigns: Uncovering Global Espionage
+](https://unit42.paloaltonetworks.com/shadow-campaigns-uncovering-global-
+espionage/)
+
+  * [Espionage](https://unit42.paloaltonetworks.com/tag/espionage/ "Espionage")
+  * [Government](https://unit42.paloaltonetworks.com/tag/government/ "Government")
+  * [Phishing](https://unit42.paloaltonetworks.com/tag/phishing/ "phishing")
+
+[ Read now ![Right arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-right-arrow-withtail.svg)
+](https://unit42.paloaltonetworks.com/shadow-campaigns-uncovering-global-
+espionage/ "The Shadow Campaigns: Uncovering Global Espionage")
+
+![Pictorial representation of a group of individuals discussing an idea with a
+whiteboard.](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2026/02/02_Listicle_Overview_1920x900-786x368.jpg)
+
+[![ category icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2025/08/Insights-icon-
+white.svg)Insights](https://unit42.paloaltonetworks.com/category/insights/)
+February 3, 2026 #### [Why Smart People Fall For Phishing Attacks
+](https://unit42.paloaltonetworks.com/psychology-of-phishing/)
+
+  * [AI](https://unit42.paloaltonetworks.com/tag/ai/ "AI")
+  * [Phishing](https://unit42.paloaltonetworks.com/tag/phishing/ "phishing")
+
+[ Read now ![Right arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-right-arrow-withtail.svg)
+](https://unit42.paloaltonetworks.com/psychology-of-phishing/ "Why Smart
+People Fall For Phishing Attacks")
+
+![Pictorial representation of threat groups from Russia. The silhouette of a
+bear and the Ursa constellation inside an orange abstract planet. Abstract,
+stylized cosmic setting with vibrant blue and purple shapes, representing
+space and distant planetary bodies.](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2026/01/Ursa-Russia-B-1920x900-1-786x368.png)
+
+[![ category icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2025/08/Insights-icon-
+white.svg)Insights](https://unit42.paloaltonetworks.com/category/insights/)
+January 29, 2026 #### [Understanding the Russian Cyberthreat to the 2026
+Winter Olympics ](https://unit42.paloaltonetworks.com/russian-
+cyberthreat-2026-winter-olympics/)
+
+  * [AI](https://unit42.paloaltonetworks.com/tag/ai/ "AI")
+  * [IoT](https://unit42.paloaltonetworks.com/tag/iot/ "IoT")
+  * [Russia](https://unit42.paloaltonetworks.com/tag/russia/ "Russia")
+
+[ Read now ![Right arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-right-arrow-withtail.svg)
+](https://unit42.paloaltonetworks.com/russian-cyberthreat-2026-winter-
+olympics/ "Understanding the Russian Cyberthreat to the 2026 Winter Olympics")
+
+![Pictorial representation of 01flip ransomware written in Rust. Digital
+artwork of a pixelated U.S. dollar bill disintegrating into small blocks
+against a blue data matrix
+background.](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2025/12/05_Ransomware_Category_1920x900-786x368.jpg)
+
+[![ category icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/icon-threat-research.svg)Threat
+Research](https://unit42.paloaltonetworks.com/category/threat-research/)
+December 10, 2025 #### [01flip: Multi-Platform Ransomware Written in Rust
+](https://unit42.paloaltonetworks.com/new-ransomware-01flip-written-in-rust/)
+
+  * [Bitcoin](https://unit42.paloaltonetworks.com/tag/bitcoin/ "Bitcoin")
+  * [CL-CRI-103](https://unit42.paloaltonetworks.com/tag/cl-cri-103/ "CL-CRI-103")
+  * [Cryptocurrency](https://unit42.paloaltonetworks.com/tag/cryptocurrency/ "Cryptocurrency")
+
+[ Read now ![Right arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-right-arrow-withtail.svg)
+](https://unit42.paloaltonetworks.com/new-ransomware-01flip-written-in-rust/
+"01flip: Multi-Platform Ransomware Written in Rust")
+
+![Pictorial representation of malicious LLMs. Close-up view of a digital wall
+displaying various glowing icons, representing a high-tech network
+interface.](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2025/11/AdobeStock_1270203474-786x440.jpeg)
+
+[![ category icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/icon-threat-research.svg)Threat
+Research](https://unit42.paloaltonetworks.com/category/threat-research/)
+November 25, 2025 #### [The Dual-Use Dilemma of AI: Malicious LLMs
+](https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/)
+
+  * [Credential Harvesting](https://unit42.paloaltonetworks.com/tag/credential-harvesting/ "Credential Harvesting")
+  * [Data exfiltration](https://unit42.paloaltonetworks.com/tag/data-exfiltration/ "data exfiltration")
+  * [LLM](https://unit42.paloaltonetworks.com/tag/llm/ "LLM")
+
+[ Read now ![Right arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-right-arrow-withtail.svg)
+](https://unit42.paloaltonetworks.com/dilemma-of-ai-malicious-llms/ "The Dual-
+Use Dilemma of AI: Malicious LLMs")
+
+![Pictorial representation of Gh0st RAT malware. A woman analyzes code on a
+computer screen in an office setting, with another individual working in the
+background.](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2025/11/04_Security-Technology_Category_1505x922-718x440.jpg)
+
+[![ category icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/icon-threat-research.svg)Threat
+Research](https://unit42.paloaltonetworks.com/category/threat-research/)
+November 14, 2025 #### [Digital Doppelgangers: Anatomy of Evolving
+Impersonation Campaigns Distributing Gh0st RAT
+](https://unit42.paloaltonetworks.com/impersonation-campaigns-deliver-gh0st-
+rat/)
+
+  * [DLL Sideloading](https://unit42.paloaltonetworks.com/tag/dll-sideloading/ "DLL Sideloading")
+  * [Gh0st Rat](https://unit42.paloaltonetworks.com/tag/gh0st-rat/ "Gh0st Rat")
+  * [PDNS](https://unit42.paloaltonetworks.com/tag/pdns/ "PDNS")
+
+[ Read now ![Right arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-right-arrow-withtail.svg)
+](https://unit42.paloaltonetworks.com/impersonation-campaigns-deliver-gh0st-
+rat/ "Digital Doppelgangers: Anatomy of Evolving Impersonation Campaigns
+Distributing Gh0st RAT")
+
+![Pictorial representation of a gift card fraud campaign. A glowing skull and
+crossbones on a circuit board.](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2025/10/07_Cybercrime_Category_1920x900-786x368.jpg)
+
+[![ category icon](https://unit42.paloaltonetworks.com/wp-
+content/uploads/2024/06/icon-threat-research.svg)Threat
+Research](https://unit42.paloaltonetworks.com/category/threat-research/)
+October 22, 2025 #### [Jingle Thief: Inside a Cloud-Based Gift Card Fraud
+Campaign ](https://unit42.paloaltonetworks.com/cloud-based-gift-card-fraud-
+campaign/)
+
+  * [CL‑CRI‑1032](https://unit42.paloaltonetworks.com/tag/cl-cri-1032/ "CL‑CRI‑1032")
+  * [Microsoft](https://unit42.paloaltonetworks.com/tag/microsoft/ "Microsoft")
+  * [Phishing](https://unit42.paloaltonetworks.com/tag/phishing/ "phishing")
+
+[ Read now ![Right arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-right-arrow-withtail.svg)
+](https://unit42.paloaltonetworks.com/cloud-based-gift-card-fraud-campaign/
+"Jingle Thief: Inside a Cloud-Based Gift Card Fraud Campaign")
+
+  * ![Slider arrow](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/slider-arrow-left.svg)
+  * ![Slider arrow](https://unit42.paloaltonetworks.com/wp-content/themes/unit42-v6/dist/images/icons/slider-arrow-left.svg)
+
+![Close button](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/close-modal.svg) ![Enlarged
+Image]()
+
+Get updates from Unit 42
+
+## Peace of mind comes from staying ahead of threats. Subscribe today.
+
+Your Email
+
+Subscribe for email updates to all Unit 42 threat research.  
+By submitting this form, you agree to our [Terms of
+Use](https://www.paloaltonetworks.com/legal-notices/terms-of-use "Terms of
+Use") and acknowledge our [Privacy
+Statement.](https://www.paloaltonetworks.com/legal-notices/privacy "Privacy
+Statement")
+
+This site is protected by reCAPTCHA and the Google [Privacy
+Policy](https://policies.google.com/privacy) and [Terms of
+Service](https://policies.google.com/terms) apply.
+
+Invalid captcha!
+
+Subscribe  ![loader](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-loader.svg)
+
+Get the latest news, invites to events, and threat alerts
+
+Enter your email now to subscribe!
+
+Sign up __
+
+By submitting this form, I understand my personal data will be processed in
+accordance with [Palo Alto Networks Privacy
+Statement](https://www.paloaltonetworks.com/legal-notices/privacy) and [Terms
+of Use.](https://www.paloaltonetworks.com/legal-notices/terms-of-use)
+
+Sign up __
+
+Products and Services
+
+  * [ AI-Powered Network Security Platform ](https://www.paloaltonetworks.com/network-security)
+  * [ Secure AI by Design ](https://www.paloaltonetworks.com/ai-security)
+  * [ Prisma AIRS ](https://www.paloaltonetworks.com/prisma/prisma-ai-runtime-security)
+  * [ AI Access Security ](https://www.paloaltonetworks.com/sase/ai-access-security)
+  * [ Cloud Delivered Security Services ](https://www.paloaltonetworks.com/network-security/security-subscriptions)
+  * [ Advanced Threat Prevention ](https://www.paloaltonetworks.com/network-security/advanced-threat-prevention)
+  * [ Advanced URL Filtering ](https://www.paloaltonetworks.com/network-security/advanced-url-filtering)
+  * [ Advanced WildFire ](https://www.paloaltonetworks.com/network-security/advanced-wildfire)
+  * [ Advanced DNS Security ](https://www.paloaltonetworks.com/network-security/advanced-dns-security)
+  * [ Enterprise Data Loss Prevention ](https://www.paloaltonetworks.com/sase/enterprise-data-loss-prevention)
+  * [ Enterprise IoT Security ](https://www.paloaltonetworks.com/network-security/enterprise-device-security)
+  * [ Medical IoT Security ](https://www.paloaltonetworks.com/network-security/medical-device-security)
+  * [ Industrial OT Security ](https://www.paloaltonetworks.com/network-security/medical-device-security)
+  * [ SaaS Security ](https://www.paloaltonetworks.com/sase/saas-security)
+
+  * [ Next-Generation Firewalls ](https://www.paloaltonetworks.com/network-security/next-generation-firewall)
+  * [ Hardware Firewalls ](https://www.paloaltonetworks.com/network-security/hardware-firewall-innovations)
+  * [ Software Firewalls ](https://www.paloaltonetworks.com/network-security/software-firewalls)
+  * [ Strata Cloud Manager ](https://www.paloaltonetworks.com/network-security/strata-cloud-manager)
+  * [ SD-WAN for NGFW ](https://www.paloaltonetworks.com/network-security/sd-wan-subscription)
+  * [ PAN-OS ](https://www.paloaltonetworks.com/network-security/pan-os)
+  * [ Panorama ](https://www.paloaltonetworks.com/network-security/panorama)
+  * [ Secure Access Service Edge ](https://www.paloaltonetworks.com/sase)
+  * [ Prisma SASE ](https://www.paloaltonetworks.com/sase)
+  * [ Application Acceleration ](https://www.paloaltonetworks.com/sase/app-acceleration)
+  * [ Autonomous Digital Experience Management ](https://www.paloaltonetworks.com/sase/adem)
+  * [ Enterprise DLP ](https://www.paloaltonetworks.com/sase/enterprise-data-loss-prevention)
+  * [ Prisma Access ](https://www.paloaltonetworks.com/sase/access)
+  * [ Prisma Browser ](https://www.paloaltonetworks.com/sase/prisma-browser)
+  * [ Prisma SD-WAN ](https://www.paloaltonetworks.com/sase/sd-wan)
+  * [ Remote Browser Isolation ](https://www.paloaltonetworks.com/sase/remote-browser-isolation)
+  * [ SaaS Security ](https://www.paloaltonetworks.com/sase/saas-security)
+
+  * [ AI-Driven Security Operations Platform ](https://www.paloaltonetworks.com/cortex)
+  * [ Cloud Security ](https://www.paloaltonetworks.com/cortex/cloud)
+  * [ Cortex Cloud ](https://www.paloaltonetworks.com/cortex/cloud)
+  * [ Application Security ](https://www.paloaltonetworks.com/cortex/cloud/application-security)
+  * [ Cloud Posture Security ](https://www.paloaltonetworks.com/cortex/cloud/cloud-posture-security)
+  * [ Cloud Runtime Security ](https://www.paloaltonetworks.com/cortex/cloud/runtime-security)
+  * [ Prisma Cloud ](https://www.paloaltonetworks.com/prisma/cloud)
+  * [ AI-Driven SOC ](https://www.paloaltonetworks.com/cortex)
+  * [ Cortex XSIAM ](https://www.paloaltonetworks.com/cortex/cortex-xsiam)
+  * [ Cortex XDR ](https://www.paloaltonetworks.com/cortex/cortex-xdr)
+  * [ Cortex XSOAR ](https://www.paloaltonetworks.com/cortex/cortex-xsoar)
+  * [ Cortex Xpanse ](https://www.paloaltonetworks.com/cortex/cortex-xpanse)
+  * [ Unit 42 Managed Detection & Response ](https://www.paloaltonetworks.com/cortex/managed-detection-and-response)
+  * [ Managed XSIAM ](https://www.paloaltonetworks.com/cortex/managed-xsiam)
+
+  * [ Next-Generation Identity Security ](https://www.paloaltonetworks.com/idira)
+  * [ Privileged Access Management ](https://www.paloaltonetworks.com/idira/human/privileged-access-management)
+  * [ Identity and Access Management ](https://www.paloaltonetworks.com/idira/human/identity-and-access-management)
+  * [ Endpoint Privilege Manager ](https://www.paloaltonetworks.com/idira/human/endpoint-privilege-manager)
+  * [ Identity Governance ](https://www.paloaltonetworks.com/idira/human/identity-governance)
+  * [ Workforce Password Management ](https://www.paloaltonetworks.com/idira/human/workforce-password-management)
+  * [ Agentic Identities ](https://www.paloaltonetworks.com/idira/agentic)
+  * [ Secrets Management ](https://www.paloaltonetworks.com/idira/machine/secrets-management)
+  * [ Unified Secrets Governance ](https://www.paloaltonetworks.com/idira/machine/unified-secrets-governance)
+  * [ Application Credentials Delivery ](https://www.paloaltonetworks.com/idira/machine/application-credentials-delivery)
+  * [ Vendor Privileged Access ](https://www.paloaltonetworks.com/idira/human/vendor-privileged-access)
+  * [ Threat Intel and Incident Response Services ](https://www.paloaltonetworks.com/unit42)
+  * [ Proactive Assessments ](https://www.paloaltonetworks.com/unit42/assess)
+  * [ Incident Response ](https://www.paloaltonetworks.com/unit42/respond)
+  * [ Transform Your Security Strategy ](https://www.paloaltonetworks.com/unit42/transform)
+  * [ Discover Threat Intelligence ](https://www.paloaltonetworks.com/unit42/threat-intelligence-partners)
+
+Company
+
+  * [ About Us ](https://www.paloaltonetworks.com/about-us)
+  * [ Careers ](https://jobs.paloaltonetworks.com/en/)
+  * [ Contact Us ](https://www.paloaltonetworks.com/company/contact-sales)
+  * [ Corporate Responsibility ](https://www.paloaltonetworks.com/about-us/corporate-responsibility)
+  * [ Customers ](https://www.paloaltonetworks.com/customers)
+  * [ Investor Relations ](https://investors.paloaltonetworks.com/)
+  * [ Location ](https://www.paloaltonetworks.com/about-us/locations)
+  * [ Newsroom ](https://www.paloaltonetworks.com/company/newsroom)
+
+Popular Links
+
+  * [ Blog ](https://www.paloaltonetworks.com/blog/)
+  * [ Communities ](https://www.paloaltonetworks.com/communities)
+  * [ Content Library ](https://www.paloaltonetworks.com/resources)
+  * [ Cyberpedia ](https://www.paloaltonetworks.com/cyberpedia)
+  * [ Event Center ](https://events.paloaltonetworks.com/)
+  * [ Manage Email Preferences ](https://start.paloaltonetworks.com/preference-center)
+  * [ Products A-Z ](https://www.paloaltonetworks.com/products/products-a-z)
+  * [ Product Certifications ](https://www.paloaltonetworks.com/legal-notices/trust-center/compliance)
+  * [ Report a Vulnerability ](https://www.paloaltonetworks.com/security-disclosure)
+  * [ Sitemap ](https://www.paloaltonetworks.com/sitemap)
+  * [ Tech Docs ](https://docs.paloaltonetworks.com/)
+  * [ Unit 42 ](https://unit42.paloaltonetworks.com/)
+  * [ Do Not Sell or Share My Personal Information ](https://panwedd.exterro.net/portal/dsar.htm?target=panwedd)
+
+  * [ Privacy ](https://www.paloaltonetworks.com/legal-notices/privacy)
+  * [ Trust Center ](https://www.paloaltonetworks.com/legal-notices/trust-center)
+  * [ Terms of Use ](https://www.paloaltonetworks.com/legal-notices/terms-of-use)
+  * [ Documents ](https://www.paloaltonetworks.com/legal)
+
+Copyright © 2026 Palo Alto Networks. All Rights Reserved
+
+  * [ ](https://www.youtube.com/user/paloaltonetworks)
+  * [ ](https://www.paloaltonetworks.com/podcasts/threat-vector)
+  * [ ](https://www.facebook.com/PaloAltoNetworks/)
+  * [ ](https://www.linkedin.com/company/palo-alto-networks)
+  * [ ](https://twitter.com/PaloAltoNtwks)
+  * EN __
+
+Select your language
+
+![Play](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/player-play-icon.svg)
+![Pause](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/player-pause-icon1.svg)
+![Minimize](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-minimize.svg) ![Close
+button](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/close-modal.svg) Your browser does
+not support the video tag.
+
+### Default Heading
+
+Read the article ![Right Arrow](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/right-arrow.svg)
+
+Seekbar
+
+![Play](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/player-play-icon.svg)
+![Pause](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/player-pause-icon1.svg)
+
+![Volume](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-volume.svg)
+
+Volume
+
+![Minimize](https://unit42.paloaltonetworks.com/wp-
+content/themes/unit42-v6/dist/images/icons/icon-minimize.svg)
+

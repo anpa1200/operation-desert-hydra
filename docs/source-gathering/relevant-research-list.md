@@ -223,8 +223,8 @@ Simple source list for source-register validation.
 
 These appeared in raw or secondary research but need manual validation before promotion:
 
-1. Brandefense — MuddyWater PDF  
+70. Brandefense — MuddyWater PDF  
    https://brandefense.io/wp-content/uploads/2025/10/brandefense.io-muddywater-iran-linked-espionage-group-expanding-global-reach-muddywater-.pdf
 
-2. KPMG — CTI Report MuddyWater PDF  
+71. KPMG — CTI Report MuddyWater PDF  
    https://assets.kpmg.com/content/dam/kpmgsites/in/pdf/2022/07/KPMG_CTI_Report_muddy.pdf.coredownload.inline.pdf

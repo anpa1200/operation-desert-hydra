@@ -1,0 +1,15 @@
+{
+  "number": 71,
+  "title": "KPMG — CTI Report MuddyWater PDF",
+  "url": "https://assets.kpmg.com/content/dam/kpmgsites/in/pdf/2022/07/KPMG_CTI_Report_muddy.pdf.coredownload.inline.pdf",
+  "curl_status": "200 https://assets.kpmg.com/content/dam/kpmgsites/in/pdf/2022/07/KPMG_CTI_Report_muddy.pdf.coredownload.inline.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  400k  100  400k    0     0  2054k      0 --:--:-- --:--:-- --:--:-- 2065k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/71-kpmg-cti-report-muddywater-pdf/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/71-kpmg-cti-report-muddywater-pdf/source.txt",
+  "size_bytes": 418073,
+  "extract_error": "Syntax Warning: Invalid Font Weight\nSyntax Warning: Invalid Font Weight\nSyntax Warning: Invalid Font Weight\nSyntax Warning: Invalid Font Weight"
+}

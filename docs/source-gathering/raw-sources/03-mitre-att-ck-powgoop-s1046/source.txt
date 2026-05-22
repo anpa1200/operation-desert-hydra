@@ -1,0 +1,174 @@
+[![ATT&CK Home](/theme/images/mitre_attack_logo.png)](/)
+
+  * [ **Matrices** ](/matrices/)
+
+[Enterprise](/matrices/enterprise/) [Mobile](/matrices/mobile/)
+[ICS](/matrices/ics/)
+
+  * [ **Tactics** ](/tactics/)
+
+[Enterprise](/tactics/enterprise/) [Mobile](/tactics/mobile/)
+[ICS](/tactics/ics/)
+
+  * [ **Techniques** ](/techniques/)
+
+[Enterprise](/techniques/enterprise/) [Mobile](/techniques/mobile/)
+[ICS](/techniques/ics/)
+
+  * [ **Defenses** ](/mitigations)
+
+[ **Mitigations** ](/mitigations/)
+
+[Enterprise](/mitigations/enterprise/) [Mobile](/mitigations/mobile/)
+[ICS](/mitigations/ics/)
+
+[Assets](/assets)
+
+[ **Detections** ](/detectionstrategies/)
+
+[Detection Strategies](/detectionstrategies/) [Analytics](/analytics/) [Data
+Components](/datacomponents)
+
+  * [ **CTI** ](/groups)
+
+[Groups](/groups) [Software](/software) [Campaigns](/campaigns)
+
+  * [ **Resources** ](/resources/)
+
+[Get Started](/resources/) [Learn More about ATT&CK;](/resources/learn-more-
+about-attack/) [ATT&CK; Advisory Council](/resources/attack-advisory-council/)
+[ATT&CKcon;](/resources/attackcon/) [ATT&CK; Data & Tools](/resources/attack-
+data-and-tools/) [FAQ](/resources/faq/) [Engage with
+ATT&CK;](/resources/engage-with-attack/contact/) [Version
+History](/resources/versions/) [Updates](/resources/updates/) [Legal &
+Branding](/resources/legal-and-branding/)
+
+  * [**Benefactors**](/resources/engage-with-attack/benefactors/)
+  * [**Contribute**](/resources/engage-with-attack/contribute/)
+  * [ **Blog**   ![External site](/theme/images/external-site.svg) ](https://medium.com/mitre-attack/)
+  * Search 
+
+ATT&CK; v19 has been released! Check out the [blog
+post](https://medium.com/mitre-attack/attack-v19-ff329cb65d66) for more
+information.
+
+  1. [Home](/)
+  2. [Software](/software/)
+  3. PowGoop
+
+#  PowGoop
+
+[PowGoop](/software/S1046) is a loader that consists of a DLL loader and a
+PowerShell-based downloader; it has been used by [MuddyWater](/groups/G0069)
+as their main
+loader.[[1]](https://www.cisa.gov/uscert/ncas/alerts/aa22-055a)[[2]](https://www.cybercom.mil/Media/News/Article/2897570/iranian-
+intel-cyber-suite-of-malware-uses-open-source-tools/)
+
+ID: S1046
+
+ⓘ
+
+Type: MALWARE
+
+ⓘ
+
+Platforms: Windows
+
+Contributors: Ozer Sarilar, @ozersarilar, STM
+
+Version: 1.0
+
+Created: 29 September 2022
+
+Last Modified: 16 April 2025
+
+[Version Permalink](/versions/v19/software/S1046/ "Permalink to this version
+of S1046")
+
+[Live Version](/versions/v19/software/S1046/ "Go to the live version of
+S1046")
+
+**ATT &CK® Navigator Layers**
+
+###### Enterprise Layer
+
+[download](/software/S1046/S1046-enterprise-layer.json) view
+![](/theme/images/external-site-dark.jpeg)
+
+## Techniques Used
+
+Domain | ID | Name | Use  
+---|---|---|---  
+Enterprise  |  [T1071](/techniques/T1071) |  [.001](/techniques/T1071/001) |  [Application Layer Protocol](/techniques/T1071): [Web Protocols](/techniques/T1071/001) |  [PowGoop](/software/S1046) can send HTTP GET requests to malicious servers.[[2]](https://www.cybercom.mil/Media/News/Article/2897570/iranian-intel-cyber-suite-of-malware-uses-open-source-tools/)  
+Enterprise  |  [T1059](/techniques/T1059) |  [.001](/techniques/T1059/001) |  [Command and Scripting Interpreter](/techniques/T1059): [PowerShell](/techniques/T1059/001) |  [PowGoop](/software/S1046) has the ability to use PowerShell scripts to execute commands.[[1]](https://www.cisa.gov/uscert/ncas/alerts/aa22-055a)  
+Enterprise  |  [T1132](/techniques/T1132) |  [.002](/techniques/T1132/002) |  [Data Encoding](/techniques/T1132): [Non-Standard Encoding](/techniques/T1132/002) |  [PowGoop](/software/S1046) can use a modified Base64 encoding mechanism to send data to and from the C2 server.[[2]](https://www.cybercom.mil/Media/News/Article/2897570/iranian-intel-cyber-suite-of-malware-uses-open-source-tools/)  
+Enterprise  |  [T1140](/techniques/T1140) |  [Deobfuscate/Decode Files or Information](/techniques/T1140) |  [PowGoop](/software/S1046) can decrypt PowerShell scripts for execution.[[1]](https://www.cisa.gov/uscert/ncas/alerts/aa22-055a)[[2]](https://www.cybercom.mil/Media/News/Article/2897570/iranian-intel-cyber-suite-of-malware-uses-open-source-tools/)  
+Enterprise  |  [T1573](/techniques/T1573) |  [Encrypted Channel](/techniques/T1573) |  [PowGoop](/software/S1046) can receive encrypted commands from C2.[[1]](https://www.cisa.gov/uscert/ncas/alerts/aa22-055a)  
+Enterprise  |  [T1574](/techniques/T1574) |  [.001](/techniques/T1574/001) |  [Hijack Execution Flow](/techniques/T1574): [DLL](/techniques/T1574/001) |  [PowGoop](/software/S1046) can side-load `Goopdate.dll` into `GoogleUpdate.exe`.[[1]](https://www.cisa.gov/uscert/ncas/alerts/aa22-055a)[[2]](https://www.cybercom.mil/Media/News/Article/2897570/iranian-intel-cyber-suite-of-malware-uses-open-source-tools/)  
+Enterprise  |  [T1036](/techniques/T1036) |  [Masquerading](/techniques/T1036) |  [PowGoop](/software/S1046) has disguised a PowerShell script as a .dat file (goopdate.dat).[[1]](https://www.cisa.gov/uscert/ncas/alerts/aa22-055a)  
+|  |  [.005](/techniques/T1036/005) |  [Match Legitimate Resource Name or Location](/techniques/T1036/005) |  [PowGoop](/software/S1046) has used a DLL named Goopdate.dll to impersonate a legitimate Google update file.[[1]](https://www.cisa.gov/uscert/ncas/alerts/aa22-055a)  
+  
+## Groups That Use This Software
+
+ID | Name | References  
+---|---|---  
+[G0069](/groups/G0069) |  [MuddyWater](/groups/G0069) |  [[1]](https://www.cisa.gov/uscert/ncas/alerts/aa22-055a)  
+  
+## References
+
+  1. [ FBI, CISA, CNMF, NCSC-UK. (2022, February 24). Iranian Government-Sponsored Actors Conduct Cyber Operations Against Global Government and Commercial Networks. Retrieved September 27, 2022. ](https://www.cisa.gov/uscert/ncas/alerts/aa22-055a)
+
+  1. [ Cyber National Mission Force. (2022, January 12). Iranian intel cyber suite of malware uses open source tools. Retrieved September 30, 2022. ](https://www.cybercom.mil/Media/News/Article/2897570/iranian-intel-cyber-suite-of-malware-uses-open-source-tools/)
+
+×
+
+Core Objects: All
+
+Core ATT&CK; Objects All None
+
+Matrices  Tactics  Techniques  Sub-Techniques
+
+Defenses: All
+
+Defenses All None
+
+Mitigations  Assets  Detection Strategies  Analytics  Data Components
+
+CTI: All
+
+CTI All None
+
+Groups  Software  Campaigns
+
+Reference: All
+
+Reference All None
+
+Resources
+
+Domains: All
+
+Domains All None
+
+Enterprise  Mobile  ICS
+
+Reset filters
+
+[ ![](/theme/images/mitrelogowhiteontrans.gif) ](https://www.mitre.org)
+
+_[Contact Us](/resources/engage-with-attack/contact)_
+
+_[Terms of Use](/resources/legal-and-branding/terms-of-use)_
+
+_[Privacy Policy](/resources/legal-and-branding/privacy)_
+
+_[Website Changelog](/resources/changelog.html "ATT&CK content v19.1 Website
+v4.4.3")_
+
+_[Cookie Preferences](/resources/legal-and-branding/privacy/#)_
+
+(C) 2015 - 2026, The MITRE Corporation. MITRE ATT&CK; and ATT&CK; are
+registered trademarks of The MITRE Corporation.
+
+[ __](https://x.com/MITREattack) [ __](https://github.com/mitre-attack)
+

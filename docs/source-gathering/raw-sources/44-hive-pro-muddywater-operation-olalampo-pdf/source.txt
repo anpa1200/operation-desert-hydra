@@ -1,0 +1,649 @@
+THREAT ADVISORY
+
+             ACTOR REPORT
+
+
+
+
+MuddyWater: Iran’s Adaptive Cyber
+Espionage Machine
+
+Date of Publication   Admiralty Code     TA Number
+
+March 26, 2026            A1           TA2026082
+ Summary
+   First Seen: 2017
+   Targeted Regions: Afghanistan, Armenia, Austria, Azerbaijan, Bahrain, Belarus, Egypt, Georgia, India,
+   Iran, Iraq, Israel, Jordan, Kuwait, Laos, Lebanon, Mali, Netherlands, Oman, Pakistan, Portugal, Qatar,
+   Russia, Saudi Arabia, Sudan, Tajikistan, Tanzania, Thailand, Tunisia, Turkey, UAE, Ukraine, USA,
+   Canada, North Africa
+   Targeted Industries: Aviation, Defense, Education, Energy, Financial, Food and Agriculture, Gaming,
+   Government, Healthcare, High-Tech, IT, Media, NGOs, Oil and gas, Shipping and Logistics,
+   Telecommunications, Transportation, Software/Technology, Critical Infrastructure
+   Targeted Platforms: Windows, Linux
+   Targeted Products: BeyondTrust Remote Support (RS) and Privileged Remote Access (PRA), Ivanti
+   Endpoint Manager Mobile (EPMM), n8n, Meta React Server Components, SmarterTools
+   SmarterMail, Laravel Livewire, N-able N-central, Citrix NetScaler ADC and NetScaler Gateway,
+   Langflow, Fortinet FortiOS and FortiProxy
+   Threat Actor: MuddyWater (aka Static Kitten, Seedworm, TEMP.Zagros, Mercury, TA450, Cobalt
+   Ulster, ATK 51, T-APT-14, ITG17, Mango Sandstorm, Boggy Serpens, Yellow Nix, Earth Vetala)
+   Malware: Dindoor, Fakeset, Stagecomp, Darkcomp, LampoRAT, UDPGangster, BlackBeard, Nuso,
+   Phoenix
+
+
+
+        Actor Map
+
+
+
+
+          MuddyWat
+             er
+
+
+
+
+                                                                                                                                           Powered by Bing
+                                              © Australian Bureau of Statistics, GeoNames, Microsoft, Navinfo, Open Places, OpenStreetMap, TomTom, Zenrin
+
+
+
+
+      Targeted                Non-Targeted
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                                                                      2|
+Actor Details
+
+#1          MuddyWater is an Iranian state-sponsored advanced persistent threat (APT)
+            group active since at least 2017, widely attributed to the Ministry of
+            Intelligence and Security (MOIS). Its operations are primarily centered on
+            cyber espionage, with consistent targeting of government, defense,
+            telecommunications, energy, financial services, and other critical
+            infrastructure sectors across the Middle East, North America, Europe, and
+            Africa. The group’s activity aligns closely with Iran’s strategic intelligence-
+            gathering objectives, often focusing on organizations of geopolitical and
+            economic significance.
+
+
+#2
+            The group is characterized by its agility in adopting new tooling and evolving
+            its tradecraft. MuddyWater frequently develops malware across multiple
+            languages, including PowerShell, Python, JavaScript, and increasingly Rust,
+            while maintaining a strong dependence on social engineering, particularly
+            spear-phishing, for initial access. In parallel, it actively exploits vulnerabilities
+            in public-facing applications to establish footholds, reflecting a hybrid
+            intrusion approach that blends opportunistic exploitation with targeted
+            intrusion techniques.
+
+
+#3
+            Recent campaigns highlight a notable shift in both tooling sophistication and
+            operational tempo. Since early February 2026, MuddyWater has deployed
+            the previously undocumented Dindoor backdoor, built on the Deno
+            JavaScript runtime, targeting U.S. entities such as banks, airports, NGOs, and
+            an Israeli defense software affiliate. Alongside this, the group leveraged the
+            Python-based Fakeset backdoor and used Rclone to exfiltrate data to Wasabi
+            cloud storage. This surge in activity coincides with heightened geopolitical
+            tensions, raising concerns that existing intrusions could transition into
+            disruptive or destructive operations.
+
+
+#4
+            In parallel, the group conducted Operation Olalampo (January–February
+            2026), targeting organizations across the MENA region with a new malware
+            arsenal including GhostFetch, GhostBackDoor, HTTP_VIP, and the CHAR
+            backdoor written in Rust. Notably, this campaign incorporated Telegram-
+            based command-and-control channels and exhibited indicators of AI-assisted
+            development, signaling an evolution in both development practices and
+            operational flexibility. Additional activity in March 2026 suggests continued
+            targeting of government and telecom sectors across GCC countries, including
+            Saudi Arabia, the UAE, Kuwait, and Bahrain.
+
+
+
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                                  3|
+#5          MuddyWater has recently strengthened its toolkit with more evasive and
+            persistent capabilities, introducing tools like the UDPGangster backdoor for
+            stealthy communication and LampoRAT, a Rust-based RAT used in targeted
+            attacks. The group is also leveraging AI-assisted development and Rust-based
+            implants such as BlackBeard to rapidly deploy tailored payloads. In a
+            campaign using a malicious Excel lure, it delivered a new payload family,
+            Nuso, highlighting a shift toward more advanced final-stage infections and a
+            modular, adaptive attack approach.
+
+
+
+
+#6
+            Throughout 2025, MuddyWater sustained large-scale spear-phishing
+            campaigns across the Middle East, leveraging compromised legitimate email
+            accounts to enhance credibility. These operations delivered malware such as
+            RustyWater, a Rust-based remote access implant featuring asynchronous C2
+            communication, registry-based persistence, and modular post-exploitation
+            capabilities, as well as the Phoenix backdoor. The group combined custom
+            payloads with legitimate remote management tools to improve stealth and
+            persistence, while using techniques such as icon spoofing and macro-enabled
+            Word documents to increase infection success rates.
+
+
+
+
+#7
+            Exposure of the group’s infrastructure has further revealed a mature and
+            layered operational ecosystem. This includes extensive reconnaissance using
+            tools like Shodan, Nuclei, and Subfinder; custom command-and-control
+            frameworks such as KeyC2, PersianC2, and ArenaC2; and tunneling utilities
+            like Neo-reGeorg and Resocks. Evidence also points to password spraying
+            activity, exploitation attempts across numerous CVEs, and the use of a
+            PowerShell-based loader. Collectively, these capabilities underscore
+            MuddyWater’s adaptability and depth in both offensive tooling and
+            infrastructure management.
+
+
+
+
+#8
+            Overall, MuddyWater remains a high-risk threat actor with a strong likelihood
+            of sustained and potentially escalating activity. Its continued investment in
+            diverse malware development, combined with its alignment to Iranian
+            strategic interests and current geopolitical dynamics, positions it as a
+            persistent and evolving threat to organizations operating in sensitive or high-
+            value sectors.
+
+
+
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                             4|
+   Actor Group
+    NAME               ORIGIN               TARGET REGIONS              TARGET INDUSTRIES
+  MuddyWater              Iran
+                                            Afghanistan, Armenia,
+    (aka Static                                                             Aviation, Defense,
+                       MOTIVE                 Austria, Azerbaijan,
+      Kitten,                                                              Education, Energy,
+                                           Bahrain, Belarus, Egypt,
+   Seedworm,                                                               Financial, Food and
+                                          Georgia, India, Iran, Iraq,
+  TEMP.Zagros,          Cyber                                             Agriculture, Gaming,
+                                            Israel, Jordan, Kuwait,
+Mercury, TA450,       Espionage,                                        Government, Healthcare,
+                                             Laos, Lebanon, Mali,
+  Cobalt Ulster,     Intelligence                                         High-Tech, IT, Media,
+                                             Netherlands, Oman,
+ ATK 51, T-APT-       Collection,                                          NGOs, Oil and gas,
+                                          Pakistan, Portugal, Qatar,
+    14, ITG17,           Pre-                                            Shipping and Logistics,
+                                             Russia, Saudi Arabia,
+      Mango         positioning for                                       Telecommunications,
+                                         Sudan, Tajikistan, Tanzania,
+   Sandstorm,          Potential                                             Transportation,
+                                          Thailand, Tunisia, Turkey,
+ Boggy Serpens,      Destructive                                         Software/Technology,
+                                              UAE, Ukraine, USA,
+Yellow Nix, Earth    Operations                                           Critical Infrastructure
+                                             Canada, North Africa
+      Vetala)
+
+
+Recommendations
+              Strengthen Email and Initial Access Defenses: MuddyWater heavily relies
+              on spear-phishing to gain initial access, making email security a critical first
+              line of defense. Organizations should implement advanced email filtering,
+              block malicious attachments, and disable macros by default. Regular
+              security awareness training can help employees identify phishing attempts,
+              especially those that appear to originate from trusted or internal sources.
+              At the same time, all public-facing systems should be regularly updated and
+              patched to prevent exploitation of known vulnerabilities.
+
+              Enhance Visibility and Threat Detection: Early detection is key to limiting
+              impact. Security teams should monitor for unusual activity involving
+              scripting environments such as PowerShell, Python, and JavaScript
+              runtimes, as MuddyWater frequently abuses these. The use of tools like
+              Rclone for data exfiltration should also be closely tracked. Deploying
+              endpoint detection and response (EDR) solutions, combined with
+              centralized logging, enables faster identification of suspicious behavior.
+              Enforcing multi-factor authentication (MFA) and limiting administrative
+              privileges further reduces the attack surface.
+
+              Adopt Zero Trust and Network Controls: Given the group’s tendency to
+              blend malicious activity with legitimate tools and services, organizations
+              should adopt a zero-trust approach, verifying every access request
+              regardless of origin. Network segmentation is equally important, as it helps
+              contain threats and prevents lateral movement within the environment.
+              Monitoring outbound traffic, particularly to cloud storage services, can help
+              detect covert data exfiltration and command-and-control communications.
+
+ THREAT ADVISORY • ACTORS REPORT (Red)                                              5|
+                 Prepare for Incident Response and Recovery: Organizations should assume
+                 that sophisticated actors like MuddyWater may eventually gain access and
+                 plan accordingly. Maintaining regular, secure backups ensures that critical
+                 data can be restored if needed. A well-defined and tested incident response
+                 plan allows teams to respond quickly, contain threats, and minimize
+                 damage. Staying up to date on emerging threat activity and continuously
+                 refining defensive measures will help organizations remain resilient against
+                 evolving campaigns.
+
+
+      Potential MITRE ATT&CK TTPs
+
+      Tactic                     Technique                        Sub-technique
+                                                         T1566.001: Spear-Phishing
+                       T1566: Phishing
+                                                         Attachment
+   Initial Access
+                       T1190: Exploit Public-Facing Application
+
+                                                         T1059.007: JavaScript
+
+                       T1059: Command and
+                                                         T1059.006: Python
+                       Scripting Interpreter
+    Execution
+                                                         T1059.001: PowerShell
+
+                       T1204: User Execution             T1204.002: Malicious File
+
+                       T1053: Scheduled Task/Job
+    Persistence
+                       T1219: Remote Access Software
+
+
+                       T1027: Obfuscated Files or Information
+ Defense Evasion
+                       T1553: Subvert Trust Controls     T1553.002: Code Signing
+
+    Credential
+                       T1110: Brute Force                T1110.003: Password Spraying
+      Access
+
+    Discovery          T1082: System Information Discovery
+
+     Lateral
+                       T1021: Remote Services
+    Movement
+
+    Collection         T1115: Clipboard Data
+
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                                6|
+      Tactic                   Technique                      Sub-technique
+                     T1071: Application Layer
+                                                     T1071.001: Web Protocols
+                     Protocol
+  Command and        T1102: Web Service
+     Control
+                     T1105: Ingress Tool Transfer
+                     T1572: Protocol Tunneling
+                     T1567: Exfiltration Over Web    T1567.002: Exfiltration to Cloud
+    Exfiltration
+                     Service                         Storage
+    Resource
+                     T1588: Obtain Capabilities      T1588.006: Vulnerabilities
+  Development
+
+
+
+     Indicators of Compromise (IOCs)
+       TYPE                                         VALUE
+                      0f9cf1cf8d641562053ce533aaa413754db88e60404cab6bbaa11f2
+                      b2491d542,
+                      1d984d4b2b508b56a77c9a567fb7a50c858e672d56e8cf7677a1fca
+                      5c98c95d1,
+                      2a00705cfd3c15cf8913e9eb4e23968efd06f1feceaef9987d26c551
+                      8887d043,
+                      2a09bbb3d1ddb729ea7591f197b5955453aa3769c6fb98a5ef60c6e
+                      4b7df23a5,
+                      42a5db2a020155b2adb77c00cbe6c6ad27c2285d8c6114679d9d34
+                      137e870b3f,
+                      7467f326677a4a2c8576e71a832e297e794ea00e9b67c4fcbe78b5a
+                      ec697cec4,
+                      7c30c16e7a311dc0cdb1cdfd9ea6e502f44c027328dbe7d960b9bcd
+                      85ccf5eef,
+      SHA256          b0af82de672d81f3c2f153977923b3884a8a9e7045b182c2379b19a
+                      1996931a0,
+                      bd8203ab88983bc081545ff325f39e9c5cd5eb6a99d04ae2a6cf862
+                      535c9829a,
+                      c7cf1575336e78946f4fe4b0e7416b6ebe6813a1a040c54fb6ad82e
+                      72673478e,
+                      077ab28d66abdafad9f5411e18d26e87fe43da1410ee8fe846bd721
+                      ab0cb52de,
+                      15061036c702ad92b56b35e42cf5dc334597e7311e98d2fdd3815a
+                      69ac3b1d84,
+                      2b7d8a519f44d3105e9fde2770c75efb933994c658855dca7d48c8b
+                      4897f81e6,
+                      4aef998e3b3f6ca21c78ed71732c9d2bdcc8a4e0284f51d7462c79d
+                      446fbc7be,
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                             7|
+         TYPE                                    VALUE
+                        64263640a6fdeb2388bca2e9094a17065308cf8dcb0032454c0a71d
+                        9b78327eb,
+                        64cf334716f15da1db7981fad6c81a640d94aa1d65391ef879f4b7b
+                        6edf6e7f1,
+                        74db1f653da6de134bdc526412a517a30b6856de9c3e5d0c742cb5
+                        fe9959ad0d,
+                        94f05495eb1b2ebe592481e01d3900615040aa02bd1807b705a50
+                        e45d7c53444,
+                        a4bd1371fe644d7e6898045cc8e7b5e1562bdfd0e4871d46034e29
+                        a22dec6377,
+                        a5d4d6be3bfe0cba23fe6b44984b5fc9c7c7e10030be96120bb30da
+                        0f2545d4c,
+                        ddceade244c636435f2444cd4c4d3dc161981f3af1f622c03442747e
+                        cef50888,
+                        24857fe82f454719cd18bcbe19b0cfa5387bee1022008b7f5f3a8be9
+                        f05e4d14,
+                        A92d28f1d32e3a9ab7c3691f8bfca8f7586bb0666adbba47eab3e1a
+                        8faf7ecc0,
+                        3df9dcc45d2a3b1f639e40d47eceeafb229f6d9e7f0adcd8f1731af15
+                        63ffb90,
+                        1319d474d19eb386841732c728acf0c5fe64aa135101c6ceee1bd03
+                        69ecf97b6,
+                        c3afd5ce1ca50a38438bb5026cca27bfbf2d8e786e03f323adceb8ad
+       SHA256           17517eca,
+                        52d8fb9a11920f27b9a3b43f27c275767a57cdffc95af94b7b664335
+                        06287314,
+                        b2c52fde1301a3624a9ceb995f2de4112d57fcbc6a4695799aec15af
+                        4fa0a122,
+                        1c16b271c0c4e277eb3d1a7795d4746ce80152f04827a4f3c5798aa
+                        f4d51f6a1,
+                        4db3645f678fb519b9f529dde41f77944754f574f16a9a845c22d37
+                        03da5bed0,
+                        2c92c7bf2d6574f9240032ec6adee738edddc2ba8d3207eb102eddf
+                        4ab963db0,
+                        23f3a98befdff13c802eed32eea754018b8b525ec0dd3afce8459a02
+                        87df74ec,
+                        69e038b9f3a228f09059bc1ce92b1c5c49396bb70987a38df0fdb39
+                        eed380b22,
+                        84e665a0dfbff74b4c356bfa282c7c253ae3411a8f4d58bfe121c841
+                        1c52552c,
+                        6f079c1e2655ed391fb8f0b6bfafa126acf905732b5554f38a9d32d0
+                        b9ca407d,
+                        7ea4b307e84c8b32c0220eca13155a4cf66617241f96b8af26ce2db
+                        8115e3d53,
+                        f38a56b8dc0e8a581999621eef65ef497f0ac0d35e953bd94335926
+                        f00e9464f,
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                   8|
+         TYPE                                   VALUE
+
+                        0ce54a5a6f061b158e3891aadd03773d0bae220b0316e84fc042a7
+                        41924b3525,
+                        167d5ab70f55c100e51833fbfea44048095889c162e1330df063142
+                        3fc547409,
+                        4d2958d93d4650fc4a70f70663fe6943e8c11d61b2824512da296e8
+                        fd84e5bb9,
+                        156b325231742a73ded4104fbde1c55ad3913d2eaf09b5194ef74c8
+                        1ee3ba393,
+                        cc2ec568f978f328b6de112670a1b35ca1f9db377ff32cb9d313a5b2
+                        ac3c127b,
+                        7523e53c979692f9eecff6ec760ac3df5b47f172114286e570b6bba3
+                        b2133f58,
+                        0be499354dc498248d27f6d186eb3bb75a607ae4a2c0a6734c76f1
+                        a1b7b1d316,
+                        81a6e6416eb7ab6ce6367c6102c031e2ae2730c3c50ab9ce0b8668f
+                        ec3487848,
+                        47bb271c34210f52e3e08339a0c83688d9e9aa5c7cfc45b3e4bdffd1
+                        753f6cb2,
+                        1b9e6fe4b03285b2e768c57e320d84323ac9167598395918d56a12
+                        e568b0009a,
+       SHA256           9c207c51c448f96eaae91241a39c8bb85e2307f2d2a99244763a531
+                        76cf4c02f,
+                        c91413ad7c94c0e2694862b9d671d1204873bf65576ba2cb91fbd5
+                        62a4ccf79b,
+                        668dd5b6fb06fe30a98dd59dd802258b45394ccd7cd610f0aaab43d
+                        801bf1a1e,
+                        5ec5a2adaa82a983fcc42ed9f720f4e894652bd7bd1f366826a16ac9
+                        8bb91839,
+                        a2001892410e9f34ff0d02c8bc9e7c53b0bd10da58461e1e9eab26b
+                        dbf410c79,
+                        1bcd8d7dc7bed5873bbdd2822e84e19773a33d659b16587ca9dc6
+                        db204447a86,
+                        fc4a7eed5cb18c52265622ac39a5cef31eec101c898b4016874458d
+                        2722ec430,
+                        8d2227f2c53d7e22a57e12c45cecdd43dbec08dbc3ab93e74e6df52
+                        cdf80548b,
+                        1bcd8d7dc7bed5873bbdd2822e84e19773a33d659b16587ca9dc6
+                        db204447a86,
+                        5323a573e3f423b69ef965dadb3c059879d718b1c9052038ef7498
+                        68cf361891
+
+    Telegram Bot
+                        8398566164:AAEJbk6EOirZ_ybm4PJ-q8mOpr1RkZx1H7Q
+         ID
+
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                    9|
+         TYPE                                        VALUE
+                        gitempire[.]s3[.]us-east-005[.]backblazeb2[.]com,
+                        elvenforest[.]s3[.]us-east-005[.]backblazeb2[.]com,
+                        uppdatefile[.]com,
+                        serialmenot[.]com,
+                        moonzonet[.]com,
+                        bootcamptg[.]org,
+                        codefusiontech[.]org,
+       Domains          maxisteq[.]org,
+                        miniquest[.]org,
+                        Netivtech[.]org,
+                        nomercys.it[.]com,
+                        promoverse[.]org,
+                        reminders[.]trahum[.]org,
+                        screenai[.]online,
+                        stratioai[.]org
+
+                        157[.]20[.]182[.]75,
+                        64[.]7[.]198[.]12,
+         IPv4           46[.]101[.]36[.]39,
+                        159[.]198[.]68[.]25,
+                        159[.]198[.]66[.]153
+
+                        C:\Users\win10\Desktop\phonix\phoenix\x64\Release\phoenix.pd
+                        b,
+                        Char.pdb,
+                        C:\Users\nuso\source\repos\http_vip\http_vip\f*ckAnalyzor.pdb,
+                        C:\Users\nuso\source\repos\http_last_ver\http_last_ver\f*ckAnal
+                        yser.pdb,
+                        D:\phonix\phoenixV3\phoenixV3\phoenixV2\x64\Release\phoenix
+                        .pdb,
+                        C:\Users\win10\Desktop\phoenixV4\phoenixV3\phoenixV2\x64\R
+      PDB Path          elease\phoenix.pdb,
+                        C:\Users\win10\Desktop\phoenixV4\phoenixV3\phoenixV2\x64\D
+                        ebug\phoenix.pdb,
+                        C:\Users\piper\source\repos\udp_3.0 -
+                        Copy\x64\release_86\udp_3.0.pdb,
+                        C:\Users\gangster\source\repos\udp_3.0 - Copy -
+                        Copy\x64\release_86\udp_3.0.pdb,
+                        C:\Users\SURGE\source\repos\udp_3.0 -
+                        Copy\x64\release_86\udp_3.0.pdb
+
+
+
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                         10|
+       References
+  https://www.security.com/threat-intelligence/iran-cyber-threat-activity-us
+
+  https://securityaffairs.com/189060/apt/iran-linked-muddywater-deploys-dindoor-malware-
+  against-u-s-organizations.html
+
+  https://www.darkreading.com/threat-intelligence/iran-muddywater-new-malware-tensions-
+  mount
+
+  https://www.esentire.com/security-advisories/iranian-apt-muddywater-exposed
+
+  https://www.rescana.com/post/muddywater-s-dindoor-backdoor-iranian-apt-targets-u-s-
+  organizations-via-deno-runtime-and-cloud-sto
+
+  https://hivepro.com/threat-advisory/muddywaters-rust-implants-target-the-middle-east/
+
+  https://hivepro.com/threat-advisory/operation-olalampo-muddywater-expanding-campaign-
+  across-mena/
+
+  https://hivepro.com/threat-advisory/echoes-over-udp-muddywaters-covert-backdoor-strikes/
+
+  https://hivepro.com/threat-advisory/serpents-in-disguise-muddywaters-hidden-toolset-exposed/
+
+  https://hivepro.com/threat-advisory/muddywater-deploys-phoenix-backdoor-in-targeted-
+  espionage-campaign/
+
+  https://attack.mitre.org/groups/G0069/
+
+  https://unit42.paloaltonetworks.com/boggy-serpens-threat-assessment/
+
+
+
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                             11|
+Appendix
+                                                     AFFECTED           ZERO-      CISA
+     CVE                     NAME                                                               PATCH
+                                                     PRODUCT             DAY       KEV
+                      BeyondTrust Remote            BeyondTrust
+                        Support (RS) and              Remote
+                       Privileged Remote            Support (RS)
+                                                                                                    tick mark (1).png
+
+
+
+
+CVE-2026-1731
+                        Access (PRA) OS            and Privileged
+                      Command Injection            Remote Access
+                          Vulnerability                (PRA)
+                        Ivanti Endpoint
+                                                  Ivanti Endpoint
+                        Manager Mobile
+                                                                                                    tick mark (1).png
+
+
+
+
+CVE-2026-1281                                        Manager
+                     (EPMM) Code Injection
+                                                  Mobile (EPMM)
+                          Vulnerability
+                     n8n Improper Control
+  CVE-2025-            of Dynamically-
+                                                                                                    tick mark (1).png
+
+
+
+
+                                                         n8n
+    68613               Managed Code
+                    Resources Vulnerability
+                       Meta React Server
+                                                     Meta React
+  CVE-2025-           Components Remote                                                             tick mark (1).png
+
+
+
+
+                                                      Server
+    55182               Code Execution
+                                                    Components
+                         Vulnerability
+                          SmarterTools
+                          SmarterMail
+  CVE-2025-                                         SmarterTools                                    tick mark (1).png
+
+
+
+
+                     Unrestricted Upload of
+    52691                                           SmarterMail
+                      File with Dangerous
+                       Type Vulnerability
+  CVE-2025-          Laravel Livewire Code                                                          tick mark (1).png
+
+
+
+
+                                                  Laravel Livewire
+    54068            Injection Vulnerability
+                        N-able N-central
+                        Unauthenticated
+CVE-2025-9316                                     N-able N-central
+                                                                                                    tick mark (1).png
+
+
+
+
+                      SessionID Generation
+                          Vulnerability
+                      Citrix NetScaler ADC        Citrix NetScaler
+                      and Gateway Out-of-                ADC                                        tick mark (1).png
+
+
+
+
+CVE-2025-5777
+                          Bounds Read              and NetScaler
+                          Vulnerability               Gateway
+  CVE-2025-          Langflow Remote Code                                                           tick mark (1).png
+
+
+
+
+                                                      Langflow
+    34291            Execution Vulnerability
+
+
+Note: Vulnerabilities exploited by MuddyWater. The Patch links are hyperlinked to the patch icon.
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                                     12|
+                                                   AFFECTED            ZERO-       CISA
+     CVE                    NAME                                                                PATCH
+                                                   PRODUCT              DAY        KEV
+                     Fortinet FortiOS and
+  CVE-2024-               FortiProxy             Fortinet FortiOS                                tick mark (1).png
+
+
+
+
+    55591              Authentication             and FortiProxy
+                     Bypass Vulnerability
+                      Fortinet Multiple
+  CVE-2024-                                        Fortinet                                      tick mark (1).png
+
+
+
+
+                      Products Format
+    23113                                      Multiple Products
+                     String Vulnerability
+                       Fortinet FortiOS
+  CVE-2022-           Heap-Based Buffer
+                                                                                                 tick mark (1).png
+
+
+
+
+                                                 Fortinet FortiOS
+    42475                 Overflow
+                        Vulnerability
+
+
+
+
+Note: Vulnerabilities exploited by MuddyWater. The Patch links are hyperlinked to the patch icon.
+
+THREAT ADVISORY • ACTORS REPORT (Red)                                                     13|
+  What Next?
+  At Hive Pro, it is our mission to detect the most likely threats to
+  your organization and to help you prevent them from happening.
+
+  Book a free demo with HivePro Uni5: Threat Exposure Management
+  Platform.
+
+
+
+
+REPORT GENERATED ON
+
+March 26, 2026 • 5:30 AM
+
+
+© 2026 All Rights are Reserved by Hive Pro
+                                                             More at www.hivepro.com
+

@@ -1,0 +1,373 @@
+Skip to content
+
+You're not viewing the latest version. [ **Click here to go to latest.**
+](../../..)
+
+[ ![logo](../../assets/logo.png) ](../.. "OpenCTI Documentation")
+
+Initializing search
+
+[ GitHub  ](https://github.com/OpenCTI-Platform/opencti "Go to repository")
+
+  * [ Home ](../..)
+  * [ Deployment & Setup ](../../deployment/overview/)
+  * [ User Guide ](../../usage/getting-started/)
+  * [ Administration ](../../administration/introduction/)
+  * [ Reference ](../data-model/)
+  * [ Development ](../../development/environment_ubuntu/)
+
+[ ![logo](../../assets/logo.png) ](../.. "OpenCTI Documentation") OpenCTI
+Documentation
+
+[ GitHub  ](https://github.com/OpenCTI-Platform/opencti "Go to repository")
+
+  * [ Home  ](../..)
+  * Deployment & Setup  Deployment & Setup 
+    * Platform  Platform 
+      * [ Overview  ](../../deployment/overview/)
+      * [ Installation  ](../../deployment/installation/)
+      * [ Configuration  ](../../deployment/configuration/)
+      * Authentication  Authentication 
+        * [ Authentication via environment variables  ](../../deployment/authentication/)
+      * [ Telemetry  ](../../deployment/telemetry/)
+      * [ Upgrade  ](../../deployment/upgrade/)
+    * Ecosystem  Ecosystem 
+      * [ Connectors  ](../../deployment/connectors/)
+      * [ Integrations  ](../../deployment/integrations/)
+      * Manager  Manager 
+        * [ Overview  ](../../deployment/integration-manager/)
+        * [ Quick start  ](../../deployment/integration-manager/quick-start/)
+        * [ Architecture  ](../../deployment/integration-manager/architecture/)
+        * [ Private registry authentication  ](../../deployment/integration-manager/registry-authentication/)
+        * [ Proxy support  ](../../deployment/integration-manager/proxy-configuration/)
+        * [ Installation guide  ](../../deployment/integration-manager/installation/)
+        * [ Configuration  ](../../deployment/integration-manager/configuration/)
+        * [ Migration guide  ](../../deployment/integration-manager/migration/)
+        * [ Troubleshooting guide  ](../../deployment/integration-manager/troubleshooting/)
+      * [ Other resources  ](../../deployment/resources/)
+    * Advanced  Advanced 
+      * [ Platform managers  ](../../deployment/managers/)
+      * [ Liveness probe  ](../../deployment/liveness-probe/)
+      * [ Clustering  ](../../deployment/clustering/)
+      * [ Indices and rollover  ](../../deployment/rollover/)
+      * [ On-premise map server  ](../../deployment/map/)
+      * [ On-premise AI extraction  ](../../deployment/ai-import-document/)
+      * [ Troubleshooting  ](../../deployment/troubleshooting/)
+    * Breaking changes  Breaking changes 
+      * [ Index  ](../../deployment/breaking-changes/)
+      * Migration guides  Migration guides 
+        * [ SSO Migration from environment variable to UI  ](../../deployment/breaking-changes/7.260224.0-SSO-authentication-migration/)
+        * [ Metrics renamed in Client Python  ](../../deployment/breaking-changes/6.8-client-python-metrics/)
+        * [ OpenBAS scenario generation  ](../../deployment/breaking-changes/6.5-generation-scenario-opencti-openbas-placeholders/)
+        * [ Stream connectors data import  ](../../deployment/breaking-changes/6.3-removing-some-connectors/)
+        * [ Promote to Indicator  ](../../deployment/breaking-changes/6.2-promote-to-indicator/)
+        * [ SAML authentication  ](../../deployment/breaking-changes/6.2-saml-authentication/)
+        * [ New filter API  ](../../deployment/breaking-changes/5.12-filters/)
+  * User Guide  User Guide 
+    * [ Getting started  ](../../usage/getting-started/)
+    * Foundations  Foundations 
+      * [ Data model  ](../../usage/data-model/)
+      * [ Nested objects  ](../../usage/nested/)
+      * [ Containers  ](../../usage/containers/)
+      * [ Deduplication  ](../../usage/deduplication/)
+      * [ Reliability and confidence  ](../../usage/reliability-confidence/)
+      * [ Meaning of dates  ](../../usage/dates/)
+      * [ CTI Copilot ✨  ](../../usage/copilot/)
+    * Explore knowledge  Explore knowledge 
+      * [ Overview  ](../../usage/overview/)
+      * [ Search for knowledge  ](../../usage/search/)
+      * [ Insights and summaries ✨  ](../../usage/insights/)
+      * [ Priority Intelligence Requirements  ](../../usage/pir/)
+      * Explore by entity types  Explore by entity types 
+        * [ Analysis  ](../../usage/exploring-analysis/)
+        * [ Cases  ](../../usage/exploring-cases/)
+        * [ Events  ](../../usage/exploring-events/)
+        * [ Observations  ](../../usage/exploring-observations/)
+        * [ Threats  ](../../usage/exploring-threats/)
+        * [ Arsenal  ](../../usage/exploring-arsenal/)
+        * [ Techniques  ](../../usage/exploring-techniques/)
+        * [ Entities  ](../../usage/exploring-entities/)
+        * [ Locations  ](../../usage/exploring-locations/)
+      * [ Pivot and investigate  ](../../usage/pivoting/)
+    * Create knowledge  Create knowledge 
+      * Automated import  Automated import 
+        * [ Getting started  ](../../usage/import/getting-started/)
+        * [ Connectors  ](../../usage/import/external-connectors/)
+        * [ Streams  ](../../usage/import/internal-streams/)
+        * Feeds  Feeds 
+          * [ TAXII Feed  ](../../usage/import/taxii-feed/)
+          * [ TAXII push  ](../../usage/import/taxii-push/)
+          * [ RSS Feed  ](../../usage/import/rss-feed/)
+          * [ CSV Feed  ](../../usage/import/csv-feed/)
+          * [ JSON Feed  ](../../usage/import/json-feed/)
+      * [ Import from files  ](../../usage/import-files/)
+      * [ Manual creations  ](../../usage/manual-creation/)
+      * [ Create via form  ](../../usage/form-intake/)
+      * [ Draft workspaces  ](../../usage/draftWorkspaces/)
+      * [ Analyst workbench  ](../../usage/workbench/)
+    * Enrich knowledge  Enrich knowledge 
+      * [ Inferences and reasoning  ](../../usage/inferences/)
+      * [ Enrichment connectors  ](../../usage/enrichment/)
+      * [ Merge objects  ](../../usage/merging/)
+      * [ Refine content ✨  ](../../usage/refine-content/)
+    * Act on knowledge  Act on knowledge 
+      * [ Case management  ](../../usage/case-management/)
+      * [ Notifications and alerting  ](../../usage/notifications/)
+      * [ Background tasks  ](../../usage/background-tasks/)
+      * Dashboards  Dashboards 
+        * [ Custom dashboards  ](../../usage/dashboards/)
+        * [ Share custom dashboards  ](../../usage/dashboards-share/)
+        * [ Widget creation  ](../../usage/widgets/)
+        * [ Tips for widget creation  ](../../usage/tips-widget-creation/)
+      * [ Custom views  ](../../usage/custom-views/)
+      * [ Workflows and assignation  ](../../usage/workflows/)
+      * [ Indicators lifecycle  ](../../usage/indicators-lifecycle/)
+      * Playbook automation  Playbook automation 
+        * [ Introduction  ](../../usage/playbook-automation/)
+        * [ Playbook creation  ](../../usage/playbook-creation/)
+        * [ Playbook components  ](../../usage/playbook-components/)
+      * [ Security Coverage  ](../../usage/security-coverage/)
+    * [ Delete and restore knowledge  ](../../usage/delete-restore/)
+    * Sharing and exports  Sharing and exports 
+      * [ Native feeds  ](../../usage/feeds/)
+      * [ Manual export  ](../../usage/export/)
+  * Administration  Administration 
+    * [ Introduction  ](../../administration/introduction/)
+    * [ Enterprise edition  ](../../administration/enterprise/)
+    * [ Product life cycle  ](../../administration/product-life-cycle/)
+    * Data management  Data management 
+      * [ Merging and de-duplication  ](../../administration/merging/)
+      * [ CSV Mappers  ](../../administration/csv-mappers/)
+      * [ JSON Mappers  ](../../administration/json-mappers/)
+    * Platform settings  Platform settings 
+      * [ Parameters  ](../../administration/parameters/)
+      * Security  Security 
+        * [ Authentication  ](../../administration/authentication-via-ui/)
+        * [ Policies  ](../../administration/policies/)
+        * Users and RBAC  Users and RBAC 
+          * [ Users and RBAC  ](../../administration/users/)
+          * [ Protect sensitive configuration  ](../../administration/protect-sensitive-configuration/)
+        * Data segregation  Data segregation 
+          * [ Marking restriction  ](../../administration/segregation/)
+          * [ Organization segregation  ](../../administration/organization-segregation/)
+          * [ Authorized members  ](../../administration/authorized-members/)
+          * [ Request access  ](../../administration/request-access/)
+        * [ Dissemination list  ](../../administration/dissemination-list/)
+        * [ Email templates  ](../../administration/email-templates/)
+      * Customization  Customization 
+        * [ Entity types  ](../../administration/entities/)
+        * [ Rules engine  ](../../administration/reasoning/)
+        * Notifiers  Notifiers 
+          * [ Custom notifiers  ](../../administration/notifiers/)
+          * [ Notifier samples  ](../../administration/notifier-samples/)
+          * [ Tips to create notifiers  ](../../administration/tips-to-create-a-custom-notifier/)
+        * [ Retention policies  ](../../administration/retentions/)
+        * Decay rules & Decay Exclusion rules  Decay rules & Decay Exclusion rules 
+          * [ Decay rules  ](../../administration/decay-rules/)
+          * [ Decay exclusion rules  ](../../administration/decay-exclusion-rules/)
+        * [ Fintel designs  ](../../administration/fintel-designs/)
+        * [ Exclusion lists  ](../../administration/exclusion-lists/)
+      * [ Taxonomies  ](../../administration/ontologies/)
+      * Activity  Activity 
+        * [ Overview  ](../../administration/audit/overview/)
+        * [ Events  ](../../administration/audit/events/)
+        * [ Configuration  ](../../administration/audit/configuration/)
+        * [ Activity triggers  ](../../administration/audit/triggers/)
+      * [ File indexing  ](../../administration/file-indexing/)
+      * [ Support package  ](../../administration/support-package/)
+      * [ XTM Hub  ](../../administration/hub/)
+  * Reference  Reference 
+    * Data  Data 
+      * [ Data model  ](../data-model/)
+      * [ Data processing  ](../data-processing/)
+      * [ Taxonomy  ](../taxonomy/)
+      * [ Artificial intelligence  ](../artificial-intelligence/)
+    * APIs and feeds  APIs and feeds 
+      * GraphQL API  [ GraphQL API  ](./) Table of contents 
+        * Authentication 
+        * Documentation 
+        * Understand GraphQL 
+          * Core concepts 
+            * Schema Definition Language (SDL) 
+            * Query language 
+            * Resolvers 
+          * How it Works 
+          * External Resources 
+      * Filters  Filters 
+        * [ Filters knowledge  ](../filters/)
+      * [ Data Streaming  ](../streaming/)
+    * Deployment and stack  Deployment and stack 
+      * [ Usage telemetry  ](../usage-telemetry/)
+      * [ FIPS 140-2 installation  ](../fips/)
+  * Development  Development 
+    * Prerequisites  Prerequisites 
+      * [ Ubuntu  ](../../development/environment_ubuntu/)
+      * [ Windows  ](../../development/environment_windows/)
+    * [ Platform  ](../../development/platform/)
+    * [ Python library  ](../../development/python/)
+    * [ Connectors  ](../../development/connectors/)
+    * [ Integration Manager  ](../../development/integration-manager/)
+    * [ Playground  ](../../development/api-usage/)
+
+Table of contents
+
+  * Authentication 
+  * Documentation 
+  * Understand GraphQL 
+    * Core concepts 
+      * Schema Definition Language (SDL) 
+      * Query language 
+      * Resolvers 
+    * How it Works 
+    * External Resources 
+
+  1. [ Home  ](../..)
+  2. [ Reference  ](../data-model/)
+  3. [ APIs and feeds  ](./)
+
+[ ](https://github.com/OpenCTI-
+Platform/opencti/blob/master/docs/docs/reference/api.md "Edit this page") [
+](https://github.com/OpenCTI-
+Platform/opencti/raw/master/docs/docs/reference/api.md "View source of this
+page")
+
+# GraphQL API
+
+OpenCTI provides a comprehensive API based on GraphQL, allowing users to
+perform various actions programmatically. The API enables users to interact
+with OpenCTI's functionality and data, offering a powerful tool for
+automation, integration, and customization. All actions that can be performed
+through the platform's graphical interface are also achievable via the API.
+
+## Authentication
+
+Access to the OpenCTI API requires authentication using standard
+authentication mechanisms. Access rights to data via the API will be
+determined by the access privileges of the user associated with the API key.
+For authentication, users need to include the following headers in their API
+requests:
+
+    
+    
+    Content-Type: application/json
+    Authorization: Bearer [API key]
+    
+
+## Documentation
+
+The OpenCTI API consists of various endpoints corresponding to different
+functionalities and operations within the platform. These endpoints allow
+users to perform actions such as querying data, creating or updating entities,
+and more. Users can refer to the [Understand GraphQL](./#understand-graphql-
+section) section to understand how it works.
+
+Documentation for the OpenCTI API, including schema definitions, the list of
+filters available and queryable fields, is available through the OpenCTI
+platform. It can be found on the [GraphQL playground](../../development/api-
+usage/). However, query examples and mutation examples are not yet available.
+In the meantime, users can explore the available endpoints and their
+functionality by inspecting network traffic in the browser's developer tools
+or by examining the source code of the [Python
+client](../../development/python/).
+
+[![GraphQL query](../assets/graphql_query.png)](../assets/graphql_query.png)
+
+## Understand GraphQL
+
+GraphQL is a powerful query language for APIs that enables clients to request
+exactly the data they need. Unlike traditional REST APIs, which expose fixed
+endpoints and return predefined data structures, GraphQL APIs allow clients to
+specify the shape and structure of the data they require.
+
+### Core concepts
+
+#### Schema Definition Language (SDL)
+
+GraphQL APIs are defined by a schema, which describes the types of data that
+can be queried and the relationships between them. The schema is written using
+the Schema Definition Language (SDL), which defines types, fields, and their
+relationships.
+
+#### Query language
+
+GraphQL uses a query language to request data from the server. Clients can
+specify exactly which fields they need and how they are related, enabling
+precise data retrieval without over-fetching or under-fetching.
+
+**Example:**
+
+    
+    
+    query IntrusionSets {
+        intrusionSets (
+            filters:
+            {
+                mode: and,
+                filters: [
+                    {
+                        key: "name",
+                        values: ["Ajax Security Team"],
+                        operator: eq,
+                        mode: or,
+                    }
+                ],
+                filterGroups: [],
+            }
+        )
+        {
+            edges{
+                node{
+                    id
+                    name
+                    description
+                    externalReferences{
+                        edges{
+                            node{
+                                url
+                                source_name
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
+#### Resolvers
+
+Resolvers are functions responsible for fetching the requested data. Each
+field in the GraphQL schema corresponds to a resolver function, which
+determines how to retrieve the data from the underlying data sources.
+
+### How it Works
+
+  1. Schema definition: The API provider defines a GraphQL schema using SDL, specifying the types and fields available for querying.
+  2. Query execution: Clients send GraphQL queries to the server, specifying the data they need. The server processes the query, resolves each field, and constructs a response object with the requested data.
+  3. Validation and execution: The server validates the query against the schema to ensure it is syntactically and semantically correct. If validation passes, the server executes the query, invoking the appropriate resolver functions to fetch the requested data.
+  4. Data retrieval: Resolvers fetch data from the relevant data sources, such as databases, APIs, or other services. They transform the raw data into the shape specified in the query and return it to the client.
+  5. Response formation: Once all resolvers have completed, the server assembles the response object containing the requested data and sends it back to the client.
+
+### External Resources
+
+For a more in-depth understanding of GraphQL and its usage, consider exploring
+the following external resources:
+
+  * [GraphQL Official Documentation](https://graphql.org/learn/)
+  * [GraphQL query documentation](https://graphql.org/learn/queries/)
+  * [How to GraphQL](https://www.howtographql.com/)
+
+2024-02-13 2023-06-30
+
+[ Previous  Artificial intelligence  ](../artificial-intelligence/) [ Next
+Filters knowledge  ](../filters/)
+
+© 2026 Filigran. All rights reserved
+
+[ ](https://github.com/OpenCTI-Platform "github.com") [
+](https://blog.filigran.io "blog.filigran.io") [
+](https://community.filigran.io "community.filigran.io") [
+](https://linkedin.com/company/filigran "linkedin.com") [
+](https://twitter.com/FiligranHQ "twitter.com") [
+](https://facebook.com/FiligranHQ "facebook.com")
+

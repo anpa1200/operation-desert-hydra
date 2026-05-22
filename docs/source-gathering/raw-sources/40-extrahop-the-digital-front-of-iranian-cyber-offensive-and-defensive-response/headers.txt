@@ -1,0 +1,17 @@
+HTTP/2 200 
+date: Fri, 22 May 2026 06:34:22 GMT
+content-type: text/html; charset=utf-8
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+content-security-policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self' https://*.eloqua.com https://www.facebook.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.gstatic.com https://*.leandata.com https://cdn.cookielaw.org https://fast.wistia.com https://cdn.mouseflow.com https://fast.wistia.net https://snap.licdn.com https://s.swiftypecdn.com https://cdn.vector.co https://js.storylane.io https://www.youtube.com https://*.youtube.com https://www.youtube-nocookie.com https://browser.sentry-cdn.com https://connect.facebook.net https://img.en25.com https://cdn.cr-relay.com https://analytics.ahrefs.com https://js.zi-scripts.com https://ws-assets.zoominfo.com https://googleads.g.doubleclick.net https://assets.ceros.site; script-src-elem 'self' 'unsafe-inline' blob: https://*.amazonaws.com https://www.googletagmanager.com https://js.storylane.io https://*.leandata.com https://cdn.cookielaw.org https://snap.licdn.com https://fast.wistia.com https://fast.wistia.net https://cdn.mouseflow.com https://s.swiftypecdn.com https://www.youtube.com https://cdn.vector.co https://*.youtube.com https://www.youtube-nocookie.com https://www.google.com https://www.gstatic.com https://browser.sentry-cdn.com https://connect.facebook.net https://img.en25.com https://cdn.cr-relay.com https://analytics.ahrefs.com https://js.zi-scripts.com https://ws-assets.zoominfo.com https://googleads.g.doubleclick.net https://assets.ceros.site https://s1701.t.eloqua.com; style-src 'self' 'unsafe-inline' https://cdn.cookielaw.org https://fast.wistia.com http://s.swiftypecdn.com https://s.swiftypecdn.com; img-src 'self' data: blob: https://*.amazonaws.com/ https://*.sanity.io https://cdn1.leandata.com https://partnerportal.extrahop.com/ https://app-pages.storylane.io/ https://assets.extrahop.com https://px.ads.linkedin.com https://extrahop-cloud-assets.s3.us-west-2.amazonaws.com https://www.facebook.com https://embed-ssl.wistia.com https://fast.wistia.com https://googleads.g.doubleclick.net https://cc.swiftype.com https://cloud-assets.extrahop.com https://cdn.cookielaw.org https://i.ytimg.com https://www.googletagmanager.com; font-src 'self' data: https://fast.wistia.com https://*.leandata.com https://fast.wistia.net; media-src 'self' blob: https://fast.wistia.com https://fast.wistia.net https://cloud-assets.extrahop.com; frame-src 'self' https://www.googletagmanager.com https://www.google.com https://app.storylane.io https://fast.wistia.com https://*.leandata.com https://fast.wistia.net https://www.youtube.com https://*.youtube.com https://www.youtube-nocookie.com https://extrahop.ceros.site/ https://view.ceros.com; connect-src 'self' https: https://www.google-analytics.com https://analytics.google.com https://cdn.cookielaw.org https://fast.wistia.com https://fast.wistia.net https://s.swiftypecdn.com https://pipedream.wistia.com
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+x-nextjs-cache: HIT
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-powered-by: Next.js
+cache-control: s-maxage=7200, stale-while-revalidate=31528800
+etag: "kjowkc4v0o7epq"
+content-encoding: gzip
+

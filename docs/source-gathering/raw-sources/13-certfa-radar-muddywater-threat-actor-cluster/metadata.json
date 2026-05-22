@@ -1,0 +1,15 @@
+{
+  "number": 13,
+  "title": "CERTFA Radar — MuddyWater Threat Actor Cluster",
+  "url": "https://radar.certfa.com/en/insights/cluster/fe272810/",
+  "curl_status": "200 https://radar.certfa.com/en/insights/cluster/fe272810/",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n100  217k  100  217k    0     0   159k      0  0:00:01  0:00:01 --:--:--  159k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/13-certfa-radar-muddywater-threat-actor-cluster/source.html",
+  "text_file": "docs/source-gathering/raw-sources/13-certfa-radar-muddywater-threat-actor-cluster/source.txt",
+  "size_bytes": 223021,
+  "extract_error": ""
+}

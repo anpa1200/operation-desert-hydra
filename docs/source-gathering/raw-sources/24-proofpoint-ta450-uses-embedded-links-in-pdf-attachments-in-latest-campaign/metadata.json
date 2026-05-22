@@ -1,0 +1,15 @@
+{
+  "number": 24,
+  "title": "Proofpoint — TA450 Uses Embedded Links in PDF Attachments in Latest Campaign",
+  "url": "https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta450-uses-embedded-links-pdf-attachments-latest-campaign",
+  "curl_status": "200 https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta450-uses-embedded-links-pdf-attachments-latest-campaign",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 42782  100 42782    0     0   449k      0 --:--:-- --:--:-- --:--:--  454k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/24-proofpoint-ta450-uses-embedded-links-in-pdf-attachments-in-latest-campaign/source.html",
+  "text_file": "docs/source-gathering/raw-sources/24-proofpoint-ta450-uses-embedded-links-in-pdf-attachments-in-latest-campaign/source.txt",
+  "size_bytes": 182283,
+  "extract_error": ""
+}

@@ -1,0 +1,16 @@
+HTTP/2 200 
+date: Fri, 22 May 2026 06:34:19 GMT
+content-type: text/html; charset=UTF-8
+cf-ray: 9ff9cb5cec801f5a-TLV
+cf-cache-status: DYNAMIC
+cache-control: private, max-age=0
+expires: Fri, 22 May 2026 06:34:19 GMT
+last-modified: Fri, 22 May 2026 05:47:33 GMT
+server: cloudflare
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: accept-encoding
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+content-encoding: br
+alt-svc: h3=":443"; ma=86400
+

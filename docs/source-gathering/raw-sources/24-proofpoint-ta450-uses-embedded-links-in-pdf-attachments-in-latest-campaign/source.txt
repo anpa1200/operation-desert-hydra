@@ -1,0 +1,797 @@
+Skip to main content
+
+  * ![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__globe.svg)**us:** English: Americas
+
+Select a Language **us:** English: Americas [English: Europe, Middle East,
+Africa](/uk/blog/threat-insight/security-brief-ta450-uses-embedded-links-pdf-
+attachments-latest-campaign) [English: Asia Pacific](/au/blog/threat-
+insight/security-brief-ta450-uses-embedded-links-pdf-attachments-latest-
+campaign) [日本語](/jp/blog/threat-insight/security-brief-ta450-uses-embedded-
+links-pdf-attachments-latest-campaign)
+
+  * Search ![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__search.svg)
+  * Partners![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__drop.svg)
+
+[ Channel Partners and Distributors![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/channel-partners-and-
+distributors) [ MSP Partners![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/partners/msp) [ Technology and
+Alliance Partners![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/partners/technology-alliance-partners)
+
+  * Support![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__drop.svg)
+
+[ Support Login![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://proofpoint.my.site.com/community/s/) [ Sendmail
+Support Login![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://proofpoint.my.site.com/community/s/) [ IP
+Address Blocked![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/postmaster)
+
+  * Login![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__drop.svg)
+
+Training [ Proofpoint Cybersecurity
+Academy![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](https://learningmanager.adobe.com/proofpointcybersecurityacademy)
+Partners [ Partner Hub![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg)
+](https://partners.proofpoint.com/English/)
+
+Products [ Digital Risk Portal![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg)
+](https://v1.us1.digitalrisk.proofpoint.com/users/sign_in) [ ET
+Intelligence![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://threatintel.proofpoint.com) [ Email Fraud
+Defense![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](https://app.emaildefense.proofpoint.com/login) [ Proofpoint
+Essentials![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://us1.proofpointessentials.com/app/login.php)
+
+![Back](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg)
+
+Back
+
+[ ![Proofpoint](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__logo.svg) ](/us)
+
+![Search](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__search.svg) ![Search](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__menu.svg)
+![Search](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__x-
+white.svg)
+
+Platform Solutions Why Proofpoint Resources Company
+
+[ Get a Demo ](/us/free-demo-request) [ Contact Us ](/us/contact)
+
+![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__search-
+white.svg)
+
+Top Suggestions:
+
+Email Security Phishing DLP Email Fraud Prime Threat Protection
+
+  * ![](/sites/default/files/nav-icons/pfpt-platform-icon.svg)
+
+Platform
+
+  * ![](/sites/default/files/nav-icons/pfpt-collaboration-security-icon.svg)
+
+Collaboration Security
+
+  * ![](/sites/default/files/nav-icons/pfpt-data-security-and-governance-icon.svg)
+
+Data Security and Governance
+
+  * ![](/sites/default/files/nav-icons/pfpt-artificial-intelligence-icon.svg)
+
+AI Security
+
+  * ![](/sites/default/files/nav-icons/pfpt-platform-technologies-icon.svg)
+
+Platform Technologies
+
+  * ![](/sites/default/files/nav-icons/pfpt-services-icon.svg)
+
+Services
+
+Platform
+
+### Cybersecurity for the agentic workspace starts with Proofpoint’s human and
+agent-centric security platform.
+
+[ Collaboration Security![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/collaboration-
+security-prime)
+
+Defend humans and agents against modern cyber threats across email and
+collaboration channels.
+
+[ Data Security and Governance​![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/data-security-
+governance)
+
+Protect the data that powers human and AI collaboration​.
+
+[ AI Security![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/platform/ai-security)
+
+Secure the use of AI by people and AI Agents
+
+[ Platform Technologies![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/platform)
+
+Leverage Proofpoint’s market-leading technologies powering cybersecurity for
+people, data and AI.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+platform-promo-img.png.webp?itok=3n5K634l) Featured Join a live Protect
+event—learn how to protect people, data, and AI Live Events
+](/us/events/protect-series)
+
+Collaboration Security
+
+### Stop cyberthreats with AI-driven multichannel protection.
+
+[ Discover Collaboration Security Prime ](/us/products/collaboration-security-
+prime)
+
+[ Core Email Protection![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-protection)
+
+Activate industry-leading threat protection delivered via API or Gateway.
+
+[ Email Fraud Defense![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-
+protection/email-fraud-defense)
+
+Protect your brand reputation, increase deliverability and identify domain
+lookalikes.
+
+[ ZenGuide![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products/mitigate-human-risk)
+
+Turn your workforce into your first line of defense with targeted, behavior-
+changing security awareness training.
+
+[ Secure Email Relay![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-security-and-
+protection/secure-email-relay)
+
+Secure your application email and accelerate DMARC implementation.
+
+[ Account Takeover Protection![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/identity-
+protection/account-takeover)
+
+Detect, investigate, and respond to account takeovers.
+
+[ All Products![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products)
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+collaboration-protection-promo-img.png.webp?itok=eblURr2R) Featured Experience
+Core Email Protection in action—block 99.99% of email threats Interactive Demo
+](/us/learn-more/cep-demo)
+
+Data Security and Governance
+
+### Transform data security with a unified, omnichannel approach.
+
+[ See why Proofpoint is a leader ](/us/resources/analyst-reports/gartner-
+market-guide-ai-trism)
+
+[ Data Security for AI![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/data-security-for-ai)
+
+Secure data across shadow and approved AI.
+
+[ Enterprise DLP![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products/data-loss-prevention)
+
+Transform DLP with a modern platform that prevents data loss across email,
+cloud, and endpoints.
+
+[ Adaptive Email DLP![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/adaptive-email-dlp)
+
+Prevent misdirected emails and hidden exfiltration of sensitive data.
+
+[ Insider Threat Management![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/insider-threat-
+management)
+
+Get visibility into risky behavior by careless, malicious and compromised
+users.
+
+[ Data Security Posture Management![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/data-security-
+posture-management)
+
+Discover, classify and protect sensitive data across cloud and hybrid
+environments.
+
+[ Digital Communications Governance![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/digital-
+communications-governance)
+
+Capture, retain and discover digital communications intelligently to ensure
+compliance.
+
+[ All Products![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products)
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+data-security-and-governance-promo-img.png.webp?itok=JTuZwAuj) Featured
+Understand the top data security risks organizations face — and how to stay
+ahead Research Report ](/us/resources/threat-reports/data-security-landscape-
+report)
+
+AI Security
+
+### Unify AI security across people, agents, and MCP
+
+[ Secure every layer of your AI ](/us/platform/ai-security)
+
+[ Secure AI Usage by People ![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/ai-access-security)
+
+Get visibility into and apply controls around the use of AI by employees
+
+[ Secure AI Usage by Agents![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/agentic-ai-security)
+
+Understand intent of AI Agents and control how they use other AI tools
+
+[ Secure MCP Across Your Enterprise![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/ai-mcp-security)
+
+Unify MCP discovery, authorization, and monitoring to secure AI connectivity
+at scale.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+resources-promo-img.png.webp?itok=WF791rss) Featured AI at Proofpoint
+](/us/resources/solution-briefs/ai-at-proofpoint-nexus-ai-detection)
+
+Platform Technologies
+
+### Proofpoint technologies powering human and agent-centric security.
+
+[ Discover the security risks ](/us/platform)
+
+[ Proofpoint Nexus![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/platform/nexus)
+
+Advanced AI and threat intelligence to detect threats and assess data risk.
+
+[ Proofpoint Zen![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/platform/zen)
+
+Integrated control points to protect people and data, wherever work happens.
+
+[ Proofpoint Satori![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/platform/satori)
+
+The power behind agentic security operations.
+
+[ Proofpoint 365 Total Protection![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-
+protection/essentials)
+
+Enabling the channel. Safeguarding humans and agents.
+
+![](/sites/default/files/styles/webp_conversion/public/nav-promo-
+graphics/pfpt-nav-platform-promo-graphic.png.webp?itok=xEMMR-So)
+
+#### AI at Proofpoint
+
+[ Learn more ](/us/resources/solution-briefs/ai-at-proofpoint-nexus-ai-
+detection)
+
+Services
+
+### Optimize Proofpoint solutions with expert services.
+
+[ Advisory Services![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/premium-
+services/advisory-services)
+
+Give your team access to expert guidance while they manage daily operations of
+your Proofpoint platform.
+
+[ Applied Services![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products/premium-services/applied-services)
+
+Gain a hightouch strategic partnership with a team of Proofpoint specialists
+who optimize your security and monitoring.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+services-promo-img.png.webp?itok=MH2LchvY) Featured "The partnership with
+Proofpoint, it's an extention of our team." –Celesta Capital Customer Story
+](/us/customer-stories/celesta-capital-strengthens-security-across-its-deep-
+tech-portfolio-proofpoint)
+
+  * ![](/sites/default/files/nav-icons/pfpt-use-case-icon.svg)
+
+Use Case
+
+  * ![](/sites/default/files/nav-icons/pfpt-industry-icon.svg)
+
+Industry
+
+Use Case
+
+### Comprehensive solutions for today’s cybersecurity threats.
+
+[ Ensure Acceptable GenAI Use![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/ensure-acceptable-
+genai-use)
+
+Empower your workforce with safe GenAI practices.
+
+[ Secure Microsoft365![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/secure-
+microsoft-365)
+
+Implement the best security and compliance solution for Microsoft 365.
+
+[ Prevent Loss from Ransomware![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/prevent-loss-from-
+ransomware)
+
+Stop attacks by securing ransomware's top vector.
+
+[ Combat Email and Cloud Threats![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/combat-email-and-
+cloud-threats)
+
+Protect your people from email and cloud threats with an intelligent and
+holistic approach.
+
+[ Protect Cloud Apps![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/protect-cloud-apps)
+
+Keep your people and their cloud apps secure by eliminating threats and data
+loss.
+
+[ Change User Behavior![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/change-user-
+behavior)
+
+Help your employees identify, resist and report attacks before the damage is
+done.
+
+[ Modernize Compliance and Archiving![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/enable-digital-
+communications-governance)
+
+Manage risk and data retention needs with a modern solution.
+
+[ Authenticate Your Email![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/email-
+authentication-with-dmarc)
+
+Protect your email deliverability with DMARC.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+use-case-promo-img.png.webp?itok=Y2gMlfii) Featured Learn about new AI
+risks—and how to build a secure foundation for enterprise adoption White Paper
+](/us/resources/white-papers/securing-governing-ai-data-guide)
+
+Industry
+
+### Superior protection for every industry, from small business to large
+enterprise.
+
+[ Federal Government![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/federal)
+
+Enable your agency with cybersecurity built for federal government
+environments.
+
+[ Higher Education![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/solutions/higher-education-security-legacy)
+
+Protect your campus, people, data, and research with advanced security.
+
+[ Healthcare![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/solutions/healthcare-information-security)
+
+Safeguard your clinicians, patient data, and intellectual property from
+advanced threats.
+
+[ Internet Service Providers![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/email-security-
+solutions-for-service-providers)
+
+Deliver secure, high-performance email protection for your networks and
+customers with Cloudmark.
+
+[ State and Local Government![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/state-and-local-
+government)
+
+Secure your institutions, services, and communities against cyber threats.
+
+[ Financial Services![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/financial-services-
+and-insurance)
+
+Protect your institution while meeting regulatory and compliance requirements.
+
+[ Mobile Operators![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/solutions/mobile-message-security-solutions-for-
+service-providers)
+
+Secure your messaging environments and protect subscribers at scale.
+
+[ Small and Medium Businesses![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/protection-
+compliance-small-business-legacy)
+
+Strengthen your business with enterprise-grade security built to grow with
+you.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+industry-promo-img.png.webp?itok=hOp6VWCk) Featured Discover the security
+risks healthcare organizations can't afford to ignore Threat Report
+](/us/resources/threat-reports/ponemon-healthcare-cybersecurity-report)
+
+Why Proofpoint
+
+### More than 80 of the Fortune 100 choose Proofpoint to protect their people,
+data, and AI.
+
+[ Why Proofpoint ](/us/why-proofpoint)
+
+[ Customer Stories![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/customer-stories-legacy)
+
+Learn how organizations use Proofpoint to strengthen their cybersecurity,
+protect their data, and reduce risk.
+
+[ Awards![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/newsroom/awards)
+
+See how our innovation and leadership have been recognized across the industry
+by leading analysts and publications.
+
+[ Threat Insight Blog![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/blog/threat-insight)
+
+Stay up to date on emerging cyber threats with insights from our industry-
+leading threat research team.
+
+[ Comparing Proofpoint![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/compare)
+
+Evaluating cybersecurity vendors? Check out our side-by-side comparison of
+Proofpoint vs. competitors.
+
+#### Evaluating security vendors? Compare us by checking out side-by-side
+comparisons.
+
+[ Comparison Overview ](/us/compare)
+
+[ Proofpoint vs. Abnormal Security ](/us/compare/proofpoint-vs-abnormal-
+security)
+
+[ Proofpoint vs. Mimecast ](/us/compare/proofpoint-vs-mimecast)
+
+[ Proofpoint vs. Check Point Harmony ](/us/compare/proofpoint-vs-check-point-
+harmony)
+
+[ Proofpoint vs. Cisco ](/us/compare/proofpoint-vs-cisco)
+
+[ Proofpoint vs. Symantec ](/us/compare/proofpoint-vs-symantec)
+
+[ Proofpoint vs. Microsoft Purview ](/us/compare/proofpoint-vs-microsoft-
+purview)
+
+[ Proofpoint vs. Legacy DLP ](/us/compare/proofpoint-vs-legacy-dlp)
+
+[ Proofpoint vs. SSE Vendors ](/us/compare/proofpoint-data-security-vs-sse-
+vendors)
+
+[ Proofpoint vs. DSPM Vendors ](/us/industry-comparison/dspm)
+
+  * ![](/sites/default/files/nav-icons/pfpt-resources-icon.svg)
+
+Resources
+
+  * ![](/sites/default/files/nav-icons/pfpt-threat-intelligence-icon.svg)
+
+Threat Intelligence
+
+Resources
+
+### Research, insights and resources from Proofpoint experts.
+
+[ Resource Library ](/us/resources)
+
+[ Blog![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](/us/blog)
+
+Keep up with the latest news and happenings from our industry leading experts.
+
+[ Cybersecurity Academy![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/cybersecurityacademy)
+
+Earn your certification to become a Proofpoint Certified Guardian.
+
+[ Events![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/company/events-old)
+
+Connect with peers in person and learn from the experts.
+
+[ Webinars![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/webinars)
+
+Browse our webinar library to learn about the latest threats and issues in
+cybersecurity.
+
+[ Podcasts![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/podcasts)
+
+Listen to expert conversations and insights on cybersecurity trends, threats
+and best practices.
+
+[ Customer Stories![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/customer-stories)
+
+Read how our customers solve their most pressing cybersecurity challenges
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+resources-promo-img.png.webp?itok=WF791rss) Featured New Agents, New Attacks:
+Securing Collaboration in the Agentic Era Live Webinar Series—Register Now
+](/us/resources/webinar-displays/new-agents-new-attacks-securing-
+collaboration-agentic-era)
+
+Threat Intelligence
+
+### Learn from our expert threat intelligence and insights that you won’t find
+anywhere else.
+
+[ Threat Glossary![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/threat-reference)
+
+Learn about the latest security threats and techniques.
+
+[ Podcasts![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/podcasts)
+
+Stay informed with our renowned threat researchers.
+
+[ Power Series![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://go.proofpoint.com/PowerSeries?utm_source=pfpt-
+website&utm_medium=web&utm_campaign=EventsPage)
+
+Join our virtual event series on the industry's most pressing topics.
+
+[ Threat Insight Blog![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/blog/threat-insight)
+
+Gain insight through actionable threat intelligence and expert analysis.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+threat-intelligence-promo-img.png.webp?itok=n01HycTs) Featured Proofpoint
+DISCARDED Tales from the threat research trenches Podcast
+](/us/resources/podcasts/discarded-live-john-hultquist)
+
+Company
+
+### Learn more about the team driving human and agent-centric security.
+
+[ About Proofpoint ](/us/company/about)
+
+[ Leadership![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/our-leadership-team)
+
+Learn about the executive team leading Proofpoint’s strategy and vision.
+
+[ News Center![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/newsroom)
+
+Read the latest press releases, news stories and media highlights about
+Proofpoint.
+
+[ AI, Privacy and Trust![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/legal/trust)
+
+Learn about how we handle data and make commitments to privacy and other
+regulations.
+
+[ ESG![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](/us/legal/esg)
+
+Learn how we apply our environmental, social, and governance principles to
+positively impact our community.
+
+[ Careers![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/company/careers)
+
+Stand out and make a difference at one of the world's leading cybersecurity
+companies.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-
+images/pfpt-stop-threats-every-layer-nav-image.jpg.webp?itok=pqw6vHkw)
+Featured Stop Threats at Every Layer—People, Data, AI Proofpoint provides
+intent-based protection for every human, every AI agent, across all data.
+](/us/agenticworkspace)
+
+[Blog](/us/blog)
+
+[Threat Insight](/us/blog/threat-insight)
+
+Security Brief: TA450 Uses Embedded Links in PDF Attachments in Latest
+Campaign
+
+![Proofpoint Packages](/sites/default/files/styles/image_768_300/public/btc-
+imgs/GettyImages-1133924836-min.jpg.webp?itok=rl1uHFTM)
+
+#  Security Brief: TA450 Uses Embedded Links in PDF Attachments in Latest
+Campaign
+
+Share with your network!
+
+March 21, 2024 Joshua Miller and the Proofpoint Threat Research Team
+
+### What happened
+
+Proofpoint researchers recently observed new activity by the Iran-aligned
+threat actor TA450 (also known as MuddyWater, Mango Sandstorm, and Static
+Kitten), in which the group used a pay-related social engineering lure to
+target Israeli employees at large multinational organizations. TA450 is known
+for targeting Israeli entities particularly since at [least October
+2023](https://therecord.media/muddywater-campaign-iran-israel-social-
+engineering) with the start of the Israel-Hamas war and this continues that
+trend with a focus on global manufacturing, technology, and information
+security companies.
+
+In the phishing campaign, which started 7 March and continued through the week
+of 11 March 2024, TA450 sent emails with PDF attachments that contained
+malicious links. While this
+[method](https://www.deepinstinct.com/blog/muddywater-en-able-spear-phishing-
+with-new-ttps) is not foreign to TA450, the threat actor has more recently
+relied on including malicious links directly in email message bodies instead
+of adding in this extra step. Proofpoint researchers observed the same targets
+receive multiple phishing emails with PDF attachments that had slightly
+different embedded links. The links were to a variety of file-sharing sites,
+including Egnyte, Onehub, Sync and TeraBox. The emails also used a likely
+compromised .IL sender account, which is consistent with this threat actor’s
+recent activity.  
+
+As seen in Figures 1 and 2, if a target opened the attachment and clicked on
+the included link, it would lead to the download of a ZIP archive containing a
+compressed MSI that ultimately would install AteraAgent, remote administration
+software that is known to be abused by TA450.
+
+![Figure 1](/sites/default/files/inline-images/p1_4.png)
+
+_Figure 1. Opened PDF attachment with malicious link (Machine translation:
+Document title: Pay Slip; Body of PDF: Hello, From now on receive your pay
+slip through the following software).  _
+
+![Figure 2](/sites/default/files/inline-images/p2_4.png)
+
+_Figure 2. ZIP archive via Onehub that leads to the download of remote
+administration software.  _
+
+### Attribution
+
+Proofpoint researchers attribute this campaign to TA450 based on known TA450
+tactics, techniques, and procedures, campaign targeting, and malware analysis.
+In January 2022, the United States Cyber Command
+[attributed](https://www.cybercom.mil/Media/News/Article/2897570/iranian-
+intel-cyber-suite-of-malware-uses-open-source-tools/) this group to Iran's
+Ministry of Intelligence and Security.
+
+### Why it matters
+
+This activity is notable for several reasons, including that it marks a turn
+in TA450’s tactics. While this campaign is not the first observed instance of
+TA450 using attachments with malicious links as part of the threat actor’s
+attack chain, it is the first time Proofpoint researchers have observed TA450
+attempt to deliver a malicious URL in a PDF attachment rather than directly
+linking the file in an email. Additionally, this campaign is the first time
+Proofpoint has observed TA450 using a sender email account that matches the
+lure content. For example, this campaign used an email account of
+salary[@]<compromisedorg>co[.]il, which is in alignment with the various pay-
+themed subject lines.
+
+Finally, this activity continues TA450's trend of leveraging Hebrew language
+lures and compromised .IL accounts to target Israeli individuals belonging to
+large multinational companies, maintaining a heightened risk for organizations
+with this type of footprint.
+
+### Emerging Threat (ET) signatures
+
+**SID  ** |  **Rule Name  **  
+---|---  
+[2051743](https://threatintel.proofpoint.com/sid/2051743)  |  ET OPEN DNS Query to File Sharing Domain (egnyte .com)   
+[2051745](https://threatintel.proofpoint.com/sid/2051745)  |  ET OPEN 2051745 - DNS Query to File Sharing Domain (sync .com)   
+[2051749](https://threatintel.proofpoint.com/sid/2051749)  |  ET OPEN DNS Query to File Sharing Domain (terabox .com)   
+[2051750](https://threatintel.proofpoint.com/sid/2051750)  |  ET OPEN Observed File Sharing Domain (terabox .com in TLS SNI)   
+[2051746](https://threatintel.proofpoint.com/sid/2051746)  |  ET OPEN Observed File Sharing Domain (egnyte .com in TLS SNI)   
+[2051748](https://threatintel.proofpoint.com/sid/2051748)  |  ET OPEN Observed File Sharing Domain (sync .com in TLS SNI)   
+  
+### Indicators of compromise (IOCs)
+
+**Indicator** |  **Type**  
+---|---  
+salary <salary[@]<compromisedorg>.co[.]il  |  Example of compromised email sender   
+תלושי השכר (Machine translation: Pay slip)  |  Email subject   
+תלוש שכר לחודש 02/2024 (Machine translation: Pay slip for the month 02/2024)  |  Email subject   
+סיסמה לתלוש שכר (Machine translation: Pay slip password)  |  Email subject   
+תלוש השכר .pdf (Machine translation: Pay slip)  |  Document title   
+dee6494e69c6e7289cf3f332e2867662958fa82f819615597e88c16c967a25a9  |  SHA256 (PDF)   
+hxxp://ws.onehub[.]com/files/[alphanumericidentifier]  |  Example malicious URL    
+hxxps://salary.egnyte[.]com/[alphanumericidentifier]  |  Example malicious URL    
+hxxps://ln5.sync[.]com/[alphanumericidentifier]  |  Example malicious URL    
+hxxps://terabox[.]com/s/[alphanumericidentifier]  |  Example malicious URL    
+cc4cc20b558096855c5d492f7a79b160a809355798be2b824525c98964450492  |  SHA256 (salary.zip)   
+e89f48a7351c01cbf2f8e31c65a67f76a5ead689bb11e9d4918090a165d4425f  |  SHA256 (salary.msi)   
+  
+[Previous Blog Post](/us/blog/threat-insight/ta4903-actor-spoofs-us-
+government-small-businesses-phishing-bec-bids)
+
+[Next Blog Post](/us/blog/threat-insight/latrodectus-spider-bytes-ice)
+
+###  Subscribe to the Proofpoint Blog
+
+![](/themes/custom/proofpoint/dist/app-drupal/assets/footer_contact.webp)
+
+## Turn _people_ into your _best defense_ with Proofpoint
+
+[ Get in Touch ](/us/contact)
+
+Products
+
+  * [Collaboration Security](/us/products/threat-protection)
+  * [Data Security and Governance](/us/products/defend-data)
+
+Partners
+
+  * [Channel Partners and Distributors](/us/channel-partners-and-distributors)
+  * [MSP Partners](/us/partners/msp)
+  * [Technology and Alliance Partners](/us/partners/technology-alliance-partners)
+
+Get Support
+
+  * [Product Support Login](https://proofpoint.my.site.com/community/s/)
+  * [Support Services](/us/support-services)
+  * [IP Address Blocked?](/us/postmaster)
+
+More
+
+  * [About Proofpoint](/us/company/about)
+  * [Why Proofpoint](/us/why-proofpoint)
+  * [How to Buy](/us/products/how-to-buy/collaboration-security)
+  * [Careers](/us/company/careers)
+  * [Leadership Team](/us/company/leadership)
+  * [News Center](/us/newsroom)
+  * [AI, Privacy and Trust](/us/legal/trust)
+  * [Hornetsecurity](https://www.proofpoint-total-protection.com/)
+
+Connect with Us
+
+  *     * [Facebook](http://www.facebook.com/proofpoint)
+    * [X](https://x.com/proofpoint)
+    * [LinkedIn](https://www.linkedin.com/company/proofpoint)
+    * [YouTube](https://www.youtube.com/channel/UCIvtJgsrUzFo90NKeiVozhQ)
+    * [Instagram](https://www.instagram.com/proofpoint)
+  * [+1 408 517 4710](tel:+1 408 517 4710)
+  * [Attend an Event](/us/events)
+  * [Contact Us](/us/contact)
+  * [Free Demo Request](/us/free-demo-request)
+
+[ Proofpoint home ](/us)
+
+(C) 2026\. All rights reserved.
+
+[Terms and conditions](/us/legal/license) [Privacy Policy](/us/legal/privacy-
+policy) [Sitemap](/us/sitemap) Cookie Settings
+
+![](//googleads.g.doubleclick.net/pagead/viewthroughconversion/950296937/?value=0&guid=ON&script=0)
+

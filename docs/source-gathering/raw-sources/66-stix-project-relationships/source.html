@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>STIX Relationships | STIX Project Documentation</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35243969-1']);
+      _gaq.push(['_setDomainName', 'stixproject.github.io'])
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+</head>
+
+  <body id="top">
+
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div id="multi-site-nav">
+  <div class="btn-group btn-group-justified">
+    <div class="btn-group">
+      <a class="btn btn-info" href="https://cyboxproject.github.io">CybOX</a>
+    </div>
+    <div class="btn-group">
+      <a class="btn btn-primary" href="https://maecproject.github.io">MAEC</a>
+    </div>
+    <div class="btn-group">
+      <a class="btn btn-danger" href="https://stixproject.github.io">STIX</a>
+    </div>
+    <div class="btn-group">
+      <a class="btn btn-warning" href="https://taxiiproject.github.io">TAXII</a>
+    </div>
+  </div>
+</div>
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="https://stixproject.github.io" class="pull-left"><img src="/images/logo.png" style="max-height: 100px; max-width: 120px; margin-top: 3px;"></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting Started<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li role="presentation"><a href="/getting-started">Getting Started Home</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation" class="dropdown-header">Analysts &amp; Managers</li>
+            <li role="presentation"><a href="/getting-started/whitepaper">Whitepaper</a></li>
+            <li role="presentation" class="disabled"><a href="#" class="coming-soon" data-toggle="tooltip" data-placement="right" title="Coming Soon!">Walkthrough</a></li>
+            <li role="presentation"><a href="/getting-started/analyst-exercise">Modeling Exercise</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation" class="dropdown-header">Developers</li>
+            <li role="presentation"><a href="http://stix.readthedocs.org/en/latest/getting_started.html">Getting Started with Python</a></li>
+            <li role="presentation"><a href="/getting-started/sample-walkthrough">XML Sample Walkthrough</a></li>
+            <li role="presentation"><a href="/getting-started/authoring-tutorial">XML Authoring Tutorial</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li role="presentation"><a href="/documentation">Documentation Home</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a href="/usecases">Use Cases</a></li>
+            <li role="presentation"><a href="/documentation/concepts">Concepts</a></li>
+            <li role="presentation"><a href="/documentation/idioms">Idioms</a></li>
+            <li role="presentation"><a href="/documentation/profiles">Profiles</a></li>
+            <li role="presentation"><a href="/documentation/security">Security Considerations</a></li>
+            <li role="presentation"><a href="/documentation/suggested-practices">Suggested Practices</a></li>
+            <li role="presentation"><a href="/documentation/utilities">Utilities</a></li>
+            <li role="presentation"><a href="/documentation/validation">Validation</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Model<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li role="presentation"><a href="/data-model">Overview</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation" class="dropdown-header">Core Types</li>
+            <li role="presentation"><a href="/data-model/1.2/campaign/CampaignType">Campaign</a></li>
+            <li role="presentation"><a href="/data-model/1.2/coa/CourseOfActionType">Course of Action</a></li>
+            <li role="presentation"><a href="/data-model/1.2/et/ExploitTargetType">Exploit Target</a></li>
+            <li role="presentation"><a href="/data-model/1.2/incident/IncidentType">Incident</a></li>
+            <li role="presentation"><a href="/data-model/1.2/indicator/IndicatorType">Indicator</a></li>
+            <li role="presentation"><a href="/data-model/1.2/report/ReportType">Report</a></li>
+            <li role="presentation"><a href="/data-model/1.2/ta/ThreatActorType">Threat Actor</a></li>
+            <li role="presentation"><a href="/data-model/1.2/ttp/TTPType">TTP</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation" class="dropdown-header">Previous Releases</li>
+            <li role="presentation"><a href="/data-model/1.1.1">STIX 1.1.1</a></li>
+            <li role="presentation"><a href="/data-model/1.1">STIX 1.1</a></li>
+            <li role="presentation"><a href="/data-model/1.0.1">STIX 1.0.1</a></li>
+            <li role="presentation"><a href="/data-model/1.0">STIX 1.0</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Community <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li role="presentation"><a href="/community"> Community Home </a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a href="/supporters"> STIX/TAXII Users </a></li>
+            <li role="presentation"><a href="http://stixproject.tumblr.com/"> News/Blog </a></li>
+          </ul>
+        </li>
+        <li><a href="/about">About</a></li>
+      </ul> <!-- end navbar item list-->
+      <div class="col-sm-4 col-md-4 pull-right header-search">
+        <form class="navbar-form full-width" role="search">
+          <input type="text" class="form-control doc-types" placeholder="Lookup STIX Data Types" name="header-search" id="header-search">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="alert alert-danger" role="alert">
+     <span class="glyphicon glyphicon-exclamation-sign"></span> STIX 2.x documentation is available <a href="https://oasis-open.github.io/cti-documentation/" class="alert-link">here</a>. This site contains archived STIX 1.x documentation. STIX is now maintained by the <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti" class="alert-link"> OASIS CTI TC</a>.
+  </div>
+</div>
+
+
+    <div class="container">
+      <div class="row">
+      
+        <div class="col-md-12">
+        <h1>STIX Relationships</h1>
+        <p>Relationships are one of the features of STIX that make it so powerful for expressing cyber threat intelligence (CTI) when compared to other options.  Although each of the major components is valuable on its own and can be used independently of the others in order to express those concepts, the true power of STIX is realized when components are used in conjunction with each other to better enable contextual understanding for threat analysis. It’s one thing to use STIX to describe an indicator for an IP address without context, it’s another to relate that to the relevant TTP that it indicates, the TTP to the threat actor or actors that are known to use it, to the incidents where it was observed, and to courses of action that can help mitigate its impact.</p>
+
+<p>STIX relationships enable all of this by defining these connection points and how to express them:</p>
+
+<p><img src="/images/stix-architecture.png" alt="STIX relationship diagram" /></p>
+
+<h2 id="types-of-relationships">Types of Relationships</h2>
+
+<p>It should be noted that not all relationships in STIX are about simply conveying that two completely independent things are associated to each other. In real world CTI, relationships between the concepts represented by the STIX major components actually take on one of two flavors: association or composition.</p>
+
+<ul>
+  <li><strong>Association</strong> (“related to”) relationships relate two independent components of CTI content (e.g. ThreatActor_A and TTP_B) that are associated with each other due to some contextual detail or shared affinity. Association relationships should be considered as bidirectional and there is no hard dependency on either of the components associated (i.e. conveying either one would not require inclusion of the association relationship).</li>
+  <li><strong>Composition</strong> (“includes as part of”) relationships relate two components of CTI content (e.g. Indicator_X and Observable_Y) that are related to each other by the fact that one can be considered an inherent property of the other. This does not mean that the “property” component is owned and controlled by the enclosing component or that it cannot be relevant on its own or as part of other content (through referencing). It simply means that the enclosing component would be contextually incomplete without consideration of the “property” component as part of it. Composition relationships should be considered bidirectional but imply an inclusion dependency for the enclosing component (i.e. for contextual completeness if you convey Indicator_X you would also need to include its related Observable_Y).</li>
+</ul>
+
+<h2 id="specifying-relationships">Specifying Relationships</h2>
+
+<p>In STIX, relationships of both flavors are specified from within the primary component of the relationship (for composition relationships this is the enclosing component). This is in order to lend clarity to composition relationships, to encourage specification of particular relationships that are semantically important for the context of a component, and to localize information to where it is most relevant. In other words, if you convey a component, you have conveyed its full context and don’t need to chase down and convey a bunch of related content it is dependent on.</p>
+
+<p>When a relationship is specified, the related component can typically be defined either embedded inline within the primary component or via a reference to a definition elsewhere. It is important to note that a relationship’s nature (Association vs Composition) can typically be considered orthagonal to and independent of its specification approach (referencing vs embedding). Most association relationships (e.g. a Threat_Actor with a related TTP) can be specified either via embedding (e.g. defining the TTP inline within the Threat_Actor/Observed_TTPs structure) or via referencing. The same can be said of composition relationships. There are a small number of relationships in STIX (e.g. Related_Campaigns within Indicators) that are exceptions to this rule and can only be specified via reference due to their pure association nature.</p>
+
+<p>While a relationship’s nature (Association vs Composition) is inherent in the form of information it represents, its specification approach is a choice to be made with varying tradeoffs. For more information on relevant suggested practices see <a href="../../suggested-practices">Suggested Practices: Referencing vs. Embedding</a>.</p>
+
+<h3 id="mechanisms-for-specifying-relationships">Mechanisms for Specifying Relationships</h3>
+
+<p>Almost all relationships in STIX are implemented using a similar structure to ensure consistency and ease of implementation. The structure allows
+for representation of the relationship itself (of course), a label to further describe the semantics of the relationship, a confidence in
+the assertion of a relationship, and an information source for the relationship assertion. These fields mean that not only can STIX
+components be related together, they can be related together in a semantically meaningful way that preserves the confidence and provenance
+of the relationship assertion.</p>
+
+<h3 id="data-model">Data Model</h3>
+
+<p>In XML, a basic STIX relationship structure looks like this (the relationship is “Indicated_TTP”, which goes from an indicator to a TTP):</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;indicator:Indicator&gt;</span>
+	<span class="nt">&lt;indicator:Indicated_TTPs&gt;</span>
+		<span class="nt">&lt;indicator:Indicated_TTP&gt;</span>
+			<span class="nt">&lt;stixCommon:Confidence</span> <span class="nt">/&gt;</span>
+			<span class="nt">&lt;stixCommon:Information_Source/&gt;</span>
+			<span class="nt">&lt;stixCommon:Relationship</span> <span class="nt">/&gt;</span>
+			<span class="nt">&lt;stixCommon:TTP</span> <span class="nt">/&gt;</span>
+		<span class="nt">&lt;/indicator:Indicated_TTP&gt;</span>
+	<span class="nt">&lt;/indicator:Indicated_TTPs&gt;</span>
+<span class="nt">&lt;/indicator:Indicator&gt;</span></code></pre></figure>
+
+<p>The <code class="language-plaintext highlighter-rouge">Confidence</code> field uses the STIX confidence mechanism to express confidence in the relationship assertion. For example, if the producer is not certain that a particular TTP is used by a Threat Actor they could use “Low” confidence to denote that.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Information Source</code> field, using <a href="/data-model/1.2/stixCommon/InformationSourceType">InformationSourceType</a>, is used to characterize provenance information about the relationship assertion. It can be used to indicate who, when, and how (what tools) the relationship assertion was made.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Relationship</code> field uses specifies a semantic label for what kind of relationship is being asserted. This value can be ad-hoc or reference a value from a STIX controlled vocabulary. Although no default vocabulary has currently been defined, the STIX community is currently soliciting input on potential vocabularies.</p>
+
+<p>Finally, the <code class="language-plaintext highlighter-rouge">TTP</code> field (contextually specific to an Indicated_TTP relationship) contains either a reference to or a full representation of the related component. This assumes it is a full relationship type. If it is only a reference type then only a reference to the related component would be supported. The field name will always be the name of the component that the relationship is pointing to, which in this case is TTP.</p>
+
+<p>If using that field as a reference, the <code class="language-plaintext highlighter-rouge">idref</code> field is used to point to the <code class="language-plaintext highlighter-rouge">id</code> of the construct that the relationship is to. Optionally, the <code class="language-plaintext highlighter-rouge">timestamp</code> field can also be used to create a reference to a specific version of the construct.</p>
+
+<p>For example:</p>
+
+<div class="tab-container">
+  <ul class="nav nav-tabs">
+
+  <li class="active"><a href="#ref-1" data-toggle="tab">XML</a></li>
+
+  <li><a href="#ref-2" data-toggle="tab">Python</a></li>
+
+  </ul>
+  <div class="tab-content"><div class="tab-pane active" id="ref-1">
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="nt">&lt;stix:Indicators&gt;</span>
+  <span class="nt">&lt;stix:Indicator</span> <span class="na">id=</span><span class="s">"example:indicator-8837a4b4-b682-11e3-b0f3-0800271e87d2"</span> <span class="na">xsi:type=</span><span class="s">'indicator:IndicatorType'</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;indicator:Indicated_TTP&gt;</span>
+      <span class="nt">&lt;stixCommon:TTP</span> <span class="na">idref=</span><span class="s">"example:ttp-883730f6-b682-11e3-b0f3-0800271e87d2"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/indicator:Indicated_TTP&gt;</span>
+  <span class="nt">&lt;/stix:Indicator&gt;</span>
+<span class="nt">&lt;/stix:Indicators&gt;</span>
+<span class="nt">&lt;stix:TTPs&gt;</span>
+  <span class="nt">&lt;stix:TTP</span> <span class="na">id=</span><span class="s">"example:ttp-883730f6-b682-11e3-b0f3-0800271e87d2"</span> <span class="na">xsi:type=</span><span class="s">'ttp:TTPType'</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/stix:TTPs&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div><div class="tab-pane" id="ref-2">
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">stix.core</span> <span class="kn">import</span> <span class="n">STIXPackage</span>
+<span class="kn">from</span> <span class="nn">stix.indicator</span> <span class="kn">import</span> <span class="n">Indicator</span>
+<span class="kn">from</span> <span class="nn">stix.ttp</span> <span class="kn">import</span> <span class="n">TTP</span>
+
+<span class="n">stix_package</span> <span class="o">=</span> <span class="n">STIXPackage</span><span class="p">()</span>
+<span class="n">ttp</span> <span class="o">=</span> <span class="n">TTP</span><span class="p">()</span>
+
+<span class="n">indicator</span> <span class="o">=</span> <span class="n">Indicator</span><span class="p">()</span>
+<span class="n">indicator</span><span class="p">.</span><span class="n">add_indicated_ttp</span><span class="p">(</span><span class="n">TTP</span><span class="p">(</span><span class="n">idref</span><span class="o">=</span><span class="n">ttp</span><span class="p">.</span><span class="n">id_</span><span class="p">))</span>
+
+<span class="n">stix_package</span><span class="p">.</span><span class="n">add_indicator</span><span class="p">(</span><span class="n">indicator</span><span class="p">)</span>
+<span class="n">stix_package</span><span class="p">.</span><span class="n">add_ttp</span><span class="p">(</span><span class="n">ttp</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">stix_package</span><span class="p">.</span><span class="n">to_xml</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div></div></div>
+
+<p>In the example above, a reference is created by setting the <code class="language-plaintext highlighter-rouge">idref</code> of the relationship TTP to the <code class="language-plaintext highlighter-rouge">id</code> of the TTP related itself. Note that while the TTP definition requires the <code class="language-plaintext highlighter-rouge">xsi:type</code>, the TTP reference does not because it only uses the <code class="language-plaintext highlighter-rouge">idref</code> field. It could also have added a <code class="language-plaintext highlighter-rouge">timestamp</code> set to exactly “2014-03-31T00:00:00.000000Z” to indicate that the relationship applies to that specific version of the TTP.</p>
+
+<p>Assuming that you’re using a full relationship structure, you can also choose to embed the related component:</p>
+
+<div class="tab-container">
+  <ul class="nav nav-tabs">
+
+  <li class="active"><a href="#embed-1" data-toggle="tab">XML</a></li>
+
+  <li><a href="#embed-2" data-toggle="tab">Python</a></li>
+
+  </ul>
+  <div class="tab-content"><div class="tab-pane active" id="embed-1">
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="nt">&lt;stix:Indicators&gt;</span>
+  <span class="nt">&lt;stix:Indicator</span> <span class="na">id=</span><span class="s">"example:indicator-3cdff264-b682-11e3-ab3e-0800271e87d2"</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span> <span class="na">xsi:type=</span><span class="s">"indicator:IndicatorType"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;indicator:Indicated_TTP&gt;</span>
+      <span class="nt">&lt;stixCommon:TTP</span> <span class="na">id=</span><span class="s">"example:ttp-3cdf6c54-b682-11e3-ab3e-0800271e87d2"</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span> <span class="na">xsi:type=</span><span class="s">"ttp:TTPType"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- SNIP --&gt;</span>
+      <span class="nt">&lt;/stixCommon:TTP&gt;</span>
+    <span class="nt">&lt;/indicator:Indicated_TTP&gt;</span>
+  <span class="nt">&lt;/stix:Indicator&gt;</span>
+<span class="nt">&lt;/stix:Indicators&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div><div class="tab-pane" id="embed-2">
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">stix.core</span> <span class="kn">import</span> <span class="n">STIXPackage</span>
+<span class="kn">from</span> <span class="nn">stix.indicator</span> <span class="kn">import</span> <span class="n">Indicator</span>
+<span class="kn">from</span> <span class="nn">stix.ttp</span> <span class="kn">import</span> <span class="n">TTP</span>
+
+<span class="n">stix_package</span> <span class="o">=</span> <span class="n">STIXPackage</span><span class="p">()</span>
+<span class="n">ttp</span> <span class="o">=</span> <span class="n">TTP</span><span class="p">()</span>
+
+<span class="n">indicator</span> <span class="o">=</span> <span class="n">Indicator</span><span class="p">()</span>
+<span class="n">indicator</span><span class="p">.</span><span class="n">add_indicated_ttp</span><span class="p">(</span><span class="n">ttp</span><span class="p">)</span>
+
+<span class="n">stix_package</span><span class="p">.</span><span class="n">add_indicator</span><span class="p">(</span><span class="n">indicator</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">stix_package</span><span class="p">.</span><span class="n">to_xml</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div></div></div>
+
+<p>In this case the TTP is not defined separately at the top level, it is included in full inside the Indicated TTP. When embedding another component it does require using the <code class="language-plaintext highlighter-rouge">xsi:type</code> (because the full TTP model is being used) and allows (but does not require) the use of <code class="language-plaintext highlighter-rouge">id</code> and <code class="language-plaintext highlighter-rouge">timestamp</code> to give the construct and ID.</p>
+
+<h3 id="examples">Examples</h3>
+
+<h4 id="minimal-embed">Minimal Embed</h4>
+
+<div class="tab-container">
+  <ul class="nav nav-tabs">
+
+  <li class="active"><a href="#min-embed-1" data-toggle="tab">XML</a></li>
+
+  <li><a href="#min-embed-2" data-toggle="tab">Python</a></li>
+
+  </ul>
+  <div class="tab-content"><div class="tab-pane active" id="min-embed-1">
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre><span class="nt">&lt;stix:Indicators&gt;</span>
+  <span class="nt">&lt;stix:Indicator</span> <span class="na">id=</span><span class="s">"example:indicator-3cdff264-b682-11e3-ab3e-0800271e87d2"</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span> <span class="na">xsi:type=</span><span class="s">"indicator:IndicatorType"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;indicator:Indicated_TTP&gt;</span>
+      <span class="nt">&lt;stixCommon:TTP</span> <span class="na">id=</span><span class="s">"example:ttp-3cdf6c54-b682-11e3-ab3e-0800271e87d2"</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span> <span class="na">xsi:type=</span><span class="s">"ttp:TTPType"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!-- SNIP --&gt;</span>
+      <span class="nt">&lt;/stixCommon:TTP&gt;</span>
+    <span class="nt">&lt;/indicator:Indicated_TTP&gt;</span>
+  <span class="nt">&lt;/stix:Indicator&gt;</span>
+<span class="nt">&lt;/stix:Indicators&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div><div class="tab-pane" id="min-embed-2">
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">stix.core</span> <span class="kn">import</span> <span class="n">STIXPackage</span>
+<span class="kn">from</span> <span class="nn">stix.indicator</span> <span class="kn">import</span> <span class="n">Indicator</span>
+<span class="kn">from</span> <span class="nn">stix.ttp</span> <span class="kn">import</span> <span class="n">TTP</span>
+
+<span class="n">stix_package</span> <span class="o">=</span> <span class="n">STIXPackage</span><span class="p">()</span>
+<span class="n">ttp</span> <span class="o">=</span> <span class="n">TTP</span><span class="p">()</span>
+
+<span class="n">indicator</span> <span class="o">=</span> <span class="n">Indicator</span><span class="p">()</span>
+<span class="n">indicator</span><span class="p">.</span><span class="n">add_indicated_ttp</span><span class="p">(</span><span class="n">ttp</span><span class="p">)</span>
+
+<span class="n">stix_package</span><span class="p">.</span><span class="n">add_indicator</span><span class="p">(</span><span class="n">indicator</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">stix_package</span><span class="p">.</span><span class="n">to_xml</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div></div></div>
+
+<h4 id="minimal-reference">Minimal Reference</h4>
+
+<div class="tab-container">
+  <ul class="nav nav-tabs">
+
+  <li class="active"><a href="#min-ref-1" data-toggle="tab">XML</a></li>
+
+  <li><a href="#min-ref-2" data-toggle="tab">Python</a></li>
+
+  </ul>
+  <div class="tab-content"><div class="tab-pane active" id="min-ref-1">
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre><span class="nt">&lt;stix:Indicators&gt;</span>
+  <span class="nt">&lt;stix:Indicator</span> <span class="na">id=</span><span class="s">"example:indicator-8837a4b4-b682-11e3-b0f3-0800271e87d2"</span> <span class="na">xsi:type=</span><span class="s">'indicator:IndicatorType'</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;indicator:Indicated_TTP&gt;</span>
+      <span class="nt">&lt;stixCommon:TTP</span> <span class="na">idref=</span><span class="s">"example:ttp-883730f6-b682-11e3-b0f3-0800271e87d2"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/indicator:Indicated_TTP&gt;</span>
+  <span class="nt">&lt;/stix:Indicator&gt;</span>
+<span class="nt">&lt;/stix:Indicators&gt;</span>
+<span class="nt">&lt;stix:TTPs&gt;</span>
+  <span class="nt">&lt;stix:TTP</span> <span class="na">id=</span><span class="s">"example:ttp-883730f6-b682-11e3-b0f3-0800271e87d2"</span> <span class="na">xsi:type=</span><span class="s">'ttp:TTPType'</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/stix:TTPs&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div><div class="tab-pane" id="min-ref-2">
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">stix.core</span> <span class="kn">import</span> <span class="n">STIXPackage</span>
+<span class="kn">from</span> <span class="nn">stix.indicator</span> <span class="kn">import</span> <span class="n">Indicator</span>
+<span class="kn">from</span> <span class="nn">stix.ttp</span> <span class="kn">import</span> <span class="n">TTP</span>
+
+<span class="n">stix_package</span> <span class="o">=</span> <span class="n">STIXPackage</span><span class="p">()</span>
+<span class="n">ttp</span> <span class="o">=</span> <span class="n">TTP</span><span class="p">()</span>
+
+<span class="n">indicator</span> <span class="o">=</span> <span class="n">Indicator</span><span class="p">()</span>
+<span class="n">indicator</span><span class="p">.</span><span class="n">add_indicated_ttp</span><span class="p">(</span><span class="n">TTP</span><span class="p">(</span><span class="n">idref</span><span class="o">=</span><span class="n">ttp</span><span class="p">.</span><span class="n">id_</span><span class="p">))</span>
+
+<span class="n">stix_package</span><span class="p">.</span><span class="n">add_indicator</span><span class="p">(</span><span class="n">indicator</span><span class="p">)</span>
+<span class="n">stix_package</span><span class="p">.</span><span class="n">add_ttp</span><span class="p">(</span><span class="n">ttp</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">stix_package</span><span class="p">.</span><span class="n">to_xml</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div></div></div>
+
+<h4 id="use-of-relationship-field">Use of Relationship Field</h4>
+
+<div class="tab-container">
+  <ul class="nav nav-tabs">
+
+  <li class="active"><a href="#rel-1" data-toggle="tab">XML</a></li>
+
+  <li><a href="#rel-2" data-toggle="tab">Python</a></li>
+
+  </ul>
+  <div class="tab-content"><div class="tab-pane active" id="rel-1">
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="nt">&lt;stix:Indicators&gt;</span>
+  <span class="nt">&lt;stix:Indicator</span> <span class="na">id=</span><span class="s">"example:indicator-7f7b073e-b683-11e3-b79d-0800271e87d2"</span> <span class="na">xsi:type=</span><span class="s">'indicator:IndicatorType'</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;indicator:Indicated_TTP&gt;</span>
+      <span class="nt">&lt;stixCommon:Relationship&gt;</span>Indicates Malware<span class="nt">&lt;/stixCommon:Relationship&gt;</span>
+      <span class="nt">&lt;stixCommon:TTP</span> <span class="na">idref=</span><span class="s">"example:ttp-7f7a4ede-b683-11e3-b79d-0800271e87d2"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/indicator:Indicated_TTP&gt;</span>
+  <span class="nt">&lt;/stix:Indicator&gt;</span>
+<span class="nt">&lt;/stix:Indicators&gt;</span>
+<span class="nt">&lt;stix:TTPs&gt;</span>
+  <span class="nt">&lt;stix:TTP</span> <span class="na">id=</span><span class="s">"example:ttp-7f7a4ede-b683-11e3-b79d-0800271e87d2"</span> <span class="na">xsi:type=</span><span class="s">'ttp:TTPType'</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/stix:TTPs&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div><div class="tab-pane" id="rel-2">
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">stix.core</span> <span class="kn">import</span> <span class="n">STIXPackage</span>
+<span class="kn">from</span> <span class="nn">stix.indicator</span> <span class="kn">import</span> <span class="n">Indicator</span>
+<span class="kn">from</span> <span class="nn">stix.ttp</span> <span class="kn">import</span> <span class="n">TTP</span>
+<span class="kn">from</span> <span class="nn">stix.common.related</span> <span class="kn">import</span> <span class="n">RelatedTTP</span>
+
+<span class="n">stix_package</span> <span class="o">=</span> <span class="n">STIXPackage</span><span class="p">()</span>
+<span class="n">ttp</span> <span class="o">=</span> <span class="n">TTP</span><span class="p">()</span>
+
+<span class="n">indicator</span> <span class="o">=</span> <span class="n">Indicator</span><span class="p">()</span>
+<span class="n">indicator</span><span class="p">.</span><span class="n">add_indicated_ttp</span><span class="p">(</span><span class="n">RelatedTTP</span><span class="p">(</span><span class="n">TTP</span><span class="p">(</span><span class="n">idref</span><span class="o">=</span><span class="n">ttp</span><span class="p">.</span><span class="n">id_</span><span class="p">),</span>
+                                       <span class="n">relationship</span><span class="o">=</span><span class="s">"Indicates Malware"</span><span class="p">))</span>
+
+<span class="n">stix_package</span><span class="p">.</span><span class="n">add_indicator</span><span class="p">(</span><span class="n">indicator</span><span class="p">)</span>
+<span class="n">stix_package</span><span class="p">.</span><span class="n">add_ttp</span><span class="p">(</span><span class="n">ttp</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">stix_package</span><span class="p">.</span><span class="n">to_xml</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div></div></div>
+
+<h4 id="use-of-confidence-and-information-source">Use of Confidence and Information Source</h4>
+
+<div class="tab-container">
+  <ul class="nav nav-tabs">
+
+  <li class="active"><a href="#conf-1" data-toggle="tab">XML</a></li>
+
+  <li><a href="#conf-2" data-toggle="tab">Python</a></li>
+
+  </ul>
+  <div class="tab-content"><div class="tab-pane active" id="conf-1">
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="code"><pre><span class="nt">&lt;stix:Indicators&gt;</span>
+  <span class="nt">&lt;stix:Indicator</span> <span class="na">id=</span><span class="s">"example:indicator-50787664-b684-11e3-9149-0800271e87d2"</span> <span class="na">xsi:type=</span><span class="s">'indicator:IndicatorType'</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;indicator:Indicated_TTP&gt;</span>
+      <span class="nt">&lt;stixCommon:Confidence&gt;</span>
+        <span class="nt">&lt;stixCommon:Value</span> <span class="na">xsi:type=</span><span class="s">"stixVocabs:HighMediumLowVocab-1.0"</span><span class="nt">&gt;</span>High<span class="nt">&lt;/stixCommon:Value&gt;</span>
+      <span class="nt">&lt;/stixCommon:Confidence&gt;</span>
+      <span class="nt">&lt;stixCommon:Information_Source&gt;</span>
+        <span class="nt">&lt;stixCommon:Identity</span> <span class="na">id=</span><span class="s">"example:Identity-50790476-b684-11e3-9149-0800271e87d2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;stixCommon:Name&gt;</span>Acme, Inc.<span class="nt">&lt;/stixCommon:Name&gt;</span>
+        <span class="nt">&lt;/stixCommon:Identity&gt;</span>
+      <span class="nt">&lt;/stixCommon:Information_Source&gt;</span>
+      <span class="nt">&lt;stixCommon:Relationship&gt;</span>Indicates Malware<span class="nt">&lt;/stixCommon:Relationship&gt;</span>
+      <span class="nt">&lt;stixCommon:TTP</span> <span class="na">idref=</span><span class="s">"example:ttp-5077da92-b684-11e3-9149-0800271e87d2"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/indicator:Indicated_TTP&gt;</span>
+  <span class="nt">&lt;/stix:Indicator&gt;</span>
+<span class="nt">&lt;/stix:Indicators&gt;</span>
+<span class="nt">&lt;stix:TTPs&gt;</span>
+  <span class="nt">&lt;stix:TTP</span> <span class="na">id=</span><span class="s">"example:ttp-5077da92-b684-11e3-9149-0800271e87d2"</span> <span class="na">xsi:type=</span><span class="s">'ttp:TTPType'</span> <span class="na">timestamp=</span><span class="s">"2014-03-31T00:00:00.000000Z"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/stix:TTPs&gt;</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div><div class="tab-pane" id="conf-2">
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre><span class="kn">from</span> <span class="nn">stix.core</span> <span class="kn">import</span> <span class="n">STIXPackage</span>
+<span class="kn">from</span> <span class="nn">stix.indicator</span> <span class="kn">import</span> <span class="n">Indicator</span>
+<span class="kn">from</span> <span class="nn">stix.ttp</span> <span class="kn">import</span> <span class="n">TTP</span>
+<span class="kn">from</span> <span class="nn">stix.common.related</span> <span class="kn">import</span> <span class="n">RelatedTTP</span>
+<span class="kn">from</span> <span class="nn">stix.common</span> <span class="kn">import</span> <span class="n">Confidence</span><span class="p">,</span> <span class="n">InformationSource</span><span class="p">,</span> <span class="n">Identity</span>
+
+<span class="n">stix_package</span> <span class="o">=</span> <span class="n">STIXPackage</span><span class="p">()</span> <span class="n">ttp</span> <span class="o">=</span> <span class="n">TTP</span><span class="p">()</span>
+
+<span class="n">indicator</span> <span class="o">=</span> <span class="n">Indicator</span><span class="p">()</span>
+<span class="n">confidence</span> <span class="o">=</span> <span class="n">Confidence</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"High"</span><span class="p">)</span>
+<span class="n">info_src</span> <span class="o">=</span> <span class="n">InformationSource</span><span class="p">(</span><span class="n">identity</span><span class="o">=</span><span class="n">Identity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">"Acme, Inc."</span><span class="p">))</span>
+<span class="n">indicator</span><span class="p">.</span><span class="n">add_indicated_ttp</span><span class="p">(</span><span class="n">RelatedTTP</span><span class="p">(</span><span class="n">TTP</span><span class="p">(</span><span class="n">idref</span><span class="o">=</span><span class="n">ttp</span><span class="p">.</span><span class="n">id_</span><span class="p">),</span>
+                                       <span class="n">relationship</span><span class="o">=</span><span class="s">"Indicates Malware"</span><span class="p">,</span>
+                                       <span class="n">information_source</span><span class="o">=</span><span class="n">info_src</span><span class="p">,</span>
+                                       <span class="n">confidence</span><span class="o">=</span><span class="n">confidence</span><span class="p">))</span>
+
+<span class="n">stix_package</span><span class="p">.</span><span class="n">add_indicator</span><span class="p">(</span><span class="n">indicator</span><span class="p">)</span>
+<span class="n">stix_package</span><span class="p">.</span><span class="n">add_ttp</span><span class="p">(</span><span class="n">ttp</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">stix_package</span><span class="p">.</span><span class="n">to_xml</span><span class="p">()</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+</div></div></div>
+
+<h2 id="further-reading">Further Reading</h2>
+
+<p>Many (even most) of the use-case driven idioms show specific examples of STIX relationships:</p>
+
+<ul>
+  <li><a href="/documentation/idioms/victim-targeting">Campaign Victim Targeting</a></li>
+  <li><a href="/documentation/idioms/incident-malware">Malware used in an Incident</a></li>
+  <li><a href="/documentation/idioms/c2-indicator">C2 Indicator</a></li>
+  <li><a href="/documentation/idioms/malicious-email-attachment">Malicious E-mail Attachment</a></li>
+  <li><a href="/documentation/idioms/leveraged-ttp">TTP Leveraged by a Threat Actor</a></li>
+</ul>
+
+        </div>
+      
+      </div>
+    </div>
+
+    <div id="footer" >
+  <hr />
+  <div class="container">
+    <p class="text-muted">
+      Copyright 2021 The MITRE Corporation. <a href="/legal">Legal</a>
+    </p>
+  </div>
+</div>
+
+<!-- jQuery JS -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- bootstrap JS -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- typeahead JS -->
+<script src="/js/typeahead.min.js"></script>
+
+<!-- autocomplete results -->
+
+<script src="/js/autocomplete-1.2.js"></script>
+
+<!-- Custom JS -->
+<script src="/js/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "number": 45,
+  "title": "Kaspersky ICS CERT — APT and financial attacks on industrial organizations in Q2 2024 PDF",
+  "url": "https://ics-cert.kaspersky.com/wp-content/uploads/2024/10/kaspersky-ics-cert-apt-and-financial-attacks-on-industrial-organizations-in-q2-2024-en.pdf",
+  "curl_status": "200 https://ics-cert.kaspersky.com/wp-content/uploads/2024/10/kaspersky-ics-cert-apt-and-financial-attacks-on-industrial-organizations-in-q2-2024-en.pdf",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n 42  278k   42  119k    0     0   109k      0  0:00:02  0:00:01  0:00:01  109k\n100  278k  100  278k    0     0   232k      0  0:00:01  0:00:01 --:--:--  233k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "pdf",
+  "raw_file": "docs/source-gathering/raw-sources/45-kaspersky-ics-cert-apt-and-financial-attacks-on-industrial-organizations-in-q2-2024-pdf/source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/45-kaspersky-ics-cert-apt-and-financial-attacks-on-industrial-organizations-in-q2-2024-pdf/source.txt",
+  "size_bytes": 285428,
+  "extract_error": ""
+}

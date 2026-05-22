@@ -1,0 +1,15 @@
+{
+  "number": 68,
+  "title": "From Text to Actionable Intelligence: Automating STIX Entity and Relationship Extraction",
+  "url": "https://arxiv.org/abs/2507.16576",
+  "curl_status": "200 https://arxiv.org/abs/2507.16576",
+  "http_status": "200",
+  "stderr": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100 47779  100 47779    0     0   170k      0 --:--:-- --:--:-- --:--:--  171k",
+  "saved": true,
+  "http_ok": true,
+  "kind": "html",
+  "raw_file": "docs/source-gathering/raw-sources/68-from-text-to-actionable-intelligence-automating-stix-entity-and-relationship-extraction/source.html",
+  "text_file": "docs/source-gathering/raw-sources/68-from-text-to-actionable-intelligence-automating-stix-entity-and-relationship-extraction/source.txt",
+  "size_bytes": 47779,
+  "extract_error": ""
+}

