@@ -1339,6 +1339,12 @@ wscript.exe sim_exploit.vbs
 
 **Pass criteria:** Both rules fire independently. Confirm Script Block Logging (Event ID 4104) is enabled — this is the hard capability gate.
 
+> **Kibana proof — Rule A** (Sysmon EID 1, `powershell.exe -e <Base64>`, 4 events):
+> ![Step 23a — det_mw_0003 Rule A proof](proofs/phase-5/step-23a-det-mw-0003-rule-a.png)
+
+> **Kibana proof — Rule B** (PS EID 4104, `IEX + DownloadString`, 16 events):
+> ![Step 23b — det_mw_0003 Rule B proof](proofs/phase-5/step-23b-det-mw-0003-rule-b.png)
+
 ### 24. Validate det_mw_0004 — Unsigned DLL Side-Loading
 
 **Simulation:** Create a test directory outside `C:\Program Files\Google\` (e.g., `C:\Temp\SideLoad\`). Copy a signed `GoogleUpdate.exe` binary there. Drop a benign DLL named `goopdate.dll` in the same directory. Launch `GoogleUpdate.exe`.
@@ -1360,6 +1366,12 @@ wscript.exe sim_exploit.vbs
 
 **Pass criteria:** Both events fire; Rule A fires on exact value name match.
 
+> **Kibana proof — Rule A** (Sysmon EID 13, `OutlookMicrosift` Run key, 3 events):
+> ![Step 25a — det_mw_0005 Rule A proof](proofs/phase-5/step-25a-det-mw-0005-rule-a.png)
+
+> **Kibana proof — Rule C** (Sysmon EID 11, `.wsf` in Startup folder, 3 events):
+> ![Step 25c — det_mw_0005 Rule C proof](proofs/phase-5/step-25c-det-mw-0005-rule-c.png)
+
 ### 26. Validate det_mw_0006 — Scheduled Task: 43-Minute Interval
 
 **Simulation:** Create a scheduled task via `schtasks.exe /create /tn TestTask /tr notepad.exe /sc MINUTE /mo 43 /f`. Confirm Task Scheduler log entry. Delete immediately after.
@@ -1370,6 +1382,9 @@ wscript.exe sim_exploit.vbs
 - Sysmon Event ID 1 (Rule C fallback): `schtasks.exe` command line contains `/mo 43`
 
 **Pass criteria:** Task creation event fires; interval visible in log; command-line rule would fire as fallback.
+
+> **Kibana proof** (Sysmon EID 1, `schtasks.exe /mo 43`, 3 events):
+> ![Step 26 — det_mw_0006 proof](proofs/phase-5/step-26-det-mw-0006.png)
 
 ### 27. Validate det_mw_0007 — RMM Tool Abuse
 
@@ -1382,6 +1397,9 @@ wscript.exe sim_exploit.vbs
 - Rule B: Sysmon Event ID 1: RMM binary, `parent_image = powershell.exe`
 
 **Pass criteria:** Both process creation events fire with path and parent conditions met. Rule C (network) skipped — requires live RMM infrastructure baseline.
+
+> **Kibana proof — Rule A** (Sysmon EID 1, `ScreenConnect.ClientService.exe` from `\Temp\`, 6 events):
+> ![Step 27 — det_mw_0007 proof](proofs/phase-5/step-27-det-mw-0007.png)
 
 ### 28. Validate det_mw_0008a — Telegram Bot API C2
 
@@ -1402,6 +1420,9 @@ wscript.exe sim_exploit.vbs
 
 **Pass criteria:** Volume threshold (Rule A) and label length threshold (Rule B) would both trigger. Entropy rule (Rule C) requires baseline — note as partially validated.
 
+> **Kibana proof** (Sysmon EID 22, random 42-char labels + `.test.internal`, 180 events):
+> ![Step 29 — det_mw_0008b proof](proofs/phase-5/step-29-det-mw-0008b.png)
+
 ### 30. Validate det_mw_0009 — WMI SecurityCenter2 Discovery
 
 **Simulation (Rule A):** Run: `powershell.exe -Command "Get-WmiObject -Namespace root/SecurityCenter2 -Class AntiVirusProduct"` with Script Block Logging enabled.
@@ -1413,6 +1434,9 @@ wscript.exe sim_exploit.vbs
 - Rule B: Sysmon Event ID 1: `wmic.exe` command line contains `SecurityCenter2`
 
 **Pass criteria:** Both events fire. Script Block Logging confirmed active.
+
+> **Kibana proof — Rule A** (PS EID 4104, `SecurityCenter2` WMI query, 21 events):
+> ![Step 30a — det_mw_0009 Rule A proof](proofs/phase-5/step-30a-det-mw-0009-rule-a.png)
 
 ### 31. Validate det_mw_0010 — LSASS Memory Access
 
