@@ -705,6 +705,12 @@ The script starts the core stack (Redis, Elasticsearch, MinIO, RabbitMQ, OpenCTI
 - Browser screenshot of the OpenCTI login page at `http://localhost:8080`
 - Browser screenshot of the OpenCTI dashboard after login
 
+**Done.** Stack started successfully on 2026-05-22. All 12/12 core stack containers and 7/7 connector containers started. AI enrichment connector built from Dockerfile and started.
+
+Proof: `docs/proofs/phase-3/step-10-stack-start.png`
+
+![Step 10 — Stack start](proofs/phase-3/step-10-stack-start.png)
+
 ### 11. Verify MITRE ATT&CK Connector Sync
 
 The MITRE ATT&CK connector must complete its initial sync before ATT&CK pattern links can be created. The sync loads all ATT&CK Enterprise techniques, tactics, groups, and software objects into the graph.
