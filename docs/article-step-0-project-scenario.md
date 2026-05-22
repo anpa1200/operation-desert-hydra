@@ -245,6 +245,8 @@ Search exact terms including: MuddyWater Iran MOIS, MuddyWater Seedworm, MuddyWa
 Output only these sections: 1) Executive Source Assessment, 2) High-Priority Source Register with 10-20 best sources in YAML, 3) Extended Source Register, 4) Direct Downloads Table, 5) Actor Alias / Overlap Notes, 6) Procedure Extraction Candidates grouped by tactic with source_ids, evidence_label, ATT&CK candidate, required telemetry, detection opportunity, validation_possible, 7) OpenCTI Modeling Candidates, 8) Detection Engineering Opportunities marked candidate only, 9) Gaps And Manual Review Items. The final output must be usable to seed data/sources.yaml, data/procedures.yaml, docs methodology, OpenCTI import plan, and detection atlas.
 ```
 
+**Done.** Parallel deep-research passes were completed using Gemini and OpenAI, both given the full prompt above. Each model returned a candidate source register covering government advisories, vendor threat reports, MITRE framework profiles, actor-comparison sources, and detection opportunity candidates. The raw outputs are working research material — not validated project data. No source, claim, alias, or ATT&CK mapping from these files is treated as evidence until analyst-reviewed.
+
 ### 2. Save The Result
 
 Save the raw deep-research result to:
@@ -260,6 +262,8 @@ data/sources.yaml
 ```
 
 The raw AI output stays in `docs/source-gathering/` as working material. Only reviewed sources should be promoted into `data/sources.yaml`.
+
+**Done.** The planned single `deep-research-raw.md` file was not created. Instead, each model's output was saved as a separate artifact per Step 3 below, which serves as the equivalent output.
 
 ### 3. Save Parallel Research Results
 
@@ -277,6 +281,13 @@ Short description:
 
 These files are research inputs. They are not validated project data.
 
+**Done.** Both outputs were saved as separate files and not merged:
+
+- `docs/source-gathering/Gemini-research.md` — candidate source register from Gemini, covering government advisories, vendor reports, actor claims, direct-download links, and relevance flags.
+- `docs/source-gathering/openAI-research.md` — source assessment from OpenAI, including executive assessment, high-priority sources, extended sources, direct-download table, extraction candidates, OpenCTI modeling candidates, detection opportunities, and gap analysis.
+
+Neither file was treated as validated data. Both served as inputs for the comparison and deduplication step.
+
 ### 4. Compare And Deduplicate Sources
 
 Compare the Gemini and OpenAI outputs before promotion.
@@ -293,6 +304,12 @@ The review should identify:
 - detection ideas that are not backed by source evidence
 
 The result should be a clean candidate list for analyst review, not a larger pile of links.
+
+**Done.** The Gemini and OpenAI outputs were compared. Duplicates with different IDs were identified and consolidated. Placeholder or unverifiable URLs were flagged. Secondary summaries that duplicated primary reports were removed. The result was saved to:
+
+`docs/source-gathering/relevant-research-list.md`
+
+This list became the acquisition target for Step 5. The combined AI output covered approximately 71 candidate sources after deduplication.
 
 ### 5. Acquire Local Copies Of Sources
 
@@ -324,6 +341,13 @@ Short description:
 - `fallback-reader.txt` stores a reader-mode fallback when a site blocks direct scraping.
 
 This stage is acquisition only. It does not validate the source claims.
+
+**Done.** All 71 candidate sources were acquired using `tools/fetch_research_sources.py`. Each source received its own numbered folder under `docs/source-gathering/raw-sources/` containing metadata.json, headers.txt, the source file, extracted source.txt, and a fallback-reader.txt where direct scraping was blocked.
+
+- 71 sources attempted
+- 65 source folders retained after the quality pass
+- 6 source folders deleted after failing quality check (see Step 6)
+- Several sources returned 403 or anti-bot responses; reader-mode fallbacks were saved where possible
 
 ### 6. Validate Saved Source Quality
 
@@ -364,6 +388,24 @@ needs_retry   = alternate version required
 ```
 
 Do not promote a source into `data/sources.yaml` until its saved copy is `usable` or explicitly accepted as `partial`.
+
+**Done.** Six sources were deleted after failing the quality check. Six sources had blocked direct fetches but retained usable reader-mode fallbacks and were kept.
+
+Deleted after quality check:
+
+| Source | Reason |
+|---|---|
+| 04 CISA MuddyWater alert | Weak duplicate; direct fetch blocked; source 05 and 07 are better |
+| 06 CISA AA22-055A PDF | `source.pdf` was an HTML access-denied page; source 07 is the correct PDF mirror |
+| 20 ClearSky Operation Quicksand blog | Anti-bot page; minimal content only |
+| 21 ClearSky Operation Quicksand PDF | `source.pdf` was anti-bot HTML; reacquire manually if needed |
+| 25 HarfangLab Atera campaign | Anti-bot page only; fallback not useful |
+| 52 CISA AA23-335A PDF | `source.pdf` was an HTML access-denied page; source 51 fallback page is better |
+
+Retained with reader-mode fallbacks: sources 05, 16, 27, 49, 50, 51.
+
+Full acquisition report: `docs/source-gathering/source-acquisition-report.md`
+Full quality triage table: `docs/source-gathering/source-reliability-evidence-assessment.md`
 
 ### 7. Promote Reviewed Sources
 
@@ -453,6 +495,40 @@ First promotion batch:
 
 This creates the first reviewed source register and prepares the project for claim extraction.
 
+**Done.** Twenty sources were promoted into `data/sources.yaml` after full reliability and evidence assessment documented in `docs/source-gathering/source-reliability-evidence-assessment.md`.
+
+Government and framework sources (reliability A):
+
+| # | Source | Publisher |
+|---|---|---|
+| 07 | AA22-055A PDF mirror | CISA / FBI / CNMF / NCSC-UK / NSA |
+| 17 | INCD MuddyWater / DarkBit | Israel National Cyber Directorate |
+| 18 | INCD MuddyWater 2024 evolution | Israel National Cyber Directorate |
+| 05 | CISA AA22-055A advisory page | CISA / FBI / CNMF / NCSC-UK / NSA |
+| 08 | NCSC-UK MuddyWater advisory | NCSC-UK |
+| 19 | INCD phishing overview | Israel National Cyber Directorate |
+| 01 | MITRE ATT&CK MuddyWater G0069 | MITRE ATT&CK |
+| 02 | MITRE POWERSTATS S0223 | MITRE ATT&CK |
+| 03 | MITRE PowGoop S1046 | MITRE ATT&CK |
+
+Vendor research sources (reliability B):
+
+| # | Source | Publisher |
+|---|---|---|
+| 22 | MERCURY and DEV-1084 destructive attack | Microsoft Threat Intelligence |
+| 24 | TA450 PDF links campaign | Proofpoint |
+| 29 | Snakes by the riverbank | ESET Research |
+| 28 | BugSleep backdoor | Check Point Research |
+| 33 | ClickFix 2025 | Proofpoint |
+| 34 | Crossed Wires attribution study | Proofpoint |
+| 11 | Wading Through Muddy Waters | SentinelOne Labs |
+| 12 | Muddying the Water Middle East | Palo Alto Unit 42 |
+| 37 | Chaos Ransomware state-sponsored shadow | Rapid7 |
+| 26 | DarkBeatC2 framework | Deep Instinct |
+| 35 | Operation Olalampo | Group-IB |
+
+Each promoted source record includes: source ID, source number, title, publisher, URL, local file paths, source type, reliability rating, credibility score, acquisition quality, evidence support labels, actor claims as stated by the source, usability flags, key entities, candidate ATT&CK techniques, limitations, and promotion decision.
+
 ### 8. Extract Source-Bound Claims
 
 Before creating procedures, extract claim-level records from the promoted sources.
@@ -525,6 +601,20 @@ First claim-extraction batch:
 
 This creates the government-backed claim foundation before vendor procedure extraction.
 
+**Partial.** The first government claim batch was started but not completed.
+
+Current state of `data/claims.yaml`:
+
+- Source 07 (AA22-055A PDF mirror): 4 claims extracted — `clm_mw_0001` through `clm_mw_0004`
+  - `clm_mw_0001` — MuddyWater alias set (Reported, High, actor profile)
+  - `clm_mw_0002` — MOIS attribution and organizational relationship (Assessed, High, actor profile)
+  - `clm_mw_0003` — Sector targeting: telecom, defense, local government, oil and gas (Reported, High, victimology)
+  - `clm_mw_0004` — Initial access via vulnerability exploitation and open-source tools (Reported, High, procedure candidate)
+- Sources 17, 18, 05, 08: not yet extracted
+- Vendor source batch (22, 24, 29, 28, 33, 34, 11, 12, 37, 26, 35): not started
+
+Remaining government batch to complete before vendor extraction: sources 17 (INCD DarkBit), 18 (INCD 2024 evolution), 05 (CISA advisory fallback), 08 (NCSC-UK advisory).
+
 ### 9. Extract Procedure Candidates
 
 After the source register is reviewed, extract procedure candidates into:
@@ -554,3 +644,5 @@ An OpenCTI-backed CTI-to-detection knowledge graph with source register, procedu
 ```
 
 Only after this is clear should the project move into source collection.
+
+**Done.** Purpose and target output are defined. The project moved into source gathering.
