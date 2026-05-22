@@ -601,19 +601,42 @@ First claim-extraction batch:
 
 This creates the government-backed claim foundation before vendor procedure extraction.
 
-**Partial.** The first government claim batch was started but not completed.
+**Done.** All five government sources were extracted. 51 claims total — `clm_mw_0001` through `clm_mw_0051`.
 
-Current state of `data/claims.yaml`:
+Source 07 (AA22-055A PDF mirror): `clm_mw_0001`–`clm_mw_0027`
+- Actor profile: alias set, MOIS attribution, sector targeting, initial access summary
+- Procedures: spearphishing, RMM tool deployment, PowerShell/obfuscation, DLL side-loading, PowGoop, POWERSTATS variants, credential dumping, lateral movement, discovery, reverse tunneling
 
-- Source 07 (AA22-055A PDF mirror): 4 claims extracted — `clm_mw_0001` through `clm_mw_0004`
-  - `clm_mw_0001` — MuddyWater alias set (Reported, High, actor profile)
-  - `clm_mw_0002` — MOIS attribution and organizational relationship (Assessed, High, actor profile)
-  - `clm_mw_0003` — Sector targeting: telecom, defense, local government, oil and gas (Reported, High, victimology)
-  - `clm_mw_0004` — Initial access via vulnerability exploitation and open-source tools (Reported, High, procedure candidate)
-- Sources 17, 18, 05, 08: not yet extracted
-- Vendor source batch (22, 24, 29, 28, 33, 34, 11, 12, 37, 26, 35): not started
+Source 17 (INCD DarkBit): `clm_mw_0028`–`clm_mw_0032`
+- Finance/academia/government sector targeting in Israel
+- Log4j (CVE-2021-44228) + SyncroRAT deployment
+- CNA+CNE combined operation against Technion, DarkBit persona
+- Shadow copy deletion: `vssadmin.exe delete shadow /all /Quiet`
+- Hardcoded server list indicating pre-attack network mapping
 
-Remaining government batch to complete before vendor extraction: sources 17 (INCD DarkBit), 18 (INCD 2024 evolution), 05 (CISA advisory fallback), 08 (NCSC-UK advisory).
+Source 18 (INCD 2024 evolution): `clm_mw_0033`–`clm_mw_0044`
+- Post Iron Swords War activity surge
+- 2024 Israeli sector targeting: local authorities, civil aviation, tourism, healthcare, telecom, IT, SMEs
+- Three phishing methods: direct spearphish, compromised accounts, spoofed domains
+- Egnyte/OneDrive links distributing compressed RMM tools
+- Microsoft update lure targeting 10,000+ accounts with embedded API key and PowerShell
+- DLL side-loading in 2024 toolset; AnchorRAT COM hijacking; registry Run key persistence
+- Rentry.co C2 redirection (LOTS technique)
+- BugSleep: 43-minute scheduled task, shellcode injection, file exfiltration, remote command execution
+- VPN infrastructure exploitation; shift to in-house tools ~May 2024
+
+Source 05 (CISA AA22-055A advisory page): `clm_mw_0045`–`clm_mw_0051`
+- PowGoop DLL side-load and obfuscated PowerShell chain
+- Small Sieve: gram_app.exe NSIS installer, Telegram API C2, Run key persistence
+- Canopy/Starwhale: Excel macro → WSF scripts → startup folder persistence → system survey → HTTP POST exfiltration
+- Mori: DNS tunneling C2, FML.dll via regsvr32.exe
+- CVE-2020-1472 (Netlogon) and CVE-2020-0688 (Exchange) exploitation
+- WMI survey script: IP, OS, hostname, domain, username, AV products
+- Credential dumping: Mimikatz + procdump64 against LSASS; LaZagne for LSA secrets and cached credentials
+
+Source 08 (NCSC-UK advisory): corroborating source only; detailed procedures covered by source 07.
+
+Vendor batch (22, 24, 29, 28, 33, 34, 11, 12, 37, 26, 35): reserved for Phase 2 expansion after procedures are validated against the government foundation.
 
 ### 9. Extract Procedure Candidates
 
@@ -630,6 +653,29 @@ source -> claim -> evidence label -> procedure -> candidate ATT&CK mapping -> re
 ```
 
 This is where the project starts becoming CTI-to-detection work rather than source collection.
+
+**Done.** Ten MVP procedure records written — `proc_mw_0001` through `proc_mw_0010`. Each record preserves the full evidence chain from source to claim to ATT&CK candidate mapping.
+
+| ID | Title | Primary Techniques | Source Refs |
+|---|---|---|---|
+| proc_mw_0001 | Spearphishing Email Delivery | T1566.001, T1566.002, T1534 | 07, 18, 19 |
+| proc_mw_0002 | Public-Facing Exploitation for Initial Access | T1190 | 07, 17, 18, 05 |
+| proc_mw_0003 | PowerShell Execution and Script Obfuscation | T1059.001, T1027 | 07, 18, 05 |
+| proc_mw_0004 | DLL Side-Loading for Malware Execution | T1574.002 | 07, 18, 05 |
+| proc_mw_0005 | Persistence via Registry Run Keys | T1547.001 | 18, 05 |
+| proc_mw_0006 | Persistence via Scheduled Task | T1053.005 | 18 |
+| proc_mw_0007 | Remote Access Software Abuse | T1219 | 07, 17, 18 |
+| proc_mw_0008 | C2 Communication via Web Protocols | T1071.001, T1572, T1102 | 07, 18, 05 |
+| proc_mw_0009 | System Discovery Survey via WMI | T1047, T1082, T1016, T1033, T1518.001 | 05 |
+| proc_mw_0010 | Credential Dumping from LSASS and Credential Stores | T1003.001, T1003.004, T1003.005 | 05 |
+
+All procedures are marked:
+- `mapping_status: candidate` — ATT&CK mappings are not validated
+- `coverage_score: 0` — no detection validation has occurred yet
+- `production_readiness: lab_only`
+- `review_status: candidate`
+
+Each procedure includes: evidence chain, required telemetry list, behavioral detection idea, and a lab-safe validation plan using benign simulation only (no live malware, no real victim infrastructure, no public C2).
 
 ## Step 0 Definition Of Done
 

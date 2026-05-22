@@ -571,3 +571,581 @@ claims:
       detection: true
       opencti_modeling: true
     notes: "Pointer to IOC material; IOC extraction should happen separately and remain tied to source."
+
+  # --- source 17: procedure-level claims not yet extracted ---
+
+  - id: clm_mw_0028
+    source_id: src_incd_muddywater_darkbit_2023
+    claim: "MuddyWater targeted Israeli organizations in the finance, academia, and government sectors."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "finance"
+      - "academia"
+      - "government"
+      - "Israel"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Sector and country targeting from INCD. Use for OpenCTI Sector and Country objects."
+
+  - id: clm_mw_0029
+    source_id: src_incd_muddywater_darkbit_2023
+    claim: "MuddyWater exploited the Log4j vulnerability and deployed the SyncroRAT remote access tool against Israeli targets."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Log4j"
+      - "CVE-2021-44228"
+      - "SyncroRAT"
+    technique_refs:
+      - "T1190"
+      - "T1219"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "Israel-specific exploitation claim. Log4j CVE should be modeled as vulnerability object. SyncroRAT is a legitimate RMM tool abused for access."
+
+  - id: clm_mw_0030
+    source_id: src_incd_muddywater_darkbit_2023
+    claim: "In February 2023, MuddyWater combined a destructive operation (CNA) with an intelligence collection operation (CNE) against the Technion — the first observed combined operation against an Israeli target."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+      - "DarkBit"
+    object_refs:
+      - "Technion"
+      - "CNA"
+      - "CNE"
+      - "4TB data theft"
+    supports:
+      actor_profile: true
+      procedure: true
+      detection: false
+      opencti_modeling: true
+    notes: "Combined CNA+CNE pattern is a tradecraft note, not a direct detection candidate. Model as Campaign object in OpenCTI."
+
+  - id: clm_mw_0031
+    source_id: src_incd_muddywater_darkbit_2023
+    claim: "The DarkBit ransomware deleted shadow copies using the command: vssadmin.exe delete shadow /all /Quiet"
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+      - "DarkBit"
+    object_refs:
+      - "vssadmin.exe"
+      - "shadow copies"
+      - "8thcurse.exe"
+    technique_refs:
+      - "T1490"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Exact command documented. High-value detection candidate. Safe simulation: run vssadmin with read-only flags in lab and verify process telemetry fires without executing destructively."
+
+  - id: clm_mw_0032
+    source_id: src_incd_muddywater_darkbit_2023
+    claim: "The DarkBit malware contained a hard-coded list of servers on the Technion network, indicating pre-attack network mapping by the threat actor."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+      - "DarkBit"
+    object_refs:
+      - "Technion"
+      - "hardcoded server list"
+      - "network mapping"
+    technique_refs:
+      - "T1590"
+    supports:
+      actor_profile: true
+      procedure: true
+      detection: false
+      opencti_modeling: true
+    notes: "Pre-attack reconnaissance inference; cannot detect directly from endpoint telemetry. Model as campaign context."
+
+  # --- source 18: procedure-level claims not yet extracted ---
+
+  - id: clm_mw_0033
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "Following the outbreak of the Iron Swords War, a marked increase in MuddyWater cyber activity against Israel was observed."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Israel"
+      - "Iron Swords War"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Geopolitical context for campaign surge. Use for campaign timeline in OpenCTI."
+
+  - id: clm_mw_0034
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "In 2024, MuddyWater targeted Israeli local authorities, civil aviation, tourism, healthcare, telecommunications, information technology, and small and medium-sized enterprises."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "local authorities"
+      - "civil aviation"
+      - "tourism"
+      - "healthcare"
+      - "telecommunications"
+      - "information technology"
+      - "SMEs"
+      - "Israel"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "High-value sector list for OpenCTI Sector objects. Significantly broader than earlier reporting."
+
+  - id: clm_mw_0035
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "MuddyWater used three phishing delivery methods: direct spear-phishing from free email accounts, sending malicious content from compromised legitimate email accounts, and spoofed email addresses resembling reputable organizations."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "spear-phishing"
+      - "compromised accounts"
+      - "spoofing"
+    technique_refs:
+      - "T1566.001"
+      - "T1566.002"
+      - "T1534"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Three distinct delivery sub-patterns documented. Compromised-account delivery (T1534) is higher-confidence lure — harder to detect at delivery layer."
+
+  - id: clm_mw_0036
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "In 2024, MuddyWater phishing emails used links to Egnyte and OneDrive file-sharing services to distribute compressed files containing remote management tools."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Egnyte"
+      - "OneDrive"
+      - "compressed files"
+      - "RMM tools"
+    technique_refs:
+      - "T1566.002"
+      - "T1219"
+      - "T1102.002"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Specific file-sharing platform abuse. Detection candidate: RMM binary execution following download from Egnyte or OneDrive."
+
+  - id: clm_mw_0037
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "MuddyWater sent a Microsoft security update lure email to over 10,000 accounts; the lure delivered a remote management tool using an embedded API key and PowerShell execution for direct post-install access."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Microsoft update lure"
+      - "RMM"
+      - "API key"
+      - "PowerShell"
+    technique_refs:
+      - "T1566.001"
+      - "T1204.001"
+      - "T1219"
+      - "T1059.001"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "High-volume broad campaign. API key embedded in email content allows attacker direct agent access post-install — distinct from typical RMM phishing. Good detection candidate at endpoint."
+
+  - id: clm_mw_0038
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "MuddyWater used DLL side-loading (T1574/002) as a core technique in its 2024 toolset."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "DLL side-loading"
+    technique_refs:
+      - "T1574.002"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "INCD 2024 corroborates DLL side-loading from AA22-055A. Consistent across source tiers."
+
+  - id: clm_mw_0039
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "AnchorRAT uses COM hijacking (T1546/015) to persist by modifying the registry key HKCU\\Software\\Classes\\CLSID\\{0358B920-...}\\InProcServer32."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "AnchorRAT"
+      - "COM hijacking"
+      - "HKCU\\Software\\Classes\\CLSID"
+    technique_refs:
+      - "T1546.015"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Specific registry key documented. Detection candidate: monitor HKCU\\Software\\Classes\\CLSID writes by non-system processes."
+
+  - id: clm_mw_0040
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "MuddyWater used Registry Run Keys (T1547/001) for malware persistence."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Registry Run Keys"
+      - "persistence"
+    technique_refs:
+      - "T1547.001"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "INCD 2024 corroborates Registry Run Key persistence from AA22-055A/source 05. Consistent across tiers."
+
+  - id: clm_mw_0041
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "MuddyWater used legitimate platforms such as Rentry.co for C2 redirection and to obscure activities."
+    evidence_label: "Observed"
+    confidence: "Medium"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Rentry.co"
+      - "legitimate platforms"
+      - "LOTS"
+      - "C2 redirection"
+    technique_refs:
+      - "T1102"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "LOTS technique using public content-sharing site. Detection: outbound connections to Rentry.co from endpoints, particularly following RMM or payload execution."
+
+  - id: clm_mw_0042
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "BugSleep uses a scheduled task triggered every 43 minutes for C2 beaconing, injects shellcode into legitimate processes, exfiltrates files, and executes remote commands."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "BugSleep"
+      - "scheduled task"
+      - "shellcode injection"
+      - "file exfiltration"
+    technique_refs:
+      - "T1053.005"
+      - "T1055"
+      - "T1041"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "43-minute scheduled task is a distinctive artifact. Shellcode injection into legitimate processes complicates detection. Split into separate procedure records before rule authoring."
+
+  - id: clm_mw_0043
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "MuddyWater exploited VPN infrastructure vulnerabilities for initial access (T1190)."
+    evidence_label: "Reported"
+    confidence: "Medium"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "VPN"
+      - "vulnerability exploitation"
+    technique_refs:
+      - "T1190"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Source references T1190 with VPN context but does not name a specific CVE. Keep as general exploitation claim until a specific CVE is documented."
+
+  - id: clm_mw_0044
+    source_id: src_incd_muddywater_2024_evolution
+    claim: "Starting approximately May 2024, MuddyWater shifted from publicly available malware to independently developed custom tools, with BugSleep as the first identified wave of custom tooling."
+    evidence_label: "Assessed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "BugSleep"
+      - "custom tools"
+      - "May 2024"
+    supports:
+      actor_profile: true
+      procedure: false
+      detection: false
+      opencti_modeling: true
+    notes: "Tradecraft evolution assessment. Relevant for threat modeling and timeline, not directly for detection logic."
+
+  # --- source 05: procedure-level claims not yet extracted ---
+
+  - id: clm_mw_0045
+    source_id: src_cisa_aa22_055a_page
+    claim: "PowGoop consists of a DLL renamed Goopdate.dll loaded by GoogleUpdate.exe (DLL side-loading), plus an obfuscated PowerShell script that decrypts and runs a second obfuscated PowerShell beacon to a hardcoded C2 IP."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "PowGoop"
+      - "Goopdate.dll"
+      - "GoogleUpdate.exe"
+      - "goopdate.dat"
+      - "config.txt"
+    technique_refs:
+      - "T1574.002"
+      - "T1059.001"
+      - "T1027"
+      - "T1036.005"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "Three-component malware chain; each component maps to a separate detection opportunity. DLL name is a specific artifact."
+
+  - id: clm_mw_0046
+    source_id: src_cisa_aa22_055a_page
+    claim: "Small Sieve is a Python backdoor distributed via an NSIS installer (gram_app.exe) that installs index.exe, adds a Registry Run key named OutlookMicrosift, and communicates via the Telegram Bot API over HTTPS."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Small Sieve"
+      - "gram_app.exe"
+      - "index.exe"
+      - "OutlookMicrosift"
+      - "Telegram Bot API"
+    technique_refs:
+      - "T1059.006"
+      - "T1071.001"
+      - "T1547.001"
+      - "T1036.005"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "Multiple distinct artifacts: NSIS installer, Run key name, Telegram API beacon. Each is an independent detection candidate."
+
+  - id: clm_mw_0047
+    source_id: src_cisa_aa22_055a_page
+    claim: "Canopy/Starwhale is delivered via a malicious Excel file with VBA macros that decode and install two WSF scripts; the first WSF is placed in the startup folder for persistence, the second collects the victim's IP, hostname, and username and sends them via HTTP POST."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Canopy"
+      - "Starwhale"
+      - "Cooperation terms.xls"
+      - "WSF scripts"
+    technique_refs:
+      - "T1204.002"
+      - "T1547.001"
+      - "T1016"
+      - "T1082"
+      - "T1033"
+      - "T1041"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "Excel macro → WSF → startup folder persistence chain. IP/hostname/username collection is the discovery phase. HTTP POST exfiltration follows."
+
+  - id: clm_mw_0048
+    source_id: src_cisa_aa22_055a_page
+    claim: "Mori is a DLL-based backdoor that communicates with C2 infrastructure via DNS tunneling."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Mori"
+      - "FML.dll"
+      - "DNS tunneling"
+      - "regsvr32.exe"
+    technique_refs:
+      - "T1572"
+      - "T1218.010"
+    supports:
+      actor_profile: false
+      procedure: true
+      malware: true
+      detection: true
+      opencti_modeling: true
+    notes: "DNS tunneling is distinctive and detectable via DNS query volume/pattern analysis. DLL loaded via regsvr32 is a signed-binary proxy execution candidate."
+
+  - id: clm_mw_0049
+    source_id: src_cisa_aa22_055a_page
+    claim: "FBI, CISA, CNMF, and NCSC-UK observed MuddyWater exploiting CVE-2020-1472 (Netlogon privilege escalation) and CVE-2020-0688 (Microsoft Exchange memory corruption)."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "CVE-2020-1472"
+      - "CVE-2020-0688"
+      - "Netlogon"
+      - "Microsoft Exchange"
+    technique_refs:
+      - "T1190"
+      - "T1068"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Two specific CVEs documented. Both are historically significant. Do not treat as current active exploitation without newer corroboration."
+
+  - id: clm_mw_0050
+    source_id: src_cisa_aa22_055a_page
+    claim: "MuddyWater uses a WMI-based survey script to collect the victim's IP addresses, OS name and architecture, hostname, domain, username, and installed AV product names, then sends the data encoded to a C2 address."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "WMI"
+      - "Win32_OperatingSystem"
+      - "Win32_NetworkAdapterConfiguration"
+      - "AntiVirusProduct"
+      - "discovery script"
+    technique_refs:
+      - "T1047"
+      - "T1082"
+      - "T1016"
+      - "T1033"
+      - "T1518.001"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Exact PowerShell + WMI script text is in the source. High-value detection candidate for post-exploitation discovery phase. WMI queries on AV products are especially detectable."
+
+  - id: clm_mw_0051
+    source_id: src_cisa_aa22_055a_page
+    claim: "MuddyWater performed credential dumping using Mimikatz and procdump64.exe against LSASS memory, and using LaZagne for LSA secrets and cached domain credentials."
+    evidence_label: "Observed"
+    confidence: "High"
+    source_reliability: "A"
+    information_credibility: 2
+    actor_refs:
+      - "MuddyWater"
+    object_refs:
+      - "Mimikatz"
+      - "procdump64.exe"
+      - "LaZagne"
+      - "LSASS"
+    technique_refs:
+      - "T1003.001"
+      - "T1003.004"
+      - "T1003.005"
+    supports:
+      actor_profile: false
+      procedure: true
+      detection: true
+      opencti_modeling: true
+    notes: "Three distinct credential access tools documented. procdump64.exe + LSASS is a well-covered detection. LaZagne targets multiple credential stores."

@@ -1,1 +1,509 @@
-procedures: []
+procedures:
+
+  - id: proc_mw_0001
+    title: "Spearphishing Email Delivery"
+    actor_ref: "MuddyWater"
+    claim_refs:
+      - "clm_mw_0005"
+      - "clm_mw_0006"
+      - "clm_mw_0035"
+      - "clm_mw_0036"
+      - "clm_mw_0037"
+    source_refs:
+      - "src_usgov_aa22_055a_pdf_mirror"
+      - "src_incd_muddywater_darkbit_2023"
+      - "src_incd_muddywater_2024_evolution"
+    evidence_label: "Observed"
+    confidence: "High"
+    attck_candidates:
+      - technique: "T1566.001"
+        mapping_status: "candidate"
+        notes: "Attachments: ZIP containing Excel with macros or PDF dropping malicious files"
+      - technique: "T1566.002"
+        mapping_status: "candidate"
+        notes: "Links to Egnyte or OneDrive distributing compressed RMM tools"
+      - technique: "T1534"
+        mapping_status: "candidate"
+        notes: "Emails sent from compromised legitimate accounts to increase lure credibility"
+    procedure_summary: >
+      MuddyWater delivers malicious content via spearphishing using three methods:
+      (1) direct emails with ZIP attachments containing macro-enabled Excel files or PDFs;
+      (2) emails with links to Egnyte or OneDrive delivering compressed RMM installers;
+      (3) emails sent from compromised legitimate accounts to increase credibility.
+      In 2024, a broad Microsoft update lure was sent to 10,000+ accounts, embedding a
+      PowerShell API key for direct post-install agent access.
+    required_telemetry:
+      - "Email gateway logs with attachment metadata, link extraction, and sender domain"
+      - "Endpoint process creation: parent process = email client or browser"
+      - "Network logs: DNS and HTTP/S connections to Egnyte, OneDrive shortly before RMM execution"
+      - "File creation: compressed archives and RMM binaries in user download paths"
+    detection_idea: >
+      Alert on: (1) email delivery of ZIP/Excel/PDF followed by process spawning from
+      Outlook or browser within 5 minutes; (2) RMM binary execution shortly after file
+      download from Egnyte or OneDrive; (3) PowerShell execution with embedded API key
+      strings following RMM installation.
+    validation_plan: >
+      Send a benign test email containing a non-malicious ZIP attachment from a test account.
+      Verify email gateway captures attachment metadata. Simulate a file download from OneDrive
+      (non-malicious file) and verify process creation and file telemetry fires. No payload
+      execution required for telemetry validation.
+    coverage_score: 0
+    coverage_scope: "lab_only"
+    mitre_mapping_status: "candidate"
+    production_readiness: "lab_only"
+    limitations:
+      - "Email delivery detection depends on gateway visibility; endpoint-only detection misses the delivery phase."
+      - "File-sharing service links are high-noise; requires correlation with subsequent RMM execution."
+      - "Compromised-account delivery is harder to distinguish from legitimate mail at the delivery layer."
+    review_status: "candidate"
+    analytic_note: "Highest-confidence initial access vector across all source tiers. Primary entry point for the full procedure chain."
+
+  - id: proc_mw_0002
+    title: "Public-Facing Exploitation for Initial Access"
+    actor_ref: "MuddyWater"
+    claim_refs:
+      - "clm_mw_0004"
+      - "clm_mw_0029"
+      - "clm_mw_0043"
+      - "clm_mw_0049"
+    source_refs:
+      - "src_usgov_aa22_055a_pdf_mirror"
+      - "src_incd_muddywater_darkbit_2023"
+      - "src_incd_muddywater_2024_evolution"
+      - "src_cisa_aa22_055a_page"
+    evidence_label: "Observed"
+    confidence: "High"
+    attck_candidates:
+      - technique: "T1190"
+        mapping_status: "candidate"
+        notes: "CVE-2020-1472, CVE-2020-0688 (Exchange), CVE-2021-44228 (Log4j), VPN vulnerabilities"
+    procedure_summary: >
+      MuddyWater has exploited publicly known vulnerabilities in internet-facing applications
+      as an alternative initial access vector to spearphishing. Documented CVEs include
+      CVE-2020-1472 (Netlogon), CVE-2020-0688 (Exchange), CVE-2021-44228 (Log4j), and
+      unspecified VPN infrastructure vulnerabilities. Exploitation is typically followed
+      by RMM tool deployment or custom backdoor staging.
+    required_telemetry:
+      - "Web application firewall / IDS logs showing exploitation attempts against known CVEs"
+      - "Windows Event Log: abnormal SYSTEM-level process creation following service exploitation"
+      - "EDR: network service process spawning shell or scripting interpreter"
+    detection_idea: >
+      Alert on: (1) process spawning from known vulnerable service executables (e.g., w3wp.exe,
+      java.exe) executing cmd.exe or PowerShell; (2) exploitation signatures matching CVE-2020-1472
+      or CVE-2020-0688 in IDS/IPS; (3) JNDI lookup patterns in HTTP request logs for Log4j.
+    validation_plan: >
+      In an isolated lab, run a CVE-2020-1472 proof-of-concept against a test domain controller
+      (patched in production; unpatched in lab) and confirm that LSASS and authentication logs
+      capture the anomalous Netlogon authentication. Do not use live credentials or connect to
+      production systems.
+    coverage_score: 0
+    coverage_scope: "lab_only"
+    mitre_mapping_status: "candidate"
+    production_readiness: "lab_only"
+    limitations:
+      - "CVE-2020-1472 and CVE-2020-0688 are older; treat as historical unless corroborated by recent reporting."
+      - "VPN exploitation claim from INCD 2024 does not name a specific CVE."
+      - "Log4j is confirmed for Israeli campaign but not generalized to all MuddyWater activity."
+    review_status: "candidate"
+    analytic_note: "Secondary initial access vector to phishing; useful for coverage completeness."
+
+  - id: proc_mw_0003
+    title: "PowerShell Execution and Script Obfuscation"
+    actor_ref: "MuddyWater"
+    claim_refs:
+      - "clm_mw_0008"
+      - "clm_mw_0010"
+      - "clm_mw_0011"
+      - "clm_mw_0037"
+      - "clm_mw_0045"
+    source_refs:
+      - "src_usgov_aa22_055a_pdf_mirror"
+      - "src_incd_muddywater_2024_evolution"
+      - "src_cisa_aa22_055a_page"
+    evidence_label: "Observed"
+    confidence: "High"
+    attck_candidates:
+      - technique: "T1059.001"
+        mapping_status: "candidate"
+        notes: "PowerShell used for backdoor execution, C2 communication, and post-install agent access"
+      - technique: "T1027"
+        mapping_status: "candidate"
+        notes: "Base64 and custom obfuscation used to hide C2 function and script content"
+    procedure_summary: >
+      MuddyWater consistently uses PowerShell as an execution engine across multiple tools and
+      campaigns. PowGoop uses an obfuscated .dat + config.txt PS chain for C2 beaconing.
+      POWERSTATS is a PowerShell backdoor maintaining persistent access. The 2024 Microsoft
+      update lure used an embedded API key executed via PowerShell to grant direct agent access
+      post-RMM install. Obfuscation is applied consistently via Base64, XOR, and custom encoding.
+    required_telemetry:
+      - "PowerShell Script Block Logging (Event ID 4104)"
+      - "PowerShell Module Logging (Event ID 4103)"
+      - "Process Command Line logging (Event ID 4688 with command line or EDR equivalent)"
+      - "Sysmon Event ID 1 for process creation with full command line"
+    detection_idea: >
+      Alert on: (1) PowerShell executing Base64-encoded commands (-EncodedCommand flag);
+      (2) PowerShell with Invoke-Expression or InvokeScript executing decoded content;
+      (3) PowerShell parent spawned by email client, browser, or document viewer;
+      (4) outbound HTTP/S connections from powershell.exe.
+    validation_plan: >
+      Enable PowerShell Script Block Logging in lab. Execute a benign Base64-encoded command
+      via powershell.exe -EncodedCommand and verify Event ID 4104 fires with decoded content.
+      Verify 4688 process creation with full command line is captured.
+    coverage_score: 0
+    coverage_scope: "lab_only"
+    mitre_mapping_status: "candidate"
+    production_readiness: "lab_only"
+    limitations:
+      - "High false-positive rate for PowerShell in enterprise environments. Requires baseline."
+      - "Obfuscation techniques vary; single-signature detection is insufficient."
+      - "Requires Script Block Logging enabled — not default on all Windows versions."
+    review_status: "candidate"
+    analytic_note: "Cross-cutting technique present in PowGoop, POWERSTATS, and 2024 lure campaigns. High-coverage priority."
+
+  - id: proc_mw_0004
+    title: "DLL Side-Loading for Malware Execution"
+    actor_ref: "MuddyWater"
+    claim_refs:
+      - "clm_mw_0007"
+      - "clm_mw_0010"
+      - "clm_mw_0038"
+      - "clm_mw_0045"
+    source_refs:
+      - "src_usgov_aa22_055a_pdf_mirror"
+      - "src_incd_muddywater_2024_evolution"
+      - "src_cisa_aa22_055a_page"
+    evidence_label: "Observed"
+    confidence: "High"
+    attck_candidates:
+      - technique: "T1574.002"
+        mapping_status: "candidate"
+        notes: "PowGoop: Goopdate.dll loaded by GoogleUpdate.exe; 2024 toolset uses same technique"
+    procedure_summary: >
+      MuddyWater uses DLL side-loading to execute malicious code under a legitimate process.
+      PowGoop renames its malicious DLL as Goopdate.dll and places it alongside GoogleUpdate.exe,
+      causing the legitimate executable to load and execute the malicious DLL. The 2024 INCD
+      report confirms continued use of DLL side-loading across the updated toolset. This technique
+      disguises malicious activity under a legitimate application's process context, evading
+      detection systems that trust signed executables.
+    required_telemetry:
+      - "Image load events: Sysmon Event ID 7 (DLL load) with image name and signing status"
+      - "Process creation: parent/child relationships for known legitimate executables"
+      - "File creation: unsigned or anomalous DLLs in directories of legitimate applications"
+    detection_idea: >
+      Alert on: (1) GoogleUpdate.exe or other signed executables loading an unsigned DLL from
+      the same or writable directory; (2) known legitimate executable names loading DLLs not
+      present in the original installation directory; (3) unsigned DLL load events from
+      %TEMP%, %APPDATA%, or user-writable paths.
+    validation_plan: >
+      Create a benign proof-of-concept: place a non-malicious DLL named Goopdate.dll alongside
+      a test executable in a user-writable directory; verify Sysmon Event ID 7 captures the
+      DLL load with the parent executable path and signing status. No malicious payload required.
+    coverage_score: 0
+    coverage_scope: "lab_only"
+    mitre_mapping_status: "candidate"
+    production_readiness: "lab_only"
+    limitations:
+      - "DLL side-loading detection generates high false positives in environments with many third-party applications."
+      - "Requires Sysmon or EDR with image load telemetry — not available on all endpoints."
+    review_status: "candidate"
+    analytic_note: "Consistent across government and vendor source tiers. Confirmed in 2024 toolset by INCD."
+
+  - id: proc_mw_0005
+    title: "Persistence via Registry Run Keys"
+    actor_ref: "MuddyWater"
+    claim_refs:
+      - "clm_mw_0040"
+      - "clm_mw_0046"
+      - "clm_mw_0047"
+    source_refs:
+      - "src_incd_muddywater_2024_evolution"
+      - "src_cisa_aa22_055a_page"
+    evidence_label: "Observed"
+    confidence: "High"
+    attck_candidates:
+      - technique: "T1547.001"
+        mapping_status: "candidate"
+        notes: "Small Sieve: HKCU\\...\\Run\\OutlookMicrosift; Canopy: startup folder; AA22-055A: HKCU\\...\\Run\\SystemTextEncoding"
+    procedure_summary: >
+      MuddyWater establishes persistence via Registry Run Keys and startup folders.
+      Small Sieve adds index.exe under the Run key named OutlookMicrosift, masquerading
+      as a Microsoft application. Canopy installs its first WSF script in the startup folder.
+      AA22-055A documents the key SystemTextEncoding. INCD 2024 confirms continued use of
+      Registry Run Keys across the updated toolset.
+    required_telemetry:
+      - "Registry modification events: HKCU and HKLM Run key writes (Sysmon Event ID 13)"
+      - "Process creation: processes spawned from Run key values at logon"
+      - "File creation: executables/scripts placed in startup folders"
+    detection_idea: >
+      Alert on: (1) new entries written to HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run
+      by non-installer processes; (2) script files (.wsf, .vbs, .js, .ps1) written to startup
+      folders; (3) Run key values containing paths to user-writable directories or AppData.
+    validation_plan: >
+      Write a benign test value (pointing to a non-malicious executable) to HKCU\\...\\Run in lab.
+      Verify Sysmon Event ID 13 fires with key path, value name, and data. Verify process creation
+      fires at next logon.
+    coverage_score: 0
+    coverage_scope: "lab_only"
+    mitre_mapping_status: "candidate"
+    production_readiness: "lab_only"
+    limitations:
+      - "High false-positive rate; many legitimate applications use Run keys."
+      - "Requires filtering by path, value name patterns, and parent process."
+    review_status: "candidate"
+    analytic_note: "Specific key names (OutlookMicrosift, SystemTextEncoding) are high-confidence IoCs when present."
+
+  - id: proc_mw_0006
+    title: "Persistence via Scheduled Task"
+    actor_ref: "MuddyWater"
+    claim_refs:
+      - "clm_mw_0042"
+    source_refs:
+      - "src_incd_muddywater_2024_evolution"
+    evidence_label: "Observed"
+    confidence: "High"
+    attck_candidates:
+      - technique: "T1053.005"
+        mapping_status: "candidate"
+        notes: "BugSleep creates a scheduled task triggered every 43 minutes for C2 beaconing"
+    procedure_summary: >
+      BugSleep establishes persistence and C2 communication regularity by creating a Windows
+      scheduled task triggered every 43 minutes. This interval is documented as customizable.
+      The task maintains the C2 beacon independently of user logon state.
+    required_telemetry:
+      - "Windows Security Event ID 4698 (scheduled task created)"
+      - "Sysmon Event ID 1: schtasks.exe with /create arguments"
+      - "Task Scheduler operational log: task registration and execution"
+    detection_idea: >
+      Alert on: (1) scheduled task creation by non-administrative processes or from user-writable
+      paths; (2) tasks with repetition intervals not matching standard software patterns
+      (e.g., 43 minutes); (3) task actions pointing to executables in AppData, Temp, or
+      user-writable directories.
+    validation_plan: >
+      Create a benign scheduled task via schtasks.exe /create with a 43-minute trigger in lab.
+      Verify Event ID 4698 fires with task XML including trigger interval. Verify Sysmon
+      Event ID 1 captures the schtasks.exe command line.
+    coverage_score: 0
+    coverage_scope: "lab_only"
+    mitre_mapping_status: "candidate"
+    production_readiness: "lab_only"
+    limitations:
+      - "43-minute interval is BugSleep-specific; do not generalize to all scheduled task detections."
+      - "Interval is documented as customizable — future variants may differ."
+      - "Source is INCD 2024 only; corroborate with vendor sources before high-confidence detection."
+    review_status: "candidate"
+    analytic_note: "Specific 43-minute interval is a distinctive artifact worth hunting against scheduled task logs."
+
+  - id: proc_mw_0007
+    title: "Remote Access Software Abuse"
+    actor_ref: "MuddyWater"
+    claim_refs:
+      - "clm_mw_0019"
+      - "clm_mw_0020"
+      - "clm_mw_0025"
+      - "clm_mw_0029"
+      - "clm_mw_0036"
+      - "clm_mw_0037"
+    source_refs:
+      - "src_usgov_aa22_055a_pdf_mirror"
+      - "src_incd_muddywater_darkbit_2023"
+      - "src_incd_muddywater_2024_evolution"
+      - "src_cisa_aa22_055a_page"
+    evidence_label: "Observed"
+    confidence: "High"
+    attck_candidates:
+      - technique: "T1219"
+        mapping_status: "candidate"
+        notes: "Tools observed: ScreenConnect, SyncroRAT, rport.exe, AteraAgent, SimpleHelp, Level, PDQConnect"
+    procedure_summary: >
+      RMM tool abuse is one of MuddyWater's most consistent and well-documented techniques
+      across all source tiers. Legitimate remote access tools are delivered via phishing, then
+      used for persistent access, lateral movement, file exfiltration, and screen monitoring.
+      Documented tools include ScreenConnect (2022 advisory), SyncroRAT (Israel 2023), rport.exe
+      (DarkBit operation), AteraAgent (multiple vendor sources), and unnamed RMM tools distributed
+      in 2024 Microsoft-update-lure campaigns. An embedded API key in the 2024 lure gave
+      attackers direct agent access immediately post-install.
+    required_telemetry:
+      - "Process creation: known RMM binary names and hash values"
+      - "Network connections: outbound to RMM vendor infrastructure from unexpected endpoints"
+      - "Parent process: RMM binary spawned from email client, browser, or archive utility"
+      - "File creation: RMM installer in user download or temp paths"
+    detection_idea: >
+      Alert on: (1) known RMM executables (ScreenConnect, AteraAgent, rport.exe, SyncroRAT)
+      executed from user-writable or temp directories; (2) RMM binary parent process being
+      Outlook, a browser, or an archive utility; (3) outbound connections to RMM vendor
+      infrastructure from non-standard endpoints or at unusual hours.
+    validation_plan: >
+      Install a legitimate RMM tool in a lab from a simulated phishing download path (no live
+      attacker connection). Verify process creation telemetry captures parent/child relationship
+      and binary path. Verify outbound network connections to RMM vendor infrastructure appear
+      in network logs.
+    coverage_score: 0
+    coverage_scope: "lab_only"
+    mitre_mapping_status: "candidate"
+    production_readiness: "lab_only"
+    limitations:
+      - "RMM tools are legitimate software; detection must rely on delivery context, parent process, and path, not binary alone."
+      - "Many organizations legitimately use RMM tools — baselining authorized deployment is required before alerting."
+      - "Different RMM products have different binary names and C2 domains."
+    review_status: "candidate"
+    analytic_note: "Most consistently documented technique across all five government sources. Highest-priority procedure for detection coverage."
+
+  - id: proc_mw_0008
+    title: "C2 Communication via Web Protocols"
+    actor_ref: "MuddyWater"
+    claim_refs:
+      - "clm_mw_0046"
+      - "clm_mw_0047"
+      - "clm_mw_0041"
+      - "clm_mw_0048"
+    source_refs:
+      - "src_cisa_aa22_055a_page"
+      - "src_incd_muddywater_2024_evolution"
+    evidence_label: "Observed"
+    confidence: "High"
+    attck_candidates:
+      - technique: "T1071.001"
+        mapping_status: "candidate"
+        notes: "HTTP/HTTPS used by Small Sieve (Telegram API), Canopy (HTTP POST), Blackout (GET/POST), AnchorRAT (HTTPS port 443)"
+      - technique: "T1572"
+        mapping_status: "candidate"
+        notes: "Mori uses DNS tunneling for C2"
+      - technique: "T1102"
+        mapping_status: "candidate"
+        notes: "Small Sieve uses Telegram Bot API; Rentry.co used for C2 redirection"
+    procedure_summary: >
+      MuddyWater C2 channels consistently use web protocols to blend with legitimate traffic.
+      Small Sieve beacons via Telegram Bot API over HTTPS. Canopy sends collected data via HTTP POST.
+      Blackout uses GET /questions and POST /about-us. AnchorRAT communicates over HTTPS port 443
+      in JSON format. Mori uses DNS tunneling. In 2024, Rentry.co was used as a legitimate platform
+      for C2 redirection. Obfuscation is applied to beacon content across tools.
+    required_telemetry:
+      - "Network flow logs: outbound HTTPS connections especially to Telegram API (api.telegram.org)"
+      - "DNS query logs: anomalous query volumes or subdomain patterns for DNS tunneling detection"
+      - "Proxy logs: HTTP POST to unusual URI patterns (/about-us, /questions, /awards)"
+      - "Network connections from user endpoints to Rentry.co"
+    detection_idea: >
+      Alert on: (1) endpoint processes making outbound connections to api.telegram.org — especially
+      non-browser processes; (2) high-volume DNS queries to the same domain with varied subdomains
+      (DNS tunneling); (3) HTTP POST requests to URI paths matching Blackout patterns;
+      (4) outbound connections to Rentry.co from corporate endpoints.
+    validation_plan: >
+      Use a controlled network environment to generate outbound HTTPS traffic from a test process
+      to a benign destination. Verify proxy logs and flow logs capture the connection with process
+      name, destination, and URI. Test DNS query logging by generating subdomain lookups from a
+      non-browser process.
+    coverage_score: 0
+    coverage_scope: "lab_only"
+    mitre_mapping_status: "candidate"
+    production_readiness: "lab_only"
+    limitations:
+      - "HTTPS to Telegram API is high-noise in consumer environments; more detectable in enterprise where Telegram is not standard."
+      - "DNS tunneling detection requires volume analysis baseline."
+      - "URI patterns are tool-specific; future variants will differ."
+    review_status: "candidate"
+    analytic_note: "Multiple distinct C2 channels documented. Telegram API is the highest-confidence detection anchor across sources."
+
+  - id: proc_mw_0009
+    title: "System Discovery Survey via WMI"
+    actor_ref: "MuddyWater"
+    claim_refs:
+      - "clm_mw_0050"
+    source_refs:
+      - "src_cisa_aa22_055a_page"
+    evidence_label: "Observed"
+    confidence: "High"
+    attck_candidates:
+      - technique: "T1047"
+        mapping_status: "candidate"
+        notes: "Win32_OperatingSystem, Win32_NetworkAdapterConfiguration, AntiVirusProduct queried via WMI"
+      - technique: "T1082"
+        mapping_status: "candidate"
+        notes: "OS name and architecture collected"
+      - technique: "T1016"
+        mapping_status: "candidate"
+        notes: "IP addresses collected via WMI network adapter query"
+      - technique: "T1033"
+        mapping_status: "candidate"
+        notes: "Username collected"
+      - technique: "T1518.001"
+        mapping_status: "candidate"
+        notes: "Installed AV product names collected from SecurityCenter2 namespace"
+    procedure_summary: >
+      MuddyWater runs a PowerShell survey script that uses WMI to collect the victim's IP
+      addresses, OS name and architecture, hostname, domain, username, and AV product names.
+      The collected data is assembled into a delimited string, encoded, and sent to a C2 address.
+      The exact script is documented in the CISA advisory. This is a post-access discovery step
+      consistent with pre-lateral-movement enumeration.
+    required_telemetry:
+      - "PowerShell Script Block Logging (Event ID 4104): WMI class names in script content"
+      - "WMI activity logs: Win32_NetworkAdapterConfiguration and AntiVirusProduct queries"
+      - "Process creation: powershell.exe querying root\\SecurityCenter2 namespace"
+      - "Network: encoded HTTP POST to C2 following discovery script execution"
+    detection_idea: >
+      Alert on: (1) PowerShell querying root\\SecurityCenter2\\AntiVirusProduct via WMI —
+      unusual outside AV management software; (2) PowerShell script content matching the
+      documented survey script structure (OS + IP + hostname + domain + username + AV in
+      single encoded string); (3) outbound HTTP POST shortly after WMI discovery from the
+      same process.
+    validation_plan: >
+      In a lab with Script Block Logging enabled, execute the documented survey script with
+      the C2 address replaced by a local listener. Verify Event ID 4104 captures the WMI
+      class queries. Verify the encoded output POST appears in network logs.
+    coverage_score: 0
+    coverage_scope: "lab_only"
+    mitre_mapping_status: "candidate"
+    production_readiness: "lab_only"
+    limitations:
+      - "WMI queries are common in enterprise environments. root\\SecurityCenter2 query is more distinctive."
+      - "Script content may vary across campaigns; exact script match is not a robust long-term detection."
+    review_status: "candidate"
+    analytic_note: "AV product enumeration via SecurityCenter2 is a high-confidence detection anchor — rarely done by legitimate software outside AV management."
+
+  - id: proc_mw_0010
+    title: "Credential Dumping from LSASS and Credential Stores"
+    actor_ref: "MuddyWater"
+    claim_refs:
+      - "clm_mw_0051"
+    source_refs:
+      - "src_cisa_aa22_055a_page"
+    evidence_label: "Observed"
+    confidence: "High"
+    attck_candidates:
+      - technique: "T1003.001"
+        mapping_status: "candidate"
+        notes: "Mimikatz and procdump64.exe used against LSASS memory"
+      - technique: "T1003.004"
+        mapping_status: "candidate"
+        notes: "LaZagne used for LSA secrets"
+      - technique: "T1003.005"
+        mapping_status: "candidate"
+        notes: "LaZagne used for cached domain credentials"
+    procedure_summary: >
+      MuddyWater performs credential access by dumping LSASS memory using Mimikatz and
+      procdump64.exe, and by running LaZagne to extract LSA secrets and cached domain credentials.
+      These tools are used post-access to enable lateral movement with harvested credentials.
+    required_telemetry:
+      - "Process creation: Mimikatz.exe, procdump64.exe, LaZagne.exe — or hash-matched equivalents"
+      - "LSASS access events: Sysmon Event ID 10 (process accessing lsass.exe)"
+      - "Windows Security Event ID 4656 / 4663: handle requests to lsass.exe"
+      - "File creation: dump files (.dmp) created in temp or user-writable paths"
+    detection_idea: >
+      Alert on: (1) procdump64.exe or any process opening a handle to lsass.exe with read
+      memory permissions (Sysmon Event ID 10); (2) Mimikatz indicators in process command line
+      or loaded modules (sekurlsa, lsadump); (3) LaZagne.exe execution or its known hashes;
+      (4) .dmp files created in user-writable directories.
+    validation_plan: >
+      In an isolated lab VM with no production credentials, run a read-only procdump of a
+      non-LSASS test process. Verify Sysmon Event ID 10 fires for the process access event.
+      Do not dump LSASS in lab — validate that the detection rule fires on the process access
+      event rather than requiring an actual LSASS dump.
+    coverage_score: 0
+    coverage_scope: "lab_only"
+    mitre_mapping_status: "candidate"
+    production_readiness: "lab_only"
+    limitations:
+      - "LSASS protection (PPL, Credential Guard) prevents some dumping methods in modern environments."
+      - "Mimikatz is well-known; actors may use renamed or custom variants that bypass binary-based detection."
+      - "LaZagne extraction leaves limited forensic artifacts beyond process execution."
+    review_status: "candidate"
+    analytic_note: "LSASS access detection via Sysmon Event ID 10 is the most reliable detection path regardless of tool variant."
