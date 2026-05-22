@@ -1,0 +1,46 @@
+---
+# PowerShell Script Block Logging — required for det_mw_0003 (Rule B) and det_mw_0009 (Rule A)
+- name: Ensure PowerShell ScriptBlockLogging registry path exists
+  win_regedit:
+    path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging
+    state: present
+
+- name: Enable Script Block Logging
+  win_regedit:
+    path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging
+    name: EnableScriptBlockLogging
+    type: dword
+    data: 1
+
+- name: Enable Script Block Invocation Logging
+  win_regedit:
+    path: HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging
+    name: EnableScriptBlockInvocationLogging
+    type: dword
+    data: 1
+
+# Process Creation audit (EID 4688) — fallback for envs without Sysmon
+- name: Enable Process Creation auditing
+  win_shell: auditpol /set /subcategory:"Process Creation" /success:enable /failure:enable
+
+# Logon auditing (EID 4624/4625)
+- name: Enable Logon auditing
+  win_shell: auditpol /set /subcategory:"Logon" /success:enable /failure:enable
+
+# Object Access — Kernel Object subcategory (for LSASS handle audit EID 4663)
+# Sysmon EID 10 is the primary telemetry — this is a supplementary audit only
+- name: Enable Kernel Object auditing (LSASS handle events)
+  win_shell: auditpol /set /subcategory:"Kernel Object" /success:enable /failure:enable
+  ignore_errors: true
+
+# Task Scheduler operational log (EID 4698) — det_mw_0006
+- name: Enable Task Scheduler Operational log
+  win_shell: wevtutil set-log "Microsoft-Windows-TaskScheduler/Operational" /enabled:true
+
+# Disable TCP task offloading — fixes dropped packets to host Elasticsearch via host-only NIC
+- name: Disable TCP task offloading
+  win_regedit:
+    path: HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters
+    name: DisableTaskOffload
+    type: dword
+    data: 1

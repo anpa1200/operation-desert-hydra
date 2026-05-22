@@ -1,0 +1,25 @@
+---
+# Elasticsearch — OpenCTI stack on host, reachable from VM via host-only NIC (192.168.56.1)
+# Override at deploy time: ELASTICSEARCH_HOST=x.x.x.x bash scripts/deploy.sh
+# VirtualBox NAT gateway — VM reaches host services at 10.0.2.2
+elasticsearch_host: "10.0.2.2"
+elasticsearch_port: 9200
+elasticsearch_index: "desert-hydra-winlogbeat"
+# ES credentials — must match ELASTIC_PASSWORD in opencti-intelligent-shield/.env
+# Set via: ansible-playbook ... -e elasticsearch_password=YOUR_PASSWORD
+# or export ANSIBLE_EXTRA_VARS before running deploy.sh
+elasticsearch_username: "elastic"
+elasticsearch_password: "CHANGE_ME"
+
+# Sysmon — downloaded from Microsoft Sysinternals at provision time
+sysmon_zip_url: "https://download.sysinternals.com/files/Sysmon.zip"
+sysmon_dir: 'C:\Windows\Sysmon'
+sysmon_config_dest: 'C:\Windows\Sysmon\sysmonconfig.xml'
+
+# Winlogbeat 8.x — must match Elasticsearch major version
+winlogbeat_version: "8.13.4"
+winlogbeat_zip_url: "https://artifacts.elastic.co/downloads/beats/winlogbeat/winlogbeat-8.13.4-windows-x86_64.zip"
+winlogbeat_dir: 'C:\Program Files\Winlogbeat'
+
+# Validation scratch directory — created on VM, cleaned after each simulation
+validation_tmp: 'C:\Temp\dh-lab'

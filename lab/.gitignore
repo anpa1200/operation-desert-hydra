@@ -1,0 +1,7 @@
+.vagrant/
+ansible/roles/sysmon/files/Sysmon.zip
+ansible/roles/sysmon/files/Sysmon64.exe
+ansible/roles/sysmon/files/Sysmon.exe
+ansible/roles/winlogbeat/files/winlogbeat*.zip
+*.dmp
+*.log

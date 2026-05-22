@@ -1,0 +1,33 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+# Desert Hydra Detection Validation Lab — single Windows 10 endpoint
+# NIC 1 : NAT  — internet access for Sysmon / Winlogbeat download
+# NIC 2 : host-only 192.168.56.10 — Ansible control + Elasticsearch reach-back
+
+Vagrant.configure("2") do |config|
+  config.vm.define "ws01" do |ws|
+    ws.vm.box          = "StefanScherer/windows_10"
+    ws.vm.hostname     = "DESERTWS01"
+    ws.vm.communicator = "winrm"
+
+    ws.winrm.username          = "vagrant"
+    ws.winrm.password          = "vagrant"
+    ws.winrm.transport         = :negotiate
+    ws.winrm.retry_limit       = 20
+    ws.winrm.retry_delay       = 10
+    ws.winrm.timeout           = 60
+    ws.winrm.operation_timeout = 90
+
+    # NAT only — Ansible uses localhost:55985 (auto-forwarded by Vagrant for winrm communicator)
+    # Winlogbeat reaches Elasticsearch on host via VirtualBox NAT gateway 10.0.2.2:9200
+
+    ws.vm.provider "virtualbox" do |vb|
+      vb.name   = "desert-hydra-ws01"
+      vb.memory = 4096
+      vb.cpus   = 2
+      vb.gui    = false
+      # Allow promiscuous mode on the host-only NIC
+      vb.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
+    end
+  end
+end

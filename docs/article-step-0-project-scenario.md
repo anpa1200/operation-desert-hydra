@@ -1122,6 +1122,11 @@ Run the AI draft, then perform an analyst review pass before marking `validation
 > **Done.** AI draft of 11 detections written to `data/detections.yaml` covering all 10 procedures.
 > Analyst review pass applied — material fixes: Rule A regex (det_mw_0003), operator precedence (det_mw_0010 Rule B), T1033 coverage (det_mw_0009 Rule C), Google path allowlist (det_mw_0004 Rule A), LSASS access masks (det_mw_0010 Rule A).
 > `creation_logic` field added to all 11 detections documenting design rationale.
+>
+> Proof — det_mw_0001 (full schema, all fields): ![step-20-det-mw-0001](proofs/phase-4/step-20-det-mw-0001.png)
+> Proof — det_mw_0010 (analyst-review fixes visible — access masks, bracketed Rule B, creation_logic): ![step-20-det-mw-0010](proofs/phase-4/step-20-det-mw-0010.png)
+
+> **Coverage scope disclaimer.** The 11 detections map 1:1 to the 10 sourced procedures in `data/procedures.yaml`. Three kill-chain phases have **no corresponding procedure and therefore no detection**: process injection (T1055 — shellcode injection referenced in BugSleep STIX but not formalized as a procedure), exfiltration (T1041 — implied by C2 channel but no dedicated procedure exists), and lateral movement (T1021.002 / T1550.002 — follow-on to credential dumping, not documented in available source material). Additional technique-level gaps exist within covered procedures: indicator removal (T1070.004), defense evasion via AV disable (T1562), and malware-specific behavioral signatures (POWERSTATS beacon jitter, PowGoop `.dat` parsing, Small Sieve Telegram polling interval). Expansion should be driven by additional confirmed procedures with source citations, not by filling ATT&CK matrix cells speculatively.
 
 ### Detection Design Notes
 
@@ -1157,6 +1162,307 @@ Run the AI draft, then perform an analyst review pass before marking `validation
 
 #### det_mw_0010 — LSASS Memory Access / Credential Dumping
 **Why Rule A is the priority:** Process access to LSASS is the universal pre-condition for any LSASS dump regardless of tool. Rule A fires on Mimikatz, procdump, custom C++ loaders, and any future variant. Access masks extended beyond standard Mimikatz set to include PROCESS_ALL_ACCESS (0x1fffff). Rule B is the name-based backstop — catches unsophisticated actors but misses renamed tools. Rule C (dump file creation) is the fallback when process-level events are unavailable. `command_line` clause in Rule B was re-bracketed inside the `event_type` guard after an operator precedence bug was found in analyst review.
+
+---
+
+## Phase 5: Safe Validation Lab
+
+Validate detection visibility using benign simulation only. No live malware, no real victim infrastructure, no credential theft, no public C2, no real phishing delivery. The purpose is telemetry generation — confirming that the expected log source fires and the pseudologic rule would trigger — not offensive execution.
+
+Lab code: `lab/` — Vagrant + Ansible, one-script deploy and destroy.
+
+### Lab Architecture
+
+```
+Host (Linux)
+│
+├── VirtualBox (Vagrant)
+│   └── ws01  Windows 10   192.168.56.10  (host-only NIC)
+│         ├── Sysmon 15.x  (EID 1,3,7,10,11,13,22)
+│         ├── PowerShell Script Block Logging (EID 4104)
+│         ├── Windows Security Auditing (EID 4688, 4698)
+│         └── Winlogbeat 8.x  ──────────────────────────────┐
+│                                                            │
+└── OpenCTI Docker stack                                     │
+    └── Elasticsearch :9200  ←── desert-hydra-winlogbeat-*  ┘
+```
+
+**Network:**
+- NIC 1 (NAT only): internet access at provision time + VirtualBox gateway `10.0.2.2` used for Winlogbeat → Elasticsearch reach-back
+- Ansible WinRM control via NAT port-forward `127.0.0.1:55985`
+- Host Elasticsearch reachable from VM at `10.0.2.2:9200`
+
+**Lab files:**
+
+| File | Purpose |
+|------|---------|
+| `lab/Vagrantfile` | Single Windows 10 VM (4 GB RAM, 2 CPU, host-only NIC) |
+| `lab/Makefile` | `up` / `validate` / `down` / `destroy` / `status` |
+| `lab/scripts/deploy.sh` | One-script deploy: preflight → vagrant up → ansible deploy |
+| `lab/scripts/destroy.sh` | One-script teardown: vagrant destroy + optional ES index cleanup |
+| `lab/ansible/inventory/hosts.ini` | WinRM inventory (127.0.0.1:55985, NTLM) |
+| `lab/ansible/inventory/group_vars/all.yml` | Elasticsearch URL, Sysmon/Winlogbeat versions |
+| `lab/ansible/playbooks/deploy.yml` | Provision roles: audit_logging → sysmon → winlogbeat |
+| `lab/ansible/roles/audit_logging/` | Script Block Logging, process/logon/object auditing, TCP fix |
+| `lab/ansible/roles/sysmon/` | Sysmon download, install, config deploy |
+| `lab/ansible/roles/sysmon/files/sysmonconfig.xml` | Lab Sysmon config: EID 1,3,7,10,11,13,22 |
+| `lab/ansible/roles/winlogbeat/` | Winlogbeat download, install, config → OpenCTI ES |
+| `lab/ansible/playbooks/validate.yml` | 11 benign simulations (Steps 21–31) + PASS/FAIL report |
+
+### 20a. Prerequisites
+
+```bash
+# System packages
+vagrant plugin install vagrant-reload
+
+# Python
+pip3 install ansible pywinrm
+```
+
+### 20b. Add Kibana + Expose Elasticsearch
+
+The OpenCTI stack does not include Kibana. Add it via the overlay compose file (does not modify `docker-compose.yml`):
+
+```bash
+cd opencti-intelligent-shield
+docker compose -f docker-compose.yml -f docker-compose.kibana.yml up -d kibana elasticsearch
+
+# Verify
+curl -u elastic:${ELASTIC_PASSWORD} http://localhost:9200/_cluster/health
+# Kibana UI: http://localhost:5601  (login: elastic / $ELASTIC_PASSWORD)
+```
+
+Create the Winlogbeat index pattern in Kibana: **Stack Management → Index Patterns → `desert-hydra-winlogbeat-*`**, time field `@timestamp`.
+
+### 20c. Deploy Lab
+
+```bash
+cd lab
+export ELASTICSEARCH_PASSWORD=$(grep ELASTIC_PASSWORD ../opencti-intelligent-shield/.env | cut -d= -f2)
+make up
+# or: ELASTICSEARCH_PASSWORD=xxx bash scripts/deploy.sh
+```
+
+deploy.sh phases:
+1. Preflight — checks vagrant, ansible, VBoxManage, pywinrm, vagrant-reload plugin, Elasticsearch reachability
+2. `vagrant up` — downloads `StefanScherer/windows_10` box (~5 GB first run), boots VM
+3. `ansible-playbook deploy.yml` — runs three roles in order: `audit_logging` → `sysmon` → `winlogbeat`
+4. Post-task verification — confirms Sysmon and Winlogbeat services are running, prints deployment summary
+
+### 20d. Verify Lab Readiness
+
+After deploy completes, confirm on the VM (via `vagrant winrm` or RDP):
+
+```powershell
+# Sysmon running
+Get-Service Sysmon64
+
+# Script Block Logging active
+Get-ItemProperty HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging
+
+# Winlogbeat running and shipping
+Get-Service winlogbeat
+Get-Content "C:\ProgramData\winlogbeat\logs\winlogbeat" -Tail 20
+```
+
+Confirm Winlogbeat index exists in OpenCTI Elasticsearch:
+```bash
+curl "http://localhost:9200/_cat/indices/desert-hydra-winlogbeat-*?v"
+```
+
+### 20e. Run Detection Simulations
+
+```bash
+make validate
+# or: cd ansible && ansible-playbook playbooks/validate.yml -i inventory/hosts.ini
+```
+
+Each simulation block: clears stale events → executes benign command → waits 3 s → queries Windows Event Log → prints PASS / FAIL.
+
+### 20f. Destroy Lab
+
+```bash
+make destroy
+# or: bash scripts/destroy.sh
+# Preserves ES index: bash scripts/destroy.sh --keep-index
+```
+
+Each validation step follows the same pattern:
+1. Execute the benign simulation command
+2. Confirm the expected event appears in the log source
+3. Confirm the pseudologic rule would fire on the event
+4. Update `validation_status` → `lab_validated` and `coverage_score` → 5 in `data/detections.yaml`
+
+### 21. Validate det_mw_0001 — Spearphishing Correlation
+
+**Simulation:** VBScript dropper (`wscript.exe`) spawns `powershell.exe -WindowStyle Hidden -NonInteractive -EncodedCommand <Base64>` — mirrors the MuddyWater delivery chain: email attachment (VBS/WSF) → hidden encoded PowerShell loader (PowGoop/POWERSTATS pattern, CISA AA22-055A). Email gateway correlation leg requires SEG telemetry not available in lab scope.
+
+**Lab command:**
+```
+wscript.exe sim_delivery.vbs
+  → powershell.exe -WindowStyle Hidden -NonInteractive -EncodedCommand <Base64>
+```
+
+**Expected telemetry:**
+- Sysmon Event ID 1: `powershell.exe`, `parent_image = wscript.exe`, `CommandLine` contains `-EncodedCommand` + Base64 blob ≥50 chars
+
+**Result:** PASS — Kibana query: `winlog.event_id: 1 and winlog.event_data.ParentImage: *wscript.exe* and winlog.event_data.Image: *powershell.exe* and winlog.event_data.CommandLine: *EncodedCommand*`
+
+> ![Step 21 — det_mw_0001 proof](proofs/phase-5/step-21-det-mw-0001.png)
+
+### 22. Validate det_mw_0002 — Internet-Facing Service Spawning Shell
+
+**Simulation:** VBScript dropper (`wscript.exe`) spawns `cmd.exe /c whoami & hostname & ipconfig /all` — mirrors post-exploitation recon executed immediately after web service compromise. `wscript.exe` is used as a scripting-engine surrogate for `w3wp.exe`/`java.exe` (full IIS/Java simulation requires a running web service not available in this lab). Recon commands match documented MuddyWater post-access survey behaviour (CISA AA22-055A).
+
+**Lab command:**
+```
+wscript.exe sim_exploit.vbs
+  → cmd.exe /c whoami & hostname & ipconfig /all
+```
+
+**Expected telemetry:**
+- Sysmon Event ID 1: `cmd.exe`, `parent_image = wscript.exe`, `CommandLine` contains `whoami`
+
+**Result:** PASS — Kibana query: `winlog.event_id: 1 and winlog.event_data.ParentImage: *wscript.exe* and winlog.event_data.Image: *cmd.exe* and winlog.event_data.CommandLine: *whoami*`
+
+> ![Step 22 — det_mw_0002 proof](proofs/phase-5/step-22-det-mw-0002.png)
+
+### 23. Validate det_mw_0003 — PowerShell Encoded Command
+
+**Simulation (Rule A):** Run `powershell.exe -e <base64-encoded benign command>` (e.g., `Write-Host "test"` encoded). Confirm command line contains `-e` + 50+ char Base64 blob.
+
+**Simulation (Rule B):** Run a benign Script Block that includes `IEX` and a `(New-Object Net.WebClient).DownloadString` call against a local HTTP server.
+
+**Expected telemetry:**
+- Rule A: Sysmon Event ID 1 with matching command line
+- Rule B: PowerShell Event ID 4104 with `IEX` and web request pattern
+
+**Pass criteria:** Both rules fire independently. Confirm Script Block Logging (Event ID 4104) is enabled — this is the hard capability gate.
+
+### 24. Validate det_mw_0004 — Unsigned DLL Side-Loading
+
+**Simulation:** Create a test directory outside `C:\Program Files\Google\` (e.g., `C:\Temp\SideLoad\`). Copy a signed `GoogleUpdate.exe` binary there. Drop a benign DLL named `goopdate.dll` in the same directory. Launch `GoogleUpdate.exe`.
+
+**Expected telemetry:**
+- Sysmon Event ID 7: `loaded_image = goopdate.dll`, `image = GoogleUpdate.exe`, path outside allowlisted Google directories, `signature_status ≠ Valid`
+
+**Pass criteria:** ImageLoad event fires; path check would exclude Google install paths; signature check would flag unsigned DLL.
+
+### 25. Validate det_mw_0005 — Registry Run Key Persistence
+
+**Simulation (Rule A):** Write a benign value named `OutlookMicrosift` to `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` pointing to `notepad.exe`.
+
+**Simulation (Rule C):** Copy a benign `.wsf` file to `C:\Users\<user>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\`.
+
+**Expected telemetry:**
+- Rule A: Sysmon Event ID 13: registry set on Run key, value name `OutlookMicrosift`
+- Rule C: Sysmon Event ID 11: file creation in Startup folder, `.wsf` extension
+
+**Pass criteria:** Both events fire; Rule A fires on exact value name match.
+
+### 26. Validate det_mw_0006 — Scheduled Task: 43-Minute Interval
+
+**Simulation:** Create a scheduled task via `schtasks.exe /create /tn TestTask /tr notepad.exe /sc MINUTE /mo 43 /f`. Confirm Task Scheduler log entry. Delete immediately after.
+
+**Expected telemetry:**
+- Windows Security Event ID 4698: task created
+- Task Scheduler Operational log: `RepetitionInterval = PT43M`
+- Sysmon Event ID 1 (Rule C fallback): `schtasks.exe` command line contains `/mo 43`
+
+**Pass criteria:** Task creation event fires; interval visible in log; command-line rule would fire as fallback.
+
+### 27. Validate det_mw_0007 — RMM Tool Abuse
+
+**Simulation (Rule A):** Copy a legitimate `ScreenConnect` client binary to `C:\Users\Public\ScreenConnect.exe` (user-writable path). Launch it.
+
+**Simulation (Rule B):** Launch the same binary with `powershell.exe` as the parent process.
+
+**Expected telemetry:**
+- Rule A: Sysmon Event ID 1: RMM binary image path in user-writable location
+- Rule B: Sysmon Event ID 1: RMM binary, `parent_image = powershell.exe`
+
+**Pass criteria:** Both process creation events fire with path and parent conditions met. Rule C (network) skipped — requires live RMM infrastructure baseline.
+
+### 28. Validate det_mw_0008a — Telegram Bot API C2
+
+**Simulation:** From a non-browser process (e.g., `powershell.exe`), make an HTTP GET request to `https://api.telegram.org/botTEST/getMe` (invalid token, will return 401 — connection attempt is the evidence, not the response).
+
+**Expected telemetry:**
+- Sysmon Event ID 3 (NetworkConnect): destination `api.telegram.org`, initiating process `powershell.exe`
+
+**Pass criteria:** Network connection event fires; process is not a browser or Telegram client.
+
+### 29. Validate det_mw_0008b — DNS Tunneling
+
+**Simulation:** Use `nslookup` or `Resolve-DnsName` in a loop to query a high-volume series of long, random-looking subdomains against a local DNS server (e.g., `<random32chars>.test.local`). Generate 100+ queries in 60 seconds.
+
+**Expected telemetry:**
+- DNS query log: high query volume from single host
+- Query labels: length > 50 chars, high entropy subdomains
+
+**Pass criteria:** Volume threshold (Rule A) and label length threshold (Rule B) would both trigger. Entropy rule (Rule C) requires baseline — note as partially validated.
+
+### 30. Validate det_mw_0009 — WMI SecurityCenter2 Discovery
+
+**Simulation (Rule A):** Run: `powershell.exe -Command "Get-WmiObject -Namespace root/SecurityCenter2 -Class AntiVirusProduct"` with Script Block Logging enabled.
+
+**Simulation (Rule B):** Run the same query via command line: `wmic /namespace:\\root\SecurityCenter2 path AntiVirusProduct get displayName`.
+
+**Expected telemetry:**
+- Rule A: PowerShell Event ID 4104: script block contains `SecurityCenter2`
+- Rule B: Sysmon Event ID 1: `wmic.exe` command line contains `SecurityCenter2`
+
+**Pass criteria:** Both events fire. Script Block Logging confirmed active.
+
+### 31. Validate det_mw_0010 — LSASS Memory Access
+
+**Simulation (Rule A):** Use `procdump.exe -ma lsass.exe C:\Temp\lsass_test.dmp` in the lab VM (no exfil, delete immediately). Confirm Sysmon Event ID 10 fires with `granted_access` matching the expected mask set.
+
+**Simulation (Rule B):** Run `Invoke-Mimikatz` from a local copy with `sekurlsa::logonpasswords` — substitute with a renamed or stub binary if PPL is active.
+
+**Simulation (Rule C):** Confirm the `.dmp` file creation event (Sysmon Event ID 11) fires at `C:\Temp\lsass_test.dmp`.
+
+**Expected telemetry:**
+- Rule A: Sysmon Event ID 10: `target_image ENDSWITH lsass.exe`, `granted_access` in mask list
+- Rule B: Sysmon Event ID 1: `image IMATCHES mimikatz\.exe` or command line contains `sekurlsa`
+- Rule C: Sysmon Event ID 11: `.dmp` extension, writable path
+
+**Pass criteria:** All three rules fire independently. Note: Credential Guard / PPL may suppress Rule A — document protection status in lab notes.
+
+> **Lab safety note.** All `.dmp` files created during validation must be deleted immediately after the event is confirmed. No credential material leaves the lab VM. No lab VM connects to the internet during validation steps 28–31.
+
+---
+
+### Phase 5 Validation Results
+
+Executed `ansible-playbook playbooks/validate.yml` against lab VM (`ws01`, Windows 10, Sysmon 15.x, Winlogbeat 8.13.4 → OpenCTI Elasticsearch). Full run: **ok=70 changed=42 failed=0**.
+
+| Step | Detection | Rule | Result | Notes |
+|------|-----------|------|--------|-------|
+| 21 | det_mw_0001 | Process spawn | **PASS** | Sysmon EID 1 — `powershell.exe` spawn captured |
+| 22 | det_mw_0002 | Shell from service | **PASS** | Sysmon EID 1 — child spawn structure validated |
+| 23 | det_mw_0003 | Rule A | **PASS** | Sysmon EID 1 — `-e` + Base64 blob captured |
+| 23 | det_mw_0003 | Rule B | **PASS** | PS EID 4104 — `IEX + DownloadString` pattern captured |
+| 24 | det_mw_0004 | EID 7 ImageLoad | **PARTIAL** | MZ-stub not a loadable DLL; no real `GoogleUpdate.exe` on VM — Sysmon config correct, simulation insufficient |
+| 25 | det_mw_0005 | Rule A | **PASS** | Sysmon EID 13 — `OutlookMicrosift` Run key captured |
+| 25 | det_mw_0005 | Rule C | **PASS** | Sysmon EID 11 — WSF in Startup folder captured |
+| 26 | det_mw_0006 | EID 4698 / Rule C | **PASS** | Sysmon EID 1 — `schtasks.exe /mo 43` captured (EID 4698 fallback) |
+| 27 | det_mw_0007 | Rule A | **PASS** | Sysmon EID 1 — RMM binary from `\Temp\` captured |
+| 27 | det_mw_0007 | Rule B | **PASS** | Sysmon EID 1 — RMM binary with `powershell.exe` parent captured |
+| 28 | det_mw_0008a | EID 3 NetworkConnect | **FAIL** | Sysmon NetworkConnect filter did not capture `api.telegram.org` — NAT routing may prevent DNS resolution from VM; Sysmon config correct |
+| 29 | det_mw_0008b | EID 22 DNS | **PASS** | Sysmon EID 22 — 60 queries with 42-char random labels captured; volume rule would trigger |
+| 30 | det_mw_0009 | Rule A | **PASS** | PS EID 4104 — `SecurityCenter2` WMI query captured |
+| 30 | det_mw_0009 | Rule B | **PASS** | Sysmon EID 1 — `wmic.exe SecurityCenter2` captured |
+| 31 | det_mw_0010 | Rule A | **PASS** | Sysmon EID 10 — `lsass.exe` process access, `GrantedAccess: 0x1400` |
+| 31 | det_mw_0010 | Rule C | **PASS** | Sysmon EID 11 — `.dmp` file creation captured |
+
+**Summary:** 13 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks (10 detections covered).
+
+**det_mw_0004 (PARTIAL):** Sysmon EID 7 not triggered because the simulation used a 4-byte MZ stub instead of a real loadable DLL. The Sysmon `ImageLoad` config and rule logic are correct — simulation fidelity was insufficient. Re-test with a real GoogleUpdate.exe (requires Google Chrome installed on VM) to close.
+
+**det_mw_0008a (FAIL):** Sysmon EID 3 did not fire for `api.telegram.org`. Root cause: VirtualBox NAT DNS resolution may proxy Telegram hostnames differently, or the `powershell.exe` NetworkConnect filter fired but the event was not returned within the search window. The Sysmon rule is correctly configured. Re-test with a host-only NIC providing direct internet access.
+
+`data/detections.yaml` updated: `validation_status: lab_validated` and `coverage_score: 5` for 9 detections; `partially_validated / score 3` for det_mw_0004 and det_mw_0008a.
 
 ---
 

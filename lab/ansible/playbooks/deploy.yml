@@ -1,0 +1,43 @@
+---
+- name: Desert Hydra — Provision validation VM
+  hosts: windows
+  gather_facts: true
+
+  pre_tasks:
+    - name: Create validation scratch directory
+      win_file:
+        path: "{{ validation_tmp }}"
+        state: directory
+
+  roles:
+    - role: audit_logging
+    - role: sysmon
+    - role: winlogbeat
+
+  post_tasks:
+    - name: Verify Sysmon service is running
+      win_service:
+        name: Sysmon64
+      register: sysmon_svc
+      failed_when: sysmon_svc.state != 'running'
+
+    - name: Verify Winlogbeat service is running
+      win_service:
+        name: winlogbeat
+      register: wb_svc
+      failed_when: wb_svc.state != 'running'
+
+    - name: Confirm Script Block Logging is active
+      win_shell: |
+        $val = Get-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging" `
+          -Name EnableScriptBlockLogging -ErrorAction SilentlyContinue
+        if ($val.EnableScriptBlockLogging -eq 1) { "ENABLED" } else { "DISABLED" }
+      register: sbl_check
+
+    - name: Print deployment summary
+      debug:
+        msg:
+          - "Sysmon      : {{ sysmon_svc.state }}"
+          - "Winlogbeat  : {{ wb_svc.state }}"
+          - "Script Block: {{ sbl_check.stdout | trim }}"
+          - "ES target   : http://{{ elasticsearch_host }}:{{ elasticsearch_port }}/{{ elasticsearch_index }}-*"

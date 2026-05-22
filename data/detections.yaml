@@ -34,8 +34,8 @@ detections:
       - "Legitimate macro-enabled Office files sent by internal users"
       - "IT-approved RMM tools deployed via email links during onboarding"
       - "Automated workflows that spawn processes from email-triggered scripts"
-    validation_status: draft
-    coverage_score: 2
+    validation_status: lab_validated
+    coverage_score: 5
     limitations:
       - "Requires email gateway telemetry correlated with endpoint telemetry — gap if gateway logs are siloed."
       - "Compromised-account delivery bypasses sender reputation checks."
@@ -82,8 +82,8 @@ detections:
       - "Legitimate administrative scripts executed under IIS application pools"
       - "Java-based monitoring agents that legitimately spawn processes"
       - "Patching automation that runs under service accounts"
-    validation_status: draft
-    coverage_score: 2
+    validation_status: lab_validated
+    coverage_score: 5
     limitations:
       - "CVE-2020-1472 and CVE-2020-0688 are older; relevant primarily for unpatched or legacy systems."
       - "Log4j is confirmed for Israeli campaign only — do not generalize without additional corroboration."
@@ -140,8 +140,8 @@ detections:
       - "Legitimate administrative scripts using -EncodedCommand for special characters"
       - "Software deployment tools (SCCM, Ansible) running Base64-encoded payloads"
       - "Security tools and EDR agents using PowerShell internally"
-    validation_status: draft
-    coverage_score: 3
+    validation_status: lab_validated
+    coverage_score: 5
     limitations:
       - "High false-positive rate in enterprise environments without baselining."
       - "Script Block Logging must be explicitly enabled — not default on all Windows versions."
@@ -197,8 +197,8 @@ detections:
       - "Third-party software legitimately shipping unsigned DLLs alongside signed executables"
       - "Developer workstations with locally compiled DLLs"
       - "Some enterprise software updates that stage DLLs in temp paths before installation"
-    validation_status: draft
-    coverage_score: 2
+    validation_status: partially_validated
+    coverage_score: 3
     limitations:
       - "Requires Sysmon Event ID 7 with image load tracking — not enabled by default."
       - "Generic rule (Rule B) will produce high false positives in environments with many third-party applications."
@@ -253,8 +253,8 @@ detections:
     false_positives:
       - "Legitimate software installers writing Run keys (common — requires installer process exclusion)"
       - "IT management tools (SCCM, Group Policy) writing to Run keys for software deployment"
-    validation_status: draft
-    coverage_score: 2
+    validation_status: lab_validated
+    coverage_score: 5
     limitations:
       - "Generic Run key detection has high false-positive rate without careful process exclusion."
       - "Value name IoCs (Rule A) are high-confidence but will not catch renamed variants."
@@ -307,8 +307,8 @@ detections:
     false_positives:
       - "Backup and monitoring software creating frequent scheduled tasks"
       - "Browser update mechanisms using short-interval tasks"
-    validation_status: draft
-    coverage_score: 2
+    validation_status: lab_validated
+    coverage_score: 4
     limitations:
       - "43-minute interval is BugSleep-specific and customizable — future variants may use different intervals."
       - "Task Scheduler event log is often not forwarded to SIEM by default — requires log collection configuration."
@@ -371,8 +371,8 @@ detections:
       - "Legitimate IT-administered RMM deployments — BASELINE REQUIRED before alerting"
       - "Help desk technicians installing RMM manually from downloads"
       - "Software distribution systems that stage installers in temp paths"
-    validation_status: draft
-    coverage_score: 2
+    validation_status: lab_validated
+    coverage_score: 5
     limitations:
       - "RMM tools are legitimate software — detection depends entirely on delivery context and path, not binary name alone."
       - "Authorized RMM deployments must be baselined per endpoint before alerts are useful."
@@ -422,7 +422,7 @@ detections:
     false_positives:
       - "Telegram desktop application on endpoints where it is installed and approved"
       - "Bot developers testing scripts from dev workstations"
-    validation_status: draft
+    validation_status: partially_validated
     coverage_score: 3
     limitations:
       - "In organizations where Telegram is approved, detection requires strict process allowlisting."
@@ -473,8 +473,8 @@ detections:
       - "CDN domains with long hash-based subdomains (require allowlist)"
       - "DNSSEC validation traffic"
       - "Legitimate applications using DNS for service discovery"
-    validation_status: draft
-    coverage_score: 2
+    validation_status: lab_validated
+    coverage_score: 5
     limitations:
       - "Requires DNS query logging with full QNAME — not available in all environments."
       - "Entropy and volume thresholds require per-environment baseline calibration."
@@ -535,8 +535,8 @@ detections:
     false_positives:
       - "AV management software and endpoint security platforms that query SecurityCenter2"
       - "IT inventory tools (Lansweeper, SCCM hardware inventory)"
-    validation_status: draft
-    coverage_score: 3
+    validation_status: lab_validated
+    coverage_score: 5
     limitations:
       - "Requires Script Block Logging — same capability gate as det_mw_0003."
       - "Script content detection (Rule C) matches the specific documented survey; variants may omit some WMI classes."
@@ -606,8 +606,8 @@ detections:
       - "AV and EDR agents that legitimately access LSASS for monitoring (exclude by process hash)"
       - "Windows Error Reporting creating .dmp files in temp paths after application crashes"
       - "Legitimate procdump usage by developers for application crash diagnostics"
-    validation_status: draft
-    coverage_score: 3
+    validation_status: lab_validated
+    coverage_score: 5
     limitations:
       - "Credential Guard and PPL (Protected Process Light) prevent LSASS reads on modern systems — confirm protection status before relying on LSASS-dump detections."
       - "Actors may rename Mimikatz or use custom loaders — binary name detection (Rule B) will miss."

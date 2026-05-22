@@ -1,0 +1,50 @@
+---
+- name: Create Sysmon directory
+  win_file:
+    path: "{{ sysmon_dir }}"
+    state: directory
+
+- name: Download Sysmon zip from Sysinternals
+  win_get_url:
+    url: "{{ sysmon_zip_url }}"
+    dest: 'C:\Windows\Temp\Sysmon.zip'
+
+- name: Extract Sysmon zip
+  win_unzip:
+    src: 'C:\Windows\Temp\Sysmon.zip'
+    dest: "{{ sysmon_dir }}"
+    delete_archive: false
+
+- name: Deploy Sysmon config
+  win_copy:
+    src: sysmonconfig.xml
+    dest: "{{ sysmon_config_dest }}"
+
+- name: Check if Sysmon64 service exists
+  win_shell: sc.exe query Sysmon64
+  register: sysmon_query
+  ignore_errors: true
+  changed_when: false
+
+- name: Install Sysmon (first time)
+  win_command:
+    argv:
+      - "{{ sysmon_dir }}\\Sysmon64.exe"
+      - -accepteula
+      - -i
+      - "{{ sysmon_config_dest }}"
+  when: sysmon_query.rc != 0
+
+- name: Update Sysmon config (already installed)
+  win_command:
+    argv:
+      - "{{ sysmon_dir }}\\Sysmon64.exe"
+      - -c
+      - "{{ sysmon_config_dest }}"
+  when: sysmon_query.rc == 0
+
+- name: Ensure Sysmon64 service is running and set to auto-start
+  win_service:
+    name: Sysmon64
+    state: started
+    start_mode: auto

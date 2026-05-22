@@ -1,0 +1,28 @@
+winlogbeat.event_logs:
+  - name: Application
+  - name: System
+  - name: Security
+    event_id: 4624, 4625, 4688, 4698, 4699, 4702, 4663, 4656
+
+  # Sysmon — primary telemetry source for all 11 detections
+  - name: Microsoft-Windows-Sysmon/Operational
+
+  # PowerShell Script Block Logging — EID 4104, required for det_mw_0003 and det_mw_0009
+  - name: Microsoft-Windows-PowerShell/Operational
+    event_id: 4103, 4104, 4105, 4106
+
+  # Task Scheduler — EID 106/200/201/4698, required for det_mw_0006
+  - name: Microsoft-Windows-TaskScheduler/Operational
+    event_id: 106, 200, 201, 4698
+
+output.elasticsearch:
+  hosts: ["{{ elasticsearch_host }}:{{ elasticsearch_port }}"]
+  username: "{{ elasticsearch_username }}"
+  password: "{{ elasticsearch_password }}"
+
+logging.level: info
+logging.to_files: true
+logging.files:
+  path: C:\ProgramData\winlogbeat\logs
+  name: winlogbeat
+  keepfiles: 3

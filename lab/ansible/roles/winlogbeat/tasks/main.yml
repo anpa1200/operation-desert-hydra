@@ -1,0 +1,49 @@
+---
+- name: Create Winlogbeat directory
+  win_file:
+    path: "{{ winlogbeat_dir }}"
+    state: directory
+
+- name: Download Winlogbeat zip
+  win_get_url:
+    url: "{{ winlogbeat_zip_url }}"
+    dest: 'C:\Windows\Temp\winlogbeat.zip'
+
+- name: Extract Winlogbeat zip
+  win_unzip:
+    src: 'C:\Windows\Temp\winlogbeat.zip'
+    dest: 'C:\Windows\Temp\winlogbeat-extract'
+    delete_archive: false
+
+- name: Copy Winlogbeat binaries to install dir
+  win_shell: |
+    $src = (Get-ChildItem -Path "C:\Windows\Temp\winlogbeat-extract" -Directory | Select-Object -First 1).FullName
+    Copy-Item "$src\*" -Destination "{{ winlogbeat_dir }}" -Recurse -Force
+
+- name: Deploy Winlogbeat config
+  win_template:
+    src: winlogbeat.yml.j2
+    dest: '{{ winlogbeat_dir }}\winlogbeat.yml'
+
+- name: Create Winlogbeat log directory
+  win_file:
+    path: 'C:\ProgramData\winlogbeat\logs'
+    state: directory
+
+- name: Check if winlogbeat service exists
+  win_shell: sc.exe query winlogbeat
+  register: wb_query
+  ignore_errors: true
+  changed_when: false
+
+- name: Install Winlogbeat as Windows service
+  win_shell: |
+    cd "{{ winlogbeat_dir }}"
+    .\install-service-winlogbeat.ps1
+  when: wb_query.rc != 0
+
+- name: Ensure Winlogbeat service is running and set to auto-start
+  win_service:
+    name: winlogbeat
+    state: started
+    start_mode: auto

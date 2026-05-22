@@ -1,0 +1,174 @@
+<Sysmon schemaversion="4.91">
+  <!--
+    Desert Hydra Validation Lab — Sysmon config
+    Covers telemetry required for detections det_mw_0001 through det_mw_0010.
+    This is a LAB config: broad includes are intentional to capture all simulation events.
+    Do NOT deploy to production without tuning.
+
+    EID coverage:
+      EID  1  ProcessCreate  — det_mw_0001/0002/0003/0006/0007/0009/0010
+      EID  3  NetworkConnect — det_mw_0007/0008a
+      EID  7  ImageLoad      — det_mw_0004
+      EID 10  ProcessAccess  — det_mw_0010
+      EID 11  FileCreate     — det_mw_0005/0010
+      EID 13  RegistryEvent  — det_mw_0005
+      EID 22  DnsQuery       — det_mw_0008b
+  -->
+  <EventFiltering>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         EID 1 — Process Create
+         Captures: shells, scripting engines, RMM tools, credential tools,
+                   scheduled task creation, WMI, exploitation chain binaries
+         ═════════════════════════════════════════════════════════════════ -->
+    <RuleGroup name="" groupRelation="or">
+      <ProcessCreate onmatch="include">
+
+        <!-- Shells and scripting engines -->
+        <Image condition="end with">powershell.exe</Image>
+        <Image condition="end with">pwsh.exe</Image>
+        <Image condition="end with">cmd.exe</Image>
+        <Image condition="end with">wscript.exe</Image>
+        <Image condition="end with">cscript.exe</Image>
+        <Image condition="end with">mshta.exe</Image>
+
+        <!-- Credential access tools (det_mw_0010 Rule B) -->
+        <Image condition="end with">mimikatz.exe</Image>
+        <Image condition="end with">procdump.exe</Image>
+        <Image condition="end with">procdump64.exe</Image>
+        <CommandLine condition="contains">sekurlsa</CommandLine>
+        <CommandLine condition="contains">lsadump</CommandLine>
+        <CommandLine condition="contains">privilege::debug</CommandLine>
+        <CommandLine condition="contains">MiniDump</CommandLine>
+
+        <!-- Scheduled task creation (det_mw_0006) -->
+        <Image condition="end with">schtasks.exe</Image>
+        <CommandLine condition="contains">schtasks</CommandLine>
+
+        <!-- WMI query execution (det_mw_0009) -->
+        <Image condition="end with">wmic.exe</Image>
+
+        <!-- RMM tools (det_mw_0007) -->
+        <Image condition="end with">ScreenConnect.ClientService.exe</Image>
+        <Image condition="end with">ScreenConnect.WindowsClient.exe</Image>
+        <Image condition="end with">AteraAgent.exe</Image>
+        <Image condition="end with">SimpleHelp.exe</Image>
+        <Image condition="end with">rport.exe</Image>
+
+        <!-- Web service exploitation: any process spawned by web/app servers (det_mw_0002) -->
+        <ParentImage condition="end with">w3wp.exe</ParentImage>
+        <ParentImage condition="end with">java.exe</ParentImage>
+        <ParentImage condition="end with">tomcat.exe</ParentImage>
+
+        <!-- Compression and staging tools -->
+        <Image condition="end with">7za.exe</Image>
+        <Image condition="end with">certutil.exe</Image>
+        <Image condition="end with">rundll32.exe</Image>
+
+      </ProcessCreate>
+    </RuleGroup>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         EID 3 — Network Connect
+         Captures: Telegram Bot API (det_mw_0008a), RMM outbound (det_mw_0007),
+                   PowerShell web requests
+         ═════════════════════════════════════════════════════════════════ -->
+    <RuleGroup name="" groupRelation="or">
+      <NetworkConnect onmatch="include">
+
+        <!-- Telegram Bot API (det_mw_0008a) — non-browser to api.telegram.org -->
+        <DestinationHostname condition="end with">api.telegram.org</DestinationHostname>
+
+        <!-- RMM infrastructure (det_mw_0007 Rule C) -->
+        <DestinationHostname condition="end with">screenconnect.com</DestinationHostname>
+        <DestinationHostname condition="end with">atera.com</DestinationHostname>
+        <DestinationHostname condition="end with">simplehelp.net</DestinationHostname>
+
+        <!-- PowerShell and scripting engine network activity -->
+        <Image condition="end with">powershell.exe</Image>
+        <Image condition="end with">wscript.exe</Image>
+        <Image condition="end with">mshta.exe</Image>
+
+      </NetworkConnect>
+    </RuleGroup>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         EID 7 — Image Load (DLL)
+         Captures: DLL side-loading (det_mw_0004)
+         ═════════════════════════════════════════════════════════════════ -->
+    <RuleGroup name="" groupRelation="or">
+      <ImageLoad onmatch="include">
+
+        <!-- Specific DLL names from det_mw_0004 procedure -->
+        <ImageLoaded condition="end with">goopdate.dll</ImageLoaded>
+
+        <!-- Any DLL loaded by GoogleUpdate.exe — catches renamed variants -->
+        <Image condition="end with">GoogleUpdate.exe</Image>
+
+        <!-- Unsigned DLL loaded by any signed binary — broad lab net -->
+        <Signed condition="is">false</Signed>
+
+      </ImageLoad>
+    </RuleGroup>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         EID 10 — Process Access
+         Captures: LSASS memory access (det_mw_0010 Rule A)
+         ═════════════════════════════════════════════════════════════════ -->
+    <RuleGroup name="" groupRelation="or">
+      <ProcessAccess onmatch="include">
+        <TargetImage condition="end with">lsass.exe</TargetImage>
+      </ProcessAccess>
+    </RuleGroup>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         EID 11 — File Create
+         Captures: Startup folder WSF (det_mw_0005 Rule C), .dmp files (det_mw_0010 Rule C)
+         ═════════════════════════════════════════════════════════════════ -->
+    <RuleGroup name="" groupRelation="or">
+      <FileCreate onmatch="include">
+
+        <!-- Startup folder persistence (det_mw_0005 Rule C) -->
+        <TargetFilename condition="contains">Startup</TargetFilename>
+
+        <!-- Credential dump files (det_mw_0010 Rule C) -->
+        <TargetFilename condition="end with">.dmp</TargetFilename>
+
+        <!-- Script drops -->
+        <TargetFilename condition="end with">.wsf</TargetFilename>
+        <TargetFilename condition="end with">.ps1</TargetFilename>
+        <TargetFilename condition="end with">.vbs</TargetFilename>
+
+        <!-- DLL drops in user-writable paths (det_mw_0004) -->
+        <TargetFilename condition="contains">\Temp\</TargetFilename>
+        <TargetFilename condition="contains">\Users\Public\</TargetFilename>
+        <TargetFilename condition="contains">\AppData\Roaming\</TargetFilename>
+
+      </FileCreate>
+    </RuleGroup>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         EID 13 — Registry Value Set
+         Captures: Run key persistence (det_mw_0005 Rule A/B)
+         ═════════════════════════════════════════════════════════════════ -->
+    <RuleGroup name="" groupRelation="or">
+      <RegistryEvent onmatch="include">
+        <TargetObject condition="contains">CurrentVersion\Run</TargetObject>
+        <TargetObject condition="contains">CurrentVersion\RunOnce</TargetObject>
+      </RegistryEvent>
+    </RuleGroup>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         EID 22 — DNS Query
+         Captures: all DNS queries for tunneling volume/entropy analysis (det_mw_0008b)
+         NOTE: This is intentionally broad for the lab. In production, filter to
+               long/high-entropy labels only.
+         ═════════════════════════════════════════════════════════════════ -->
+    <RuleGroup name="" groupRelation="or">
+      <DnsQuery onmatch="include">
+        <QueryName condition="is not">localhost</QueryName>
+      </DnsQuery>
+    </RuleGroup>
+
+  </EventFiltering>
+</Sysmon>
