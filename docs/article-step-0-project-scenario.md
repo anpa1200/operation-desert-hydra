@@ -788,6 +788,32 @@ If `ATT&CK missing` is > 0, the MITRE sync has not completed. Wait and re-run.
 
 - Terminal screenshot showing full script output with final summary line
 
+**Done.** Import completed on 2026-05-22. All objects existed from the first run — second run confirmed full idempotency.
+
+Final summary:
+```text
+Malware objects  : 9
+Tool objects     : 4
+Reports          : 20
+ATT&CK linked    : 21
+ATT&CK stubs     : 0
+```
+
+All 21 ATT&CK technique links resolved. T1574.002 was created as a stub on the first run and linked correctly. No missing patterns on re-run.
+
+Actual run command:
+```bash
+OPENCTI_URL=http://localhost:8080 \
+OPENCTI_TOKEN=$(grep OPENCTI_ADMIN_TOKEN /home/andrey/git-projects/opencti-intelligent-shield/.env | cut -d= -f2) \
+python3 tools/opencti_import.py
+```
+
+Proof: `docs/proofs/phase-3/step-12-import-output-1.png` · `docs/proofs/phase-3/step-12-import-output-2.png`
+
+![Step 12 — Import output part 1](proofs/phase-3/step-12-import-output-1.png)
+
+![Step 12 — Import output part 2](proofs/phase-3/step-12-import-output-2.png)
+
 ### 13. Verify MuddyWater Intrusion Set
 
 Navigate in OpenCTI:
