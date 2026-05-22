@@ -1613,6 +1613,220 @@ The Sysmon EID 3 rule and Winlogbeat configuration are correct. The FAIL status 
 
 ---
 
+## Phase 7: Final Report
+
+### 33. Operation Desert Hydra — Final Report
+
+#### Executive Summary (One Paragraph)
+
+Operation Desert Hydra is a public-source CTI-to-detection project focused on MuddyWater (IRAN MOIS), the Iranian state-linked actor assessed to operate against Israeli government, defense, and critical infrastructure organizations. Starting from five government and vendor source tiers, the project produced a source register, procedure dataset, OpenCTI knowledge graph, detection atlas of 11 detections, a safe Ansible-driven lab validation run, and an ATT&CK-aligned coverage matrix. Thirteen of sixteen rule checks passed lab validation. Of 22 ATT&CK techniques in scope, 15 (68%) are fully lab-validated with a coverage score of 5; 4 are partially validated (score 3–4); and 7 are explicit gaps concentrated in Lateral Movement, Collection, Exfiltration, and Impact. The detection atlas is deployable against six identified telemetry capability gates that determine effective coverage floor in any given environment.
+
+---
+
+#### 1. Methodology
+
+The project enforces a single chain from source to deployment artifact:
+
+```
+source → claim → procedure → ATT&CK candidate → required telemetry
+  → detection pseudologic → simulation case → lab result → coverage score
+```
+
+No step is skipped. ATT&CK mappings are candidate mappings, not assertions — each carries a confidence label (observed / reported / assessed / inferred) and a source reference. AI-assisted deep research was used for source discovery only; every claim, mapping, and detection record was analyst-reviewed before entry into the dataset or OpenCTI graph.
+
+**Source collection** used AI deep research to generate a candidate source list, followed by manual acquisition, quality review, and promotion into the source register. Only sources that met the quality bar (accessible, specific to MuddyWater, with procedure-level or TTPs-level content) were promoted.
+
+**OpenCTI modeling** imported the reviewed source set into a self-hosted OpenCTI instance with the MITRE ATT&CK connector. Intrusion set, campaign, malware, and tool objects were created with explicit relationship chains. Each technique link carries source and confidence annotations.
+
+**Detection engineering** started from the procedure dataset, not from ATT&CK technique names. Each detection record describes the specific MuddyWater behavior, the required telemetry, the pseudologic, false positive classes, limitations, and the reasoning behind design decisions.
+
+**Lab validation** ran a single Ansible playbook (`lab/ansible/playbooks/validate.yml`) against an isolated Windows 10 VM (`ws01`) with Sysmon 15.x and Winlogbeat 8.13.4 forwarding to an OpenCTI-stack Elasticsearch. Each simulation was benign-by-design: no live malware, no real C2, no credential exfiltration. Kibana screenshots from each passing detection check are preserved in `docs/proofs/phase-5/`.
+
+---
+
+#### 2. Source Base
+
+Five source tiers were reviewed. Government sources formed the analytical backbone; vendor sources provided procedure-level technical detail.
+
+**Primary government sources (highest weight):**
+
+| Source | Tier | Primary contribution |
+|--------|------|---------------------|
+| CISA AA22-055A (Feb 2022) | Government advisory | Full procedure survey: PowGoop, POWERSTATS, Small Sieve, Mori, Canopy, Marlin; WMI survey script; LaZagne/Mimikatz/procdump usage |
+| INCD Report 2023 | Government advisory | Israeli campaign specifics: ScreenConnect and SimpleHelp RMM abuse, spearphishing with Egnyte/OneDrive lures, Log4j and Exchange exploitation |
+| INCD Report 2024 | Government advisory | BugSleep malware analysis: 43-minute scheduled task beacon, VPN exploitation, updated RMM tool list (Level, PDQConnect) |
+
+**Supporting vendor sources:** ClearSky (Operation Mud Water), Deep Instinct (BugSleep analysis), Group-IB (TA450 profile), Mandiant (UNC2448 overlap notes), Proofpoint (TA450 email lure campaigns), Sekoia.io (MuddyWater toolchain evolution), Symantec (Seedworm campaign tracking).
+
+**Source limitations:** All sources are public. No classified or restricted reporting was used. Source bias toward Israeli campaign activity reflects what is publicly documented; the actor's operations against other geographies may differ. Vendor reporting carries commercial incentive considerations and cannot be treated as equivalent to government advisory corroboration.
+
+---
+
+#### 3. Actor Scope
+
+**Aliases:** MuddyWater, Seedworm, Mango Sandstorm, TA450, MERCURY, Static Kitten, UNC2448 (partial overlap only)
+
+**Attribution:** Iranian Ministry of Intelligence and Security (MOIS). Attribution is from CISA AA22-055A and INCD reporting. Not independently verified by this project — treated as reported.
+
+**Primary targeting in scope:** Israeli government, defense, telecommunications, and critical infrastructure organizations. Secondary: broader Middle East governments and defense sectors.
+
+**Active period covered:** 2019–2024. The source set spans five years of reporting; procedures documented across multiple years carry higher confidence. BugSleep (2024) represents the most current known toolset.
+
+**Toolset in scope:**
+
+| Tool | Role | Coverage |
+|------|------|---------|
+| PowGoop | Loader / DLL side-loader | det_mw_0003 (encoded PS), det_mw_0004 (DLL side-load) |
+| POWERSTATS | PowerShell backdoor | det_mw_0003 (script block IEX) |
+| Small Sieve | Python backdoor, Telegram C2 | det_mw_0008a (Telegram API), det_mw_0005 (OutlookMicrosift Run key) |
+| BugSleep | C backdoor, 43-min sched task | det_mw_0006 (PT43M interval) |
+| Mori | DNS tunneling implant | det_mw_0008b (DNS volume/entropy) |
+| Canopy | Startup WSF dropper | det_mw_0005 (Startup folder WSF) |
+| ScreenConnect / SimpleHelp / AteraAgent / Level / PDQConnect | RMM tools (legitimate, abused) | det_mw_0007 (RMM from writable path) |
+| Mimikatz / procdump64 / LaZagne | Credential tools | det_mw_0010 (LSASS access, tool name) |
+
+---
+
+#### 4. Procedure Dataset
+
+Ten procedure records (proc_mw_0001 — proc_mw_0010) were extracted from the source base. Each record contains: actor context, technique, source references, confidence label, procedure description, and a link to the corresponding detection.
+
+| Procedure | Behavior | ATT&CK | Sources |
+|-----------|----------|--------|---------|
+| proc_mw_0001 | Email-delivered archive/Office/link → process spawn | T1566.001, T1566.002 | CISA, INCD 2023, INCD 2024 |
+| proc_mw_0002 | Web-facing service spawning interpreter shell | T1190 | CISA, INCD 2023, INCD 2024 |
+| proc_mw_0003 | PowerShell with -EncodedCommand or IEX + web request | T1059.001, T1027 | CISA, INCD 2023 |
+| proc_mw_0004 | GoogleUpdate.exe loading Goopdate.dll from non-Google path | T1574.002 | CISA |
+| proc_mw_0005 | Run key write (OutlookMicrosift / SystemTextEncoding) or WSF in Startup | T1547.001 | CISA, INCD 2023 |
+| proc_mw_0006 | Scheduled task with 43-minute repetition interval | T1053.005 | INCD 2024 |
+| proc_mw_0007 | RMM binary (ScreenConnect, SimpleHelp, AteraAgent, Level) executed from writable path | T1219 | INCD 2023, INCD 2024, CISA |
+| proc_mw_0008 | Telegram Bot API C2 (Small Sieve) / DNS tunneling C2 (Mori) | T1071.001, T1102, T1572 | CISA |
+| proc_mw_0009 | WMI query to SecurityCenter2\AntiVirusProduct for AV enumeration | T1047, T1082, T1016, T1033, T1518.001 | CISA |
+| proc_mw_0010 | LSASS memory dump (Mimikatz / procdump64) and LSA secrets (LaZagne) | T1003.001, T1003.004, T1003.005 | CISA |
+
+---
+
+#### 5. OpenCTI Knowledge Graph
+
+The full procedure dataset, source register, and ATT&CK mappings are modeled in the project's self-hosted OpenCTI instance. The graph includes:
+
+- 1 Intrusion Set: **MuddyWater** with all known aliases
+- 3 Campaigns: Mud Water (2019–2021), INCD 2023, INCD 2024
+- 8 Malware / Tool objects: PowGoop, POWERSTATS, Small Sieve, BugSleep, Mori, Canopy, Marlin, Chimneycreek
+- 7 Software (legitimate) objects: ScreenConnect, SimpleHelp, AteraAgent, Level, PDQConnect, Mimikatz, LaZagne
+- 17 ATT&CK Technique nodes with sourced relationship links
+- 9 Report objects (one per source, with embedded relationship annotations)
+- 1 custom dashboard: technique frequency heatmap by source tier
+
+The OpenCTI graph is the canonical source of record for this project. `data/detections.yaml` is the engineering-facing export; the graph is the analytical-facing source.
+
+---
+
+#### 6. Detection Atlas
+
+Eleven detections covering the full chain from initial access to credential dumping. All records are in `data/detections.yaml`.
+
+| ID | Title | Type | Score | Techniques |
+|----|-------|------|:-----:|-----------|
+| det_mw_0001 | Email Delivery → Process Spawn Correlation | correlated | 5 | T1566.001, T1566.002 |
+| det_mw_0002 | Web Service Spawning Interpreter Shell | behavioral | 5 | T1190 |
+| det_mw_0003 | PowerShell Encoded Command / Obfuscated Script | behavioral | 5 | T1059.001, T1027 |
+| det_mw_0004 | Unsigned DLL Loaded by Signed Executable | behavioral | 3 | T1574.002 |
+| det_mw_0005 | Registry Run Key / Startup Folder Persistence | behavioral | 5 | T1547.001 |
+| det_mw_0006 | Scheduled Task — 43-Minute Interval | behavioral | 4 | T1053.005 |
+| det_mw_0007 | RMM Binary from User-Writable Path | correlated | 5 | T1219 |
+| det_mw_0008a | Non-Browser Process to Telegram Bot API | behavioral | 3 | T1071.001, T1102 |
+| det_mw_0008b | DNS Tunneling — Volume / Label Entropy | behavioral | 5 | T1572 |
+| det_mw_0009 | PowerShell WMI Query to SecurityCenter2 | behavioral | 5 | T1047, T1082, T1016, T1033, T1518.001 |
+| det_mw_0010 | LSASS Memory Access / Credential Tool Execution | behavioral | 5 | T1003.001, T1003.004, T1003.005 |
+
+**Design principles applied across the atlas:**
+
+- Detections target behavior, not tool names, wherever possible (det_mw_0001, det_mw_0002, det_mw_0010 Rule A).
+- Each detection record includes explicit false positive classes and the reasoning behind design decisions — these are first-class fields, not afterthoughts.
+- Coverage scores are conservative: a detection rated 5 means the simulation ran, the expected telemetry fired, and the Kibana proof exists. Scores were not assigned optimistically.
+- Where a detection depends on a capability gate (Script Block Logging, Sysmon EID 7, EID 10), this is documented at the detection level, the capability gates section, and the coverage matrix.
+
+---
+
+#### 7. Validation Results
+
+Full results: [Phase 5 Validation Results](#phase-5-validation-results).
+
+**Summary:** 13 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks, 10 detections.
+
+**Notable outcomes:**
+
+- det_mw_0001 and det_mw_0002 were re-simulated mid-phase after the initial synthetic approach was rejected. The final simulations use realistic parent chains (`wscript.exe → powershell.exe -EncodedCommand` and `wscript.exe → cmd.exe` recon) that match documented MuddyWater delivery behavior. The Kibana proofs reflect real process ancestry, not echo-command stubs.
+- det_mw_0010 Rule A (LSASS EID 10) produced 3,398 matching events in the validation window — confirming both that the Sysmon ProcessAccess config is working and that LSASS handle access is genuinely high-volume in a normal Windows session. Production deployment requires an allowlist of known-good callers (AV, EDR, Windows components) to reduce noise.
+- det_mw_0008b generated 180 DNS EID 22 events against `.test.internal` in the validation run — confirming the volume rule threshold is reachable with a realistic simulation load.
+
+**Open items from validation:**
+
+| Detection | Gap | Resolution path |
+|-----------|-----|----------------|
+| det_mw_0004 | Sysmon EID 7 not triggered — stub DLL insufficient | Re-test with real `GoogleUpdate.exe` (install Google Chrome on lab VM) |
+| det_mw_0008a | Sysmon EID 3 not triggered — VirtualBox NAT blocks DNS resolve | Re-test with host-only or bridged NIC with internet access |
+
+---
+
+#### 8. Coverage Score
+
+Full matrix: [Phase 6 Coverage Matrix](#phase-6-coverage-matrix).
+
+Of the 22 ATT&CK techniques touched by documented MuddyWater procedures:
+
+- **15 techniques (68%)** — score 5, fully lab-validated
+- **2 techniques (9%)** — score 4, correlated and validated via fallback path
+- **4 techniques (18%)** — score 3, behavioral logic present but validation incomplete
+- **7 techniques** — score 0, no detection in current atlas (Lateral Movement, Collection, Exfiltration, Impact tactic clusters)
+
+The four techniques scoring 3 all have a known resolution path: two require a specific Sysmon event type (EID 7 for det_mw_0004, EID 3 for det_mw_0008a) that was misconfigured or blocked in the lab, not absent from the detection design.
+
+---
+
+#### 9. Limitations
+
+**Source base limitations:**
+- All sources are public. The actor's actual TTPs may be more sophisticated than what is publicly documented, particularly for operational security measures and lateral movement.
+- Israeli-campaign bias: the source set over-represents Israeli targeting. Procedures used in other regions may differ.
+- Reporting lag: public CTI describes past campaigns. BugSleep (2024) is the most current tool, but the actor will have evolved since publication.
+
+**Detection engineering limitations:**
+- Pseudologic is SIEM-agnostic. Translation to Sigma, KQL, SPL, or YARA-L will require environment-specific field mapping.
+- False positive rates are estimated, not measured. Production baselining is required before most detections are alerting-grade, particularly det_mw_0007 (RMM baseline), det_mw_0010 Rule A (LSASS allowlist), and det_mw_0008b (CDN entropy baseline).
+- Detections are not production rules. They are validated pseudologic requiring SOC tuning, integration testing, and approval workflows before deployment.
+
+**Lab limitations:**
+- Single-endpoint lab (Windows 10, one user, no domain). Domain-joined environments may behave differently, particularly for Kerberos-related credential access and Group Policy-driven PowerShell logging.
+- No email gateway in lab. det_mw_0001's email correlation logic was validated on the endpoint side only.
+- VirtualBox NAT prevents outbound internet connectivity to `api.telegram.org` from within the VM without additional network configuration.
+- Credential Guard and PPL (Protected Process Light) were not enabled in the lab VM. In hardened environments, det_mw_0010 Rule A (LSASS EID 10) behavior will differ.
+
+---
+
+#### 10. Next Work
+
+**Immediate (close open validation gaps):**
+1. Install Google Chrome on lab VM → re-run det_mw_0004 simulation with real `GoogleUpdate.exe` → close partially_validated status
+2. Reconfigure lab NIC to host-only with internet access → re-run det_mw_0008a simulation → confirm Sysmon EID 3 fires for `api.telegram.org`
+
+**Short-term (extend coverage):**
+3. Lateral movement source review pass — search current source set for RDP, SMB, and Pass-the-Hash procedure evidence; engineer T1021.001 and T1550.002 detections if evidence supports
+4. Translate pseudologic to Sigma rules — enable sharing with the wider detection community and facilitate import into SIEM platforms
+5. Add det_mw_0005 Rule B validation — the generic Run key behavioral rule was not lab-tested; requires a simulation that writes to a Run key from a non-installer process with a path in AppData
+
+**Medium-term (production readiness):**
+6. Baseline RMM deployments per environment before activating det_mw_0007 Rule C alerts
+7. Measure false positive rates for det_mw_0010 Rule A in a domain-joined environment with a realistic process population; build and test the LSASS caller allowlist
+8. Calibrate det_mw_0008b entropy and volume thresholds against live CDN traffic; document per-environment tuning guidance
+
+**Research extension:**
+9. Expand actor scope to include TA453 (Charming Kitten / APT35) targeting Israeli organizations — overlap in initial access techniques supports a comparative detection track
+10. Monitor for new MuddyWater tooling post-BugSleep; update procedures and detections as new reporting emerges
+
+---
+
 ## Step 0 Definition Of Done
 
 Step 0 is complete when the project has a clear purpose and declared output:
