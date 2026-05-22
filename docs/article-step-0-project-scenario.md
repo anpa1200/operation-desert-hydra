@@ -1019,6 +1019,50 @@ All objects will show `[exists]` and only the missing pattern link will be added
 - Terminal output showing all objects `[exists]` and T1574.002 now linked
 - Updated ATT&CK matrix screenshot showing T1574.002 (DLL Side-Loading) highlighted
 
+> **Done.** T1574.002 stub was created automatically at import time via `find_or_create_attack_pattern`. Re-run confirmed all 21 ATT&CK links present; no additional stubs needed.
+
+### 19. Create OpenCTI Dashboard
+
+Build a custom dashboard summarising the Desert Hydra knowledge graph using `tools/create_dashboard.py`.
+
+```bash
+cd ~/git-projects/operation-desert-hydra
+OPENCTI_URL=http://localhost:8080 \
+OPENCTI_TOKEN=$(grep OPENCTI_ADMIN_TOKEN \
+  ~/git-projects/opencti-intelligent-shield/.env | cut -d= -f2) \
+python3 tools/create_dashboard.py
+```
+
+The script creates a workspace named **"Operation Desert Hydra — MuddyWater"** with 8 widgets:
+
+| Row | Widget | Type |
+|-----|--------|------|
+| 1 | Actor description + graph summary | Text |
+| 2 | Malware Families count | Number |
+| 2 | Tools count | Number |
+| 2 | Threat Reports count | Number |
+| 3 | Arsenal by Object Type | Donut |
+| 3 | MuddyWater Malware Families | List |
+| 4 | Reports by Publication Year | Bar |
+| 4 | Living-off-the-Land Tools | List |
+
+**Key implementation notes:**
+
+- Manifest must be **Base64-encoded** before storing via `workspaceFieldPatch`
+- Manifest root requires both `"widgets"` and `"config": {}` keys
+- Filter `key` field must be an **array**: `{"key": ["entity_type"], ...}`
+- Text widgets use `"dataSelection": []` (empty — no data query)
+
+Navigate to `Dashboards → Operation Desert Hydra — MuddyWater` to verify.
+
+**Proof to capture:**
+
+- Screenshot of the rendered dashboard showing all widgets
+
+> **Done.** Dashboard renders with all 8 widgets: text header, 3 number counters (Malware: 4 shown by filter scope / Tools: 2 / Threat Reports: 19), donut breakdown (Report 76% / Malware 16% / Tool 8%), malware list (DarkBit, SyncroRAT, AnchorRAT, BugSleep visible), tools list (SimpleHelp, AteraAgent), and reports bar timeline.
+>
+> ![Step 19 – Operation Desert Hydra dashboard](proofs/phase-3/step-19-dashboard.png)
+
 ---
 
 ## Step 0 Definition Of Done
