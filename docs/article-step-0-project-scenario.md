@@ -1453,6 +1453,12 @@ wscript.exe sim_exploit.vbs
 
 **Pass criteria:** All three rules fire independently. Note: Credential Guard / PPL may suppress Rule A — document protection status in lab notes.
 
+> **Kibana proof — Rule A** (Sysmon EID 10, `lsass.exe` GrantedAccess `0x1400`, 3,398 events):
+> ![Step 31a — det_mw_0010 Rule A proof](proofs/phase-5/step-31a-det-mw-0010-rule-a.png)
+
+> **Kibana proof — Rule C** (Sysmon EID 11, `C:\Temp\dh-lab\lsass_test.dmp` file creation, 6 events):
+> ![Step 31c — det_mw_0010 Rule C proof](proofs/phase-5/step-31c-det-mw-0010-rule-c.png)
+
 > **Lab safety note.** All `.dmp` files created during validation must be deleted immediately after the event is confirmed. No credential material leaves the lab VM. No lab VM connects to the internet during validation steps 28–31.
 
 ---
