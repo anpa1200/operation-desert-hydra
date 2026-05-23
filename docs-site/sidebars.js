@@ -33,6 +33,7 @@ module.exports = {
       "items": ["phase-6-coverage-matrix"]
     },
     "for-defenders",
+    "limitations",
     "reproduce",
     "production-scars"
   ]

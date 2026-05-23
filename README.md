@@ -2,9 +2,52 @@
 
 **Public-source CTI → OpenCTI knowledge graph → Detection engineering → Lab validation**
 
-A complete, reproducible pipeline that takes public-source threat intelligence about **MuddyWater (Iranian MOIS)** and converts it into analyst-reviewed, SOC-usable detection artifacts — all version-controlled, all deployable from a single clone.
+A complete, reproducible pipeline that takes public-source threat intelligence on **MuddyWater / Seedworm** — widely reported by government and vendor sources as Iran-linked activity associated with MOIS — and converts it into analyst-reviewed, SOC-usable detection artifacts. All version-controlled. All deployable from a single clone.
 
 **Results:** 10 procedures · 21 ATT&CK techniques · 11 detection records · **14 PASS / 1 PARTIAL / 1 FAIL** across 16 rule checks · 12 Kibana proof screenshots
+
+---
+
+## Hiring Manager Review Path
+
+Start here if you are evaluating this project for a CTI or detection engineering role:
+
+1. **[Docusaurus site](https://anpa1200.github.io/operation-desert-hydra/)** — overview and pipeline structure
+2. **[Phase 4: Detection Atlas](https://anpa1200.github.io/operation-desert-hydra/docs/phase-4-detection-atlas)** — 11 detection records with SIEM-agnostic pseudologic, coverage scores, false-positive classes, and design rationale
+3. **[Phase 5: Validation Results](https://anpa1200.github.io/operation-desert-hydra/docs/phase-5-results)** — 14 PASS / 1 PARTIAL / 1 FAIL with Kibana screenshots and root-cause documentation for failures
+4. **[Phase 6: Coverage Matrix](https://anpa1200.github.io/operation-desert-hydra/docs/phase-6-coverage-matrix)** — 21 ATT&CK techniques, 6 capability gates, gap analysis, zero-coverage acknowledgment
+5. **[Medium article](https://medium.com/@1200km/operation-desert-hydra-ai-assisted-cti-pipeline-muddywater-to-kibana-34da7917acf0)** — full walkthrough with methodology rationale
+
+Then `git clone` and run `bash start.sh` if you want to reproduce the results.
+
+---
+
+## Pipeline
+
+```
+Source review gate (71 candidates → 8 promoted)
+         │
+         ▼
+Claim extraction (evidence labels: Observed / Reported / Assessed)
+         │
+         ▼
+Procedure dataset (10 records, ATT&CK candidate mapping)
+         │
+         ▼
+OpenCTI 6.2 knowledge graph (MuddyWater intrusion set, 9 malware, 21 techniques)
+         │
+         ▼
+Detection atlas (11 records, SIEM-agnostic pseudologic, coverage scores)
+         │
+         ▼
+Benign lab simulation (Ansible → Windows 10 VM → Sysmon + Winlogbeat + Kibana)
+         │
+         ▼
+Kibana validation proofs (14 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks)
+         │
+         ▼
+Coverage matrix (16/21 techniques (76%) fully validated, 6 capability gates)
+```
 
 ---
 
@@ -229,7 +272,7 @@ All Kibana screenshots are in `docs/proofs/phase-5/`:
 | 3 | OpenCTI knowledge graph (intrusion set, campaigns, malware, ATT&CK) | Done |
 | 4 | Detection atlas (11 detections with pseudologic, FPs, creation logic) | Done |
 | 5 | Safe validation lab (Ansible playbook, 12 Kibana proofs) | Done |
-| 6 | Coverage matrix (22 ATT&CK techniques, 6 capability gates, gap analysis) | Done |
+| 6 | Coverage matrix (21 procedure techniques + 7 source-set techniques, 6 capability gates, gap analysis) | Done |
 | 7 | Final report (methodology → source base → coverage → limitations → next work) | Done |
 | 8 | Executive summary (defender-facing priorities and telemetry gaps) | Done |
 
@@ -350,6 +393,29 @@ sources.yaml  →  claims.yaml  →  procedures.yaml  →  detections.yaml
   "text_file": "docs/source-gathering/raw-sources/07-.../source.txt"
 }
 ```
+
+---
+
+## Defensive Use and Limitations
+
+This project is defensive in scope and intent.
+
+**What the lab does:**
+- Runs benign simulations using standard system tools and PowerShell scripts
+- No live malware, no real C2, no credential exfiltration
+- `.dmp` files created during LSASS simulation (Step 31) are deleted immediately after event confirmation
+- The VM does not connect to real external services (Telegram, etc.)
+- All payloads are documented in `lab/ansible/playbooks/validate.yml`
+
+**What the validation proves and doesn't:**
+- Lab results confirm the detection stack captures the right telemetry events for each behavior
+- They do not prove the rules are evasion-proof — real attacker tools use obfuscation, timing variation, and LOLBins not present in these simulations
+- All ATT&CK technique mappings are analyst candidates based on public source claims, not confirmed actor attribution
+- Coverage scores are conservative: score 5 requires a Kibana screenshot, not just passing pseudologic
+
+**Known failures:**
+- `det_mw_0008a` (Telegram Bot API): FAIL — VirtualBox NAT translates external connections; Sysmon sees 10.0.2.2, not api.telegram.org. Rule correct; lab architecture constraint documented.
+- `det_mw_0004` (DLL Side-Loading): PARTIAL — 4-byte PE stub rejected by Windows loader before EID 7 fires. Rule correct; requires a real compiled DLL to validate.
 
 ---
 
