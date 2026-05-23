@@ -4,6 +4,8 @@
 
 A complete, reproducible pipeline that takes public-source threat intelligence about **MuddyWater (Iranian MOIS)** and converts it into analyst-reviewed, SOC-usable detection artifacts — all version-controlled, all deployable from a single clone.
 
+**Results:** 10 procedures · 21 ATT&CK techniques · 11 detection records · **14 PASS / 1 PARTIAL / 1 FAIL** across 16 rule checks · 12 Kibana proof screenshots
+
 ---
 
 ## What This Repo Contains
@@ -189,9 +191,11 @@ Windows Event Log (Sysmon EID 1/7/10/11/13/22, PS EID 4104)
 | det_mw_0009 | PowerShell WMI query to SecurityCenter2 | 5 | T1047, T1082, T1016, T1033, T1518.001 |
 | det_mw_0010 | LSASS memory access / credential tool execution | 5 | T1003.001, T1003.004, T1003.005 |
 
-**Scores:** 5 = lab-validated | 4 = correlated analytic | 3 = behavioral (partial validation)
+**Scores:** 5 = lab-validated, multi-source | 4 = lab-validated, single-source | 3 = validation incomplete or failed (documented reason)
 
-**Lab results:** 13 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks
+**Lab results:** 14 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks
+
+**Limitations:** Lab simulations validate telemetry capture using benign payloads — they confirm the detection stack sees the right events, not that the rules are evasion-proof. Real attacker tools include obfuscation layers not present in these simulations. All ATT&CK technique mappings are analyst candidates, not confirmed actor attribution.
 
 ---
 

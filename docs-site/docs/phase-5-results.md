@@ -4,7 +4,7 @@ title: "Phase 5: Validation Results Summary"
 sidebar_label: Validation Results
 ---
 
-![Phase 5: Validation Results Summary — 13 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks](/img/validation-results-infographic.png)
+![Phase 5: Validation Results Summary — 14 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks](/img/validation-results-infographic.png)
 
 Full run: `ansible-playbook playbooks/validate.yml` — **ok=70 changed=42 failed=0**
 
@@ -27,7 +27,7 @@ Full run: `ansible-playbook playbooks/validate.yml` — **ok=70 changed=42 faile
 | 31 | **det_mw_0010** | Rule A (LSASS EID 10) | **PASS** |
 | 31 | **det_mw_0010** | Rule C (.dmp EID 11) | **PASS** |
 
-**13 PASS / 1 PARTIAL / 1 FAIL** across 16 rule checks.
+**14 PASS / 1 PARTIAL / 1 FAIL** across 16 rule checks.
 
 ## PARTIAL — det_mw_0004 (DLL Side-Loading)
 

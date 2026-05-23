@@ -1,6 +1,6 @@
 # Operation Desert Hydra — AI-Assisted CTI Pipeline: MuddyWater to Kibana
 
-*11 validated detections from public sources, OpenCTI graph, and a one-command lab*
+*11 detection records — 9 fully validated, 1 partial, 1 failed — from public sources, OpenCTI graph, and a one-command lab*
 
 ![Operation Desert Hydra: CTI Pipeline](assets/cover.png)
 
@@ -867,7 +867,9 @@ The detection atlas is the core analytical output. Each of the 11 detection reco
 - False positive classes and tuning guidance
 - A `creation_logic` field explaining *why* the rule is designed this way — the design decision, not just what the rule does
 
-Coverage scores follow a strict scale: **5** = lab-validated with a Kibana screenshot. **4** = correlated analytic (good logic, single source or partial lab). **3** = behavioral detection with partial validation. A score of 5 requires a proof, not just passing pseudologic.
+Coverage scores follow a strict scale: **5** = lab-validated with a Kibana screenshot, multi-source corroboration. **4** = lab-validated, single-source only. **3** = behavioral detection, validation incomplete or failed. A score of 5 requires a proof, not just passing pseudologic.
+
+**All ATT&CK technique mappings in this project are analyst candidates** assessed from source reporting. They represent the analyst's judgment of the most likely technique mapping, not confirmed actor self-attribution. The `mapping_status: candidate` field in `procedures.yaml` makes this explicit.
 
 **Step 20 — Analyst Review**
 
@@ -936,7 +938,7 @@ Rule A targets PowGoop and POWERSTATS loader delivery. The regex `\s-e[a-zA-Z]*\
 
 Rule B targets POWERSTATS script execution behavior: IEX combined with a web request. This is the decoded content layer — it requires Script Block Logging (Event ID 4104), which is the capability gate that determines whether this detection class exists at all in a given environment.
 
-Rule C is the delivery-context fallback: PowerShell spawned by an Office application, email client, or browser has no legitimate explanation in a standard enterprise environment and fires regardless of whether Script Block Logging is enabled.
+Rule C is the delivery-context fallback: PowerShell spawned by an Office application, email client, or browser is anomalous in most enterprise environments and rare enough to warrant investigation. Build a baseline of known-good callers before alerting in production. This rule fires regardless of whether Script Block Logging is enabled.
 
 **Required telemetry:** Script Block Logging (Event ID 4104) — required for Rule B and for the highest-fidelity version of this detection. Sysmon Event ID 1 for Rules A and C. Without Script Block Logging, the detection degrades to command-line heuristics only.
 
@@ -1029,7 +1031,7 @@ file_extension IN ["wsf","vbs","js","ps1","bat","cmd"]
 
 **What it targets:** BugSleep creates a Windows scheduled task triggered every 43 minutes for C2 beaconing — a specific behavioral fingerprint documented in the INCD 2024 report. The interval is documented as customizable, but 43 minutes is the observed operational value.
 
-**Why it's built this way:** The 43-minute interval is the single most precise artifact in the entire procedure dataset. Rule A is designed as a high-fidelity immediate alert requiring no tuning: `PT43M` is the ISO 8601 duration format for 43 minutes and appears verbatim in the Windows Task XML. This fires with near-zero false positives because no legitimate software uses a 43-minute repeat interval for any standard purpose. Rule B generalizes the pattern for future BugSleep variants that may use a different interval: short repetition (under 60 minutes) combined with a task action pointing to a user-writable path is anomalous regardless of exact interval. Rule C is the telemetry fallback — many environments do not forward Task Scheduler event logs to SIEM, but `schtasks.exe` process creation (Sysmon EID 1) is more commonly collected and captures the command line.
+**Why it's built this way:** The 43-minute interval is the single most precise artifact in the entire procedure dataset. Rule A is designed as a high-fidelity immediate alert requiring no tuning: `PT43M` is the ISO 8601 duration format for 43 minutes and appears verbatim in the Windows Task XML. In environments where scheduled task baselines have been established, a 43-minute repetition interval combined with a task action pointing to a user-writable path is a low-prevalence combination. No standard Windows software or common enterprise tools are documented as using this specific interval. Hunt hits should be investigated; treat as high-confidence only after confirming the creating process and task action path. Rule B generalizes the pattern for future BugSleep variants that may use a different interval: short repetition (under 60 minutes) combined with a task action pointing to a user-writable path is anomalous regardless of exact interval. Rule C is the telemetry fallback — many environments do not forward Task Scheduler event logs to SIEM, but `schtasks.exe` process creation (Sysmon EID 1) is more commonly collected and captures the command line.
 
 Score is 4 (not 5) because this is a single-source procedure — INCD 2024 only. Before treating Rule A as a high-confidence production alert, corroborate with a second vendor source.
 
@@ -1468,7 +1470,7 @@ AND winlog.event_data.CommandLine: */mo 43*
 
 **Result: PASS** — 3 Sysmon EID 1 events. `schtasks.exe /mo 43` captured. The 43-minute interval in the command line is the exact BugSleep artifact.
 
-> **Hunt value:** `PT43M` in Task Scheduler Operational logs is a retroactive hunt trigger. One match = investigate immediately. No legitimate software uses this exact interval.
+> **Hunt value:** `PT43M` in Task Scheduler Operational logs is a retroactive hunt trigger. One match = investigate immediately. This interval has no documented use in standard Windows software or common enterprise tools. Verify the task action path and creating process before escalating.
 
 ---
 
@@ -1576,7 +1578,7 @@ AND winlog.event_data.TargetFilename: *Temp*
 
 ## Phase 5 Validation Results Summary
 
-![Phase 5: Validation Results Summary — 13 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks](assets/validation-results-infographic.png)
+![Phase 5: Validation Results Summary — 14 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks](assets/validation-results-infographic.png)
 
 Full run: `ansible-playbook playbooks/validate.yml` — **ok=70 changed=42 failed=0**
 
@@ -1597,18 +1599,31 @@ Full run: `ansible-playbook playbooks/validate.yml` — **ok=70 changed=42 faile
 - Step 31 — **det_mw_0010** · Rule A (LSASS EID 10) → **PASS**
 - Step 31 — **det_mw_0010** · Rule C (.dmp EID 11) → **PASS**
 
-**13 PASS / 1 PARTIAL / 1 FAIL** across 16 rule checks.
+**14 PASS / 1 PARTIAL / 1 FAIL** across 16 rule checks.
 
 ---
 
 ## Phase 6: Coverage Matrix
 
-Of 22 ATT&CK techniques documented in the source set:
+Of **21 ATT&CK techniques** documented across the 10 procedures (verified from `procedures.yaml`):
 
-- **15 techniques (68%)** — score 5, fully lab-validated
-- **2 techniques (9%)** — score 4, correlated and validated via fallback
-- **4 techniques (18%)** — score 3, rule present but validation incomplete
-- **7 techniques** — score 0, no detection (Lateral Movement, Collection, Exfiltration, Impact)
+- **16 techniques (76%)** — score 5, fully lab-validated with Kibana proof:
+  T1566.001, T1566.002, T1190, T1059.001, T1027, T1547.001, T1219,
+  T1572, T1047, T1082, T1016, T1033, T1518.001, T1003.001, T1003.004, T1003.005
+
+- **1 technique (5%)** — score 4, lab-validated but single-source (INCD 2024 only — corroborate before production):
+  T1053.005 (BugSleep 43-minute scheduled task)
+
+- **3 techniques (14%)** — score 3, detection written but validation incomplete or failed:
+  T1574.002 (DLL side-loading — needs valid PE DLL, not 4-byte stub)
+  T1071.001 (Telegram C2 — lab NAT prevents EID 3 capture of external hostname)
+  T1102 (Web service C2 — same NAT constraint as T1071.001)
+
+- **1 technique (5%)** — score 0, no detection written:
+  T1534 (Internal Spearphishing — proc_mw_0001 documents it; detection requires
+  compromised-account telemetry beyond this project's scope)
+
+**Effective coverage (score ≥ 4):** 17/21 techniques (81%)
 
 **The six capability gates** that determine your effective coverage floor:
 
@@ -1621,10 +1636,30 @@ Of 22 ATT&CK techniques documented in the source set:
 
 ---
 
+## What This Project Proves — and Doesn't
+
+**What it proves:**
+
+- Public-source CTI on a mature actor is sufficient to produce analyst-reviewed, ATT&CK-mapped detection logic without classified feeds or commercial intelligence.
+- A schema-enforced pipeline (source → claim → procedure → detection → validation) produces more defensible output than ad-hoc rule writing. Every detection here has a documented evidence chain traceable to a named source.
+- 14 of 16 simulated rule checks produced the expected Kibana events in a single-command lab. The 2 exceptions are documented failures with root causes, not omissions.
+- Benign simulation is sufficient for telemetry validation. You do not need live malware to confirm your detection stack captures the events a detection depends on.
+
+**What it does not prove:**
+
+- That these detections will fire on actual MuddyWater operations. The lab validates telemetry capture against benign simulations of the *form* of the technique. Real attacker tools include evasion layers (encoding variations, AMSI bypasses, renamed binaries, custom access masks) that benign simulations do not replicate.
+- That the ATT&CK mappings are complete or authoritative. All 21 technique assignments are analyst candidates assessed from source reporting. They reflect the analyst's judgment, not confirmation from the actor.
+- That coverage score 5 means "this detection will catch MuddyWater." It means "this detection fired on a benign simulation of the technique's behavioral pattern in a controlled lab." Production deployment requires baseline calibration, allowlist tuning, and false-positive monitoring before alerting.
+- That the 43-minute interval is exclusively a MuddyWater artifact. It is a BugSleep artifact documented in one source (INCD 2024 only). Until corroborated by a second source, treat it as a high-confidence hunt lead, not a confirmed attribution indicator.
+
+---
+
 ## What Defenders Should Do Right Now
 
-**1. Baseline your RMM deployments.**
-det_mw_0007 is the most consistently documented MuddyWater technique across all five source tiers. It fires on ScreenConnect, SimpleHelp, AteraAgent, Level, and PDQConnect from non-standard paths. But it needs a baseline of authorized deployments first. Build the baseline; the detection logic is already written.
+These are prioritized actions, not a compliance checklist. Order reflects coverage ROI given the validation results above.
+
+**1. Build your RMM baseline first — then deploy det_mw_0007.**
+RMM tool abuse (T1219) is the most consistently documented MuddyWater technique across all five source tiers. The detection logic is complete and lab-validated. The blocker is not the rule — it is the absence of a baseline. Enumerate every authorized RMM deployment per endpoint. Then Rule A (binary from non-standard path) and Rule C (outbound to RMM vendor infrastructure) have near-zero false positives on a clean baseline.
 
 **2. Enable PowerShell Script Block Logging fleet-wide.**
 One Group Policy change:
@@ -1632,13 +1667,16 @@ One Group Policy change:
 Computer Configuration → Administrative Templates → Windows Components
 → Windows PowerShell → Turn on PowerShell Script Block Logging → Enabled
 ```
-This unlocks det_mw_0003 Rule B and all three det_mw_0009 rules. No other change required.
+This unlocks det_mw_0003 Rule B (decoded IEX + DownloadString pattern) and all three det_mw_0009 rules (SecurityCenter2 AV enumeration). Without it, both detections degrade to command-line heuristics only. This is a capability gate, not a tuning problem — enable it before worrying about any other PowerShell detection.
 
-**3. Configure Sysmon ProcessAccess against lsass.exe.**
-Without it, LSASS credential dumping detection is binary-name-only. Renamed Mimikatz and custom C++ dumpers are invisible. Add `<ProcessAccess onmatch="include">` targeting `lsass.exe` to `sysmon.xml`.
+**3. Add LSASS ProcessAccess to your Sysmon config.**
+Add `<ProcessAccess onmatch="include">` targeting `lsass.exe` to `sysmon.xml`. Without Sysmon EID 10, det_mw_0010 Rule A is unavailable and credential dumping detection falls back to binary names only — which misses renamed Mimikatz and any custom C++ dumper. This is a one-line config change with immediate impact.
 
-**4. Hunt for PT43M now.**
-Query your Task Scheduler Operational logs for any task with a `RepetitionInterval` of `PT43M`. If you find one you didn't create, that is BugSleep. No other legitimate software uses this interval.
+**4. Hunt for PT43M retroactively.**
+Query your Task Scheduler Operational logs for any task with a `RepetitionInterval` of `PT43M`. This is a retroactive hunt that costs nothing if the logs are already collected. A match combined with a task action pointing to AppData or Temp from a non-administrative context warrants immediate investigation. Verify the task action path and creating process before escalating.
+
+**5. Audit your Sysmon EID 7 config before relying on det_mw_0004.**
+The DLL side-loading detection (GoogleUpdate.exe + Goopdate.dll from non-standard path) requires Sysmon EID 7 (ImageLoad) to be enabled and correctly configured. This was the only detection that could not be fully validated in the lab. Test with a benign unsigned DLL before declaring coverage against this technique.
 
 ---
 

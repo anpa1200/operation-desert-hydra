@@ -4,12 +4,18 @@ title: "Phase 6: Coverage Matrix"
 sidebar_label: Coverage Matrix
 ---
 
-Of 22 ATT&CK techniques documented in the source set:
+**28 ATT&CK techniques** documented across all sources: 21 formalized into the procedure dataset, 7 from the broader source analysis without procedures written.
 
-- **15 techniques (68%)** — score 5, fully lab-validated
-- **2 techniques (9%)** — score 4, correlated and validated via fallback
-- **4 techniques (18%)** — score 3, rule present but validation incomplete
-- **7 techniques** — score 0, no detection (Lateral Movement, Collection, Exfiltration, Impact)
+Of the **21 techniques in the procedure dataset:**
+
+- **16 techniques (76%)** — score 5, fully lab-validated with Kibana proof
+- **1 technique (5%)** — score 4, lab-validated, single-source (corroborate before production)
+- **3 techniques (14%)** — score 3, detection written but validation incomplete or failed
+- **1 technique (5%)** — score 0, in procedures but no detection written (T1534)
+
+**Plus 7 techniques from the source set with no detection coverage** (see Zero-Coverage table below).
+
+**Effective coverage (score ≥ 4):** 17/21 procedure techniques (81%)
 
 ## The Six Capability Gates
 
@@ -51,16 +57,17 @@ These capability gates determine your effective coverage floor:
 
 ## Zero-Coverage Techniques
 
-Seven ATT&CK techniques have zero detection coverage. These are acknowledged in the coverage matrix, not hidden.
+Eight ATT&CK techniques have zero detection coverage. These are acknowledged in the coverage matrix, not hidden.
 
-| Tactic | Technique | Source |
-|--------|-----------|--------|
-| Lateral Movement | T1021.001 Remote Desktop Protocol | Documented in sources |
-| Lateral Movement | T1550.002 Pass the Hash | Post-exploitation technique |
-| Collection | T1005 Data from Local System | Documented in sources |
-| Collection | T1039 Data from Network Shared Drive | Documented in sources |
-| Exfiltration | T1041 Exfiltration Over C2 Channel | Documented in sources |
-| Impact | T1486 Data Encrypted for Impact (DarkBit) | INCD 2023 |
-| Impact | T1490 Inhibit System Recovery (shadow copy deletion) | INCD 2023 |
+| Tactic | Technique | Source | Note |
+|--------|-----------|--------|------|
+| Initial Access | T1534 Internal Spearphishing | proc_mw_0001 | In procedure dataset; requires compromised-account telemetry beyond project scope |
+| Lateral Movement | T1021.001 Remote Desktop Protocol | Source set | Not formalized into a procedure |
+| Lateral Movement | T1550.002 Pass the Hash | Source set | Post-exploitation, source set only |
+| Collection | T1005 Data from Local System | Source set | Not formalized into a procedure |
+| Collection | T1039 Data from Network Shared Drive | Source set | Not formalized into a procedure |
+| Exfiltration | T1041 Exfiltration Over C2 Channel | Source set | Not formalized into a procedure |
+| Impact | T1486 Data Encrypted for Impact (DarkBit) | INCD 2023 | DarkBit operation; outside MuddyWater core playbook scope |
+| Impact | T1490 Inhibit System Recovery (shadow copy deletion) | INCD 2023 | DarkBit operation; outside MuddyWater core playbook scope |
 
 The actor uses these techniques. The public source base documents them. The detection coverage does not exist in this iteration. The coverage matrix is a floor, not a ceiling.

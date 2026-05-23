@@ -1,5 +1,19 @@
 detections:
 
+  # validation_status enum:
+  #   lab_validated       — simulation ran, target event captured in Kibana, screenshot exists
+  #   partially_validated — simulation ran, mechanism confirmed, but environmental constraint
+  #                         prevented full coverage (e.g., needs valid PE DLL, not just stub)
+  #   lab_failed          — simulation ran, target event DID NOT fire due to lab architecture
+  #                         (not a logic error; documented root cause exists)
+  #   not_validated       — no lab simulation attempted
+  #
+  # coverage_score scale:
+  #   5 — lab-validated with Kibana screenshot, multi-source corroboration
+  #   4 — lab-validated, single-source only (corroborate before production)
+  #   3 — behavioral detection, validation incomplete or failed (documented reason)
+  #   0 — no detection written for this procedure
+
   # ─────────────────────────────────────────────────────────────────────────────
   # det_mw_0001  Spearphishing — Email-to-Process Correlation
   # ─────────────────────────────────────────────────────────────────────────────
@@ -155,8 +169,8 @@ detections:
       request) — this requires Script Block Logging which is the capability gate that determines
       whether this detection exists at all. Rule C is the delivery-context fallback: PowerShell
       spawned by email/Office/browser has no legitimate explanation in a standard enterprise
-      environment. Coverage score is 3 because Rules A and C are deployable without Script Block
-      Logging; enabling logging upgrades to high-confidence behavioral.
+      environment. All three rules were lab-validated; coverage_score 5 reflects full
+      Kibana proof. Script Block Logging is required for Rule B — enable it before deploying.
     notes: >
       Script Block Logging is the decisive capability gate. Without Event ID 4104,
       detection degrades to command-line heuristics only. Enable before deploying.
@@ -422,9 +436,10 @@ detections:
     false_positives:
       - "Telegram desktop application on endpoints where it is installed and approved"
       - "Bot developers testing scripts from dev workstations"
-    validation_status: partially_validated
+    validation_status: lab_failed
     coverage_score: 3
     limitations:
+      - "Lab result: FAIL. Root cause: VirtualBox NAT prevents Sysmon EID 3 from capturing external hostname (api.telegram.org). Sysmon sees 10.0.2.2 (NAT gateway) instead. Detection rule and Sysmon config are correct. Re-test with host-only NIC or a local HTTPS proxy target."
       - "In organizations where Telegram is approved, detection requires strict process allowlisting."
       - "Actor could switch from Telegram to another messaging platform — detection is API-specific."
     creation_logic: >
@@ -435,8 +450,8 @@ detections:
       is anomalous in an enterprise environment. This approach is deliberately narrow: it will
       miss if MuddyWater switches from Telegram to another messaging platform, but it will fire
       with high precision on the documented Small Sieve C2 channel. Coverage score is 3 because
-      the domain is specific and the process exclusion list is short and manageable.
-    notes: "Highest-confidence C2 detection anchor across all C2 channels documented for MuddyWater."
+      lab validation failed due to VirtualBox NAT — the logic is sound but unproven in this lab.
+    notes: "Highest-confidence C2 detection anchor across all C2 channels documented for MuddyWater. Lab failed due to NAT constraint, not logic error."
 
   # ─────────────────────────────────────────────────────────────────────────────
   # det_mw_0008b  C2 — DNS Tunneling Patterns

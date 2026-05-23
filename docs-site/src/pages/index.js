@@ -9,16 +9,16 @@ const phases = [
   ['Phase 3: OpenCTI', 'Self-hosted OpenCTI 6.2 knowledge graph: MuddyWater intrusion set, 9 malware, 4 tools, 21 ATT&CK techniques, 20 source reports.', '/docs/phase-3-opencti'],
   ['Phase 4: Detection Atlas', '11 detection records with SIEM-agnostic pseudologic, coverage scores, false positive classes, and design rationale.', '/docs/phase-4-detection-atlas'],
   ['Phase 5: Validation Lab', 'One-command lab: Docker + Vagrant Windows 10 VM + Ansible provisioning. 11 benign simulations, 12 Kibana proof screenshots.', '/docs/phase-5-validation-lab'],
-  ['Phase 6: Coverage Matrix', '22 ATT&CK techniques mapped. 15 techniques (68%) fully validated. 6 capability gates that determine your effective coverage floor.', '/docs/phase-6-coverage-matrix'],
+  ['Phase 6: Coverage Matrix', '21 procedure techniques + 7 from source set. 16 techniques (76%) fully validated. 6 capability gates that determine your effective coverage floor.', '/docs/phase-6-coverage-matrix'],
 ];
 
 export default function Home() {
   return (
-    <Layout title="Operation Desert Hydra" description="AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 validated detections → Kibana.">
+    <Layout title="Operation Desert Hydra" description="AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 detection records (9 fully validated) → Kibana.">
       <header className="hero hero--hydra">
         <div className="container" style={{textAlign: 'center'}}>
           <h1 className="hero__title">Operation Desert Hydra</h1>
-          <p className="hero__subtitle">AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 validated detections → Kibana</p>
+          <p className="hero__subtitle">AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 detection records (9 fully validated) → Kibana</p>
           <div style={{marginBottom: '1.5rem'}}>
             <Link className="button button--secondary button--lg" to="/docs/intro">View the Pipeline</Link>
             {' '}
@@ -64,7 +64,7 @@ export default function Home() {
             <h2>Key Results</h2>
             <div className="manual-grid">
               <article className="manual-card">
-                <h3>Validation: 13 PASS / 1 PARTIAL / 1 FAIL</h3>
+                <h3>Validation: 14 PASS / 1 PARTIAL / 1 FAIL</h3>
                 <p>16 rule checks across 11 detection records. Every PASS has a Kibana screenshot. Failures are documented with root cause and fix path.</p>
               </article>
               <article className="manual-card">
@@ -76,8 +76,8 @@ export default function Home() {
                 <p>From 71 AI-generated candidates, 8 government and vendor sources survived the review gate: CISA AA22-055A, INCD 2023, INCD 2024, and five supporting vendor sources.</p>
               </article>
               <article className="manual-card">
-                <h3>21 ATT&CK Techniques</h3>
-                <p>Mapped across 8 tactics. 15 techniques (68%) fully lab-validated. 6 capability gates determine your effective coverage floor.</p>
+                <h3>21 ATT&CK Techniques (procedure dataset)</h3>
+                <p>Mapped across 8 tactics. 16 techniques (76%) fully lab-validated. 6 capability gates determine your effective coverage floor.</p>
               </article>
             </div>
           </div>

@@ -128,6 +128,31 @@ def find_or_create_attack_pattern(mitre_id):
     )
     return obj["id"], True
 
+# ── Step 0: Analyst Identity (author of all STIX objects in this graph) ──────
+
+print("\n[Step 0] Analyst identity — Desert Hydra CTI Pipeline")
+
+existing = _find(api.identity, "Desert Hydra CTI Pipeline")
+if existing:
+    ANALYST_ID = existing["id"]
+    print(f"  [exists]  {ANALYST_ID}")
+else:
+    obj = api.identity.create(
+        type=IdentityTypes.ORGANIZATION.value,
+        name="Desert Hydra CTI Pipeline",
+        description=(
+            "Analyst identity for Operation Desert Hydra. "
+            "All STIX objects in this graph were authored by this pipeline "
+            "as part of a public-source CTI-to-detection project focused on MuddyWater. "
+            "created_by_ref on all objects refers to this identity as the intelligence author, "
+            "not to the threat actor. Attribution is expressed via the attributed-to relationship."
+        ),
+        objectMarking=[TLP_WHITE],
+        confidence=100,
+    )
+    ANALYST_ID = obj["id"]
+    print(f"  [created] {ANALYST_ID}")
+
 # ── Step 1: Iran MOIS Identity ────────────────────────────────────────────────
 
 print("\n[Step 1] Iran MOIS — Identity (Organization)")
@@ -178,7 +203,7 @@ else:
         primary_motivation="espionage",
         confidence=85,
         objectMarking=[TLP_WHITE],
-        createdBy=MOIS_ID,
+        createdBy=ANALYST_ID,
     )
     MW_ID = obj["id"]
     print(f"  [created] {MW_ID}")
@@ -286,7 +311,7 @@ for m in MALWARE_CATALOG:
             description=m["description"],
             is_family=False,
             objectMarking=[TLP_WHITE],
-            createdBy=MOIS_ID,
+            createdBy=ANALYST_ID,
         )
         MALWARE_IDS[m["name"]] = obj["id"]
         print(f"  [created] Malware: {m['name']}")
@@ -343,7 +368,7 @@ for t in TOOL_CATALOG:
             aliases=t["aliases"],
             description=t["description"],
             objectMarking=[TLP_WHITE],
-            createdBy=MOIS_ID,
+            createdBy=ANALYST_ID,
         )
         TOOL_IDS[t["name"]] = obj["id"]
         print(f"  [created] Tool: {t['name']}")
@@ -415,7 +440,7 @@ for src in SOURCES:
             report_types=["threat-report"],
             confidence=confidence,
             objectMarking=[TLP_WHITE],
-            createdBy=MOIS_ID,
+            createdBy=ANALYST_ID,
             objects=[MW_ID],
         )
         REPORT_IDS[src_id] = obj["id"]
