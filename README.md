@@ -231,6 +231,8 @@ All Kibana screenshots are in `docs/proofs/phase-5/`:
 
 Full walkthrough: [`docs/medium-article.md`](docs/medium-article.md)
 
+**Published on Medium:** [Operation Desert Hydra — AI-Assisted CTI Pipeline: MuddyWater to Kibana](https://medium.com/@1200km/operation-desert-hydra-ai-assisted-cti-pipeline-muddywater-to-kibana-34da7917acf0)
+
 ---
 
 ## Data Pipeline — Real Records
