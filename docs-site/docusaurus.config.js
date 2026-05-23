@@ -2,7 +2,7 @@
 const config = {
   title: 'Operation Desert Hydra',
   tagline: 'AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 validated detections → Kibana',
-  favicon: 'img/logo.png',
+  favicon: 'img/ap-logo.png',
   url: 'https://anpa1200.github.io',
   baseUrl: '/operation-desert-hydra/',
   organizationName: 'anpa1200',
@@ -28,11 +28,12 @@ const config = {
     navbar: {
       title: 'Operation Desert Hydra',
       logo: {
-        alt: '1200km',
-        src: 'img/logo.png',
+        alt: 'Andrey Pautov',
+        src: 'img/ap-logo.png',
       },
       items: [
         {type: 'docSidebar', sidebarId: 'hydra', position: 'left', label: 'Pipeline'},
+        {href: 'https://anpa1200.github.io/', label: 'Portfolio', position: 'left'},
         {label: 'Projects', position: 'right', items: [
           {label: 'Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
           {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
