@@ -71,6 +71,16 @@ No step is skipped. Every claim has a source. Every detection has a validation c
 
 The first step is source discovery, not detection writing.
 
+### Traditional Source Gathering — and Why It's Not Enough Alone
+
+The standard workflow for CTI source gathering looks like this: run keyword searches (Google, Google Dorks, site: operators for known vendor blogs), check your Threat Intelligence Platform for existing reports on the actor, subscribe to vendor RSS feeds, pull ISAC/ISAO advisories, and query your organization's TIP for any existing indicator sets or finished intelligence reports tagged to the actor.
+
+For a mature, well-documented actor like MuddyWater this gets you to maybe 15–20 well-known sources quickly — the CISA advisory, the MITRE ATT&CK page, two or three vendor blog posts you already knew about. The problem is coverage holes: you'll reliably find sources that are already in your network's vocabulary and miss the ones that aren't. A CERT-IL PDF published in Hebrew and linked only from a government portal, a Group-IB campaign teardown behind a partial paywall, or a 2020 ClearSky report that predates your current TIP subscription window — all of these can fall out of a manual search pass.
+
+TIPs compound this in a specific way: they surface what has already been ingested and tagged. If a source was never promoted into your TIP (because it was published before the subscription started, or because no analyst had time to import it), it is invisible inside the platform. The TIP is authoritative for what it knows, not for the universe of available sources.
+
+The parallel AI research pass was not a replacement for traditional gathering — it was a coverage supplement. After both approaches ran, the traditional pass and the AI outputs were merged into the same deduplication step. The AI outputs added approximately 40 sources beyond what a manual search surfaced; traditional search added discipline about sources the models hallucinated (fabricated URLs, mis-attributed PDFs). Neither was sufficient alone.
+
 I ran parallel deep-research passes using Gemini and OpenAI, both given the same prompt. Each returned a candidate source register. Both outputs were compared, deduplicated (71 candidates → 8 promoted), and the surviving sources were manually acquired and reviewed before anything entered the dataset.
 
 ### The Actual Prompt
