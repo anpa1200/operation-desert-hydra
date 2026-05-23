@@ -14,11 +14,11 @@ const phases = [
 
 export default function Home() {
   return (
-    <Layout title="Operation Desert Hydra" description="AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 detection records (9 fully validated) → Kibana.">
+    <Layout title="Operation Desert Hydra" description="AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 detection records → 14 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks → Kibana.">
       <header className="hero hero--hydra">
         <div className="container" style={{textAlign: 'center'}}>
           <h1 className="hero__title">Operation Desert Hydra</h1>
-          <p className="hero__subtitle">AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 detection records (9 fully validated) → Kibana</p>
+          <p className="hero__subtitle">AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 detection records → 14 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks → Kibana</p>
           <div style={{marginBottom: '1.5rem'}}>
             <Link className="button button--secondary button--lg" to="/docs/intro">View the Pipeline</Link>
             {' '}
@@ -36,7 +36,7 @@ export default function Home() {
           <div className="container">
             <h2>What This Is</h2>
             <p>
-              Operation Desert Hydra is a complete CTI-to-detection pipeline focused on <strong>MuddyWater</strong> — an Iranian state-linked actor (MOIS) targeting Israeli government, defense, and critical infrastructure. The pipeline enforces a full chain: public sources → structured procedures → OpenCTI knowledge graph → detection rules → benign lab simulation → Kibana proof screenshots.
+              Operation Desert Hydra is a complete CTI-to-detection pipeline focused on <strong>MuddyWater / Seedworm</strong> — widely reported by government and vendor sources as Iran-linked activity associated with MOIS, targeting Israeli government, defense, and critical infrastructure. The pipeline enforces a full chain: public sources → structured procedures → OpenCTI knowledge graph → detection rules → benign lab simulation → Kibana proof screenshots.
             </p>
             <p>
               Everything is on GitHub: <a href="https://github.com/anpa1200/operation-desert-hydra">github.com/anpa1200/operation-desert-hydra</a>. One repository contains everything needed to reproduce the full pipeline from a clean machine.
@@ -65,15 +65,15 @@ export default function Home() {
             <div className="manual-grid">
               <article className="manual-card">
                 <h3>Validation: 14 PASS / 1 PARTIAL / 1 FAIL</h3>
-                <p>16 rule checks across 11 detection records. Every PASS has a Kibana screenshot. Failures are documented with root cause and fix path.</p>
+                <p>16 rule checks across 11 detection records — some detections have multiple rules tested separately. Every PASS has a Kibana screenshot. Failures are documented with root cause and fix path. 9 of 11 detections have coverage score ≥ 4 (lab-validated).</p>
               </article>
               <article className="manual-card">
                 <h3>11 Detection Records</h3>
-                <p>SIEM-agnostic pseudologic (Sigma, KQL, Elastic JSON, SPL exports). Coverage scores: 5 = lab-validated, 4 = correlated analytic, 3 = behavioral partial.</p>
+                <p>SIEM-agnostic pseudologic (Sigma, KQL, Elastic JSON, SPL). Coverage scores: 5 = lab-validated multi-source, 4 = lab-validated single-source, 3 = validation incomplete or failed (documented reason). 9 detections score ≥ 4; 2 score 3.</p>
               </article>
               <article className="manual-card">
                 <h3>8 Promoted Sources</h3>
-                <p>From 71 AI-generated candidates, 8 government and vendor sources survived the review gate: CISA AA22-055A, INCD 2023, INCD 2024, and five supporting vendor sources.</p>
+                <p>From 71 AI-assisted candidate sources, 8 government and vendor sources survived the analyst review gate: CISA AA22-055A, INCD 2023, INCD 2024, and five supporting vendor sources.</p>
               </article>
               <article className="manual-card">
                 <h3>21 ATT&CK Techniques (procedure dataset)</h3>
