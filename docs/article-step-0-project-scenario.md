@@ -1174,40 +1174,73 @@ Lab code: `lab/` — Vagrant + Ansible, one-script deploy and destroy.
 ### Lab Architecture
 
 ```
-Host (Linux)
-│
-├── VirtualBox (Vagrant)
-│   └── ws01  Windows 10   192.168.56.10  (host-only NIC)
-│         ├── Sysmon 15.x  (EID 1,3,7,10,11,13,22)
-│         ├── PowerShell Script Block Logging (EID 4104)
-│         ├── Windows Security Auditing (EID 4688, 4698)
-│         └── Winlogbeat 8.x  ──────────────────────────────┐
-│                                                            │
-└── OpenCTI Docker stack                                     │
-    └── Elasticsearch :9200  ←── desert-hydra-winlogbeat-*  ┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        HOST MACHINE (Linux)                              │
+│                                                                          │
+│  ┌──────────────────────────────────────────────────────────────────┐   │
+│  │                  Docker: opencti_network                          │   │
+│  │                                                                   │   │
+│  │   ┌─────────┐   ┌───────────────┐   ┌──────┐   ┌───────────┐   │   │
+│  │   │ OpenCTI │──▶│ Elasticsearch │   │Redis │   │ RabbitMQ  │   │   │
+│  │   │  :8080  │   │    :9200      │   │:6379 │   │   :5672   │   │   │
+│  │   └─────────┘   └──────┬────────┘   └──────┘   └───────────┘   │   │
+│  │                        │ port 9200 exposed to host               │   │
+│  │   ┌─────────┐          │  ┌───────┐                              │   │
+│  │   │  Kibana │──────────┤  │ MinIO │                              │   │
+│  │   │  :5601  │          │  │ :9001 │                              │   │
+│  │   └─────────┘          │  └───────┘                              │   │
+│  └────────────────────────┼─────────────────────────────────────────┘   │
+│                           │                                              │
+│          ┌────────────────┴──────────────────────────────┐              │
+│          │  VirtualBox NAT gateway: 10.0.2.2              │              │
+│          │                                                │              │
+│          │  ┌──────────────────────────────────────────┐ │              │
+│          │  │         ws01 — Windows 10                │ │              │
+│          │  │         hostname: DESERTWS01             │ │              │
+│          │  │                                          │ │              │
+│          │  │  Sysmon 15.x (EID 1,7,10,11,13,22)      │ │              │
+│          │  │  PowerShell Script Block Logging EID 4104│ │              │
+│          │  │  Windows Security Auditing EID 4688/4698 │ │              │
+│          │  │  Winlogbeat 8.13 ──▶ 10.0.2.2:9200      │ │              │
+│          │  │                                          │ │              │
+│          │  │  WinRM :55985 ◀── Ansible (host NAT fwd)│ │              │
+│          │  └──────────────────────────────────────────┘ │              │
+│          └────────────────────────────────────────────────┘              │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
 
-**Network:**
-- NIC 1 (NAT only): internet access at provision time + VirtualBox gateway `10.0.2.2` used for Winlogbeat → Elasticsearch reach-back
-- Ansible WinRM control via NAT port-forward `127.0.0.1:55985`
-- Host Elasticsearch reachable from VM at `10.0.2.2:9200`
+**Network design:**
+- Single NAT NIC only — VM has no routable IP on the host network
+- VirtualBox NAT gateway `10.0.2.2` is the host as seen from the VM — Winlogbeat ships logs to `10.0.2.2:9200`
+- Ansible controls the VM via NAT port-forward `127.0.0.1:55985 → ws01:5985` (set automatically by Vagrant)
+- Isolation: VM cannot reach the internet during simulation steps (NAT DNS may still resolve; no active connections are made to real C2 infrastructure)
+
+**One-command deployment (from repo root):**
+```bash
+cp stack/.env.template stack/.env  # fill in passwords once
+bash start.sh                       # provisions everything end-to-end
+bash stop.sh                        # halt VM, stack keeps running
+bash stop.sh --destroy-vm           # destroy VM disk
+bash stop.sh --destroy-stack        # also stop Docker stack
+```
 
 **Lab files:**
 
 | File | Purpose |
 |------|---------|
-| `lab/Vagrantfile` | Single Windows 10 VM (4 GB RAM, 2 CPU, host-only NIC) |
-| `lab/Makefile` | `up` / `validate` / `down` / `destroy` / `status` |
-| `lab/scripts/deploy.sh` | One-script deploy: preflight → vagrant up → ansible deploy |
-| `lab/scripts/destroy.sh` | One-script teardown: vagrant destroy + optional ES index cleanup |
-| `lab/ansible/inventory/hosts.ini` | WinRM inventory (127.0.0.1:55985, NTLM) |
-| `lab/ansible/inventory/group_vars/all.yml` | Elasticsearch URL, Sysmon/Winlogbeat versions |
-| `lab/ansible/playbooks/deploy.yml` | Provision roles: audit_logging → sysmon → winlogbeat |
-| `lab/ansible/roles/audit_logging/` | Script Block Logging, process/logon/object auditing, TCP fix |
-| `lab/ansible/roles/sysmon/` | Sysmon download, install, config deploy |
-| `lab/ansible/roles/sysmon/files/sysmonconfig.xml` | Lab Sysmon config: EID 1,3,7,10,11,13,22 |
-| `lab/ansible/roles/winlogbeat/` | Winlogbeat download, install, config → OpenCTI ES |
-| `lab/ansible/playbooks/validate.yml` | 11 benign simulations (Steps 21–31) + PASS/FAIL report |
+| `start.sh` | Root entry point — stack + VM + provision + simulate |
+| `stop.sh` | Root teardown — halt/destroy VM, optionally stop stack |
+| `stack/docker-compose.yml` | OpenCTI + Elasticsearch + Redis + MinIO + RabbitMQ |
+| `stack/docker-compose.kibana.yml` | Kibana overlay (adds `:5601`, exposes ES `:9200`) |
+| `stack/.env.template` | Secret template — copy to `.env` before first run |
+| `lab/Vagrantfile` | Windows 10 VM: 4 GB RAM, 2 vCPU, NAT only |
+| `lab/Makefile` | `make up / validate / down / destroy / status` |
+| `lab/scripts/deploy.sh` | Sub-script: preflight → vagrant up → ansible deploy |
+| `lab/scripts/destroy.sh` | Sub-script: vagrant destroy + optional ES index cleanup |
+| `lab/ansible/inventory/hosts.ini` | WinRM inventory (127.0.0.1:55985, basic auth) |
+| `lab/ansible/playbooks/deploy.yml` | Provision: audit_logging → sysmon → winlogbeat |
+| `lab/ansible/roles/sysmon/files/sysmonconfig.xml` | Sysmon config: EID 1,7,10,11,13,22 enabled |
+| `lab/ansible/playbooks/validate.yml` | 11 benign simulations → PASS/FAIL report |
 
 ### 20a. Prerequisites
 
@@ -1221,26 +1254,29 @@ pip3 install ansible pywinrm
 
 ### 20b. Add Kibana + Expose Elasticsearch
 
-The OpenCTI stack does not include Kibana. Add it via the overlay compose file (does not modify `docker-compose.yml`):
+Kibana and the Elasticsearch port exposure are included in `stack/docker-compose.kibana.yml`. Both are started automatically by `start.sh`. To start manually:
 
 ```bash
-cd opencti-intelligent-shield
-docker compose -f docker-compose.yml -f docker-compose.kibana.yml up -d kibana elasticsearch
+cd stack
+docker compose -f docker-compose.yml -f docker-compose.kibana.yml --env-file .env up -d
 
 # Verify
 curl -u elastic:${ELASTIC_PASSWORD} http://localhost:9200/_cluster/health
 # Kibana UI: http://localhost:5601  (login: elastic / $ELASTIC_PASSWORD)
 ```
 
-Create the Winlogbeat index pattern in Kibana: **Stack Management → Index Patterns → `desert-hydra-winlogbeat-*`**, time field `@timestamp`.
+Create the Winlogbeat index pattern in Kibana: **Stack Management → Index Patterns → `winlogbeat-*`**, time field `@timestamp`.
 
 ### 20c. Deploy Lab
 
 ```bash
+# One command from repo root (recommended):
+bash start.sh
+
+# Or manually via lab Makefile:
 cd lab
-export ELASTICSEARCH_PASSWORD=$(grep ELASTIC_PASSWORD ../opencti-intelligent-shield/.env | cut -d= -f2)
+export ELASTICSEARCH_PASSWORD=$(grep ELASTIC_PASSWORD ../stack/.env | cut -d= -f2)
 make up
-# or: ELASTICSEARCH_PASSWORD=xxx bash scripts/deploy.sh
 ```
 
 deploy.sh phases:
