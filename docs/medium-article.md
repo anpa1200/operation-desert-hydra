@@ -67,6 +67,8 @@ source → claim → procedure → ATT&CK mapping → telemetry requirement
 
 No step is skipped. Every claim has a source. Every detection has a validation case. Every PASS has a screenshot.
 
+![The Pipeline — 9-step validation chain](assets/pipeline-infographic.png)
+
 ---
 
 ## Phase 1: Source Gathering
