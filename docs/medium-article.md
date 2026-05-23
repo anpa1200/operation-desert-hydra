@@ -1,6 +1,6 @@
-# Operation Desert Hydra: How I Turned Public Threat Intelligence Into 11 Validated Detections
+# Operation Desert Hydra — AI-Assisted CTI Pipeline: MuddyWater to Kibana
 
-*A complete walkthrough — from raw CTI reports to Kibana proof screenshots, deployed in a reproducible lab*
+*11 validated detections from public sources, OpenCTI graph, and a one-command lab*
 
 ---
 
