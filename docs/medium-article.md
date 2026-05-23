@@ -2,6 +2,8 @@
 
 *11 validated detections from public sources, OpenCTI graph, and a one-command lab*
 
+![Operation Desert Hydra: CTI Pipeline](assets/cover.png)
+
 ---
 
 ## Table of Contents
