@@ -4,6 +4,34 @@
 
 ---
 
+## Table of Contents
+
+1. [Why MuddyWater?](#why-muddywater)
+2. [The Pipeline](#the-pipeline)
+3. [Phase 1: Source Gathering](#phase-1-source-gathering)
+4. [Phase 2: Procedure Dataset](#phase-2-procedure-dataset)
+5. [Phase 3: OpenCTI Knowledge Graph](#phase-3-opencti-knowledge-graph)
+6. [Phase 4: Detection Atlas](#phase-4-detection-atlas)
+7. [Phase 5: Validation Lab](#phase-5-validation-lab)
+   - [Step 21 — Spearphishing Delivery Chain](#step-21-det_mw_0001--spearphishing-delivery-chain)
+   - [Step 22 — Web Service Shell Spawn](#step-22-det_mw_0002--web-service-shell-spawn)
+   - [Step 23 — PowerShell Encoded Command](#step-23-det_mw_0003--powershell-encoded-command)
+   - [Step 24 — DLL Side-Loading](#step-24-det_mw_0004--dll-side-loading)
+   - [Step 25 — Registry Run Key Persistence](#step-25-det_mw_0005--registry-run-key-persistence)
+   - [Step 26 — Scheduled Task (43-Minute Beacon)](#step-26-det_mw_0006--scheduled-task-43-minute-beacon)
+   - [Step 27 — RMM Tool Abuse](#step-27-det_mw_0007--rmm-tool-abuse)
+   - [Step 28 — Telegram Bot API C2](#step-28-det_mw_0008a--telegram-bot-api-c2)
+   - [Step 29 — DNS Tunneling](#step-29-det_mw_0008b--dns-tunneling)
+   - [Step 30 — WMI SecurityCenter2 Discovery](#step-30-det_mw_0009--wmi-securitycenter2-discovery)
+   - [Step 31 — LSASS Memory Access](#step-31-det_mw_0010--lsass-memory-access)
+8. [Validation Results Summary](#phase-5-validation-results-summary)
+9. [Phase 6: Coverage Matrix](#phase-6-coverage-matrix)
+10. [What Defenders Should Do Right Now](#what-defenders-should-do-right-now)
+11. [Reproduce It Yourself](#reproduce-it-yourself)
+12. [Next Steps](#next-steps)
+
+---
+
 Most threat actor writeups stop too early. They describe the group, list ATT&CK techniques, and paste some IoCs. Then the report sits in a folder while defenders wonder: *what do I actually do with this on Monday?*
 
 Operation Desert Hydra is an answer to that question.
