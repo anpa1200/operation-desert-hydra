@@ -178,6 +178,8 @@ Every source that came out of the AI output went through this checklist before b
 
 71 candidates → 8 government/vendor sources promoted. The rest were duplicates, secondary summaries, or sources that named the actor without procedure-level specificity.
 
+![The Review Gate — 5-point promotion checklist](assets/review-gate-infographic.png)
+
 ### Research Artifacts (All in the Repo)
 
 Every file from the source gathering workflow is version-controlled and publicly accessible:
