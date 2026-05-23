@@ -30,7 +30,7 @@
 9. [Phase 6: Coverage Matrix](#phase-6-coverage-matrix)
 10. [What Defenders Should Do Right Now](#what-defenders-should-do-right-now)
 11. [Reproduce It Yourself](#reproduce-it-yourself)
-12. [Next Steps](#next-steps)
+12. [Production Scars](#production-scars)
 
 ---
 
@@ -221,6 +221,8 @@ The three sources share a common characteristic: they are not secondary aggregat
 
 After the AI outputs were merged and deduplicated, 71 candidate sources remained. Here is what happened to them across Steps 5–9:
 
+![Steps After Deduplication — Steps 5–9 walkthrough](assets/steps-after-deduplication-infographic.png)
+
 **Step 5 — Automated Acquisition**
 
 `tools/fetch_research_sources.py` ran against all 71 URLs. For each source it created a numbered folder under `docs/source-gathering/raw-sources/` with:
@@ -359,6 +361,8 @@ This is the deduplicated list produced after comparing Gemini and OpenAI outputs
 
 ## Phase 2: Procedure Dataset
 
+![The 10 Procedures — MuddyWater procedure-level dataset](assets/10-procedures-infographic.png)
+
 A procedure record is not an ATT&CK technique. ATT&CK describes what a class of actors *can* do. A procedure record describes what *this actor* did, in *this campaign*, as documented by *this source*, with a specific evidence label attached.
 
 The distinction matters for detection. "Adversaries use scheduled tasks (T1053.005)" does not help you tune a detection rule. "BugSleep creates a scheduled task with a 43-minute repeat interval (INCD 2024, Observed)" does — because you now have a concrete interval to hunt for, a specific tool name, and a source you can cite in your detection rationale.
@@ -441,6 +445,29 @@ Post-access credential access using three tools: Mimikatz and procdump64.exe aga
 ## Phase 3: OpenCTI Knowledge Graph
 
 The procedure dataset and source register go into a self-hosted OpenCTI 6.2 instance. This creates the analytical record — queryable, relationship-aware, ATT&CK-linked.
+
+### OpenCTI Deployment
+
+The stack used in this project is documented and publicly reproducible. The full deployment — Docker Compose, connectors, and an AI enrichment connector that calls Claude via the Anthropic API — lives in a dedicated project:
+
+- **GitHub:** [github.com/anpa1200/opencti-intelligent-shield](https://github.com/anpa1200/opencti-intelligent-shield)
+- **Docusaurus site:** [anpa1200.github.io/opencti-intelligent-shield](https://anpa1200.github.io/opencti-intelligent-shield/)
+- **Main guide:** [anpa1200.github.io/opencti-intelligent-shield/docs/intelligent-shield](https://anpa1200.github.io/opencti-intelligent-shield/docs/intelligent-shield)
+
+The Intelligent Shield project covers: OpenCTI core stack (Redis, Elasticsearch, MinIO, RabbitMQ, platform, workers), MITRE ATT&CK connector, and a custom internal enrichment connector that uses Claude to automatically summarize and enrich threat objects. Docker Compose files, a sanitized `.env.example`, and full setup instructions are all version-controlled.
+
+To spin up the stack standalone (outside Operation Desert Hydra):
+
+```bash
+git clone https://github.com/anpa1200/opencti-intelligent-shield.git openCTI
+cd openCTI
+cp .env.example .env
+# fill in tokens and passwords
+./scripts/start-all.sh   # OpenCTI at :8080
+./scripts/stop-all.sh    # halt, preserves volumes
+```
+
+In the context of Operation Desert Hydra the stack is embedded in `stack/` and started with `bash start.sh` — no separate clone needed. The Intelligent Shield project is the standalone reference deployment for anyone who wants OpenCTI without the lab.
 
 ### Step 10: Stack Start
 
@@ -1215,22 +1242,76 @@ file_path MATCHES "(\\AppData\\|\\Temp\\|\\Users\\|\\ProgramData\\)"
 ### Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                        HOST MACHINE (Linux)                              │
-│                                                                          │
-│  Docker: opencti_network                                                 │
-│    Elasticsearch :9200 (exposed) ←── Kibana :5601                       │
-│    OpenCTI :8080                                                         │
-│                           ↑                                              │
-│          Winlogbeat 8.13  │  10.0.2.2:9200 (VirtualBox NAT gateway)     │
-│                           │                                              │
-│    VirtualBox VM: ws01 (Windows 10 / DESERTWS01)                        │
-│      Sysmon 15.x — EID 1, 7, 10, 11, 13, 22                            │
-│      PowerShell Script Block Logging — EID 4104                         │
-│      Windows Security Auditing — EID 4688, 4698                         │
-│      Ansible control: WinRM 127.0.0.1:55985 (NAT port-forward)         │
-└─────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  HOST MACHINE (Linux)                                                        │
+│                                                                              │
+│  ┌─── Docker network: opencti_network ──────────────────────────────────┐   │
+│  │                                                                       │   │
+│  │   Redis 7.2              (internal — OpenCTI session store)           │   │
+│  │   RabbitMQ 3.13          (internal — OpenCTI message bus)             │   │
+│  │   MinIO                  (internal — OpenCTI file store, :9001 UI)    │   │
+│  │                                                                       │   │
+│  │   Elasticsearch 8.13.0   :9200 → exposed to host                     │   │
+│  │   Kibana 8.13.0          :5601 → exposed to host                     │   │
+│  │   OpenCTI 6.2.0          :8080 → exposed to host                     │   │
+│  │   OpenCTI worker ×3      (internal — STIX ingest)                    │   │
+│  │                                                                       │   │
+│  └───────────────────────────────────────────────────────────────────────┘   │
+│                           ↑                                                  │
+│          Elasticsearch    │  host port 9200                                  │
+│          reachable from   │  VirtualBox NAT gateway: 10.0.2.2:9200           │
+│          VM as            │                                                  │
+│                           │                                                  │
+│  Ansible control ────────WinRM──→ 127.0.0.1:55985 (NAT port-forward)        │
+│  (host, pywinrm)                                                             │
+│                                                                              │
+└────────────────────────────────────────────────────┬─────────────────────────┘
+                                                     │ VirtualBox NAT NIC
+                                                     ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│  VirtualBox VM: ws01                                                         │
+│  Box: StefanScherer/windows_10 │ Hostname: DESERTWS01                        │
+│  4 GB RAM │ 2 vCPUs │ NIC: NAT only (no internet, host at 10.0.2.2)          │
+│                                                                              │
+│  Agents (provisioned by Ansible deploy.yml):                                 │
+│                                                                              │
+│  ┌─── Sysmon 15.x (sysmonconfig.xml) ──────────────────────────────────┐    │
+│  │  EID  1  ProcessCreate     — process spawn chain (parent→child)     │    │
+│  │  EID  3  NetworkConnect    — outbound connections (hostname+port)    │    │
+│  │  EID  7  ImageLoad         — DLL loads with signing details          │    │
+│  │  EID 10  ProcessAccess     — handle opens (LSASS access masks)       │    │
+│  │  EID 11  FileCreate        — file writes (.dmp, .wsf, startup paths) │    │
+│  │  EID 13  RegistryEvent     — registry key/value writes               │    │
+│  │  EID 22  DnsQuery          — DNS queries with full QNAME             │    │
+│  └──────────────────────────────────────────────────────────────────────┘    │
+│                                                                              │
+│  ┌─── Windows Event Log channels (forwarded by Winlogbeat) ────────────┐    │
+│  │  Microsoft-Windows-PowerShell/Operational  EID 4103,4104,4105,4106  │    │
+│  │  Microsoft-Windows-TaskScheduler/Operational  EID 106,200,201,4698  │    │
+│  │  Security  EID 4624,4625,4688,4698,4699,4702,4663,4656              │    │
+│  │  Application, System                                                 │    │
+│  └──────────────────────────────────────────────────────────────────────┘    │
+│                                                                              │
+│  Winlogbeat 8.13.4 ──→ 10.0.2.2:9200 ──→ index: desert-hydra-winlogbeat     │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
 ```
+
+![Lab Architecture — Host, Docker stack, and Windows VM](assets/lab-architecture-infographic.png)
+
+**Data flow:**
+
+1. `bash start.sh` creates `opencti_network`, starts all Docker services, waits for Elasticsearch health (up to 120 s).
+2. Vagrant brings up `ws01` (Windows 10, `StefanScherer/windows_10` box, ~5 GB first run).
+3. Ansible connects over WinRM (`127.0.0.1:55985`, NAT port-forward) and runs `deploy.yml`:
+   - `audit_logging` role — enables PowerShell Script Block Logging and Security auditing via registry.
+   - `sysmon` role — downloads Sysmon, installs the lab config (`sysmonconfig.xml`), starts `Sysmon64` service.
+   - `winlogbeat` role — installs Winlogbeat 8.13.4, writes `winlogbeat.yml` from template, points output to `10.0.2.2:9200`, starts service.
+4. Ansible verifies all three services running and Script Block Logging active, prints deployment summary.
+5. Ansible runs `validate.yml` — 11 simulation tasks (Steps 21–31), each: clear stale events → execute benign simulation → wait 3 s → query `Get-WinEvent` → print PASS / FAIL.
+6. Events flow: VM → Winlogbeat → Elasticsearch (:9200 on host) → Kibana (:5601) → analyst reviews per-detection proof screenshots.
+
+**Key networking constraint:** The VM uses NAT only. `10.0.2.2` is the VirtualBox NAT gateway (= the host). Winlogbeat reaches Elasticsearch this way. Ansible reaches the VM via NAT port-forward (`127.0.0.1:55985`). The VM has no direct internet path — this is intentional for lab isolation but is the root cause of the det_mw_0008a FAIL (Sysmon sees `10.0.2.2` not `api.telegram.org`).
 
 ### Deploy in One Command
 
@@ -1495,6 +1576,8 @@ AND winlog.event_data.TargetFilename: *Temp*
 
 ## Phase 5 Validation Results Summary
 
+![Phase 5: Validation Results Summary — 13 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks](assets/validation-results-infographic.png)
+
 Full run: `ansible-playbook playbooks/validate.yml` — **ok=70 changed=42 failed=0**
 
 - Step 21 — **det_mw_0001** · Process spawn → **PASS**
@@ -1742,14 +1825,5 @@ Two failures from Phase 5 remain open:
 These are documented as open items, not dismissed as "out of scope." The coverage score scale is designed to reflect this: a score of 3 means "behavioral detection, no lab proof" — it is honest about the gap rather than claiming coverage that was not validated.
 
 **Seven ATT&CK techniques have zero detection coverage.** Lateral movement (T1021.001 RDP, T1550.002 Pass the Hash), Collection (T1005, T1039), Exfiltration (T1041), and Impact (T1486 ransomware, T1490 shadow copy deletion from DarkBit). These are acknowledged in the coverage matrix, not hidden. The actor uses them. The public source base documents them. The detection coverage does not exist in this iteration.
-
-## Next Steps
-
-1. Close the two open gaps: det_mw_0004 (needs real GoogleUpdate.exe) and det_mw_0008a (needs direct internet NIC)
-2. Translate pseudologic to Sigma rules for community sharing
-3. Lateral movement source review — T1021.001 (RDP) and T1550.002 (Pass the Hash) are the most likely gaps based on actor profile
-4. Extend to TA453 (Charming Kitten) — overlapping initial access techniques support a comparative detection track
-
----
 
 *All code, data, and proof screenshots are version-controlled at [github.com/anpa1200/operation-desert-hydra](https://github.com/anpa1200/operation-desert-hydra)*
