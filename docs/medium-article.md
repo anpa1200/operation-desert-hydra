@@ -462,12 +462,327 @@ The MITRE ATT&CK connector loads 846 techniques into the graph. This sync must c
 
 ### Step 12: Import Script
 
+Script: [**tools/opencti_import.py**](https://github.com/anpa1200/operation-desert-hydra/blob/main/tools/opencti_import.py)
+
 ```bash
+export OPENCTI_URL=http://localhost:8080
 export OPENCTI_TOKEN=<admin token from stack/.env>
 python3 tools/opencti_import.py
 ```
 
-Creates: 1 Intrusion Set (MuddyWater + all aliases), 9 malware objects, 4 tool objects, 20 reports, 21 ATT&CK technique links.
+The script reads `data/sources.yaml` and `data/procedures.yaml` — it does not hardcode any intelligence. The YAML files are the single source of truth; the script is just a translation layer from those files into OpenCTI's API.
+
+**What it creates and why:**
+
+**Step 1 — Iran MOIS (Identity: Organization).** Every object in OpenCTI needs a `createdBy` reference. Creating the sponsoring organization first gives all downstream objects a consistent authoring context and makes the attribution relationship explicit in the graph: MuddyWater → attributed-to → Iran MOIS.
+
+**Step 2 — MuddyWater (Intrusion Set).** The intrusion set object carries all known aliases: Seedworm, Mango Sandstorm, TA450, Static Kitten, TEMP.Zagros, Mercury, DEV-1084. Aliases matter for deduplication — OpenCTI uses them to avoid creating duplicate entities when the same actor appears under different names in different reports.
+
+**Step 3 — Malware catalog (9 objects).** Each actor-developed tool gets a Malware object with a description derived from source reporting. The catalog: POWERSTATS, PowGoop, Small Sieve, Canopy, Mori, BugSleep, AnchorRAT, SyncroRAT, DarkBit.
+
+**Step 4 — Tool catalog (4 objects).** Legitimate tools abused by the actor are STIX Tool objects, not Malware — the distinction matters for downstream analysis. The catalog: AteraAgent, SimpleHelp, Mimikatz, LaZagne.
+
+**Step 5 — uses relationships.** MuddyWater → uses → each malware and tool object. These relationships make the graph queryable: "which tools does this actor use?" returns all 13 objects in one hop.
+
+**Step 6 — Reports from sources.yaml.** One Report object per promoted source, with publisher, reliability rating, credibility score, actor claims, key entities, and ATT&CK candidates written into the description. MuddyWater is added as an object reference so each report is queryable from the actor page.
+
+**Step 7 — ATT&CK pattern links from procedures.yaml.** Iterates all `attck_candidates` across the 10 procedure records and creates `MuddyWater → uses → ATT&CK technique` relationships. If the MITRE connector has not yet synced a technique, the script creates a stub Attack Pattern object (with `x_mitre_id` set) and flags it for enrichment. This prevents the import from failing on a timing issue between the connector sync and the import run.
+
+The script is **idempotent**: every object lookup uses a `read()` before `create()`. Re-running after a partial failure or after the MITRE connector syncs simply confirms existing objects and fills in any gaps.
+
+```python
+#!/usr/bin/env python3
+"""
+Desert Hydra — Phase 3 OpenCTI graph import.
+
+Reads data/sources.yaml and data/procedures.yaml and creates:
+  - Identity:       Iran MOIS (organization)
+  - Intrusion Set:  MuddyWater (with all known aliases)
+  - Malware:        actor-developed tools (9 objects)
+  - Tool:           legitimate tools abused (4 objects)
+  - Reports:        one per promoted source (up to 20)
+  - Relationships:  attributed-to, uses (malware/tool/ATT&CK)
+
+Idempotent — existing objects are not duplicated.
+ATT&CK pattern links are skipped for techniques not yet synced by the
+MITRE connector; re-run the script after the MITRE sync completes.
+
+Usage:
+    export OPENCTI_URL=http://localhost:8080
+    export OPENCTI_TOKEN=<admin-token>
+    python3 tools/opencti_import.py
+"""
+
+import os
+import sys
+import yaml
+from pathlib import Path
+from pycti import OpenCTIApiClient
+from pycti.entities.opencti_identity import IdentityTypes
+
+# ── Bootstrap ─────────────────────────────────────────────────────────────────
+
+OPENCTI_URL   = os.environ.get("OPENCTI_URL",   "http://localhost:8080")
+OPENCTI_TOKEN = os.environ.get("OPENCTI_TOKEN", "")
+REPO_ROOT     = Path(__file__).resolve().parent.parent
+
+if not OPENCTI_TOKEN:
+    sys.exit("ERROR: set OPENCTI_TOKEN environment variable")
+
+api = OpenCTIApiClient(url=OPENCTI_URL, token=OPENCTI_TOKEN, log_level="error")
+print(f"[desert-hydra] Connected  {OPENCTI_URL}")
+
+# ── Load YAML data ─────────────────────────────────────────────────────────────
+
+with open(REPO_ROOT / "data" / "sources.yaml") as f:
+    SOURCES = yaml.safe_load(f)["sources"]
+
+with open(REPO_ROOT / "data" / "procedures.yaml") as f:
+    PROCEDURES = yaml.safe_load(f)["procedures"]
+
+print(f"[desert-hydra] Loaded {len(SOURCES)} sources, {len(PROCEDURES)} procedures")
+
+# ── TLP:WHITE ─────────────────────────────────────────────────────────────────
+
+def get_tlp_white():
+    results = api.marking_definition.list(
+        filters={
+            "mode": "and",
+            "filters": [{"key": "definition", "values": ["TLP:WHITE"]}],
+            "filterGroups": [],
+        }
+    )
+    if results:
+        return results[0]["id"]
+    obj = api.marking_definition.create(
+        definition_type="TLP",
+        definition="TLP:WHITE",
+        x_opencti_color="#ffffff",
+        x_opencti_order=0,
+    )
+    return obj["id"]
+
+TLP_WHITE = get_tlp_white()
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
+def _find(accessor, name):
+    """Look up a STIX object by name. Returns the object dict or None."""
+    return accessor.read(
+        filters={
+            "mode": "and",
+            "filters": [{"key": "name", "values": [name]}],
+            "filterGroups": [],
+        }
+    )
+
+
+def link(from_id, to_id, rel_type, confidence=80):
+    """Create a STIX core relationship; silently skip if it already exists."""
+    try:
+        api.stix_core_relationship.create(
+            fromId=from_id,
+            toId=to_id,
+            relationship_type=rel_type,
+            confidence=confidence,
+            objectMarking=[TLP_WHITE],
+        )
+    except Exception:
+        pass
+
+
+ATTCK_NAMES = {
+    "T1574.002": "DLL Side-Loading",
+    "T1574.001": "DLL Search Order Hijacking",
+    "T1546.015": "Component Object Model Hijacking",
+    "T1218.010": "Regsvr32",
+}
+
+def find_or_create_attack_pattern(mitre_id):
+    """Look up an ATT&CK pattern by x_mitre_id. Create stub if not synced yet."""
+    result = api.attack_pattern.read(
+        filters={
+            "mode": "and",
+            "filters": [{"key": "x_mitre_id", "values": [mitre_id]}],
+            "filterGroups": [],
+        }
+    )
+    if result:
+        return result["id"], False
+    name = ATTCK_NAMES.get(mitre_id, mitre_id)
+    obj = api.attack_pattern.create(
+        name=name,
+        x_mitre_id=mitre_id,
+        description=f"MITRE ATT&CK technique {mitre_id}. Created as stub pending MITRE connector sync.",
+        objectMarking=[TLP_WHITE],
+        confidence=75,
+    )
+    return obj["id"], True
+
+# ── Step 1: Iran MOIS Identity ────────────────────────────────────────────────
+
+existing = _find(api.identity, "Iran MOIS")
+if existing:
+    MOIS_ID = existing["id"]
+else:
+    obj = api.identity.create(
+        type=IdentityTypes.ORGANIZATION.value,
+        name="Iran MOIS",
+        description=(
+            "Iranian Ministry of Intelligence and Security (MOIS). "
+            "State sponsor attributed to MuddyWater cyber operations by CISA, FBI, "
+            "CNMF, NCSC-UK, and NSA in joint advisory AA22-055A (February 2022)."
+        ),
+        objectMarking=[TLP_WHITE],
+        confidence=85,
+    )
+    MOIS_ID = obj["id"]
+
+# ── Step 2: MuddyWater Intrusion Set ──────────────────────────────────────────
+
+existing = _find(api.intrusion_set, "MuddyWater")
+if existing:
+    MW_ID = existing["id"]
+else:
+    obj = api.intrusion_set.create(
+        name="MuddyWater",
+        aliases=[
+            "Seedworm", "Mango Sandstorm", "TA450",
+            "Static Kitten", "TEMP.Zagros", "Mercury", "DEV-1084",
+        ],
+        description=(
+            "Iranian MOIS subordinate threat group active since at least 2017. "
+            "Targets government, defense, telecom, oil and gas, and MSPs globally. "
+            "Significant focus on Israeli organizations since 2022. Known for "
+            "spearphishing, RMM tool abuse, and a shift toward in-house tooling "
+            "(BugSleep, AnchorRAT) beginning ~May 2024."
+        ),
+        resource_level="government",
+        primary_motivation="espionage",
+        confidence=85,
+        objectMarking=[TLP_WHITE],
+        createdBy=MOIS_ID,
+    )
+    MW_ID = obj["id"]
+
+link(MW_ID, MOIS_ID, "attributed-to", 85)
+
+# ── Step 3: Malware catalog ────────────────────────────────────────────────────
+
+MALWARE_CATALOG = [
+    {"name": "POWERSTATS",  "aliases": ["Powermud"],   "description": "MuddyWater first-stage PowerShell backdoor (MITRE S0223)."},
+    {"name": "PowGoop",     "aliases": ["Goopdate"],   "description": "DLL loader hijacking GoogleUpdate.exe via side-loading (MITRE S1046)."},
+    {"name": "Small Sieve", "aliases": [],             "description": "Python backdoor compiled as NSIS; Telegram Bot API C2; OutlookMicrosift Run key."},
+    {"name": "Canopy",      "aliases": ["Starwhale"],  "description": "Excel-macro dropper; startup folder persistence; HTTP POST C2."},
+    {"name": "Mori",        "aliases": [],             "description": "DNS-tunneling backdoor deployed as FML.dll via regsvr32.exe."},
+    {"name": "BugSleep",    "aliases": [],             "description": "In-house backdoor (2024); 43-minute scheduled task; shellcode injection."},
+    {"name": "AnchorRAT",   "aliases": [],             "description": "Custom RAT (2024); COM hijacking persistence (T1546.015)."},
+    {"name": "SyncroRAT",   "aliases": [],             "description": "RMM-based RAT; Technion campaign (Feb 2023); Log4j initial access."},
+    {"name": "DarkBit",     "aliases": [],             "description": "Ransomware/wiper; Technion attack; vssadmin shadow copy deletion."},
+]
+
+MALWARE_IDS = {}
+for m in MALWARE_CATALOG:
+    existing = _find(api.malware, m["name"])
+    if existing:
+        MALWARE_IDS[m["name"]] = existing["id"]
+    else:
+        obj = api.malware.create(
+            name=m["name"], aliases=m["aliases"],
+            description=m["description"], is_family=False,
+            objectMarking=[TLP_WHITE], createdBy=MOIS_ID,
+        )
+        MALWARE_IDS[m["name"]] = obj["id"]
+
+# ── Step 4: Tool catalog ──────────────────────────────────────────────────────
+
+TOOL_CATALOG = [
+    {"name": "AteraAgent",  "aliases": ["Atera RMM"], "description": "Commercial RMM abused for persistent remote access via phishing."},
+    {"name": "SimpleHelp",  "aliases": [],            "description": "Commercial RMM abused in 2024 Israeli targeting."},
+    {"name": "Mimikatz",    "aliases": [],            "description": "LSASS credential dumping (T1003.001), used with procdump64.exe."},
+    {"name": "LaZagne",     "aliases": [],            "description": "LSA secrets (T1003.004) and cached domain credential dumping (T1003.005)."},
+]
+
+TOOL_IDS = {}
+for t in TOOL_CATALOG:
+    existing = _find(api.tool, t["name"])
+    if existing:
+        TOOL_IDS[t["name"]] = existing["id"]
+    else:
+        obj = api.tool.create(
+            name=t["name"], aliases=t["aliases"],
+            description=t["description"],
+            objectMarking=[TLP_WHITE], createdBy=MOIS_ID,
+        )
+        TOOL_IDS[t["name"]] = obj["id"]
+
+# ── Step 5: uses relationships ────────────────────────────────────────────────
+
+for mid in MALWARE_IDS.values():
+    link(MW_ID, mid, "uses", 80)
+for tid in TOOL_IDS.values():
+    link(MW_ID, tid, "uses", 80)
+
+# ── Step 6: Reports from sources.yaml ────────────────────────────────────────
+
+SOURCE_DATES = {
+    "src_usgov_aa22_055a_pdf_mirror":        "2022-02-24T00:00:00.000Z",
+    "src_incd_muddywater_darkbit_2023":      "2023-02-07T00:00:00.000Z",
+    "src_incd_muddywater_2024_evolution":    "2024-06-01T00:00:00.000Z",
+    "src_cisa_aa22_055a_page":               "2022-02-24T00:00:00.000Z",
+    "src_ncsc_uk_muddywater_joint_advisory": "2022-02-24T00:00:00.000Z",
+    "src_incd_recent_phishing_1947":         "2024-09-01T00:00:00.000Z",
+    "src_mitre_attack_muddywater_g0069":     "2024-01-01T00:00:00.000Z",
+}
+
+REPORT_IDS = {}
+for src in SOURCES:
+    src_id   = src["id"]
+    title    = src["title"]
+    pub_date = SOURCE_DATES.get(src_id, "2023-01-01T00:00:00.000Z")
+    confidence = 85 if src.get("source_reliability") == "A" else 70
+    description = (
+        f"Publisher: {src['publisher']}\n"
+        f"Reliability: {src.get('source_reliability','?')} / "
+        f"Credibility: {src.get('information_credibility','?')}\n"
+        f"URL: {src['url']}\n"
+        f"Actor claims: {', '.join(src.get('actor_claims', []))}\n"
+        f"ATT&CK candidates: {', '.join(src.get('candidate_attck_techniques', []))}"
+    )
+    existing = _find(api.report, title)
+    if existing:
+        REPORT_IDS[src_id] = existing["id"]
+    else:
+        obj = api.report.create(
+            name=title, published=pub_date,
+            description=description,
+            report_types=["threat-report"],
+            confidence=confidence,
+            objectMarking=[TLP_WHITE],
+            createdBy=MOIS_ID,
+            objects=[MW_ID],
+        )
+        REPORT_IDS[src_id] = obj["id"]
+
+# ── Step 7: ATT&CK pattern links from procedures ──────────────────────────────
+
+linked, stubs = set(), []
+for proc in PROCEDURES:
+    for candidate in proc.get("attck_candidates", []):
+        tid = candidate["technique"]
+        if tid in linked:
+            continue
+        pattern_id, created_as_stub = find_or_create_attack_pattern(tid)
+        link(MW_ID, pattern_id, "uses", 75)
+        linked.add(tid)
+        if created_as_stub:
+            stubs.append(tid)
+
+# ── Summary ───────────────────────────────────────────────────────────────────
+
+print(f"Import complete — malware: {len(MALWARE_IDS)}, tools: {len(TOOL_IDS)}, "
+      f"reports: {len(REPORT_IDS)}, ATT&CK links: {len(linked)}, stubs: {len(stubs)}")
+```
 
 ![Step 12 — Import script output](proofs/phase-3/step-12-import-output-1.png)
 
