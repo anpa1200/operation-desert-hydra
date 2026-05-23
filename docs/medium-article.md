@@ -164,6 +164,19 @@ Every source that came out of the AI output went through this checklist before b
 
 71 candidates → 8 government/vendor sources promoted. The rest were duplicates, secondary summaries, or sources that named the actor without procedure-level specificity.
 
+### Research Artifacts (All in the Repo)
+
+Every file from the source gathering workflow is version-controlled and publicly accessible:
+
+| File | What it contains |
+|------|-----------------|
+| [Gemini-research.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/Gemini-research.md) | Raw Gemini deep-research output — candidate source register in YAML, procedure extraction candidates, OpenCTI modeling candidates, detection opportunities, gaps |
+| [openAI-research.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/openAI-research.md) | Raw OpenAI deep-research output — executive assessment, high-priority sources, extended source register, direct download table, actor alias notes |
+| [relevant-research-list.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/relevant-research-list.md) | Deduplicated candidate list after comparing both model outputs — 71 sources, acquisition targets for Step 5 |
+| [source-acquisition-report.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/source-acquisition-report.md) | Results of the automated fetch run — HTTP status, content type, file size, and extraction status for all 71 sources |
+| [source-reliability-evidence-assessment.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/source-reliability-evidence-assessment.md) | Analyst review notes — reliability ratings, evidence quality, promotion decisions, and limitations per source |
+| [raw-sources/](https://github.com/anpa1200/operation-desert-hydra/tree/main/docs/source-gathering/raw-sources) | 71 numbered source folders — each contains `metadata.json`, `headers.txt`, the raw source file, extracted `source.txt`, and fallback reader output |
+
 **Promoted sources (highest weight):**
 
 | Source | What it contributes |
