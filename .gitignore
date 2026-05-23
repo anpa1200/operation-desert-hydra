@@ -1,29 +1,56 @@
-# Local environment
-.env
-.env.*
-!.env.example
+# ── Secrets ────────────────────────────────────────────────────────────────────
+stack/.env
+stack/.env.*
+!stack/.env.template
 
-# Python
+# ── Python ─────────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
+*.pyo
 .pytest_cache/
 .venv/
 venv/
 
-# Node / Docusaurus, if added later
+# ── Node / future Docusaurus ───────────────────────────────────────────────────
 node_modules/
 build/
 .docusaurus/
 
-# Local/private research data
-data/raw/
-data/private/
-*.pcap
-*.evtx
-*.sqlite
-*.db
-
-# OS/editor
+# ── OS / editor ────────────────────────────────────────────────────────────────
 .DS_Store
+Thumbs.db
 .idea/
 .vscode/
+*.swp
+*~
+
+# ── Lab VM (Vagrant state — see lab/.gitignore too) ────────────────────────────
+lab/.vagrant/
+*.dmp
+
+# ── Raw source acquisition artifacts (headers + raw HTML are not useful to consumers)
+# Keep: source.txt, source.pdf, metadata.json, fallback-reader.txt
+docs/source-gathering/raw-sources/**/headers.txt
+docs/source-gathering/raw-sources/**/source.html
+
+# ── Internal working documents (planning, analysis, superseded scripts) ─────────
+ai/
+docs/00-*.md
+docs/08-*.md
+lab/scripts/
+opencti/
+
+# ── Empty stub directories ─────────────────────────────────────────────────────
+# (these exist for future work but contain nothing deployable)
+lab/email-simulation/
+lab/powershell-simulation/
+lab/rmm-simulation/
+lab/telemetry/
+lab/windows-ad/
+
+# ── Forensic / sensitive artifacts ─────────────────────────────────────────────
+*.evtx
+*.pcap
+*.sqlite
+*.db
+*.log
