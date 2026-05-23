@@ -182,22 +182,18 @@ Every source that came out of the AI output went through this checklist before b
 
 Every file from the source gathering workflow is version-controlled and publicly accessible:
 
-| File | What it contains |
-|------|-----------------|
-| [Gemini-research.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/Gemini-research.md) | Raw Gemini deep-research output — candidate source register in YAML, procedure extraction candidates, OpenCTI modeling candidates, detection opportunities, gaps |
-| [openAI-research.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/openAI-research.md) | Raw OpenAI deep-research output — executive assessment, high-priority sources, extended source register, direct download table, actor alias notes |
-| [relevant-research-list.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/relevant-research-list.md) | Deduplicated candidate list after comparing both model outputs — 71 sources, acquisition targets for Step 5 |
-| [source-acquisition-report.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/source-acquisition-report.md) | Results of the automated fetch run — HTTP status, content type, file size, and extraction status for all 71 sources |
-| [source-reliability-evidence-assessment.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/source-reliability-evidence-assessment.md) | Analyst review notes — reliability ratings, evidence quality, promotion decisions, and limitations per source |
-| [raw-sources/](https://github.com/anpa1200/operation-desert-hydra/tree/main/docs/source-gathering/raw-sources) | 71 numbered source folders — each contains `metadata.json`, `headers.txt`, the raw source file, extracted `source.txt`, and fallback reader output |
+- **[Gemini-research.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/Gemini-research.md)** — Raw Gemini deep-research output: candidate source register in YAML, procedure extraction candidates, OpenCTI modeling candidates, detection opportunities, gaps.
+- **[openAI-research.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/openAI-research.md)** — Raw OpenAI deep-research output: executive assessment, high-priority sources, extended source register, direct download list, actor alias notes.
+- **[relevant-research-list.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/relevant-research-list.md)** — Deduplicated candidate list after comparing both model outputs: 71 sources, acquisition targets for Step 5.
+- **[source-acquisition-report.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/source-acquisition-report.md)** — Results of the automated fetch run: HTTP status, content type, file size, and extraction status for all 71 sources.
+- **[source-reliability-evidence-assessment.md](https://github.com/anpa1200/operation-desert-hydra/blob/main/docs/source-gathering/source-reliability-evidence-assessment.md)** — Analyst review notes: reliability ratings, evidence quality, promotion decisions, and limitations per source.
+- **[raw-sources/](https://github.com/anpa1200/operation-desert-hydra/tree/main/docs/source-gathering/raw-sources)** — 71 numbered source folders, each containing `metadata.json`, `headers.txt`, the raw source file, extracted `source.txt`, and fallback reader output.
 
 **Promoted sources (highest weight):**
 
-| Source | What it contributes |
-|--------|---------------------|
-| CISA AA22-055A (Feb 2022) | Full procedure survey: PowGoop, POWERSTATS, Small Sieve, Mori, Canopy, Marlin; WMI survey script; credential dumping tools |
-| INCD 2023 | Israeli campaign specifics: ScreenConnect/SimpleHelp RMM abuse, Egnyte/OneDrive lures, Log4j + Exchange exploitation |
-| INCD 2024 | BugSleep analysis: 43-minute scheduled task beacon, VPN exploitation, new RMM tools (Level, PDQConnect) |
+- **CISA AA22-055A (Feb 2022)** — Full procedure survey: PowGoop, POWERSTATS, Small Sieve, Mori, Canopy, Marlin; WMI survey script; credential dumping tools.
+- **INCD 2023** — Israeli campaign specifics: ScreenConnect/SimpleHelp RMM abuse, Egnyte/OneDrive lures, Log4j + Exchange exploitation.
+- **INCD 2024** — BugSleep analysis: 43-minute scheduled task beacon, VPN exploitation, new RMM tools (Level, PDQConnect).
 
 Supporting vendor sources: ClearSky, Deep Instinct, Group-IB, Mandiant, Proofpoint, Sekoia.io, Symantec.
 
@@ -1499,24 +1495,22 @@ AND winlog.event_data.TargetFilename: *Temp*
 
 Full run: `ansible-playbook playbooks/validate.yml` — **ok=70 changed=42 failed=0**
 
-| Step | Detection | Rule | Result |
-|------|-----------|------|--------|
-| 21 | det_mw_0001 | Process spawn | **PASS** |
-| 22 | det_mw_0002 | Shell from service | **PASS** |
-| 23 | det_mw_0003 | Rule A (-e + Base64) | **PASS** |
-| 23 | det_mw_0003 | Rule B (IEX + DownloadString) | **PASS** |
-| 24 | det_mw_0004 | EID 7 ImageLoad | **PARTIAL** |
-| 25 | det_mw_0005 | Rule A (OutlookMicrosift) | **PASS** |
-| 25 | det_mw_0005 | Rule C (WSF in Startup) | **PASS** |
-| 26 | det_mw_0006 | schtasks /mo 43 | **PASS** |
-| 27 | det_mw_0007 | Rule A (RMM from \Temp\) | **PASS** |
-| 27 | det_mw_0007 | Rule B (RMM from PS parent) | **PASS** |
-| 28 | det_mw_0008a | EID 3 Telegram | **FAIL** |
-| 29 | det_mw_0008b | EID 22 DNS tunneling | **PASS** |
-| 30 | det_mw_0009 | Rule A (SecurityCenter2 EID 4104) | **PASS** |
-| 30 | det_mw_0009 | Rule B (wmic SecurityCenter2) | **PASS** |
-| 31 | det_mw_0010 | Rule A (LSASS EID 10) | **PASS** |
-| 31 | det_mw_0010 | Rule C (.dmp EID 11) | **PASS** |
+- Step 21 — **det_mw_0001** · Process spawn → **PASS**
+- Step 22 — **det_mw_0002** · Shell from service → **PASS**
+- Step 23 — **det_mw_0003** · Rule A (-e + Base64) → **PASS**
+- Step 23 — **det_mw_0003** · Rule B (IEX + DownloadString) → **PASS**
+- Step 24 — **det_mw_0004** · EID 7 ImageLoad → **PARTIAL**
+- Step 25 — **det_mw_0005** · Rule A (OutlookMicrosift) → **PASS**
+- Step 25 — **det_mw_0005** · Rule C (WSF in Startup) → **PASS**
+- Step 26 — **det_mw_0006** · schtasks /mo 43 → **PASS**
+- Step 27 — **det_mw_0007** · Rule A (RMM from \Temp\) → **PASS**
+- Step 27 — **det_mw_0007** · Rule B (RMM from PS parent) → **PASS**
+- Step 28 — **det_mw_0008a** · EID 3 Telegram → **FAIL**
+- Step 29 — **det_mw_0008b** · EID 22 DNS tunneling → **PASS**
+- Step 30 — **det_mw_0009** · Rule A (SecurityCenter2 EID 4104) → **PASS**
+- Step 30 — **det_mw_0009** · Rule B (wmic SecurityCenter2) → **PASS**
+- Step 31 — **det_mw_0010** · Rule A (LSASS EID 10) → **PASS**
+- Step 31 — **det_mw_0010** · Rule C (.dmp EID 11) → **PASS**
 
 **13 PASS / 1 PARTIAL / 1 FAIL** across 16 rule checks.
 
@@ -1533,14 +1527,12 @@ Of 22 ATT&CK techniques documented in the source set:
 
 **The six capability gates** that determine your effective coverage floor:
 
-| Gate | Unlocks | Without it |
-|------|---------|-----------|
-| PowerShell Script Block Logging (EID 4104) | det_mw_0003 Rule B, det_mw_0009 Rules A/C | Detection degrades to command-line heuristics |
-| Sysmon EID 10 (ProcessAccess) | det_mw_0010 Rule A (tool-agnostic LSASS) | Falls back to binary name only — misses custom dumpers |
-| Sysmon EID 7 (ImageLoad) | det_mw_0004 (DLL side-loading) | DLL loads are invisible |
-| DNS resolver logging (full QNAME) | det_mw_0008b (DNS tunneling) | Mori C2 channel invisible |
-| Network flow / proxy logs | det_mw_0007 Rule C, det_mw_0008a | RMM and Telegram C2 network-layer coverage lost |
-| Email gateway telemetry (SEG) | det_mw_0001 full correlated logic | Email-to-endpoint correlation unavailable |
+- **PowerShell Script Block Logging (EID 4104)** — unlocks det_mw_0003 Rule B and det_mw_0009 Rules A/C. Without it: detection degrades to command-line heuristics only.
+- **Sysmon EID 10 (ProcessAccess)** — unlocks det_mw_0010 Rule A (tool-agnostic LSASS access). Without it: falls back to binary name matching, misses custom dumpers.
+- **Sysmon EID 7 (ImageLoad)** — unlocks det_mw_0004 (DLL side-loading). Without it: DLL loads are completely invisible.
+- **DNS resolver logging (full QNAME)** — unlocks det_mw_0008b (DNS tunneling). Without it: Mori C2 channel is invisible.
+- **Network flow / proxy logs** — unlocks det_mw_0007 Rule C and det_mw_0008a. Without it: RMM and Telegram C2 network-layer coverage lost.
+- **Email gateway telemetry (SEG)** — unlocks det_mw_0001 full correlated logic. Without it: email-to-endpoint correlation unavailable.
 
 ---
 
