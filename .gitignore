@@ -37,6 +37,7 @@ docs/source-gathering/raw-sources/**/source.html
 ai/
 docs/00-*.md
 docs/08-*.md
+docs/article-step-0-project-scenario.md
 lab/scripts/
 opencti/
 

@@ -229,7 +229,121 @@ All Kibana screenshots are in `docs/proofs/phase-5/`:
 | 7 | Final report (methodology → source base → coverage → limitations → next work) | Done |
 | 8 | Executive summary (defender-facing priorities and telemetry gaps) | Done |
 
-Full walkthrough: [`docs/article-step-0-project-scenario.md`](docs/article-step-0-project-scenario.md)
+Full walkthrough: [`docs/medium-article.md`](docs/medium-article.md)
+
+---
+
+## Data Pipeline — Real Records
+
+Every claim in this project is traceable from raw source through to detection. The pipeline is:
+
+```
+sources.yaml  →  claims.yaml  →  procedures.yaml  →  detections.yaml
+```
+
+**Source record** (`data/sources.yaml`) — one entry per promoted source, with reliability and credibility ratings:
+
+```yaml
+- id: src_usgov_aa22_055a_pdf_mirror
+  title: "AA22-055A: Iranian Government-Sponsored Actors Conduct Cyber Operations..."
+  publisher: "CISA / FBI / CNMF / NCSC-UK / NSA"
+  url: "https://media.defense.gov/2022/Feb/24/2002944274/-1/-1/0/CSA_AA22-055A..."
+  local_files:
+    raw:  "docs/source-gathering/raw-sources/07-.../source.pdf"
+    text: "docs/source-gathering/raw-sources/07-.../source.txt"
+  source_type: "government_advisory"
+  source_reliability: "A"
+  information_credibility: 2
+  evidence_support: ["Reported", "Assessed"]
+  actor_claims: ["MuddyWater", "Seedworm", "Static Kitten", "TEMP.Zagros", "Iran MOIS"]
+  candidate_attck_techniques: ["T1566", "T1190", "T1574", "T1059.001", "T1219"]
+  promotion_decision: "promote"
+```
+
+**Claim record** (`data/claims.yaml`) — source-bound atomic claim with evidence label:
+
+```yaml
+- id: clm_mw_0006
+  source_id: src_usgov_aa22_055a_pdf_mirror
+  claim: >
+    MuddyWater spearphishing campaigns have used ZIP files containing either
+    malicious macro-enabled Excel files or PDFs that drop malicious files.
+  evidence_label: "Reported"
+  confidence: "High"
+  source_reliability: "A"
+  information_credibility: 2
+  technique_refs: ["T1566.001"]
+  supports:
+    procedure: true
+    detection: true
+```
+
+**Procedure record** (`data/procedures.yaml`) — behavior extracted from claims, with telemetry and detection idea:
+
+```yaml
+- id: proc_mw_0006
+  title: "Persistence via Scheduled Task"
+  evidence_label: "Observed"
+  confidence: "High"
+  source_refs: ["src_incd_muddywater_2024_evolution"]
+  attck_candidates:
+    - technique: "T1053.005"
+      notes: "BugSleep creates a scheduled task triggered every 43 minutes for C2 beaconing"
+  procedure_summary: >
+    BugSleep establishes persistence and C2 beaconing regularity by creating
+    a Windows scheduled task triggered every 43 minutes.
+  required_telemetry:
+    - "Windows Security Event ID 4698 (scheduled task created)"
+    - "Sysmon Event ID 1: schtasks.exe with /create arguments"
+  detection_idea: >
+    Alert on tasks with repetition intervals not matching standard software
+    patterns (e.g., 43 minutes) with actions pointing to user-writable paths.
+```
+
+**Detection record** (`data/detections.yaml`) — deployable pseudologic with coverage score and analyst creation logic:
+
+```yaml
+- id: det_mw_0006
+  title: "Scheduled Task Created with Anomalous Short Repetition Interval"
+  techniques: ["T1053.005"]
+  coverage_score: 4
+  validation_status: lab_validated
+  pseudologic: |
+    # Rule A — Specific: PT43M interval (BugSleep artifact) — immediate alert
+    event_type = scheduled_task_created AND
+    task_trigger_repetition_interval = "PT43M"
+
+    # Rule B — Behavioral: short interval + suspicious action path
+    event_type = scheduled_task_created AND
+    task_trigger_repetition_interval_minutes < 60 AND
+    task_action_path MATCHES "(\\AppData\\|\\Temp\\|\\ProgramData\\)"
+
+    # Rule C — Sysmon fallback (many envs don't forward Task Scheduler logs)
+    event_type = process_create AND
+    image ENDSWITH "schtasks.exe" AND
+    command_line MATCHES "/create" AND
+    command_line MATCHES "(AppData|Temp|ProgramData)"
+  creation_logic: >
+    The 43-minute interval is the single most precise artifact in the dataset,
+    documented as BugSleep's specific C2 beacon interval in INCD 2024.
+    Rule A fires with near-zero false positives. Rule C is the telemetry
+    fallback when Task Scheduler event logs are not forwarded to SIEM.
+```
+
+**Raw source acquisition** (`docs/source-gathering/raw-sources/`) — each of the 71 candidate sources was fetched and stored with its metadata:
+
+```json
+{
+  "number": 7,
+  "url": "https://media.defense.gov/2022/Feb/.../CSA_AA22-055A_...PDF",
+  "http_status": "200",
+  "kind": "pdf",
+  "size_bytes": 1220598,
+  "saved": true,
+  "raw_file": "docs/source-gathering/raw-sources/07-.../source.pdf",
+  "text_file": "docs/source-gathering/raw-sources/07-.../source.txt"
+}
+```
 
 ---
 
