@@ -1,0 +1,36 @@
+:root {
+  --ifm-color-primary: #1a6b4a;
+  --ifm-color-primary-dark: #175f42;
+  --ifm-color-primary-darker: #15593e;
+  --ifm-color-primary-darkest: #104733;
+  --ifm-color-primary-light: #1d7752;
+  --ifm-color-primary-lighter: #20835a;
+  --ifm-color-primary-lightest: #269c6b;
+  --ifm-code-font-size: 95%;
+}
+.hero--hydra {
+  background: linear-gradient(135deg, #0d1f13 0%, #1a6b4a 52%, #2a5f3e 100%);
+  color: #fff;
+}
+.hero--hydra .cover-image {
+  margin-top: 2rem;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+.manual-section {
+  padding: 3rem 0;
+}
+.manual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+.manual-card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1rem;
+  background: var(--ifm-background-surface-color);
+}
+.manual-card h3 { margin-top: 0; }

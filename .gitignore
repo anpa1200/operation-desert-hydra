@@ -11,10 +11,10 @@ __pycache__/
 .venv/
 venv/
 
-# ── Node / future Docusaurus ───────────────────────────────────────────────────
-node_modules/
-build/
-.docusaurus/
+# ── Docusaurus site ────────────────────────────────────────────────────────────
+docs-site/node_modules/
+docs-site/build/
+docs-site/.docusaurus/
 
 # ── OS / editor ────────────────────────────────────────────────────────────────
 .DS_Store
