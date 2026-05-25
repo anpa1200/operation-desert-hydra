@@ -41,7 +41,8 @@ const config = {
           {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'}
         ]},
         {label: 'Medium Article', href: 'https://medium.com/@1200km/operation-desert-hydra-ai-assisted-cti-pipeline-muddywater-to-kibana-34da7917acf0', position: 'right'},
-        {href: 'https://github.com/anpa1200/operation-desert-hydra', label: 'GitHub', position: 'right'}
+        {href: 'https://github.com/anpa1200/operation-desert-hydra', label: 'GitHub', position: 'right'},
+        {href: 'https://anpa1200.github.io/', label: 'All Projects', position: 'right', className: 'navbar-portfolio-btn'}
       ]
     },
     footer: {
