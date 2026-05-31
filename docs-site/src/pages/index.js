@@ -125,6 +125,11 @@ bash start.sh
                 <p>Gate-controlled CTI-to-detection delivery methodology from customer requirements and PIRs/SIRs to detection backlog, SOC handoff, and measurable defensive outcomes.</p>
                 <a href="https://anpa1200.github.io/customer-driven-ai-cti-project/">Open Project</a>
               </article>
+              <article className="manual-card">
+                <h3>AI vs Defense</h3>
+                <p>How AI-assisted offense changes the threat model: skill-floor collapse, Pyramid of Pain reanalysis, legacy detection failures, behavioral detection strategy, and the SOC 90-day adaptation playbook.</p>
+                <a href="https://anpa1200.github.io/ai-vs-defense/">Open Guide</a>
+              </article>
             </div>
           </div>
         </section>

@@ -39,6 +39,7 @@ const config = {
           {label: 'CTI as a Code', href: 'https://anpa1200.github.io/CTI_as_a_Code/'},
           {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
           {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
+          {label: 'AI vs Defense', href: 'https://anpa1200.github.io/ai-vs-defense/'},
           {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'}
         ]},
         {label: 'Medium Article', href: 'https://medium.com/@1200km/operation-desert-hydra-ai-assisted-cti-pipeline-muddywater-to-kibana-34da7917acf0', position: 'right'},
@@ -60,6 +61,7 @@ const config = {
           {label: 'CTI as a Code', href: 'https://anpa1200.github.io/CTI_as_a_Code/'},
           {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
           {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
+          {label: 'AI vs Defense', href: 'https://anpa1200.github.io/ai-vs-defense/'},
           {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'}
         ]},
         {title: 'Author', items: [
