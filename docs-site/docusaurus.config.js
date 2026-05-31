@@ -36,6 +36,7 @@ const config = {
         {href: 'https://anpa1200.github.io/', label: 'Portfolio', position: 'left'},
         {label: 'Projects', position: 'right', items: [
           {label: 'Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
+          {label: 'CTI as a Code', href: 'https://anpa1200.github.io/CTI_as_a_Code/'},
           {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
           {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
           {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'}
@@ -56,6 +57,7 @@ const config = {
         ]},
         {title: 'Ecosystem', items: [
           {label: 'Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
+          {label: 'CTI as a Code', href: 'https://anpa1200.github.io/CTI_as_a_Code/'},
           {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
           {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
           {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'}

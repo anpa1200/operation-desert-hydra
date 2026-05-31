@@ -111,6 +111,11 @@ bash start.sh
                 <a href="https://anpa1200.github.io/cti-analyst-field-manual/">Open Manual</a>
               </article>
               <article className="manual-card">
+                <h3>CTI as a Code</h3>
+                <p>Lab platform and structured training framework. Docker Compose stack (OpenCTI, TheHive, Cortex, Elastic SIEM) and 8 analyst assignments — including reactive exercises that cover the MuddyWater tradecraft this pipeline investigates.</p>
+                <a href="https://anpa1200.github.io/CTI_as_a_Code/">Open Lab</a>
+              </article>
+              <article className="manual-card">
                 <h3>Israel Government Threat Actors CTI</h3>
                 <p>Defensive knowledge base for threat actors targeting Israeli government, public-sector, critical infrastructure, and adjacent suppliers. Actor profiles, ATT&amp;CK mappings, and detection examples. Blue-team only.</p>
                 <a href="https://anpa1200.github.io/israel-government-threat-actors-cti/">Open Project</a>
@@ -119,11 +124,6 @@ bash start.sh
                 <h3>Customer-Driven AI CTI</h3>
                 <p>Gate-controlled CTI-to-detection delivery methodology from customer requirements and PIRs/SIRs to detection backlog, SOC handoff, and measurable defensive outcomes.</p>
                 <a href="https://anpa1200.github.io/customer-driven-ai-cti-project/">Open Project</a>
-              </article>
-              <article className="manual-card">
-                <h3>OpenCTI Intelligent Shield</h3>
-                <p>OpenCTI platform with Claude-powered enrichment connector: STIX 2.1 workflows, confidence-scored IOC enrichment, and an analyst gate before any object enters the graph.</p>
-                <a href="https://github.com/anpa1200/opencti-intelligent-shield">GitHub</a>
               </article>
             </div>
           </div>
