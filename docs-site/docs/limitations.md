@@ -57,7 +57,7 @@ All ATT&CK technique mappings are analyst candidates. They reflect the most like
 
 ## Coverage Gap Acknowledgment
 
-- **8 ATT&CK techniques** have zero detection coverage (see [Coverage Matrix](./phase-6-coverage-matrix))
+- **8 ATT&CK techniques** have zero detection coverage (see [Coverage Matrix](./phase-6-coverage-matrix.md))
 - 3 detections have coverage score 3 (validation incomplete or failed — documented reason in each)
 - 1 procedure technique (T1534 Internal Spearphishing) has no detection written — requires compromised-account telemetry outside the lab scope
 - The coverage matrix is a floor, not a ceiling

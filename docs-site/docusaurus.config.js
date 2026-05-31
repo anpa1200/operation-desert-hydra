@@ -33,9 +33,9 @@ const config = {
       },
       items: [
         {type: 'docSidebar', sidebarId: 'hydra', position: 'left', label: 'Pipeline'},
-        {href: 'https://anpa1200.github.io/', label: 'Portfolio', position: 'left'},
+        {href: 'https://anpa1200.github.io/', label: 'Main Page', position: 'left'},
         {label: 'Projects', position: 'right', items: [
-          {label: 'Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
+          {label: 'CTI Analyst Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
           {label: 'CTI as a Code', href: 'https://anpa1200.github.io/CTI_as_a_Code/'},
           {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
           {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},
@@ -44,7 +44,7 @@ const config = {
         ]},
         {label: 'Medium Article', href: 'https://medium.com/@1200km/operation-desert-hydra-ai-assisted-cti-pipeline-muddywater-to-kibana-34da7917acf0', position: 'right'},
         {href: 'https://github.com/anpa1200/operation-desert-hydra', label: 'GitHub', position: 'right'},
-        {href: 'https://anpa1200.github.io/', label: 'All Projects', position: 'right', className: 'navbar-portfolio-btn'}
+        {href: 'https://anpa1200.github.io/', label: 'Main Page', position: 'right', className: 'navbar-portfolio-btn'}
       ]
     },
     footer: {
@@ -57,7 +57,7 @@ const config = {
           {label: 'Validation Results', to: '/docs/phase-5-results'}
         ]},
         {title: 'Ecosystem', items: [
-          {label: 'Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
+          {label: 'CTI Analyst Field Manual', href: 'https://anpa1200.github.io/cti-analyst-field-manual/'},
           {label: 'CTI as a Code', href: 'https://anpa1200.github.io/CTI_as_a_Code/'},
           {label: 'Customer-Driven AI CTI', href: 'https://anpa1200.github.io/customer-driven-ai-cti-project/'},
           {label: 'Israel Threat Actors CTI', href: 'https://anpa1200.github.io/israel-government-threat-actors-cti/'},

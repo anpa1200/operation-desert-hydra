@@ -30,13 +30,13 @@ Three reasons:
 
 Start with the path that matches what you are evaluating:
 
-**CTI tradecraft:** [Phase 1 — Source Gathering](./phase-1-source-gathering) → [Phase 2 — Procedure Dataset](./phase-2-procedure-dataset)
+**CTI tradecraft:** [Phase 1 — Source Gathering](./phase-1-source-gathering.md) → [Phase 2 — Procedure Dataset](./phase-2-procedure-dataset.md)
 
-**Detection engineering:** [Phase 4 — Detection Atlas](./phase-4-detection-atlas) → [Phase 5 — Validation Results](./phase-5-results) → [Phase 6 — Coverage Matrix](./phase-6-coverage-matrix)
+**Detection engineering:** [Phase 4 — Detection Atlas](./phase-4-detection-atlas.md) → [Phase 5 — Validation Results](./phase-5-results.md) → [Phase 6 — Coverage Matrix](./phase-6-coverage-matrix.md)
 
-**OpenCTI / STIX:** [Phase 3 — OpenCTI](./phase-3-opencti)
+**OpenCTI / STIX:** [Phase 3 — OpenCTI](./phase-3-opencti.md)
 
-**Lab / infrastructure:** [Phase 5 — Validation Lab](./phase-5-validation-lab) → [Reproduce](./reproduce)
+**Lab / infrastructure:** [Phase 5 — Validation Lab](./phase-5-validation-lab.md) → [Reproduce](./reproduce.md)
 
 ---
 
@@ -54,4 +54,4 @@ Start with the path that matches what you are evaluating:
 - That rules are production-ready without baseline tuning in your specific environment
 - Attribution beyond what is stated in the public source base
 
-All validation failures and coverage gaps are acknowledged explicitly in [Phase 6: Coverage Matrix](./phase-6-coverage-matrix) and [Phase 5: Validation Results](./phase-5-results).
+All validation failures and coverage gaps are acknowledged explicitly in [Phase 6: Coverage Matrix](./phase-6-coverage-matrix.md) and [Phase 5: Validation Results](./phase-5-results.md).
