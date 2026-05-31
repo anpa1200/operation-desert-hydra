@@ -54,7 +54,7 @@
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('/operation-desert-hydra/img/bg-cyber.png');
+  background-image: url('../../static/img/bg-cyber.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
