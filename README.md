@@ -12,10 +12,10 @@ A complete, reproducible pipeline that takes public-source threat intelligence o
 
 Start here if you are evaluating this project for a CTI or detection engineering role:
 
-1. **[Docusaurus site](https://anpa1200.github.io/operation-desert-hydra/)** — overview and pipeline structure
-2. **[Phase 4: Detection Atlas](https://anpa1200.github.io/operation-desert-hydra/docs/phase-4-detection-atlas)** — 11 detection records with SIEM-agnostic pseudologic, coverage scores, false-positive classes, and design rationale
-3. **[Phase 5: Validation Results](https://anpa1200.github.io/operation-desert-hydra/docs/phase-5-results)** — 14 PASS / 1 PARTIAL / 1 FAIL with Kibana screenshots and root-cause documentation for failures
-4. **[Phase 6: Coverage Matrix](https://anpa1200.github.io/operation-desert-hydra/docs/phase-6-coverage-matrix)** — 21 ATT&CK techniques, 6 capability gates, gap analysis, zero-coverage acknowledgment
+1. **[Docusaurus site](https://1200km.com/operation-desert-hydra/)** — overview and pipeline structure
+2. **[Phase 4: Detection Atlas](https://1200km.com/operation-desert-hydra/docs/phase-4-detection-atlas)** — 11 detection records with SIEM-agnostic pseudologic, coverage scores, false-positive classes, and design rationale
+3. **[Phase 5: Validation Results](https://1200km.com/operation-desert-hydra/docs/phase-5-results)** — 14 PASS / 1 PARTIAL / 1 FAIL with Kibana screenshots and root-cause documentation for failures
+4. **[Phase 6: Coverage Matrix](https://1200km.com/operation-desert-hydra/docs/phase-6-coverage-matrix)** — 21 ATT&CK techniques, 6 capability gates, gap analysis, zero-coverage acknowledgment
 5. **[Medium article](https://medium.com/@1200km/operation-desert-hydra-ai-assisted-cti-pipeline-muddywater-to-kibana-34da7917acf0)** — full walkthrough with methodology rationale
 
 Then `git clone` and run `bash start.sh` if you want to reproduce the results.

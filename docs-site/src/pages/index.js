@@ -108,27 +108,27 @@ bash start.sh
               <article className="manual-card">
                 <h3>CTI Analyst Field Manual</h3>
                 <p>Practitioner tradecraft: PIRs, evidence handling, attribution, source reliability, infrastructure pivoting, hunting hypotheses, detection backlog, SOC handoff, and 10 reusable analyst templates.</p>
-                <a href="https://anpa1200.github.io/cti-analyst-field-manual/">Open Manual</a>
+                <a href="https://1200km.com/cti-analyst-field-manual/">Open Manual</a>
               </article>
               <article className="manual-card">
                 <h3>CTI as a Code</h3>
                 <p>Lab platform and structured training framework. Docker Compose stack (OpenCTI, TheHive, Cortex, Elastic SIEM) and 8 analyst assignments — including reactive exercises that cover the MuddyWater tradecraft this pipeline investigates.</p>
-                <a href="https://anpa1200.github.io/CTI_as_a_Code/">Open Lab</a>
+                <a href="https://1200km.com/CTI_as_a_Code/">Open Lab</a>
               </article>
               <article className="manual-card">
                 <h3>Israel Government Threat Actors CTI</h3>
                 <p>Defensive knowledge base for threat actors targeting Israeli government, public-sector, critical infrastructure, and adjacent suppliers. Actor profiles, ATT&amp;CK mappings, and detection examples. Blue-team only.</p>
-                <a href="https://anpa1200.github.io/israel-government-threat-actors-cti/">Open Project</a>
+                <a href="https://1200km.com/israel-government-threat-actors-cti/">Open Project</a>
               </article>
               <article className="manual-card">
                 <h3>Customer-Driven AI CTI</h3>
                 <p>Gate-controlled CTI-to-detection delivery methodology from customer requirements and PIRs/SIRs to detection backlog, SOC handoff, and measurable defensive outcomes.</p>
-                <a href="https://anpa1200.github.io/customer-driven-ai-cti-project/">Open Project</a>
+                <a href="https://1200km.com/customer-driven-ai-cti-project/">Open Project</a>
               </article>
               <article className="manual-card">
                 <h3>AI vs Defense</h3>
                 <p>How AI-assisted offense changes the threat model: skill-floor collapse, Pyramid of Pain reanalysis, legacy detection failures, behavioral detection strategy, and the SOC 90-day adaptation playbook.</p>
-                <a href="https://anpa1200.github.io/ai-vs-defense/">Open Guide</a>
+                <a href="https://1200km.com/ai-vs-defense/">Open Guide</a>
               </article>
             </div>
           </div>

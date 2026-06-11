@@ -451,8 +451,8 @@ The procedure dataset and source register go into a self-hosted OpenCTI 6.2 inst
 The stack used in this project is documented and publicly reproducible. The full deployment — Docker Compose, connectors, and an AI enrichment connector that calls Claude via the Anthropic API — lives in a dedicated project:
 
 - **GitHub:** [github.com/anpa1200/opencti-intelligent-shield](https://github.com/anpa1200/opencti-intelligent-shield)
-- **Docusaurus site:** [anpa1200.github.io/opencti-intelligent-shield](https://anpa1200.github.io/opencti-intelligent-shield/)
-- **Main guide:** [anpa1200.github.io/opencti-intelligent-shield/docs/intelligent-shield](https://anpa1200.github.io/opencti-intelligent-shield/docs/intelligent-shield)
+- **Docusaurus site:** [1200km.com/opencti-intelligent-shield](https://1200km.com/opencti-intelligent-shield/)
+- **Main guide:** [1200km.com/opencti-intelligent-shield/docs/intelligent-shield](https://1200km.com/opencti-intelligent-shield/docs/intelligent-shield)
 
 The Intelligent Shield project covers: OpenCTI core stack (Redis, Elasticsearch, MinIO, RabbitMQ, platform, workers), MITRE ATT&CK connector, and a custom internal enrichment connector that uses Claude to automatically summarize and enrich threat objects. Docker Compose files, a sanitized `.env.example`, and full setup instructions are all version-controlled.
 
