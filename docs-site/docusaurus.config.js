@@ -28,6 +28,11 @@ const config = {
   ],
   themeConfig: {
     image: 'img/logo.png',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     metadata: [
       {
         name: 'keywords',
