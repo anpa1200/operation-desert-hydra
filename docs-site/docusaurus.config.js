@@ -45,6 +45,13 @@ const config = {
     ]
   ],
   themeConfig: {
+    image: 'img/logo.png',
+    metadata: [
+      {
+        name: 'keywords',
+        content: 'Operation Desert Hydra, MuddyWater, Seedworm, CTI pipeline, MITRE ATT&CK, detection engineering, OpenCTI, Kibana detections, SIEM rules, Iran threat actor, MOIS, Sysmon, Winlogbeat, lab-validated detection',
+      },
+    ],
     navbar: {
       title: 'Operation Desert Hydra',
       logo: {
