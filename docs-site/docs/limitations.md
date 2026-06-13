@@ -2,6 +2,7 @@
 id: limitations
 title: Limitations
 sidebar_label: Limitations
+description: "Scope and limitations of Operation Desert Hydra: what the pipeline covers, where analyst judgment is required, and how to extend the methodology to other actors."
 ---
 
 This page documents the known limitations of the detection engineering pipeline, lab validation, and coverage claims. Limitations are documented, not hidden.

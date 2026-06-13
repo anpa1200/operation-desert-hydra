@@ -2,6 +2,7 @@
 id: pipeline
 title: The Pipeline
 sidebar_label: The Pipeline
+description: "The six-phase Operation Desert Hydra pipeline: source collection, procedure dataset, OpenCTI structuring, detection atlas, lab validation, and ATT&CK coverage matrix."
 ---
 
 The project enforces a chain from source to Kibana screenshot:

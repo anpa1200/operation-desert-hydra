@@ -2,6 +2,7 @@
 id: phase-3-opencti
 title: "Phase 3: OpenCTI Knowledge Graph"
 sidebar_label: OpenCTI
+description: "Phase 3: importing the MuddyWater procedure dataset into OpenCTI as STIX 2.1 objects — structured threat intelligence ready for downstream detection and hunting."
 ---
 
 The procedure dataset and source register go into a self-hosted OpenCTI 6.2 instance. This creates the analytical record — queryable, relationship-aware, ATT&CK-linked.

@@ -2,6 +2,7 @@
 id: phase-5-validation-lab
 title: "Phase 5: Validation Lab"
 sidebar_label: Validation Lab
+description: "The Desert Hydra validation lab: Kibana, Elasticsearch, Sysmon, and Winlogbeat setup for end-to-end detection rule testing against MuddyWater/Seedworm TTPs."
 ---
 
 ## Architecture

@@ -2,6 +2,7 @@
 id: reproduce
 title: Reproduce It Yourself
 sidebar_label: Reproduce It
+description: "How to reproduce Operation Desert Hydra: prerequisites, environment setup, step-by-step execution guide, and expected outputs at each phase."
 ---
 
 The entire project is on GitHub: [**github.com/anpa1200/operation-desert-hydra**](https://github.com/anpa1200/operation-desert-hydra)

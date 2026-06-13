@@ -2,6 +2,7 @@
 id: for-defenders
 title: What Defenders Should Do Right Now
 sidebar_label: For Defenders
+description: "Defender-focused summary of Operation Desert Hydra: prioritized detection recommendations for organizations exposed to MuddyWater/Seedworm targeting Israeli infrastructure."
 ---
 
 **1. Baseline your RMM deployments.**

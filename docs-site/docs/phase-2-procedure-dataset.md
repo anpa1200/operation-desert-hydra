@@ -2,6 +2,7 @@
 id: phase-2-procedure-dataset
 title: "Phase 2: Procedure Dataset"
 sidebar_label: Procedure Dataset
+description: "Phase 2: extracting and normalizing MuddyWater procedure-level ATT&CK technique data from rated sources into a structured dataset for detection development."
 ---
 
 ![The 10 Procedures — MuddyWater procedure-level dataset](/img/10-procedures-infographic.png)

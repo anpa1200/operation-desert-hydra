@@ -2,6 +2,7 @@
 id: intro
 title: Why MuddyWater?
 sidebar_label: Introduction
+description: "Operation Desert Hydra is a complete CTI-to-detection pipeline for MuddyWater/Seedworm — from source gathering and OpenCTI ingestion to KQL/Sigma rules validated in a live Kibana lab."
 ---
 
 Most threat actor writeups stop too early. They describe the group, list ATT&CK techniques, and paste some IoCs. Then the report sits in a folder while defenders wonder: *what do I actually do with this on Monday?*

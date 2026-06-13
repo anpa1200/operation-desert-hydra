@@ -2,6 +2,7 @@
 id: phase-5-results
 title: "Phase 5: Validation Results Summary"
 sidebar_label: Validation Results
+description: "Operation Desert Hydra validation results: 14 PASS / 1 PARTIAL / 1 FAIL against a live Kibana lab with Sysmon and Winlogbeat — full per-technique breakdown."
 ---
 
 ![Phase 5: Validation Results Summary — 14 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks](/img/validation-results-infographic.png)

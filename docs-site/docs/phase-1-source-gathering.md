@@ -2,6 +2,7 @@
 id: phase-1-source-gathering
 title: "Phase 1: Source Gathering"
 sidebar_label: Source Gathering
+description: "Phase 1 of the Desert Hydra CTI pipeline: source selection, Admiralty reliability rating, and structured intake of MuddyWater/Seedworm public reporting."
 ---
 
 The first step is source discovery, not detection writing.

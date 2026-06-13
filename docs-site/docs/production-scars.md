@@ -2,6 +2,7 @@
 id: production-scars
 title: Production Scars
 sidebar_label: Production Scars
+description: "Lessons learned and production scars from the Desert Hydra CTI-to-detection pipeline — real problems encountered, how they were resolved, and what to watch for."
 ---
 
 Everything above describes what the project looks like after it worked. This section documents what broke, in what order, and what was actually fixed — the kind of detail that gets cut from writeups but is the most useful part for anyone trying to reproduce this.

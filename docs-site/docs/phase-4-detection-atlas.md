@@ -2,6 +2,7 @@
 id: phase-4-detection-atlas
 title: "Phase 4: Detection Atlas"
 sidebar_label: Detection Atlas
+description: "Phase 4: translating MuddyWater ATT&CK techniques into telemetry requirements, hunting hypotheses, detection readiness levels, and Sigma/KQL rule candidates."
 ---
 
 The detection atlas is the core analytical output. Each of the 11 detection records in [`data/detections.yaml`](https://github.com/anpa1200/operation-desert-hydra/blob/main/data/detections.yaml) contains:

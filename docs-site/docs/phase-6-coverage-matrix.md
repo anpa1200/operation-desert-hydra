@@ -2,6 +2,7 @@
 id: phase-6-coverage-matrix
 title: "Phase 6: Coverage Matrix"
 sidebar_label: Coverage Matrix
+description: "Phase 6 ATT&CK coverage matrix: all Desert Hydra detections mapped to MITRE technique IDs with detection readiness levels and validated/gap status."
 ---
 
 **28 ATT&CK techniques** documented across all sources: 21 formalized into the procedure dataset, 7 from the broader source analysis without procedures written.
