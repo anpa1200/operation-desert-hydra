@@ -54,7 +54,7 @@ All ATT&CK technique mappings are analyst candidates. They reflect the most like
 - Mappings do not constitute attribution evidence — shared technique use does not identify an actor
 - Multiple techniques may describe the same behavior at different abstraction levels
 
-For automated first-pass ATT&CK extraction from source reports (with evidence and confidence scores to review), see [ThreatMapper](https://1200km.com/threatmapper-docs/) — a self-hosted LLM pipeline that outputs technique candidates for analyst review.
+For automated first-pass ATT&CK extraction from source reports (with evidence and confidence scores to review), see [AdversaryGraph](https://1200km.com/adversarygraph-docs/) — a self-hosted LLM pipeline that outputs technique candidates for analyst review.
 
 ---
 

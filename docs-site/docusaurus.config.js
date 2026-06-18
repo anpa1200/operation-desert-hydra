@@ -56,7 +56,7 @@ const config = {
           {label: 'Israel Threat Actors CTI', href: 'https://1200km.com/israel-government-threat-actors-cti/'},
           {label: 'AI vs Defense', href: 'https://1200km.com/ai-vs-defense/'},
           {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'},
-          {label: 'ThreatMapper Docs', href: 'https://1200km.com/threatmapper-docs/'}
+          {label: 'AdversaryGraph Docs', href: 'https://1200km.com/adversarygraph-docs/'}
         ]},
         {label: 'Medium Article', href: 'https://medium.com/@1200km/operation-desert-hydra-ai-assisted-cti-pipeline-muddywater-to-kibana-34da7917acf0', position: 'right'},
         {href: 'https://github.com/anpa1200/operation-desert-hydra', label: 'GitHub', position: 'right'},
@@ -79,7 +79,7 @@ const config = {
           {label: 'Israel Threat Actors CTI', href: 'https://1200km.com/israel-government-threat-actors-cti/'},
           {label: 'AI vs Defense', href: 'https://1200km.com/ai-vs-defense/'},
           {label: 'HexStrike AI', href: 'https://github.com/0x4m4/hexstrike-ai'},
-          {label: 'ThreatMapper Docs', href: 'https://1200km.com/threatmapper-docs/'}
+          {label: 'AdversaryGraph Docs', href: 'https://1200km.com/adversarygraph-docs/'}
         ]},
         {title: 'Author', items: [
           {label: 'Medium', href: 'https://medium.com/@1200km'},
