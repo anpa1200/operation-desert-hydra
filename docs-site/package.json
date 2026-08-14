@@ -5,9 +5,12 @@
   "description": "AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 validated detections → Kibana.",
   "scripts": {
     "start": "docusaurus start",
+    "prebuild": "node scripts/generate-seo-descriptions.mjs",
     "build": "docusaurus build",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "check:seo": "node scripts/check-seo.mjs https://1200km.com/operation-desert-hydra/",
+    "validate": "npm run build && npm run check:seo"
   },
   "dependencies": {
     "@docusaurus/core": "latest",
