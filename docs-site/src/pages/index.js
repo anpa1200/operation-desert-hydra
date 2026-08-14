@@ -1,7 +1,27 @@
 import React from 'react';
+import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import styles from './index.module.css';
+
+const breadcrumbStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: '1200km',
+      item: 'https://1200km.com/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Operation Desert Hydra',
+      item: 'https://1200km.com/operation-desert-hydra/',
+    },
+  ],
+};
 
 const phases = [
   ['Phase 1: Source Gathering', 'AI-assisted deep research across 71 candidate sources. Parallel Gemini + OpenAI passes, review gate, 8 government/vendor sources promoted.', '/docs/phase-1-source-gathering'],
@@ -13,8 +33,18 @@ const phases = [
 ];
 
 export default function Home() {
+  const pageTitle = 'Operation Desert Hydra | 1200km';
+  const pageDescription = 'Follow a reproducible MuddyWater CTI pipeline from research through OpenCTI knowledge modeling, detection design, lab validation, and Kibana evidence.';
   return (
-    <Layout title="Operation Desert Hydra" description="AI-assisted CTI pipeline: MuddyWater public sources → OpenCTI → 11 detection records → 14 PASS / 1 PARTIAL / 1 FAIL across 16 rule checks → Kibana.">
+    <Layout title="Operation Desert Hydra" description={pageDescription}>
+      <Head>
+        <meta property="og:site_name" content="1200km — Andrey Pautov Security Research" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbStructuredData)}
+        </script>
+      </Head>
       <header className="hero hero--hydra">
         <div className="container" style={{textAlign: 'center'}}>
           <h1 className="hero__title">Operation Desert Hydra</h1>

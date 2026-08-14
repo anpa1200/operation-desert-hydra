@@ -1,0 +1,15 @@
+{
+  "@site/docs/for-defenders.md": "Prioritize MuddyWater defenses by baselining RMM tools, enabling PowerShell and Sysmon telemetry, hunting PT43M tasks, and validating key coverage gaps.",
+  "@site/docs/intro.md": "Follow a complete MuddyWater CTI-to-detection workflow: assess sources, model procedures in OpenCTI, engineer rules, and validate them in a live lab.",
+  "@site/docs/limitations.md": "Understand what the lab results prove, where simulations and public reporting fall short, and which MuddyWater detections still require production tuning.",
+  "@site/docs/phase-1-source-gathering.md": "Build a defensible MuddyWater source register with manual and AI-assisted discovery, reliability ratings, claim deduplication, and preserved evidence.",
+  "@site/docs/phase-2-procedure-dataset.md": "Turn rated MuddyWater reporting into source-bound procedure records with evidence labels, ATT&CK candidates, telemetry needs, and validation plans.",
+  "@site/docs/phase-3-opencti.md": "Import MuddyWater sources and procedures into OpenCTI as linked STIX 2.1 objects, then verify relationships, ATT&CK mappings, and downstream usability.",
+  "@site/docs/phase-4-detection-atlas.md": "Translate source-backed MuddyWater behavior into detection records with telemetry gates, pseudologic, tuning guidance, readiness scores, and review evidence.",
+  "@site/docs/phase-5-results.md": "Review 16 lab rule checks with 14 passes, one partial result, and one failure, including the evidence, root causes, and coverage implications for each.",
+  "@site/docs/phase-5-validation-lab.md": "Reproduce the Windows detection environment with Kibana, Elasticsearch, Sysmon, Winlogbeat, Ansible, and benign simulations that generate auditable evidence.",
+  "@site/docs/phase-6-coverage-matrix.md": "Measure MuddyWater detection coverage by ATT&CK technique, readiness score, telemetry gate, and lab result while preserving documented gaps and caveats.",
+  "@site/docs/pipeline.md": "Trace six phases from source collection and procedure modeling through OpenCTI, detection engineering, lab validation, proof capture, and coverage scoring.",
+  "@site/docs/production-scars.md": "Learn from failed simulations, missing telemetry, query errors, and infrastructure constraints encountered while turning CTI claims into validated detections.",
+  "@site/docs/reproduce.md": "Deploy the complete project with Docker, VirtualBox, Vagrant, and Ansible; run its simulations, inspect expected outputs, and preserve or remove the lab safely."
+}
